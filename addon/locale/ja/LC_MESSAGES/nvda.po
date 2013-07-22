@@ -1,0 +1,237 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Read feeds 4.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-08-11 16:52+0100\n"
+"PO-Revision-Date: 2013-07-22 15:49+0900\n"
+"Last-Translator: Masamitsu Misono <misono@nvsupport.org>\n"
+"Language-Team: Masamitsu Misono <misono@nvsupport.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"Language: ja_JP\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-SearchPath-0: C:\\Users\\User\\AppData\\Roaming\\nvda\\addons"
+"\\ReadFeeds\\globalPlugins\n"
+
+#: C:\Users\User\AppData\Roaming\nvda\addons\ReadFeeds\globalPlugins/readFeeds.py:70
+msgid "Untitled feed"
+msgstr "無題のフィード"
+
+#: C:\Users\User\AppData\Roaming\nvda\addons\ReadFeeds\globalPlugins/readFeeds.py:83
+msgid "This feed contains untitled items"
+msgstr "このフィードには無題の項目が含まれています"
+
+#: C:\Users\User\AppData\Roaming\nvda\addons\ReadFeeds\globalPlugins/readFeeds.py:92
+msgid "This feed contains items without a link"
+msgstr "このフィードにはリンクが含まれています"
+
+#: C:\Users\User\AppData\Roaming\nvda\addons\ReadFeeds\globalPlugins/readFeeds.py:106
+msgid "&Read feeds"
+msgstr "&Read feeds"
+
+#: C:\Users\User\AppData\Roaming\nvda\addons\ReadFeeds\globalPlugins/readFeeds.py:107
+msgid "News &list..."
+msgstr "ニュースリスト...(&L)"
+
+#: C:\Users\User\AppData\Roaming\nvda\addons\ReadFeeds\globalPlugins/readFeeds.py:107
+msgid "View news list"
+msgstr "ニュースリストの表示"
+
+#: C:\Users\User\AppData\Roaming\nvda\addons\ReadFeeds/globalPlugins/readFeeds.py:111
+msgid "&Temporary address..."
+msgstr "一時アドレス(&T)"
+
+#: C:\Users\User\AppData\Roaming\nvda\addons\ReadFeeds\globalPlugins/readFeeds.py:109
+msgid "View or choose current feed address"
+msgstr "現在のアドレスを表示または選択"
+
+#: C:\Users\User\AppData\Roaming\nvda\addons\ReadFeeds\globalPlugins/readFeeds.py:111
+msgid "L&oad saved address..."
+msgstr "アドレスの読み込みと保存(&O)"
+
+#: C:\Users\User\AppData\Roaming\nvda\addons\ReadFeeds\globalPlugins/readFeeds.py:111
+msgid "Choose file containing address"
+msgstr "アドレスが含まれたファイルを選択"
+
+#: C:\Users\User\AppData\Roaming\nvda\addons\ReadFeeds\globalPlugins/readFeeds.py:113
+msgid "Save current address..."
+msgstr "アドレスを保存..."
+
+#: C:\Users\User\AppData\Roaming\nvda\addons\ReadFeeds\globalPlugins/readFeeds.py:113
+msgid "Copy current address to text file"
+msgstr "テキストファイルに現在のアドレスをコピー"
+
+#: C:\Users\User\AppData\Roaming\nvda\addons\ReadFeeds/globalPlugins/readFeeds.py:117
+msgid "Updat&e current feed"
+msgstr "現在のフィードを更新"
+
+#: C:\Users\User\AppData\Roaming\nvda\addons\ReadFeeds\globalPlugins/readFeeds.py:115
+msgid "Reload current feed"
+msgstr "現在のフィードを再読込"
+
+#: C:\Users\User\AppData\Roaming\nvda\addons\ReadFeeds\globalPlugins/readFeeds.py:117
+msgid "&Copy feeds folder..."
+msgstr "フィードフォルダをコピー(&C)"
+
+#: C:\Users\User\AppData\Roaming\nvda\addons\ReadFeeds\globalPlugins/readFeeds.py:117
+msgid "Backup of feeds folder"
+msgstr "フィードフォルダをバックアップ"
+
+#: C:\Users\User\AppData\Roaming\nvda\addons\ReadFeeds\globalPlugins/readFeeds.py:120
+msgid "R&estore feeds..."
+msgstr "フィードを復元(&E)"
+
+#: C:\Users\User\AppData\Roaming\nvda\addons\ReadFeeds\globalPlugins/readFeeds.py:120
+msgid "Restore previously saved feeds"
+msgstr "前に保存したフィードを復元"
+
+#: C:\Users\User\AppData\Roaming\nvda\addons\ReadFeeds/globalPlugins/readFeeds.py:123
+msgid "Open &documentation"
+msgstr "ドキュメントを開く(&D)"
+
+#: C:\Users\User\AppData\Roaming\nvda\addons\ReadFeeds\globalPlugins/readFeeds.py:123
+msgid "Open documentation for current language"
+msgstr "現在の言語に対応したドキュメントフォルダを開く"
+
+#: C:\Users\User\AppData\Roaming\nvda\addons\ReadFeeds\globalPlugins/readFeeds.py:142
+#: C:\Users\User\AppData\Roaming\nvda\addons\ReadFeeds\globalPlugins/readFeeds.py:236
+#: C:\Users\User\AppData\Roaming\nvda\addons\ReadFeeds\globalPlugins/readFeeds.py:245
+#: C:\Users\User\AppData\Roaming\nvda\addons\ReadFeeds\globalPlugins/readFeeds.py:260
+#: C:\Users\User\AppData\Roaming\nvda\addons\ReadFeeds\globalPlugins/readFeeds.py:273
+#: C:\Users\User\AppData\Roaming\nvda\addons\ReadFeeds\globalPlugins/readFeeds.py:286
+msgid ""
+"Feeds can not be reported. Check your Internet conectivity or specified "
+"address"
+msgstr ""
+"フィードが読み取れませんでした。インターネット接続またはフィードのアドレスを"
+"確認してください"
+
+#: C:\Users\User\AppData\Roaming\nvda\addons\ReadFeeds\globalPlugins/readFeeds.py:142
+msgid "Update Error"
+msgstr "更新エラー"
+
+#: C:\Users\User\AppData\Roaming\nvda\addons\ReadFeeds\globalPlugins/readFeeds.py:144
+msgid "Open the web page for reading your selected article"
+msgstr "読み上げ中の選択記事のウェブページを開く"
+
+#: C:\Users\User\AppData\Roaming\nvda\addons\ReadFeeds\globalPlugins/readFeeds.py:171
+msgid "Select a folder for copying your saved feeds"
+msgstr "フィードのコピーを保存するフォルダを選択してください"
+
+#: C:\Users\User\AppData\Roaming\nvda\addons\ReadFeeds\globalPlugins/readFeeds.py:181
+#: C:\Users\User\AppData\Roaming\nvda\addons\ReadFeeds\globalPlugins/readFeeds.py:196
+msgid "Folder not copied"
+msgstr "フォルダのコピーができませんでした"
+
+#: C:\Users\User\AppData\Roaming\nvda\addons\ReadFeeds\globalPlugins/readFeeds.py:181
+#: C:\Users\User\AppData\Roaming\nvda\addons\ReadFeeds\globalPlugins/readFeeds.py:196
+msgid "Copy Error"
+msgstr "コピーエラー"
+
+#: C:\Users\User\AppData\Roaming\nvda\addons\ReadFeeds\globalPlugins/readFeeds.py:186
+msgid "Select the feeds folder you wish to restore"
+msgstr "フィードフォルダを選択し復元します"
+
+#: C:\Users\User\AppData\Roaming\nvda\addons\ReadFeeds\globalPlugins/readFeeds.py:209
+msgid "Documentation folder not found for your language"
+msgstr "対応する言語のドキュメントフォルダがみつかりません"
+
+#: C:\Users\User\AppData\Roaming\nvda\addons\ReadFeeds\globalPlugins/readFeeds.py:241
+msgid "Updates the selected channel and reads the first feed title."
+msgstr "選択されたチャンネルを更新し最初のフィードタイトルを取得します"
+
+#: C:\Users\User\AppData\Roaming\nvda\addons\ReadFeeds\globalPlugins/readFeeds.py:251
+#, python-format
+msgid "Copied to clipboard %s"
+msgstr "%s をクリップボードにコピーしました"
+
+#: C:\Users\User\AppData\Roaming\nvda\addons\ReadFeeds\globalPlugins/readFeeds.py:255
+msgid ""
+"Reads the current feed title. Pressed two times, copies the text to "
+"clipboard."
+msgstr "現在のフィードタイトルをクリップボードにコピーします"
+
+#: C:\Users\User\AppData\Roaming\nvda\addons\ReadFeeds\globalPlugins/readFeeds.py:268
+msgid "Reads the next feed title."
+msgstr "次のフィードタイトルにします"
+
+#: C:\Users\User\AppData\Roaming\nvda\addons\ReadFeeds\globalPlugins/readFeeds.py:281
+msgid "Reads the prior feed title."
+msgstr "前のフィードタイトルにします"
+
+#: C:\Users\User\AppData\Roaming\nvda\addons\ReadFeeds\globalPlugins/readFeeds.py:294
+msgid ""
+"Reads the article link, that allows open its web page. Pressed two times, "
+"opens the web."
+msgstr "矢印キーでウェブページを表示開きます"
+
+#: C:\Users\User\AppData\Roaming\nvda\addons\ReadFeeds\globalPlugins/readFeeds.py:297
+msgid "The address of the channel you wish to follow"
+msgstr "チャンネルのアドレスを購読します"
+
+#: C:\Users\User\AppData\Roaming\nvda\addons\ReadFeeds\globalPlugins/readFeeds.py:297
+msgid "Address"
+msgstr "アドレス"
+
+#: C:\Users\User\AppData\Roaming\nvda\addons\ReadFeeds\globalPlugins/readFeeds.py:311
+#: C:\Users\User\AppData\Roaming\nvda\addons\ReadFeeds\globalPlugins/readFeeds.py:336
+#, python-format
+msgid "Selected %s"
+msgstr "%s を選択"
+
+#: C:\Users\User\AppData\Roaming\nvda\addons\ReadFeeds\globalPlugins/readFeeds.py:317
+msgid "Opens a dialog for setting the address of the feeds channel."
+msgstr "フィードチャンネルを設定するダイアログを表示"
+
+#: C:\Users\User\AppData\Roaming\nvda\addons\ReadFeeds\globalPlugins/readFeeds.py:321
+msgid "Choose a file containing a channel address"
+msgstr "チャンネルが含まれたファイルを選択してください"
+
+#: C:\Users\User\AppData\Roaming\nvda\addons\ReadFeeds\globalPlugins/readFeeds.py:321
+msgid "Text files (*.txt) |*.txt"
+msgstr "テキストファイル (*.txt) |*.txt"
+
+#: C:\Users\User\AppData\Roaming\nvda\addons\ReadFeeds\globalPlugins/readFeeds.py:338
+msgid "Address can not be selected"
+msgstr "アドレスが選択できません"
+
+#: C:\Users\User\AppData\Roaming\nvda\addons\ReadFeeds\globalPlugins/readFeeds.py:346
+msgid ""
+"Opens a dialog for setting the address of the feeds channel from a selected "
+"file."
+msgstr "フィードアドレスを設定するためのダイアログを開きます"
+
+#: C:\Users\User\AppData\Roaming\nvda\addons\ReadFeeds\globalPlugins/readFeeds.py:350
+msgid "File for saving your current address"
+msgstr "現在のアドレスをファイルに保存します"
+
+#: C:\Users\User\AppData\Roaming\nvda\addons\ReadFeeds\globalPlugins/readFeeds.py:350
+msgid "Text files (*.txt) | *.txt"
+msgstr "テキストファイル (*.txt) | *.txt"
+
+#: C:\Users\User\AppData\Roaming\nvda\addons\ReadFeeds\globalPlugins/readFeeds.py:366
+#, python-format
+msgid "Saved %s"
+msgstr "%s を保存しました"
+
+#: C:\Users\User\AppData\Roaming\nvda\addons\ReadFeeds\globalPlugins/readFeeds.py:368
+msgid "Address can not be saved"
+msgstr "アドレスを保存できませんでした"
+
+#: C:\Users\User\AppData\Roaming\nvda\addons\ReadFeeds\globalPlugins/readFeeds.py:374
+msgid "Opens a dialog for saving a file containing the selected address."
+msgstr "選択したアドレスを保存するファイルダイアログを開いています"
+
+#~ msgid "News list"
+#~ msgstr "Lista de noticias"
+
+#~ msgid ""
+#~ "Saves the address of the current feeds chanel, for loading it "
+#~ "automatically when you reload readFeeds plugin"
+#~ msgstr ""
+#~ "Guarda la direcci坦n del actual canal de noticias, para seleccionarla "
+#~ "autom叩ticamente al recargar el complemento readFeeds"
