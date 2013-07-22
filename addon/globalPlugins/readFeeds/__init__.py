@@ -1,12 +1,13 @@
 ﻿# -*- coding: UTF-8 -*-
 
 # Read feeds: A simple plugin for reading feeds with NVDA
+# Version: 6.0
+# Used globalVars to get config path, for better results with temporary copies, as instantTranslate or SaveLog add-ons
 # Version: 5.0
 # Control instead of alt in gesture. Added installTask to update the add-on
 # Version: 4.2
 # Channel title and number of articles in News list dialog
 # Date: 23/06/2012
-
 
 import addonHandler
 import globalPluginHandler
@@ -14,7 +15,7 @@ import languageHandler
 import os
 import sys
 import shutil
-import config
+import globalVars
 import urllib
 import scriptHandler
 import api
@@ -31,6 +32,7 @@ addonHandler.initTranslation()
 address = 'http://rss.slashdot.org/Slashdot/slashdot' # Default address
 _savePath = os.path.join(os.path.dirname(__file__), "RSS")
 addressFile = os.path.join(_savePath, "addressFile.txt")
+configPath = globalVars.appArgs.configPath
 
 try:
 	f = open(addressFile, "r")
@@ -38,7 +40,6 @@ try:
 	f.close()
 except IOError:
 	pass
-
 
 class Feed:
 
@@ -188,7 +189,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		ui.message(RSS.title)
 
 	def onCopyFeeds(self, evt):
-		configPath = config.getUserDefaultConfigPath()
 		dlg = wx.DirDialog(gui.mainFrame, _("Select a folder for copying your saved feeds"), configPath, wx.DD_DEFAULT_STYLE)
 		gui.mainFrame.prePopup()
 		result = dlg.ShowModal()
@@ -202,7 +202,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				wx.CallAfter(gui.messageBox,_("Folder not copied"), _("Copy Error"), wx.OK|wx.ICON_ERROR)
 
 	def onRestoreFeeds(self, evt):
-		feedsPath = os.path.join(config.getUserDefaultConfigPath(), "RSS")
+		feedsPath = os.path.join(configPath, "RSS")
 		dlg = wx.DirDialog(gui.mainFrame, _("Select the feeds folder you wish to restore"), feedsPath, wx.DD_DIR_MUST_EXIST | wx.DD_DEFAULT_STYLE)
 		gui.mainFrame.prePopup()
 		result = dlg.ShowModal()
