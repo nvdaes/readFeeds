@@ -85,6 +85,7 @@ class Feed:
 			title = item.getElementsByTagName('title')[0].firstChild.data
 			if title is None or title == "":
 				self.counter = -1
+				# Translators: message presented when the current feed has untitled items.
 				ui.message(_("This feed contains untitled items"))
 				return
 			self.titlesList.append(title)
@@ -94,6 +95,7 @@ class Feed:
 				link = item.getElementsByTagName('link')[0].getAttribute('href')
 			if link is None or link == "":
 				self.counter = -1
+				# Translators: message presented when the current feed contains items without a link.
 				ui.message(_("This feed contains items without a link"))
 				return
 			self.linksList.append(link)
@@ -103,29 +105,64 @@ class Feed:
 				# self.creator = item.getElementsByTagName('dc:creator')[0].firstChild.data
 				index +=1
 
-
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def __init__(self):
 		super(globalPluginHandler.GlobalPlugin, self).__init__()
 		self.menu = gui.mainFrame.sysTrayIcon.menu
 		self.readFeedsMenu = wx.Menu()
-		self.mainItem = self.menu.AppendSubMenu(self.readFeedsMenu, _("&Read feeds"), "Manage RSS and Atom feeds")
-		self.newsListItem = self.readFeedsMenu.Append(wx.ID_ANY, _("News &list..."), _("View news list"))
+		self.mainItem = self.menu.AppendSubMenu(self.readFeedsMenu,
+		# Translators: the name of a submenu.
+		_("&Read feeds"),
+		# Translators: the tooltip for a submenu.
+		"Manage RSS and Atom feeds")
+		self.newsListItem = self.readFeedsMenu.Append(wx.ID_ANY,
+		# Translators: the name of a menu item.
+		_("News &list..."),
+		# Translators: the tooltip for a menu item.
+		_("View news list"))
 		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, self.onList, self.newsListItem)
-		self.setAddressItem = self.readFeedsMenu.Append(wx.ID_ANY, _("&Temporary address..."), _("View or choose current feed address"))
+		self.setAddressItem = self.readFeedsMenu.Append(wx.ID_ANY,
+		# Translators: the name of a menu item.
+		_("&Temporary address..."),
+		# Translators: the tooltip for a menu item.
+		_("View or choose current feed address"))
 		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, self.onSetAddress, self.setAddressItem)
-		self.setAddressFileItem = self.readFeedsMenu.Append(wx.ID_ANY, _("L&oad saved address..."), _("Choose file containing address"))
+		self.setAddressFileItem = self.readFeedsMenu.Append(wx.ID_ANY,
+		# Translators: the name of a menu item.
+		_("L&oad saved address..."),
+		# Translators: the tooltip for a menu item.
+		_("Choose file containing address"))
 		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, self.onSetAddressFile, self.setAddressFileItem)
-		self.saveAddressItem = self.readFeedsMenu.Append(wx.ID_ANY, _("Save current address..."), _("Copy current address to text file"))
+		self.saveAddressItem = self.readFeedsMenu.Append(wx.ID_ANY,
+		# Translators: the name of a menu item.
+		_("Save current address..."),
+		# Translators: the tooltip for a menu item.
+		_("Copy current address to text file"))
 		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, self.onSaveAddress, self.saveAddressItem)
-		self.readFirstItem = self.readFeedsMenu.Append(wx.ID_ANY, _("Updat&e current feed"), _("Reload current feed"))
+		self.readFirstItem = self.readFeedsMenu.Append(wx.ID_ANY,
+		# Translators: the name of a menu item.
+		_("Updat&e current feed"),
+		# Translators: the tooltip for a menu item.
+		_("Reload current feed"))
 		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, self.onReadFirstFeed, self.readFirstItem)
-		self.copyFeedsItem = self.readFeedsMenu.Append(wx.ID_ANY, _("&Copy feeds folder..."), _("Backup of feeds folder"))
+		self.copyFeedsItem = self.readFeedsMenu.Append(wx.ID_ANY,
+		# Translators: the name of a menu item.
+		_("&Copy feeds folder..."),
+		# Translators: the tooltip for a menu item.
+		_("Backup of feeds folder"))
 		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, self.onCopyFeeds, self.copyFeedsItem)
-		self.restoreFeedsItem = self.readFeedsMenu.Append(wx.ID_ANY, _("R&estore feeds..."), _("Restore previously saved feeds"))
+		self.restoreFeedsItem = self.readFeedsMenu.Append(wx.ID_ANY,
+		# Translators: the name of a menu item.
+		_("R&estore feeds..."),
+		# Translators: the tooltip for a menu item.
+		_("Restore previously saved feeds"))
 		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, self.onRestoreFeeds, self.restoreFeedsItem)
-		self.aboutItem = self.readFeedsMenu.Append(wx.ID_ANY, _("Open &documentation"), _("Open documentation for current language"))
+		self.aboutItem = self.readFeedsMenu.Append(wx.ID_ANY,
+		# Translators: the name of a menu item.
+		_("Open &documentation"),
+		# Translators: the tooltip for a menu item.
+		_("Open documentation for current language"))
 		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, self.onAbout, self.aboutItem)
 		self._counter = -1
 		self._titlesList = []
@@ -143,9 +180,17 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		_titlesList = self._titlesList
 		_linksList = self._linksList
 		if _titlesList == []:
-			wx.CallAfter(gui.messageBox, _("Feeds can not be reported. Check your Internet conectivity or specified address"), _("Update Error"), wx.OK|wx.ICON_ERROR)
+			wx.CallAfter(gui.messageBox,
+			# Translators: the label of an error dialog.
+			_("Feeds can not be reported. Check your Internet conectivity or specified address"),
+			# Translators: the title of an error dialog.
+			_("Update Error"),
+			wx.OK|wx.ICON_ERROR)
 			return
-		dlg = wx.SingleChoiceDialog(gui.mainFrame, _("Open the web page for reading your selected article"), "%s (%d)" % (self._channelName, len(_titlesList)), choices=_titlesList)
+		dlg = wx.SingleChoiceDialog(gui.mainFrame,
+		# Translators: the label of a single choice dialog.
+		_("Open the web page for reading your selected article"),
+		"%s (%d)" % (self._channelName, len(_titlesList)), choices=_titlesList)
 		dlg.SetSelection(0)
 		gui.mainFrame.prePopup()
 		try:
@@ -183,13 +228,17 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			self._linksList = []
 			self._channelName = ""
 		if self.getCounter() == -1:
+		# Translators: message presented when feeds cannot be reported.
 			ui.message(_("Feeds can not be reported. Check your Internet conectivity or specified address"))
 			return
 		RSS = self._RSS
 		ui.message(RSS.title)
 
 	def onCopyFeeds(self, evt):
-		dlg = wx.DirDialog(gui.mainFrame, _("Select a folder for copying your saved feeds"), configPath, wx.DD_DEFAULT_STYLE)
+		dlg = wx.DirDialog(gui.mainFrame,
+		# Translators: the label of a dialog to select a folder.
+		_("Select a folder for copying your saved feeds"),
+		configPath, wx.DD_DEFAULT_STYLE)
 		gui.mainFrame.prePopup()
 		result = dlg.ShowModal()
 		gui.mainFrame.postPopup()
@@ -199,11 +248,18 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				shutil.rmtree(copyPath, ignore_errors=True)
 				shutil.copytree(_savePath, copyPath)
 			except WindowsError:
-				wx.CallAfter(gui.messageBox,_("Folder not copied"), _("Copy Error"), wx.OK|wx.ICON_ERROR)
+				wx.CallAfter(gui.messageBox,
+				# Translators: the label of an error dialog.
+				_("Folder not copied"),
+				# Translators: the title of an error dialog.
+				_("Copy Error"),
+				wx.OK|wx.ICON_ERROR)
 
 	def onRestoreFeeds(self, evt):
 		feedsPath = os.path.join(configPath, "RSS")
-		dlg = wx.DirDialog(gui.mainFrame, _("Select the feeds folder you wish to restore"), feedsPath, wx.DD_DIR_MUST_EXIST | wx.DD_DEFAULT_STYLE)
+		dlg = wx.DirDialog(gui.mainFrame,
+		# Translators: the label of a dialog to select a folder.
+		_("Select the feeds folder you wish to restore"), feedsPath, wx.DD_DIR_MUST_EXIST | wx.DD_DEFAULT_STYLE)
 		gui.mainFrame.prePopup()
 		result = dlg.ShowModal()
 		gui.mainFrame.postPopup()
@@ -213,7 +269,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				shutil.rmtree(_savePath, ignore_errors=True)
 				shutil.copytree(feedsPath, _savePath)
 			except WindowsError:
-				wx.CallAfter(gui.messageBox,_("Folder not copied"), _("Copy Error"), wx.OK|wx.ICON_ERROR)
+				wx.CallAfter(gui.messageBox,
+				# Translators: the label of an error dialog.
+				_("Folder not copied"),
+				# Translators: the title of an error dialog.
+				_("Copy Error"),
+				wx.OK|wx.ICON_ERROR)
 
 	def getDocFolder(self):
 		langs = [languageHandler.getLanguage(), "en"]
@@ -256,23 +317,28 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def script_readFirstFeed(self, gesture):
 		self.onReadFirstFeed(None)
+	# Translators: message presented in input mode.
 	script_readFirstFeed.__doc__ = _("Updates the selected channel and reads the first feed title.")
 
 	def script_readCurrentFeed(self, gesture):
 		if self.getCounter() == -1:
+			# Translators: message presented when feeds cannot be reported.
 			ui.message(_("Feeds can not be reported. Check your Internet conectivity or specified address"))
 			return
 		feed = self.getFeed()
 		link = self._linksList[self._index]
 		feedLink = "%s\r\n\r\n%s" % (feed, link)
 		if scriptHandler.getLastScriptRepeatCount()==1 and api.copyToClip(feedLink):
+			# Translators: message presented when the link of a feed is copied to the clipboard.
 			ui.message(_("Copied to clipboard %s") % feedLink)
 		else:
 			ui.message(feed)
-	script_readCurrentFeed.__doc__ = _("Reads the current feed title. Pressed two times, copies the text to clipboard.")
+	# Translators: message presented in input mode.
+	script_readCurrentFeed.__doc__ = _("Reads the title of the current feed. Pressed two times, copies the text to the clipboard.")
 
 	def script_readNextFeed(self, gesture):
 		if self.getCounter() == -1:
+			# Translators: message presented when feeds cannot be reported.
 			ui.message(_("Feeds can not be reported. Check your Internet conectivity or specified address"))
 			return
 		if self._index >= self.getCounter()-1:
@@ -280,10 +346,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		else:
 			self._index += 1
 		ui.message(self.getFeed())
-	script_readNextFeed.__doc__ = _("Reads the next feed title.")
+	# Translators: message presented in input mode.
+	script_readNextFeed.__doc__ = _("Reads the title of the next feed.")
 
 	def script_readPriorFeed(self, gesture):
 		if self.getCounter() == -1:
+			# Translators: message presented when feeds cannot be reported.
 			ui.message(_("Feeds can not be reported. Check your Internet conectivity or specified address"))
 			return
 		if self._index <= 0:
@@ -291,10 +359,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		else:
 			self._index -=1
 		ui.message(self.getFeed())
+	# Translators: message presented in input mode.
 	script_readPriorFeed.__doc__ = _("Reads the prior feed title.")
 
 	def script_reportLink(self, gesture):
 		if self.getCounter() == -1:
+			# Translators: message presented when feeds cannot be reported.
 			ui.message(_("Feeds can not be reported. Check your Internet conectivity or specified address"))
 			return
 		feedLink = self._linksList[self._index]
@@ -302,10 +372,16 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			os.startfile(feedLink)
 		else:
 			ui.message(feedLink)
+	# Translators: message presented in input mode.
 	script_reportLink.__doc__ = _("Reads the article link, that allows open its web page. Pressed two times, opens the web.")
 
 	def setAddressDialog(self):
-		d = wx.TextEntryDialog(gui.mainFrame, _("The address of the channel you wish to follow"), _("Address"), defaultValue=address)
+		d = wx.TextEntryDialog(gui.mainFrame,
+		# Translators: the label of a text entry dialog.
+		_("The address of the channel you wish to follow"),
+		# Translators: the title of a text entry dialog.
+		_("Address"),
+		defaultValue=address)
 		def callback(result):
 			if result == wx.ID_OK:
 				# Make sure this happens after focus returns to the document.
@@ -319,14 +395,19 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		address=text
 		self._index = 0
 		self._RSS =Feed(self._index)
+		# Translators: message presented when the address of a feed has been selected.
 		ui.message(_("Selected %s") % address)
 
 	def script_setAddress(self, gesture):
 		self.onSetAddress(None)
+	# Translators: message presented in input mode.
 	script_setAddress.__doc__ = _("Opens a dialog for setting the address of the feeds channel.")
 
 	def setAddressFileDialog(self):
-		d =wx.FileDialog(gui.mainFrame, _("Choose a file containing a channel address"), _savePath, "addressFile.txt", _("Text files (*.txt) |*.txt"), wx.FD_OPEN)
+		d =wx.FileDialog(gui.mainFrame,
+		# Translators: the label of a file dialog.
+		_("Choose a file containing a channel address"),
+		_savePath, "addressFile.txt", _("Text files (*.txt) |*.txt"), wx.FD_OPEN)
 		def callback(result):
 			if result == wx.ID_OK:
 				# Make sure this happens after focus returns to the document.
@@ -341,8 +422,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			f = open (file, "r")
 			address = f.read()
 			f.close()
+			# Translators: message presented when the address of a feed has been selected.
 			ui.message(_("Selected %s") % address)
 		except IOError:
+			# Translators: message presented when cannot select the address of a feed.
 			ui.message(_("Address can not be selected"))
 			return
 		self._index = 0
@@ -350,10 +433,14 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def script_setAddressFile(self, gesture):
 		self.onSetAddressFile(None)
+	# Translators: message presented in input mode.
 	script_setAddressFile.__doc__ = _("Opens a dialog for setting the address of the feeds channel from a selected file.")
 
 	def saveAddressDialog(self):
-		d =wx.FileDialog(gui.mainFrame, _("File for saving your current address"), _savePath, "addressFile.txt", _("Text files (*.txt) | *.txt"), wx.FD_SAVE | wx.FD_OVERWRITE_PROMPT)
+		d =wx.FileDialog(gui.mainFrame,
+		# Translators: the label of a file dialog.
+		_("File for saving your current address"),
+		_savePath, "addressFile.txt", _("Text files (*.txt) | *.txt"), wx.FD_SAVE | wx.FD_OVERWRITE_PROMPT)
 		def callback(result):
 			if result == wx.ID_OK:
 				# Make sure this happens after focus returns to the document.
@@ -368,12 +455,15 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			f = open (file, "w")
 			f.write(address)
 			f.close()
+			# Translators: message presented when the address of a feed has been saved.
 			ui.message(_("Saved %s") % address)
 		except IOError:
+			# Translators: message presented when cannot save the address of a feed.
 			ui.message(_("Address can not be saved"))
 
 	def script_saveAddress(self, gesture):
 		self.onSaveAddress(None)
+	# Translators: message presented in input mode.
 	script_saveAddress.__doc__ = _("Opens a dialog for saving a file containing the selected address.")
 
 	__gestures = {
