@@ -66,6 +66,9 @@ class Feed:
 		else:
 			self.RSSArticles = False
 			channel = document.getElementsByTagName('feed')
+			if len(channel) <= 0:
+				self.counter = -1
+				return
 		channelTitle = channel[0].getElementsByTagName('title')[0].firstChild
 		if channelTitle is None:
 			self.channelName = ""
@@ -177,9 +180,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			pass
 
 	def onList(self, evt):
-		_titlesList = self._titlesList
-		_linksList = self._linksList
-		if _titlesList == []:
+		self._index = 0
+		self._RSS = Feed(self._index)
+		self._counter = self._RSS.counter
+		if self.getCounter() == -1:
 			wx.CallAfter(gui.messageBox,
 			# Translators: the label of an error dialog.
 			_("Feeds can not be reported. Check your Internet conectivity or specified address"),
@@ -187,10 +191,13 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			_("Update Error"),
 			wx.OK|wx.ICON_ERROR)
 			return
+		self._titlesList = self._RSS.titlesList
+		self._linksList = self._RSS.linksList
+		self._channelName = self._RSS.channelName
 		dlg = wx.SingleChoiceDialog(gui.mainFrame,
 		# Translators: the label of a single choice dialog.
 		_("Open the web page for reading your selected article"),
-		"%s (%d)" % (self._channelName, len(_titlesList)), choices=_titlesList)
+		"%s (%d)" % (self._channelName, len(self._titlesList)), choices=self._titlesList)
 		dlg.SetSelection(0)
 		gui.mainFrame.prePopup()
 		try:
@@ -200,7 +207,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		gui.mainFrame.postPopup()
 		if result == wx.ID_OK:
 			self._index = dlg.GetSelection()
-			link = _linksList[self._index]
+			link = self._linksList[self._index]
 			os.startfile(link)
 
 	def onSetAddress(self, evt):
@@ -214,25 +221,19 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def onReadFirstFeed(self, evt):
 		self._index = 0
-		self._titlesList = []
-		self._linksList = []
-		self._channelName = ""
-		_RSS = Feed(self._index)
-		self._RSS = _RSS
-		self._counter = _RSS.counter
-		self._titlesList = _RSS.titlesList
-		self._linksList = _RSS.linksList
-		self._channelName = _RSS.channelName
-		if self._counter == -1:
+		self._RSS = Feed(self._index)
+		self._counter = self._RSS.counter
+		if self.getCounter() == -1:
 			self._titlesList = []
 			self._linksList = []
 			self._channelName = ""
-		if self.getCounter() == -1:
-		# Translators: message presented when feeds cannot be reported.
+			# Translators: message presented when feeds cannot be reported.
 			ui.message(_("Feeds can not be reported. Check your Internet conectivity or specified address"))
 			return
-		RSS = self._RSS
-		ui.message(RSS.title)
+		self._titlesList = self._RSS.titlesList
+		self._linksList = self._RSS.linksList
+		self._channelName = self._RSS.channelName
+		ui.message(self._RSS.title)
 
 	def onCopyFeeds(self, evt):
 		dlg = wx.DirDialog(gui.mainFrame,
