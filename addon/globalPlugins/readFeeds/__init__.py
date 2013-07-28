@@ -48,7 +48,7 @@ class Feed:
 		# Our actual XML document
 		try:
 			document = minidom.parse(urllib.urlopen(address))
-		except IOError:
+		except:
 			self.counter = -1
 			self.titlesList = []
 			self.title = ""
