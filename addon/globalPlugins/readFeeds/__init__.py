@@ -1,4 +1,4 @@
-﻿# -*- coding: UTF-8 -*-
+# -*- coding: UTF-8 -*-
 
 # Read feeds: A simple plugin for reading feeds with NVDA
 # Version: 6.0
