@@ -150,10 +150,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		_("Reload current feed"))
 		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, self.onReadFirstFeed, self.readFirstItem)
 		self.copyFeedsItem = self.readFeedsMenu.Append(wx.ID_ANY,
-		# Translators: the name of a menu item.
+		# Translators: the name of a menu item, which will backup the users feeds.
 		_("&Copy feeds folder..."),
 		# Translators: the tooltip for a menu item.
-		_("Backup of feeds folder"))
+		_("Backs up your feeds folder"))
 		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, self.onCopyFeeds, self.copyFeedsItem)
 		self.restoreFeedsItem = self.readFeedsMenu.Append(wx.ID_ANY,
 		# Translators: the name of a menu item.
@@ -165,7 +165,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Translators: the name of a menu item.
 		_("Open &documentation"),
 		# Translators: the tooltip for a menu item.
-		_("Open documentation for current language"))
+		_("Open documentation in the current language"))
 		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, self.onAbout, self.aboutItem)
 		self._counter = -1
 		self._titlesList = []
@@ -185,7 +185,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self._counter = self._RSS.counter
 		if self.getCounter() == -1:
 			wx.CallAfter(gui.messageBox,
-			# Translators: the label of an error dialog.
+			# Translators: The label in an error dialog.
 			_("Feeds can not be reported. Check your Internet conectivity or specified address"),
 			# Translators: the title of an error dialog.
 			_("Update Error"),
@@ -196,7 +196,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self._channelName = self._RSS.channelName
 		dlg = wx.SingleChoiceDialog(gui.mainFrame,
 		# Translators: the label of a single choice dialog.
-		_("Open the web page for reading your selected article"),
+		_("Open web page of selected article."),
 		"%s (%d)" % (self._channelName, len(self._titlesList)), choices=self._titlesList)
 		dlg.SetSelection(0)
 		gui.mainFrame.prePopup()

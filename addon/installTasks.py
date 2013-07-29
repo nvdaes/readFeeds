@@ -24,7 +24,7 @@ def onInstall():
 		return
 	if gui.messageBox(
 	# Translators: the label of a message box dialog.
-	_("Your configuration folder for NVDA contains files that seem to be derivated from a previous version of this add-on. Do you want to update it?"),
+	_("Your configuration folder for NVDA contains files that seem to be derived from a previous version of this add-on. Do you want to update it?"),
 	# Translators: the title of a message box dialog.
 	_("Install or update add-on"),
 	wx.YES|wx.NO|wx.ICON_WARNING)==wx.YES:
