@@ -29,9 +29,9 @@ del sys.path[-1]
 
 addonHandler.initTranslation()
 
-address = 'http://rss.slashdot.org/Slashdot/slashdot' # Default address
+address = 'http://rss.slashdot.org/Slashdot/slashdot' # Default address, used when addressFile cannot be read
 _savePath = os.path.join(os.path.dirname(__file__), "RSS")
-addressFile = os.path.join(_savePath, "addressFile.txt")
+addressFile = os.path.join(_savePath, "addressFile.txt") # File containing the URL of the feed selected when the add-on starts
 configPath = globalVars.appArgs.configPath
 
 try:
