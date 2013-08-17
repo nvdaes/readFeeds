@@ -19,11 +19,12 @@ Pop up the NVDA menu, NVDA+N, to allow you to access ReadFeeds menu.
 - News list...
 Presents the news list from your current feed. Select the news item you want to read and press OK button to open the corresponding page in your browser.
 - Temporary address... control + NVDA + shift + enter:
-Opens a dialog for typing a new URL to select another feed. The current URL will be shown on this dialog.
+Opens a dialog for typing a new URL to select another feed. The current URL will be shown in this dialog.
 - Load saved address... NVDA+control+enter:
 Opens a dialog to select a feed from a saved file containing a feed URL.
 - Save current address... NVDA+shift+enter:
-opens a dialog to select a file where you can save the current feed URL. Use addressFile.txt for saving the URL of the feed you want to select when this add-on is started.
+opens a dialog for selecting the file where current feed URL will be saved.
+Save the URL to addressFile.txt to use this feed as the default for when the addon is started.
 - Update current feed: control+shift+NVDA+8:
 Refresh selected feed. The feeds will not be updated automatically when Read Feeds addon is started.
 - Copy feeds folder...
@@ -48,13 +49,10 @@ Reads the next feed title.
 
 ## Notifications: ##
 
-- When the title or URL have been copied;
+- When the title or URL have been copied.
 - When unable to read a feed, probably due to connection problems or the URL corresponds to an invalid feed.
-- NVDA could inform with an error message also if it was not possible to copy the saved feeds.
+- NVDA will display an error message if it was not possible to copy the saved feeds.
 - The title of the news list dialog displays the selected feed name and number of items available.
-
-Last Translation from Spanish: Sun feb 24 01:00 2013, by
-Chris
 
 ## Changes for 6.0 ##
 *	 Initial version.
