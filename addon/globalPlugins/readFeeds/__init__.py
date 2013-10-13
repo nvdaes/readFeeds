@@ -41,6 +41,9 @@ try:
 except IOError:
 	pass
 
+# Translators: message presented when feeds cannot be reported.
+cannotReport = _("Feeds can not be reported. Check your Internet conectivity or specified address.")
+
 class Feed:
 
 	def __init__(self, range):
@@ -83,23 +86,34 @@ class Feed:
 			if len(articles) == 0:
 				self.counter = -1
 				return
+		title = None
+		link = None
 		for item in articles:
 			self.counter +=1
-			title = item.getElementsByTagName('title')[0].firstChild.data
+			try:
+				title = item.getElementsByTagName('title')[0].firstChild.data
+			except:
+				pass
 			if title is None or title == "":
 				self.counter = -1
 				# Translators: message presented when the current feed has untitled items.
-				ui.message(_("This feed contains untitled items"))
+				ui.message(_("This feed contains untitled items or the title cannot be retrieved."))
 				return
 			self.titlesList.append(title)
 			if self.RSSArticles:
-				link = item.getElementsByTagName('link')[0].firstChild.data
+				try:
+					link = item.getElementsByTagName('link')[0].firstChild.data
+				except:
+					pass
 			else:
-				link = item.getElementsByTagName('link')[0].getAttribute('href')
+				try:
+					link = item.getElementsByTagName('link')[0].getAttribute('href')
+				except:
+					pass
 			if link is None or link == "":
 				self.counter = -1
-				# Translators: message presented when the current feed contains items without a link.
-				ui.message(_("This feed contains items without a link"))
+				# Translators: message presented when the current feed contains items without a recognized link.
+				ui.message(_("This feed contains items without a link or the link cannot be retrieved."))
 				return
 			self.linksList.append(link)
 			if index <= range:
@@ -185,8 +199,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self._counter = self._RSS.counter
 		if self.getCounter() == -1:
 			wx.CallAfter(gui.messageBox,
-			# Translators: The label in an error dialog.
-			_("Feeds can not be reported. Check your Internet conectivity or specified address"),
+			cannotReport,
 			# Translators: the title of an error dialog.
 			_("Update Error"),
 			wx.OK|wx.ICON_ERROR)
@@ -197,7 +210,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		dlg = wx.SingleChoiceDialog(gui.mainFrame,
 		# Translators: the label of a single choice dialog.
 		_("Open web page of selected article."),
-		"%s (%d)" % (self._channelName, len(self._titlesList)), choices=self._titlesList)
+		u"{title} ({itemNumber})".format(title=self._channelName, itemNumber=len(self._titlesList)), choices=self._titlesList)
 		dlg.SetSelection(0)
 		gui.mainFrame.prePopup()
 		try:
@@ -227,8 +240,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			self._titlesList = []
 			self._linksList = []
 			self._channelName = ""
-			# Translators: message presented when feeds cannot be reported.
-			ui.message(_("Feeds can not be reported. Check your Internet conectivity or specified address"))
+			ui.message(cannotReport)
 			return
 		self._titlesList = self._RSS.titlesList
 		self._linksList = self._RSS.linksList
@@ -323,12 +335,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def script_readCurrentFeed(self, gesture):
 		if self.getCounter() == -1:
-			# Translators: message presented when feeds cannot be reported.
-			ui.message(_("Feeds can not be reported. Check your Internet conectivity or specified address"))
+			ui.message(cannotReport)
 			return
 		feed = self.getFeed()
 		link = self._linksList[self._index]
-		feedLink = "%s\r\n\r\n%s" % (feed, link)
+		feedLink = u"{title}\r\n\r\n{address}".format(title=feed, address=link)
 		if scriptHandler.getLastScriptRepeatCount()==1 and api.copyToClip(feedLink):
 			# Translators: message presented when the link of a feed is copied to the clipboard.
 			ui.message(_("Copied to clipboard %s") % feedLink)
@@ -339,8 +350,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def script_readNextFeed(self, gesture):
 		if self.getCounter() == -1:
-			# Translators: message presented when feeds cannot be reported.
-			ui.message(_("Feeds can not be reported. Check your Internet conectivity or specified address"))
+			ui.message(cannotReport)
 			return
 		if self._index >= self.getCounter()-1:
 			self._index = 0
@@ -352,8 +362,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def script_readPriorFeed(self, gesture):
 		if self.getCounter() == -1:
-			# Translators: message presented when feeds cannot be reported.
-			ui.message(_("Feeds can not be reported. Check your Internet conectivity or specified address"))
+			ui.message(cannotReport)
 			return
 		if self._index <= 0:
 			self._index = self.getCounter()-1
@@ -365,8 +374,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def script_reportLink(self, gesture):
 		if self.getCounter() == -1:
-			# Translators: message presented when feeds cannot be reported.
-			ui.message(_("Feeds can not be reported. Check your Internet conectivity or specified address"))
+			ui.message(cannotReport)
 			return
 		feedLink = self._linksList[self._index]
 		if scriptHandler.getLastScriptRepeatCount()==1:
