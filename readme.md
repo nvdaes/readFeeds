@@ -9,7 +9,7 @@ Below when we mention feeds, we mean both RSS and ATOM feeds.
 
 ## Installation or Update: ##
 
-If there is an RSS folder in your personal NVDA configuration folder, from a previous version of ReadFeeds, when installing this version, version 5.0 or later, a dialog will ask if you want to upgrade or install.
+If there is an RSS or personalFeeds folder in your personal NVDA configuration folder, from a previous version of ReadFeeds, when installing this version, version 6.0 or later, a dialog will ask if you want to upgrade or install.
 Choose update to preserve your saved feeds and to continue using them in the new installed version of readFeeds. 
 
 ## Commands: ##
@@ -30,9 +30,9 @@ Save the URL to addressFile.txt to use this feed as the default for when the add
 - Update current feed: control+shift+NVDA+8:
 Refresh selected feed. The feeds will not be updated automatically when Read Feeds addon is started.
 - Copy feeds folder...
-opens a dialog to choose a folder where you can save the RSS directory of your feeds. By default the selected folder is the NVDA's configuration directory, which will create the RSS directory.
+opens a dialog to choose a folder where you can save the personalFeeds directory of your feeds. By default the selected folder is the NVDA's configuration directory, which will create the personalFeeds directory.
 - Restore feeds...
-Opens a dialog to select a folder which replaces your feeds in the RSS folder. Make sure you load a folder containing feeds URLs.
+Opens a dialog to select a folder which replaces your feeds in the personalFeeds folder. Make sure you load a folder containing feeds URLs.
 - Open documentation:
 Opens the information about Read Feeds add-on, in the NVDA interface language if available, or in English by default.
 

@@ -30,7 +30,11 @@ del sys.path[-1]
 addonHandler.initTranslation()
 
 address = 'http://rss.slashdot.org/Slashdot/slashdot' # Default address, used when addressFile cannot be read
-_savePath = os.path.join(os.path.dirname(__file__), "RSS")
+
+_addonDir = os.path.join(os.path.dirname(__file__), "..").decode("mbcs") # The root of an addon folder
+_curAddon = addonHandler.Addon(_addonDir) # Addon instance
+_addonSummary = _curAddon.manifest['summary']
+_savePath = os.path.join(_addonDir, "globalPlugins", "personalFeeds")
 addressFile = os.path.join(_savePath, "addressFile.txt") # File containing the URL of the feed selected when the add-on starts
 configPath = globalVars.appArgs.configPath
 
@@ -44,14 +48,11 @@ except IOError:
 # Translators: message presented when feeds cannot be reported.
 cannotReport = _("Feeds can not be reported. Check your Internet conectivity or specified address.")
 
-_addonDir = os.path.join(os.path.dirname(__file__), "..") # The root of an addon folder
-_curAddon = addonHandler.Addon(_addonDir) # Addon instance
-_addonSummary = _curAddon.manifest['summary']
 
 class Feed:
 
 	def __init__(self, range):
-		# The URL of the RSS feed
+		# The URL of the feed
 		# Our actual XML document
 		try:
 			document = minidom.parse(urllib.urlopen(address))
