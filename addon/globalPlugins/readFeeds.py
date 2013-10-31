@@ -44,6 +44,10 @@ except IOError:
 # Translators: message presented when feeds cannot be reported.
 cannotReport = _("Feeds can not be reported. Check your Internet conectivity or specified address.")
 
+_addonDir = os.path.join(os.path.dirname(__file__), "..") # The root of an addon folder
+_curAddon = addonHandler.Addon(_addonDir) # Addon instance
+_addonSummary = _curAddon.manifest['summary']
+
 class Feed:
 
 	def __init__(self, range):
@@ -123,6 +127,8 @@ class Feed:
 				index +=1
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
+
+	scriptCategory = unicode(_addonSummary)
 
 	def __init__(self):
 		super(globalPluginHandler.GlobalPlugin, self).__init__()
