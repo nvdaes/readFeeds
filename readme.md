@@ -1,5 +1,7 @@
 # Read Feeds #
 
+* Author: Noelia Ruiz Martínez
+
 This addon allows to read feeds in Atom or RSS formats using NVDA. 
 The feeds will not be updated automatically.
 

@@ -10,8 +10,8 @@ _ = lambda x : x
 addon_info = {
 	# add-on Name
 	"addon-name" : "ReadFeeds",
-	# Add-on summary
-	# TRANSLATORS: Summary for this add-on to be shown on installation and add-on information.
+	# Add-on summary, user visible name
+	# TRANSLATORS: addon name to be shown on installation and add-on information.
 	"addon-summary" : _("Read Feeds"),
 	# Add-on description
 	# Translators: Long description to be shown for this add-on on installation and add-on information
@@ -19,7 +19,7 @@ addon_info = {
 	# version
 	"addon-version" : "6.0-dev",
 	# Author(s)
-	"addon-author" : "Noelia <nrm1977@gmail.com>",
+	"addon-author" : u"Noelia Ruiz Martínez <nrm1977@gmail.com>",
 	# URL for the add-on documentation support
 	"addon-url" : "http://addons.nvda-project.org"
 }
@@ -29,7 +29,7 @@ import os.path
 
 # Define the python files that are the sources of your add-on.
 # You can use glob expressions here, they will be expanded.
-pythonSources = [os.path.join("addon", "*.py"), os.path.join("addon", "globalPlugins", "readFeeds", "*.py")]
+pythonSources = [os.path.join("addon", "*.py"), os.path.join("addon", "globalPlugins", "*.py")]
 
 # Files that contain strings for translation. Usually your python sources
 i18nSources = pythonSources + ["buildVars.py", "docHandler.py"]
