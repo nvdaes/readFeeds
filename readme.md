@@ -9,7 +9,7 @@ Below when we mention feeds, we mean both RSS and ATOM feeds.
 
 ## Installation or Update: ##
 
-If there is an RSS or personalFeeds folder in your personal NVDA configuration folder, from a previous version of ReadFeeds, when installing this version, version 6.0 or later, a dialog will ask if you want to upgrade or install.
+If there is an RSS or personalFeeds folder in your personal NVDA configuration folder, from a previous version of ReadFeeds, when installing version 6.0 or later, a dialog will ask if you want to upgrade or install.
 Choose update to preserve your saved feeds and to continue using them in the new installed version of readFeeds. 
 
 ## Commands: ##
@@ -18,18 +18,18 @@ Choose update to preserve your saved feeds and to continue using them in the new
 
 Pop up the NVDA menu, NVDA+N, to allow you to access ReadFeeds menu. 
 
-- News list...
-Presents the news list from your current feed. Select the news item you want to read and press OK button to open the corresponding page in your browser.
-- Temporary address... control + NVDA + shift + enter:
+- Article list...
+Presents the article list from your current feed. Select the article you want to read and press OK button to open the corresponding page in your browser.
+- Temporary feed address... control + NVDA + shift + enter:
 Opens a dialog for typing a new URL to select another feed. The current URL will be shown in this dialog.
-- Load saved address... NVDA+control+enter:
+- Load feed address from file... NVDA+control+enter:
 Opens a dialog to select a feed from a saved file containing a feed URL.
-- Save current address... NVDA+shift+enter:
+- Save current feed address to file... NVDA+shift+enter:
 opens a dialog for selecting the file where current feed URL will be saved.
 Save the URL to addressFile.txt to use this feed as the default for when the addon is started.
-- Update current feed: control+shift+NVDA+8:
+- Refresh current feed: control+shift+NVDA+8:
 Refresh selected feed. The feeds will not be updated automatically when Read Feeds addon is started.
-- Copy feeds folder...
+- Backup feeds folder...
 opens a dialog to choose a folder where you can save the personalFeeds directory of your feeds. By default the selected folder is the NVDA's configuration directory, which will create the personalFeeds directory.
 - Restore feeds...
 Opens a dialog to select a folder which replaces your feeds in the personalFeeds folder. Make sure you load a folder containing feeds URLs.
@@ -41,7 +41,7 @@ Opens the information about Read Feeds add-on, in the NVDA interface language if
 - Ctrl+Shift+NVDA+Space:
 Reads the article's URL. Pressing twice will open the web page.
 - Ctrl+Shift+NVDA+8:
-Updates the selected feed and reads its first title.
+Refreshes the selected feed and reads its most recent title.
 - Ctrl+Shift+NVDA+I:
 Reads the current feed title. Pressing twice will copy the text (title and link) to clipboard.
 - Ctrl+Shift+NVDA+U:
