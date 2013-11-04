@@ -51,27 +51,29 @@ except IOError:
 # Translators: message presented when feeds cannot be reported.
 cannotReport = _("Unable to refresh feed. Check your Internet conectivity or that the specified feed address is correct.")
 
-
 class Feed(object):
 
 	def __init__(self, url):
 		super(Feed, self).__init__()
 		self._url = url
 		self._document = None
+		self._articles = []
 		self.refresh()
-		# Check if we are dealing with an rss or atom feed.
-		rssFeed = self._document.getElementsByTagName('channel')
-		if len(rssFeed):
-			self._feedType = 'rss'
-		atomFeed = self._document.getElementsByTagName('feed')
-		if len(atomFeed):
-			self._feedType = 'atom'
 
 	def refresh(self):
 		try:
 			self._document = minidom.parse(urllib.urlopen(self._url))
 		except Exception as e:
 			raise e
+		# Check if we are dealing with an rss or atom feed.
+		rssFeed = self._document.getElementsByTagName('channel')
+		if len(rssFeed):
+			self._feedType = 'rss'
+			self._articles = rssFeed
+		atomFeed = self._document.getElementsByTagName('feed')
+		if len(atomFeed):
+			self._feedType = 'atom'
+			self._articles = atomFeed
 
 	def getFeedUrl(self):
 		return self._url
@@ -86,26 +88,21 @@ class Feed(object):
 			return ""
 
 	def getArticleTitle(self, index=0):
-		if self._feedType == 'rss':
-			articles = self._document.getElementsByTagName('item')
-		elif self._feedType == 'atom':
-			articles = self._document.getElementsByTagName('entry')
 		try:
-			return articles[index].getElementsByTagName('title')[0].firstChild.data
+			return self._articles[index].getElementsByTagName('title')[0].firstChild.data
 		except:
 			# Translators: Presented when the current article does not have an associated title.
 			return _("Unable to locate article title.")
 
 	def getArticleLink(self, index=0):
-		if self._feedType == 'rss':
-			articles = self._document.getElementsByTagName('item')
-		elif self._feedType == 'atom':
-			articles = self._document.getElementsByTagName('entry')
 		try:
-			return articles[index].getElementsByTagName('link')[0].firstChild.data
+			return self._articles[index].getElementsByTagName('link')[0].firstChild.data
 		except:
 			# Translators: Presented when the current article does not have an associated link.
 			return _("Unable to locate article link.")
+
+	def getNumberOfArticles(self):
+		return len(self._articles)
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
