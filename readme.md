@@ -1,22 +1,22 @@
 # Read Feeds #
 
-* Author: Noelia Ruiz Martínez
+* Authors: Noelia Ruiz Martínez, Mesar Hameed
 
-This addon allows to read feeds in Atom or RSS formats using NVDA. 
-The feeds will not be updated automatically.
-
+This addon provides a straightforward  way to read feeds in Atom or RSS formats using NVDA. 
+The feeds will not be refreshed automatically.
 Below when we mention feeds, we mean both RSS and ATOM feeds.
 
 ## Installation or Update: ##
 
-If there is an RSS or personalFeeds folder in your personal NVDA configuration folder, from a previous version of ReadFeeds, when installing version 6.0 or later, a dialog will ask if you want to upgrade or install.
+If you used a previous version of this addon, and there is an RSS or personalFeeds folder in your personal NVDA configuration folder, 
+when installing version 6.0 or later, a dialog will ask if you want to upgrade or install.
 Choose update to preserve your saved feeds and to continue using them in the new installed version of readFeeds. 
 
 ## Commands: ##
 
 ### Read Feeds menu ###
 
-Pop up the NVDA menu, NVDA+N, to allow you to access ReadFeeds menu. 
+You can access the Read Feeds submenu from the nvda menu, NVDA+N, where the following menu options are available:
 
 - Article list...
 Presents the article list from your current feed. Select the article you want to read and press OK button to open the corresponding page in your browser.
@@ -26,7 +26,7 @@ Opens a dialog for typing a new URL to select another feed. The current URL will
 Opens a dialog to select a feed from a saved file containing a feed URL.
 - Save current feed address to file... NVDA+shift+enter:
 opens a dialog for selecting the file where current feed URL will be saved.
-Save the URL to addressFile.txt to use this feed as the default for when the addon is started.
+If you save to the special file addressFile.txt, this particular feed will be used as your default feed.
 - Refresh current feed: control+shift+NVDA+8:
 Refresh selected feed. The feeds will not be updated automatically when Read Feeds addon is started.
 - Backup feeds folder...
@@ -36,25 +36,25 @@ Opens a dialog to select a folder which replaces your feeds in the personalFeeds
 - Open documentation:
 Opens the information about Read Feeds add-on, in the NVDA interface language if available, or in English by default.
 
-### Other keyboard commands: ###
+### Keyboard commands: ###
 
 - Ctrl+Shift+NVDA+Space:
-Reads the article's URL. Pressing twice will open the web page.
+Announces current article's URL. Pressing twice will open the web page.
 - Ctrl+Shift+NVDA+8:
-Refreshes the selected feed and reads its most recent title.
+Refreshes the selected feed and announces its most recent title.
 - Ctrl+Shift+NVDA+I:
-Reads the current feed title. Pressing twice will copy the text (title and link) to clipboard.
+Announces current feed title. Pressing twice will copy the title and related link to clipboard.
 - Ctrl+Shift+NVDA+U:
-Reads the previous feed title.
+Announces previous feed title.
 - Ctrl+Shift+NVDA+O:
-Reads the next feed title.
+Announces next feed title.
 
 ## Notifications: ##
 
 - When the title or URL have been copied.
-- When unable to read a feed, probably due to connection problems or the URL corresponds to an invalid feed.
-- NVDA will display an error message if it was not possible to copy the saved feeds.
-- The title of the news list dialog displays the selected feed name and number of items available.
+- When unable to connect/refresh a feed, or the URL does not correspond to a valid feed.
+- NVDA will display an error message if it was not possible to backup the personalFeeds folder.
+- The title of the article list dialog displays the selected feed name and number of items available.
 
 ## Changes for 6.0 ##
 *	 Initial version.
