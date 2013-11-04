@@ -341,7 +341,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def script_readFirstFeed(self, gesture):
 		self.onReadFirstFeed(None)
 	# Translators: message presented in input mode.
-	script_readFirstFeed.__doc__ = _("Refreshes the current feed and reads the most recent article title.")
+	script_readFirstFeed.__doc__ = _("Refreshes the current feed and announces the most recent article title.")
 
 	def script_readCurrentFeed(self, gesture):
 		if self.getCounter() == -1:
@@ -356,7 +356,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		else:
 			ui.message(feed)
 	# Translators: message presented in input mode.
-	script_readCurrentFeed.__doc__ = _("Reads the title of the current article. Pressed two times, copies related link to the clipboard.")
+	script_readCurrentFeed.__doc__ = _("Announces the title of the current article. Pressed two times, copies title and related link to the clipboard.")
 
 	def script_readNextFeed(self, gesture):
 		if self.getCounter() == -1:
@@ -368,7 +368,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			self._index += 1
 		ui.message(self.getFeed())
 	# Translators: message presented in input mode.
-	script_readNextFeed.__doc__ = _("Reads the title of the next article.")
+	script_readNextFeed.__doc__ = _("Announces the title of the next article.")
 
 	def script_readPriorFeed(self, gesture):
 		if self.getCounter() == -1:
@@ -380,7 +380,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			self._index -=1
 		ui.message(self.getFeed())
 	# Translators: message presented in input mode.
-	script_readPriorFeed.__doc__ = _("Reads the title of the previous article.")
+	script_readPriorFeed.__doc__ = _("Announces the title of the previous article.")
 
 	def script_reportLink(self, gesture):
 		if self.getCounter() == -1:
@@ -392,7 +392,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		else:
 			ui.message(feedLink)
 	# Translators: message presented in input mode.
-	script_reportLink.__doc__ = _("Reads article link, when pressed two times, opens related web page.")
+	script_reportLink.__doc__ = _("Announces article link, when pressed two times, opens related web page.")
 
 	def setAddressDialog(self):
 		d = wx.TextEntryDialog(gui.mainFrame,
