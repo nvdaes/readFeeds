@@ -52,83 +52,60 @@ except IOError:
 cannotReport = _("Unable to refresh feed. Check your Internet conectivity or that the specified feed address is correct.")
 
 
-class Feed:
+class Feed(object):
 
-	def __init__(self, range):
-		# The URL of the feed
-		# Our actual XML document
+	def __init__(self, url):
+		super(Feed, self).__init__()
+		self._url = url
+		self._document = None
+		self.refresh()
+		# Check if we are dealing with an rss or atom feed.
+		rssFeed = self._document.getElementsByTagName('channel')
+		if len(rssFeed):
+			self._feedType = 'rss'
+		atomFeed = self._document.getElementsByTagName('feed')
+		if len(atomFeed):
+			self._feedType = 'atom'
+
+	def refresh(self):
 		try:
-			document = minidom.parse(urllib.urlopen(address))
+			self._document = minidom.parse(urllib.urlopen(self._url))
+		except Exception as e:
+			raise e
+
+	def getFeedUrl(self):
+		return self._url
+
+	def getFeedType(self):
+		return self._feedType
+
+	def getFeedName(self):
+		try:
+			return self._document.getElementsByTagName('title')[0].firstChild.data
 		except:
-			self.counter = -1
-			self.titlesList = []
-			self.title = ""
-			self.linksList = []
-			self.link = ""
-			self.channelName = ""
-			return
-		index = 0
-		self.counter = 0
-		self.titlesList = []
-		self.linksList = []
-		channel = document.getElementsByTagName('channel')
-		if len(channel)==1:
-			self.RSSArticles = True
-		else:
-			self.RSSArticles = False
-			channel = document.getElementsByTagName('feed')
-			if len(channel) <= 0:
-				self.counter = -1
-				return
-		channelTitle = channel[0].getElementsByTagName('title')[0].firstChild
-		if channelTitle is None:
-			self.channelName = ""
-		else:
-			self.channelName = channelTitle.data
-		# if self.channelName is None or self.channelName == "":
-			# ui.message(_("Untitled feed"))
-		if self.RSSArticles:
-			articles = document.getElementsByTagName('item')
-		else:
-			articles = document.getElementsByTagName('entry')
-			if len(articles) == 0:
-				self.counter = -1
-				return
-		title = None
-		link = None
-		for item in articles:
-			self.counter +=1
-			try:
-				title = item.getElementsByTagName('title')[0].firstChild.data
-			except:
-				pass
-			if title is None or title == "":
-				self.counter = -1
-				# Translators: message presented when the current feed has untitled items.
-				ui.message(_("This feed contains untitled articles or the titles cannot be retrieved."))
-				return
-			self.titlesList.append(title)
-			if self.RSSArticles:
-				try:
-					link = item.getElementsByTagName('link')[0].firstChild.data
-				except:
-					pass
-			else:
-				try:
-					link = item.getElementsByTagName('link')[0].getAttribute('href')
-				except:
-					pass
-			if link is None or link == "":
-				self.counter = -1
-				# Translators: message presented when the current feed contains items without a recognized link.
-				ui.message(_("This feed contains articles without related links or the links cannot be retrieved."))
-				return
-			self.linksList.append(link)
-			if index <= range:
-				self.title = title
-				self.link = link
-				# self.creator = item.getElementsByTagName('dc:creator')[0].firstChild.data
-				index +=1
+			return ""
+
+	def getArticleTitle(self, index=0):
+		if self._feedType == 'rss':
+			articles = self._document.getElementsByTagName('item')
+		elif self._feedType == 'atom':
+			articles = self._document.getElementsByTagName('entry')
+		try:
+			return articles[index].getElementsByTagName('title')[0].firstChild.data
+		except:
+			# Translators: Presented when the current article does not have an associated title.
+			return _("Unable to locate article title.")
+
+	def getArticleLink(self, index=0):
+		if self._feedType == 'rss':
+			articles = self._document.getElementsByTagName('item')
+		elif self._feedType == 'atom':
+			articles = self._document.getElementsByTagName('entry')
+		try:
+			return articles[index].getElementsByTagName('link')[0].firstChild.data
+		except:
+			# Translators: Presented when the current article does not have an associated link.
+			return _("Unable to locate article link.")
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
