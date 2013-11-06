@@ -168,9 +168,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, self.onAbout, self.aboutItem)
 		self._Feed = None
 		self._index = 0
-		self._titlesList = []
-		self._linksList = []
-		self._channelName = ""
 
 	def terminate(self):
 		try:
@@ -178,17 +175,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		except wx.PyDeadObjectError:
 			pass
 
-	def refreshFeed(self):
-		self._Feed = Feed(address)
-		self._index = 0
-		for index, article, in enumerate(self._Feed._articles):
-			self._titlesList.append(self._Feed.getArticleTitle(index))
-			self._linksList.append(self._Feed.getArticleLink(index))
-		self._channelName = self._Feed.getFeedName()
-
 	def onList(self, evt):
 		try:
-			self.refreshFeed()
+			self._feed.refresh()
 		except:
 			wx.CallAfter(gui.messageBox,
 			cannotReport,
@@ -196,10 +185,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			_("Refresh Error"),
 			wx.OK|wx.ICON_ERROR)
 			return
+		articleTitles = [self._feed.getArticleTitle(index) for index in range(0, self._feed.getNumberOfArticles())]
 		dlg = wx.SingleChoiceDialog(gui.mainFrame,
 		# Translators: the label of a single choice dialog.
 		_("Open web page of selected article."),
-		u"{title} ({itemNumber})".format(title=self._channelName, itemNumber=self._Feed.getNumberOfArticles()), choices=self._titlesList)
+		u"{title} ({itemNumber})".format(title=self._channelName, itemNumber=self._Feed.getNumberOfArticles()), choices=articleTitles)
 		dlg.SetSelection(0)
 		gui.mainFrame.prePopup()
 		try:
@@ -209,7 +199,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		gui.mainFrame.postPopup()
 		if result == wx.ID_OK:
 			self._index = dlg.GetSelection()
-			link = self._linksList[self._index]
+			link = self._feed.getArticleLink(self._index)
 			os.startfile(link)
 
 	def onSetAddress(self, evt):
@@ -223,11 +213,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def onReadFirstFeed(self, evt):
 		try:
-			self.refreshFeed()
+			self._feed.refresh()
+			self._index = 0
 		except:
 			ui.message(cannotReport)
 			return
-		ui.message(self.getCurrentArticleTitle())
+		ui.message(self._feed.getArticleTitle())
 
 	def onCopyFeeds(self, evt):
 		dlg = wx.DirDialog(gui.mainFrame,
@@ -302,14 +293,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		except WindowsError:
 			pass
 
-	def getCurrentArticleTitle(self):
-		articleTitle = self._titlesList[self._index]
-		return articleTitle
-
-	def getCurrentArticleLink(self):
-		articleLink = self._linksList[self._index]
-		return articleLink
-
 	def script_readFirstFeed(self, gesture):
 		self.onReadFirstFeed(None)
 	# Translators: message presented in input mode.
@@ -334,11 +317,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if not self._Feed:
 			ui.message(cannotReport)
 			return
-		if self._index >= self._Feed.getNumberOfArticles()-1:
+		self._index += 1
+		if self._index == self._Feed.getNumberOfArticles():
 			self._index = 0
-		else:
-			self._index += 1
-		ui.message(self.getCurrentArticleTitle())
+		ui.message(self._feed.getArticleTitle(self._index))
 	# Translators: message presented in input mode.
 	script_readNextFeed.__doc__ = _("Announces the title of the next article.")
 
@@ -346,11 +328,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if not self._Feed:
 			ui.message(cannotReport)
 			return
-		if self._index <= 0:
+		self._index -= 1
+		if self._index == -1:
 			self._index = self._Feed.getNumberOfArticles()-1
-		else:
-			self._index -=1
-		ui.message(self.getCurrentArticleTitle())
+		ui.message(self._feed.getArticleTitle(self._index))
 	# Translators: message presented in input mode.
 	script_readPriorFeed.__doc__ = _("Announces the title of the previous article.")
 
@@ -358,7 +339,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if not self._Feed:
 			ui.message(cannotReport)
 			return
-		feedLink = self._linksList[self._index]
+		feedLink = self._feed.getArticleLink(self._index)
 		if scriptHandler.getLastScriptRepeatCount()==1:
 			os.startfile(feedLink)
 		else:
