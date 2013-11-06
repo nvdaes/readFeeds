@@ -22,6 +22,7 @@ import api
 import gui
 import wx
 import ui
+from logHandler import log
 
 sys.path.append(os.path.dirname(__file__))
 from xml2.dom import minidom
@@ -58,11 +59,10 @@ class Feed(object):
 		self._url = url
 		self._document = None
 		self._articles = []
-		self._index = 0
 		self.refresh()
 
 	def refresh(self):
-		oldArticle = self._articles[self._index]
+		#oldArticle = self._articles[self._index]
 		try:
 			self._document = minidom.parse(urllib.urlopen(self._url))
 		except Exception as e:
@@ -77,11 +77,10 @@ class Feed(object):
 			if len(atomFeed):
 				self._feedType = 'atom'
 				self._articles = self._document.getElementsByTagName('entry')
-		# Recalculate the new index of the old article, before the refresh.
-		try:
-			self._index = self._articles.index(oldArticle)
-		except:
-			self._index = 0
+			else:
+				log.debugWarning("Unknown type of current feed", exc_info=True)
+				raise
+		self._index = 0
 
 	def getFeedUrl(self):
 		return self._url
@@ -186,7 +185,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Translators: the tooltip for a menu item.
 		_("Open documentation in the current language"))
 		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, self.onAbout, self.aboutItem)
-		self._Feed = None
+		self._feed = None
 
 	def terminate(self):
 		try:
@@ -196,7 +195,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def onList(self, evt):
 		try:
-			self._feed.refresh()
+			self._feed = Feed(address)
 		except:
 			wx.CallAfter(gui.messageBox,
 			cannotReport,
@@ -208,7 +207,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		dlg = wx.SingleChoiceDialog(gui.mainFrame,
 		# Translators: the label of a single choice dialog.
 		_("Open web page of selected article."),
-		u"{title} ({itemNumber})".format(title=self._feed.getFeedName(), itemNumber=self._Feed.getNumberOfArticles()), choices=articleTitles)
+		u"{title} ({itemNumber})".format(title=self._feed.getFeedName(), itemNumber=self._feed.getNumberOfArticles()), choices=articleTitles)
 		dlg.SetSelection(0)
 		gui.mainFrame.prePopup()
 		try:
@@ -230,8 +229,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def onReadFirstFeed(self, evt):
 		try:
-			self._feed.refresh()
-		except:
+			self._feed = Feed(address)
+		except Exception as e:
 			ui.message(cannotReport)
 			return
 		ui.message(self._feed.getArticleTitle())
@@ -315,7 +314,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	script_readFirstFeed.__doc__ = _("Refreshes the current feed and announces the most recent article title.")
 
 	def script_readCurrentFeed(self, gesture):
-		if not self._Feed:
+		if not self._feed:
 			ui.message(_("Refresh your selected feed to read the current article."))
 			return
 		feedInfo = u"{title}\r\n\r\n{address}".format(title=self._feed.getArticleTitle(), address=self._feed.getArticleLink())
@@ -328,7 +327,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	script_readCurrentFeed.__doc__ = _("Announces the title of the current article. Pressed two times, copies title and related link to the clipboard.")
 
 	def script_readNextFeed(self, gesture):
-		if not self._Feed:
+		if not self._feed:
 			ui.message(cannotReport)
 			return
 		self._feed.next()
@@ -337,7 +336,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	script_readNextFeed.__doc__ = _("Announces the title of the next article.")
 
 	def script_readPriorFeed(self, gesture):
-		if not self._Feed:
+		if not self._feed:
 			ui.message(cannotReport)
 			return
 		self._feed.previous()
@@ -346,7 +345,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	script_readPriorFeed.__doc__ = _("Announces the title of the previous article.")
 
 	def script_reportLink(self, gesture):
-		if not self._Feed:
+		if not self._feed:
 			ui.message(cannotReport)
 			return
 		feedLink = self._feed.getArticleLink()
