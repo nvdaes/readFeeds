@@ -69,11 +69,12 @@ class Feed(object):
 		rssFeed = self._document.getElementsByTagName('channel')
 		if len(rssFeed):
 			self._feedType = 'rss'
-			self._articles = rssFeed
-		atomFeed = self._document.getElementsByTagName('feed')
-		if len(atomFeed):
-			self._feedType = 'atom'
-			self._articles = atomFeed
+			self._articles = self._document.getElementsByTagName('item')
+		else:
+			atomFeed = self._document.getElementsByTagName('feed')
+			if len(atomFeed):
+				self._feedType = 'atom'
+				self._articles = self._document.getElementsByTagName('entry')
 
 	def getFeedUrl(self):
 		return self._url
@@ -165,10 +166,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Translators: the tooltip for a menu item.
 		_("Open documentation in the current language"))
 		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, self.onAbout, self.aboutItem)
-		self._counter = -1
+		self._Feed = None
+		self._index = 0
 		self._titlesList = []
 		self._linksList = []
-		self._index = 0
 		self._channelName = ""
 
 	def terminate(self):
@@ -177,24 +178,28 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		except wx.PyDeadObjectError:
 			pass
 
-	def onList(self, evt):
+	def refreshFeed(self):
+		self._Feed = Feed(address)
 		self._index = 0
-		self._RSS = Feed(self._index)
-		self._counter = self._RSS.counter
-		if self.getCounter() == -1:
+		for index, article, in enumerate(self._Feed._articles):
+			self._titlesList.append(self._Feed.getArticleTitle(index))
+			self._linksList.append(self._Feed.getArticleLink(index))
+		self._channelName = self._Feed.getFeedName()
+
+	def onList(self, evt):
+		try:
+			self.refreshFeed()
+		except:
 			wx.CallAfter(gui.messageBox,
 			cannotReport,
 			# Translators: the title of an error dialog.
 			_("Refresh Error"),
 			wx.OK|wx.ICON_ERROR)
 			return
-		self._titlesList = self._RSS.titlesList
-		self._linksList = self._RSS.linksList
-		self._channelName = self._RSS.channelName
 		dlg = wx.SingleChoiceDialog(gui.mainFrame,
 		# Translators: the label of a single choice dialog.
 		_("Open web page of selected article."),
-		u"{title} ({itemNumber})".format(title=self._channelName, itemNumber=len(self._titlesList)), choices=self._titlesList)
+		u"{title} ({itemNumber})".format(title=self._channelName, itemNumber=self._Feed.getNumberOfArticles()), choices=self._titlesList)
 		dlg.SetSelection(0)
 		gui.mainFrame.prePopup()
 		try:
@@ -217,19 +222,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self.saveAddressDialog()
 
 	def onReadFirstFeed(self, evt):
-		self._index = 0
-		self._RSS = Feed(self._index)
-		self._counter = self._RSS.counter
-		if self.getCounter() == -1:
-			self._titlesList = []
-			self._linksList = []
-			self._channelName = ""
+		try:
+			self.refreshFeed()
+		except:
 			ui.message(cannotReport)
 			return
-		self._titlesList = self._RSS.titlesList
-		self._linksList = self._RSS.linksList
-		self._channelName = self._RSS.channelName
-		ui.message(self._RSS.title)
+		ui.message(self.getCurrentArticleTitle())
 
 	def onCopyFeeds(self, evt):
 		dlg = wx.DirDialog(gui.mainFrame,
@@ -240,7 +238,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		result = dlg.ShowModal()
 		gui.mainFrame.postPopup()
 		if result == wx.ID_OK:
-			copyPath = os.path.join(dlg.GetPath(), "RSS")
+			copyPath = os.path.join(dlg.GetPath(), "personalFeeds")
 			try:
 				shutil.rmtree(copyPath, ignore_errors=True)
 				shutil.copytree(_savePath, copyPath)
@@ -253,7 +251,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				wx.OK|wx.ICON_ERROR)
 
 	def onRestoreFeeds(self, evt):
-		feedsPath = os.path.join(configPath, "RSS")
+		feedsPath = os.path.join(configPath, "personalFeeds")
 		dlg = wx.DirDialog(gui.mainFrame,
 		# Translators: the label of a dialog to select a folder.
 		_("Restore personal feeds from backup folder"), feedsPath, wx.DD_DIR_MUST_EXIST | wx.DD_DEFAULT_STYLE)
@@ -304,13 +302,13 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		except WindowsError:
 			pass
 
-	def getCounter(self):
-		return self._counter
+	def getCurrentArticleTitle(self):
+		articleTitle = self._titlesList[self._index]
+		return articleTitle
 
-	def getFeed(self):
-		# feed = ""
-		feed = self._titlesList[self._index]
-		return feed
+	def getCurrentArticleLink(self):
+		articleLink = self._linksList[self._index]
+		return articleLink
 
 	def script_readFirstFeed(self, gesture):
 		self.onReadFirstFeed(None)
@@ -318,46 +316,46 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	script_readFirstFeed.__doc__ = _("Refreshes the current feed and announces the most recent article title.")
 
 	def script_readCurrentFeed(self, gesture):
-		if self.getCounter() == -1:
-			ui.message(cannotReport)
+		if not self._Feed:
+			ui.message(_("Refresh your selected feed to read the current article."))
 			return
-		feed = self.getFeed()
-		link = self._linksList[self._index]
-		feedLink = u"{title}\r\n\r\n{address}".format(title=feed, address=link)
-		if scriptHandler.getLastScriptRepeatCount()==1 and api.copyToClip(feedLink):
-			# Translators: message presented when the link of a feed is copied to the clipboard.
-			ui.message(_("Copied to clipboard %s") % feedLink)
+		articleTitle = self.getCurrentArticleTitle()
+		articleLink = self.getCurrentArticleLink()
+		feedInfo = u"{title}\r\n\r\n{address}".format(title=articleTitle, address=articleLink)
+		if scriptHandler.getLastScriptRepeatCount()==1 and api.copyToClip(feedInfo):
+			# Translators: message presented when the information about an article of a feed is copied to the clipboard.
+			ui.message(_("Copied to clipboard %s") % feedInfo)
 		else:
-			ui.message(feed)
+			ui.message(feedInfo)
 	# Translators: message presented in input mode.
 	script_readCurrentFeed.__doc__ = _("Announces the title of the current article. Pressed two times, copies title and related link to the clipboard.")
 
 	def script_readNextFeed(self, gesture):
-		if self.getCounter() == -1:
+		if not self._Feed:
 			ui.message(cannotReport)
 			return
-		if self._index >= self.getCounter()-1:
+		if self._index >= self._Feed.getNumberOfArticles()-1:
 			self._index = 0
 		else:
 			self._index += 1
-		ui.message(self.getFeed())
+		ui.message(self.getCurrentArticleTitle())
 	# Translators: message presented in input mode.
 	script_readNextFeed.__doc__ = _("Announces the title of the next article.")
 
 	def script_readPriorFeed(self, gesture):
-		if self.getCounter() == -1:
+		if not self._Feed:
 			ui.message(cannotReport)
 			return
 		if self._index <= 0:
-			self._index = self.getCounter()-1
+			self._index = self._Feed.getNumberOfArticles()-1
 		else:
 			self._index -=1
-		ui.message(self.getFeed())
+		ui.message(self.getCurrentArticleTitle())
 	# Translators: message presented in input mode.
 	script_readPriorFeed.__doc__ = _("Announces the title of the previous article.")
 
 	def script_reportLink(self, gesture):
-		if self.getCounter() == -1:
+		if not self._Feed:
 			ui.message(cannotReport)
 			return
 		feedLink = self._linksList[self._index]
@@ -387,7 +385,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		global address
 		address=text
 		self._index = 0
-		self._RSS =Feed(self._index)
+		self._feed = Feed(address)
 		# Translators: message presented when the address of a feed has been selected.
 		ui.message(_("Selected %s") % address)
 
@@ -421,8 +419,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			# Translators: message presented when unable to read feed address.
 			ui.message(_("Unable to read feed address, feed can not be selected"))
 			return
-		self._index = 0
-		self._RSS =Feed(self._index)
+		self._Feed = Feed(address)
 
 	def script_setAddressFile(self, gesture):
 		self.onSetAddressFile(None)
@@ -443,7 +440,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def doSaveAddress(self, file):
 		if not file:
 			return
-		global address
 		try:
 			f = open (file, "w")
 			f.write(address)
