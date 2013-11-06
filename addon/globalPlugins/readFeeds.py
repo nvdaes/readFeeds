@@ -58,9 +58,11 @@ class Feed(object):
 		self._url = url
 		self._document = None
 		self._articles = []
+		self._index = 0
 		self.refresh()
 
 	def refresh(self):
+		oldArticle = self._articles[self._index]
 		try:
 			self._document = minidom.parse(urllib.urlopen(self._url))
 		except Exception as e:
@@ -75,6 +77,11 @@ class Feed(object):
 			if len(atomFeed):
 				self._feedType = 'atom'
 				self._articles = self._document.getElementsByTagName('entry')
+		# Recalculate the new index of the old article, before the refresh.
+		try:
+			self._index = self._articles.index(oldArticle)
+		except:
+			self._index = 0
 
 	def getFeedUrl(self):
 		return self._url
@@ -88,22 +95,35 @@ class Feed(object):
 		except:
 			return ""
 
-	def getArticleTitle(self, index=0):
+	def getArticleTitle(self, index=None):
+		if index is None: index = self._index
 		try:
 			return self._articles[index].getElementsByTagName('title')[0].firstChild.data
 		except:
 			# Translators: Presented when the current article does not have an associated title.
 			return _("Unable to locate article title.")
 
-	def getArticleLink(self, index=0):
+	def getArticleLink(self, index=None):
+		if index is None: index = self._index
 		try:
 			return self._articles[index].getElementsByTagName('link')[0].firstChild.data
 		except:
 			# Translators: Presented when the current article does not have an associated link.
 			return _("Unable to locate article link.")
 
+	def next(self):
+		self._index += 1
+		if self._index == self.getNumberOfArticles():
+			self._index = 0
+
+	def previous(self):
+		self._index -= 1
+		if self._index == -1:
+			self._index = self.getNumberOfArticles() - 1
+
 	def getNumberOfArticles(self):
 		return len(self._articles)
+
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
@@ -167,7 +187,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		_("Open documentation in the current language"))
 		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, self.onAbout, self.aboutItem)
 		self._Feed = None
-		self._index = 0
 
 	def terminate(self):
 		try:
@@ -198,9 +217,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			pass
 		gui.mainFrame.postPopup()
 		if result == wx.ID_OK:
-			self._index = dlg.GetSelection()
-			link = self._feed.getArticleLink(self._index)
-			os.startfile(link)
+			os.startfile(self._feed.getArticleLink(dlg.GetSelection()))
 
 	def onSetAddress(self, evt):
 		self.setAddressDialog()
@@ -214,7 +231,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def onReadFirstFeed(self, evt):
 		try:
 			self._feed.refresh()
-			self._index = 0
 		except:
 			ui.message(cannotReport)
 			return
@@ -302,9 +318,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if not self._Feed:
 			ui.message(_("Refresh your selected feed to read the current article."))
 			return
-		articleTitle = self.getCurrentArticleTitle()
-		articleLink = self.getCurrentArticleLink()
-		feedInfo = u"{title}\r\n\r\n{address}".format(title=articleTitle, address=articleLink)
+		feedInfo = u"{title}\r\n\r\n{address}".format(title=self._feed.getArticleTitle(), address=self._feed.getArticleLink())
 		if scriptHandler.getLastScriptRepeatCount()==1 and api.copyToClip(feedInfo):
 			# Translators: message presented when the information about an article of a feed is copied to the clipboard.
 			ui.message(_("Copied to clipboard %s") % feedInfo)
@@ -317,10 +331,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if not self._Feed:
 			ui.message(cannotReport)
 			return
-		self._index += 1
-		if self._index == self._Feed.getNumberOfArticles():
-			self._index = 0
-		ui.message(self._feed.getArticleTitle(self._index))
+		self._feed.next()
+		ui.message(self._feed.getArticleTitle())
 	# Translators: message presented in input mode.
 	script_readNextFeed.__doc__ = _("Announces the title of the next article.")
 
@@ -328,10 +340,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if not self._Feed:
 			ui.message(cannotReport)
 			return
-		self._index -= 1
-		if self._index == -1:
-			self._index = self._Feed.getNumberOfArticles()-1
-		ui.message(self._feed.getArticleTitle(self._index))
+		self._feed.previous()
+		ui.message(self._feed.getArticleTitle())
 	# Translators: message presented in input mode.
 	script_readPriorFeed.__doc__ = _("Announces the title of the previous article.")
 
@@ -339,7 +349,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if not self._Feed:
 			ui.message(cannotReport)
 			return
-		feedLink = self._feed.getArticleLink(self._index)
+		feedLink = self._feed.getArticleLink()
 		if scriptHandler.getLastScriptRepeatCount()==1:
 			os.startfile(feedLink)
 		else:
@@ -365,7 +375,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			return
 		global address
 		address=text
-		self._index = 0
 		self._feed = Feed(address)
 		# Translators: message presented when the address of a feed has been selected.
 		ui.message(_("Selected %s") % address)
