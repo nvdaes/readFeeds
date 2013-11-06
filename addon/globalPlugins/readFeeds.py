@@ -189,7 +189,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		dlg = wx.SingleChoiceDialog(gui.mainFrame,
 		# Translators: the label of a single choice dialog.
 		_("Open web page of selected article."),
-		u"{title} ({itemNumber})".format(title=self._channelName, itemNumber=self._Feed.getNumberOfArticles()), choices=articleTitles)
+		u"{title} ({itemNumber})".format(title=self._feed.getFeedName(), itemNumber=self._Feed.getNumberOfArticles()), choices=articleTitles)
 		dlg.SetSelection(0)
 		gui.mainFrame.prePopup()
 		try:
