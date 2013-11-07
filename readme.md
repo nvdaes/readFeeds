@@ -56,5 +56,5 @@ Announces next feed title.
 - NVDA will display an error message if it was not possible to backup the personalFeeds folder.
 - The title of the article list dialog displays the selected feed name and number of items available.
 
-## Changes for 6.0 ##
+## Changes for 1.0 ##
 *	 Initial version.

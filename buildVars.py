@@ -9,7 +9,7 @@ _ = lambda x : x
 # Add-on information variables
 addon_info = {
 	# add-on Name
-	"addon-name" : "ReadFeeds",
+	"addon-name" : "readFeeds",
 	# Add-on summary, user visible name
 	# TRANSLATORS: addon name to be shown on installation and add-on information.
 	"addon-summary" : _("Read Feeds"),
@@ -17,7 +17,7 @@ addon_info = {
 	# Translators: Long description to be shown for this add-on on installation and add-on information
 	"addon-description" : _("""Add-on for using NVDA as a feed reader."""),
 	# version
-	"addon-version" : "6.0-dev",
+	"addon-version" : "1.0-dev",
 	# Author(s)
 	"addon-author" : u"Noelia Ruiz Martínez <nrm1977@gmail.com>, Mesar Hameed <mhameed@src.gnome.org>",
 	# URL for the add-on documentation support
