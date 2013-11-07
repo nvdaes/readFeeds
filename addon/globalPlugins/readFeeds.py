@@ -181,12 +181,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Translators: the tooltip for a menu item.
 		_("Restore previously saved feeds"))
 		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, self.onRestoreFeeds, self.restoreFeedsItem)
-		self.aboutItem = self.readFeedsMenu.Append(wx.ID_ANY,
-		# Translators: the name of a menu item.
-		_("Open &documentation"),
-		# Translators: the tooltip for a menu item.
-		_("Open documentation in the current language"))
-		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, self.onAbout, self.aboutItem)
 		self._feed = None
 
 	def terminate(self):
@@ -278,37 +272,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				# Translators: the title of an error dialog.
 				_("Restore Error"),
 				wx.OK|wx.ICON_ERROR)
-
-	def getDocFolder(self):
-		langs = [languageHandler.getLanguage(), "en"]
-		for lang in langs:
-			docFolder = os.path.join(os.path.dirname(__file__), "..", "doc", lang)
-			if os.path.isdir(docFolder):
-				return docFolder
-			if "_" in lang:
-				tryLang = lang.split("_")[0]
-				docFolder = os.path.join(os.path.dirname(__file__), "..", "doc", tryLang)
-				if os.path.isdir(docFolder):
-					return docFolder
-				if tryLang == "en":
-					break
-			if lang == "en":
-				break
-		return None
-
-	def getDocPath(self, docFileName):
-		docPath = self.getDocFolder()
-		if docPath is not None:
-			docFile = os.path.join(docPath, docFileName)
-			if os.path.isfile(docFile):
-				docPath = docFile
-		return docPath
-
-	def onAbout(self, evt):
-		try:
-			os.startfile(self.getDocPath("readme.html"))
-		except WindowsError:
-			pass
 
 	def script_readFirstFeed(self, gesture):
 		self.onReadFirstFeed(None)

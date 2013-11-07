@@ -33,8 +33,6 @@ Refresh selected feed. The feeds will not be updated automatically when Read Fee
 opens a dialog to choose a folder where you can save the personalFeeds directory of your feeds. By default the selected folder is the NVDA's configuration directory, which will create the personalFeeds directory.
 - Restore feeds...
 Opens a dialog to select a folder which replaces your feeds in the personalFeeds folder. Make sure you load a folder containing feeds URLs.
-- Open documentation:
-Opens the information about Read Feeds add-on, in the NVDA interface language if available, or in English by default.
 
 ### Keyboard commands: ###
 
