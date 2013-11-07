@@ -62,7 +62,6 @@ class Feed(object):
 		self.refresh()
 
 	def refresh(self):
-		#oldArticle = self._articles[self._index]
 		try:
 			self._document = minidom.parse(urllib.urlopen(self._url))
 		except Exception as e:
@@ -105,7 +104,10 @@ class Feed(object):
 	def getArticleLink(self, index=None):
 		if index is None: index = self._index
 		try:
-			return self._articles[index].getElementsByTagName('link')[0].firstChild.data
+			if self.getFeedType == 'rss':
+				return self._articles[index].getElementsByTagName('link')[0].firstChild.data
+			elif self.getFeedType() == 'atom':
+				return self._articles[index].getElementsByTagName('link')[0].getAttribute('href')
 		except:
 			# Translators: Presented when the current article does not have an associated link.
 			return _("Unable to locate article link.")
