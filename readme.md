@@ -1,6 +1,7 @@
 # Read Feeds #
 
 * Authors: Noelia Ruiz Martínez, Mesar Hameed
+* Download [development version][1]
 
 This addon provides a straightforward  way to read feeds in Atom or RSS formats using NVDA. 
 The feeds will not be refreshed automatically.
@@ -56,3 +57,8 @@ Announces next feed title.
 
 ## Changes for 1.0 ##
 *	 Initial version.
+
+[1]: http://addons.nvda-project.org/files/get.php?file=rf-dev
+
+[2]: http://addons.nvda-project.org/files/get.php?file=rf
+
