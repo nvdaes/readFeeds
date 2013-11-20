@@ -104,9 +104,9 @@ class Feed(object):
 	def getArticleLink(self, index=None):
 		if index is None: index = self._index
 		try:
-			if self.getFeedType == 'rss':
+			if self.getFeedType() == u'rss':
 				return self._articles[index].getElementsByTagName('link')[0].firstChild.data
-			elif self.getFeedType() == 'atom':
+			elif self.getFeedType() == u'atom':
 				return self._articles[index].getElementsByTagName('link')[0].getAttribute('href')
 		except:
 			# Translators: Presented when the current article does not have an associated link.
