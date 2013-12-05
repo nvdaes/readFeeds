@@ -1,6 +1,7 @@
 # Read Feeds #
 
 * Authors: Noelia Ruiz Martínez, Mesar Hameed
+* Download [stable version][2]
 * Download [development version][1]
 
 This addon provides a straightforward  way to read feeds in Atom or RSS formats using NVDA. 
