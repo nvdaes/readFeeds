@@ -1,6 +1,7 @@
 # Lue syötteet #
 
 * Tekijät: Noelia Ruiz Martínez, Mesar Hameed
+* Lataa [vakaa versio][2]
 * Lataa [kehitysversio][1]
 
 Tämä lisäosa tarjoaa suoraviivaisen tavan lukea Atom -tai RSS-syötteitä
@@ -23,50 +24,53 @@ Lue syötteet -lisäosan versiossa.
 Pääset Lue syötteet -valikkoon NVDA-valikosta, NVDA+N, jossa ovat käytössä
 seuraavat vaihtoehdot:
 
-- Artikkelilista...  Näyttää listan nykyisen syötteen artikkeleista. Valitse
-haluamasi artikkeli ja paina OK-painiketta avataksesi sen sivun selaimessa.
-- Tilapäissyötteen osoite... Control+NVDA+Shift+Enter: Avaa valintaikkunan,
-jossa voit kirjoittaa uuden URL-osoitteen toisen syötteen
-valitsemiseksi. Nykyinen URL näytetään tässä valintaikkunassa.  - Lataa
-syötteen osoite tiedostosta... NVDA+Control+Enter: Avaa valintaikkunan,
-jossa voit valita syötteen sen osoitteen sisältävästä tiedostosta.  -
-Tallenna nykyisen syötteen osoite tiedostoon... NVDA+Shift+Enter: Avaa
-valintaikkunan, jossa voit valita tiedoston, johon nykyisen syötteen
-URL-osoite tallennetaan.  Mikäli tallennat addressFile.txt-nimiseen
-erikoistiedostoon, tätä syötettä käytetään oletussyötteenä.  - Päivitä
-nykyinen syöte: Control+Shift+NVDA+8: Päivittää valitun syötteen. Syötteitä
-ei päivitetä automaattisesti Lue syötteet -lisäosaa käynnistettäessä.  -
-Varmuuskopioi syötekansio...  Avaa valintaikkunan, jossa voit valita
-kansion, johon syötteidesi personalFeeds-hakemisto tallennetaan. Valittuna
-kansiona on oletusarvoisesti NVDA:n asetuskansio, johon
-personalFeeds-hakemisto luodaan.  - Palauta syötteet...  Avaa
-valintaikkunan, jossa voit valita kansion, joka korvaa
-personalFeeds-kansiossa olevat syötteesi. Varmista, että avaamasi kansio
-sisältää syötteiden URL-osoitteita.
+*	 Article list... Presents the article list from your current feed. Select
+   the article you want to read and press OK button to open the
+   corresponding page in your browser.
+*	 Temporary feed address... control + NVDA + shift + enter: Opens a dialog
+   for typing a new URL to select another feed. The current URL will be
+   shown in this dialog.
+*	 Load feed address from file... NVDA+control+enter: Opens a dialog to
+   select a feed from a saved file containing a feed URL.
+*	 Save current feed address to file... NVDA+shift+enter: opens a dialog for
+   selecting the file where current feed URL will be saved. If you save to
+   the special file addressFile.txt, this particular feed will be used as
+   your default feed.
+*	 Refresh current feed: control+shift+NVDA+8: Refresh selected feed. The
+   feeds will not be updated automatically when Read Feeds addon is started.
+*	 Backup feeds folder... opens a dialog to choose a folder where you can
+   save the personalFeeds directory of your feeds. By default the selected
+   folder is the NVDA's configuration directory, which will create the
+   personalFeeds directory.
+*	 Restore feeds... Opens a dialog to select a folder which replaces your
+   feeds in the personalFeeds folder. Make sure you load a folder containing
+   feeds URLs.
 
 ### Näppäinkomennot: ###
 
-- Ctrl+Shift+NVDA+välilyönti: Ilmoittaa nykyisen artikkelin
-URL-osoitteen. Kahdesti painaminen avaa artikkelin verkkosivun.  -
-Ctrl+Shift+NVDA+8: Päivittää valitun syötteen ja lukee sen uusimman
-otsikon.  - Ctrl+Shift+NVDA+I: Lukee nykyisen syötteen otsikon. Kahdesti
-painaminen kopioi otsikon ja siihen liittyvän linkin leikepöydälle.  -
-Ctrl+Shift+NVDA+U: Lukee edellisen syötteen otsikon.  - Ctrl+Shift+NVDA+O:
-Lukee seuraavan syötteen otsikon.
+*	 Ctrl+Shift+NVDA+Space: Announces current article's URL. Pressing twice
+   will open the web page.
+*	 Ctrl+Shift+NVDA+8: Refreshes the selected feed and announces its most
+   recent title.
+*	 Ctrl+Shift+NVDA+I: Announces current feed title. Pressing twice will copy
+   the title and related link to clipboard.
+*	 Ctrl+Shift+NVDA+U: Announces previous feed title.
+*	 Ctrl+Shift+NVDA+O: Announces next feed title.
 
 ## Ilmoitukset: ##
 
-- Kun otsikko tai URL-osoite on kopioitu.  - Kun yhteyttä ei voi
-muodostaa/syötettä päivittää, tai annetussa URL-osoitteessa ei ole
-kelvollista syötettä.  - NVDA näyttää virheilmoituksen, mikäli
-personalFeeds-kansion varmuuskopiointi ei onnistunut.  -
-Artikkelilista-valintaikkunan otsikko näyttää valitun syötteen nimen sekä
-syötteiden lukumäärän.
+*	 When the title or URL have been copied.
+*	 When unable to connect/refresh a feed, or the URL does not correspond to
+   a valid feed.
+*	 NVDA will display an error message if it was not possible to backup the
+   personalFeeds folder.
+*	 The title of the article list dialog displays the selected feed name and
+   number of items available.
 
 ## Muutokset versiossa 1.0 ##
 *	 Ensimmäinen versio.
 
-[[!tag dev]]
+[[!tag dev stable]]
 
 [1]: http://addons.nvda-project.org/files/get.php?file=rf-dev
 

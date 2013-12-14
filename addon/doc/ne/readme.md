@@ -1,27 +1,27 @@
-# RSS Akışlarını Oku #
+# वाचन पोषण #
 
-* Yazarlar: Noelia Ruiz Martínez, Mesar Hameed
-* İndir [kararlı sürüm][2]
-* İndir [geliştirme sürümü][1]
+* लेखकहरू: नोलिया रुइज्  मार्डिज्नेज,  मेसर हमिद 
+* डाउनलोड [स्थिर संस्करण][2]
+* डाउनलोड [विकास संस्करण][1]
 
-Bu eklenti NVDA kullanarak Atom veya RSS formatında beslemeleri okumak için
-basit bir yol sunar. Beslemeler otomatik olarak yenilenmez. Aşağıda besleme
-derken hem RSS hem de ATOM beslemelerini kastediyoruz.
+This addon provides a straightforward way to read feeds in Atom or RSS
+formats using NVDA.  The feeds will not be refreshed automatically.  Below
+when we mention feeds, we mean both RSS and ATOM feeds.
 
-## Kurulum veya Güncelleme: ##
+## स्थापना वा अद्यावधिकरण: ##
 
-Bu eklentinin önceki bir sürümünü kullanıyorsanız ve kişisel NVDA
-konfigürasyon klasöründe bir RSS veya personalFeeds adlı klasör varsa,
-eklentinin 6.0 sürümünden itibaren güncellemek mi yoksa kurmak mı
-istediğiniz sorulacaktır. Önceki RSS akışlarınızı kullanmaya devam etmek
-istiyorsanız Güncelle seçeneğiyle devam edin.
+If you used a previous version of this addon, and there is an RSS or
+personalFeeds folder in your personal NVDA configuration folder, when
+installing version 6.0 or later, a dialog will ask if you want to upgrade or
+install.  Choose update to preserve your saved feeds and to continue using
+them in the new installed version of readFeeds.
 
-## Komutlar: ##
+## आदेसहरू ##
 
-### RSS Okuma menüsü ###
+### वाचन पोषण मेनु ###
 
-RSS Okuma alt menüsüne NVDA+N ile açılan nvda menüsünden ulaşabilir,  bu
-menüde aşağıdaki menü seçeneklerini bulabilirsiniz:
+You can access the Read Feeds submenu from the nvda menu, NVDA+N, where the
+following menu options are available:
 
 *	 Article list... Presents the article list from your current feed. Select
    the article you want to read and press OK button to open the
@@ -45,7 +45,7 @@ menüde aşağıdaki menü seçeneklerini bulabilirsiniz:
    feeds in the personalFeeds folder. Make sure you load a folder containing
    feeds URLs.
 
-### Klavye komutları: ###
+### कुञ्जीपाटी आदेसहरू ###
 
 *	 Ctrl+Shift+NVDA+Space: Announces current article's URL. Pressing twice
    will open the web page.
@@ -56,7 +56,7 @@ menüde aşağıdaki menü seçeneklerini bulabilirsiniz:
 *	 Ctrl+Shift+NVDA+U: Announces previous feed title.
 *	 Ctrl+Shift+NVDA+O: Announces next feed title.
 
-## Bildirimler: ##
+## सुचनाहरू ##
 
 *	 When the title or URL have been copied.
 *	 When unable to connect/refresh a feed, or the URL does not correspond to
@@ -66,8 +66,8 @@ menüde aşağıdaki menü seçeneklerini bulabilirsiniz:
 *	 The title of the article list dialog displays the selected feed name and
    number of items available.
 
-## 1.0 Değişiklikler ##
-*	 İlk sürüm.
+## १.० मा गरिएका परिवर्तनहरू ##
+*	 सुरुको संस्करण
 
 [[!tag dev stable]]
 
