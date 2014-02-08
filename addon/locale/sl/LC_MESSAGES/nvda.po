@@ -1,0 +1,252 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: readFeeds 1.0-dev\n"
+"Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
+"POT-Creation-Date: 2013-11-16 13:26+0100\n"
+"PO-Revision-Date: 2014-01-23 12:47+0100\n"
+"Last-Translator: Jožef Gregorc <jozko.gregorc[@]guest.arnes.si\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.3\n"
+
+#. Translators: the label of a message box dialog.
+msgid ""
+"You have installed the ReadFeeds add-on, probably an old and incompatible "
+"version with this one. Do you want to uninstall the old version?"
+msgstr ""
+"Čeprav imate nameščen dodatek ReadFeeds, je ta zastarel in ni združljiv s to "
+"različico. Želite odstraniti staro različico?"
+
+#. Translators: the title of a message box dialog.
+msgid "Uninstall incompatible add-on"
+msgstr "Odstrani nezdružljiv dodatek"
+
+#. Translators: the label of a message box dialog.
+msgid ""
+"Your configuration folder for NVDA contains files that seem to be derived "
+"from a previous version of this add-on. Do you want to update it?"
+msgstr ""
+"Vaša NVDA konfiguracijska mapa vsebuje datoteke, za katere izgleda, da so "
+"del prejšnje različice tega dodatka. Jih želite posodobiti?"
+
+#. Translators: the title of a message box dialog.
+msgid "Install or update add-on"
+msgstr "Namesti ali posodobi dodatek"
+
+#. Translators: message presented when feeds cannot be reported.
+msgid ""
+"Unable to refresh feed. Check your Internet conectivity or that the "
+"specified feed address is correct."
+msgstr ""
+"Ni mogoče osvežiti vira. Preverite vašo internetno povezavo ali pravilnost "
+"naslova vira, ki ste ga zapisali."
+
+#. Translators: Presented when the current article does not have an associated title.
+msgid "Unable to locate article title."
+msgstr "Ni mogoče locirati naslova članka."
+
+#. Translators: Presented when the current article does not have an associated link.
+msgid "Unable to locate article link."
+msgstr "Ni mogoče locirati povezave članka.a"
+
+#. Translators: the name of a submenu.
+msgid "&Read Feeds"
+msgstr "&Bralnik virov"
+
+#. Translators: the tooltip for a submenu.
+msgid "Manage feeds."
+msgstr "Upravljanje z viri"
+
+#. Translators: the name of a menu item.
+msgid "Article &list..."
+msgstr "Seznam &člankov"
+
+#. Translators: the tooltip for a menu item.
+msgid "View article list"
+msgstr "Oglejte si seznam člankov"
+
+#. Translators: the name of a menu item.
+msgid "&Temporary feed address..."
+msgstr "&začasen naslov vira"
+
+#. Translators: the tooltip for a menu item.
+msgid "View or choose current feed address"
+msgstr "Oglejte si ali izbirajte trenuten naslov vira."
+
+#. Translators: the name of a menu item.
+msgid "L&oad feed address from file..."
+msgstr "&Naloži naslov vira iz datoteke..."
+
+#. Translators: the tooltip for a menu item.
+msgid "Select file which contains feed address."
+msgstr "Izberite datoteko, ki vsebuje naslov vira."
+
+#. Translators: the name of a menu item.
+msgid "Save current feed address to file..."
+msgstr "Shrani trenuten naslov vira v datoteko..."
+
+#. Translators: the tooltip for a menu item.
+#. Translators: the label of a file dialog.
+msgid "Save current feed address to file"
+msgstr "Shrani trenuten naslov vira v datoteko"
+
+#. Translators: the name of a menu item.
+msgid "R&efresh current feed"
+msgstr "O&sveži trenuten vir"
+
+#. Translators: the tooltip for a menu item.
+msgid "Checks for new articles for the current feed"
+msgstr "Preveri, če obstajajo novi članki v tem viru"
+
+#. Translators: the name of a menu item, which will backup the users feeds.
+msgid "&Backup personal feeds folder..."
+msgstr "&Varnostno preslikaj mapo z osebnimi viri..."
+
+#. Translators: the tooltip for a menu item.
+msgid "Backs up your personal feeds folder"
+msgstr "Varnostno preslika mapo vaših osebnih virov"
+
+#. Translators: the name of a menu item.
+msgid "R&estore personal feeds..."
+msgstr "&Obnovi osebne vire..."
+
+#. Translators: the tooltip for a menu item.
+msgid "Restore previously saved feeds"
+msgstr "Obnovi prej shranjene vire"
+
+#. Translators: the title of an error dialog.
+msgid "Refresh Error"
+msgstr "Napaka pri Osvežitvi"
+
+#. Translators: the label of a single choice dialog.
+msgid "Open web page of selected article."
+msgstr "Odpri spletno stran izbranega članka"
+
+#. Translators: the label of a dialog to select a folder.
+msgid "Select the folder where your personal feeds will be backed up."
+msgstr ""
+"Izberite mapo, kjer se bodo shranile varnostne kopije vaših osebnih virov."
+
+#. Translators: the label of an error dialog.
+msgid "Unable to backup folder"
+msgstr "Mape ni mogoče varnostno preslikati."
+
+#. Translators: the title of an error dialog.
+msgid "Backup Error"
+msgstr "Napaka pri Varnostnem Kopiranju"
+
+#. Translators: the label of a dialog to select a folder.
+msgid "Restore personal feeds from backup folder"
+msgstr "Obnovi osebne vire iz mape, kjer je varnostna kopija"
+
+#. Translators: the label of an error dialog.
+msgid "Folder not restored"
+msgstr "Mapa ni obnovljena"
+
+#. Translators: the title of an error dialog.
+msgid "Restore Error"
+msgstr "Napaka pri Obnovitvi"
+
+#. Translators: message presented in input mode.
+msgid "Refreshes the current feed and announces the most recent article title."
+msgstr "Osveži trenuten vir in naznani naslov najnovejšega članka."
+
+msgid "Refresh your selected feed to read the current article."
+msgstr "Osvežite izbran vir za branje trenutnega članka."
+
+#. Translators: message presented when the information about an article of a feed is copied to the clipboard.
+#, python-format
+msgid "Copied to clipboard %s"
+msgstr "%s preslikano v odložišče"
+
+#. Translators: message presented in input mode.
+msgid ""
+"Announces the title of the current article. Pressed two times, copies title "
+"and related link to the clipboard."
+msgstr ""
+"Naznani naslov trenutnega članka. Če pritisnete dvakrat, v odložišče "
+"preslika ta naslov in ustrezno povezavo."
+
+#. Translators: message presented in input mode.
+msgid "Announces the title of the next article."
+msgstr "Naznani naslov naslednjega članka."
+
+#. Translators: message presented in input mode.
+msgid "Announces the title of the previous article."
+msgstr "Naznani naslov predhodnega članka."
+
+#. Translators: message presented in input mode.
+msgid "Announces article link, when pressed two times, opens related web page."
+msgstr ""
+"Naznani povezavo na članek, če pritisnete dvakrat, se odpre ustrezna spletna "
+"stran."
+
+#. Translators: the label of a text entry dialog.
+msgid "Feed address to follow"
+msgstr "Sledi naslovu vira"
+
+#. Translators: the title of a text entry dialog.
+msgid "Feed address"
+msgstr "Naslov vira"
+
+#. Translators: message presented when the address of a feed has been selected.
+#, python-format
+msgid "Selected %s"
+msgstr "Izbrano %s"
+
+#. Translators: message presented in input mode.
+msgid "Opens a dialog for entering a feed address."
+msgstr "Odpre pogovorno okno za vnos naslova vira."
+
+#. Translators: the label of a file dialog.
+msgid "Select feed address from file"
+msgstr "Izberi naslov vira iz datoteke"
+
+msgid "Text files (*.txt) |*.txt"
+msgstr "Besedilne datoteke (*.txt) |*.txt"
+
+#. Translators: message presented when unable to read feed address.
+msgid "Unable to read feed address, feed can not be selected"
+msgstr "Ni mogoče prebrati naslova vira, zato vira ne morete izbrati."
+
+#. Translators: message presented in input mode.
+msgid "Opens a dialog for selecting a file containing a feed address."
+msgstr "Odpre pogovorno okno za izbiro datoteke, ki vsebuje naslov vira."
+
+msgid "Text files (*.txt) | *.txt"
+msgstr "Besedilne datoteke (*.txt) | *.txt"
+
+#. Translators: message presented when the address of a feed has been saved.
+#, python-format
+msgid "Saved %s"
+msgstr "Shranjeno %s"
+
+#. Translators: Message presented when the feed address cannot be saved.
+msgid "Feed address can not be saved"
+msgstr "Naslov vira se ne more shraniti"
+
+#. Translators: message presented in input mode.
+msgid ""
+"Opens a dialog where you can enter a filename to which the current feed "
+"address will be saved."
+msgstr ""
+"Odpre pogovorno okno, kjer lahko vnesete ime datoteke v katero se bo shranil "
+"naslov trenutnega vira"
+
+#. Add-on summary, user visible name
+#. TRANSLATORS: addon name to be shown on installation and add-on information.
+msgid "Read Feeds"
+msgstr "Bralnik Virov"
+
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on installation and add-on information
+msgid "Add-on for using NVDA as a feed reader."
+msgstr "Dodatek, ki spremeni NVDA tudi v bralnik virov"
