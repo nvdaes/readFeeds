@@ -23,48 +23,44 @@
 يمكنك الوصول إلى القائمة الفرعية Read Feeds من قائمة NVDA الرئيسية, NVDA+N,
 وتوجد بها الخيارات التالية:
 
-*	 Article list... Presents the article list from your current feed. Select
-   the article you want to read and press OK button to open the
-   corresponding page in your browser.
-*	 Temporary feed address... control + NVDA + shift + enter: Opens a dialog
-   for typing a new URL to select another feed. The current URL will be
-   shown in this dialog.
-*	 Load feed address from file... NVDA+control+enter: Opens a dialog to
-   select a feed from a saved file containing a feed URL.
-*	 Save current feed address to file... NVDA+shift+enter: opens a dialog for
-   selecting the file where current feed URL will be saved. If you save to
-   the special file addressFile.txt, this particular feed will be used as
-   your default feed.
-*	 Refresh current feed: control+shift+NVDA+8: Refresh selected feed. The
-   feeds will not be updated automatically when Read Feeds addon is started.
-*	 Backup feeds folder... opens a dialog to choose a folder where you can
-   save the personalFeeds directory of your feeds. By default the selected
-   folder is the NVDA's configuration directory, which will create the
-   personalFeeds directory.
-*	 Restore feeds... Opens a dialog to select a folder which replaces your
-   feeds in the personalFeeds folder. Make sure you load a folder containing
-   feeds URLs.
+*	 قائمة المقالات... عرض قائمة المقالات من التلقيم الحالي. اختر المقالة التي
+   تود قراءتها ثم اضغط زر الموافقة لفتح الرابط بمتصفحك الافتراضي.
+*	 عنوان تلقيم مؤقت... control + NVDA + shift + enter: فتح محاورة لكتابة
+   رابط جديد لاختيار تلقيم آخر. سيتم إظهار عنوان التلقيم الحالي بهذه
+   المحاورة.
+*	 تحميل عنوان تلقيم من ملف... NVDA+control+enter: فتح محاورة لاختيار تلقيم
+   من ملف يحتوي على رابط.
+*	 حفظ عنوان التلقيم الحالي في ملف... NVDA+shift+enter: فتح محاورة لاختيار
+   الملف الذي سيتم فيه حفظ رابط التلقيم. إذا قمت بحفظ الرابط في الملف الخاص
+   الذي سيندرج تحت مسمى addressFile.txt, (عنوان الملف), فسيتم استخدام هذا
+   العنوان على أنه التلقيم الافتراضي.
+*	 تنشيط التلقيم الحالي: control+shift+NVDA+8: تنشيط التلقيم المحدد. لم يتم
+   تحديث التلقيم آليا عند بدأ تشغيل الإضافة Read Feeds.
+*	 مجلد النسخة الاحطياطية... يفتح محاورة لاختيار مجلد يتم فيه حفظ مجلد
+   التلقيمات الشخصية. المجلد الافتراضي لهذا الغرض هو مجلد حفظ إعدادات NVDA,
+   وسيتم إنشاء مجلد بداخله  لحفظ التلقيمات الشخصية.
+*	 استرجاع التلقيمات... يقوم بفتح محاورة تمكنك من اختيار المجلد الذي ستقوم
+   فيه باستبدال التلقيمات الموجودة بمجلد التلقيمات الشخصية. يرجى التأكد من
+   أنك قد قمت باختيار مجلد يحتوي على تلقيمات أو روابط.
 
 ### مفاتيح الاختصار: ###
 
-*	 Ctrl+Shift+NVDA+Space: Announces current article's URL. Pressing twice
-   will open the web page.
-*	 Ctrl+Shift+NVDA+8: Refreshes the selected feed and announces its most
-   recent title.
-*	 Ctrl+Shift+NVDA+I: Announces current feed title. Pressing twice will copy
-   the title and related link to clipboard.
-*	 Ctrl+Shift+NVDA+U: Announces previous feed title.
-*	 Ctrl+Shift+NVDA+O: Announces next feed title.
+*	 Ctrl+Shift+NVDA+Space: الإعلان عن عنوان المقال الحالي. بالضغط عليه مرتين
+   يقوم بفتح صفحة المقال.للحافظة.
+*	 Ctrl+Shift+NVDA+8: تنشيط التلقيم المحدد والإعلان عن أحدث عنوان له.
+*	 Ctrl+Shift+NVDA+I: الإعلان عن عنوان التلقيم الحالي. بالضغط عليه مرتين
+   ينسخ رابط التلقيم للحافظة.
+*	 Ctrl+Shift+NVDA+U: الإعلان عن عنوان التلقيم السابق.
+*	 Ctrl+Shift+NVDA+O: الإعلان عن عنوان التلقيم التالي.
 
 ## إشعارات: ##
 
-*	 When the title or URL have been copied.
-*	 When unable to connect/refresh a feed, or the URL does not correspond to
-   a valid feed.
-*	 NVDA will display an error message if it was not possible to backup the
-   personalFeeds folder.
-*	 The title of the article list dialog displays the selected feed name and
-   number of items available.
+*	 إذا تم نسخ العنوان أو الرابط.
+*	 إذا لم تستطع الاتصال بتلقيم/تنشيطه, أو أن الرابط غير صحيح.
+*	 سيقوم NVDA بإظهار رسالة خطأ إذا تعذر أخذ نسخة احطياطية من مجلد التلقيمات
+   الشخصية.
+*	 يعرض شريط العنوان لمحاورة قائمة المقالات اسم التلقيم المحدد وعدد العناصر
+   المتاحة.
 
 ## تعديلات الإصدار 1.0 ##
 *	 إصدار أولي

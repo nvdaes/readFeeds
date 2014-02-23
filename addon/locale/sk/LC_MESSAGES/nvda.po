@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: readFeeds 1.0-dev\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-11-16 13:26+0100\n"
-"PO-Revision-Date: 2013-11-25 13:06+0100\n"
+"PO-Revision-Date: 2014-02-16 20:22+0100\n"
 "Last-Translator: Ondrej Rosík <ondrej.rosik@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: sk\n"
@@ -230,7 +230,7 @@ msgstr "Uložené %s"
 
 #. Translators: Message presented when the feed address cannot be saved.
 msgid "Feed address can not be saved"
-msgstr "Adresa sa nedá uložiť"
+msgstr "Adresu nie je možné uložiť"
 
 #. Translators: message presented in input mode.
 msgid ""
