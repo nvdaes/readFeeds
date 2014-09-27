@@ -36,6 +36,8 @@ opens a dialog to choose a folder where you can save the personalFeeds directory
 - Restore feeds...
 Opens a dialog to select a folder which replaces your feeds in the personalFeeds folder. Make sure you load a folder containing feeds URLs.
 
+Note: If you want to delete a previously saved feed URL, just remove the corresponding file.
+
 ### Keyboard commands: ###
 
 - Ctrl+Shift+NVDA+Space:
@@ -55,6 +57,9 @@ Announces next feed title.
 - When unable to connect/refresh a feed, or the URL does not correspond to a valid feed.
 - NVDA will display an error message if it was not possible to backup the personalFeeds folder.
 - The title of the article list dialog displays the selected feed name and number of items available.
+
+## Changes for 2.0 ##
+*	 Add-on help is available from the Add-ons Manager.
 
 ## Changes for 1.0 ##
 *	 Initial version.
