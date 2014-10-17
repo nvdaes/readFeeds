@@ -1,14 +1,14 @@
-# Read Feeds #
+# RSS-Feed-Reader #
 
-* Auteurs: Noelia Ruiz Martínez, Mesar Hameed
-* Download [stable version][2]
-* Download [development version][1]
+* Authoren: Noelia Ruiz Martínez, Mesar Hameed
+* [Stabile version][2] herunterladen
+* [Testversion][1] herunterladen
 
 This addon provides a straightforward way to read feeds in Atom or RSS
 formats using NVDA.  The feeds will not be refreshed automatically.  Below
 when we mention feeds, we mean both RSS and ATOM feeds.
 
-## Installation or Update: ##
+## Installation oder Aktualisierung: ##
 
 If you used a previous version of this addon, and there is an RSS or
 personalFeeds folder in your personal NVDA configuration folder, when
@@ -16,7 +16,7 @@ installing version 6.0 or later, a dialog will ask if you want to upgrade or
 install.  Choose update to preserve your saved feeds and to continue using
 them in the new installed version of readFeeds.
 
-## Commando's: ##
+## Befehle: ##
 
 ### Read Feeds menu ###
 
@@ -45,7 +45,7 @@ containing feeds URLs.
 Note: If you want to delete a previously saved feed URL, just remove the
 corresponding file.
 
-### Toetscommando's: ###
+### Tastenkombinationen: ###
 
 - Ctrl+Shift+NVDA+Space: Announces current article's URL. Pressing twice
 will open the web page.  - Ctrl+Shift+NVDA+8: Refreshes the selected feed
@@ -54,7 +54,7 @@ feed title. Pressing twice will copy the title and related link to
 clipboard.  - Ctrl+Shift+NVDA+U: Announces previous feed title.  -
 Ctrl+Shift+NVDA+O: Announces next feed title.
 
-## Meldingen: ##
+## Bemerkungen: ##
 
 - When the title or URL have been copied.  - When unable to connect/refresh
 a feed, or the URL does not correspond to a valid feed.  - NVDA will display
@@ -65,8 +65,8 @@ number of items available.
 ## Changes for 2.0 ##
 *	 Add-on help is available from the Add-ons Manager.
 
-## Veranderingen voor 1.0 ##
-*	 Eerste versie.
+## Änderungen bis 1.0 ##
+*	 Ehrstveröffentlichung.
 
 [[!tag dev stable]]
 

@@ -240,12 +240,12 @@ msgid ""
 msgstr ""
 "Megnyit egy ablakot ahol megadható az elmenteni kívánt csatorna fájlneve."
 
-#. Add-on summary, user visible name
-#. TRANSLATORS: addon name to be shown on installation and add-on information.
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on to be shown on installation and add-on information.
 msgid "Read Feeds"
 msgstr "Hírcsatorna-olvasó"
 
 #. Add-on description
-#. Translators: Long description to be shown for this add-on on installation and add-on information
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Add-on for using NVDA as a feed reader."
 msgstr "Kiegészítő az NVDA rss olvasóként való használatához."

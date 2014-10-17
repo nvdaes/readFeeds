@@ -25,48 +25,47 @@ zainstalowanej wersji.
 Możesz przejść do podmenu Czytaj kanały z menu NVDA (klawisz NVDA+N);
 dostępne są tam następujące opcje:
 
-*	 Lista artykułów... przedstawia listę artykułów aktualnego kanału. Wybierz
-   artykuł, który chcesz przeczytać i naciśnij przycisk OK, aby otworzyć
-   powiązaną stronę w przeglądarce internetowej.
-*	 Tymczasowy adres kanału... control + NVDA + shift + enter: otwiera okno
-   dialogowe pozwalające wpisać adres innego kanału. Aktualny adres zostanie
-   wyświetlony w tym oknie.
-*	 Wczytaj adres kanału z pliku... NVDA+control+enter: otwiera okno wyboru
-   kanału, którego adres jest zapisany w pliku.
-*	 Zapisz aktualny adres kanału do pliku... NVDA+shift+enter: otwiera okno
-   wyboru pliku, w którym zostanie zapisany aktualny adres kanału. jeśli
-   zapiszesz do specjalnego pliku addressFile.txt, adres ten zostanie użyty
-   jako domyślny.
-*	 Odśwież aktualny kanał: control+shift+NVDA+8: odświeża wybrany
-   kanał. Kanały nie są automatycznie aktualizowane po uruchomieniu tego
-   dodatku.
-*	 Zapisz kopię folderu kanałów... otwiera okno wyboru folderu, w którym
-   zostanie zapisany katalog twoich kanałów personalFeeds. Domyślnie,
-   wybranym folderem jest folder konfiguracyjny NVDA, gdzie zostanie
-   utworzony katalog personalFeeds .
-*	 Przywróć kanały... otwiera okno wyboru folderu z kanałami, który zastąpi
-   twój katalog personalFeeds. Upewnij się, że wczytujesz folder zawierający
-   adresy kanałów.
+- Article list...  Presents the article list from your current feed. Select
+the article you want to read and press OK button to open the corresponding
+page in your browser.  - Temporary feed address... control + NVDA + shift +
+enter: Opens a dialog for typing a new URL to select another feed. The
+current URL will be shown in this dialog.  - Load feed address from
+file... NVDA+control+enter: Opens a dialog to select a feed from a saved
+file containing a feed URL.  - Save current feed address to
+file... NVDA+shift+enter: opens a dialog for selecting the file where
+current feed URL will be saved.  If you save to the special file
+addressFile.txt, this particular feed will be used as your default feed.  -
+Refresh current feed: control+shift+NVDA+8: Refresh selected feed. The feeds
+will not be updated automatically when Read Feeds addon is started.  -
+Backup feeds folder...  opens a dialog to choose a folder where you can save
+the personalFeeds directory of your feeds. By default the selected folder is
+the NVDA's configuration directory, which will create the personalFeeds
+directory.  - Restore feeds...  Opens a dialog to select a folder which
+replaces your feeds in the personalFeeds folder. Make sure you load a folder
+containing feeds URLs.
+
+Note: If you want to delete a previously saved feed URL, just remove the
+corresponding file.
 
 ### Skróty klawiszowe: ###
 
-*	 Ctrl+Shift+NVDA+Space: ogłasza adres aktualnego artykułu. Podwójne
-   naciśnięcie otworzy stronę internetową.
-*	 Ctrl+Shift+NVDA+8: odświeża aktualny kanał i ogłasza najnowszy tytuł.
-*	 Ctrl+Shift+NVDA+I: ogłasza tytuł aktualnego kanału. podwójne naciśnięcie
-   skopiuje tytuł i adres do schowka.
-*	 Ctrl+Shift+NVDA+U: oznajmia poprzedni tytuł kanału.
-*	 Ctrl+Shift+NVDA+O: oznajmia następny tytuł kanału.
+- Ctrl+Shift+NVDA+Space: Podaje adres artykułu. Dwukrotne naciśnięcie
+otworzy stronę internetową.  - Ctrl+Shift+NVDA+8: odświeża wybrany kanał i
+odczytuje tytuł ostatniego artykułu.  - Ctrl+Shift+NVDA+I: odczytuje tytuł
+aktualnego kanału. dwukrotne naciśnięcie skopiuje do schowka tytuł i
+powiązany link.  - Ctrl+Shift+NVDA+U: odczytuje adres poprzedniego kanału.
+- Ctrl+Shift+NVDA+O: odczytuje adres następnego kanału.
 
 ## Powiadomienia: ##
 
-*	 Gdy tytuł lub adres zostały skopiowane.
-*	 Gdy nie można pobrać lub zaktualizować kanału, albo adres nie wskazuje na
-   prawidłowy kanał.
-*	 NVDA wyświetli komunikat o błędzie, jeśli nie było możliwe skopiowanie
-   katalogu personalFeeds.
-*	 Tytuł okna listy artykułów zawiera nazwę wybranego kanału i ilość
-   dostępnych elementów.
+- Gdy tytuł lub adres zostały skopiowane.  - gdy nie można połączyć z siecią
+lub odświeżyć kanału, lub adres nie jest związany z prawidłowym kanałem.  -
+NVDA wyświetli komunikat błędu, gdy nie było możliwe skopiowanie folderu
+personalFeeds.  - Tytuł okna listy artykułów zawiera nazwę wybranego kanału
+i liczbę dostępnych elementów.
+
+## Changes for 2.0 ##
+*	 Add-on help is available from the Add-ons Manager.
 
 ## Zmiany dla wersji 1.0 ##
 *	 Pierwsza wersja.

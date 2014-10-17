@@ -241,12 +241,12 @@ msgstr ""
 "Avaa valintaikkunan, jossa voit kirjoittaa sen tiedoston nimen, johon "
 "nykyisen syötteen osoite tallennetaan."
 
-#. Add-on summary, user visible name
-#. TRANSLATORS: addon name to be shown on installation and add-on information.
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on to be shown on installation and add-on information.
 msgid "Read Feeds"
 msgstr "Lue syötteet"
 
 #. Add-on description
-#. Translators: Long description to be shown for this add-on on installation and add-on information
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Add-on for using NVDA as a feed reader."
 msgstr "Lisäosa, jolla NVDA:ta voidaan käyttää syötteenlukijana."

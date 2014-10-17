@@ -20,46 +20,46 @@ inštaláciu. Vyberte aktualizovať, ak chcete naďalej používať uložené zd
 
 Menu RSS čítačky je dostupné z menu NVDA (nvda+n) a obsahuje tieto možnosti:
 
-*	 Zoznam článkov... Zobrazí zoznam článkov pre aktuálny informačný
-   kanál. Vyberte požadovaný článok a stlačte tlačidlo OK, aby ste ho
-   otvorili v predvolenom prehliadači.
-*	 Dočasná adresa zdroja... ctrl + NVDA + shift + enter: V dialógu môžete
-   zadať adresu nového informačného kanála. V editačnom poli sa zobrazí
-   aktuálna adresa.
-*	 Načítať adresu kanála zo súboru... NVDA+ctrl+enter: Umoňuje vybrať súbor,
-   v ktorom je uložená adresa informačného kanála.
-*	 Uložiť aktuálnu adresu zdroja do súboru... NVDA+shift+enter: Zobrazí
-   dialóg, v ktorom môžete uložiť aktuálnu adresu kanála do súboru. Ak súbou
-   ložíte pod názvom addressFile.txt, kanál z tohto sboru bude použitý ako
-   predvolený zdroj.
-*	 Načítať nové články: ctrl+shift+NVDA+8: Skontroluje nové články f
-   informačnom kanály. Nové články sa nekontrolujú automaticky po spustení
-   doplnku.
-*	 Zálohovať priečinok s dátami... Ujožňuje zálohovať priečinok s
-   kanálmi. Predvolene je tento priečinok v priečinku s nastaveniami nvda
-   pod názvom PersonalFeeds.
-*	 obnoviť zdroje zo zálohy... Umožňuje nahradiť aktuálne informačné zdroje
-   priečinkom zo zálohy. Uistite sa, že vyberiete priečinok, ktorí obsahuje
-   platné adresy zdrojov.
+- Article list...  Presents the article list from your current feed. Select
+the article you want to read and press OK button to open the corresponding
+page in your browser.  - Temporary feed address... control + NVDA + shift +
+enter: Opens a dialog for typing a new URL to select another feed. The
+current URL will be shown in this dialog.  - Load feed address from
+file... NVDA+control+enter: Opens a dialog to select a feed from a saved
+file containing a feed URL.  - Save current feed address to
+file... NVDA+shift+enter: opens a dialog for selecting the file where
+current feed URL will be saved.  If you save to the special file
+addressFile.txt, this particular feed will be used as your default feed.  -
+Refresh current feed: control+shift+NVDA+8: Refresh selected feed. The feeds
+will not be updated automatically when Read Feeds addon is started.  -
+Backup feeds folder...  opens a dialog to choose a folder where you can save
+the personalFeeds directory of your feeds. By default the selected folder is
+the NVDA's configuration directory, which will create the personalFeeds
+directory.  - Restore feeds...  Opens a dialog to select a folder which
+replaces your feeds in the personalFeeds folder. Make sure you load a folder
+containing feeds URLs.
+
+Note: If you want to delete a previously saved feed URL, just remove the
+corresponding file.
 
 ### Klávesové skratky: ###
 
-*	 Ctrl+Shift+NVDA+medzera: Oznámi adresu článku. Stlačené dvakrát otvorí
-   článok v predvolenom prehliadači.
-*	 Ctrl+Shift+NVDA+8: obnoví zoznam článkov a oznámy najnovší článok.
-*	 Ctrl+Shift+NVDA+I: Oznámy názov informačného kanála. Stlačené dvakrát
-   skopíruje názov do shránky.
-*	 Ctrl+Shift+NVDA+U: Povie n ázov predchádzajúceho článku.
-*	 Ctrl+Shift+NVDA+O: Prečíta názov nasledujúceho článku.
+- Ctrl+Shift+NVDA+medzera: Oznámy adresu článku. Stlačené dvakrát otvorí
+odkaz vo webovom prehliadači. - Ctrl+Shift+NVDA+8: Načíta nové články z
+aktuálneho zdroja a oznámy názov najnovšieho článku. - Ctrl+Shift+NVDA+I:
+Oznámy názov aktuálneho zdroja. Stlačené dvakrát skopíruje názov do
+schránky. - Ctrl+Shift+NVDA+U: Oznámy názov predchádzajúceho článku. -
+Ctrl+Shift+NVDA+O: Oznámy názov nasledujúceho článku.
 
 ## Oznámenia: ##
 
-*	 Keď bola skopírovaná adresa alebo názov článku.
-*	 Ak sa nepodarilo pripojiť na adresu alebo obnoviť články, alebo adresa
-   neobsahuje platný RSS zdroj.
-*	 NVDA zobrazí chybu, ak sa nepodarí zálohovať priečinok s dátami.
-*	 V názve okna môžete vidieť názov informačného kanála a počet príspevkov,
-   ktoré obsahuje.
+- Ak je skopírovaný názov alebo adresa. - Ak sa nepodarilo získať nové
+články alebo adresa odkazuje na neplatný zdroj. - NVDA zobrazí chybu, ak sa
+nepodarilo vytvoriť zálohu. - Titulok okna s článkami zobrazuje názov zdroja
+a počet článkov.
+
+## Changes for 2.0 ##
+*	 Add-on help is available from the Add-ons Manager.
 
 ## Zmeny pre verziu 1.0 ##
 *	 Prvé vydanie.

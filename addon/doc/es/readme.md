@@ -25,50 +25,53 @@ dereadFeeds.
 Puedes acceder al submenú Read Feeds desde el menú NVDA, NVDA+N, donde están
 disponibles las siguientes opciones de menú:
 
-*	 Lista de artículos ... Presenta la lista de artículos de tu feed
-   actual. Selecciona el artículo que desees leer y pulsa el botón Aceptar
-   para abrir la página correspondiente en tu navegador.
-*	 Dirección Temporal del feed... control + NVDA + shift + enter: Abre un
-   cuadro de diálogo para escribir una nueva dirección URL para seleccionar
-   otro feed. La URL actual se muestra en este cuadro de diálogo.
-*	 Cargar dirección del feed de fichero... NVDA+control+enter: Abre un
-   diálogo para seleccionar una fuente de un fichero guardado que contenga
-   una URL del feed.
-*	 Guardar  dirección actual del feed a fichero... NVDA+shift+enter: abre un
-   diálogo para seleccionar el fichero donde se guardará el URL del feed
-   actual. Si lo guardas en el fichero especial addressFile.txt, este feed
-   en particular se utilizará como tu feed predeterminado.
-*	 Actualizar feed actual: control+shift+NVDA+8: Actualiza el feed
-   seleccionado. Los feeds no se actualizarán automáticamente cuando el
-   complemento Read Feeds se inicie.
-*	 Respaldar carpeta feeds... abre un diálogo para elegir una carpeta donde
-   puedes guardar el directorio personalFeeds de tus feeds. Por omisión la
-   carpeta seleccionada es el directorio de configuración del NVDA, donde se
-   creará el directorio personalFeeds.
-*	 Restaurar feeds... Abre un diálogo para seleccionar la carpeta que
-   reemplace tus feeds en la carpeta personalFeeds. Asegúrese de cargar una
-   carpeta que contenga las URLs de los feeds.
+- Lista de artículos...  Presenta la lista de artículos desde el actual
+feed. Selecciona el artículo que quieras leer y pulsa el botón Aceptar para
+abrir la página correspondiente en tu navegador.  - Dirección temporal de
+feed... control + NVDA + shift + intro: abre un diálogo para escribir una
+dirección web nueva para seleccionar otro feed. la dirección web actual se
+mostrará en este cuadro de diálogo.  - Cargar dirección del feed desde
+fichero... NVDA+control+intro: abre un diálogo para seleccionar un feed
+desde un fichero guardado que contenga una dirección web de un feed.  -
+Guardar dirección actual de feed a fichero... NVDA+shift+intro: abre un
+diálogo para seleccionar el fichero donde se guardará la dirección web
+actual del feed.  Si guardas en el fichero especial addressFile.txt, este
+feed en particular se utilizará como tu feed predeterminado.  - Refrescar
+feed actual: control+shift+NVDA+8: Actualiza el feed seleccionado. Los feeds
+no se actualizarán automáticamente cuando se inicie el complemento Read
+Feeds.  - Respaldar carpeta de feeds...  Abre un diálogo para elegir una
+carpeta donde se puede guardar el directorio personalFeeds de tus feeds. De
+manera predeterminada la carpeta seleccionada es el directorio de
+configuración de NVDA, que creará el directorio personalFeeds.  - Restaurar
+feeds...  Abre un diálogo para seleccionar una carpeta que sustituya los
+feeds en la carpeta personalFeeds. Asegúrate de cargar una carpeta que
+contenga las direcciones web de los RSS.
+
+Nota: Si quieres eliminar  una URL del feed previamente guardado, elimina
+sólo el fichero correspondiente.
 
 ### Órdenes de teclado: ###
 
-*	 Ctrl+Shift+NVDA+Espacio: Anuncia la URL del artículo actual. Pulsando dos
-   veces se abrirá la página web.
-*	 Ctrl+Shift+NVDA+8: Actualiza el feed seleccionado y anuncia su título más
-   reciente.
-*	 Ctrl+Shift+NVDA+I: Anuncia el título del feed actual. Pulsando dos veces
-   se copia el título y el enlace relacionado al portapapeles.
-*	 Ctrl+Shift+NVDA+U: Anuncia el título del feed anterior.
-*	 Ctrl+Shift+NVDA+O: Anuncia el título del siguiente feed.
+- Ctrl+Shift+NVDA+Espacio: Anuncia la dirección web del presente
+artículo. Pulsándola dos veces Se abrirá la página web.  -
+Ctrl+Shift+NVDA+8: Refresca el feed seleccionado y anuncia su título más
+reciente.  - Ctrl+Shift+NVDA+I: Anuncia el título del feed actual
+. Pulsánhdolo dos veces copiará el título y el enlace relacionado al
+portapapeles.  - Ctrl+Shift+NVDA+U: Anuncia el título del feed anterior.  -
+Ctrl+Shift+NVDA+O: Anuncia el título del siguiente feed.
 
 ## Notificaciones: ##
 
-*	 Cuando el título o la URL se hayan copiado.
-*	 Cuando no pueda conectarse/actualizar  un feed, o la URL no se
-   corresponda con un feed válido.
-*	 NVDA mostrará un mensaje de error si no fuera posible hacer copias de
-   seguridad de la carpeta personalFeeds.
-*	 El título del diálogo lista de artículos muestra el nombre del feed
-   seleccionado y el número de elementos disponibles.
+- Cuando el título o la dirección web se hayan copiado.  - Cuando no se
+pueda conectar/actualizar un feed, o la dirección web no se corresponda con
+un feed válido.  - NVDA mostrará un mensaje de error si no fuera posible
+hacer copias de seguridad de la carpeta personalFeeds.  - El título del
+cuadro de diálogo Lista de artículos muestra el nombre de la fuente
+seleccionada y el número de artículos disponibles.
+
+## Cambios para 2.0 ##
+*	 La ayuda del complemento está disponible en el Administrador de
+   Complementos.
 
 ## Cambios para 1.0 ##
 *	 Versión inicial.

@@ -27,19 +27,19 @@ msgstr ""
 
 #. Translators: the title of a message box dialog.
 msgid "Uninstall incompatible add-on"
-msgstr "नमिल्दो थप-साधनलाई मेटाउनु होस् ।"
+msgstr "नमिल्दो उपकर्मीलाई मेटाउनु होस् ।"
 
 #. Translators: the label of a message box dialog.
 msgid ""
 "Your configuration folder for NVDA contains files that seem to be derived "
 "from a previous version of this add-on. Do you want to update it?"
 msgstr ""
-"नेत्रवाणीका लागी तपाइको अभियोजन घर्राका फाइलहरू  पुरानो थप-साधनबाट लिइएको देखिन्छ । "
+"नेत्रवाणीका लागी तपाइको अभियोजन घर्राका फाइलहरू  पुरानो उपकर्मीबाट लिइएको देखिन्छ । "
 "के तपाइ यसलाई अद्यावधिककरण गर्न चाहनु हुन्छ ?"
 
 #. Translators: the title of a message box dialog.
 msgid "Install or update add-on"
-msgstr "थप-साधनलाई स्थापित वाअद्यावधिक गर्नु होस् ।"
+msgstr "उपकर्मीलाई स्थापित वाअद्यावधिक गर्नु होस् ।"
 
 #. Translators: message presented when feeds cannot be reported.
 msgid ""
@@ -234,12 +234,12 @@ msgid ""
 "address will be saved."
 msgstr "चालू पोषण ठेगाना बचत गरिने फाइल चयन गर्ने पातो पल्टाउने छ ।"
 
-#. Add-on summary, user visible name
-#. TRANSLATORS: addon name to be shown on installation and add-on information.
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on to be shown on installation and add-on information.
 msgid "Read Feeds"
 msgstr "पोषणवाचन"
 
 #. Add-on description
-#. Translators: Long description to be shown for this add-on on installation and add-on information
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Add-on for using NVDA as a feed reader."
-msgstr "नेत्रवाणिमा पोषण वाचन गर्ने थप-साधन ।"
+msgstr "नेत्रवाणिमा पोषण वाचन गर्ने उपकर्मी ।"
