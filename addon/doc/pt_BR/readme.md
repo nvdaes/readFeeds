@@ -23,27 +23,28 @@ usando na nova versão instalada do Leitor de Fíds.
 Você pode acessar o submenu do Leitor de Fíds a partir do menu do NVDA,
 NVDA+N, onde são disponíveis as opções de menu a seguir:
 
-- Article list...  Presents the article list from your current feed. Select
-the article you want to read and press OK button to open the corresponding
-page in your browser.  - Temporary feed address... control + NVDA + shift +
-enter: Opens a dialog for typing a new URL to select another feed. The
-current URL will be shown in this dialog.  - Load feed address from
-file... NVDA+control+enter: Opens a dialog to select a feed from a saved
-file containing a feed URL.  - Save current feed address to
-file... NVDA+shift+enter: opens a dialog for selecting the file where
-current feed URL will be saved.  If you save to the special file
-addressFile.txt, this particular feed will be used as your default feed.  -
-Refresh current feed: control+shift+NVDA+8: Refresh selected feed. The feeds
-will not be updated automatically when Read Feeds addon is started.  -
-Backup feeds folder...  opens a dialog to choose a folder where you can save
-the personalFeeds directory of your feeds. By default the selected folder is
-the NVDA's configuration directory, which will create the personalFeeds
-directory.  - Restore feeds...  Opens a dialog to select a folder which
-replaces your feeds in the personalFeeds folder. Make sure you load a folder
-containing feeds URLs.
+- Lista de artigos... Exibe a lista de artigos do fíd atual. Selecione o
+artigo que deseja ler e pressione o botão OK para abrir no navegador a
+página correspondente. - Endereço de fíd temporário... Control + NVDA +
+Shift + Enter: Abre um diálogo para digitar uma nova URL por forma a
+selecionar outro fíd. A URL atual será mostrada nesse diálogo. - Carregar
+endereço de fíd a partir de arquivo... NVDA+Control+Enter: Abre um diálogo
+para selecionar um fíd a partir dum arquivo salvo que contenha uma URL de
+fíd. - Salvar endereço de fíd atual para arquivo... NVDA+Shift+Enter: Abre
+um diálogo para selecionar o arquivo no qual a URL do fíd atual será
+salva. Caso salve no arquivo especial addressFile.txt, aquele fíd em
+particular será usado como o fíd padrão. - Atualizar fíd atual:
+Control+Shift+NVDA+8: Atualiza fíd selecionado. Os fíds não serão
+automaticamente atualizados quando se inicia o Leitor de Fíds. - Copiar
+pasta de fíds...  Abre um diálogo para escolher uma pasta na qual pode
+salvar o diretório de fíds personalFeeds. Por padrão a pasta selecionada é o
+diretório de opções do NVDA, que criará o diretório personalFeeds. -
+Restaurar fíds...  Abre um diálogo para selecionar uma pasta que substituirá
+os fíds da pasta personalFeeds. Certifique-se de carregar uma pasta que
+contenha URLs de fíds.
 
-Note: If you want to delete a previously saved feed URL, just remove the
-corresponding file.
+Nota: Caso deseje apagar uma URL de feed anteriormente salva, simplesmente
+remova o arquivo correspondente.
 
 ### Comandos de teclado: ###
 
@@ -62,8 +63,8 @@ NVDA mostrará uma mensagem de erro se não for possível copiar a pasta
 personalFeeds.  - O título do diálogo de lista de artigos mostra o nome do
 fíd selecionado e o número de itens disponíveis.
 
-## Changes for 2.0 ##
-*	 Add-on help is available from the Add-ons Manager.
+## Mudanças na 2.0 ##
+*	 A ajuda do complemento está disponível no gestor de complementos.
 
 ## Mudanças na 1.0 ##
 *	 Versão inicial.
