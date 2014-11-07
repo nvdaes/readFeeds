@@ -25,27 +25,26 @@ zainstalowanej wersji.
 Możesz przejść do podmenu Czytaj kanały z menu NVDA (klawisz NVDA+N);
 dostępne są tam następujące opcje:
 
-- Article list...  Presents the article list from your current feed. Select
-the article you want to read and press OK button to open the corresponding
-page in your browser.  - Temporary feed address... control + NVDA + shift +
-enter: Opens a dialog for typing a new URL to select another feed. The
-current URL will be shown in this dialog.  - Load feed address from
-file... NVDA+control+enter: Opens a dialog to select a feed from a saved
-file containing a feed URL.  - Save current feed address to
-file... NVDA+shift+enter: opens a dialog for selecting the file where
-current feed URL will be saved.  If you save to the special file
-addressFile.txt, this particular feed will be used as your default feed.  -
-Refresh current feed: control+shift+NVDA+8: Refresh selected feed. The feeds
-will not be updated automatically when Read Feeds addon is started.  -
-Backup feeds folder...  opens a dialog to choose a folder where you can save
-the personalFeeds directory of your feeds. By default the selected folder is
-the NVDA's configuration directory, which will create the personalFeeds
-directory.  - Restore feeds...  Opens a dialog to select a folder which
-replaces your feeds in the personalFeeds folder. Make sure you load a folder
-containing feeds URLs.
+- Lista artykułów...  prezentuje listę artykułów aktualnego kanału. Wybierz
+artykół, który chcesz czytać i naciśnij OK, aby otworzyć powiązaną stronę w
+przeglądarce internetowej.  - Tymczasowy adres kanału... control + NVDA +
+shift + enter: otwiera okno dialogowe wpisywania nowego adresu, by wybrać
+inny kanał. Obecny adres będzie wyświetlony w tym oknie.  - Wczytaj adres
+kanału z pliku... NVDA+control+enter: pozwala wybrać adres kanału zapisany w
+pliku.  - Zapisz adres aktualnego kanału w pliku... NVDA+shift+enter:
+otwiera okno wyboru pliku, w którym zostanie zapisany adres aktualnego
+kanału.  Jeśli zapiszesz pod specjalną nazwą addressFile.txt, ten konkretny
+kanał będzie używany jako kanał domyślny.  - Odśwież aktualny kanał:
+control+shift+NVDA+8: Odświeża wybrany kanał. Kanały nie będą aktualizowane
+automatycznie po starcie dodatku.  - Kopiuj folder kanałów...  otwiera okno
+wyboru miejsca, w którym zostanie zapisany folder personalFeeds. Domyślnie,
+wybranym folderem jest folder konfiguracyjny NVDA, co spowoduje utworzenie
+katalogu personalFeeds.  - Przywróć kanały...  otwiera okno wyboru folderu
+który zastąpi kanały w katalogu personalFeeds. Upewnij się, że wczytujesz
+folder zawierający adresy kanałów.
 
-Note: If you want to delete a previously saved feed URL, just remove the
-corresponding file.
+Uwaga: jeśli chcesz usunąć poprzednio zapisany adres kanału, po prostu usuń
+skojarzony z nim plik.
 
 ### Skróty klawiszowe: ###
 
@@ -64,8 +63,8 @@ NVDA wyświetli komunikat błędu, gdy nie było możliwe skopiowanie folderu
 personalFeeds.  - Tytuł okna listy artykułów zawiera nazwę wybranego kanału
 i liczbę dostępnych elementów.
 
-## Changes for 2.0 ##
-*	 Add-on help is available from the Add-ons Manager.
+## Zmiany dla wersji 2.0 ##
+*	 Pomoc dodatku dostępna w managerze dodatków.
 
 ## Zmiany dla wersji 1.0 ##
 *	 Pierwsza wersja.
