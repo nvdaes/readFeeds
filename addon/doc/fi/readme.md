@@ -24,27 +24,28 @@ Lue syötteet -lisäosan versiossa.
 Pääset Lue syötteet -valikkoon NVDA-valikosta, NVDA+N, jossa ovat käytössä
 seuraavat vaihtoehdot:
 
-- Article list...  Presents the article list from your current feed. Select
-the article you want to read and press OK button to open the corresponding
-page in your browser.  - Temporary feed address... control + NVDA + shift +
-enter: Opens a dialog for typing a new URL to select another feed. The
-current URL will be shown in this dialog.  - Load feed address from
-file... NVDA+control+enter: Opens a dialog to select a feed from a saved
-file containing a feed URL.  - Save current feed address to
-file... NVDA+shift+enter: opens a dialog for selecting the file where
-current feed URL will be saved.  If you save to the special file
-addressFile.txt, this particular feed will be used as your default feed.  -
-Refresh current feed: control+shift+NVDA+8: Refresh selected feed. The feeds
-will not be updated automatically when Read Feeds addon is started.  -
-Backup feeds folder...  opens a dialog to choose a folder where you can save
-the personalFeeds directory of your feeds. By default the selected folder is
-the NVDA's configuration directory, which will create the personalFeeds
-directory.  - Restore feeds...  Opens a dialog to select a folder which
-replaces your feeds in the personalFeeds folder. Make sure you load a folder
-containing feeds URLs.
+- Artikkelilista...  Näyttää listan nykyisen syötteen artikkeleista. Valitse
+haluamasi artikkeli ja paina OK-painiketta avataksesi sen sivun selaimessa.
+- Tilapäissyötteen osoite... Control+NVDA+Shift+Enter: Avaa valintaikkunan,
+jossa voit kirjoittaa uuden URL-osoitteen toisen syötteen
+valitsemiseksi. Nykyinen URL näytetään tässä valintaikkunassa.  - Lataa
+syötteen osoite tiedostosta... NVDA+Control+Enter: Avaa valintaikkunan,
+jossa voit valita syötteen sen osoitteen sisältävästä tiedostosta.  -
+Tallenna nykyisen syötteen osoite tiedostoon... NVDA+Shift+Enter: Avaa
+valintaikkunan, jossa voit valita tiedoston, johon nykyisen syötteen
+URL-osoite tallennetaan.  Jos tallennat addressFile.txt-nimiseen
+erikoistiedostoon, tätä syötettä käytetään oletussyötteenä.  - Päivitä
+nykyinen syöte... Control+Shift+NVDA+8: Päivittää valitun
+syötteen. Syötteitä ei päivitetä automaattisesti Lue syötteet -lisäosaa
+käynnistettäessä.  - Varmuuskopioi syötekansio...  Avaa valintaikkunan,
+jossa voit valita kansion, johon syötteidesi personalFeeds-kansio
+tallennetaan. Valittuna on oletusarvoisesti NVDA:n asetushakemisto.  -
+Palauta syötteet...  Avaa valintaikkunan, jossa voit valita kansion, joka
+korvaa personalFeeds-kansiossa olevat syötteesi. Varmista, että valitsemasi
+kansio sisältää syötteiden URL-osoitteita.
 
-Note: If you want to delete a previously saved feed URL, just remove the
-corresponding file.
+Huom: Jos haluat poistaa aiemmin tallennetun syötteen URL-osoitteen, poista
+sen sisältävä tiedosto.
 
 ### Näppäinkomennot: ###
 
@@ -65,8 +66,8 @@ personalFeeds-kansion varmuuskopiointi ei onnistunut.  -
 Artikkelilista-valintaikkunan otsikko näyttää valitun syötteen nimen sekä
 syötteiden lukumäärän.
 
-## Changes for 2.0 ##
-*	 Add-on help is available from the Add-ons Manager.
+## Muutokset versiossa 2.0 ##
+*	 Ohje on käytettävissä Lisäosien hallinnasta.
 
 ## Muutokset versiossa 1.0 ##
 *	 Ensimmäinen versio.
