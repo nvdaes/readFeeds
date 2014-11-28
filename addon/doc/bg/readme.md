@@ -25,47 +25,51 @@ RSS или personalFeeds във вашата папка с потребител�
 Можете да достигнете до подменюто на Read Feeds от менюто на nvda, NVDA+N,
 където имате възможност да изберете някоя от следните опции:
 
-- Article list...  Presents the article list from your current feed. Select
-the article you want to read and press OK button to open the corresponding
-page in your browser.  - Temporary feed address... control + NVDA + shift +
-enter: Opens a dialog for typing a new URL to select another feed. The
-current URL will be shown in this dialog.  - Load feed address from
-file... NVDA+control+enter: Opens a dialog to select a feed from a saved
-file containing a feed URL.  - Save current feed address to
-file... NVDA+shift+enter: opens a dialog for selecting the file where
-current feed URL will be saved.  If you save to the special file
-addressFile.txt, this particular feed will be used as your default feed.  -
-Refresh current feed: control+shift+NVDA+8: Refresh selected feed. The feeds
-will not be updated automatically when Read Feeds addon is started.  -
-Backup feeds folder...  opens a dialog to choose a folder where you can save
-the personalFeeds directory of your feeds. By default the selected folder is
-the NVDA's configuration directory, which will create the personalFeeds
-directory.  - Restore feeds...  Opens a dialog to select a folder which
-replaces your feeds in the personalFeeds folder. Make sure you load a folder
-containing feeds URLs.
+- Преглед на списъка със статии...  Предоставя списъка с публикации за
+текущият източник. Изберете публикацията, която искате да прочетете и
+натиснете бутона OK за да отворите съответната страница в уеб браузъра.  -
+Адрес на временен източник... control + NVDA + shift + enter: Отваря диалог
+за въвеждане на нов URL адрес за избор на нов източник. При отваряне на
+диалога ще бъде показан URL адреса на текущият източник.  - Зареди адрес на
+източник от файл... NVDA+control+enter: Отваря диалог за избор на източник
+от файл с източници.  - Запази адреса на текущия източник във
+файл... NVDA+shift+enter: Отваря диалог за избор на файл където да бъде
+запазен адреса на текущият източник.  Ако изберете специалният файл
+addressFile.txt, този източник ще бъде използван като източник по
+подразбиране.  - Опресняване на текущия източник: control+shift+NVDA+8:
+Опреснява избраният източник. Източниците няма да бъдат обновени автоматично
+при стартиране на добавката.  - Резервно копие на папката с вашите
+източници...  Отваря диалог за избор на папка където да се запази вашата
+папка с източници. По подразбиране е избрана папката с вашите потребителски
+настройки на NVDA, където ще бъде създадена папка с име personalFeeds.  -
+Възстанови папката с моите източници...  Отваря диалог за избор на папка,
+която замества вашите източници в папката personalFeeds. Уверете се, че сте
+избрали папка съдържаща адреси на източници.
 
-Note: If you want to delete a previously saved feed URL, just remove the
-corresponding file.
+Забележка: ако желаете да изтриете даден източник, просто изтрийте
+съответният файл от папката с вашите източници.
 
 ### Клавишни команди: ###
 
-- Ctrl+Shift+NVDA+Space: Announces current article's URL. Pressing twice
-will open the web page.  - Ctrl+Shift+NVDA+8: Refreshes the selected feed
-and announces its most recent title.  - Ctrl+Shift+NVDA+I: Announces current
-feed title. Pressing twice will copy the title and related link to
-clipboard.  - Ctrl+Shift+NVDA+U: Announces previous feed title.  -
-Ctrl+Shift+NVDA+O: Announces next feed title.
+- Ctrl+Shift+NVDA+Space: Прочита връзката към статията. При двукратно
+натискане отваря уеб страницата.  - Ctrl+Shift+NVDA+8: Опреснява избраният
+източник и съобщава най-новото заглавие.  - Ctrl+Shift+NVDA+I: Съобщава
+заглавието на текущият източник. Двукратно натискане копира заглавието и
+съответната връзка в клипборда.  - Ctrl+Shift+NVDA+U: Съобщава заглавието на
+предишният източник.  - Ctrl+Shift+NVDA+O: Съобщава заглавието на следващият
+източник.
 
 ## Уведомления: ##
 
-- When the title or URL have been copied.  - When unable to connect/refresh
-a feed, or the URL does not correspond to a valid feed.  - NVDA will display
-an error message if it was not possible to backup the personalFeeds folder.
-- The title of the article list dialog displays the selected feed name and
-number of items available.
+- Когато заглавието или адреса са били копирани.  - Когато
+свързването/обновяването на източник е невъзможно, или URL адресът не води
+до валиден източник.  - NVDA ще изведе съобщение за грешка, ако не е било
+възможно да се направи резервно копие на папката с вашите източници.  -
+Заглавната лента на списъка със статии съдържа името на избраният източник и
+броя на наличните статии.
 
-## Changes for 2.0 ##
-*	 Add-on help is available from the Add-ons Manager.
+## Промени във версия 2.0 ##
+*	 Помощ за добавката е налична от Мениджъра на добавки.
 
 ## Промени във версия 1.0 ##
 *	 Първоначално издание

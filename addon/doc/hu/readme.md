@@ -25,47 +25,50 @@ legújabb verzióban is változatlanul használni.
 A Hírcsatorna-olvasó almenü elérhető az NVDA menüjéből (NVDA+N), ahol az
 alábbi menüpontokat érheti el:. 
 
-- Article list...  Presents the article list from your current feed. Select
-the article you want to read and press OK button to open the corresponding
-page in your browser.  - Temporary feed address... control + NVDA + shift +
-enter: Opens a dialog for typing a new URL to select another feed. The
-current URL will be shown in this dialog.  - Load feed address from
-file... NVDA+control+enter: Opens a dialog to select a feed from a saved
-file containing a feed URL.  - Save current feed address to
-file... NVDA+shift+enter: opens a dialog for selecting the file where
-current feed URL will be saved.  If you save to the special file
-addressFile.txt, this particular feed will be used as your default feed.  -
-Refresh current feed: control+shift+NVDA+8: Refresh selected feed. The feeds
-will not be updated automatically when Read Feeds addon is started.  -
-Backup feeds folder...  opens a dialog to choose a folder where you can save
-the personalFeeds directory of your feeds. By default the selected folder is
-the NVDA's configuration directory, which will create the personalFeeds
-directory.  - Restore feeds...  Opens a dialog to select a folder which
-replaces your feeds in the personalFeeds folder. Make sure you load a folder
-containing feeds URLs.
+- Cikkek Listája: a kiválasztott hírcsatorna cikkeit tartalmazza. Válassza
+ki az olvasni kívánt cikket, majd az Igen gomb lenyomásával a cikkhez
+tartozó weboldal megnyílik a böngészőben.  - Átmeneti hírcsatorna
+címek... control + NVDA + shift + enter: Megnyit egy párbeszédablakot új
+hírcsatorna URL megadásához, az aktuális cím látszik a szerkesztőmezőben.  -
+Hírcsatorna betöltése fájlból... NVDA+control+enter: Megnyit egy
+párbeszédablakot a hírcsatorna URL címét tartalmazó fájl megnyitásához.  -
+Az Aktuális hírcsatorna címének mentése fájlba... NVDA+shift+enter: Megnyit
+egypárbeszédablakot, ahol kiválasztható az a fájl, ahová az aktuális
+hírcsatorna címét menteni lehet. Az addressFile.txt speciális fájlba
+elmentett URL az alapértelmezett hírcsatorna.  - Az aktuális hírcsatorna
+frissítése control+shift+NVDA+8: Frissíti az aktuális hírcsatornát. A
+hírcsatornák nem frissülnek automatikusan a readFeeds bővítmény futásakor.
+- Személyes hírcsatornák mappájának elmentése... Megnyit egy
+párbeszédablakot, ahol megadható a personalFeeds mappa mentési
+helye. Alapértelmezés szerint az NVDA konfigurációs mappájában jön létre egy
+personalFeeds mappa.  - Saját hírcsatornák visszaállítása... Megnyit egy
+párbeszédablakot, ahol kiválasztható az a mappa, amiből felülírásra kerül a
+personalFeeds könyvtár tartalma. Győződjön meg róla, hogy a kiválasztott
+mappa hírcsatornák URL-címét tartalmazza!
 
-Note: If you want to delete a previously saved feed URL, just remove the
-corresponding file.
+Megjegyzés: Elmentett hírcsatorna URL törléséhez törölni kell a hozzá
+tartozó fájlt.
 
 ### Billentyűparancsok: ###
 
-- Ctrl+Shift+NVDA+Space: Announces current article's URL. Pressing twice
-will open the web page.  - Ctrl+Shift+NVDA+8: Refreshes the selected feed
-and announces its most recent title.  - Ctrl+Shift+NVDA+I: Announces current
-feed title. Pressing twice will copy the title and related link to
-clipboard.  - Ctrl+Shift+NVDA+U: Announces previous feed title.  -
-Ctrl+Shift+NVDA+O: Announces next feed title.
+- Ctrl+Shift+NVDA+Space: Az aktuális cikk URL-címének bemondása. Kétszeri
+lenyomásra megnyitja a weboldalt.  - Ctrl+Shift+NVDA+8: Frissíti az aktuális
+hírcsatornát, és bemondja a legfrissebb cikk címét.  - Ctrl+Shift+NVDA+I:
+Bemondja az aktuális hírcsatorna nevét. Kétszeri megnyomásra a vágólapra
+másolja a nevét, és a hozzá tartozó URL-t.  - Ctrl+Shift+NVDA+U: Bemondja az
+előző hírcsatorna nevét.  - Ctrl+Shift+NVDA+O: Bemondja a következő
+hírcsatorna nevét.
 
 ## Figyelmeztetések: ##
 
-- When the title or URL have been copied.  - When unable to connect/refresh
-a feed, or the URL does not correspond to a valid feed.  - NVDA will display
-an error message if it was not possible to backup the personalFeeds folder.
-- The title of the article list dialog displays the selected feed name and
-number of items available.
+- Amikor a cím,vagy az URL másolásra kerül.  - Amikor nem lehet kapcsolódni,
+vagy frissíteni a hírcsatornát, vagy épp az URL nem tartozik egy létező
+hírcsatornához.  - Az NVDA hibaüzenetet jelenít meg, ha nem sikerült
+elmenteni a personalFeeds mappát.  - A cikkek listája megjeleníti a
+kiválasztott hírcsatorna nevét, és az elérhető elemek számát.
 
-## Changes for 2.0 ##
-*	 Add-on help is available from the Add-ons Manager.
+## A 2.0 verzió változásai: ##
+*	 A kiegészítő súgója elérhető a bővítmények kezelése párbeszédablakról is.
 
 ## Az 1.0 verzió változásai: ##
 *	 Kezdeti verzió
