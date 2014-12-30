@@ -58,6 +58,9 @@ Announces next feed title.
 - NVDA will display an error message if it was not possible to backup the personalFeeds folder.
 - The title of the article list dialog displays the selected feed name and number of items available.
 
+## Changes for 3.0 ##
+*	 Removed ReadFeeds item from NVDA's help menu.
+
 ## Changes for 2.0 ##
 *	 Add-on help is available from the Add-ons Manager.
 
