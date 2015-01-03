@@ -169,18 +169,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Translators: the tooltip for a menu item.
 		_("Checks for new articles for the current feed"))
 		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, self.onReadFirstFeed, self.readFirstItem)
-		self.copyFeedsItem = self.readFeedsMenu.Append(wx.ID_ANY,
-		# Translators: the name of a menu item, which will backup the users feeds.
-		_("&Backup personal feeds folder..."),
-		# Translators: the tooltip for a menu item.
-		_("Backs up your personal feeds folder"))
-		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, self.onCopyFeeds, self.copyFeedsItem)
-		self.restoreFeedsItem = self.readFeedsMenu.Append(wx.ID_ANY,
+		self.ReadFeedsFileManagerItem = self.readFeedsMenu.Append(wx.ID_ANY,
 		# Translators: the name of a menu item.
-		_("R&estore personal feeds..."),
+		_("&ReadFeeds file manager..."),
 		# Translators: the tooltip for a menu item.
-		_("Restore previously saved feeds"))
-		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, self.onRestoreFeeds, self.restoreFeedsItem)
+		_("Opens the ReadFeedsFileManager dialog"))
+		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, self.onReadFeedsFileManager, self.ReadFeedsFileManagerItem)
 		self._feed = None
 
 	def terminate(self):
@@ -231,47 +225,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			return
 		ui.message(self._feed.getArticleTitle())
 
-	def onCopyFeeds(self, evt):
-		dlg = wx.DirDialog(gui.mainFrame,
-		# Translators: the label of a dialog to select a folder.
-		_("Select the folder where your personal feeds will be backed up."),
-		configPath, wx.DD_DEFAULT_STYLE)
-		gui.mainFrame.prePopup()
-		result = dlg.ShowModal()
-		gui.mainFrame.postPopup()
-		if result == wx.ID_OK:
-			copyPath = os.path.join(dlg.GetPath(), "personalFeeds")
-			try:
-				shutil.rmtree(copyPath, ignore_errors=True)
-				shutil.copytree(_savePath, copyPath)
-			except WindowsError:
-				wx.CallAfter(gui.messageBox,
-				# Translators: the label of an error dialog.
-				_("Unable to backup folder"),
-				# Translators: the title of an error dialog.
-				_("Backup Error"),
-				wx.OK|wx.ICON_ERROR)
-
-	def onRestoreFeeds(self, evt):
-		feedsPath = os.path.join(configPath, "personalFeeds")
-		dlg = wx.DirDialog(gui.mainFrame,
-		# Translators: the label of a dialog to select a folder.
-		_("Restore personal feeds from backup folder"), feedsPath, wx.DD_DIR_MUST_EXIST | wx.DD_DEFAULT_STYLE)
-		gui.mainFrame.prePopup()
-		result = dlg.ShowModal()
-		gui.mainFrame.postPopup()
-		if result == wx.ID_OK:
-			feedsPath = dlg.GetPath()
-			try:
-				shutil.rmtree(_savePath, ignore_errors=True)
-				shutil.copytree(feedsPath, _savePath)
-			except WindowsError:
-				wx.CallAfter(gui.messageBox,
-				# Translators: the label of an error dialog.
-				_("Folder not restored"),
-				# Translators: the title of an error dialog.
-				_("Restore Error"),
-				wx.OK|wx.ICON_ERROR)
+	def onReadFeedsFileManager(self, evt):
+		gui.mainFrame._popupSettingsDialog(ReadFeedsManagerDialog)
 
 	def script_readFirstFeed(self, gesture):
 		self.onReadFirstFeed(None)
@@ -419,3 +374,62 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		"kb:control+NVDA+enter": "setAddressFile",
 		"kb:shift+NVDA+enter": "saveAddress",
 	}
+
+class ReadFeedsManagerDialog(gui.SettingsDialog):
+
+	title = _("Feeds manager")
+
+	def makeSettings(self, settingsSizer):
+		foldersSizer = wx.BoxSizer(wx.VERTICAL)
+		# Translators: the name of a dialog button.
+		self.focusedCtrl = wx.Button(self, label = _("&Backup personal feeds folder..."))
+		self.focusedCtrl.Bind(wx.EVT_BUTTON, self.onBrowseForBackupDirectory)
+		foldersSizer.Add(self.focusedCtrl)
+		# Translators: the name of a dialog button.
+		ctrl = wx.Button(self, label=_("R&estore personal feeds..."))
+		ctrl.Bind(wx.EVT_BUTTON, self.onBrowseForRestoreDirectory)
+		foldersSizer.Add(ctrl)
+		settingsSizer.Add(foldersSizer)
+
+	def postInit(self):
+		self.focusedCtrl.SetFocus()
+	def onBrowseForBackupDirectory(self, evt):
+		with wx.DirDialog(self,
+		# Translators: the label of a dialog to select a folder.
+		_("Select the folder where your personal feeds will be backed up."),
+		configPath) as dlg:
+			gui.mainFrame.prePopup()
+			if dlg.ShowModal() == wx.ID_OK:
+				gui.mainFrame.postPopup()
+				copyPath = os.path.join(dlg.GetPath(), "personalFeeds")
+				try:
+					shutil.rmtree(copyPath, ignore_errors=True)
+					shutil.copytree(_savePath, copyPath)
+				except WindowsError:
+					wx.CallAfter(gui.messageBox,
+					## Translators: the label of an error dialog.
+					_("Unable to backup folder"),
+					# Translators: the title of an error dialog.
+					_("Backup Error"),
+					wx.OK|wx.ICON_ERROR)
+
+	def onBrowseForRestoreDirectory(self, evt):
+		feedsPath = os.path.join(configPath, "personalFeeds")
+		with wx.DirDialog(self,
+		# Translators: the label of a dialog to select a folder.
+		_("Restore personal feeds from backup folder"),
+		feedsPath, wx.DD_DIR_MUST_EXIST  | wx.DD_DEFAULT_STYLE) as dlg:
+			gui.mainFrame.prePopup()
+			if dlg.ShowModal() == wx.ID_OK:
+				gui.mainFrame.postPopup()
+				feedsPath = dlg.GetPath()
+				try:
+					shutil.rmtree(_savePath, ignore_errors=True)
+					shutil.copytree(feedsPath, _savePath)
+				except WindowsError:
+					wx.CallAfter(gui.messageBox,
+					# Translators: the label of an error dialog.
+					_("Folder not restored"),
+					# Translators: the title of an error dialog.
+					_("Restore Error"),
+					wx.OK|wx.ICON_ERROR)
