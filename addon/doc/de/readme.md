@@ -18,7 +18,7 @@ them in the new installed version of readFeeds.
 
 ## Befehle: ##
 
-### Read Feeds menu ###
+### Feed-Reader-Menü ###
 
 You can access the Read Feeds submenu from the nvda menu, NVDA+N, where the
 following menu options are available:
@@ -62,8 +62,8 @@ an error message if it was not possible to backup the personalFeeds folder.
 - The title of the article list dialog displays the selected feed name and
 number of items available.
 
-## Changes for 2.0 ##
-*	 Add-on help is available from the Add-ons Manager.
+## Änderungen bis 2.0 ##
+*	 Die Hilfe zur Erweiterung ist über den Erweiterungs-Manager verfügbar.
 
 ## Änderungen bis 1.0 ##
 *	 Ehrstveröffentlichung.
