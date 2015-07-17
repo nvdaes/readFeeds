@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: readFeeds 2.2\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2015-01-30 18:00+1000\n"
-"PO-Revision-Date: 2015-03-28 22:27+0900\n"
+"PO-Revision-Date: 2015-07-12 23:07+0900\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Last-Translator: \n"
+"Last-Translator: Takuya Nishimoto <nishimotz@gmail.com>\n"
 "Language-Team: \n"
-"X-Generator: Poedit 1.7.5\n"
+"X-Generator: Poedit 1.5.7\n"
 
 #. Translators: the label of a message box dialog.
 msgid ""
@@ -67,7 +67,7 @@ msgstr "フィードの管理"
 
 #. Translators: the name of a menu item.
 msgid "Article &list..."
-msgstr "記事 &リスト..."
+msgstr "記事 リスト(&L)..."
 
 #. Translators: the tooltip for a menu item.
 msgid "View article list"
@@ -75,7 +75,7 @@ msgstr "記事リストを見る"
 
 #. Translators: the name of a menu item.
 msgid "&Temporary feed address..."
-msgstr "&一時フィードアドレス..."
+msgstr "一時フィードアドレス(&T)..."
 
 #. Translators: the tooltip for a menu item.
 msgid "View or choose current feed address"
@@ -83,7 +83,7 @@ msgstr "現在のフィードアドレスを見るまたは選択する"
 
 #. Translators: the name of a menu item.
 msgid "L&oad feed address from file..."
-msgstr "&ファイルからフィードアドレスを読み込み"
+msgstr "ファイルからフィードアドレスを読み込み(&O)"
 
 #. Translators: the tooltip for a menu item.
 msgid "Select file which contains feed address."
@@ -100,7 +100,7 @@ msgstr "現在のフィードアドレスをファイルに保存"
 
 #. Translators: the name of a menu item.
 msgid "R&efresh current feed"
-msgstr "&現在のフィードを更新"
+msgstr "現在のフィードを更新(&E)"
 
 #. Translators: the tooltip for a menu item.
 msgid "Checks for new articles for the current feed"
@@ -108,7 +108,7 @@ msgstr "現在のフィードの新しい記事を確認"
 
 #. Translators: the name of a menu item, which will backup the users feeds.
 msgid "&Backup personal feeds folder..."
-msgstr "&個人フィードフォルダをバックアップ"
+msgstr "個人フィードフォルダをバックアップ(&B)"
 
 #. Translators: the tooltip for a menu item.
 msgid "Backs up your personal feeds folder"
@@ -116,7 +116,7 @@ msgstr "個人フィードフォルダをバックアップ"
 
 #. Translators: the name of a menu item.
 msgid "R&estore personal feeds..."
-msgstr "&個人フィードを復元..."
+msgstr "個人フィードを復元(&E)..."
 
 #. Translators: the tooltip for a menu item.
 msgid "Restore previously saved feeds"
@@ -156,7 +156,7 @@ msgstr "復元エラー"
 
 #. Translators: message presented in input mode.
 msgid "Refreshes the current feed and announces the most recent article title."
-msgstr "現在のフィードを更新して最新の記事タイトルを通知"
+msgstr "現在のフィードを更新して最新の記事タイトルを報告"
 
 msgid "Refresh your selected feed to read the current article."
 msgstr "選択されたフィードを更新して現在の記事を読む"
@@ -171,20 +171,20 @@ msgid ""
 "Announces the title of the current article. Pressed two times, copies title "
 "and related link to the clipboard."
 msgstr ""
-"現在の記事のタイトルを通知。二回押すとタイトルと関連リンクをクリップボードに"
+"現在の記事のタイトルを報告。二回押すとタイトルと関連リンクをクリップボードに"
 "コピー。"
 
 #. Translators: message presented in input mode.
 msgid "Announces the title of the next article."
-msgstr "次の記事のタイトルを通知"
+msgstr "次の記事のタイトルを報告"
 
 #. Translators: message presented in input mode.
 msgid "Announces the title of the previous article."
-msgstr "前の記事のタイトルを通知"
+msgstr "前の記事のタイトルを報告"
 
 #. Translators: message presented in input mode.
 msgid "Announces article link, when pressed two times, opens related web page."
-msgstr "記事リンクを通知、二回押すと関連するWebページを開く"
+msgstr "記事リンクを報告、二回押すと関連するWebページを開く"
 
 #. Translators: the label of a text entry dialog.
 msgid "Feed address to follow"
