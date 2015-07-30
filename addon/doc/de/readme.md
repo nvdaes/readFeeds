@@ -4,9 +4,10 @@
 * [Stabile version][2] herunterladen
 * [Testversion][1] herunterladen
 
-This addon provides a straightforward way to read feeds in Atom or RSS
-formats using NVDA.  The feeds will not be refreshed automatically.  Below
-when we mention feeds, we mean both RSS and ATOM feeds.
+Diese Erweiterung bietet eine einfache Möglichkeit, RSS-Feeds in den
+Formaten Atom oder RSS mit NVDA zu lesen. Die Feeds werden nicht automatisch
+aktualisiert. Wenn wir weiter unten  von Feeds sprechen, dann meinen wir
+sowohl RSS- als auch  ATOM-Feeds.
 
 ## Installation oder Aktualisierung: ##
 
@@ -18,41 +19,29 @@ them in the new installed version of readFeeds.
 
 ## Befehle: ##
 
-### Read Feeds menu ###
+### Feed-Reader-Menü ###
 
 You can access the Read Feeds submenu from the nvda menu, NVDA+N, where the
 following menu options are available:
 
-- Article list...  Presents the article list from your current feed. Select
-the article you want to read and press OK button to open the corresponding
-page in your browser.  - Temporary feed address... control + NVDA + shift +
-enter: Opens a dialog for typing a new URL to select another feed. The
-current URL will be shown in this dialog.  - Load feed address from
-file... NVDA+control+enter: Opens a dialog to select a feed from a saved
-file containing a feed URL.  - Save current feed address to
-file... NVDA+shift+enter: opens a dialog for selecting the file where
-current feed URL will be saved.  If you save to the special file
-addressFile.txt, this particular feed will be used as your default feed.  -
-Refresh current feed: control+shift+NVDA+8: Refresh selected feed. The feeds
-will not be updated automatically when Read Feeds addon is started.  -
-Backup feeds folder...  opens a dialog to choose a folder where you can save
-the personalFeeds directory of your feeds. By default the selected folder is
-the NVDA's configuration directory, which will create the personalFeeds
-directory.  - Restore feeds...  Opens a dialog to select a folder which
-replaces your feeds in the personalFeeds folder. Make sure you load a folder
-containing feeds URLs.
+- Artikel-Liste... präsentiert die Artikel-Liste aus Ihrem aktuellen
+Feed. Wählen Sie den Artikel, den Sie lesen möchten und drücken Sie die
+Taste OK, um die entsprechende Seite in Ihrem Browser zu öffnen.
 
-Note: If you want to delete a previously saved feed URL, just remove the
-corresponding file.
+Hinweis: Wenn Sie eine zuvor gespeicherte Feed-URL löschen möchten,
+entfernen Sie einfach die entsprechende Datei.
 
 ### Tastenkombinationen: ###
 
-- Ctrl+Shift+NVDA+Space: Announces current article's URL. Pressing twice
-will open the web page.  - Ctrl+Shift+NVDA+8: Refreshes the selected feed
-and announces its most recent title.  - Ctrl+Shift+NVDA+I: Announces current
-feed title. Pressing twice will copy the title and related link to
-clipboard.  - Ctrl+Shift+NVDA+U: Announces previous feed title.  -
-Ctrl+Shift+NVDA+O: Announces next feed title.
+- Strg+Umschalt+NVDA+Leertaste: gibt die aktuellen URL des Artikels
+aus. Durch zweimaliges Drücken wird die Internetseite geöffnet.
+- Strg+Umschalt+NVDA+8: Aktualisiert den ausgewählten Feed und kündigt
+dessen neuesten Titel an.
+- Strg+Umschalt+NVDA+I: Gibt den Titel des Feeds aus. Durch zweimaliges
+Drücken wird der Titel und der damit verbundenen Link in die Zwischenablage
+kopiert.
+- Strg+Umschalt+NVDA+U: gibt den vorherigen Feed-Titel aus.
+- Strg+Umschalt+NVDA+O: gibt den  nächste Feed-Titel aus.
 
 ## Bemerkungen: ##
 
@@ -62,8 +51,8 @@ an error message if it was not possible to backup the personalFeeds folder.
 - The title of the article list dialog displays the selected feed name and
 number of items available.
 
-## Changes for 2.0 ##
-*	 Add-on help is available from the Add-ons Manager.
+## Änderungen bis 2.0 ##
+*	 Die Hilfe zur Erweiterung ist über den Erweiterungs-Manager verfügbar.
 
 ## Änderungen bis 1.0 ##
 *	 Ehrstveröffentlichung.

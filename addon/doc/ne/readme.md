@@ -1,8 +1,8 @@
 # वाचन पोषण #
 
 * लेखकहरू: नोलिया रुइज्  मार्डिज्नेज,  मेसर हमिद 
-* डाउनलोड [स्थिर संस्करण][2]
-* डाउनलोड [विकास संस्करण][1]
+* अनुबहन [स्थिर संस्करण][2]
+* अनुबहन [विकास संस्करण][1]
 
 This addon provides a straightforward way to read feeds in Atom or RSS
 formats using NVDA.  The feeds will not be refreshed automatically.  Below

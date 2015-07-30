@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Read feeds 1.0\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-11-16 13:26+0100\n"
-"PO-Revision-Date: 2013-11-19 21:06+0200\n"
+"PO-Revision-Date: 2015-02-05 10:44+0200\n"
 "Last-Translator: Çağrı Doğan <cagrid@hotmail.com>\n"
 "Language-Team: Noelia <nrm1977@gmail.com>\n"
 "Language: es_ES\n"
@@ -13,7 +13,7 @@ msgstr ""
 "X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 1.5.7\n"
+"X-Generator: Poedit 1.7.4\n"
 "X-Poedit-SearchPath-0: C:\\Documents and Settings\\User\\Mis documentos"
 "\\Personal\\traducir\n"
 
@@ -58,7 +58,7 @@ msgstr "Haberin bağlantısı alınamadı."
 
 #. Translators: the name of a submenu.
 msgid "&Read Feeds"
-msgstr "R+SS Akışlarını Oku"
+msgstr "R&SS Akışlarını Oku"
 
 #. Translators: the tooltip for a submenu.
 msgid "Manage feeds."
