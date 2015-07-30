@@ -11,7 +11,6 @@
 
 import addonHandler
 import globalPluginHandler
-import languageHandler
 import os
 import sys
 import shutil
