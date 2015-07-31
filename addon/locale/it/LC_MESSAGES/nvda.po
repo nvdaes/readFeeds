@@ -1,163 +1,317 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Read feeds 5.0\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-22 19:27+0100\n"
-"PO-Revision-Date: 2013-02-22 19:33+0100\n"
-"Last-Translator: Chris <llajta2012@hotmail.com>\n"
-"Language-Team: Noelia <nrm1977@gmail.com>\n"
+"Project-Id-Version: ReadFeeds 3.0-dev\n"
+"Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
+"POT-Creation-Date: 2015-07-24 10:22+0200\n"
+"PO-Revision-Date: 2015-07-27 11:27+0100\n"
+"Last-Translator: Simone Dal Maso <simone.dalmaso@gmail.com>\n"
+"Language-Team: Italian <simone.dalmaso@gmail.com>\n"
+"Language: it_IT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
 "X-Poedit-Basepath: .\n"
-"X-Poedit-SourceCharset: utf-8\n"
-"Language: it_IT\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 1.6.6\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SearchPath-0: .\n"
 
-msgid "Your configuration folder for NVDA contains files that seem to be derivated from a previous version of this add-on. Do you want to update it?"
-msgstr "Nella cartella di configurazione di NVDA sono presenti alcuni file provenienti da una precedente versione di ReadFeed. Vuoi aggiornare?"
+#. Translators: the label of a message box dialog.
+msgid ""
+"You have installed the ReadFeeds add-on, probably an old and incompatible "
+"version with this one. Do you want to uninstall the old version?"
+msgstr ""
+"Il componente aggiuntivo ReadFeeds risulta già installato, probabile sia una "
+"versione precedente ed incompatibile. Vuoi disinstallare la vecchia versione?"
 
+#. Translators: the title of a message box dialog.
+msgid "Uninstall incompatible add-on"
+msgstr "Disinstallazione add-on non compatibile"
+
+#. Translators: the label of a message box dialog.
+msgid ""
+"Your configuration folder for NVDA contains files that seem to be derived "
+"from a previous version of this add-on. Do you want to update it?"
+msgstr ""
+"Nella cartella di configurazione di NVDA sono presenti alcuni file "
+"provenienti da una precedente versione di ReadFeeds. Vuoi aggiornare?"
+
+#. Translators: the title of a message box dialog.
 msgid "Install or update add-on"
 msgstr "Installa o Aggiorna"
 
-msgid "This feed contains untitled items"
-msgstr "Questo Canale contiene elementi senza titolo"
+#. Translators: message presented when feeds cannot be reported.
+msgid ""
+"Unable to refresh feed. Check your Internet conectivity or that the "
+"specified feed address is correct."
+msgstr ""
+"Non è possibile leggere notizie del canale. Controlla la connessione a "
+"Internet o l'indirizzo specificato"
 
-msgid "This feed contains items without a link"
-msgstr "Questo canale contiene elementi senza link"
+#. Translators: Presented when the current article does not have an associated title.
+msgid "Unable to locate article title."
+msgstr "Impossibile individuare il titolo dell'articolo."
 
-msgid "&Read feeds"
-msgstr "&Gestore RSS"
+#. Translators: Presented when the current article does not have an associated link.
+msgid "Unable to locate article link."
+msgstr "Impossibile individuare collegamento dell'articolo."
 
-msgid "News &list..."
-msgstr "&Notizie RSS..."
+#. Translators: the name of a submenu.
+msgid "&Read Feeds"
+msgstr "&Gestore feed"
 
-msgid "View news list"
+#. Translators: the tooltip for a submenu.
+msgid "Manage feeds."
+msgstr "Gestisci feed"
+
+#. Translators: the name of a menu item.
+msgid "Article &list..."
+msgstr "&Articoli del feed..."
+
+#. Translators: the tooltip for a menu item.
+msgid "View article list"
 msgstr "Visualizza l'elenco delle notizie"
 
-msgid "&Temporary address..."
-msgstr "N&uovo URL"
+#. Translators: the name of a menu item.
+msgid "&Temporary feed address..."
+msgstr "&Feed attuale"
 
+#. Translators: the tooltip for a menu item.
 msgid "View or choose current feed address"
 msgstr "Visualizza o scegli l'indirizzo attuale"
 
-msgid "L&oad saved address..."
-msgstr "Se&leziona Canale"
+#. Translators: the name of a menu item.
+msgid "L&oad feed address from file..."
+msgstr "Se&leziona Canale da file"
 
-msgid "Choose file containing address"
-msgstr "Scegli un file contenente un URL RSS"
+#. Translators: the tooltip for a menu item.
+msgid "Select file which contains feed address."
+msgstr "Scegli un file contenente un indirizzo ai feed"
 
-msgid "Save current address..."
-msgstr "Salva il Canale RSS attuale"
+#. Translators: the name of a menu item.
+msgid "Save current feed address to file..."
+msgstr "Salva l'indirizzo  del feed attuale"
 
-msgid "Copy current address to text file"
-msgstr "Copia l'indirizzo attuale su file di testo"
+#. Translators: the tooltip for a menu item.
+#. Translators: the label of a file dialog.
+msgid "Save current feed address to file"
+msgstr "Salva l'indirizzo attuale su file di testo"
 
-msgid "Updat&e current feed"
-msgstr "Ag&giorna Feed"
+#. Translators: the name of a menu item.
+msgid "R&efresh current feed"
+msgstr "&Aggiorna il feed"
 
-msgid "Reload current feed"
-msgstr "Importa canali RSS"
+#. Translators: the tooltip for a menu item.
+msgid "Checks for new articles for the current feed"
+msgstr "Controlla nuovi articoli per il feed attuale"
 
-msgid "&Copy feeds folder..."
-msgstr "&Backup Canali RSS"
+#. Translators: the name of a menu item.
+msgid "&ReadFeeds file manager..."
+msgstr "&Gestisci file..."
 
-msgid "Backup of feeds folder"
-msgstr "Esegui Backup dei canali RSS salvati"
+#. Translators: the tooltip for a menu item.
+msgid "Opens the ReadFeedsFileManager dialog"
+msgstr "Apre una finestra per gestire i file in readFeed"
 
-msgid "R&estore feeds..."
-msgstr "Im&porta e sostituisci Canali RSS"
+#. Translators: the title of an error dialog.
+msgid "Refresh Error"
+msgstr "Errore nell'aggiornamento"
 
-msgid "Restore previously saved feeds"
-msgstr "Importa canali salvati"
-
-msgid "Open &documentation"
-msgstr "&Documentazione"
-
-msgid "Open documentation for current language"
-msgstr "Apri informazioni per la lingua in uso"
-
-msgid "Feeds can not be reported. Check your Internet conectivity or specified address"
-msgstr "Non è possibile leggere notizie del canale. Controlla la connessione a Internet o l'indirizzo specificato"
-
-msgid "Update Error"
-msgstr "Errore di aggiornamento"
-
-msgid "Open the web page for reading your selected article"
+#. Translators: the label of a single choice dialog.
+msgid "Open web page of selected article."
 msgstr "Seleziona un articolo da leggere."
 
-msgid "Select a folder for copying your saved feeds"
-msgstr "Seleziona la cartella di destinazione per salvare una copia dei Canali RSS"
+#. Translators: message presented in input mode.
+msgid "Refreshes the current feed and announces the most recent article title."
+msgstr "Aggiorna il feed attuale e legge l'articolo più recente"
 
-msgid "Folder not copied"
-msgstr "nessuna Cartella copiata"
+msgid "Refresh your selected feed to read the current article."
+msgstr "Aggiorna il feed selezionato per leggere l'articolo attuale."
 
-msgid "Copy Error"
-msgstr "Errore nel copiare"
-
-msgid "Select the feeds folder you wish to restore"
-msgstr "Seleziona la cartella di canali da importare"
-
-msgid "Updates the selected channel and reads the first feed title."
-msgstr "Aggiorna il canale selezionato e legge la notizia più recente"
-
+#. Translators: message presented when the information about an article of a feed is copied to the clipboard.
 #, python-format
 msgid "Copied to clipboard %s"
 msgstr "copiato negli appunti %s"
 
-msgid "Reads the current feed title. Pressed two times, copies the text to clipboard."
-msgstr "Legge il titolo della notizia attuale. Premuto 2 volte, copia il testo negli appunti"
+#. Translators: message presented in input mode.
+msgid ""
+"Announces the title of the current article. Pressed two times, copies title "
+"and related link to the clipboard."
+msgstr ""
+"Legge il titolo della notizia attuale. Premuto 2 volte, copia il testo negli "
+"appunti"
 
-msgid "Reads the next feed title."
-msgstr "Legge il titolo della notizia successiva."
+#. Translators: message presented in input mode.
+msgid "Announces the title of the next article."
+msgstr "Legge il titolo dell'articolo successivo."
 
-msgid "Reads the prior feed title."
-msgstr "Legge il titolo della notizia precedente."
+#. Translators: message presented in input mode.
+msgid "Announces the title of the previous article."
+msgstr "Legge il titolo dell'articolo precedente."
 
-msgid "Reads the article link, that allows open its web page. Pressed two times, opens the web."
-msgstr "Legge il link della notizia. Premuto due volte apre la pagina Web relativa."
+#. Translators: message presented in input mode.
+msgid "Announces article link, when pressed two times, opens related web page."
+msgstr ""
+"Legge il link della notizia. Premuto due volte apre la pagina Web relativa."
 
-msgid "The address of the channel you wish to follow"
-msgstr "Inserisci un indirizzo  RSS."
+#. Translators: the label of a text entry dialog.
+msgid "Feed address to follow"
+msgstr "Indirizzo del feed che stai seguendo:"
 
-msgid "Address"
-msgstr "Canale RSS."
+#. Translators: the title of a text entry dialog.
+msgid "Feed address"
+msgstr "Feed attuale."
 
+#. Translators: message presented when the address of a feed has been selected.
 #, python-format
 msgid "Selected %s"
 msgstr "Selezionato %s"
 
-msgid "Opens a dialog for setting the address of the feeds channel."
-msgstr "apre una finestra di dialogo per impostare l'indirizzo del canale RSS."
+#. Translators: message presented in input mode.
+msgid "Opens a dialog for entering a feed address."
+msgstr "Apre una finestra di dialogo per salvare l'indirizzo selezionato."
 
-msgid "Choose a file containing a channel address"
-msgstr "Scegli un canale RSS da file."
+#. Translators: the label of a file dialog.
+msgid "Select feed address from file"
+msgstr "Seleziona l'indirizzo del feed da un file"
 
 msgid "Text files (*.txt) |*.txt"
 msgstr "File di testo (*.txt) |*.txt"
 
-msgid "Address can not be selected"
+#. Translators: message presented when unable to read feed address.
+msgid "Unable to read feed address, feed can not be selected"
 msgstr "Indirizzo non valido"
 
-msgid "Opens a dialog for setting the address of the feeds channel from a selected file."
-msgstr "apre una finestra di dialogo per impostare l'indirizzo di un canale RSS da file."
-
-msgid "File for saving your current address"
-msgstr "Salva l'indirizzo attuale su file."
+#. Translators: message presented in input mode.
+msgid "Opens a dialog for selecting a file containing a feed address."
+msgstr "Apre una finestra di dialogo per salvare l'indirizzo selezionato."
 
 msgid "Text files (*.txt) | *.txt"
 msgstr "File di testo (*.txt) |*.txt"
 
+#. Translators: message presented when the address of a feed has been saved.
 #, python-format
 msgid "Saved %s"
 msgstr "Salvato %s"
 
-msgid "Address can not be saved"
+#. Translators: Message presented when the feed address cannot be saved.
+msgid "Feed address can not be saved"
 msgstr "Impossibile salvare l'indirizzo"
 
-msgid "Opens a dialog for saving a file containing the selected address."
-msgstr "Apre una finestra di dialogo per salvare l'indirizzo selezionato."
+#. Translators: message presented in input mode.
+msgid ""
+"Opens a dialog where you can enter a filename to which the current feed "
+"address will be saved."
+msgstr ""
+"Apre una finestra di dialogo in cui è possibile inserire il nome del file "
+"dove verrà salvato l'indirizzo del feed attuale."
+
+msgid "Feeds manager"
+msgstr "Gestore feed"
+
+#. Translators: the name of a dialog button.
+msgid "&Backup personal feeds folder..."
+msgstr "Esegui &Backup dei feed salvati"
+
+#. Translators: the name of a dialog button.
+msgid "R&estore personal feeds..."
+msgstr "Im&porta e sostituisci feed"
+
+#. Translators: the label of a dialog to select a folder.
+msgid "Select the folder where your personal feeds will be backed up."
+msgstr ""
+"Seleziona la cartella di destinazione dove verranno salvati i tuoi feed."
+
+#. # Translators: the label of an error dialog.
+msgid "Unable to backup folder"
+msgstr "Impossibile fare il backup della cartella"
+
+#. Translators: the title of an error dialog.
+msgid "Backup Error"
+msgstr "Errore nel copiare"
+
+#. Translators: the label of a dialog to select a folder.
+msgid "Restore personal feeds from backup folder"
+msgstr "Ripristina i feed personali da cartella di backup"
+
+#. Translators: the label of an error dialog.
+msgid "Folder not restored"
+msgstr "nessuna Cartella copiata"
+
+#. Translators: the title of an error dialog.
+msgid "Restore Error"
+msgstr "Errore di aggiornamento"
+
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on to be shown on installation and add-on information.
+msgid "Read Feeds"
+msgstr "Gestore feed"
+
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+msgid "Add-on for using NVDA as a feed reader."
+msgstr "Permette di usare NVDA come un lettore di feed."
+
+#~ msgid "Backs up your personal feeds folder"
+#~ msgstr "Esegui Backup dei feed salvati"
+
+#~ msgid "Restore previously saved feeds"
+#~ msgstr "Importa canali salvati"
+
+#~ msgid "This feed contains untitled items"
+#~ msgstr "Questo Canale contiene elementi senza titolo"
+
+#~ msgid "This feed contains items without a link"
+#~ msgstr "Questo canale contiene elementi senza link"
+
+#~ msgid "Updat&e current feed"
+#~ msgstr "Ag&giorna Feed"
+
+#~ msgid "&Copy feeds folder..."
+#~ msgstr "&Backup Canali RSS"
+
+#~ msgid "Open &documentation"
+#~ msgstr "&Documentazione"
+
+#~ msgid "Open documentation for current language"
+#~ msgstr "Apri informazioni per la lingua in uso"
+
+#~ msgid "Select a folder for copying your saved feeds"
+#~ msgstr ""
+#~ "Seleziona la cartella di destinazione per salvare una copia dei Canali RSS"
+
+#~ msgid "Select the feeds folder you wish to restore"
+#~ msgstr "Seleziona la cartella di canali da importare"
+
+#~ msgid "Updates the selected channel and reads the first feed title."
+#~ msgstr "Aggiorna il canale selezionato e legge la notizia più recente"
+
+#~ msgid "Reads the next feed title."
+#~ msgstr "Legge il titolo della notizia successiva."
+
+#~ msgid "Reads the prior feed title."
+#~ msgstr "Legge il titolo della notizia precedente."
+
+#~ msgid "The address of the channel you wish to follow"
+#~ msgstr "Inserisci un indirizzo  RSS."
+
+#~ msgid "Opens a dialog for setting the address of the feeds channel."
+#~ msgstr ""
+#~ "apre una finestra di dialogo per impostare l'indirizzo del canale RSS."
+
+#~ msgid "Choose a file containing a channel address"
+#~ msgstr "Scegli un canale RSS da file."
+
+#~ msgid ""
+#~ "Opens a dialog for setting the address of the feeds channel from a "
+#~ "selected file."
+#~ msgstr ""
+#~ "apre una finestra di dialogo per impostare l'indirizzo di un canale RSS "
+#~ "da file."
+
+#~ msgid "File for saving your current address"
+#~ msgstr "Salva l'indirizzo attuale su file."
 
 #~ msgid "Untitled feed"
 #~ msgstr "Canale senza titolo"
