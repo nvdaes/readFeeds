@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Read feeds 1.0\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-11-16 13:26+0100\n"
-"PO-Revision-Date: 2015-02-05 10:44+0200\n"
+"PO-Revision-Date: 2016-02-26 02:45-0800\n"
 "Last-Translator: Çağrı Doğan <cagrid@hotmail.com>\n"
 "Language-Team: Noelia <nrm1977@gmail.com>\n"
 "Language: es_ES\n"
@@ -13,7 +13,7 @@ msgstr ""
 "X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 1.7.4\n"
+"X-Generator: Poedit 1.5.5\n"
 "X-Poedit-SearchPath-0: C:\\Documents and Settings\\User\\Mis documentos"
 "\\Personal\\traducir\n"
 
@@ -248,94 +248,3 @@ msgstr "Akışları Oku"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Add-on for using NVDA as a feed reader."
 msgstr "NVDA'yla RSS vb akışları takip etmeniz için bir eklenti."
-
-#~ msgid "This feed contains untitled items"
-#~ msgstr "Bu akışta başlıksız ögeler var ya da başlıklar alınamıyor"
-
-#~ msgid "This feed contains items without a link"
-#~ msgstr "Bu akış bağlantısız  ögeler içeriyor ya da bağlantılar alınamıyor"
-
-#~ msgid "News &list..."
-#~ msgstr "Haber &listesi"
-
-#~ msgid "L&oad saved address..."
-#~ msgstr "Kay&ıtlı RSS adresleri..."
-
-#~ msgid "Choose file containing address"
-#~ msgstr "Takip etmek istediğiniz kanalın adresini içeren dosyayı seçin"
-
-#~ msgid "Copy current address to text file"
-#~ msgstr "Mevcut adresi dosyaya kaydet"
-
-#~ msgid "Updat&e current feed"
-#~ msgstr "Mevcu&t RSS kaynağını güncelle"
-
-#~ msgid "&Copy feeds folder..."
-#~ msgstr "Besleme dizinini yede&kle..."
-
-#~ msgid "Backup of feeds folder"
-#~ msgstr "Akış dizininin yedeği"
-
-#~ msgid "Open &documentation"
-#~ msgstr "Dokümantasyon klasö&rünü aç"
-
-#~ msgid "Open documentation for current language"
-#~ msgstr " Mevcut dil için dokümantasyon dizinini aç"
-
-#~ msgid "Update Error"
-#~ msgstr "Güncelleme Hatası"
-
-#~ msgid "Select a folder for copying your saved feeds"
-#~ msgstr "Kayıtlı beslemelerinizi yedeklemek için bir klasör seçin"
-
-#~ msgid "Select the feeds folder you wish to restore"
-#~ msgstr "Geri yüklemek istediğiniz besleme klasörünü seçin"
-
-#~ msgid "Updates the selected channel and reads the first feed title."
-#~ msgstr "Seçilen kanalı günceller ve ilk beslemenin başlığını okur"
-
-#~ msgid "Reads the next feed title."
-#~ msgstr "Sonraki besleme başlığını okur"
-
-#~ msgid "Reads the prior feed title."
-#~ msgstr "Önceki besleme başlığını okur"
-
-#~ msgid "The address of the channel you wish to follow"
-#~ msgstr "Takip etmek istediğiniz kanalın adresi"
-
-#~ msgid "Address"
-#~ msgstr "Akış adresi"
-
-#~ msgid "Opens a dialog for setting the address of the feeds channel."
-#~ msgstr ""
-#~ "Takip etmek istediğiniz kanalın adresini gireceğiniz iletişim kutusunu "
-#~ "açar"
-
-#~ msgid "Choose a file containing a channel address"
-#~ msgstr "Takip etmek istediğiniz kanalın adresini içeren dosyayı seçin"
-
-#~ msgid "Address can not be selected"
-#~ msgstr "Akış adresi seçilemiyor"
-
-#~ msgid ""
-#~ "Opens a dialog for setting the address of the feeds channel from a "
-#~ "selected file."
-#~ msgstr ""
-#~ "Takip etmek istediğiniz kanalın adresini içeren dosyayı seçebileceğiniz "
-#~ "bir iletişim kutusunu açar"
-
-#~ msgid "File for saving your current address"
-#~ msgstr "Mevcut adresi kaydedeceğiniz dosya"
-
-#~ msgid "Untitled feed"
-#~ msgstr "Başlıksız besleme"
-
-#~ msgid "Documentation folder not found for your language"
-#~ msgstr "Bu dilde dokümantasyon mevcut değil"
-
-#~ msgid ""
-#~ "Saves the address of the current feeds chanel, for loading it "
-#~ "automatically when you reload readFeeds plugin"
-#~ msgstr ""
-#~ "Guarda la dirección del actual canal de noticias, para seleccionarla "
-#~ "automáticamente al recargar el complemento readFeeds"
