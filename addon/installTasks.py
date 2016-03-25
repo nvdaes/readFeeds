@@ -1,5 +1,3 @@
-# -*- coding: UTF-8 -*-
-
 import addonHandler
 import globalVars
 import os
