@@ -106,21 +106,13 @@ msgstr "O&sveži trenuten vir"
 msgid "Checks for new articles for the current feed"
 msgstr "Preveri, če obstajajo novi članki v tem viru"
 
-#. Translators: the name of a menu item, which will backup the users feeds.
-msgid "&Backup personal feeds folder..."
-msgstr "&Varnostno preslikaj mapo z osebnimi viri..."
-
-#. Translators: the tooltip for a menu item.
-msgid "Backs up your personal feeds folder"
-msgstr "Varnostno preslika mapo vaših osebnih virov"
-
 #. Translators: the name of a menu item.
-msgid "R&estore personal feeds..."
-msgstr "&Obnovi osebne vire..."
+msgid "&ReadFeeds file manager..."
+msgstr ""
 
 #. Translators: the tooltip for a menu item.
-msgid "Restore previously saved feeds"
-msgstr "Obnovi prej shranjene vire"
+msgid "Opens the ReadFeedsFileManager dialog"
+msgstr ""
 
 #. Translators: the title of an error dialog.
 msgid "Refresh Error"
@@ -129,31 +121,6 @@ msgstr "Napaka pri Osvežitvi"
 #. Translators: the label of a single choice dialog.
 msgid "Open web page of selected article."
 msgstr "Odpri spletno stran izbranega članka"
-
-#. Translators: the label of a dialog to select a folder.
-msgid "Select the folder where your personal feeds will be backed up."
-msgstr ""
-"Izberite mapo, kjer se bodo shranile varnostne kopije vaših osebnih virov."
-
-#. Translators: the label of an error dialog.
-msgid "Unable to backup folder"
-msgstr "Mape ni mogoče varnostno preslikati."
-
-#. Translators: the title of an error dialog.
-msgid "Backup Error"
-msgstr "Napaka pri Varnostnem Kopiranju"
-
-#. Translators: the label of a dialog to select a folder.
-msgid "Restore personal feeds from backup folder"
-msgstr "Obnovi osebne vire iz mape, kjer je varnostna kopija"
-
-#. Translators: the label of an error dialog.
-msgid "Folder not restored"
-msgstr "Mapa ni obnovljena"
-
-#. Translators: the title of an error dialog.
-msgid "Restore Error"
-msgstr "Napaka pri Obnovitvi"
 
 #. Translators: message presented in input mode.
 msgid "Refreshes the current feed and announces the most recent article title."
@@ -241,6 +208,42 @@ msgstr ""
 "Odpre pogovorno okno, kjer lahko vnesete ime datoteke v katero se bo shranil "
 "naslov trenutnega vira"
 
+msgid "Feeds manager"
+msgstr ""
+
+#. Translators: the name of a dialog button.
+msgid "&Backup personal feeds folder..."
+msgstr "&Varnostno preslikaj mapo z osebnimi viri..."
+
+#. Translators: the name of a dialog button.
+msgid "R&estore personal feeds..."
+msgstr "&Obnovi osebne vire..."
+
+#. Translators: the label of a dialog to select a folder.
+msgid "Select the folder where your personal feeds will be backed up."
+msgstr ""
+"Izberite mapo, kjer se bodo shranile varnostne kopije vaših osebnih virov."
+
+#. # Translators: the label of an error dialog.
+msgid "Unable to backup folder"
+msgstr "Mape ni mogoče varnostno preslikati."
+
+#. Translators: the title of an error dialog.
+msgid "Backup Error"
+msgstr "Napaka pri Varnostnem Kopiranju"
+
+#. Translators: the label of a dialog to select a folder.
+msgid "Restore personal feeds from backup folder"
+msgstr "Obnovi osebne vire iz mape, kjer je varnostna kopija"
+
+#. Translators: the label of an error dialog.
+msgid "Folder not restored"
+msgstr "Mapa ni obnovljena"
+
+#. Translators: the title of an error dialog.
+msgid "Restore Error"
+msgstr "Napaka pri Obnovitvi"
+
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
 msgid "Read Feeds"
@@ -250,3 +253,9 @@ msgstr "Bralnik Virov"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Add-on for using NVDA as a feed reader."
 msgstr "Dodatek, ki spremeni NVDA tudi v bralnik virov"
+
+#~ msgid "Backs up your personal feeds folder"
+#~ msgstr "Varnostno preslika mapo vaših osebnih virov"
+
+#~ msgid "Restore previously saved feeds"
+#~ msgstr "Obnovi prej shranjene vire"

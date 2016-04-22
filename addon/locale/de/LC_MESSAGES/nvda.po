@@ -106,21 +106,13 @@ msgstr "Aktuellen RSS-F&eed abrufen..."
 msgid "Checks for new articles for the current feed"
 msgstr "Überprüft den aktuellen RSS-Feed auf neue Artikel."
 
-#. Translators: the name of a menu item, which will backup the users feeds.
-msgid "&Backup personal feeds folder..."
-msgstr "Persönlichen RSS-Feed-&Ordner sichern..."
-
-#. Translators: the tooltip for a menu item.
-msgid "Backs up your personal feeds folder"
-msgstr "Sichert Ihren persönlichen RSS-Feed-Ordner."
-
 #. Translators: the name of a menu item.
-msgid "R&estore personal feeds..."
-msgstr "P&ersönliche RSS-Feeds wiederherstellen..."
+msgid "&ReadFeeds file manager..."
+msgstr ""
 
 #. Translators: the tooltip for a menu item.
-msgid "Restore previously saved feeds"
-msgstr "Zuvor gespeicherte RSS-Feeds wiederherstellen"
+msgid "Opens the ReadFeedsFileManager dialog"
+msgstr ""
 
 #. Translators: the title of an error dialog.
 msgid "Refresh Error"
@@ -129,32 +121,6 @@ msgstr "Fehler beim Abrufen"
 #. Translators: the label of a single choice dialog.
 msgid "Open web page of selected article."
 msgstr "Webseite des ausgewählten Artikels öffnen"
-
-#. Translators: the label of a dialog to select a folder.
-msgid "Select the folder where your personal feeds will be backed up."
-msgstr ""
-"Den Speicherort auswählen, an dem Sie Ihre persönlichen RSS-Feeds gesichert "
-"haben."
-
-#. Translators: the label of an error dialog.
-msgid "Unable to backup folder"
-msgstr "Speicherort zur Sicherung fehlgeschlagen."
-
-#. Translators: the title of an error dialog.
-msgid "Backup Error"
-msgstr "Sicherungsfehler"
-
-#. Translators: the label of a dialog to select a folder.
-msgid "Restore personal feeds from backup folder"
-msgstr "Persönliche RSS-Feeds aus dem Sicherungsordner wiederherstellen"
-
-#. Translators: the label of an error dialog.
-msgid "Folder not restored"
-msgstr "Ordner nicht wiederhergestellt"
-
-#. Translators: the title of an error dialog.
-msgid "Restore Error"
-msgstr "Fehler beim Wiederherstellen"
 
 #. Translators: message presented in input mode.
 msgid "Refreshes the current feed and announces the most recent article title."
@@ -247,6 +213,43 @@ msgstr ""
 "Öffnet ein Dialogfeld zur Eingabe eines Dateinamens zum Speichern der RSS-"
 "Feed-Adresse."
 
+msgid "Feeds manager"
+msgstr ""
+
+#. Translators: the name of a dialog button.
+msgid "&Backup personal feeds folder..."
+msgstr "Persönlichen RSS-Feed-&Ordner sichern..."
+
+#. Translators: the name of a dialog button.
+msgid "R&estore personal feeds..."
+msgstr "P&ersönliche RSS-Feeds wiederherstellen..."
+
+#. Translators: the label of a dialog to select a folder.
+msgid "Select the folder where your personal feeds will be backed up."
+msgstr ""
+"Den Speicherort auswählen, an dem Sie Ihre persönlichen RSS-Feeds gesichert "
+"haben."
+
+#. # Translators: the label of an error dialog.
+msgid "Unable to backup folder"
+msgstr "Speicherort zur Sicherung fehlgeschlagen."
+
+#. Translators: the title of an error dialog.
+msgid "Backup Error"
+msgstr "Sicherungsfehler"
+
+#. Translators: the label of a dialog to select a folder.
+msgid "Restore personal feeds from backup folder"
+msgstr "Persönliche RSS-Feeds aus dem Sicherungsordner wiederherstellen"
+
+#. Translators: the label of an error dialog.
+msgid "Folder not restored"
+msgstr "Ordner nicht wiederhergestellt"
+
+#. Translators: the title of an error dialog.
+msgid "Restore Error"
+msgstr "Fehler beim Wiederherstellen"
+
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
 msgid "Read Feeds"
@@ -256,3 +259,9 @@ msgstr "RSS-Feeds lesen"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Add-on for using NVDA as a feed reader."
 msgstr "Erweiterung mit dem Sie NVDA als RSS-Feed-Reader benutzen."
+
+#~ msgid "Backs up your personal feeds folder"
+#~ msgstr "Sichert Ihren persönlichen RSS-Feed-Ordner."
+
+#~ msgid "Restore previously saved feeds"
+#~ msgstr "Zuvor gespeicherte RSS-Feeds wiederherstellen"
