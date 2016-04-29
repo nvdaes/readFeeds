@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: readFeeds 1.0-dev\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-11-16 13:26+0100\n"
-"PO-Revision-Date: 2013-11-16 15:01-0300\n"
-"Last-Translator: Cleverson Casarin Uliana <clever92000@yahoo.com.br>\n"
+"PO-Revision-Date: 2016-04-23 22:31-0300\n"
+"Last-Translator: Cleverson Casarin Uliana <clcaul@live.com>\n"
 "Language-Team: Equipe de tradução do NVDA para Português do Brasil "
-"<clever92000@yahoo.com.br>\n"
+"<clever97@gmail.com>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.7\n"
+"X-Generator: Poedit 1.6.10\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
 #. Translators: the label of a message box dialog.
@@ -110,11 +110,11 @@ msgstr "Procura artigos novos para o fíd atual"
 
 #. Translators: the name of a menu item.
 msgid "&ReadFeeds file manager..."
-msgstr ""
+msgstr "Gesto&r de arquivos do leitor de fíds..."
 
 #. Translators: the tooltip for a menu item.
 msgid "Opens the ReadFeedsFileManager dialog"
-msgstr ""
+msgstr "Abre o diálogo do gestor do leitor de fíds"
 
 #. Translators: the title of an error dialog.
 msgid "Refresh Error"
@@ -212,7 +212,7 @@ msgstr ""
 "do fíd atual será salvo."
 
 msgid "Feeds manager"
-msgstr ""
+msgstr "Gestor de fíds"
 
 #. Translators: the name of a dialog button.
 msgid "&Backup personal feeds folder..."
