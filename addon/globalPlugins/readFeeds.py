@@ -1,6 +1,9 @@
 # -*- coding: UTF-8 -*-
 
 # Read feeds: A simple plugin for reading feeds with NVDA
+#Copyright (C) 2012-2016 Noelia Ruiz Martínez, Mesar Hameed
+# Released under GPL 2
+
 # Version: 6.0
 # Used globalVars to get config path, for better results with temporary copies, as instantTranslate or SaveLog add-ons
 # Version: 5.0
