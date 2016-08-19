@@ -5,16 +5,16 @@
 * Letöltés [Fejlesztői verzió][1]
 
 Ez a kiegészítő lehetővé teszi, hogy az NVDA használatával közvetlenül is
-lehessen Atom, és RSS hírcsatornákat olvasni. A hírcsatornák nem frissülnek
-automatikusan. Az alábbiakban a hírcsatorna megnevezés egyaránt utal az
-Atom, és RSS hírcsatornákra is.
+lehessen Atom és RSS hírcsatornákat olvasni. A hírcsatornák nem frissülnek
+automatikusan. Az alábbiakban a hírcsatorna megnevezés egyaránt utal az Atom
+és RSS hírcsatornákra is.
 
-## Telepítés, vagy frissítés: ##
+## Telepítés vagy frissítés: ##
 
 Amennyiben a kiegészítő egy korábbi verzióját használta, és már van a
-személyes NVDA konfigurációs mappájában egy RSS, vagy personalFeeds mappa, a
+személyes NVDA konfigurációs mappájában egy RSS vagy personalFeeds mappa, a
 6.0 vagy későbbi verziók telepítése során a program meg fogja kérdezni, hogy
-frissíteni, vagy telepíteni szeretné-e a kiegészítőt. Válassza a frissítés
+frissíteni vagy telepíteni szeretné-e a kiegészítőt. Válassza a frissítés
 lehetőséget, amennyiben szeretné a korábban használt hírcsatornáit a
 legújabb verzióban is változatlanul használni.
 
@@ -23,7 +23,7 @@ legújabb verzióban is változatlanul használni.
 ### Hírcsatorna-olvasó menü ###
 
 A Hírcsatorna-olvasó almenü elérhető az NVDA menüjéből (NVDA+N), ahol az
-alábbi menüpontokat érheti el:. 
+alábbi menüpontokat érheti el: 
 
 - Cikkek Listája: a kiválasztott hírcsatorna cikkeit tartalmazza. Válassza
 ki az olvasni kívánt cikket, majd az Igen gomb lenyomásával a cikkhez
@@ -61,11 +61,11 @@ hírcsatorna nevét.
 
 ## Figyelmeztetések: ##
 
-- Amikor a cím,vagy az URL másolásra kerül.  - Amikor nem lehet kapcsolódni,
+- Amikor a cím vagy az URL másolásra kerül.  - Amikor nem lehet kapcsolódni,
 vagy frissíteni a hírcsatornát, vagy épp az URL nem tartozik egy létező
 hírcsatornához.  - Az NVDA hibaüzenetet jelenít meg, ha nem sikerült
 elmenteni a personalFeeds mappát.  - A cikkek listája megjeleníti a
-kiválasztott hírcsatorna nevét, és az elérhető elemek számát.
+kiválasztott hírcsatorna nevét és az elérhető elemek számát.
 
 ## A 2.0 verzió változásai: ##
 *	 A kiegészítő súgója elérhető a bővítmények kezelése párbeszédablakról is.
