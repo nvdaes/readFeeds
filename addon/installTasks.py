@@ -1,4 +1,7 @@
-import addonHandler
+# -*- coding: UTF-8 -*-
+#Copyright (C) 2013-2016 Noelia Ruiz Martínez, other contributors
+# Released under GPL2import addonHandler
+
 import globalVars
 import os
 import shutil
