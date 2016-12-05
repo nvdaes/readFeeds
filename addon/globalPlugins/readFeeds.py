@@ -27,6 +27,7 @@ from gui import guiHelper
 import wx
 import ui
 from logHandler import log
+import re
 
 sys.path.append(os.path.dirname(__file__))
 from xml2.dom import minidom
@@ -149,10 +150,16 @@ class FeedsDialog(wx.Dialog):
 
 	def onSearchEditTextChange(self, evt):
 		self.feedsList.Clear()
+		# Based on the filter of the Input gestures dialog of NVDA's core.
+		filter = self.searchTextEdit.Value
+		filter = re.escape(filter)
+		filterReg = re.compile(r'(?=.*?' + r')(?=.*?'.join(filter.split('\ ')) + r')', re.U|re.IGNORECASE)
 		for choice in self.choices:
-			if self.searchTextEdit.Value.lower() not in choice.lower():
+			if filter and not filterReg.match(choice):
 				continue
 			self.feedsList.Append(choice)
+		self.feedsList.Selection = 0
+		self.onFeedsListChoice(None)
 
 	def onFeedsListChoice(self, evt):
 		self.sel = self.feedsList.Selection
