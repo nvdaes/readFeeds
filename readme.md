@@ -30,7 +30,7 @@ Opens a dialog with the following controls:
 - New: Opens a dialog with an edit box to enter the address of a new feed. If the address is valid and the feed can be saved, its name, based on the feed title, will appear at the bottom of the feeds list.
 - Rename: Opens a dialog with an edit box to rename the selected feed.
 - Delete: Opens a dialog to delete the selected feed after confirmation.
-- Sets the selected feed as the default, so that its articles can be accessed with NVDA's gestures.
+- Set default: Sets the selected feed as the default, so that its articles can be accessed with NVDA's gestures.
 - Close: Closes the Feeds dialog.
 
 Note: If a feed named tempFeed is created, please rename it, as this file could be replaced when needed to create a feed whose name already exists.
