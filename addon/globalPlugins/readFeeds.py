@@ -330,6 +330,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		d.Show()
 		gui.mainFrame.postPopup()
 
+	def script_feedsDialog(self, gesture):
+		wx.CallAfter(self.onFeeds, None)
+	# Translators: message presented in input mode.
+	script_feedsDialog.__doc__ = _("Shows the Feeds dialog.")
+
 	def getFirstFeed(self):
 		if not self.feed:
 			try:
@@ -396,7 +401,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		"kb:control+shift+NVDA+o": "readNextFeed",
 		"kb:control+shift+NVDA+u": "readPriorFeed",
 		"kb:control+shift+NVDA+space": "reportLink",
-		"kb:control+shift+NVDA+enter": "setAddress",
 		"kb:shift+NVDA+enter": "copyFeedInfo",
 	}
 
