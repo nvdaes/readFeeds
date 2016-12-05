@@ -4,14 +4,6 @@
 #Copyright (C) 2012-2016 Noelia Ruiz Martínez, Mesar Hameed
 # Released under GPL 2
 
-# Version: 6.0
-# Used globalVars to get config path, for better results with temporary copies, as instantTranslate or SaveLog add-ons
-# Version: 5.0
-# Control instead of alt in gesture. Added installTask to update the add-on
-# Version: 4.2
-# Channel title and number of articles in News list dialog
-# Date: 23/06/2012
-
 import addonHandler
 import globalPluginHandler
 import os
@@ -108,9 +100,8 @@ class FeedsDialog(wx.Dialog):
 		feedsListGroupSizer = wx.StaticBoxSizer(wx.StaticBox(self), wx.HORIZONTAL)
 		feedsListGroupContents = wx.BoxSizer(wx.HORIZONTAL)
 		changeFeedsSizer = wx.BoxSizer(wx.VERTICAL)
-
-		# Translators: The label of an edit box to search feeds.
-		searchTextLabel = _("&Text to search:")
+		# Message translated in NVDA core.
+		searchTextLabel = translate("&Filter by:")
 		searchLabeledCtrl = gui.guiHelper.LabeledControlHelper(self, searchTextLabel, wx.TextCtrl)
 		self.searchTextEdit = searchLabeledCtrl.control
 		self.searchTextEdit.Bind(wx.EVT_TEXT, self.onSearchEditTextChange)
@@ -154,8 +145,8 @@ class FeedsDialog(wx.Dialog):
 		feedsListGroupSizer.Add(feedsListGroupContents, border=guiHelper.BORDER_FOR_DIALOGS, flag=wx.ALL)
 		sHelper.addItem(feedsListGroupSizer)
 
-		# Translators: The label of a button to close a dialog.
-		closeButton = wx.Button(self, wx.ID_CLOSE, label=_("&Close"))
+		# Message translated in NVDA core.
+		closeButton = wx.Button(self, wx.ID_CLOSE, label=translate("&Close"))
 		closeButton.Bind(wx.EVT_BUTTON, lambda evt: self.Close())
 		sHelper.addDialogDismissButtons(closeButton)
 		self.Bind(wx.EVT_CLOSE, self.onClose)
@@ -232,8 +223,8 @@ class FeedsDialog(wx.Dialog):
 		if gui.messageBox(
 			# Translators: The confirmation prompt displayed when the user requests to delete a feed.
 			_("Are you sure you want to delete this feed? This cannot be undone."),
-			# Translators: The title of the confirmation dialog for deletion of a feed.
-			_("Confirm Deletion"),
+			# Message translated in NVDA core.
+			translate("Confirm Deletion"),
 			wx.YES | wx.NO | wx.ICON_QUESTION, self
 		) == wx.NO:
 			return
@@ -467,6 +458,8 @@ class Feed(object):
 	def getNumberOfArticles(self):
 		return len(self._articles)
 
+### Global plugin
+
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	scriptCategory = unicode(ADDON_SUMMARY)
@@ -487,15 +480,15 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		_("View and manage feeds"))
 		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, self.onFeeds, self.feedsListItem)
 		self.copyItem = self.readFeedsMenu.Append(wx.ID_ANY,
-			# Translators: the name for an item of addon submenu.
+			# Translators: the name of a menu item.
 			_("&Copy feeds folder..."),
-			# Translators: the tooltip text for an item of addon submenu.
+			# Translators: the tooltip for a menu item.
 			_("Backup of feeds"))
 		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, self.onCopy, self.copyItem)
 		self.restoreItem = self.readFeedsMenu.Append(wx.ID_ANY,
-			# Translators: the name for an item of addon submenu.
+			# Translators: the name of a menu item.
 			_("R&estore feeds..."),
-			# Translators: the tooltip text for an item of addon submenu.
+			# Translators: the tooltip for a menu item.
 			_("Restore previously saved feeds"))
 		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, self.onRestore, self.restoreItem)
 
@@ -516,7 +509,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def script_activateFeedsDialog(self, gesture):
 		wx.CallAfter(self.onFeeds, None)
 	# Translators: message presented in input mode.
-	script_activateFeedsDialog.__doc__ = _("Shows the Feeds dialog of %s." % ADDON_SUMMARY)
+	script_activateFeedsDialog.__doc__ = _("Activates the Feeds dialog of %s." % ADDON_SUMMARY)
 
 	def onCopy(self, evt):
 		gui.mainFrame.prePopup()
@@ -540,72 +533,78 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	# Translators: message presented in input mode.
 	script_activateRestoreDialog.__doc__ = _("Activates the Restore dialog of %s." % ADDON_SUMMARY)
 
-	def getFirstFeed(self):
-		if not self.feed:
-			try:
-				addressFile = "%s.txt" % config.conf["readFeeds"]["addressFile"]
-				with open(os.path.join(FEEDS_PATH, addressFile), "r") as f:
-					address = f.read()
-					f.close()
-				self.feed = Feed(address)
-			except Exception as e:
-				ui.message(CAN_NOT_REPORT)
+	def getFirstArticle(self):
+		try:
+			addressFile = "%s.txt" % config.conf["readFeeds"]["addressFile"]
+			with open(os.path.join(FEEDS_PATH, addressFile), "r") as f:
+				address = f.read()
+				f.close()
+			self.feed = Feed(address)
+		except Exception as e:
+			ui.message(CAN_NOT_REPORT)
+			raise e
 
-	def script_readFirstFeed(self, gesture):
-		self.getFirstFeed()
+	def script_readFirstArticle(self, gesture):
+		self.getFirstArticle()
 		if self.feed:
 			ui.message(self.feed.getArticleTitle())
 	# Translators: message presented in input mode.
-	script_readFirstFeed.__doc__ = _("Refreshes the current feed and announces the most recent article title.")
+	script_readFirstArticle.__doc__ = _("Refreshes the current feed and announces the most recent article title.")
 
-	def script_readCurrentFeed(self, gesture):
-		self.getFirstFeed()
-		feedInfo = u"{title}\r\n\r\n{address}".format(title=self.feed.getArticleTitle(), address=self.feed.getArticleLink())
-		if scriptHandler.getLastScriptRepeatCount()==1 and api.copyToClip(feedInfo):
+	def script_readCurrentArticle(self, gesture):
+		if not self.feed:
+			self.getFirstArticle()
+		articleInfo = u"{title}\r\n\r\n{address}".format(title=self.feed.getArticleTitle(), address=self.feed.getArticleLink())
+		if scriptHandler.getLastScriptRepeatCount()==1 and api.copyToClip(articleInfo):
 			# Translators: message presented when the information about an article of a feed is copied to the clipboard.
-			ui.message(_("Copied to clipboard %s") % feedInfo)
+			ui.message(_("Copied to clipboard %s") % articleInfo)
 		else:
-			ui.message(feedInfo)
+			ui.message(articleInfo)
 	# Translators: message presented in input mode.
-	script_readCurrentFeed.__doc__ = _("Announces the title of the current article. Pressed two times, copies title and related link to the clipboard.")
+	script_readCurrentArticle.__doc__ = _("Announces the title of the current article. Pressed two times, copies title and related link to the clipboard.")
 
-	def script_readNextFeed(self, gesture):
-		self.getFirstFeed()
+	def script_readNextArticle(self, gesture):
+		if not self.feed:
+			self.getFirstArticle()
 		self.feed.next()
 		ui.message(self.feed.getArticleTitle())
 	# Translators: message presented in input mode.
-	script_readNextFeed.__doc__ = _("Announces the title of the next article.")
+	script_readNextArticle.__doc__ = _("Announces the title of the next article.")
 
-	def script_readPriorFeed(self, gesture):
-		self.getFirstFeed()
+	def script_readPriorArticle(self, gesture):
+		if not self.feed:
+			self.getFirstArticle()
 		self.feed.previous()
 		ui.message(self.feed.getArticleTitle())
 	# Translators: message presented in input mode.
-	script_readPriorFeed.__doc__ = _("Announces the title of the previous article.")
+	script_readPriorArticle.__doc__ = _("Announces the title of the previous article.")
 
 	def script_reportLink(self, gesture):
-		self.getFirstFeed()
-		feedLink = self.feed.getArticleLink()
+		if not self.feed:
+			self.getFirstArticle()
+		articleLink = self.feed.getArticleLink()
 		if scriptHandler.getLastScriptRepeatCount()==1:
-			os.startfile(feedLink)
+			os.startfile(articleLink)
 		else:
-			ui.message(feedLink)
+			ui.message(articleLink)
 	# Translators: message presented in input mode.
 	script_reportLink.__doc__ = _("Announces article link, when pressed two times, opens related web page.")
 
-	def script_copyFeedInfo(self, gesture):
-		self.getFirstFeed()
-		feedInfo = u"{title}\r\n\r\n{address}".format(title=self.feed.getArticleTitle(), address=self.feed.getArticleLink())
-		if api.copyToClip(feedInfo):
+	def script_copyArticleInfo(self, gesture):
+		if not self.feed:
+			self.getFirstArticle()
+		articleInfo = u"{title}\r\n\r\n{address}".format(title=self.feed.getArticleTitle(), address=self.feed.getArticleLink())
+		if api.copyToClip(articleInfo):
 			# Translators: message presented when the information about an article of a feed is copied to the clipboard.
-			ui.message(_("Copied to clipboard %s") % feedInfo)
+			ui.message(_("Copied to clipboard %s") % articleInfo)
+	# Translators: message presented in input mode.
+	script_copyArticleInfo.__doc__ = _("Copies title and related link of the current article to the clipboard.")
 
 	__gestures = {
-		"kb:control+shift+NVDA+8": "readFirstFeed",
-		"kb:control+shift+NVDA+i": "readCurrentFeed",
-		"kb:control+shift+NVDA+o": "readNextFeed",
-		"kb:control+shift+NVDA+u": "readPriorFeed",
+		"kb:control+shift+NVDA+8": "readFirstArticle",
+		"kb:control+shift+NVDA+i": "readCurrentArticle",
+		"kb:control+shift+NVDA+o": "readNextArticle",
+		"kb:control+shift+NVDA+u": "readPriorArticle",
 		"kb:control+shift+NVDA+space": "reportLink",
-		"kb:shift+NVDA+enter": "copyFeedInfo",
 	}
 
