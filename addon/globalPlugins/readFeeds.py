@@ -74,9 +74,16 @@ class FeedsDialog(wx.Dialog):
 		feedsListGroupSizer = wx.StaticBoxSizer(wx.StaticBox(self), wx.HORIZONTAL)
 		feedsListGroupContents = wx.BoxSizer(wx.HORIZONTAL)
 		changeFeedsSizer = wx.BoxSizer(wx.VERTICAL)
-		names = [os.path.splitext(filename)[0] for filename in os.listdir(FEEDS_PATH)]
+
+		# Translators: The label of an edit box to search feeds.
+		searchTextLabel = _("&Text to search:")
+		searchLabeledCtrl = gui.guiHelper.LabeledControlHelper(self, searchTextLabel, wx.TextCtrl)
+		self.searchTextEdit = searchLabeledCtrl.control
+		self.searchTextEdit.Bind(wx.EVT_TEXT, self.onSearchEditTextChange)
+
+		self.choices = [os.path.splitext(filename)[0] for filename in os.listdir(FEEDS_PATH)]
 		self.feedsList = wx.ListBox(self,
-			choices=names)
+			choices=self.choices)
 		self.feedsList.Selection = 0
 		self.feedsList.Bind(wx.EVT_LISTBOX, self.onFeedsListChoice)
 		changeFeedsSizer.Add(self.feedsList, proportion=1.0)
@@ -124,7 +131,7 @@ class FeedsDialog(wx.Dialog):
 		mainSizer.Add(sHelper.sizer, flag=wx.ALL, border=guiHelper.BORDER_FOR_DIALOGS)
 		mainSizer.Fit(self)
 		self.Sizer = mainSizer
-		self.feedsList.SetFocus()
+		self.searchTextEdit.SetFocus()
 		self.Center(wx.BOTH | wx.CENTER_ON_SCREEN)
 
 	def __del__(self):
@@ -139,6 +146,13 @@ class FeedsDialog(wx.Dialog):
 			f.write(address)
 			f.close()
 		return feedName
+
+	def onSearchEditTextChange(self, evt):
+		self.feedsList.Clear()
+		for choice in self.choices:
+			if self.searchTextEdit.Value.lower() not in choice.lower():
+				continue
+			self.feedsList.Append(choice)
 
 	def onFeedsListChoice(self, evt):
 		self.sel = self.feedsList.Selection
@@ -191,7 +205,7 @@ class FeedsDialog(wx.Dialog):
 	def onDefault(self, evt):
 		config.conf["readFeeds"]["addressFile"] = self.stringSel
 		self.onFeedsListChoice(None)
-		self.feedsList.SetFocus()
+		self.searchTextEdit.SetFocus()
 
 	def onRename(self, evt):
 		# Translators: The label of a field to enter a new name for a feed.
