@@ -33,7 +33,9 @@ Opens a dialog with the following controls:
 - Set default: Sets the selected feed as the default, so that its articles can be accessed with NVDA's gestures.
 - Close: Closes the Feeds dialog.
 
-Note: If a feed named tempFeed is created, please rename it, as this file could be replaced when needed to create a feed whose name already exists.
+##### Notes #####
+- If a feed named tempFeed is created, please rename it, as this file could be replaced when needed to create a feed whose name already exists.
+- The feed set as the default can't be removed. The addressFile feed will be use as the default when the configuration is reset, so it can't be deleted.
 
 ####Copy feeds folder... ####
 
