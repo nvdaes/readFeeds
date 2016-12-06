@@ -98,14 +98,14 @@ class FeedsDialog(wx.Dialog):
 
 		mainSizer = wx.BoxSizer(wx.VERTICAL)
 		sHelper = guiHelper.BoxSizerHelper(self,orientation=wx.VERTICAL)
+				# Message translated in NVDA core.
+		searchTextLabel = translate("&Filter by:")
+		self.searchTextEdit = sHelper.addLabeledControl(searchTextLabel, wx.TextCtrl)
+		self.searchTextEdit.Bind(wx.EVT_TEXT, self.onSearchEditTextChange)
+
 		feedsListGroupSizer = wx.StaticBoxSizer(wx.StaticBox(self), wx.HORIZONTAL)
 		feedsListGroupContents = wx.BoxSizer(wx.HORIZONTAL)
 		changeFeedsSizer = wx.BoxSizer(wx.VERTICAL)
-		# Message translated in NVDA core.
-		searchTextLabel = translate("&Filter by:")
-		searchLabeledCtrl = gui.guiHelper.LabeledControlHelper(self, searchTextLabel, wx.TextCtrl)
-		self.searchTextEdit = searchLabeledCtrl.control
-		self.searchTextEdit.Bind(wx.EVT_TEXT, self.onSearchEditTextChange)
 
 		self.choices = [os.path.splitext(filename)[0] for filename in os.listdir(FEEDS_PATH)]
 		self.feedsList = wx.ListBox(self,
