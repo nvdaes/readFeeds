@@ -35,13 +35,14 @@ ADDON_INSTANCE = addonHandler.Addon(ADDON_DIR)
 ADDON_SUMMARY = ADDON_INSTANCE.manifest['summary']
 FEEDS_PATH = os.path.join(os.path.dirname(__file__), "personalFeeds").decode("mbcs")
 CONFIG_PATH = globalVars.appArgs.configPath
+DEFAULT_ADDRESS_FILE = "addressFile"
 # Translators: message presented when feeds cannot be reported.
 CAN_NOT_REPORT = _("Unable to refresh feed. Check your Internet conectivity or that the specified feed address is correct.")
 
 ### Configuration
 
 confspec = {
-	"addressFile": "string(default="")",
+	"addressFile": "string(default=addressFile)",
 }
 config.conf.spec["readFeeds"] = confspec
 
@@ -190,9 +191,13 @@ class FeedsDialog(wx.Dialog):
 		self.stringSel = self.feedsList.StringSelection
 		self.searchTextEdit.Enabled = self.sel >= 0
 		self.articlesButton.Enabled = self.sel>= 0
-		self.deleteButton.Enabled = self.sel >= 0
-		self.renameButton.Enabled = self.sel >= 0
-		self.defaultButton.Enabled = (self.sel >= 0 and
+		self.deleteButton.Enabled = (self.sel >= 0 and 
+			self.stringSel != DEFAULT_ADDRESS_FILE and 
+			config.conf["readFeeds"]["addressFile"] != self.stringSel)
+		self.renameButton.Enabled = (self.sel >= 0 and
+			self.stringSel != DEFAULT_ADDRESS_FILE and 
+			config.conf["readFeeds"]["addressFile"] != self.stringSel)
+		self.defaultButton.Enabled = (self.sel >= 0 and 
 			self.stringSel != config.conf["readFeeds"]["addressFile"])
 
 	def onArticles(self, evt):
@@ -248,8 +253,8 @@ class FeedsDialog(wx.Dialog):
 				return
 			curName = "%s.txt" % self.stringSel
 			newName = "%s.txt" % api.filterFileName(d.Value)
-			os.rename(os.path.join(FEEDS_PATH, curName),
-				os.path.join(FEEDS_PATH, newName))
+		os.rename(os.path.join(FEEDS_PATH, curName),
+			os.path.join(FEEDS_PATH, newName))
 		self.feedsList.SetString(self.sel, os.path.splitext(newName)[0])
 
 	def onClose(self, evt):
