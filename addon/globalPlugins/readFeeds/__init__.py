@@ -189,7 +189,6 @@ class FeedsDialog(wx.Dialog):
 	def onFeedsListChoice(self, evt):
 		self.sel = self.feedsList.Selection
 		self.stringSel = self.feedsList.StringSelection
-		self.searchTextEdit.Enabled = self.sel >= 0
 		self.articlesButton.Enabled = self.sel>= 0
 		self.deleteButton.Enabled = (self.sel >= 0 and 
 			self.stringSel != DEFAULT_ADDRESS_FILE and 
