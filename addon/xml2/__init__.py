@@ -42,7 +42,3 @@ else:
 
 import globalPluginHandler
 
-class GlobalPlugin(globalPluginHandler.GlobalPlugin):
-
-	"""Plugin class"""
-
