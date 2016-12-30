@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: readFeeds 1.0-dev\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-11-16 13:26+0100\n"
-"PO-Revision-Date: 2016-04-22 11:46+0200\n"
+"PO-Revision-Date: 2016-12-29 16:21-0800\n"
 "Last-Translator: Kostadin Kolev <k_kolev1985@mail.bg>\n"
 "Language-Team: Български <>\n"
 "Language: bg\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
-"X-Generator: Poedit 1.6.11\n"
+"X-Generator: Poedit 1.5.7\n"
 
 #. Translators: the label of a message box dialog.
 msgid ""
@@ -52,6 +52,120 @@ msgstr ""
 "Невъзможно опресняване на източника. Проверете вашата интернет връзка или се "
 "уверете, че посоченият адрес на източника е правилен."
 
+#. Translators: Message presented when feeds have been copied.
+msgid "Feeds copied"
+msgstr "Източниците са копирани"
+
+#. Translators: label of error dialog shown when cannot copy feeds folder.
+msgid "Folder not copied"
+msgstr "Папката не бе копирана"
+
+#. Translators: title of error dialog shown when cannot copy feeds folder.
+msgid "Copy Error"
+msgstr "Грешка при копирането"
+
+#. Translators: Message presented when feeds have been restored.
+msgid "Feeds restored"
+msgstr "Източниците са възстановени"
+
+#. Translators: The title of a dialog.
+msgid "Feeds"
+msgstr "Източници"
+
+#. Translators: The label of a button to open the list of articles of a feed.
+msgid "List of &articles..."
+msgstr "Списък на &статиите..."
+
+#. Translators: The label of a button to add a new feed.
+msgid "&New..."
+msgstr "&Нов..."
+
+#. Translators: The label of a button to rename a feed.
+msgid "&Rename..."
+msgstr "&Преименувай..."
+
+#. Translators: The label of a button to delete a feed.
+msgid "&Delete..."
+msgstr "&Изтрий..."
+
+#. Translators: The label of a button to set a feed as default.
+msgid "S&et default"
+msgstr "&Задай по подразбиране"
+
+#. Translators: the label of a single choice dialog.
+msgid "Open web page of selected article."
+msgstr "Отвори уеб страницата на избраната статия."
+
+#. Translators: The label of a field to enter an address for a new feed.
+msgid "Address of a new feed:"
+msgstr "Адрес на нов източник:"
+
+#. Translators: The title of a dialog to create a new feed.
+msgid "New feed"
+msgstr "Нов източник"
+
+#. Translators: The confirmation prompt displayed when the user requests to delete a feed.
+msgid "Are you sure you want to delete this feed? This cannot be undone."
+msgstr ""
+"Сигурен ли сте, че искате да изтриете този източник? Това действие не може "
+"да бъде отменено."
+
+#. Translators: The label of a field to enter a new name for a feed.
+msgid "New name:"
+msgstr "Ново име:"
+
+#. Translators: The title of a dialog to rename a feed.
+msgid "Rename feed"
+msgstr "Преименуване на източник"
+
+#. Translators: The title of the Copy dialog.
+msgid "Copy feeds"
+msgstr "Копиране на източници"
+
+#. Translators: An informational message displayed in the Copy dialog.
+#, python-format
+msgid ""
+"Select a folder to save a backup of your current feeds.\n"
+"\n"
+"\t\tThey will be copied from %s."
+msgstr ""
+"Изберете папка за записване на архивно копие на вашите текущи информационни "
+"източници.\n"
+"\n"
+"\t\tТе ще бъдат копирани от %s."
+
+#. Translators: The label of a grouping containing controls to select the destination directory in the Copy dialog.
+msgid "directory for backup:"
+msgstr "Директория за резервното копие:"
+
+#. Translators: The title of the dialog presented when browsing for the destination directory when copying feeds.
+msgid "Select directory to copy"
+msgstr "Избор на папка за копирането"
+
+#. Translators: The title of the Restore dialog.
+msgid "Restore feeds"
+msgstr "Възстановяване на източници"
+
+#. Translators: An informational message displayed in the Restore dialog.
+#, python-format
+msgid ""
+"Select a folder to restore a backup of your previous copied feeds.\n"
+"\n"
+"\t\tThey will be copied to %s."
+msgstr ""
+"Изберете папка, от която да възстановите архивно копие на вашите предишно "
+"копирани информационни източници.\n"
+"\n"
+"\t\tТе ще бъдат копирани в %s."
+
+#. Translators: The label of a grouping containing controls to select the destination directory in the Restore dialog.
+msgid "directory containing backup:"
+msgstr "Директория, съдържаща архивно копие:"
+
+#. Translators: The title of the dialog presented when browsing for the destination directory when restoring feeds.
+msgid "Select directory to restore"
+msgstr "Избор на папка за възстановяване"
+
 #. Translators: Presented when the current article does not have an associated title.
 msgid "Unable to locate article title."
 msgstr "Заглавието на статията не може да бъде намерено."
@@ -69,69 +183,48 @@ msgid "Manage feeds."
 msgstr "Управление на източниците."
 
 #. Translators: the name of a menu item.
-msgid "Article &list..."
-msgstr "Списък със &статии..."
+msgid "&Feeds..."
+msgstr "&Източници..."
 
 #. Translators: the tooltip for a menu item.
-msgid "View article list"
-msgstr "Преглед на списъка със статии"
+msgid "View and manage feeds"
+msgstr "Преглед и управление на източниците"
 
 #. Translators: the name of a menu item.
-msgid "&Temporary feed address..."
-msgstr "&Адрес на временен източник..."
+msgid "&Copy feeds folder..."
+msgstr "&Копирай папката с източниците..."
 
 #. Translators: the tooltip for a menu item.
-msgid "View or choose current feed address"
-msgstr "Преглед или промяна на адреса на текущия източник"
+msgid "Backup of feeds"
+msgstr "Резервно копие на източниците"
 
 #. Translators: the name of a menu item.
-msgid "L&oad feed address from file..."
-msgstr "&Зареди адрес на източник от файл..."
+msgid "R&estore feeds..."
+msgstr "&Възстанови източници..."
 
 #. Translators: the tooltip for a menu item.
-msgid "Select file which contains feed address."
-msgstr "Изберете файл, съдържащ адрес на източник."
+msgid "Restore previously saved feeds"
+msgstr "Възстановява предишно запазени източници"
 
-#. Translators: the name of a menu item.
-msgid "Save current feed address to file..."
-msgstr "Запази адреса на текущия източник във файл..."
+#. Translators: message presented in input mode.
+#, python-format
+msgid "Activates the Feeds dialog of %s."
+msgstr "Задейства диалоговия прозорец с източниците на %s."
 
-#. Translators: the tooltip for a menu item.
-#. Translators: the label of a file dialog.
-msgid "Save current feed address to file"
-msgstr "Запази адреса на текущия източник във файл"
+#. Translators: message presented in input mode.
+#, python-format
+msgid "Activates the Copy dialog of %s."
+msgstr "Задейства диалоговия прозорец за копиране на %s."
 
-#. Translators: the name of a menu item.
-msgid "R&efresh current feed"
-msgstr "&Опресняване на текущия източник"
-
-#. Translators: the tooltip for a menu item.
-msgid "Checks for new articles for the current feed"
-msgstr "Проверява за нови статии за текущия източник"
-
-#. Translators: the name of a menu item.
-msgid "&ReadFeeds file manager..."
-msgstr "&Файлов мениджър на ReadFeeds..."
-
-#. Translators: the tooltip for a menu item.
-msgid "Opens the ReadFeedsFileManager dialog"
-msgstr "Отваря диалоговия прозорец с файловия мениджър на ReadFeeds"
-
-#. Translators: the title of an error dialog.
-msgid "Refresh Error"
-msgstr "Грешка при опресняване"
-
-#. Translators: the label of a single choice dialog.
-msgid "Open web page of selected article."
-msgstr "Отвори уеб страницата на избраната статия."
+#. Translators: message presented in input mode.
+#, python-format
+msgid "Activates the Restore dialog of %s."
+msgstr "Задейства диалоговия прозорец за възстановяване на %s."
 
 #. Translators: message presented in input mode.
 msgid "Refreshes the current feed and announces the most recent article title."
 msgstr ""
 "Опреснява текущия източник и съобщава заглавието на най-скорошната статия."
-
-msgid "Refresh your selected feed to read the current article."
-msgstr "Обновете избрания източник, за да прочетете текущата статия."
 
 #. Translators: message presented when the information about an article of a feed is copied to the clipboard.
 #, python-format
@@ -159,94 +252,9 @@ msgid "Announces article link, when pressed two times, opens related web page."
 msgstr ""
 "Прочита връзката към статията, при двукратно натискане отваря тази връзка."
 
-#. Translators: the label of a text entry dialog.
-msgid "Feed address to follow"
-msgstr "Адрес на източника, който да бъде последван"
-
-#. Translators: the title of a text entry dialog.
-msgid "Feed address"
-msgstr "Адрес на източника"
-
-#. Translators: message presented when the address of a feed has been selected.
-#, python-format
-msgid "Selected %s"
-msgstr "Маркиран %s"
-
 #. Translators: message presented in input mode.
-msgid "Opens a dialog for entering a feed address."
-msgstr "Отваря диалог за въвеждане на адрес на източник."
-
-#. Translators: the label of a file dialog.
-msgid "Select feed address from file"
-msgstr "Изберете адрес на източник от файл"
-
-msgid "Text files (*.txt) |*.txt"
-msgstr "Текстови файлове (*.txt) |*.txt"
-
-#. Translators: message presented when unable to read feed address.
-msgid "Unable to read feed address, feed can not be selected"
-msgstr ""
-"Адресът на източника не може да бъде прочетен, източникът не може да бъде "
-"избран"
-
-#. Translators: message presented in input mode.
-msgid "Opens a dialog for selecting a file containing a feed address."
-msgstr "Отваря диалог за избор на файл, съдържащ адрес на източник."
-
-msgid "Text files (*.txt) | *.txt"
-msgstr "Текстови файлове (*.txt) | *.txt"
-
-#. Translators: message presented when the address of a feed has been saved.
-#, python-format
-msgid "Saved %s"
-msgstr "Запазен %s"
-
-#. Translators: Message presented when the feed address cannot be saved.
-msgid "Feed address can not be saved"
-msgstr "Адресът на източника не може да бъде запазен"
-
-#. Translators: message presented in input mode.
-msgid ""
-"Opens a dialog where you can enter a filename to which the current feed "
-"address will be saved."
-msgstr ""
-"Отваря диалог, в който може да въведете име на файла, в който да бъде "
-"запазен адресът на текущия източник."
-
-msgid "Feeds manager"
-msgstr "Управление на източниците"
-
-#. Translators: the name of a dialog button.
-msgid "&Backup personal feeds folder..."
-msgstr "&Резервно копие на папката с вашите източници..."
-
-#. Translators: the name of a dialog button.
-msgid "R&estore personal feeds..."
-msgstr "&Възстанови папката с моите източници..."
-
-#. Translators: the label of a dialog to select a folder.
-msgid "Select the folder where your personal feeds will be backed up."
-msgstr "Изберете папката, където ще бъдат съхранени вашите източници."
-
-#. # Translators: the label of an error dialog.
-msgid "Unable to backup folder"
-msgstr "Неуспешно създаване на резервно копие на папката"
-
-#. Translators: the title of an error dialog.
-msgid "Backup Error"
-msgstr "Грешка при създаване на резервно копие"
-
-#. Translators: the label of a dialog to select a folder.
-msgid "Restore personal feeds from backup folder"
-msgstr "Възстановяване на вашите източници от папка с резервно копие"
-
-#. Translators: the label of an error dialog.
-msgid "Folder not restored"
-msgstr "Папката не е възстановена"
-
-#. Translators: the title of an error dialog.
-msgid "Restore Error"
-msgstr "Грешка при възстановяване"
+msgid "Copies title and related link of the current article to the clipboard."
+msgstr "Копира заглавието и свързаната с текущата статия връзка в клипборда."
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
@@ -257,9 +265,3 @@ msgstr "Read Feeds"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Add-on for using NVDA as a feed reader."
 msgstr "Добавка за използване на NVDA като четец на новинарски източници."
-
-#~ msgid "Backs up your personal feeds folder"
-#~ msgstr "Прави резервно копие на папката с вашите източници"
-
-#~ msgid "Restore previously saved feeds"
-#~ msgstr "Възстановява предишно запазени източници"

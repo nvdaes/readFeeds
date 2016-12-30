@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: readFeeds 1.1-dev\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-12-06 18:00+0100\n"
-"PO-Revision-Date: 2016-07-08 19:32+0100\n"
+"PO-Revision-Date: 2016-12-29 16:18-0800\n"
 "Last-Translator: Rémy Ruiz <remyruiz@gmail.com>\n"
 "Language-Team: Rémy Ruiz <remyruiz@gmail.com>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.7.1\n"
+"X-Generator: Poedit 1.5.7\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
 #. Translators: the label of a message box dialog.
@@ -52,6 +52,119 @@ msgstr ""
 "Impossible d'actualiser les flux. Vérifiez votre connexion à Internet ou que "
 "l'adresse du flux spécifié est correct."
 
+#. Translators: Message presented when feeds have been copied.
+msgid "Feeds copied"
+msgstr "Flux copiés"
+
+#. Translators: label of error dialog shown when cannot copy feeds folder.
+msgid "Folder not copied"
+msgstr "Aucun dossier copié"
+
+#. Translators: title of error dialog shown when cannot copy feeds folder.
+msgid "Copy Error"
+msgstr "Erreur lors de la Copie"
+
+#. Translators: Message presented when feeds have been restored.
+msgid "Feeds restored"
+msgstr "Flux restaurés"
+
+#. Translators: The title of a dialog.
+msgid "Feeds"
+msgstr "Flux"
+
+#. Translators: The label of a button to open the list of articles of a feed.
+msgid "List of &articles..."
+msgstr "Liste des &articles..."
+
+#. Translators: The label of a button to add a new feed.
+msgid "&New..."
+msgstr "&Nouveau..."
+
+#. Translators: The label of a button to rename a feed.
+msgid "&Rename..."
+msgstr "&Renommer..."
+
+#. Translators: The label of a button to delete a feed.
+msgid "&Delete..."
+msgstr "&Supprimer..."
+
+#. Translators: The label of a button to set a feed as default.
+msgid "S&et default"
+msgstr "Définir par d&efaut"
+
+#. Translators: the label of a single choice dialog.
+msgid "Open web page of selected article."
+msgstr "Ouvrir la page web de l'article sélectionné."
+
+#. Translators: The label of a field to enter an address for a new feed.
+msgid "Address of a new feed:"
+msgstr "Adresse d'un nouveau flux:"
+
+#. Translators: The title of a dialog to create a new feed.
+msgid "New feed"
+msgstr "Nouveau flux"
+
+#. Translators: The confirmation prompt displayed when the user requests to delete a feed.
+msgid "Are you sure you want to delete this feed? This cannot be undone."
+msgstr ""
+"Êtes-vous sûr de vouloir supprimer ce flux ? Ça ne peut pas être annulé."
+
+#. Translators: The label of a field to enter a new name for a feed.
+msgid "New name:"
+msgstr "Nouveau nom:"
+
+#. Translators: The title of a dialog to rename a feed.
+msgid "Rename feed"
+msgstr "Renommer le flux"
+
+#. Translators: The title of the Copy dialog.
+msgid "Copy feeds"
+msgstr "Copier les flux"
+
+#. Translators: An informational message displayed in the Copy dialog.
+#, python-format
+msgid ""
+"Select a folder to save a backup of your current feeds.\n"
+"\n"
+"\t\tThey will be copied from %s."
+msgstr ""
+"Sélectionnez le dossier afin d'enregistrer une sauvegarde de vos flux "
+"actuels.\n"
+"\n"
+"\t\tIls seront copiés de %s."
+
+#. Translators: The label of a grouping containing controls to select the destination directory in the Copy dialog.
+msgid "directory for backup:"
+msgstr "dossier de sauvegarde:"
+
+#. Translators: The title of the dialog presented when browsing for the destination directory when copying feeds.
+msgid "Select directory to copy"
+msgstr "Sélectionnez le dossier à copier"
+
+#. Translators: The title of the Restore dialog.
+msgid "Restore feeds"
+msgstr "Restaurer les flux"
+
+#. Translators: An informational message displayed in the Restore dialog.
+#, python-format
+msgid ""
+"Select a folder to restore a backup of your previous copied feeds.\n"
+"\n"
+"\t\tThey will be copied to %s."
+msgstr ""
+"Sélectionnez le dossier afin de restaurer une sauvegarde de vos précédents "
+"flux copiées.\n"
+"\n"
+"\t\tIls seront copiés  dans %s."
+
+#. Translators: The label of a grouping containing controls to select the destination directory in the Restore dialog.
+msgid "directory containing backup:"
+msgstr "dossier contenant la sauvegarde:"
+
+#. Translators: The title of the dialog presented when browsing for the destination directory when restoring feeds.
+msgid "Select directory to restore"
+msgstr "Sélectionnez le dossier à restaurer"
+
 #. Translators: Presented when the current article does not have an associated title.
 msgid "Unable to locate article title."
 msgstr "Impossible de trouver le titre de l'article."
@@ -69,69 +182,48 @@ msgid "Manage feeds."
 msgstr "Gestion des flux."
 
 #. Translators: the name of a menu item.
-msgid "Article &list..."
-msgstr "Liste &de l'article..."
+msgid "&Feeds..."
+msgstr "&Flux..."
 
 #. Translators: the tooltip for a menu item.
-msgid "View article list"
-msgstr "Afficher la liste de l'article"
+msgid "View and manage feeds"
+msgstr "Affichage et gestion des flux"
 
 #. Translators: the name of a menu item.
-msgid "&Temporary feed address..."
-msgstr "&Adresse du flux temporaire..."
+msgid "&Copy feeds folder..."
+msgstr "&Copier le dossier des flux..."
 
 #. Translators: the tooltip for a menu item.
-msgid "View or choose current feed address"
-msgstr "Afficher ou choisir l'adresse  du flux actuel"
+msgid "Backup of feeds"
+msgstr "Sauvegarder les flux"
 
 #. Translators: the name of a menu item.
-msgid "L&oad feed address from file..."
-msgstr "C&harger l'adresse du flux depuis un fichier..."
+msgid "R&estore feeds..."
+msgstr "R&estaurer les flux..."
 
 #. Translators: the tooltip for a menu item.
-msgid "Select file which contains feed address."
-msgstr "Sélectionnez le fichier qui contient l'adresse du flux."
+msgid "Restore previously saved feeds"
+msgstr "Restaurer les flux précédemment enregistrés"
 
-#. Translators: the name of a menu item.
-msgid "Save current feed address to file..."
-msgstr "Enregistrer l'adresse actuelle du flux sur fichier..."
+#. Translators: message presented in input mode.
+#, python-format
+msgid "Activates the Feeds dialog of %s."
+msgstr "Active le dialogue Flux de %s."
 
-#. Translators: the tooltip for a menu item.
-#. Translators: the label of a file dialog.
-msgid "Save current feed address to file"
-msgstr "Enregistrer l'adresse actuelle du flux sur fichier"
+#. Translators: message presented in input mode.
+#, python-format
+msgid "Activates the Copy dialog of %s."
+msgstr "Active le dialogue Copier de %s."
 
-#. Translators: the name of a menu item.
-msgid "R&efresh current feed"
-msgstr "A&ctualiser le flux actuel"
-
-#. Translators: the tooltip for a menu item.
-msgid "Checks for new articles for the current feed"
-msgstr "vérifier des nouveaux articles pour le flux actuel"
-
-#. Translators: the name of a menu item.
-msgid "&ReadFeeds file manager..."
-msgstr "Gestionnaire de fichiers &ReadFeeds..."
-
-#. Translators: the tooltip for a menu item.
-msgid "Opens the ReadFeedsFileManager dialog"
-msgstr "Ouvre la boîte de dialogue ReadFeedsFileManager"
-
-#. Translators: the title of an error dialog.
-msgid "Refresh Error"
-msgstr "Erreur de l'actualisation"
-
-#. Translators: the label of a single choice dialog.
-msgid "Open web page of selected article."
-msgstr "Ouvrir la page web de l'article sélectionné."
+#. Translators: message presented in input mode.
+#, python-format
+msgid "Activates the Restore dialog of %s."
+msgstr "Active le dialogue Restaurer de %s."
 
 #. Translators: message presented in input mode.
 msgid "Refreshes the current feed and announces the most recent article title."
 msgstr ""
 "Actualise le flux actuel et annonce le titre de l'article le plus récent."
-
-msgid "Refresh your selected feed to read the current article."
-msgstr "Actualise votre flux sélectionné pour lire l'article actuel."
 
 #. Translators: message presented when the information about an article of a feed is copied to the clipboard.
 #, python-format
@@ -160,95 +252,11 @@ msgstr ""
 "Annonce le lien de l'article, lorsque vous appuyez deux fois, ouvre la page "
 "web associées."
 
-#. Translators: the label of a text entry dialog.
-msgid "Feed address to follow"
-msgstr "Adresse du flux à suivre"
-
-#. Translators: the title of a text entry dialog.
-msgid "Feed address"
-msgstr "Adresse du flux"
-
-#. Translators: message presented when the address of a feed has been selected.
-#, python-format
-msgid "Selected %s"
-msgstr "Sélectionné %s"
-
 #. Translators: message presented in input mode.
-msgid "Opens a dialog for entering a feed address."
-msgstr "Ouvre une boîte de dialogue pour entrer l'adresse d'un flux."
-
-#. Translators: the label of a file dialog.
-msgid "Select feed address from file"
-msgstr "Sélectionnez l'adresse du flux depuis  un fichier"
-
-msgid "Text files (*.txt) |*.txt"
-msgstr "Fichiers texte (*.txt) |*.txt"
-
-#. Translators: message presented when unable to read feed address.
-msgid "Unable to read feed address, feed can not be selected"
+msgid "Copies title and related link of the current article to the clipboard."
 msgstr ""
-"Impossible de lire l'adresse du flux, le flux ne peut pas être sélectionné"
-
-#. Translators: message presented in input mode.
-msgid "Opens a dialog for selecting a file containing a feed address."
-msgstr ""
-"Ouvre une boîte de dialogue pour sélectionner un fichier contenant l'adresse "
-"du flux."
-
-msgid "Text files (*.txt) | *.txt"
-msgstr "Fichiers texte (*.txt) | *.txt"
-
-#. Translators: message presented when the address of a feed has been saved.
-#, python-format
-msgid "Saved %s"
-msgstr "Enregistré %s"
-
-#. Translators: Message presented when the feed address cannot be saved.
-msgid "Feed address can not be saved"
-msgstr "Impossible d'enregistrer l'adresse du flux"
-
-#. Translators: message presented in input mode.
-msgid ""
-"Opens a dialog where you can enter a filename to which the current feed "
-"address will be saved."
-msgstr ""
-"Ouvre une boîte de dialogue où vous pouvez entrez un nom de fichier pour "
-"l'adresse du flux actuelle laquelle sera enregistrée."
-
-msgid "Feeds manager"
-msgstr "Gestionnaire de flux"
-
-#. Translators: the name of a dialog button.
-msgid "&Backup personal feeds folder..."
-msgstr "&Sauvegarde de votre dossier de flux personnelle..."
-
-#. Translators: the name of a dialog button.
-msgid "R&estore personal feeds..."
-msgstr "R&estaurer les flux personnels..."
-
-#. Translators: the label of a dialog to select a folder.
-msgid "Select the folder where your personal feeds will be backed up."
-msgstr "Sélectionnez le dossier où vos flux personnels seront sauvegardés."
-
-#. # Translators: the label of an error dialog.
-msgid "Unable to backup folder"
-msgstr "le dossier de sauvegarde est indisponible"
-
-#. Translators: the title of an error dialog.
-msgid "Backup Error"
-msgstr "Erreur de sauvegarde"
-
-#. Translators: the label of a dialog to select a folder.
-msgid "Restore personal feeds from backup folder"
-msgstr "Restaurer les flux personnels depuis le dossier de sauvegarde"
-
-#. Translators: the label of an error dialog.
-msgid "Folder not restored"
-msgstr "Aucun dossier restauré"
-
-#. Translators: the title of an error dialog.
-msgid "Restore Error"
-msgstr "Erreur de Restauration"
+"Copies le titre et le lien associée de l'article actuel dans le presse-"
+"papiers."
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
@@ -260,9 +268,3 @@ msgstr "Read Feeds"
 msgid "Add-on for using NVDA as a feed reader."
 msgstr ""
 "Module complémentaire  pour utiliser NVDA comme un lecteur de flux RSS."
-
-#~ msgid "Backs up your personal feeds folder"
-#~ msgstr "Sauvegarde de votre dossier de flux personnelle"
-
-#~ msgid "Restore previously saved feeds"
-#~ msgstr "Restaurer les flux précédemment enregistrés"

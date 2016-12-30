@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: readFeeds 1.0-dev\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-11-16 13:26+0100\n"
-"PO-Revision-Date: 2016-05-16 22:45+0200\n"
-"Last-Translator: Bernd Dorer <bdorer@mailbox.org>\n"
+"PO-Revision-Date: 2016-12-29 16:22-0800\n"
+"Last-Translator: René Linke <rene.linke@hamburg.de>\n"
+"Language-Team: \n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.7\n"
-"Language-Team: \n"
+"X-Generator: Poedit 1.5.7\n"
 
 #. Translators: the label of a message box dialog.
 msgid ""
@@ -46,89 +46,182 @@ msgid ""
 "Unable to refresh feed. Check your Internet conectivity or that the "
 "specified feed address is correct."
 msgstr ""
-"Aktualisierung der RSS-Feeds ist fehlgeschlagen. Bitte überprüfen Sie, ob "
-"die Adresse korrekt ist oder ob Sie eine Internetverbindung haben."
+"Aktualisieren der RSS-Feeds ist fehlgeschlagen. Bitte überprüfen Sie, ob die "
+"Adresse korrekt ist oder ob Sie eine bestehende Internetverbindung haben."
+
+#. Translators: Message presented when feeds have been copied.
+msgid "Feeds copied"
+msgstr "Feeds gesichert"
+
+#. Translators: label of error dialog shown when cannot copy feeds folder.
+msgid "Folder not copied"
+msgstr "Der Ordner konnte nicht gesichert werden."
+
+#. Translators: title of error dialog shown when cannot copy feeds folder.
+msgid "Copy Error"
+msgstr "Fehler beim Sichern"
+
+#. Translators: Message presented when feeds have been restored.
+msgid "Feeds restored"
+msgstr "RSS-Feeds wiederhergestellt"
+
+#. Translators: The title of a dialog.
+msgid "Feeds"
+msgstr "RSS-Feeds"
+
+#. Translators: The label of a button to open the list of articles of a feed.
+msgid "List of &articles..."
+msgstr "Artikelliste..."
+
+#. Translators: The label of a button to add a new feed.
+msgid "&New..."
+msgstr "&Neu..."
+
+#. Translators: The label of a button to rename a feed.
+msgid "&Rename..."
+msgstr "&Umbenennen..."
+
+#. Translators: The label of a button to delete a feed.
+msgid "&Delete..."
+msgstr "&Löschen..."
+
+#. Translators: The label of a button to set a feed as default.
+msgid "S&et default"
+msgstr "Als Standard &festlegen"
+
+#. Translators: the label of a single choice dialog.
+msgid "Open web page of selected article."
+msgstr "Artikel-Webseite öffnen"
+
+#. Translators: The label of a field to enter an address for a new feed.
+msgid "Address of a new feed:"
+msgstr "Neue Adresse des RSS-Feeds:"
+
+#. Translators: The title of a dialog to create a new feed.
+msgid "New feed"
+msgstr "Neuer RSS-Feed"
+
+#. Translators: The confirmation prompt displayed when the user requests to delete a feed.
+msgid "Are you sure you want to delete this feed? This cannot be undone."
+msgstr ""
+"Möchten Sie wirklich diesen RSS-Feed entfernen? Dies kann nicht rückgängig "
+"gemacht werden."
+
+#. Translators: The label of a field to enter a new name for a feed.
+msgid "New name:"
+msgstr "Neuer Name:"
+
+#. Translators: The title of a dialog to rename a feed.
+msgid "Rename feed"
+msgstr "RSS-Feed umbenennen"
+
+#. Translators: The title of the Copy dialog.
+msgid "Copy feeds"
+msgstr "RSS-Feeds sichern"
+
+#. Translators: An informational message displayed in the Copy dialog.
+#, python-format
+msgid ""
+"Select a folder to save a backup of your current feeds.\n"
+"\n"
+"\t\tThey will be copied from %s."
+msgstr ""
+"Bitte wählen Sie einen Ordner zum Speichern des Backups Ihrer aktuellen RSS-"
+"Feeds aus:\n"
+"\n"
+"\t\tSie werden aus %s gesichert."
+
+#. Translators: The label of a grouping containing controls to select the destination directory in the Copy dialog.
+msgid "directory for backup:"
+msgstr "Backup-Ordner:"
+
+#. Translators: The title of the dialog presented when browsing for the destination directory when copying feeds.
+msgid "Select directory to copy"
+msgstr "Ordner zum Sichern auswählen"
+
+#. Translators: The title of the Restore dialog.
+msgid "Restore feeds"
+msgstr "RSS-Feeds wiederherstellen"
+
+#. Translators: An informational message displayed in the Restore dialog.
+#, python-format
+msgid ""
+"Select a folder to restore a backup of your previous copied feeds.\n"
+"\n"
+"\t\tThey will be copied to %s."
+msgstr ""
+"Den Speicherort auswählen, an dem Sie Ihre RSS-Feeds gesichert haben.\n"
+"\n"
+"\t\tSie werden in %s gesichert."
+
+#. Translators: The label of a grouping containing controls to select the destination directory in the Restore dialog.
+msgid "directory containing backup:"
+msgstr "Backup-Ordner:"
+
+#. Translators: The title of the dialog presented when browsing for the destination directory when restoring feeds.
+msgid "Select directory to restore"
+msgstr "Ordner zum Wiederherstellen auswählen"
 
 #. Translators: Presented when the current article does not have an associated title.
 msgid "Unable to locate article title."
-msgstr "Artikelüberschrift konnte nicht ermittelt werden."
+msgstr "Die Überschrift des Artikels konnte nicht ermittelt werden."
 
 #. Translators: Presented when the current article does not have an associated link.
 msgid "Unable to locate article link."
-msgstr "Artikellink konnte nicht ermittelt werden."
+msgstr "Die Adresse des Artikels konnte nicht ermittelt werden."
 
 #. Translators: the name of a submenu.
 msgid "&Read Feeds"
-msgstr "&RSS-Feeds lesen"
+msgstr "RSS-Feeds &lesen"
 
 #. Translators: the tooltip for a submenu.
 msgid "Manage feeds."
 msgstr "RSS-Feeds verwalten."
 
 #. Translators: the name of a menu item.
-msgid "Article &list..."
-msgstr "Artikel&liste..."
+msgid "&Feeds..."
+msgstr "RSS-&Feeds..."
 
 #. Translators: the tooltip for a menu item.
-msgid "View article list"
-msgstr "Artikelliste anzeigen"
+msgid "View and manage feeds"
+msgstr "RSS-Feeds verwalten"
 
 #. Translators: the name of a menu item.
-msgid "&Temporary feed address..."
-msgstr "&Temporäre RSS-Feed-Adresse..."
+msgid "&Copy feeds folder..."
+msgstr "Ordner der RSS-Feeds sichern..."
 
 #. Translators: the tooltip for a menu item.
-msgid "View or choose current feed address"
-msgstr "Aktuelle RSS-Feed-Adresse auswählen oder anzeigen"
+msgid "Backup of feeds"
+msgstr "Backup der RSS-Feeds"
 
 #. Translators: the name of a menu item.
-msgid "L&oad feed address from file..."
-msgstr "RSS-Feed-Adresse aus &Datei laden..."
+msgid "R&estore feeds..."
+msgstr "RSS-Feeds wiederherstellen..."
 
 #. Translators: the tooltip for a menu item.
-msgid "Select file which contains feed address."
-msgstr "Eine Datei auswählen, die RSS-Feed-Adressen beinhaltet."
+msgid "Restore previously saved feeds"
+msgstr "Zuvor gespeicherte RSS-Feeds wiederherstellen"
 
-#. Translators: the name of a menu item.
-msgid "Save current feed address to file..."
-msgstr "Aktuelle RSS-Feed-Adresse in Datei speichern..."
+#. Translators: message presented in input mode.
+#, python-format
+msgid "Activates the Feeds dialog of %s."
+msgstr "Aktiviert das Dialogfeld der RSS-Feeds von %s."
 
-#. Translators: the tooltip for a menu item.
-#. Translators: the label of a file dialog.
-msgid "Save current feed address to file"
-msgstr "Aktuelle RSS-Feed-Adresse in Datei speichern"
+#. Translators: message presented in input mode.
+#, python-format
+msgid "Activates the Copy dialog of %s."
+msgstr "Aktiviert das Dialogfeld zum Sichern von %s."
 
-#. Translators: the name of a menu item.
-msgid "R&efresh current feed"
-msgstr "Aktuellen RSS-F&eed abrufen..."
-
-#. Translators: the tooltip for a menu item.
-msgid "Checks for new articles for the current feed"
-msgstr "Überprüft den aktuellen RSS-Feed auf neue Artikel."
-
-#. Translators: the name of a menu item.
-msgid "&ReadFeeds file manager..."
-msgstr "&RSS-Feeds lesen Dateimanager..."
-
-#. Translators: the tooltip for a menu item.
-msgid "Opens the ReadFeedsFileManager dialog"
-msgstr "Öffnet das Dialogfeld \"RSS-Feeds lesen Dateimanager\""
-
-#. Translators: the title of an error dialog.
-msgid "Refresh Error"
-msgstr "Fehler beim Abrufen"
-
-#. Translators: the label of a single choice dialog.
-msgid "Open web page of selected article."
-msgstr "Webseite des ausgewählten Artikels öffnen"
+#. Translators: message presented in input mode.
+#, python-format
+msgid "Activates the Restore dialog of %s."
+msgstr "Aktiviert das Dialogfeld zum Wiederherstellen von %s."
 
 #. Translators: message presented in input mode.
 msgid "Refreshes the current feed and announces the most recent article title."
 msgstr ""
-"Ruft den aktuellen RSS-Feed ab und liest die neuen Artikelüberschriften vor."
-
-msgid "Refresh your selected feed to read the current article."
-msgstr "Ruft den aktuell ausgewählten RSS-Feed ab und liest den Artikel vor."
+"Ruft den aktuellen RSS-Feed ab und liest die neuen Überschriften der Artikel "
+"vor."
 
 #. Translators: message presented when the information about an article of a feed is copied to the clipboard.
 #, python-format
@@ -140,115 +233,27 @@ msgid ""
 "Announces the title of the current article. Pressed two times, copies title "
 "and related link to the clipboard."
 msgstr ""
-"Liest die aktuelle Artikelüberschrift vor. zweimal gedrückt wird die "
-"Überschrift und der dazugehörige Link dazu in die Zwischenablage kopiert."
+"Liest die aktuelle Überschrift des Artikels vor. Zweimal gedrückt wird die "
+"Überschrift und die dazugehörige Adresse in die Zwischenablage kopiert."
 
 #. Translators: message presented in input mode.
 msgid "Announces the title of the next article."
-msgstr "Liest die nächste Artikelüberschrift vor."
+msgstr "Liest die nächste Überschrift des Artikels vor."
 
 #. Translators: message presented in input mode.
 msgid "Announces the title of the previous article."
-msgstr "Liest die vorherige Artikelüberschrift vor."
+msgstr "Liest die vorherige Überschrift des Artikels vor."
 
 #. Translators: message presented in input mode.
 msgid "Announces article link, when pressed two times, opens related web page."
 msgstr ""
-"Falls zweimal gedrückt wird die Artikelüberschrift vorgelesen und die "
+"Bei zweimaligem Drücken wird die Überschrift des Artikels vorgelesen und die "
 "dazugehörige Webseite aufgerufen."
 
-#. Translators: the label of a text entry dialog.
-msgid "Feed address to follow"
-msgstr "RSS-Feed-Adresse folgen"
-
-#. Translators: the title of a text entry dialog.
-msgid "Feed address"
-msgstr "RSS-Feed-Adresse"
-
-#. Translators: message presented when the address of a feed has been selected.
-#, python-format
-msgid "Selected %s"
-msgstr "%s ausgewählt"
-
 #. Translators: message presented in input mode.
-msgid "Opens a dialog for entering a feed address."
-msgstr "Öffnet ein Dialogfeld zur Eingabe einer RSS-Feed-Adresse."
-
-#. Translators: the label of a file dialog.
-msgid "Select feed address from file"
-msgstr "RSS-Adresse aus Datei auswählen"
-
-msgid "Text files (*.txt) |*.txt"
-msgstr "Textdateien (*.txt) |*.txt"
-
-#. Translators: message presented when unable to read feed address.
-msgid "Unable to read feed address, feed can not be selected"
+msgid "Copies title and related link of the current article to the clipboard."
 msgstr ""
-"Von der RSS-Feed-Adresse konnte nicht gelesen werden und somit leider nicht "
-"ausgewählt werden."
-
-#. Translators: message presented in input mode.
-msgid "Opens a dialog for selecting a file containing a feed address."
-msgstr ""
-"Öffnet ein Dialogfeld zur Auswahl einer Datei, die eine RSS-Feed-Adresse "
-"beinhaltet."
-
-msgid "Text files (*.txt) | *.txt"
-msgstr "Textdateien (*.txt) | *.txt"
-
-#. Translators: message presented when the address of a feed has been saved.
-#, python-format
-msgid "Saved %s"
-msgstr "%s gespeichert"
-
-#. Translators: Message presented when the feed address cannot be saved.
-msgid "Feed address can not be saved"
-msgstr "Die RSS-Feed-Adresse konnte nicht gespeichert werden."
-
-#. Translators: message presented in input mode.
-msgid ""
-"Opens a dialog where you can enter a filename to which the current feed "
-"address will be saved."
-msgstr ""
-"Öffnet ein Dialogfeld zur Eingabe eines Dateinamens zum Speichern der RSS-"
-"Feed-Adresse."
-
-msgid "Feeds manager"
-msgstr "RSS-Feeds-manager"
-
-#. Translators: the name of a dialog button.
-msgid "&Backup personal feeds folder..."
-msgstr "Persönlichen RSS-Feed-&Ordner sichern..."
-
-#. Translators: the name of a dialog button.
-msgid "R&estore personal feeds..."
-msgstr "P&ersönliche RSS-Feeds wiederherstellen..."
-
-#. Translators: the label of a dialog to select a folder.
-msgid "Select the folder where your personal feeds will be backed up."
-msgstr ""
-"Den Speicherort auswählen, an dem Sie Ihre persönlichen RSS-Feeds gesichert "
-"haben."
-
-#. # Translators: the label of an error dialog.
-msgid "Unable to backup folder"
-msgstr "Speicherort zur Sicherung fehlgeschlagen."
-
-#. Translators: the title of an error dialog.
-msgid "Backup Error"
-msgstr "Sicherungsfehler"
-
-#. Translators: the label of a dialog to select a folder.
-msgid "Restore personal feeds from backup folder"
-msgstr "Persönliche RSS-Feeds aus dem Sicherungsordner wiederherstellen"
-
-#. Translators: the label of an error dialog.
-msgid "Folder not restored"
-msgstr "Ordner nicht wiederhergestellt"
-
-#. Translators: the title of an error dialog.
-msgid "Restore Error"
-msgstr "Fehler beim Wiederherstellen"
+"Kopiert die Überschrift und die dazugehörige Adresse in die Zwischenablage"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
@@ -258,10 +263,4 @@ msgstr "RSS-Feeds lesen"
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Add-on for using NVDA as a feed reader."
-msgstr "Erweiterung mit dem Sie NVDA als RSS-Feed-Reader benutzen."
-
-#~ msgid "Backs up your personal feeds folder"
-#~ msgstr "Sichert Ihren persönlichen RSS-Feed-Ordner."
-
-#~ msgid "Restore previously saved feeds"
-#~ msgstr "Zuvor gespeicherte RSS-Feeds wiederherstellen"
+msgstr "Erweiterung mit dem Sie NVDA als Reader für RSS-Feeds benutzen können."
