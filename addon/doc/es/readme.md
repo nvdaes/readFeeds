@@ -1,8 +1,8 @@
 # Read Feeds #
 
 * Autores: Noelia Ruiz Martínez, Mesar Hameed
-* Descargar [versión estable][2]
-* Descargar [versión de desarrollo][1]
+* Descargar [versión estable][1]
+* Descargar [versión de desarrollo][2]
 
 Este complemento proporciona una manera fácil de leer fuentes en formatos de
 RSS o Atom utilizando NVDA.  Los feeds no se actualizarán automáticamente.
@@ -22,41 +22,54 @@ dereadFeeds.
 
 ### Menú Read Feeds ###
 
-Puedes acceder al submenú Read Feeds desde el menú NVDA, NVDA+N, donde están
-disponibles las siguientes opciones de menú:
+Puedes acceder al submenú Read Feeds desde el menú NVDA, submenú
+herramientas, donde están disponibles las siguientes opciones:
 
-- Lista de artículos...  Presenta la lista de artículos desde el actual
-feed. Selecciona el artículo que quieras leer y pulsa el botón Aceptar para
-abrir la página correspondiente en tu navegador.  - Dirección temporal de
-feed... control + NVDA + shift + intro: abre un diálogo para escribir una
-dirección web nueva para seleccionar otro feed. la dirección web actual se
-mostrará en este cuadro de diálogo.  - Cargar dirección del feed desde
-fichero... NVDA+control+intro: abre un diálogo para seleccionar un feed
-desde un fichero guardado que contenga una dirección web de un feed.  -
-Guardar dirección actual de feed a fichero... NVDA+shift+intro: abre un
-diálogo para seleccionar el fichero donde se guardará la dirección web
-actual del feed.  Si guardas en el fichero especial addressFile.txt, este
-feed en particular se utilizará como tu feed predeterminado.  - Refrescar
-feed actual: control+shift+NVDA+8: Actualiza el feed seleccionado. Los feeds
-no se actualizarán automáticamente cuando se inicie el complemento Read
-Feeds.  - Respaldar carpeta de feeds...  Abre un diálogo para elegir una
-carpeta donde se puede guardar el directorio personalFeeds de tus feeds. De
-manera predeterminada la carpeta seleccionada es el directorio de
-configuración de NVDA, que creará el directorio personalFeeds.  - Restaurar
-feeds...  Abre un diálogo para seleccionar una carpeta que sustituya los
-feeds en la carpeta personalFeeds. Asegúrate de cargar una carpeta que
-contenga las direcciones web de los RSS.
+#### Feeds... ####
 
-Nota: Si quieres eliminar  una URL del feed previamente guardado, elimina
-sólo el fichero correspondiente.
+Abre un diálogo con los siguientes controles:
+
+- Filtrar por: un cuadro de edición para buscar feeds anteriormente
+buscados.  - Una lista de los feeds guardados.  - Lista de artículos: abre
+un diálogo que presenta la lista de artículos de tu feed actual. Selecciona
+el artículo que quieras leer y pulsa el botón Aceptar para abrir la página
+correspondiente en tu navegador.  - Nuevo: abre un diálogo con un cuadro de
+edición para introducir la dirección de un feed nuevo. Si la dirección es
+válida y el feed se puede guardar, su nombre, basado en el título del feed,
+aparecerá en la parte inferior de la lista de feeds.  - Renombrar: abre un
+diálogo con un cuadro de edición para renombrar el feed seleccionado.  -
+Eliminar: abre un diálogo para eliminar el feed seleccionado después de la
+confirmación.  - Configurar predeterminado: configura el feed seleccionado
+como el predeterminado, tal que puede accederse a sus artículos con gestos
+de NVDA.  - Cerrar: cierra el diálogo Feeds.
+
+##### Notas #####
+- Si se crea un feed llamado tempFeed, por favor renómbralo, ya que este
+fichero podría reemplazarse cuando sea necesario crear un feed cuyo nombre
+ya exista.  - El feed configurado como el predeterminado puede
+eliminarse. el feed addressFile se utilizará como el predeterminado cuando
+la configuración se reinicie, así no puede eliminarse.
+
+####Copiar carpeta feeds... ####
+
+Abre un diálogo para elegir una carpeta donde puedes guardar el directorio
+personalFeeds de tus feeds. Por omisión la carpeta seleccionada es el
+directorio de configuración de NVDA, el cual creará el directorio
+personalFeeds.
+
+#### Restaurar feeds... ####
+
+Abre un diálogo para seleccionar una carpeta que reemplaza tus feeds en la
+carpeta personalFeeds. Asegúrate de cargar una carpeta conteniendo URLs de
+feeds.
 
 ### Órdenes de teclado: ###
 
 - Ctrl+Shift+NVDA+Espacio: Anuncia la dirección web del presente
 artículo. Pulsándola dos veces Se abrirá la página web.  -
 Ctrl+Shift+NVDA+8: Refresca el feed seleccionado y anuncia su título más
-reciente.  - Ctrl+Shift+NVDA+I: Anuncia el título del feed actual
-. Pulsánhdolo dos veces copiará el título y el enlace relacionado al
+reciente.  - Ctrl+Shift+NVDA+I: Anuncia el título del feed actual  y el
+enlace. Pulsánhdolo dos veces copiará el título y el enlace relacionado al
 portapapeles.  - Ctrl+Shift+NVDA+U: Anuncia el título del feed anterior.  -
 Ctrl+Shift+NVDA+O: Anuncia el título del siguiente feed.
 
@@ -66,19 +79,29 @@ Ctrl+Shift+NVDA+O: Anuncia el título del siguiente feed.
 pueda conectar/actualizar un feed, o la dirección web no se corresponda con
 un feed válido.  - NVDA mostrará un mensaje de error si no fuera posible
 hacer copias de seguridad de la carpeta personalFeeds.  - El título del
-cuadro de diálogo Lista de artículos muestra el nombre de la fuente
-seleccionada y el número de artículos disponibles.
+cuadro de diálogo Lista de artículos muestra el nombre del feed seleccionado
+y el número de elementos disponibles.
+
+
+## Cambios para 3.0 ##
+- Los diálogos para gestionar ficheros de feed se han eliminado. Ahora su
+funcionalidad se incluye en el diálogo Feeds.  - La presentación visual de
+los diálogos se ha mejorado, adhiriéndose a la apariencia de los diálogos
+mostrados en NVDA.  - El feed predeterminado se guarda en la configuración
+de NVDA. Por lo tanto, es posible configurar diferentes feeds
+predeterminados en los perfiles de configuración.  - Requiere de NVDA
+2016.4.
+
 
 ## Cambios para 2.0 ##
-*	 La ayuda del complemento está disponible en el Administrador de
-   Complementos.
+- La ayuda del complemento está disponible en el Administrador de
+Complementos.
 
 ## Cambios para 1.0 ##
-*	 Versión inicial.
+- Versión inicial.
 
 [[!tag dev stable]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=rf-dev
+[1]: http://addons.nvda-project.org/files/get.php?file=rf
 
-[2]: http://addons.nvda-project.org/files/get.php?file=rf
-
+[2]: http://addons.nvda-project.org/files/get.php?file=rf-dev

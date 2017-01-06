@@ -1,8 +1,8 @@
 # Read Feeds #
 
 * Auteurs : Noelia Ruiz Martínez, Mesar Hameed
-* Télécharger [version stable][2]
-* Télécharger [version de développement][1]
+* Télécharger [version stable][1]
+* Télécharger [version de développement][2]
 
 Ce module complémentaire fournit un moyen simple de lire les flux aux
 formats Atom ou RSS à l'aide de NVDA. Les flux ne sont pas actualisées
@@ -23,64 +23,86 @@ readFeeds.
 
 ### Menu Read Feeds ###
 
-Vous pouvez accéder au sous-menu Read Feeds depuis le menu NVDA, NVDA+N, où
-les suivantes  options du menu sont disponibles :
+Vous pouvez accéder au sous-menu Read Feeds depuis le menu NVDA, sous-menu
+Outils, où les suivantes  options du menu sont disponibles :
 
-- Liste de l'article...  Affiche la liste de l'article depuis votre flux
-actuelle. Sélectionnez l'article que vous souhaitez lire, puis appuyez sur
-le bouton Accepter pour ouvrir la page de l'article correspondant dans votre
-navigateur.  - Adresse du flux temporaire... contrôle + NVDA + Maj + Entrée
-: Ouvre une boîte de dialogue pour taper une nouvelle URL pour sélectionner
-un autre flux. L'URL actuelle sera montré dans cette boîte de dialogue.  -
-Charger l'adresse du flux depuis un fichier... NVDA+contrôle+entrée : Ouvre
-une boîte de dialogue pour sélectionner un flux dans un fichier enregistré
-contenant l'URL du flux.  - Enregistrer l'adresse actuelle du flux sur
-fichier... NVDA+maj+entrée : ouvre une boîte de dialogue pour sélectionner
-le fichier où l'URL du flux actuelle sera enregistré.  Si vous enregistrez
-le fichier spécial addressFile.txt, ce flux particulier servira comme votre
-flux par défaut.  - Actualiser le flux actuel : contrôle+maj+NVDA+8 :
-Actualisez les flux sélectionné. Ces flux ne seront pas actualisés
-automatiquement lorsque commence à démarrer le module complémentaire Read
-Feeds.  - Sauvegarde de votre dossier de flux personnelle... ouvre une boîte
-de dialogue pour choisir un dossier où vous pouvez enregistrer le répertoire
-personalFeeds de vos flux. Par défaut, le dossier sélectionné est le
-répertoire de configuration de NVDA, qui créera le répertoire
-personalFeeds.  - Restaurer les flux personnels... Ouvre une boîte de
-dialogue pour sélectionner un dossier qui remplace vos flux dans le dossier
-personalFeeds. Assurez-vous que vous chargez un dossier contenant les URLs
-des flux.
+#### Flux... ####
 
-Remarque : Si vous souhaitez supprimer un flux URL précédemment enregistré,
-Il suffit de supprimer le fichier correspondant.
+Ouvre une boîte de dialogue avec les contrôles suivants :
+
+- Filtrer par : Une zone d'édition pour rechercher des flux précédemment
+enregistrés.  - Une liste des flux enregistrés.  - Liste des articles :
+Ouvre une boîte de dialogue qui présente la liste des articles de vvos flux
+actuel. Sélectionnez l'article que vous souhaitez lire et appuyer sur le
+bouton OK pour ouvrir la page correspondante dans votre navigateur.  -
+Nouveau : Ouvre une boîte de dialogue avec une zone d'édition pour entrer
+l'adresse d'un nouveau flux. Si l'adresse est valide et que le flux peut
+être enregistré, son nom, basé sur le titre du flux, apparaît au bas de la
+liste des flux.  - Renommer : Ouvre une boîte de dialogue avec une zone
+d'édition pour renommer le flux sélectionné.  - Supprimer : Ouvre une boîte
+de dialogue pour supprimer le flux sélectionné après confirmation.  -
+Définir par défaut : Définit le flux sélectionné comme valeur par défaut,
+afin que ses articles soient accessibles avec les gestes de NVDA.  - Fermer
+: Ferme la boîte de dialogue Flux.
+
+##### Notes #####
+- Si un flux nommé tempFeed est créé, renommez-le, car ce fichier pourrait
+être remplacé si nécessaire pour créer un flux dont le nom existe déjà. - Le
+flux défini par défaut ne peut pas être supprimé. Le flux addressFile sera
+utilisé comme valeur par défaut lors de la réinitialisation de la
+configuration, donc il ne peut pas être supprimé.
+
+####Copier le dossier des flux... ####
+
+Ouvre une boîte de dialogue pour choisir un dossier dans lequel vous pouvez
+enregistrer le dossier personalFeeds de vos flux. Par défaut, le dossier
+sélectionné est dans la configuration de NVDA, qui créera le répertoire
+personalFeeds.
+
+#### Restaurer les flux... ####
+
+Ouvre une boîte de dialogue pour sélectionner un dossier qui remplace vos
+flux dans le dossier personalFeeds. Assurez-vous de charger un dossier
+contenant des URL de flux.
 
 ### Commandes clavier : ###
 
 - Ctrl+Maj+NVDA+Espace : Annonce l'URL de l'article actuel. En appuyant deux
 fois ouvrira la page web.  - Ctrl+Maj+NVDA+8 : Actualise le flux sélectionné
-et annonce son plus récent titre.  - Ctrl+Maj+NVDA+I : Annonce le titre du
-flux actuel. En appuyant deux fois copie le titre et le lien associée dans
-le presse-papiers.  - Ctrl+Maj+NVDA+U : Annonce le titre du flux précédent.
-- Ctrl+Maj+NVDA+O : Annonce le titre du flux suivant.
+et annonce son plus récent titre.  - Ctrl+Maj+NVDA+I : Annonce le titre et
+le lien du flux actuel. En appuyant deux fois copie le titre et le lien
+associée dans le presse-papiers.  - Ctrl+Maj+NVDA+U : Annonce le titre du
+flux précédent.  - Ctrl+Maj+NVDA+O : Annonce le titre du flux suivant.
 
 ## Notifications : ##
 
 - Lorsque le titre ou l'URL ont été copiés.  - Lorsqu'il est Impossible de
 se connecter/actualiser un flux, ou l'URL ne correspond pas à un flux
-valide.  - NVDA affiche un message d'erreur s'Il n'était pas possible de
-sauvegarder le dossier personalFeeds.  - La boîte de dialogue affiche Le
-titre de la Liste de l'article le nom de flux sélectionné et le nombre
-d'éléments disponibles.
+valide.  - NVDA affichera un message d'erreur s'Il n'était pas possible de
+sauvegarder ou de restaurer le dossier personalFeeds.  - La boîte de
+dialogue affiche Le titre de la Liste de l'article le nom de flux
+sélectionné et le nombre d'éléments disponibles.
+
+
+## Changements pour la version 3.0 ##
+- Les boîtes de dialogue pour gérer les fichiers de flux ont été
+supprimées. Maintenant, leur fonctionnalité est incluse dans la boîte de
+dialogue Flux.  - La présentation visuelle des dialogues a été améliorée, en
+respectant l'apparence des dialogues présentés dans NVDA.  - Le flux par
+défaut est sauvegardé dans la configuration NVDA. Par conséquent, il est
+possible de définir des flux différents par défaut dans les profils de
+configuration.  - Nécessite NVDA 2016.4.
+
 
 ## Changements pour la version 2.0 ##
-*	 L'aide du module complémentaire est disponible à partir du Gestionnaire
-   de modules complémentaires.
+- L'aide du module complémentaire est disponible à partir du Gestionnaire de
+modules complémentaires.
 
 ## Changements pour la version 1.0 ##
-*	 Première version.
+- Première version.
 
 [[!tag dev stable]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=rf-dev
+[1]: http://addons.nvda-project.org/files/get.php?file=rf
 
-[2]: http://addons.nvda-project.org/files/get.php?file=rf
-
+[2]: http://addons.nvda-project.org/files/get.php?file=rf-dev
