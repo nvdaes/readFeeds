@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: readFeeds 1.1-dev\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2014-02-08 17:08+0100\n"
-"PO-Revision-Date: 2016-05-04 20:22+0100\n"
+"PO-Revision-Date: 2017-02-21 19:57+0100\n"
 "Last-Translator: zwonimir Stanecic <zvonimirek222@yandex.com>\n"
 "Language-Team: hr <LL@li.org>\n"
 "Language: hr\n"
@@ -49,6 +49,117 @@ msgstr ""
 "Ne mogu osvježiti feed. Provjerite ispravnost vaše internetske veze ili "
 "adrese feeda."
 
+#. Translators: Message presented when feeds have been copied.
+msgid "Feeds copied"
+msgstr "Feedovi su kopirani"
+
+#. Translators: label of error dialog shown when cannot copy feeds folder.
+msgid "Folder not copied"
+msgstr "Mapa nije kopirana"
+
+#. Translators: title of error dialog shown when cannot copy feeds folder.
+msgid "Copy Error"
+msgstr "Greška pri kopiranju"
+
+#. Translators: Message presented when feeds have been restored.
+msgid "Feeds restored"
+msgstr "Feedovi su vraćeni"
+
+#. Translators: The title of a dialog.
+msgid "Feeds"
+msgstr "Feedovi"
+
+#. Translators: The label of a button to open the list of articles of a feed.
+msgid "List of &articles..."
+msgstr "Popis &Članaka..."
+
+#. Translators: The label of a button to add a new feed.
+msgid "&New..."
+msgstr "&Novi..."
+
+#. Translators: The label of a button to rename a feed.
+msgid "&Rename..."
+msgstr "&Preimenuj..."
+
+#. Translators: The label of a button to delete a feed.
+msgid "&Delete..."
+msgstr "&Izbriši..."
+
+#. Translators: The label of a button to set a feed as default.
+msgid "S&et default"
+msgstr "&postavi kao zadano"
+
+#. Translators: the label of a single choice dialog.
+msgid "Open web page of selected article."
+msgstr "Otvori web stranicu trenutnog članka."
+
+#. Translators: The label of a field to enter an address for a new feed.
+msgid "Address of a new feed:"
+msgstr "Adresa novog feeda:"
+
+#. Translators: The title of a dialog to create a new feed.
+msgid "New feed"
+msgstr "Novi feed"
+
+#. Translators: The confirmation prompt displayed when the user requests to delete a feed.
+msgid "Are you sure you want to delete this feed? This cannot be undone."
+msgstr ""
+"Jeste li sigurni da želite izbrisati ovaj feed? Ova akcija je nepovratna."
+
+#. Translators: The label of a field to enter a new name for a feed.
+msgid "New name:"
+msgstr "Novi naziv:"
+
+#. Translators: The title of a dialog to rename a feed.
+msgid "Rename feed"
+msgstr "Preimenuj feed"
+
+#. Translators: The title of the Copy dialog.
+msgid "Copy feeds"
+msgstr "Kopiraj feedove"
+
+#. Translators: An informational message displayed in the Copy dialog.
+#, python-format
+msgid ""
+"Select a folder to save a backup of your current feeds.\n"
+"\n"
+"\t\tThey will be copied from %s."
+msgstr ""
+"Odaberite mapu u koju želite spremiti sigurnosnu kopiju vaših feedova.\n"
+"\n"
+"\t\tOni će biti kopirani iz %s."
+
+#. Translators: The label of a grouping containing controls to select the destination directory in the Copy dialog.
+msgid "directory for backup:"
+msgstr "Mapa za sigurnosnu kopiju:"
+
+#. Translators: The title of the dialog presented when browsing for the destination directory when copying feeds.
+msgid "Select directory to copy"
+msgstr "Označite mapu za sigurnosnu kopiju"
+
+#. Translators: The title of the Restore dialog.
+msgid "Restore feeds"
+msgstr "Vrati feedove"
+
+#. Translators: An informational message displayed in the Restore dialog.
+#, python-format
+msgid ""
+"Select a folder to restore a backup of your previous copied feeds.\n"
+"\n"
+"\t\tThey will be copied to %s."
+msgstr ""
+"Odaberite folder iz kojeg ću vratiti vaše feedove.\n"
+"\n"
+"\t\tThey will be copied to %s."
+
+#. Translators: The label of a grouping containing controls to select the destination directory in the Restore dialog.
+msgid "directory containing backup:"
+msgstr "Mapa koja sadržava sigurnosnu kopiju:"
+
+#. Translators: The title of the dialog presented when browsing for the destination directory when restoring feeds.
+msgid "Select directory to restore"
+msgstr "Označite mapu za vraćanja"
+
 #. Translators: Presented when the current article does not have an associated title.
 msgid "Unable to locate article title."
 msgstr "Nemogu pronaći naslov članka."
@@ -66,68 +177,47 @@ msgid "Manage feeds."
 msgstr "Upravljaj feedovima."
 
 #. Translators: the name of a menu item.
-msgid "Article &list..."
-msgstr "Popis &Članaka..."
+msgid "&Feeds..."
+msgstr "&Feedovi..."
 
 #. Translators: the tooltip for a menu item.
-msgid "View article list"
-msgstr "Pogledaj listu članaka"
+msgid "View and manage feeds"
+msgstr "Pregledaj i upravljaj feedovima"
 
 #. Translators: the name of a menu item.
-msgid "&Temporary feed address..."
-msgstr "&Privremena adresa feeda..."
+msgid "&Copy feeds folder..."
+msgstr "&kopiraj folder s feedovima..."
 
 #. Translators: the tooltip for a menu item.
-msgid "View or choose current feed address"
-msgstr "Pogledaj ili odaberi trenutnu adresu feeda"
+msgid "Backup of feeds"
+msgstr "Mapa sigurnosne kopije feedova"
 
 #. Translators: the name of a menu item.
-msgid "L&oad feed address from file..."
-msgstr "U&čitaj adresu feeda iz datoteke..."
+msgid "R&estore feeds..."
+msgstr "&vrati fe.edove.."
 
 #. Translators: the tooltip for a menu item.
-msgid "Select file which contains feed address."
-msgstr "Označi datoteku sa adresom feeda."
+msgid "Restore previously saved feeds"
+msgstr "Vrati prije spremljene feedove"
 
-#. Translators: the name of a menu item.
-msgid "Save current feed address to file..."
-msgstr "Spremi adresu trenutnog feeda u datoteku..."
+#. Translators: message presented in input mode.
+#, python-format
+msgid "Activates the Feeds dialog of %s."
+msgstr "Aktivira dijaloški okvir za feedove  %s."
 
-#. Translators: the tooltip for a menu item.
-#. Translators: the label of a file dialog.
-msgid "Save current feed address to file"
-msgstr "spremi adresu trenutnog feeda u datoteku"
+#. Translators: message presented in input mode.
+#, python-format
+msgid "Activates the Copy dialog of %s."
+msgstr "Aktivira dijaloški okvir \"kopiranje\" feedova  %s."
 
-#. Translators: the name of a menu item.
-msgid "R&efresh current feed"
-msgstr "o&svježi trenutni feed"
-
-#. Translators: the tooltip for a menu item.
-msgid "Checks for new articles for the current feed"
-msgstr "Provjerava za trenutnim člancima u trenutnom feedu"
-
-#. Translators: the name of a menu item.
-msgid "&ReadFeeds file manager..."
-msgstr "&ReadFeeds upravitelj datoteka..."
-
-#. Translators: the tooltip for a menu item.
-msgid "Opens the ReadFeedsFileManager dialog"
-msgstr "Otvara dijaloški okvir upraviteljaa datoteka"
-
-#. Translators: the title of an error dialog.
-msgid "Refresh Error"
-msgstr "Greška pri Osvježavanju"
-
-#. Translators: the label of a single choice dialog.
-msgid "Open web page of selected article."
-msgstr "Otvori web stranicu trenutnog članka."
+#. Translators: message presented in input mode.
+#, python-format
+msgid "Activates the Restore dialog of %s."
+msgstr "Aktivira dijaloški okvir vraćanja %s."
 
 #. Translators: message presented in input mode.
 msgid "Refreshes the current feed and announces the most recent article title."
 msgstr "osvježava trenutni feed i čita trenutni naslov članka"
-
-msgid "Refresh your selected feed to read the current article."
-msgstr "Osvježite označeni feed kako biste čitali trenutni članak."
 
 #. Translators: message presented when the information about an article of a feed is copied to the clipboard.
 #, python-format
@@ -156,95 +246,9 @@ msgstr ""
 "Obavještava o linku članka, kad je pritisnuto dva put, otvara povezanu web "
 "stranicu."
 
-#. Translators: the label of a text entry dialog.
-msgid "Feed address to follow"
-msgstr "feed adresa koju treba pratiti"
-
-#. Translators: the title of a text entry dialog.
-msgid "Feed address"
-msgstr "Adresa feeda"
-
-#. Translators: message presented when the address of a feed has been selected.
-#, python-format
-msgid "Selected %s"
-msgstr "Označeno %s"
-
 #. Translators: message presented in input mode.
-msgid "Opens a dialog for entering a feed address."
-msgstr "Otvara dijaloški okvir za upisivanje adrese feeda."
-
-#. Translators: the label of a file dialog.
-msgid "Select feed address from file"
-msgstr "Označi adresu feeda iz datoteke"
-
-msgid "Text files (*.txt) |*.txt"
-msgstr "tekstualne datoteke (*.txt) |*.txt"
-
-#. Translators: message presented when unable to read feed address.
-msgid "Unable to read feed address, feed can not be selected"
-msgstr "Nemoguće pročitati adresu feeda, feed ne može biti označen"
-
-#. Translators: message presented in input mode.
-msgid "Opens a dialog for selecting a file containing a feed address."
-msgstr ""
-"Otvara dijaloški okvir u kojem možete otvoriti datoteku koja sadrži adresu "
-"feeda."
-
-msgid "Text files (*.txt) | *.txt"
-msgstr "Tekstualne datoteke (*.txt) | *.txt"
-
-#. Translators: message presented when the address of a feed has been saved.
-#, python-format
-msgid "Saved %s"
-msgstr "spremljeno %s"
-
-#. Translators: Message presented when the feed address cannot be saved.
-msgid "Feed address can not be saved"
-msgstr "Adresa feeda ne može biti spremljena"
-
-#. Translators: message presented in input mode.
-msgid ""
-"Opens a dialog where you can enter a filename to which the current feed "
-"address will be saved."
-msgstr ""
-"Otvara dijaloški okvir u kojem možete upisati ime datoteke u kojoj će biti "
-"spremljena adresa feeda."
-
-msgid "Feeds manager"
-msgstr "upravitelj feedova"
-
-#. Translators: the name of a dialog button.
-msgid "&Backup personal feeds folder..."
-msgstr "&Vrati mapu sa osobnim feedovima..."
-
-#. Translators: the name of a dialog button.
-msgid "R&estore personal feeds..."
-msgstr "V&rati osobne feedove..."
-
-#. Translators: the label of a dialog to select a folder.
-msgid "Select the folder where your personal feeds will be backed up."
-msgstr ""
-"Označite mapu u kojoj će biti napravljena sigurnosna kopija vaših feedova"
-
-#. # Translators: the label of an error dialog.
-msgid "Unable to backup folder"
-msgstr "Nemoguće izraditi sigurnosnu kopiju mape"
-
-#. Translators: the title of an error dialog.
-msgid "Backup Error"
-msgstr "Greška pri sigurnosnom kopiranju"
-
-#. Translators: the label of a dialog to select a folder.
-msgid "Restore personal feeds from backup folder"
-msgstr "Vrati osobne feedove iz mape sigurnosne kopije"
-
-#. Translators: the label of an error dialog.
-msgid "Folder not restored"
-msgstr "Mapa nije vraćena"
-
-#. Translators: the title of an error dialog.
-msgid "Restore Error"
-msgstr "Greška pri vraćanju"
+msgid "Copies title and related link of the current article to the clipboard."
+msgstr "Kopira link članka na kojeg se isti odnosi u međuspremnik."
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
@@ -256,9 +260,3 @@ msgstr "Čitač Vijesti"
 msgid "Add-on for using NVDA as a feed reader."
 msgstr ""
 "Dodatak koji omogućuje korištenje čitača ekrana NVDA kao čitača vijesti."
-
-#~ msgid "Backs up your personal feeds folder"
-#~ msgstr "Vraća vašu mapu osobnih feedova"
-
-#~ msgid "Restore previously saved feeds"
-#~ msgstr "Vrati prije spremljene feedove"
