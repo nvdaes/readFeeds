@@ -67,6 +67,7 @@ Announces next feed title.
 
 
 ## Changes for 3.0 ##
+
 - The dialogs to manage feed files have been removed. Now their functionality is included in the Feeds dialog.
 - The visual presentation of the dialogs has been enhanced, adhering to the appearance of the dialogs shown in NVDA.
 - The default feed is saved on the NVDA's configuration. Therefore, it's possible to set different default feeds in configuration profiles.
@@ -74,9 +75,11 @@ Announces next feed title.
 
 
 ## Changes for 2.0 ##
+
 - Add-on help is available from the Add-ons Manager.
 
 ## Changes for 1.0 ##
+
 - Initial version.
 
 [1]: http://addons.nvda-project.org/files/get.php?file=rf
