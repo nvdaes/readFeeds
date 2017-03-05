@@ -34,6 +34,7 @@ Opens a dialog with the following controls:
 - Close: Closes the Feeds dialog.
 
 ##### Notes #####
+
 - If a feed named tempFeed is created, please rename it, as this file could be replaced when needed to create a feed whose name already exists.
 - The feed set as the default can't be removed. The addressFile feed will be use as the default when the configuration is reset, so it can't be deleted.
 
@@ -47,16 +48,11 @@ Opens a dialog to select a folder which replaces your feeds in the personalFeeds
 
 ### Keyboard commands: ###
 
-- Ctrl+Shift+NVDA+Space:
-Announces current article's URL. Pressing twice will open the web page.
-- Ctrl+Shift+NVDA+8:
-Refreshes the selected feed and announces its most recent title.
-- Ctrl+Shift+NVDA+I:
-Announces current feed title and link. Pressing twice will copy the title and related link to clipboard.
-- Ctrl+Shift+NVDA+U:
-Announces previous feed title.
-- Ctrl+Shift+NVDA+O:
-Announces next feed title.
+- Ctrl+Shift+NVDA+Space: Announces current article's URL. Pressing twice will open the web page.
+- Ctrl+Shift+NVDA+8: Refreshes the selected feed and announces its most recent title.
+- Ctrl+Shift+NVDA+I: Announces current feed title and link. Pressing twice will copy the title and related link to clipboard.
+- Ctrl+Shift+NVDA+U: Announces previous feed title.
+- Ctrl+Shift+NVDA+O: Announces next feed title.
 
 ## Notifications: ##
 
