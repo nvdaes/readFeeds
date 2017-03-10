@@ -30,27 +30,32 @@ Outils, où les suivantes  options du menu sont disponibles :
 
 Ouvre une boîte de dialogue avec les contrôles suivants :
 
-- Filtrer par : Une zone d'édition pour rechercher des flux précédemment
-enregistrés.  - Une liste des flux enregistrés.  - Liste des articles :
-Ouvre une boîte de dialogue qui présente la liste des articles de vvos flux
-actuel. Sélectionnez l'article que vous souhaitez lire et appuyer sur le
-bouton OK pour ouvrir la page correspondante dans votre navigateur.  -
-Nouveau : Ouvre une boîte de dialogue avec une zone d'édition pour entrer
-l'adresse d'un nouveau flux. Si l'adresse est valide et que le flux peut
-être enregistré, son nom, basé sur le titre du flux, apparaît au bas de la
-liste des flux.  - Renommer : Ouvre une boîte de dialogue avec une zone
-d'édition pour renommer le flux sélectionné.  - Supprimer : Ouvre une boîte
-de dialogue pour supprimer le flux sélectionné après confirmation.  -
-Définir par défaut : Définit le flux sélectionné comme valeur par défaut,
-afin que ses articles soient accessibles avec les gestes de NVDA.  - Fermer
-: Ferme la boîte de dialogue Flux.
+* Filtrer par : Une zone d'édition pour rechercher des flux précédemment
+  enregistrés.
+* Une liste des flux enregistrés.
+* Liste des articles : Ouvre une boîte de dialogue qui présente la liste des
+  articles de vvos flux actuel. Sélectionnez l'article que vous souhaitez
+  lire et appuyer sur le bouton OK pour ouvrir la page correspondante dans
+  votre navigateur.
+* Nouveau : Ouvre une boîte de dialogue avec une zone d'édition pour entrer
+  l'adresse d'un nouveau flux. Si l'adresse est valide et que le flux peut
+  être enregistré, son nom, basé sur le titre du flux, apparaît au bas de la
+  liste des flux.
+* Renommer : Ouvre une boîte de dialogue avec une zone d'édition pour
+  renommer le flux sélectionné.
+* Supprimer : Ouvre une boîte de dialogue pour supprimer le flux sélectionné
+  après confirmation.
+* Définir par défaut : Définit le flux sélectionné comme valeur par défaut,
+  afin que ses articles soient accessibles avec les gestes de NVDA.
+* Fermer : Ferme la boîte de dialogue Flux.
 
 ##### Notes #####
-- Si un flux nommé tempFeed est créé, renommez-le, car ce fichier pourrait
-être remplacé si nécessaire pour créer un flux dont le nom existe déjà. - Le
-flux défini par défaut ne peut pas être supprimé. Le flux addressFile sera
-utilisé comme valeur par défaut lors de la réinitialisation de la
-configuration, donc il ne peut pas être supprimé.
+
+* Si un flux nommé tempFeed est créé, renommez-le, car ce fichier pourrait
+  être remplacé si nécessaire pour créer un flux dont le nom existe déjà.
+* Le flux défini par défaut ne peut pas être supprimé. Le flux addressFile
+  sera utilisé comme valeur par défaut lors de la réinitialisation de la
+  configuration, donc il ne peut pas être supprimé.
 
 ####Copier le dossier des flux... ####
 
@@ -67,39 +72,47 @@ contenant des URL de flux.
 
 ### Commandes clavier : ###
 
-- Ctrl+Maj+NVDA+Espace : Annonce l'URL de l'article actuel. En appuyant deux
-fois ouvrira la page web.  - Ctrl+Maj+NVDA+8 : Actualise le flux sélectionné
-et annonce son plus récent titre.  - Ctrl+Maj+NVDA+I : Annonce le titre et
-le lien du flux actuel. En appuyant deux fois copie le titre et le lien
-associée dans le presse-papiers.  - Ctrl+Maj+NVDA+U : Annonce le titre du
-flux précédent.  - Ctrl+Maj+NVDA+O : Annonce le titre du flux suivant.
+* Ctrl+Maj+NVDA+Espace : Annonce l'URL de l'article actuel. En appuyant deux
+  fois ouvrira la page web.
+* Ctrl+Maj+NVDA+8 : Actualise le flux sélectionné et annonce son plus récent
+  titre.
+* Ctrl+Maj+NVDA+I : Annonce le titre et le lien du flux actuel. En appuyant
+  deux fois copie le titre et le lien associée dans le presse-papiers.
+* Ctrl+Maj+NVDA+U : Annonce le titre du flux précédent.
+* Ctrl+Maj+NVDA+O : Annonce le titre du flux suivant.
 
 ## Notifications : ##
 
-- Lorsque le titre ou l'URL ont été copiés.  - Lorsqu'il est Impossible de
-se connecter/actualiser un flux, ou l'URL ne correspond pas à un flux
-valide.  - NVDA affichera un message d'erreur s'Il n'était pas possible de
-sauvegarder ou de restaurer le dossier personalFeeds.  - La boîte de
-dialogue affiche Le titre de la Liste de l'article le nom de flux
-sélectionné et le nombre d'éléments disponibles.
+* Lorsque le titre ou l'URL ont été copiés.
+* Lorsqu'il est Impossible de se connecter/actualiser un flux, ou l'URL ne
+  correspond pas à un flux valide.
+* NVDA affichera un message d'erreur s'Il n'était pas possible de
+  sauvegarder ou de restaurer le dossier personalFeeds.
+* La boîte de dialogue affiche Le titre de la Liste de l'article le nom de
+  flux sélectionné et le nombre d'éléments disponibles.
 
 
 ## Changements pour la version 3.0 ##
-- Les boîtes de dialogue pour gérer les fichiers de flux ont été
-supprimées. Maintenant, leur fonctionnalité est incluse dans la boîte de
-dialogue Flux.  - La présentation visuelle des dialogues a été améliorée, en
-respectant l'apparence des dialogues présentés dans NVDA.  - Le flux par
-défaut est sauvegardé dans la configuration NVDA. Par conséquent, il est
-possible de définir des flux différents par défaut dans les profils de
-configuration.  - Nécessite NVDA 2016.4.
+
+* Les boîtes de dialogue pour gérer les fichiers de flux ont été
+  supprimées. Maintenant, leur fonctionnalité est incluse dans la boîte de
+  dialogue Flux.
+* La présentation visuelle des dialogues a été améliorée, en respectant
+  l'apparence des dialogues présentés dans NVDA.
+* Le flux par défaut est sauvegardé dans la configuration NVDA. Par
+  conséquent, il est possible de définir des flux différents par défaut dans
+  les profils de configuration.
+* Nécessite NVDA 2016.4.
 
 
 ## Changements pour la version 2.0 ##
-- L'aide du module complémentaire est disponible à partir du Gestionnaire de
-modules complémentaires.
+
+* L'aide du module complémentaire est disponible à partir du Gestionnaire de
+  modules complémentaires.
 
 ## Changements pour la version 1.0 ##
-- Première version.
+
+* Première version.
 
 [[!tag dev stable]]
 

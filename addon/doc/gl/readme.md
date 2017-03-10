@@ -29,26 +29,31 @@ onde están dispoñibles as seguintes opcións:
 
 Abre un diálogo cos seguintes controis:
 
-- Filtrar por: una Caixa de edición para procurar feeds anteriormente
-procurados.  - Unha lista dos feeds gardados.  - Lista de artigos: abre un
-diálogo que presenta a lista de artigos do teu feed actual. Seleciona o
-artigo que queras ler e preme o botón Aceptar para abrir la páxina
-correspondente no teu navegador.  - Novo: abre un diálogo cunha Caixa  de
-edición para introducir o enderezo dun feed novo. Se o enderezo é válido e o
-feed pódese gardar, o seu nome, baseado no título do feed, aparecerá na
-parte inferior da lista dos feeds.  - Renomear: abre un diálogo cunha Caixa
-de edición para renomear o feed selecionado.  - Borrar: abre un diálogo para
-borrar o feed selecionado despois da confirmación.  - Configurar
-predeterminado: configura o feed selecionado coma o predeterminado, tal que
-pode acederse aos seus artigos con xestos do NVDA.  - Pechar: pecha o
-diálogo Feeds.
+* Filtrar por: unha Caixa de edición para procurar feeds gardados
+  anteriormente.
+* Unha listaxe dos feeds gardados.
+* Listaxe de artigos: abre un diálogo que presenta a listaxe de artigos do
+  teu feed actual. Seleciona o artigo que queras ler e preme o botón Aceptar
+  para abrir a páxina correspondente no teu navegador.
+* Novo: abre un diálogo cunha Caixa de edición para introducir o enderezo
+  dun feed novo. Se o enderezo é válido e o feed pode gardarse, o seu nome,
+  baseado no título do feed, aparecerá ao fondo da listaxe dos feeds.
+* Renomear: abre un diálogo cunha Caixa de edición para renomear o feed
+  selecionado.
+* Borrar: abre un diálogo para borrar o feed selecionado despois dunha
+  confirmación.
+* Configurar predeterminado: configura o feed selecionado coma o
+  predeterminado, así que o seu artigo pode acederse cos xestos do NVDA.
+* Pechar: pecha o diálogo Feeds.
 
 ##### Notas #####
-- Se se crea un feed chamado tempFeed, por favor renoméao, xa que este
-fichero podería reemplazarse cando sexa necesario crear un feed cun nome que
-xa exista.  - O feed configurado como o predeterminado pode borrarse. O feed
-addressFile usarase coma o predeterminado cando a configuración se reinicie,
-así non pode borrarse.
+
+* - Se se crea un feed chamado tempFeed, por favor renoméao, xa que este
+  fichero podería reemplazarse cando sexa necesario crear un feed cun nome
+  que xa exista.
+* O feed configurado como o predeterminado pode borrarse. O feed addressFile
+  usarase coma o predeterminado cando a configuración se reinicie, así non
+  pode borrarse.
 
 ####Copiar cartafol feeds... ####
 
@@ -65,38 +70,45 @@ feeds.
 
 ### Ordes de teclado: ###
 
-- Ctrl+Shift+NVDA+Espazo: Anuncia o enderezo web do presente
-artigo. preméndoa dúas veces abrirase a páxina web.  - Ctrl+Shift+NVDA+8:
-Refresca o feed seleccionado e anuncia o seu título máis recente.  -
-Ctrl+Shift+NVDA+I: Anuncia o título do feed actual e a liga. preméndoo dúas
-veces copiará o título e a liga relacionada ó portapapeis.  -
-Ctrl+Shift+NVDA+U: Anuncia o título do feed anterior.  - Ctrl+Shift+NVDA+O:
-Anuncia o título do seguinte feed.
+* Ctrl+Shift+NVDA+Espazo: anuncia a URL actual dos artigos. Premendo dúas
+  veces abrirá a páxina web.
+* Ctrl+Shift+NVDA+8: refresca o feed selecionado e anuncia o seu título máis
+  recente.
+* Ctrl+Shift+NVDA+I: anuncia o título e a liga do feed actual. Premendo dúas
+  veces copiará o título e a liga relacionada ao portapapeis.
+* Ctrl+Shift+NVDA+U: anuncia o título do feed anterior.
+* Ctrl+Shift+NVDA+O: anuncia o título do feed seguinte.
 
 ## Notificacións: ##
 
-- Cando o título ou o enderezo web se copiaran.  - Cando non se poida
-conectar/actualizar un feed, ou o enderezo web non se corresponda cun feed
-válido.  - NVDA amosará unha mesaxe de erro se non fora posible facer copias
-de seguridade do cartafol personalFeeds.  - O título do cadro de diálogo
-Lista de artigos amosa o nome do feed seleccionado e o número de elementos
-dispoñibles.
+* Cando o título ou a URL se copiaran.
+* Cando non se pode conectar/refrescar un feed, ou a URL non se corresponde
+  cun feed válido.
+* NVDA amosará unha mensaxe de erro se non foi posible respaldar ou
+  restaurar o cartafol personalFeeds.
+* O título do diálogo da listaxe de artigos amopsa o nome do feed
+  selecionado e o número de elementos dispoñibles.
 
 
 ## Cambios para 3.0 ##
-- Os diálogos para xestionar ficheiros de feed borráronse. Agora a súa
-funcionalidade inclúese no diálogo Feeds.  - A presentación visual dos
-diálogos mellorouse, adheríndose á apariencia dos diálogos amosados no
-NVDA.  - O feed predeterminado gárdase na configuración do NVDA. Polo tanto,
-é posible configurar diferentes feeds predeterminados nos perfís de
-configuración.  - Requírese NVDA 2016.4.
+
+* Elimináronse os diálogos para xestionar os ficheiros de feeds. Agora a súa
+  funcionalidade inclúese no diálogo Feeds.
+* Mellorouse a presentación visual dos diálogos, adheríndose á apariencia
+  dos diálogos amosada no NVDA.
+* O feed predeterminado gárdase na configuración do NVDA. Polo tanto, é
+  posible configurar diferentes feeds predeterminados nos perfís de
+  configuración.
+* Requírese do NVDA 2016.4.
 
 
 ## Cambios para 2.0 ##
-- A axuda está dispoñible no Administrador de Complementos.
+
+* A axuda está dispoñible no Administrador de Complementos.
 
 ## Cambios para 1.0 ##
-- Versión inicial.
+
+* Versión inicial.
 
 [[!tag dev stable]]
 
