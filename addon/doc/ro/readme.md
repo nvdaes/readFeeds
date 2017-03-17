@@ -1,12 +1,13 @@
 # Citirea  Feedurilor #
 
 * Autori: Noelia Ruiz Martínez, Mesar Hameed
-* Descărcați [versiunea stabilă][2]
-* Descărcați [versiunea în dezvoltare][1]
+* Descărcați [versiunea stabilă][1]
+* Descărcați [versiunea în dezvoltare][2]
 
-Acest add-on oferă o modalitate simplă de a citi feed-uri în format Atom sau
-RSS folosind NVDA. Feed-urile nu vor fi actualizate în mod automat. Atunci
-când menționăm feed-uri, ne referim atât la fluxuri RSS cât și la cele Atom.
+Acest supliment oferă o modalitate simplă de a citi feed-uri în format Atom
+sau RSS folosind NVDA. Feed-urile nu vor fi actualizate în mod
+automat. Atunci când menționăm feed-uri, ne referim atât la fluxuri RSS cât
+și la cele Atom.
 
 ## Instalare sau Actualizare: ##
 
@@ -24,58 +25,102 @@ noua versiune instalată a cititorului de feed-uri.
 Puteți accesa submeniul Read Feeds din meniul NVDA, NVDA+N, unde sunt
 disponibile următoarele opțiuni:
 
-- Lista de articole...  Prezintă lista de articole din feed-ul dumneavoastră
-curent. Selectați articolul pe care vreți să-l citiți și apăsați butonul OK
-pentru a deschide pagina corespunzătoare în navigatorul dumneavoastră.  -
-Adresă feed temporară... control + NVDA + shift + enter: Deschide un dialog
-pentru tastarea unui nou URL pentru a selecta un alt feed. Feed-ul curent va
-fi afișat în acest dialog.  - Încărcarea adresei feed-ului din
-filă. NVDA+control+enter: Deschide un dialog pentru a selecta un feed
-dintr-o filă salvată care conține un URL feed.  - Salvare adresa feed-ului
-curent într-o filă. NVDA+shift+enter: Deschide un dialog pentru a selecta o
-filă unde va fi salvat URL-ul feed-ului curent.  Dacă salvați la fila
-specială addressFile.txt, acest feed particular va fi utilizat ca feed-ul
-dumneavoastră implicit.  - reîmprospătare feed curent: control+shift+NVDA+8:
-Reîmprospătează feed-ul curent. Feed-urile nu vor fi actualizate automat
-când add-onul Read Feeds este pornit.  - Dosarul Backup feeds. Deschide un
-dialog pentru a alege un dosar unde puteți salva directorul de feed-uri
-personale din feed-urile dumneavoastră. În mod implicit, folderul selectat
-este cel al configurării NVDA, care va crea directorul de feed-uri
-personale.  - Restaurare feed-uri. Deschide un dialog pentru a selecta un
-dosar care înlocuiește feed-urile dumneavoastră în folderul feed-uri
-personale. Asigurați-vă că încărcați un dosar care conține URL-uri ale
-feed-urilor.
+#### Fluxuri ####
 
-Notă: Dacă doriți să ștergeți o adresă URL salvată anterior, trebuie doar să
-eliminați fișierul corespunzător.
+Deschide un dialog cu următoarele controale:
+
+* Filtrează după: O casetă de editare pentru căutarea fluxurilor salvate
+  anterior.
+* O listă a fluxurilor salvate.
+* - Filtrat după: O casetă de editare pentru a căuta fluxurilr salvate
+  înainte.  - O listă a fluxurilor salvate.  - listă de articole: Deschide
+  un dialog care prezintă lista de articole din fluxul curent. Selectați
+  articolul pe care vreți să-l citiți și apăsați butonul OK pentru a
+  deschide pagina în navigator.  - Nou: Deschide un dialog cu o casetă de
+  editare pentru a introduce adresa unui flux nou. Dacă adresa este validă
+  și fluxul poate fi salvat, numele său, bazat pe titlul fluxului, va apărea
+  la sfârșitul listei de fluxuri.  -  Redenumire: Deschide un dialog cu o
+  casetă de editare pentru a redenumi fluxul selectat.  - Ștergere: Deschide
+  un dialog pentru a șterge fluxul selectat după confirmare.  -  Setează
+  implicit: Setează fluxul selectat ca implicit, deci articolele sale pot fi
+  accesate cu gesturile NVDA-ului.  - Închidere: Închide dialogul
+  fluxurilor.
+* Nou: Deschide un dialog cu o casetă de editare pentru introducerea adresei
+  unui nou flux. Dacă adresa este validă și fluxul poate fi salvat, numele
+  său bazat pe titlul acestuia va apărea la sfârșitul listei de fluxuri.
+* Redenumire: Deschide un dialog cu o casetă de editare pentru redenumirea
+  fluxului selectat.
+* Ștergere: Deschide un dialog pentru ștergerea fluxului selectat după
+  confirmare.
+* Setare ca implicit: Setează fluxul selectat ca implicit, așa că articolele
+  sale pot fi accesate cu gesturile NVDA-ului.
+* Închidere: Închide dialogul fluxurilor.
+
+##### Note #####
+
+* Dacă se creează un flux numit tempFeed, vă rugăm să-l redenumiți, deoarece
+  acest fișier ar putea fi înlocuit atunci când este necesar pentru a crea
+  un flux al cărui nume deja există.
+* Fluxul setat ca implicit nu poate fi șters. Fluxul addressFile va fi
+  utilizat ca implicit atunci când configurația este resetată, deci nu poate
+  fi șters.
+
+Copiază dosarul fluxurilor... 
+
+Deschide un dialog pentru a alege un dosar unde să puteți salva dosarul
+personalFeeds al fluxurilor dumneavoastră. În mod implicit, folderul
+selectat este cel al configurației NVDA, care va crea dosarul personalFeeds.
+
+#### Restaurare fluxuri... ####
+
+Deschide un dialog pentru selectarea unui dosar care înlocuiește fluxurile
+dumneavoastră în dosarul personalFeeds. Asigurați-vă că încărcați un dosar
+ce conține URL-urile fluxurilor.
 
 ### Comenzi de taste: ###
 
-- Ctrl+Shift+NVDA+Spațiu: Anunță URL-ul articolului curent. Apăsând de două
-ori va deschide pagina web.  - Ctrl+Shift+NVDA+8: Reîmprospătează feed-ul
-selectat și anunță cel mai recent titlu al său.  - Ctrl+Shift+NVDA+I: Anunță
-titlul feed-ului curent. Apăsând de două ori va copia titlul și link-ul
-relatat pe planșetă.  - Ctrl+Shift+NVDA+U: Anunță titlul feed-ului
-anterior.  - Ctrl+Shift+NVDA+O: Anunță titlul feed-ului următor.
+* Ctrl+Shift+NVDA+Spațiu: Anunță URL-ul articolului curent. Apăsarea de două
+  ori va deschide pagina web.
+* Ctrl+Shift+NVDA+8: Reîmprospătează fluxul selectat și anunță cel mai
+  recent titlu al său.
+* Ctrl+Shift+NVDA+I: Announces current feed title and link. Pressing twice
+  will copy the title and related link to clipboard.
+* Ctrl+Shift+NVDA+U: Announces previous feed title.
+* Ctrl+Shift+NVDA+O: Announces next feed title.
 
 ## Notificări: ##
 
-- Când au fost copiate titluri sau URL-uri. - Când în imposibilitatea de a
-conecta/reîmprospăta un flux, sau adresa URL nu corespunde unui feed
-valid. - NVDA va afișa un mesaj de eroare în cazul în care nu a fost posibil
-să facă backup de rezervă la dosarul feed-uri personale. - Titlul dialogului
-listă de articol afișează numele selectat și numărul de articole
-disponibile.
+* Când titlul sau URL-ul a fost copiat.
+* When unable to connect/refresh a feed, or the URL does not correspond to a
+  valid feed.
+* NVDA will display an error message if it was not possible to backup or
+  restore the personalFeeds folder.
+* The title of the articles list dialog displays the selected feed name and
+  number of items available.
+
+
+## Modificări în 3.0 ##
+
+* The dialogs to manage feed files have been removed. Now their
+  functionality is included in the Feeds dialog.
+* The visual presentation of the dialogs has been enhanced, adhering to the
+  appearance of the dialogs shown in NVDA.
+* Fluxul implicit este salvat în configurația NVDA. Prin urmare, este
+  posibilă setarea fluxurilor implicite diferite în configurarea
+  profilurilor.
+* Necesită NVDA 2016.4.
+
 
 ## Modificări în 2.0 ##
-*	 Ghidul add-on-ului este disponibil în managerul de add-on-uri.
+
+* Ghidul suplimentului este disponibil în managerul de add-on-uri.
 
 ## Modificări în 1.0 ##
-*	 Versiunea inițială.
+
+* Versiunea inițială.
 
 [[!tag dev stable]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=rf-dev
+[1]: http://addons.nvda-project.org/files/get.php?file=rf
 
-[2]: http://addons.nvda-project.org/files/get.php?file=rf
-
+[2]: http://addons.nvda-project.org/files/get.php?file=rf-dev
