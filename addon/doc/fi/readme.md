@@ -28,27 +28,30 @@ ovat käytettävissä seuraavat vaihtoehdot:
 
 Avaa valintaikkunan, jossa on seuraavat säätimet:
 
-* Filter by: An edit box to search previously saved feeds.
-* A list of the saved feeds.
-* List of articles: Opens a dialog which presents the articles list from
-  your current feed. Select the article you want to read and press OK button
-  to open the corresponding page in your browser.
-* New: Opens a dialog with an edit box to enter the address of a new
-  feed. If the address is valid and the feed can be saved, its name, based
-  on the feed title, will appear at the bottom of the feeds list.
-* Rename: Opens a dialog with an edit box to rename the selected feed.
-* Delete: Opens a dialog to delete the selected feed after confirmation.
-* Set default: Sets the selected feed as the default, so that its articles
-  can be accessed with NVDA's gestures.
-* Close: Closes the Feeds dialog.
+* Suodata: Muokkauskenttä aiemmin tallennettujen syötteiden etsimiseen.
+* Tallennettujen syötteiden luettelo.
+* Artikkeliluettelo: Avaa valintaikkunan, joka näyttää luettelon nykyisen
+  syötteesi artikkeleista. Valitse artikkeli, jonka haluat lukea ja paina
+  OK-painiketta avataksesi vastaavan sivun selaimessasi.
+* Uusi: Avaa muokkausruudun sisältävän valintaikkunan, johon voit kirjoittaa
+  uuden syötteen osoitteen. Mikäli syöte on kelvollinen ja se voidaan
+  tallentaa, sen otsikkoon pohjautuva nimi ilmestyy artikkeliluettelon
+  alaosaan.
+* Nimeä uudelleen: Avaa muokkausruudun sisältävän valintaikkunan, jossa voit
+  uudelleennimetä valitun syötteen.
+* Poista: Avaa vahvistuksen pyytävän valintaikkunan, jossa voit poistaa
+  valitun syötteen.
+* Aseta oletukseksi: Asettaa valitun syötteen oletukseksi, jotta sen
+  artikkeleihin pääsee NVDA:n syöte-eleillä.
+* Sulje: Sulkee Syötteet-valintaikkunan.
 
 ##### Huomautuksia #####
 
-* If a feed named tempFeed is created, please rename it, as this file could
-  be replaced when needed to create a feed whose name already exists.
-* The feed set as the default can't be removed. The addressFile feed will be
-  use as the default when the configuration is reset, so it can't be
-  deleted.
+* Mikäli tempFeed-niminen syöte luodaan, nimeä se uudelleen, sillä tämä
+  tiedosto saatetaan korvata, kun samannimisen syötteen luominen on tarpeen.
+* Oletukseksi asetettua syötettä ei voi poistaa. AddressFile-nimistä
+  syötettä käytetään oletuksena asetuksia nollattaessa, joten sitä ei voi
+  poistaa.
 
 ####Kopioi syötekansio... ####
 
@@ -64,44 +67,44 @@ vain syötteiden URL-osoitteita sisältävän kansion.
 
 ### Näppäinkomennot: ###
 
-* Ctrl+Shift+NVDA+Space: Announces current article's URL. Pressing twice
-  will open the web page.
-* Ctrl+Shift+NVDA+8: Refreshes the selected feed and announces its most
-  recent title.
-* Ctrl+Shift+NVDA+I: Announces current feed title and link. Pressing twice
-  will copy the title and related link to clipboard.
-* Ctrl+Shift+NVDA+U: Announces previous feed title.
-* Ctrl+Shift+NVDA+O: Announces next feed title.
+* Ctrl+Shift+NVDA+Välilyönti: Ilmoittaa nykyisen artikkelin
+  URL-osoitteen. Kahdesti painettaessa avataan sen verkkosivu.
+* Ctrl+Shift+NVDA+8: Päivittää valitun syötteen ja ilmoittaa sen uusimman
+  artikkelin otsikon.
+* Ctrl+Shift+NVDA+I: Ilmoittaa nykyisen syötteen otsikon ja linkin. Kahdesti
+  painettaessa ne kopioidaan leikepöydälle.
+* Ctrl+Shift+NVDA+U: Ilmoittaa edellisen syötteen otsikon.
+* Ctrl+Shift+NVDA+O: Ilmoittaa seuraavan syötteen otsikon.
 
 ## Ilmoitukset: ##
 
-* When the title or URL have been copied.
-* When unable to connect/refresh a feed, or the URL does not correspond to a
-  valid feed.
-* NVDA will display an error message if it was not possible to backup or
-  restore the personalFeeds folder.
-* The title of the articles list dialog displays the selected feed name and
-  number of items available.
+* Kun otsikko tai URL-osoite on kopioitu.
+* Kun yhdistäminen/syötteen päivittäminen ei onnistu, tai annetussa
+  URL-osoitteessa ei ole kelvollista syötettä.
+* NVDA näyttää virheilmoituksen, mikäli personalFeeds-kansion
+  varmuuskopiointi tai palautus ei ollut mahdollista.
+* Valitun syötteen nimi ja saatavilla olevien artikkeleiden määrä näytetään
+  Artikkeliluettelo-valintaikkunan otsikossa.
 
 
 ## Muutokset versiossa 3.0 ##
 
-* The dialogs to manage feed files have been removed. Now their
-  functionality is included in the Feeds dialog.
-* The visual presentation of the dialogs has been enhanced, adhering to the
-  appearance of the dialogs shown in NVDA.
-* The default feed is saved on the NVDA's configuration. Therefore, it's
-  possible to set different default feeds in configuration profiles.
-* Requires NVDA 2016.4.
+* Syötetiedostojen hallintavalintaikkunat on poistettu. Niiden
+  toiminnallisuus on nyt sisällytetty Syötteet-valintaikkunaan.
+* Valintaikkunoiden visuaalista esitystä on paranneltu noudattamaan NVDA:n
+  ikkunoiden ulkoasua.
+* Oletussyöte tallennetaan NVDA:n asetushakemistoon. Tämän ansiosta
+  asetusprofiileissa on mahdollista asettaa eri oletussyötteitä.
+* Edellyttää NVDA:n 2016.4-versiota.
 
 
 ## Muutokset versiossa 2.0 ##
 
-* Add-on help is available from the Add-ons Manager.
+* Ohje on käytettävissä Lisäosien hallinnasta.
 
 ## Muutokset versiossa 1.0 ##
 
-* Initial version.
+* Ensimmäinen versio.
 
 [[!tag dev stable]]
 
