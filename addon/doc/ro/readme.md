@@ -83,26 +83,27 @@ ce conține URL-urile fluxurilor.
   ori va deschide pagina web.
 * Ctrl+Shift+NVDA+8: Reîmprospătează fluxul selectat și anunță cel mai
   recent titlu al său.
-* Ctrl+Shift+NVDA+I: Announces current feed title and link. Pressing twice
-  will copy the title and related link to clipboard.
-* Ctrl+Shift+NVDA+U: Announces previous feed title.
-* Ctrl+Shift+NVDA+O: Announces next feed title.
+* Ctrl+Shift+NVDA+I: Anunță titlul fluxului curent și link-ul
+  acestuia. Apăsarea de două ori va copia titlul și link-ul relatat pe
+  planșetă.
+* Ctrl+Shift+NVDA+U: Anunță titlul fluxului precedent.
+* Ctrl+Shift+NVDA+O: Anunță titlul fluxului succedent.
 
 ## Notificări: ##
 
 * Când titlul sau URL-ul a fost copiat.
-* When unable to connect/refresh a feed, or the URL does not correspond to a
-  valid feed.
-* NVDA will display an error message if it was not possible to backup or
-  restore the personalFeeds folder.
+* Atunci când nu se poate conecta/reîmprospăta un flux, sau URL-ul nu
+  corespunde unui flux valid.
+* NVDA va afișa un mesaj de eroare dacă nu a fost posibilă crearea unei
+  copii de siguranță sau restaurarea dosarului personalFeeds.
 * The title of the articles list dialog displays the selected feed name and
   number of items available.
 
 
 ## Modificări în 3.0 ##
 
-* The dialogs to manage feed files have been removed. Now their
-  functionality is included in the Feeds dialog.
+* Dialogul pentru administrarea fișierelor fluxurilor a fost eliminat. În
+  prezent, funcționalitatea lui este inclusă în dialogul fluxurilor.
 * The visual presentation of the dialogs has been enhanced, adhering to the
   appearance of the dialogs shown in NVDA.
 * Fluxul implicit este salvat în configurația NVDA. Prin urmare, este
@@ -121,6 +122,6 @@ ce conține URL-urile fluxurilor.
 
 [[!tag dev stable]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=rf
+[1]: https://addons.nvda-project.org/files/get.php?file=rf
 
-[2]: http://addons.nvda-project.org/files/get.php?file=rf-dev
+[2]: https://addons.nvda-project.org/files/get.php?file=rf-dev

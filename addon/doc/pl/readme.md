@@ -96,7 +96,7 @@ katalog zawierający kanały osobiste.
 ## Zmiany dla wersji 3.0 ##
 
 * Dialogi do zarządzania plikami kanałami osobistymi został usunięty. Teraz
-  tę funkcialność można znaleźć w dialogu "Kanaly osobiste".
+  tę funkcjonalność można znaleźć w dialogu "Kanaly osobiste".
 * Wizualna prezentacja dialogów została ulepszona, aby była zgodna z
   wyświetlanymi dialogami w NVDA.
 * Domyślny kanał osobisty jest zachowany w konfiguracji NVDA's. Aczkolwiek,
@@ -115,6 +115,6 @@ katalog zawierający kanały osobiste.
 
 [[!tag dev stable]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=rf
+[1]: https://addons.nvda-project.org/files/get.php?file=rf
 
-[2]: http://addons.nvda-project.org/files/get.php?file=rf-dev
+[2]: https://addons.nvda-project.org/files/get.php?file=rf-dev
