@@ -1,8 +1,8 @@
 # Leitor de fíds #
 
 * Autores: Noelia Ruiz Martínez, Mesar Hameed
-* Baixe a [versão estável][2]
-* Baixe a [versão de desenvolvimento][1]
+* Baixe a [versão estável][1]
+* Baixe a [versão em desenvolvimento][2]
 
 Este complemento fornece uma maneira direta de ler fíds em formato Atom ou
 RSS usando o NVDA. Os fíds não são atualizados automaticamente.  Ao
@@ -21,57 +21,89 @@ usando na nova versão instalada do Leitor de Fíds.
 ### Menu Leitor de Fíds ###
 
 Você pode acessar o submenu do Leitor de Fíds a partir do menu do NVDA,
-NVDA+N, onde são disponíveis as opções de menu a seguir:
+submenu Ferramentas, onde são disponíveis as opções de menu a seguir:
 
-- Lista de artigos... Exibe a lista de artigos do fíd atual. Selecione o
-artigo que deseja ler e pressione o botão OK para abrir no navegador a
-página correspondente. - Endereço de fíd temporário... Control + NVDA +
-Shift + Enter: Abre um diálogo para digitar uma nova URL por forma a
-selecionar outro fíd. A URL atual será mostrada nesse diálogo. - Carregar
-endereço de fíd a partir de arquivo... NVDA+Control+Enter: Abre um diálogo
-para selecionar um fíd a partir dum arquivo salvo que contenha uma URL de
-fíd. - Salvar endereço de fíd atual para arquivo... NVDA+Shift+Enter: Abre
-um diálogo para selecionar o arquivo no qual a URL do fíd atual será
-salva. Caso salve no arquivo especial addressFile.txt, aquele fíd em
-particular será usado como o fíd padrão. - Atualizar fíd atual:
-Control+Shift+NVDA+8: Atualiza fíd selecionado. Os fíds não serão
-automaticamente atualizados quando se inicia o Leitor de Fíds. - Copiar
-pasta de fíds...  Abre um diálogo para escolher uma pasta na qual pode
-salvar o diretório de fíds personalFeeds. Por padrão a pasta selecionada é o
-diretório de opções do NVDA, que criará o diretório personalFeeds. -
-Restaurar fíds...  Abre um diálogo para selecionar uma pasta que substituirá
-os fíds da pasta personalFeeds. Certifique-se de carregar uma pasta que
-contenha URLs de fíds.
+#### Fíds... ####
 
-Nota: Caso deseje apagar uma URL de feed anteriormente salva, simplesmente
-remova o arquivo correspondente.
+Abre um diálogo com os seguintes controles:
+
+* Filtrar por: Um campo de edição para procurar fíds anteriormente salvos.
+* Uma lista com os fíds salvos.
+* List of articles: Opens a dialog which presents the articles list from
+  your current feed. Select the article you want to read and press OK button
+  to open the corresponding page in your browser.
+* New: Opens a dialog with an edit box to enter the address of a new
+  feed. If the address is valid and the feed can be saved, its name, based
+  on the feed title, will appear at the bottom of the feeds list.
+* Renomear: Abre um diálogo com um campo de edição para renomear o fíd
+  selecionado.
+* Excluir: Abre um diálogo para excluir o fíd selecionado após confirmação.
+* Set default: Sets the selected feed as the default, so that its articles
+  can be accessed with NVDA's gestures.
+* Fechar: Fecha o diálogo fíds.
+
+##### Notas #####
+
+* If a feed named tempFeed is created, please rename it, as this file could
+  be replaced when needed to create a feed whose name already exists.
+* The feed set as the default can't be removed. The addressFile feed will be
+  use as the default when the configuration is reset, so it can't be
+  deleted.
+
+####Copy feeds folder... ####
+
+Opens a dialog to choose a folder where you can save the personalFeeds
+directory of your feeds. By default the selected folder is the NVDA's
+configuration directory, which will create the personalFeeds directory.
+
+#### Restaurar fíds... ####
+
+Opens a dialog to select a folder which replaces your feeds in the
+personalFeeds folder. Make sure you load a folder containing feeds URLs.
 
 ### Comandos de teclado: ###
 
-- Ctrl+Shift+NVDA+Espaço: Anuncia a URL do artigo atual. Pressionar duas
-vezes abre a página web.  - Ctrl+Shift+NVDA+8: Atualiza o fíd selecionado e
-anuncia o título mais recente.  - Ctrl+Shift+NVDA+I: Anuncia o título do fíd
-atual. Pressionar duas vezes copia o título e o linque relacionado para a
-área de transferência.  - Ctrl+Shift+NVDA+U: Anuncia o título do fíd
-anterior.  - Ctrl+Shift+NVDA+O: Anuncia o título do próximo fíd.
+* Ctrl+Shift+NVDA+Space: Announces current article's URL. Pressing twice
+  will open the web page.
+* Ctrl+Shift+NVDA+8: Refreshes the selected feed and announces its most
+  recent title.
+* Ctrl+Shift+NVDA+I: Announces current feed title and link. Pressing twice
+  will copy the title and related link to clipboard.
+* Ctrl+Shift+NVDA+U: Announces previous feed title.
+* Ctrl+Shift+NVDA+O: Announces next feed title.
 
 ## Notificações: ##
 
-Quando o título ou a URL houver sido copiado.  - Quando não é possível
-conectar/atualizar um fíd, ou a URL não corresponde a um fíd válido.  - O
-NVDA mostrará uma mensagem de erro se não for possível copiar a pasta
-personalFeeds.  - O título do diálogo de lista de artigos mostra o nome do
-fíd selecionado e o número de itens disponíveis.
+* When the title or URL have been copied.
+* When unable to connect/refresh a feed, or the URL does not correspond to a
+  valid feed.
+* O NVDA mostrará uma mensagem de erro se não tiver sido possível fazer uma
+  cópia ou restaurar a pasta personalFeeds.
+* O título do diálogo Lista de artigos mostra o nome do fíd selecionado e o
+  número de itens disponíveis.
+
+
+## Mudanças na 3.0 ##
+
+* Os diálogos para gerir arquivos de fíds foram removidos. Agora a
+  funcionalidade dos mesmos está inclusa no diálogo fíds.
+* A apresentação visual dos diálogos foi aprimorada, aderindo à aparência
+  dos diálogos exibidos pelo NVDA.
+* O fíd padrão é salvo nas configurações do NVDA. Assim, é possível
+  especificar diferentes fíds padrão em perfis de configurações.
+* Requer NVDA 2016.4.
+
 
 ## Mudanças na 2.0 ##
-*	 A ajuda do complemento está disponível no gestor de complementos.
+
+* A ajuda do complemento está disponível no gestor de complementos.
 
 ## Mudanças na 1.0 ##
-*	 Versão inicial.
+
+* Versão inicial.
 
 [[!tag dev stable]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=rf-dev
+[1]: https://addons.nvda-project.org/files/get.php?file=rf
 
-[2]: http://addons.nvda-project.org/files/get.php?file=rf
-
+[2]: https://addons.nvda-project.org/files/get.php?file=rf-dev

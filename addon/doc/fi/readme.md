@@ -42,7 +42,7 @@ Avaa valintaikkunan, jossa on seuraavat säätimet:
 * Poista: Avaa vahvistuksen pyytävän valintaikkunan, jossa voit poistaa
   valitun syötteen.
 * Aseta oletukseksi: Asettaa valitun syötteen oletukseksi, jotta sen
-  artikkeleihin pääsee NVDA:n syöte-eleillä.
+  artikkeleihin pääsee NVDA:n syötekomennoilla.
 * Sulje: Sulkee Syötteet-valintaikkunan.
 
 ##### Huomautuksia #####
