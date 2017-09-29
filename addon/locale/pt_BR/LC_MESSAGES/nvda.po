@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: readFeeds 1.0-dev\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-11-16 13:26+0100\n"
-"PO-Revision-Date: 2016-04-23 22:31-0300\n"
-"Last-Translator: Cleverson Casarin Uliana <clcaul@live.com>\n"
+"PO-Revision-Date: 2017-09-24 09:39-0300\n"
+"Last-Translator: Cleverson Casarin Uliana <clever97@gmail.com>\n"
 "Language-Team: Equipe de tradução do NVDA para Português do Brasil "
 "<clever97@gmail.com>\n"
 "Language: pt_BR\n"
@@ -51,6 +51,116 @@ msgstr ""
 "Não posso atualizar o fíd. Verifique a conectividade à Internet ou que o "
 "endereço de fíd especificado está correto."
 
+#. Translators: Message presented when feeds have been copied.
+msgid "Feeds copied"
+msgstr "Fíds copiados"
+
+#. Translators: label of error dialog shown when cannot copy feeds folder.
+msgid "Folder not copied"
+msgstr "Pasta não copiada"
+
+#. Translators: title of error dialog shown when cannot copy feeds folder.
+msgid "Copy Error"
+msgstr "Erro a copiar"
+
+#. Translators: Message presented when feeds have been restored.
+msgid "Feeds restored"
+msgstr "Fíds restaurados"
+
+#. Translators: The title of a dialog.
+msgid "Feeds"
+msgstr "Fíds"
+
+#. Translators: The label of a button to open the list of articles of a feed.
+msgid "List of &articles..."
+msgstr "Lista de &artigos..."
+
+#. Translators: The label of a button to add a new feed.
+msgid "&New..."
+msgstr "&Novo..."
+
+#. Translators: The label of a button to rename a feed.
+msgid "&Rename..."
+msgstr "&Renomear..."
+
+#. Translators: The label of a button to delete a feed.
+msgid "&Delete..."
+msgstr "&Apagar..."
+
+#. Translators: The label of a button to set a feed as default.
+msgid "S&et default"
+msgstr "D&efinir como padrão"
+
+#. Translators: the label of a single choice dialog.
+msgid "Open web page of selected article."
+msgstr "Abrir página web do artigo selecionado."
+
+#. Translators: The label of a field to enter an address for a new feed.
+msgid "Address of a new feed:"
+msgstr "Endereço do novo fíd:"
+
+#. Translators: The title of a dialog to create a new feed.
+msgid "New feed"
+msgstr "Novo fíd"
+
+#. Translators: The confirmation prompt displayed when the user requests to delete a feed.
+msgid "Are you sure you want to delete this feed? This cannot be undone."
+msgstr "Tem certeza que quer apagar este fíd? Isto não pode ser desfeito."
+
+#. Translators: The label of a field to enter a new name for a feed.
+msgid "New name:"
+msgstr "Novo nome:"
+
+#. Translators: The title of a dialog to rename a feed.
+msgid "Rename feed"
+msgstr "Renomear fíd"
+
+#. Translators: The title of the Copy dialog.
+msgid "Copy feeds"
+msgstr "Copiar fíds"
+
+#. Translators: An informational message displayed in the Copy dialog.
+#, python-format
+msgid ""
+"Select a folder to save a backup of your current feeds.\n"
+"\n"
+"\t\tThey will be copied from %s."
+msgstr ""
+"Selecione uma pasta para salvar cópia dos fíds atuais.\n"
+"\n"
+"\t\tEles serão copiados de %s."
+
+#. Translators: The label of a grouping containing controls to select the destination directory in the Copy dialog.
+msgid "directory for backup:"
+msgstr "diretório para cópia"
+
+#. Translators: The title of the dialog presented when browsing for the destination directory when copying feeds.
+msgid "Select directory to copy"
+msgstr "Selecione diretório a copiar"
+
+#. Translators: The title of the Restore dialog.
+msgid "Restore feeds"
+msgstr "Restaurar fíds"
+
+#. Translators: An informational message displayed in the Restore dialog.
+#, python-format
+msgid ""
+"Select a folder to restore a backup of your previous copied feeds.\n"
+"\n"
+"\t\tThey will be copied to %s."
+msgstr ""
+"Selecione uma pasta para restaurar cópia de fíds anteriormente copiados.\n"
+"\n"
+"\t\tEles serão copiados para %s."
+
+#. Translators: The label of a grouping containing controls to select the destination directory in the Restore dialog.
+msgid "directory containing backup:"
+msgstr "diretório que contém a cópia:"
+
+#. Translators: The title of the dialog presented when browsing for the destination directory when restoring feeds.
+msgid "Select directory to restore"
+msgstr "Selecione diretório a restaurar"
+
 #. Translators: Presented when the current article does not have an associated title.
 msgid "Unable to locate article title."
 msgstr "Impossível localizar o título do artigo."
@@ -68,68 +178,47 @@ msgid "Manage feeds."
 msgstr "Gerir fíds."
 
 #. Translators: the name of a menu item.
-msgid "Article &list..."
-msgstr "&Lista de artigos..."
+msgid "&Feeds..."
+msgstr "&Fíds..."
 
 #. Translators: the tooltip for a menu item.
-msgid "View article list"
-msgstr "Ver lista de artigos"
+msgid "View and manage feeds"
+msgstr "Ver e gerenciar fíds"
 
 #. Translators: the name of a menu item.
-msgid "&Temporary feed address..."
-msgstr "Endereço de fíd &temporário..."
+msgid "&Copy feeds folder..."
+msgstr "&Copiar pasta de fíds..."
 
 #. Translators: the tooltip for a menu item.
-msgid "View or choose current feed address"
-msgstr "Ver ou escolher endereço de fíd atual"
+msgid "Backup of feeds"
+msgstr "Cópia de fíds"
 
 #. Translators: the name of a menu item.
-msgid "L&oad feed address from file..."
-msgstr "&Carregar endereço de fíd a partir de arquivo"
+msgid "R&estore feeds..."
+msgstr "R&estaurar fíds..."
 
 #. Translators: the tooltip for a menu item.
-msgid "Select file which contains feed address."
-msgstr "Seleciona arquivo que contenha endereço de fíd."
+msgid "Restore previously saved feeds"
+msgstr "Restaura fíds anteriormente salvos"
 
-#. Translators: the name of a menu item.
-msgid "Save current feed address to file..."
-msgstr "Salvar endereço do fíd atual para arquivo..."
+#. Translators: message presented in input mode.
+#, python-format
+msgid "Activates the Feeds dialog of %s."
+msgstr "Ativa o diálogo Fíds de %s."
 
-#. Translators: the tooltip for a menu item.
-#. Translators: the label of a file dialog.
-msgid "Save current feed address to file"
-msgstr "Salva o endereço do fíd atual para arquivo"
+#. Translators: message presented in input mode.
+#, python-format
+msgid "Activates the Copy dialog of %s."
+msgstr "Ativa o diálogo Copiar de %s."
 
-#. Translators: the name of a menu item.
-msgid "R&efresh current feed"
-msgstr "Atualiza&r fíd atual"
-
-#. Translators: the tooltip for a menu item.
-msgid "Checks for new articles for the current feed"
-msgstr "Procura artigos novos para o fíd atual"
-
-#. Translators: the name of a menu item.
-msgid "&ReadFeeds file manager..."
-msgstr "Gesto&r de arquivos do leitor de fíds..."
-
-#. Translators: the tooltip for a menu item.
-msgid "Opens the ReadFeedsFileManager dialog"
-msgstr "Abre o diálogo do gestor do leitor de fíds"
-
-#. Translators: the title of an error dialog.
-msgid "Refresh Error"
-msgstr "Erro ao atualizar"
-
-#. Translators: the label of a single choice dialog.
-msgid "Open web page of selected article."
-msgstr "Abrir página web do artigo selecionado."
+#. Translators: message presented in input mode.
+#, python-format
+msgid "Activates the Restore dialog of %s."
+msgstr "Ativa o diálogo Restaurar de %s."
 
 #. Translators: message presented in input mode.
 msgid "Refreshes the current feed and announces the most recent article title."
 msgstr "Atualiza o fíd atual e anuncia o título do artigo mais recente."
-
-msgid "Refresh your selected feed to read the current article."
-msgstr "Atualize o fíd selecionado para ler o artigo atual."
 
 #. Translators: message presented when the information about an article of a feed is copied to the clipboard.
 #, python-format
@@ -158,93 +247,9 @@ msgstr ""
 "Anuncia o linque do artigo. Se pressionada duas vezes, abre a página web "
 "relacionada."
 
-#. Translators: the label of a text entry dialog.
-msgid "Feed address to follow"
-msgstr "Endereço de fíd a seguir"
-
-#. Translators: the title of a text entry dialog.
-msgid "Feed address"
-msgstr "Endereço de fíd"
-
-#. Translators: message presented when the address of a feed has been selected.
-#, python-format
-msgid "Selected %s"
-msgstr "Selecionado %s"
-
 #. Translators: message presented in input mode.
-msgid "Opens a dialog for entering a feed address."
-msgstr "Abre um diálogo para inserir um endereço de fíd."
-
-#. Translators: the label of a file dialog.
-msgid "Select feed address from file"
-msgstr "Selecionar endereço de fíd a partir de arquivo"
-
-msgid "Text files (*.txt) |*.txt"
-msgstr "Arquivos de texto (*.txt) |*.txt"
-
-#. Translators: message presented when unable to read feed address.
-msgid "Unable to read feed address, feed can not be selected"
-msgstr "Não consegui ler o endereço de fíd; fíd não pode ser selecionado"
-
-#. Translators: message presented in input mode.
-msgid "Opens a dialog for selecting a file containing a feed address."
-msgstr ""
-"Abre um diálogo para escolher um arquivo que contenha um endereço de fíd."
-
-msgid "Text files (*.txt) | *.txt"
-msgstr "Arquivos de texto (*.txt) | *.txt"
-
-#. Translators: message presented when the address of a feed has been saved.
-#, python-format
-msgid "Saved %s"
-msgstr "Salvo %s"
-
-#. Translators: Message presented when the feed address cannot be saved.
-msgid "Feed address can not be saved"
-msgstr "Endereço de fíd não pode ser salvo"
-
-#. Translators: message presented in input mode.
-msgid ""
-"Opens a dialog where you can enter a filename to which the current feed "
-"address will be saved."
-msgstr ""
-"Abre um diálogo onde pode inserir um nome de arquivo para o qual o endereço "
-"do fíd atual será salvo."
-
-msgid "Feeds manager"
-msgstr "Gestor de fíds"
-
-#. Translators: the name of a dialog button.
-msgid "&Backup personal feeds folder..."
-msgstr "Co&piar pasta pessoal de fíds..."
-
-#. Translators: the name of a dialog button.
-msgid "R&estore personal feeds..."
-msgstr "R&estaurar fíds pessoais..."
-
-#. Translators: the label of a dialog to select a folder.
-msgid "Select the folder where your personal feeds will be backed up."
-msgstr "Seleciona a pasta aonde os fíds pessoais serão copiados."
-
-#. # Translators: the label of an error dialog.
-msgid "Unable to backup folder"
-msgstr "Impossível copiar pasta"
-
-#. Translators: the title of an error dialog.
-msgid "Backup Error"
-msgstr "Erro a copiar"
-
-#. Translators: the label of a dialog to select a folder.
-msgid "Restore personal feeds from backup folder"
-msgstr "Restaurar fíds pessoais da pasta de cópia"
-
-#. Translators: the label of an error dialog.
-msgid "Folder not restored"
-msgstr "Pasta não foi restaurada"
-
-#. Translators: the title of an error dialog.
-msgid "Restore Error"
-msgstr "Erro a restaurar"
+msgid "Copies title and related link of the current article to the clipboard."
+msgstr "Copia título e endereço do artigo atual para a área de transferência."
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
@@ -255,9 +260,3 @@ msgstr "Leitor de fíds"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Add-on for using NVDA as a feed reader."
 msgstr "Complemento para usar o NVDA como um leitor de fíds."
-
-#~ msgid "Backs up your personal feeds folder"
-#~ msgstr "Faz cópia de segurança da pasta pessoal de fíds"
-
-#~ msgid "Restore previously saved feeds"
-#~ msgstr "Restaura fíds anteriormente salvos"
