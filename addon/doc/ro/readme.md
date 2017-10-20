@@ -1,4 +1,4 @@
-# Citirea  Feedurilor #
+# Read Feeds #
 
 * Autori: Noelia Ruiz Martínez, Mesar Hameed
 * Descărcați [versiunea stabilă][1]
@@ -96,16 +96,16 @@ ce conține URL-urile fluxurilor.
   corespunde unui flux valid.
 * NVDA va afișa un mesaj de eroare dacă nu a fost posibilă crearea unei
   copii de siguranță sau restaurarea dosarului personalFeeds.
-* The title of the articles list dialog displays the selected feed name and
-  number of items available.
+* Dialogul titlului listei articolelor afișează numele fluxului selectat și
+  numărul elementelor disponibile.
 
 
 ## Modificări în 3.0 ##
 
 * Dialogul pentru administrarea fișierelor fluxurilor a fost eliminat. În
   prezent, funcționalitatea lui este inclusă în dialogul fluxurilor.
-* The visual presentation of the dialogs has been enhanced, adhering to the
-  appearance of the dialogs shown in NVDA.
+* Prezentarea vizuală a dialogurilor a fost îmbunătățită, aderând la
+  aspectul dialogurilor afișate în NVDA.
 * Fluxul implicit este salvat în configurația NVDA. Prin urmare, este
   posibilă setarea fluxurilor implicite diferite în configurarea
   profilurilor.
