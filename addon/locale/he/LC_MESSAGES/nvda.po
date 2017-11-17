@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: readFeeds 2.5\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2015-09-12 04:00+1000\n"
-"PO-Revision-Date: 2017-02-05 01:25+0200\n"
-"Last-Translator:  <shmuel_naaman@yahoo.com>\n"
+"PO-Revision-Date: 2017-11-15 13:13+0200\n"
+"Last-Translator: shmuel_naaman@yahoo.com\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.10\n"
+"X-Generator: Poedit 2.0.4\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Language: he\n"
 
@@ -72,19 +72,19 @@ msgstr "קר הזנות"
 
 #. Translators: The label of a button to open the list of articles of a feed.
 msgid "List of &articles..."
-msgstr "רשימת &מאמרים"
+msgstr "רשימת &מאמרים..."
 
 #. Translators: The label of a button to add a new feed.
 msgid "&New..."
-msgstr "&חדש"
+msgstr "&חדש..."
 
 #. Translators: The label of a button to rename a feed.
 msgid "&Rename..."
-msgstr "&שנה שם"
+msgstr "&שנה שם..."
 
 #. Translators: The label of a button to delete a feed.
 msgid "&Delete..."
-msgstr "&מחק"
+msgstr "&מחק..."
 
 #. Translators: The label of a button to set a feed as default.
 msgid "S&et default"
@@ -92,11 +92,11 @@ msgstr "&בחר ברירת מחדל"
 
 #. Translators: the label of a single choice dialog.
 msgid "Open web page of selected article."
-msgstr "פתיחת דף האינטרנט של המאמר שנבחר"
+msgstr "פתיחת דף האינטרנט של המאמר שנבחר."
 
 #. Translators: The label of a field to enter an address for a new feed.
 msgid "Address of a new feed:"
-msgstr "כתובת להזנה חדשה"
+msgstr "כתובת להזנה חדשה:"
 
 #. Translators: The title of a dialog to create a new feed.
 msgid "New feed"
@@ -116,7 +116,7 @@ msgstr "שנה שם הזנה"
 
 #. Translators: The title of the Copy dialog.
 msgid "Copy feeds"
-msgstr "העתק הזנה:"
+msgstr "העתק הזנה"
 
 #. Translators: An informational message displayed in the Copy dialog.
 #, python-format
@@ -162,11 +162,11 @@ msgstr "בחר תיקייה לשחזור"
 
 #. Translators: Presented when the current article does not have an associated title.
 msgid "Unable to locate article title."
-msgstr "לא ניתן לאתר את כותרת המאמר"
+msgstr "לא ניתן לאתר את כותרת המאמר."
 
 #. Translators: Presented when the current article does not have an associated link.
 msgid "Unable to locate article link."
-msgstr "לא ניתן לאתר את הקישור למאמר"
+msgstr "לא ניתן לאתר את הקישור למאמר."
 
 #. Translators: the name of a submenu.
 msgid "&Read Feeds"
@@ -174,7 +174,7 @@ msgstr "הזנות שלא נקראו"
 
 #. Translators: the tooltip for a submenu.
 msgid "Manage feeds."
-msgstr "ניהול הזנות"
+msgstr "ניהול הזנות."
 
 #. Translators: the name of a menu item.
 msgid "&Feeds..."
@@ -186,7 +186,7 @@ msgstr "תצוגה של ההזנות המנוהלות"
 
 #. Translators: the name of a menu item.
 msgid "&Copy feeds folder..."
-msgstr "גיבוי תיקיית ההזנות האישיות"
+msgstr "גיבוי תיקיית ההזנות האישיות..."
 
 #. Translators: the tooltip for a menu item.
 msgid "Backup of feeds"
@@ -194,7 +194,7 @@ msgstr "גיבוי הזנות"
 
 #. Translators: the name of a menu item.
 msgid "R&estore feeds..."
-msgstr "שחזור ההזנות האישיות"
+msgstr "שחזור ההזנות האישיות..."
 
 #. Translators: the tooltip for a menu item.
 msgid "Restore previously saved feeds"
@@ -203,21 +203,21 @@ msgstr "שחזור ההזנות האישיות"
 #. Translators: message presented in input mode.
 #, python-format
 msgid "Activates the Feeds dialog of %s."
-msgstr "הפעל את תיבת דו-שיח הזנות של  %s"
+msgstr "הפעל את תיבת דו-שיח הזנות של %s."
 
 #. Translators: message presented in input mode.
 #, python-format
 msgid "Activates the Copy dialog of %s."
-msgstr "הפעל את תיבת הדו-שיח העתקה של %s"
+msgstr "הפעל את תיבת הדו-שיח העתקה של %s."
 
 #. Translators: message presented in input mode.
 #, python-format
 msgid "Activates the Restore dialog of %s."
-msgstr "הפעל את תיבת הדו-שיח שחזור של  %s"
+msgstr "הפעל את תיבת הדו-שיח שחזור של %s."
 
 #. Translators: message presented in input mode.
 msgid "Refreshes the current feed and announces the most recent article title."
-msgstr "מרענן את ההזנות הנוכחיות ומקריא את כותרת המאמרים"
+msgstr "מרענן את ההזנות הנוכחיות ומקריא את כותרת המאמרים."
 
 #. Translators: message presented when the information about an article of a feed is copied to the clipboard.
 #, python-format
@@ -230,15 +230,15 @@ msgid ""
 "and related link to the clipboard."
 msgstr ""
 "הקראת כותרת המאמר הנוכחי. לחיצה פעמיי0 מעתיקה את הכותרת ואת הקישור לזכרון "
-"הזמני"
+"הזמני."
 
 #. Translators: message presented in input mode.
 msgid "Announces the title of the next article."
-msgstr "הקראת כותרת המאמר הבא"
+msgstr "הקראת כותרת המאמר הבא."
 
 #. Translators: message presented in input mode.
 msgid "Announces the title of the previous article."
-msgstr "הקראת כותרת המאמר הקודם"
+msgstr "הקראת כותרת המאמר הקודם."
 
 #. Translators: message presented in input mode.
 msgid "Announces article link, when pressed two times, opens related web page."
@@ -246,7 +246,7 @@ msgstr "הקראת הקישור למאמר. לחיצה פעמיים - כניסה
 
 #. Translators: message presented in input mode.
 msgid "Copies title and related link of the current article to the clipboard."
-msgstr "העתק כותרת שמקושרת לקישור המאמר הנוכחי ללוח הגזירים"
+msgstr "העתק כותרת שמקושרת לקישור המאמר הנוכחי ללוח הגזירים."
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
@@ -256,4 +256,4 @@ msgstr "Read Feeds"
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Add-on for using NVDA as a feed reader."
-msgstr "מאפשר להשתמש בNVDA fתוכנת קוראת הזנות"
+msgstr "מאפשר להשתמש בNVDA תוכנת קוראת הזנות."
