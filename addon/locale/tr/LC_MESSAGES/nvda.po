@@ -69,6 +69,10 @@ msgstr "Kaynaklar geri yüklendi"
 msgid "Feeds"
 msgstr "Haber Akışları"
 
+#. Label of a dialog (message translated in NVDA core in different contexts).
+msgid "&Filter by:"
+msgstr ""
+
 #. Translators: The label of a button to open the list of articles of a feed.
 msgid "List of &articles..."
 msgstr "Haber &listesi..."
@@ -142,7 +146,6 @@ msgstr "Akışları geri yükle"
 
 #. Translators: An informational message displayed in the Restore dialog.
 #, python-format
-#| msgid "Select the folder where your personal feeds will be backed up."
 msgid ""
 "Select a folder to restore a backup of your previous copied feeds.\n"
 "\n"

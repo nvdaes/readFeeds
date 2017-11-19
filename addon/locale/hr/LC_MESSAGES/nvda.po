@@ -69,6 +69,10 @@ msgstr "Feedovi su vraćeni"
 msgid "Feeds"
 msgstr "Feedovi"
 
+#. Label of a dialog (message translated in NVDA core in different contexts).
+msgid "&Filter by:"
+msgstr ""
+
 #. Translators: The label of a button to open the list of articles of a feed.
 msgid "List of &articles..."
 msgstr "Popis &Članaka..."

@@ -11,12 +11,12 @@ msgstr ""
 "PO-Revision-Date: 2017-11-15 13:13+0200\n"
 "Last-Translator: shmuel_naaman@yahoo.com\n"
 "Language-Team: \n"
+"Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.0.4\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Language: he\n"
 
 #. Translators: the label of a message box dialog.
 msgid ""
@@ -69,6 +69,10 @@ msgstr "התיקייה שוחזרה"
 #. Translators: The title of a dialog.
 msgid "Feeds"
 msgstr "קר הזנות"
+
+#. Label of a dialog (message translated in NVDA core in different contexts).
+msgid "&Filter by:"
+msgstr ""
 
 #. Translators: The label of a button to open the list of articles of a feed.
 msgid "List of &articles..."
