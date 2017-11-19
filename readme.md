@@ -11,7 +11,7 @@ Below when we mention feeds, we mean both RSS and ATOM feeds.
 ## Installation or Update: ##
 
 If you used a previous version of this addon, and there is an RSS or personalFeeds folder in your personal NVDA configuration folder, 
-when installing version 6.0 or later, a dialog will ask if you want to upgrade or install.
+when installing the current version, a dialog will ask if you want to upgrade or install.
 Choose update to preserve your saved feeds and to continue using them in the new installed version of readFeeds. 
 
 ## Commands: ##
