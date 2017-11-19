@@ -98,8 +98,8 @@ class FeedsDialog(wx.Dialog):
 
 		mainSizer = wx.BoxSizer(wx.VERTICAL)
 		sHelper = guiHelper.BoxSizerHelper(self,orientation=wx.VERTICAL)
-				# Message translated in NVDA core.
-		searchTextLabel = translate("&Filter by:")
+				# Label of a dialog (message translated in NVDA core in different contexts).
+		searchTextLabel = _("&Filter by:")
 		self.searchTextEdit = sHelper.addLabeledControl(searchTextLabel, wx.TextCtrl)
 		self.searchTextEdit.Bind(wx.EVT_TEXT, self.onSearchEditTextChange)
 
