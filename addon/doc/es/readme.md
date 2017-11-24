@@ -11,12 +11,11 @@ ATOM.
 
 ## Instalación o actualización: ##
 
-Si has utilizado una versión anterior de este complemento, y hay una carpeta
-personalFeeds o RSS en la carpeta personal de configuración de NVDA, al
-instalar la versión 6.0 o posterior, un cuadro de diálogo te preguntará si
-deseas actualizar o instalar.  Selecciona Actualizar para preservar tus
-feeds guardados y continuar utilizándolos en la nueva versión instalada
-dereadFeeds.
+If you used a previous version of this addon, and there is an RSS or
+personalFeeds folder in your personal NVDA configuration folder, when
+installing the current version, a dialog will ask if you want to upgrade or
+install.  Choose update to preserve your saved feeds and to continue using
+them in the new installed version of readFeeds.
 
 ## Órdenes: ##
 

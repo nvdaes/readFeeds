@@ -10,12 +10,11 @@ syötteet tarkoittavat sekä Atom- että RSS-syötteitä.
 
 ## Asennus tai päivitys: ##
 
-Mikäli olet käyttänyt tämän lisäosan aiempaa versiota ja jos
-käyttäjäkohtaisessa NVDA:n asetushakemistossa on RSS- tai
-personalFeeds-niminen kansio, versiota 6.0 tai uudempaa asennettaessa
-sinulta kysytään, haluatko suorittaa päivityksen vai asennuksen.  Valitse
-päivitys säilyttääksesi tallentamasi syötteet ja jatkaaksesi niiden käyttöä
-uudessa Lue syötteet -lisäosan versiossa.
+If you used a previous version of this addon, and there is an RSS or
+personalFeeds folder in your personal NVDA configuration folder, when
+installing the current version, a dialog will ask if you want to upgrade or
+install.  Choose update to preserve your saved feeds and to continue using
+them in the new installed version of readFeeds.
 
 ## Komennot: ##
 

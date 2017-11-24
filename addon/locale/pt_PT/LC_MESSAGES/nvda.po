@@ -8,10 +8,9 @@ msgstr ""
 "Project-Id-Version: readFeeds 1.0-dev\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-11-16 13:26+0100\n"
-"PO-Revision-Date: 2017-09-09 22:23-0000\n"
+"PO-Revision-Date: 2017-11-19 10:17-0000\n"
 "Last-Translator: Ângelo Abrantes <ampa4374@gmail.com>\n"
-"Language-Team: Equipa portuguesa de tradução do NVDA "
-"<angelomiguelabrantes@sapo.pt>\n"
+"Language-Team: Equipa portuguesa de tradução do NVDA <angelomiguelabrantes@sapo.pt>\n"
 "Language: pt_PT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,36 +22,24 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 
 #. Translators: the label of a message box dialog.
-msgid ""
-"You have installed the ReadFeeds add-on, probably an old and incompatible "
-"version with this one. Do you want to uninstall the old version?"
-msgstr ""
-"Tem o extra \\\"Leitor de RSS\\\" instalado, provavelmente uma versão antiga "
-"e incompatível com esta. Quer desinstalar a versão anterior?"
+msgid "You have installed the ReadFeeds add-on, probably an old and incompatible version with this one. Do you want to uninstall the old version?"
+msgstr "Tem o extra \\\"Leitor de RSS\\\" instalado, provavelmente uma versão antiga e incompatível com esta. Quer desinstalar a versão anterior?"
 
 #. Translators: the title of a message box dialog.
 msgid "Uninstall incompatible add-on"
 msgstr "desinstalar o extra incompatível"
 
 #. Translators: the label of a message box dialog.
-msgid ""
-"Your configuration folder for NVDA contains files that seem to be derived "
-"from a previous version of this add-on. Do you want to update it?"
-msgstr ""
-"A sua pasta de opções do NVDA contém ficheiros que parecem pertencer a uma "
-"versão anterior deste extra. Quer atualizá-la?"
+msgid "Your configuration folder for NVDA contains files that seem to be derived from a previous version of this add-on. Do you want to update it?"
+msgstr "A sua pasta de opções do NVDA contém ficheiros que parecem pertencer a uma versão anterior deste extra. Quer atualizá-la?"
 
 #. Translators: the title of a message box dialog.
 msgid "Install or update add-on"
 msgstr "Instalar ou actualizar o extra"
 
 #. Translators: message presented when feeds cannot be reported.
-msgid ""
-"Unable to refresh feed. Check your Internet conectivity or that the "
-"specified feed address is correct."
-msgstr ""
-"Não é possível actualizar o RSS. Verifique a ligação à Internet ou se o "
-"endereço do RSS especificado está correcto."
+msgid "Unable to refresh feed. Check your Internet conectivity or that the specified feed address is correct."
+msgstr "Não é possível actualizar o RSS. Verifique a ligação à Internet ou se o endereço do RSS especificado está correcto."
 
 #. Translators: Message presented when feeds have been copied.
 msgid "Feeds copied"
@@ -76,7 +63,7 @@ msgstr "RSS"
 
 #. Label of a dialog (message translated in NVDA core in different contexts).
 msgid "&Filter by:"
-msgstr ""
+msgstr "&Filtrar por:"
 
 #. Translators: The label of a button to open the list of articles of a feed.
 msgid "List of &articles..."
@@ -156,8 +143,7 @@ msgid ""
 "\n"
 "\t\tThey will be copied to %s."
 msgstr ""
-"Selecione uma pasta para recuperar um backup dos ficheiros previamente "
-"copiados.\n"
+"Selecione uma pasta para recuperar um backup dos ficheiros previamente copiados.\n"
 "\n"
 "\t\tSerão copiados para %s."
 
@@ -234,12 +220,8 @@ msgid "Copied to clipboard %s"
 msgstr "Copiado para a área de transferência %s."
 
 #. Translators: message presented in input mode.
-msgid ""
-"Announces the title of the current article. Pressed two times, copies title "
-"and related link to the clipboard."
-msgstr ""
-"Diz o título do artigo corrent e, se pressionada duas vezes, copia o título "
-"e a ligaçã para a área de transferência."
+msgid "Announces the title of the current article. Pressed two times, copies title and related link to the clipboard."
+msgstr "Diz o título do artigo corrent e, se pressionada duas vezes, copia o título e a ligaçã para a área de transferência."
 
 #. Translators: message presented in input mode.
 msgid "Announces the title of the next article."
@@ -251,14 +233,11 @@ msgstr "Anuncia o título do artigo anterior."
 
 #. Translators: message presented in input mode.
 msgid "Announces article link, when pressed two times, opens related web page."
-msgstr ""
-"Diz a ligação para o artigo e, se pressionada duas vezes, abre a página da "
-"internet."
+msgstr "Diz a ligação para o artigo e, se pressionada duas vezes, abre a página da internet."
 
 #. Translators: message presented in input mode.
 msgid "Copies title and related link of the current article to the clipboard."
-msgstr ""
-"Copia o título e a ligação do artigo corrente para a área de transferência."
+msgstr "Copia o título e a ligação do artigo corrente para a área de transferência."
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
@@ -269,3 +248,4 @@ msgstr "Leitor de RSS"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Add-on for using NVDA as a feed reader."
 msgstr "Extra para usar o NVDA como um leitor de RSS."
+

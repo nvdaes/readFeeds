@@ -11,12 +11,11 @@ automat. Atunci când menționăm feed-uri, ne referim atât la fluxuri RSS cât
 
 ## Instalare sau Actualizare: ##
 
-Dacă ați utilizat o versiune anterioară a acestui add-on și există un dosar
-RSS sau un dosar de feed-uri personale în dosarul dumneavoastră de
-configurare al NVDA, când se instalează versiunea 6.0 sau mai nou, un dialog
-vă va întreba dacă vreți să upgradați sau instalați. Alegeți actualizare
-pentru a păstra feed-urile salvate și pentru a continua să le folosiți în
-noua versiune instalată a cititorului de feed-uri.
+If you used a previous version of this addon, and there is an RSS or
+personalFeeds folder in your personal NVDA configuration folder, when
+installing the current version, a dialog will ask if you want to upgrade or
+install.  Choose update to preserve your saved feeds and to continue using
+them in the new installed version of readFeeds.
 
 ## Comenzi: ##
 
