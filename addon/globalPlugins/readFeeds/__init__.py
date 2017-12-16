@@ -219,7 +219,7 @@ class FeedsDialog(wx.Dialog):
 				return
 			os.startfile(feed.getArticleLink(d.Selection))
 
-def onOpen(self, evt):
+	def onOpen(self, evt):
 		with open(os.path.join(FEEDS_PATH, "%s.txt" % self.stringSel), "r") as f:
 			address = f.read()
 			f.close()
