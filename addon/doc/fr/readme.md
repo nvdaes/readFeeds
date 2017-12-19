@@ -13,11 +13,10 @@ dire que les deux signifient flux RSS et ATOM.
 
 Si vous utilisiez une version antérieure de ce module complémentaire, il y a
 un dossier RSS ou personalFeeds dans votre dossier de configuration
-personnel de NVDA, lorsque vous installez la version 6.0 ou ultérieure, une
-boîte de dialogue vous demandera si vous souhaitez mettre à jour ou
-installer.  Choisissez mise à jour pour préserver vos flux enregistrés et
-pour continuer à les utiliser dans la nouvelle version installée de
-readFeeds.
+personnel de NVDA, lorsque vous installez la version actuelle, une boîte de
+dialogue vous demandera si vous souhaitez mettre à jour ou installer.
+Choisissez mise à jour pour préserver vos flux enregistrés et pour continuer
+à les utiliser dans la nouvelle version installée de readFeeds.
 
 ## Commandes : ##
 

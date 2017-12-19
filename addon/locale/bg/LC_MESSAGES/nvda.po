@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: readFeeds 1.0-dev\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-11-16 13:26+0100\n"
-"PO-Revision-Date: 2016-12-29 16:21-0800\n"
+"PO-Revision-Date: 2017-11-19 08:52+0200\n"
 "Last-Translator: Kostadin Kolev <k_kolev1985@mail.bg>\n"
 "Language-Team: Български <>\n"
 "Language: bg\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
-"X-Generator: Poedit 1.5.7\n"
+"X-Generator: Poedit 1.6.11\n"
 
 #. Translators: the label of a message box dialog.
 msgid ""
@@ -74,7 +74,7 @@ msgstr "Източници"
 
 #. Label of a dialog (message translated in NVDA core in different contexts).
 msgid "&Filter by:"
-msgstr ""
+msgstr "&Филтриране по:"
 
 #. Translators: The label of a button to open the list of articles of a feed.
 msgid "List of &articles..."

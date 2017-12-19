@@ -13,9 +13,9 @@ syötteet tarkoittavat sekä Atom- että RSS-syötteitä.
 Mikäli olet käyttänyt tämän lisäosan aiempaa versiota ja jos
 käyttäjäkohtaisessa NVDA:n asetushakemistossa on RSS- tai
 personalFeeds-niminen kansio, versiota 6.0 tai uudempaa asennettaessa
-sinulta kysytään, haluatko suorittaa päivityksen vai asennuksen.  Valitse
-päivitys säilyttääksesi tallentamasi syötteet ja jatkaaksesi niiden käyttöä
-uudessa Lue syötteet -lisäosan versiossa.
+kysytään, haluatko suorittaa päivityksen vai asennuksen.  Säilytä
+tallentamasi syötteet ja jatka niiden käyttöä uudessa lisäosan versiossa
+valitsemalla  päivitys.
 
 ## Komennot: ##
 

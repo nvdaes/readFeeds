@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: readFeeds 1.0-dev\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-11-16 13:26+0100\n"
-"PO-Revision-Date: 2017-04-15 16:25+0400\n"
+"PO-Revision-Date: 2017-12-10 14:44+0400\n"
 "Last-Translator: Ruslan Kolodyazhni <eye0@rambler.ru>\n"
 "Language-Team: Translators\n"
 "Language: ru\n"
@@ -71,7 +71,7 @@ msgstr "Новостные ленты"
 
 #. Label of a dialog (message translated in NVDA core in different contexts).
 msgid "&Filter by:"
-msgstr ""
+msgstr "&Фильтр по:"
 
 #. Translators: The label of a button to open the list of articles of a feed.
 msgid "List of &articles..."

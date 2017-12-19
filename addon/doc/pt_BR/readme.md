@@ -10,11 +10,11 @@ mencionarmos fíds abaixo, referimo-nos tanto a fíds RSS como ATOM.
 
 ## Instalar ou atualizar: ##
 
-Caso já tenha usado uma versão anterior deste complemento e houver uma pasta
-RSS ou personalFeeds na pasta pessoal de opções do NVDA, ao instalar a
-versão 6.0 ou superior, um diálogo vai perguntar se você quer atualizar ou
-instalar.  Escolha atualizar para preservar os fíds salvos e continuá-los
-usando na nova versão instalada do Leitor de Fíds.
+If you used a previous version of this addon, and there is an RSS or
+personalFeeds folder in your personal NVDA configuration folder, when
+installing the current version, a dialog will ask if you want to upgrade or
+install.  Choose update to preserve your saved feeds and to continue using
+them in the new installed version of readFeeds.
 
 ## Comandos: ##
 
