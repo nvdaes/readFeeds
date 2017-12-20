@@ -11,7 +11,6 @@ import addonHandler
 import globalPluginHandler
 import globalVars
 import config
-import urllib
 import scriptHandler
 import api
 import gui
@@ -20,6 +19,7 @@ import wx
 import ui
 from logHandler import log
 import re
+from urllib import FancyURLopener
 from .skipTranslation import translate
 
 sys.path.append(os.path.join(os.path.dirname(__file__), "..", ".."))
@@ -399,6 +399,14 @@ class RestoreDialog(wx.Dialog):
 	def onCancel(self, evt):
 		self.Destroy()
 
+		
+		### Opener
+
+class Opener(FancyURLopener):
+	version = 'Mozilla/5.0 (Windows; U; MSIE 7.0; Windows NT 6.0; en-US)'
+
+opener = Opener()
+
 ### Feed object 
 
 class Feed(object):
@@ -408,12 +416,26 @@ class Feed(object):
 		self._url = url
 		self._document = None
 		self._articles = []
-		self.refresh()
+		gui.ExecAndPump(self.refresh)
 
 	def refresh(self):
+		progressDialog = gui.IndeterminateProgressDialog(gui.mainFrame,
+			# Translators: The title of the dialog presented while a feed is being processed.
+			_("Processing feed"),
+			# Translators: The message displayed while a feed is being processed.
+			_("Please, wait while thefeed is being processed"))
 		try:
-			self._document = minidom.parse(urllib.urlopen(self._url))
+			self._document = minidom.parse(opener.open(self._url))
+			progressDialog.done()
+			del progressDialog
 		except Exception as e:
+			progressDialog.done()
+			del progressDialog
+			# Translators: Message presented when an error occurs.
+			gui.messageBox(_("Failed to process url %s as a feed")%self._url,
+				# Message translated in NVDA's core.
+				translate("Error"),
+				wx.OK | wx.ICON_ERROR)
 			raise e
 		# Check if we are dealing with an rss or atom feed.
 		rssFeed = self._document.getElementsByTagName('channel')
