@@ -11,11 +11,12 @@ ATOM каналы.
 
 ## Установка или Обновление: ##
 
-If you used a previous version of this addon, and there is an RSS or
-personalFeeds folder in your personal NVDA configuration folder, when
-installing the current version, a dialog will ask if you want to upgrade or
-install.  Choose update to preserve your saved feeds and to continue using
-them in the new installed version of readFeeds.
+Если вы использовали предыдущую версию этого дополнения, и есть папка RSS
+или personalFeeds в пользовательской папке конфигурации NVDA, при установке
+текущей версии, появится диалог с запросом  обновления или
+установки. Выберите обновление, чтобы сохранить ваши сохраненные ленты
+новостей и продолжать использовать их в новой установленной версии
+readFeeds.
 
 ## Команды: ##
 

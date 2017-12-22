@@ -1,8 +1,8 @@
 # RSS-Feed-Reader #
 
-* Authoren: Noelia Ruiz Martínez, Mesar Hameed
-* [Stabile version][2] herunterladen
-* [Testversion][1] herunterladen
+* Authors: Noelia Ruiz Martínez, Mesar Hameed
+* [stabile version][1] herunterladen
+* Herunterladen der [Entwickler-Version][2]
 
 Diese Erweiterung bietet eine einfache Möglichkeit, RSS-Feeds in den
 Formaten Atom oder RSS mit NVDA zu lesen. Die Feeds werden nicht automatisch
@@ -11,55 +11,109 @@ sowohl RSS- als auch  ATOM-Feeds.
 
 ## Installation oder Aktualisierung: ##
 
-If you used a previous version of this addon, and there is an RSS or
-personalFeeds folder in your personal NVDA configuration folder, when
-installing version 6.0 or later, a dialog will ask if you want to upgrade or
-install.  Choose update to preserve your saved feeds and to continue using
-them in the new installed version of readFeeds.
+Wenn Sie eine frühere Version dieser Erweiterung verwendet haben und in
+Ihrem persönlichen NVDA-Konfigurationsordner ein RSS- oder
+personalFeeds-Ordner vorhanden ist, wird bei der Installation der aktuellen
+Version ein Dialogfeld angezeigt. In diesem Dialog werden Sie gefragt, ob
+Sie ein Upgrade oder eine Installation durchführen möchten.  Wählen Sie
+update, um Ihre gespeicherten Feeds zu behalten und sie in der neu
+installierten Version von RSS-Feed-Reader weiter zu verwenden.
 
 ## Befehle: ##
 
 ### Feed-Reader-Menü ###
 
-You can access the Read Feeds submenu from the nvda menu, NVDA+N, where the
-following menu options are available:
+Sie können auf das Untermenü RSS-Feed-Reader aus dem nvda-Menü, Untermenü
+Extras zugreifen. Es stehen folgende Menüoptionen zur Verfügung:
 
-- Artikel-Liste... präsentiert die Artikel-Liste aus Ihrem aktuellen
-Feed. Wählen Sie den Artikel, den Sie lesen möchten und drücken Sie die
-Taste OK, um die entsprechende Seite in Ihrem Browser zu öffnen.
+#### RSS-Feeds... ####
 
-Hinweis: Wenn Sie eine zuvor gespeicherte Feed-URL löschen möchten,
-entfernen Sie einfach die entsprechende Datei.
+Öffnet einen Dialog mit den folgenden Steuerelementen:
+
+* Filtern nach: Ein Eingabefeld, um zuvor gespeicherte Feeds zu durchsuchen.
+* Eine Liste der gespeicherten RSS-Feeds.
+* Artikelliste: Öffnet einen Dialog mit der Artikelliste des aktuellen
+  Feeds. Wählen Sie den gewünschten Artikel aus und drücken Sie die
+  OK-Taste, um die entsprechende Seite in Ihrem Browser zu öffnen.
+* Neu: Öffnet einen Dialog mit einem Eingabefeld zur Eingabe der Adresse
+  eines neuen RSS-Feeds. Wenn die Adresse gültig ist und der Feed
+  gespeichert werden kann, erscheint sein Name, basierend auf dem
+  Feed-Titel, am Ende der Liste der RSS-Feeds.
+* Umbenennen: Öffnet einen Dialog mit einem Eingabefeld zum Umbenennen des
+  ausgewählten Feeds.
+* Löschen: Öffnet einen Dialog zum Löschen des ausgewählten Feeds.
+* Als standard festlegen: Legt den ausgewählten RSS-Feed als Standard fest,
+  so dass auf seine Artikel mit den Tastenkürzel von NVDA zugegriffen werden
+  kann.
+* Schließen: Schließt den Dialog.
+
+##### Hinweise #####
+
+* Wenn ein Feed namens tempFeed erstellt wird, benennen Sie ihn bitte
+  um. Sie könnten diese Datei bei Bedarf ersetzen, um einen Feed zu
+  erstellen, dessen Name bereits existiert.
+* Der als Standard eingestellte Feed kann nicht entfernt werden. Der
+  AddressFile-Feed wird als Standard verwendet, wenn die Konfiguration
+  zurückgesetzt wird. Daher kann dieser Ordner nicht gelöscht werden.
+
+####Artikelordner kopieren... ####
+
+Öffnet einen Dialog zur Auswahl eines Ordners, in dem Sie das
+personalFeeds-Verzeichnis Ihrer Artikel speichern können. Standardmäßig ist
+der ausgewählte Ordner das Konfigurationsverzeichnis von NVDA.
+
+#### RSS-Feeds wiederherstellen... ####
+
+Öffnet einen Dialog zur Auswahl eines Ordners, der Ihre Feeds im
+personalFeeds-Ordner ersetzt. Stellen Sie sicher, dass Sie einen Ordner mit
+Feed-URLs auswählen.
 
 ### Tastenkombinationen: ###
 
-- Strg+Umschalt+NVDA+Leertaste: gibt die aktuellen URL des Artikels
-aus. Durch zweimaliges Drücken wird die Internetseite geöffnet.
-- Strg+Umschalt+NVDA+8: Aktualisiert den ausgewählten Feed und kündigt
-dessen neuesten Titel an.
-- Strg+Umschalt+NVDA+I: Gibt den Titel des Feeds aus. Durch zweimaliges
-Drücken wird der Titel und der damit verbundenen Link in die Zwischenablage
-kopiert.
-- Strg+Umschalt+NVDA+U: gibt den vorherigen Feed-Titel aus.
-- Strg+Umschalt+NVDA+O: gibt den  nächste Feed-Titel aus.
+* STRG+Umschalt+NVDA+Leertaste: sagt die aktuelle Adresse des Artikels
+  an. Zweimaliges Drücken öffnet die Webseite des Artikels.
+* STRG+Umschalt+NVDA+8: das ausgewählte RSS-Feed wir neugeladen und der
+  aktuellste Titel wird angesagt.
+* Strg+Umschalt+NVDA+I: sagt den aktuellen Feed-Titel und -Link an. Durch
+  zweimaliges Drücken wird der Titel und der zugehörige Link in die
+  Zwischenablage kopiert.
+* STRG+Umschalt+NVDA+U: sagt den Titel des vorherigen RSS-Feeds an.
+* STRG+Umschalt+NVDA+O: sagt den Titel des nächsten RSS-Feeds an.
 
-## Bemerkungen: ##
+## Benachrichtigungen werden ausgegeben: ##
 
-- When the title or URL have been copied.  - When unable to connect/refresh
-a feed, or the URL does not correspond to a valid feed.  - NVDA will display
-an error message if it was not possible to backup the personalFeeds folder.
-- The title of the article list dialog displays the selected feed name and
-number of items available.
+* Wenn der Titel oder die URL kopiert wurden.
+* Wenn die Verbindung / das Neuladen eines RSS-Feeds fehlgeschlagen ist,
+  oder wenn die URL nicht mit einem gültigen Feed übereinstimmt.
+* NVDA zeigt eine Fehlermeldung an, wenn die Sicherung oder
+  Wiederherstellung des Ordners personalFeeds nicht möglich war.
+* Im Titel des Dialogs für die Artikellisten werden der Name des
+  ausgewählten Feeds und die Anzahl der verfügbaren Artikel angezeigt.
 
-## Änderungen bis 2.0 ##
-*	 Die Hilfe zur Erweiterung ist über den Erweiterungs-Manager verfügbar.
 
-## Änderungen bis 1.0 ##
-*	 Ehrstveröffentlichung.
+## Änderungen in 3.0 ##
+
+* Die Dialoge zur Verwaltung von RSS-Feed-Dateien wurden entfernt. Jetzt ist
+  ihre Funktionalität im RSS-Feeds-Dialog enthalten.
+* Die visuelle Darstellung der Dialoge wurde verbessert und entspricht dem
+  Erscheinungsbild der Dialoge in NVDA.
+* Der Standard-Feed wird in der NVDA-Konfiguration gespeichert. Daher ist es
+  möglich, verschiedene Standard-Feeds in Konfigurationsprofilen
+  einzustellen.
+* NVDA 2016.4 oder höher ist erforderlich
+
+
+## Änderungen in 2.0 ##
+
+* Hilfe zur Erweiterung ist über den Dialog "Erweiterungen verwalten"
+  verfügbar.
+
+## Änderungen in 1.0 ##
+
+* Ehrstveröffentlichung.
 
 [[!tag dev stable]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=rf-dev
+[1]: https://addons.nvda-project.org/files/get.php?file=rf
 
-[2]: http://addons.nvda-project.org/files/get.php?file=rf
-
+[2]: https://addons.nvda-project.org/files/get.php?file=rf-dev

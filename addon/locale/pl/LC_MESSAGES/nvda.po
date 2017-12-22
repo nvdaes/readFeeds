@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: readFeeds 1.0-dev\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-11-16 13:26+0100\n"
-"PO-Revision-Date: 2017-05-08 15:10+0100\n"
-"Last-Translator: zvonimir stanecic <zvonimirek222@yandex.com>\n"
+"PO-Revision-Date: 2017-12-20 04:12+0100\n"
+"Last-Translator: Patryk <patric3031@wp.pl>\n"
 "Language-Team: Polish <killer@tyflonet.com>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
@@ -18,36 +18,24 @@ msgstr ""
 "X-Generator: Poedit 1.6.10\n"
 
 #. Translators: the label of a message box dialog.
-msgid ""
-"You have installed the ReadFeeds add-on, probably an old and incompatible "
-"version with this one. Do you want to uninstall the old version?"
-msgstr ""
-"Zainstalowałeś dodatek ReadFeeds prawdopodobnie w starej wersji, "
-"niekompatybilnej z obecną. Czy chcesz odinstalować starą wersję?"
+msgid "You have installed the ReadFeeds add-on, probably an old and incompatible version with this one. Do you want to uninstall the old version?"
+msgstr "Zainstalowałeś dodatek ReadFeeds prawdopodobnie w starej wersji, niekompatybilnej z obecną. Czy chcesz odinstalować starą wersję?"
 
 #. Translators: the title of a message box dialog.
 msgid "Uninstall incompatible add-on"
 msgstr "Odinstaluj niekompatybilny dodatek"
 
 #. Translators: the label of a message box dialog.
-msgid ""
-"Your configuration folder for NVDA contains files that seem to be derived "
-"from a previous version of this add-on. Do you want to update it?"
-msgstr ""
-"Twój folder konfiguracyjny NVDA zawiera pliki, które wydają się pochodzić z "
-"poprzedniej wersji tego dodatku. Czy chcesz je zaktualizować?"
+msgid "Your configuration folder for NVDA contains files that seem to be derived from a previous version of this add-on. Do you want to update it?"
+msgstr "Twój folder konfiguracyjny NVDA zawiera pliki, które wydają się pochodzić z poprzedniej wersji tego dodatku. Czy chcesz je zaktualizować?"
 
 #. Translators: the title of a message box dialog.
 msgid "Install or update add-on"
 msgstr "Zainstaluj lub aktualizuj dodatek"
 
 #. Translators: message presented when feeds cannot be reported.
-msgid ""
-"Unable to refresh feed. Check your Internet conectivity or that the "
-"specified feed address is correct."
-msgstr ""
-"Nie można odświeżyć kanału. Sprawdź połączenie internetowe i poprawność "
-"podanego adresu kanału."
+msgid "Unable to refresh feed. Check your Internet conectivity or that the specified feed address is correct."
+msgstr "Nie można odświeżyć kanału. Sprawdź połączenie internetowe i poprawność podanego adresu kanału."
 
 #. Translators: Message presented when feeds have been copied.
 msgid "Feeds copied"
@@ -107,9 +95,7 @@ msgstr "Nowy kanał osobisty"
 
 #. Translators: The confirmation prompt displayed when the user requests to delete a feed.
 msgid "Are you sure you want to delete this feed? This cannot be undone."
-msgstr ""
-"Czy jesteś pewien, że chcesz usunąć ten kanał osobisty? Ta akcja jest "
-"nieodwracalna."
+msgstr "Czy jesteś pewien, że chcesz usunąć ten kanał osobisty? Ta akcja jest nieodwracalna."
 
 #. Translators: The label of a field to enter a new name for a feed.
 msgid "New name:"
@@ -153,8 +139,7 @@ msgid ""
 "\n"
 "\t\tThey will be copied to %s."
 msgstr ""
-"Wybierz katalog, w którym zostanie przywrucona kopia twoich kanałów "
-"osobistych.\n"
+"Wybierz katalog, w którym zostanie przywrucona kopia twoich kanałów osobistych.\n"
 "\n"
 "\t\tKanały będą skopiowane do %s."
 
@@ -231,12 +216,8 @@ msgid "Copied to clipboard %s"
 msgstr "Skopiowano do schowka %s"
 
 #. Translators: message presented in input mode.
-msgid ""
-"Announces the title of the current article. Pressed two times, copies title "
-"and related link to the clipboard."
-msgstr ""
-"Oznajmia tytuł aktualnego artykułu. Dwukrotne naciśnięcie kopiuje tytuł i "
-"link do schowka."
+msgid "Announces the title of the current article. Pressed two times, copies title and related link to the clipboard."
+msgstr "Oznajmia tytuł aktualnego artykułu. Dwukrotne naciśnięcie kopiuje tytuł i link do schowka."
 
 #. Translators: message presented in input mode.
 msgid "Announces the title of the next article."
@@ -248,8 +229,7 @@ msgstr "Oznajmia tytuł poprzedniego artykułu."
 
 #. Translators: message presented in input mode.
 msgid "Announces article link, when pressed two times, opens related web page."
-msgstr ""
-"Oznajmia link do artykułu, dwukrotne naciśnięcie otwiera stronę internetową."
+msgstr "Oznajmia link do artykułu, dwukrotne naciśnięcie otwiera stronę internetową."
 
 #. Translators: message presented in input mode.
 msgid "Copies title and related link of the current article to the clipboard."
@@ -264,3 +244,4 @@ msgstr "Czytaj wiadomości / Read Feeds"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Add-on for using NVDA as a feed reader."
 msgstr "Dodatek pozwalający używać NVDA jako czytnika kanałów z wiadomościami."
+
