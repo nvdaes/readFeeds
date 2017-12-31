@@ -1,14 +1,14 @@
 # -*- coding: UTF-8 -*-
 
 # Read feeds: A simple plugin for reading feeds with NVDA
-#Copyright (C) 2012-2016 Noelia Ruiz Martínez, Mesar Hameed
+#Copyright (C) 2012-2017 Noelia Ruiz Martínez, Mesar Hameed
 # Released under GPL 2
 
-import addonHandler
-import globalPluginHandler
 import os
 import sys
 import shutil
+import addonHandler
+import globalPluginHandler
 import globalVars
 import config
 import urllib
@@ -20,7 +20,7 @@ import wx
 import ui
 from logHandler import log
 import re
-from skipTranslation import translate
+from .skipTranslation import translate
 
 sys.path.append(os.path.join(os.path.dirname(__file__), "..", ".."))
 from xml2.dom import minidom
@@ -98,7 +98,7 @@ class FeedsDialog(wx.Dialog):
 
 		mainSizer = wx.BoxSizer(wx.VERTICAL)
 		sHelper = guiHelper.BoxSizerHelper(self,orientation=wx.VERTICAL)
-				# Label of a dialog (message translated in NVDA core in different contexts).
+		# Label of a dialog (message translated in NVDA core in different contexts).
 		searchTextLabel = _("&Filter by:")
 		self.searchTextEdit = sHelper.addLabeledControl(searchTextLabel, wx.TextCtrl)
 		self.searchTextEdit.Bind(wx.EVT_TEXT, self.onSearchEditTextChange)
@@ -126,6 +126,10 @@ class FeedsDialog(wx.Dialog):
 		feedsListGroupContents.AddSpacer(guiHelper.SPACE_BETWEEN_ASSOCIATED_CONTROL_HORIZONTAL)
 
 		buttonHelper = guiHelper.ButtonHelper(wx.VERTICAL)
+		# Translators: The label of a button to open a feed.
+		self.openButton = buttonHelper.addButton(self, label=_("&Open feed"))
+		self.openButton.Bind(wx.EVT_BUTTON, self.onOpen)
+
 		# Translators: The label of a button to add a new feed.
 		newButton = buttonHelper.addButton(self, label=_("&New..."))
 		newButton.Bind(wx.EVT_BUTTON, self.onNew)
@@ -190,6 +194,7 @@ class FeedsDialog(wx.Dialog):
 		self.sel = self.feedsList.Selection
 		self.stringSel = self.feedsList.StringSelection
 		self.articlesButton.Enabled = self.sel>= 0
+		self.openButton.Enabled = self.sel>= 0
 		self.deleteButton.Enabled = (self.sel >= 0 and 
 			self.stringSel != DEFAULT_ADDRESS_FILE and 
 			config.conf["readFeeds"]["addressFile"] != self.stringSel)
@@ -214,11 +219,17 @@ class FeedsDialog(wx.Dialog):
 				return
 			os.startfile(feed.getArticleLink(d.Selection))
 
+	def onOpen(self, evt):
+		with open(os.path.join(FEEDS_PATH, "%s.txt" % self.stringSel), "r") as f:
+			address = f.read()
+			f.close()
+		os.startfile(address)
+
 	def onNew(self, evt):
 		# Translators: The label of a field to enter an address for a new feed.
 		with wx.TextEntryDialog(self, _("Address of a new feed:"),
 			# Translators: The title of a dialog to create a new feed.
-				_("New feed")) as d:
+			_("New feed")) as d:
 			if d.ShowModal() == wx.ID_CANCEL:
 				return
 			name = self.createFeed(d.Value)
@@ -246,8 +257,8 @@ class FeedsDialog(wx.Dialog):
 	def onRename(self, evt):
 		# Translators: The label of a field to enter a new name for a feed.
 		with wx.TextEntryDialog(self, _("New name:"),
-				# Translators: The title of a dialog to rename a feed.
-				_("Rename feed"), defaultValue=self.stringSel) as d:
+			# Translators: The title of a dialog to rename a feed.
+			_("Rename feed"), defaultValue=self.stringSel) as d:
 			if d.ShowModal() == wx.ID_CANCEL or not d.Value:
 				return
 			curName = "%s.txt" % self.stringSel
@@ -473,28 +484,16 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		super(globalPluginHandler.GlobalPlugin, self).__init__()
 		self.menu = gui.mainFrame.sysTrayIcon.toolsMenu
 		self.readFeedsMenu = wx.Menu()
-		self.mainItem = self.menu.AppendSubMenu(self.readFeedsMenu,
 		# Translators: the name of a submenu.
-		_("&Read Feeds"),
-		# Translators: the tooltip for a submenu.
-		_("Manage feeds."))
-		self.feedsListItem = self.readFeedsMenu.Append(wx.ID_ANY,
+		self.mainItem = self.menu.AppendSubMenu(self.readFeedsMenu, _("&Read Feeds"))
 		# Translators: the name of a menu item.
-		_("&Feeds..."),
-		# Translators: the tooltip for a menu item.
-		_("View and manage feeds"))
+		self.feedsListItem = self.readFeedsMenu.Append(wx.ID_ANY, _("&Feeds..."))
 		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, self.onFeeds, self.feedsListItem)
-		self.copyItem = self.readFeedsMenu.Append(wx.ID_ANY,
-			# Translators: the name of a menu item.
-			_("&Copy feeds folder..."),
-			# Translators: the tooltip for a menu item.
-			_("Backup of feeds"))
+		# Translators: the name of a menu item.
+		self.copyItem = self.readFeedsMenu.Append(wx.ID_ANY, _("&Copy feeds folder..."))
 		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, self.onCopy, self.copyItem)
-		self.restoreItem = self.readFeedsMenu.Append(wx.ID_ANY,
-			# Translators: the name of a menu item.
-			_("R&estore feeds..."),
-			# Translators: the tooltip for a menu item.
-			_("Restore previously saved feeds"))
+		# Translators: the name of a menu item.
+		self.restoreItem = self.readFeedsMenu.Append(wx.ID_ANY, _("R&estore feeds..."))
 		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, self.onRestore, self.restoreItem)
 
 		self.feed = None
