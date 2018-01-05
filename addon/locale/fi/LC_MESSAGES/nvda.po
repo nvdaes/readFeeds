@@ -78,6 +78,11 @@ msgstr "&Suodata:"
 msgid "List of &articles..."
 msgstr "&Artikkeliluettelo..."
 
+#. Translators: The label of a button to open a feed.
+#, fuzzy
+msgid "&Open feed"
+msgstr "Uusi syöte"
+
 #. Translators: The label of a button to add a new feed.
 msgid "&New..."
 msgstr "&Uusi..."
@@ -177,33 +182,17 @@ msgstr "Artikkelin linkkiä ei löydy."
 msgid "&Read Feeds"
 msgstr "&Lue syötteet"
 
-#. Translators: the tooltip for a submenu.
-msgid "Manage feeds."
-msgstr "Hallinnoi syötteitä."
-
 #. Translators: the name of a menu item.
 msgid "&Feeds..."
 msgstr "&Syötteet..."
-
-#. Translators: the tooltip for a menu item.
-msgid "View and manage feeds"
-msgstr "Näytä ja hallinnoi syötteitä"
 
 #. Translators: the name of a menu item.
 msgid "&Copy feeds folder..."
 msgstr "&Kopioi syötteiden kansio..."
 
-#. Translators: the tooltip for a menu item.
-msgid "Backup of feeds"
-msgstr "Syötteiden varmuuskopio"
-
 #. Translators: the name of a menu item.
 msgid "R&estore feeds..."
 msgstr "P&alauta syötteet..."
-
-#. Translators: the tooltip for a menu item.
-msgid "Restore previously saved feeds"
-msgstr "Palauta aiemmin tallennetut syötteet"
 
 #. Translators: message presented in input mode.
 #, python-format
@@ -263,3 +252,15 @@ msgstr "Lue syötteet"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Add-on for using NVDA as a feed reader."
 msgstr "Lisäosa, jolla NVDA:ta voidaan käyttää syötteenlukijana."
+
+#~ msgid "Manage feeds."
+#~ msgstr "Hallinnoi syötteitä."
+
+#~ msgid "View and manage feeds"
+#~ msgstr "Näytä ja hallinnoi syötteitä"
+
+#~ msgid "Backup of feeds"
+#~ msgstr "Syötteiden varmuuskopio"
+
+#~ msgid "Restore previously saved feeds"
+#~ msgstr "Palauta aiemmin tallennetut syötteet"

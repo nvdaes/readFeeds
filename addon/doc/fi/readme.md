@@ -33,6 +33,7 @@ Avaa valintaikkunan, jossa on seuraavat säätimet:
 * Artikkeliluettelo: Avaa valintaikkunan, joka näyttää luettelon nykyisen
   syötteesi artikkeleista. Valitse artikkeli, jonka haluat lukea ja paina
   OK-painiketta avataksesi vastaavan sivun selaimessasi.
+* Avaa syöte: Avaa valitun syötteen oletussovelluksessa.
 * Uusi: Avaa muokkausruudun sisältävän valintaikkunan, johon voit kirjoittaa
   uuden syötteen osoitteen. Mikäli syöte on kelvollinen ja se voidaan
   tallentaa, sen otsikkoon pohjautuva nimi ilmestyy artikkeliluettelon
@@ -87,6 +88,11 @@ vain syötteiden URL-osoitteita sisältävän kansion.
   Artikkeliluettelo-valintaikkunan otsikossa.
 
 
+
+## Muutokset versiossa 4.0 ##
+
+* Syötteet-valintaikkunaan lisätty painike valitun syötteen avaamiseen.
+
 ## Muutokset versiossa 3.0 ##
 
 * Syötetiedostojen hallintavalintaikkunat on poistettu. Niiden
@@ -108,6 +114,6 @@ vain syötteiden URL-osoitteita sisältävän kansion.
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=rf
+[1]: http://addons.nvda-project.org/files/get.php?file=rf
 
-[2]: https://addons.nvda-project.org/files/get.php?file=rf-dev
+[2]: http://addons.nvda-project.org/files/get.php?file=rf-dev

@@ -77,6 +77,11 @@ msgstr ""
 msgid "List of &articles..."
 msgstr "Список &статей..."
 
+#. Translators: The label of a button to open a feed.
+#, fuzzy
+msgid "&Open feed"
+msgstr "Новий канал"
+
 #. Translators: The label of a button to add a new feed.
 msgid "&New..."
 msgstr "&Новий..."
@@ -177,33 +182,17 @@ msgstr "Не вдалося знайти посилання на статтю."
 msgid "&Read Feeds"
 msgstr "&Читати канали новин"
 
-#. Translators: the tooltip for a submenu.
-msgid "Manage feeds."
-msgstr "Керування каналами."
-
 #. Translators: the name of a menu item.
 msgid "&Feeds..."
 msgstr "&Канали новин..."
-
-#. Translators: the tooltip for a menu item.
-msgid "View and manage feeds"
-msgstr "Перегляд та керування каналами новин"
 
 #. Translators: the name of a menu item.
 msgid "&Copy feeds folder..."
 msgstr "&Копіювати папку каналів новин."
 
-#. Translators: the tooltip for a menu item.
-msgid "Backup of feeds"
-msgstr "Резервна копія каналів новин"
-
 #. Translators: the name of a menu item.
 msgid "R&estore feeds..."
 msgstr "В&ідновлення каналів новин."
-
-#. Translators: the tooltip for a menu item.
-msgid "Restore previously saved feeds"
-msgstr "Відновлення попередньо збережених каналів"
 
 #. Translators: message presented in input mode.
 #, python-format
@@ -265,3 +254,15 @@ msgstr "Читати канали новин"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Add-on for using NVDA as a feed reader."
 msgstr "Додаток для використання програми NVDA як переглядача каналів новин."
+
+#~ msgid "Manage feeds."
+#~ msgstr "Керування каналами."
+
+#~ msgid "View and manage feeds"
+#~ msgstr "Перегляд та керування каналами новин"
+
+#~ msgid "Backup of feeds"
+#~ msgstr "Резервна копія каналів новин"
+
+#~ msgid "Restore previously saved feeds"
+#~ msgstr "Відновлення попередньо збережених каналів"

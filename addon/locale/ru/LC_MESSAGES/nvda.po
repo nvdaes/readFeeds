@@ -77,6 +77,11 @@ msgstr "&Фильтр по:"
 msgid "List of &articles..."
 msgstr "Список &Статей..."
 
+#. Translators: The label of a button to open a feed.
+#, fuzzy
+msgid "&Open feed"
+msgstr "Новая новостная лента"
+
 #. Translators: The label of a button to add a new feed.
 msgid "&New..."
 msgstr "&Новый..."
@@ -177,33 +182,17 @@ msgstr "Не удалось найти расположение ссылки с�
 msgid "&Read Feeds"
 msgstr "&Чтение новостей"
 
-#. Translators: the tooltip for a submenu.
-msgid "Manage feeds."
-msgstr "Управление новостными лентами."
-
 #. Translators: the name of a menu item.
 msgid "&Feeds..."
 msgstr "&Новостные ленты..."
-
-#. Translators: the tooltip for a menu item.
-msgid "View and manage feeds"
-msgstr "Просмотр и управление новостными лентами"
 
 #. Translators: the name of a menu item.
 msgid "&Copy feeds folder..."
 msgstr "&Копировать Папку новостных лент..."
 
-#. Translators: the tooltip for a menu item.
-msgid "Backup of feeds"
-msgstr "Резервная копия новостных лент"
-
 #. Translators: the name of a menu item.
 msgid "R&estore feeds..."
 msgstr "В&осстановить новостные ленты..."
-
-#. Translators: the tooltip for a menu item.
-msgid "Restore previously saved feeds"
-msgstr "Восстановить ранее сохранённые новостные ленты"
 
 #. Translators: message presented in input mode.
 #, python-format
@@ -267,3 +256,15 @@ msgstr "Read Feeds"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Add-on for using NVDA as a feed reader."
 msgstr "Дополнение для использования NVDA как чтеца лент новостей."
+
+#~ msgid "Manage feeds."
+#~ msgstr "Управление новостными лентами."
+
+#~ msgid "View and manage feeds"
+#~ msgstr "Просмотр и управление новостными лентами"
+
+#~ msgid "Backup of feeds"
+#~ msgstr "Резервная копия новостных лент"
+
+#~ msgid "Restore previously saved feeds"
+#~ msgstr "Восстановить ранее сохранённые новостные ленты"

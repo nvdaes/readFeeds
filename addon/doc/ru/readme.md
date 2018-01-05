@@ -35,6 +35,7 @@ readFeeds.
 * Список статей: открывает диалог, в котором приводится перечень статей
   текущей новостной ленты. Выберите статью, которую вы хотите прочитать, и
   нажмите кнопку ОК, чтобы открыть соответствующую страницу в браузере.
+* Open feed: Opens the selected feed in the default application.
 * Новый: открывает диалог с полем редактирования, где можно ввести адрес
   новой ленты. Если адрес действителен и новостная лента может быть
   сохранена, её имя появится в низу списка новостных лент, исходя из
@@ -90,6 +91,11 @@ URL-адреса новостных лент.
   с количеством доступных элементов.
 
 
+
+## Changes for 4.0 ##
+
+* Added a button to open the selected feed from the Feeds dialog.
+
 ## Изменения для 3.0 ##
 
 * Диалоги управления файлами лент были удалены. Сейчас их функциональность
@@ -112,6 +118,6 @@ URL-адреса новостных лент.
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=rf
+[1]: http://addons.nvda-project.org/files/get.php?file=rf
 
-[2]: https://addons.nvda-project.org/files/get.php?file=rf-dev
+[2]: http://addons.nvda-project.org/files/get.php?file=rf-dev

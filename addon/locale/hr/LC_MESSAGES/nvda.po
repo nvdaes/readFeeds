@@ -77,6 +77,11 @@ msgstr ""
 msgid "List of &articles..."
 msgstr "Popis &Članaka..."
 
+#. Translators: The label of a button to open a feed.
+#, fuzzy
+msgid "&Open feed"
+msgstr "Novi feed"
+
 #. Translators: The label of a button to add a new feed.
 msgid "&New..."
 msgstr "&Novi..."
@@ -176,33 +181,17 @@ msgstr "Ne mogu pronaći link članka."
 msgid "&Read Feeds"
 msgstr "&Čitaj feedove"
 
-#. Translators: the tooltip for a submenu.
-msgid "Manage feeds."
-msgstr "Upravljaj feedovima."
-
 #. Translators: the name of a menu item.
 msgid "&Feeds..."
 msgstr "&Feedovi..."
-
-#. Translators: the tooltip for a menu item.
-msgid "View and manage feeds"
-msgstr "Pregledaj i upravljaj feedovima"
 
 #. Translators: the name of a menu item.
 msgid "&Copy feeds folder..."
 msgstr "&kopiraj folder s feedovima..."
 
-#. Translators: the tooltip for a menu item.
-msgid "Backup of feeds"
-msgstr "Mapa sigurnosne kopije feedova"
-
 #. Translators: the name of a menu item.
 msgid "R&estore feeds..."
 msgstr "&vrati fe.edove.."
-
-#. Translators: the tooltip for a menu item.
-msgid "Restore previously saved feeds"
-msgstr "Vrati prije spremljene feedove"
 
 #. Translators: message presented in input mode.
 #, python-format
@@ -264,3 +253,15 @@ msgstr "Čitač Vijesti"
 msgid "Add-on for using NVDA as a feed reader."
 msgstr ""
 "Dodatak koji omogućuje korištenje čitača ekrana NVDA kao čitača vijesti."
+
+#~ msgid "Manage feeds."
+#~ msgstr "Upravljaj feedovima."
+
+#~ msgid "View and manage feeds"
+#~ msgstr "Pregledaj i upravljaj feedovima"
+
+#~ msgid "Backup of feeds"
+#~ msgstr "Mapa sigurnosne kopije feedova"
+
+#~ msgid "Restore previously saved feeds"
+#~ msgstr "Vrati prije spremljene feedove"

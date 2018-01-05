@@ -75,6 +75,11 @@ msgstr ""
 msgid "List of &articles..."
 msgstr "قائمة ال&مقالات..."
 
+#. Translators: The label of a button to open a feed.
+#, fuzzy
+msgid "&Open feed"
+msgstr "تلقيم جديد"
+
 #. Translators: The label of a button to add a new feed.
 msgid "&New..."
 msgstr "&جديد..."
@@ -173,33 +178,17 @@ msgstr "تعذر تحديد رابط المقال"
 msgid "&Read Feeds"
 msgstr "&قراءة التلقيمات"
 
-#. Translators: the tooltip for a submenu.
-msgid "Manage feeds."
-msgstr "إدارة التلقيمات"
-
 #. Translators: the name of a menu item.
 msgid "&Feeds..."
 msgstr "ال&تلقيمات..."
-
-#. Translators: the tooltip for a menu item.
-msgid "View and manage feeds"
-msgstr "عرض وإدارة التلقيمات"
 
 #. Translators: the name of a menu item.
 msgid "&Copy feeds folder..."
 msgstr "&نسخ مجلد التلقيمات..."
 
-#. Translators: the tooltip for a menu item.
-msgid "Backup of feeds"
-msgstr "نسخة احطياطية من التلقيمات"
-
 #. Translators: the name of a menu item.
 msgid "R&estore feeds..."
 msgstr "ا&سترجاع التلقيمات..."
-
-#. Translators: the tooltip for a menu item.
-msgid "Restore previously saved feeds"
-msgstr "استرجاع التلقيمات المحفوظة من قبل"
 
 #. Translators: message presented in input mode.
 #, python-format
@@ -260,3 +249,15 @@ msgstr "Read Feeds"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Add-on for using NVDA as a feed reader."
 msgstr "إضافة برمجية تمكن من استخدام NVDA كقارئ للتلقيمات"
+
+#~ msgid "Manage feeds."
+#~ msgstr "إدارة التلقيمات"
+
+#~ msgid "View and manage feeds"
+#~ msgstr "عرض وإدارة التلقيمات"
+
+#~ msgid "Backup of feeds"
+#~ msgstr "نسخة احطياطية من التلقيمات"
+
+#~ msgid "Restore previously saved feeds"
+#~ msgstr "استرجاع التلقيمات المحفوظة من قبل"

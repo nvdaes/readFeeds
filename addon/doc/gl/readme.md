@@ -35,6 +35,7 @@ Abre un diálogo cos seguintes controis:
 * Listaxe de artigos: abre un diálogo que presenta a listaxe de artigos do
   teu feed actual. Seleciona o artigo que queras ler e preme o botón Aceptar
   para abrir a páxina correspondente no teu navegador.
+* Abrir feed: abre o feed selecionado na aplicación predeterminada.
 * Novo: abre un diálogo cunha Caixa de edición para introducir o enderezo
   dun feed novo. Se o enderezo é válido e o feed pode gardarse, o seu nome,
   baseado no título do feed, aparecerá ao fondo da listaxe dos feeds.
@@ -90,6 +91,11 @@ feeds.
   selecionado e o número de elementos dispoñibles.
 
 
+
+## Cambios para 4.0 ##
+
+* Engadido un botón para abrir o feed selecionado dende o diálogo Feeds.
+
 ## Cambios para 3.0 ##
 
 * Elimináronse os diálogos para xestionar os ficheiros de feeds. Agora a súa
@@ -112,6 +118,6 @@ feeds.
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=rf
+[1]: http://addons.nvda-project.org/files/get.php?file=rf
 
-[2]: https://addons.nvda-project.org/files/get.php?file=rf-dev
+[2]: http://addons.nvda-project.org/files/get.php?file=rf-dev

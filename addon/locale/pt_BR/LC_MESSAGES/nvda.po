@@ -79,6 +79,11 @@ msgstr ""
 msgid "List of &articles..."
 msgstr "Lista de &artigos..."
 
+#. Translators: The label of a button to open a feed.
+#, fuzzy
+msgid "&Open feed"
+msgstr "Novo fíd"
+
 #. Translators: The label of a button to add a new feed.
 msgid "&New..."
 msgstr "&Novo..."
@@ -177,33 +182,17 @@ msgstr "Impossível localizar linque do artigo."
 msgid "&Read Feeds"
 msgstr "Leito&r de fíds"
 
-#. Translators: the tooltip for a submenu.
-msgid "Manage feeds."
-msgstr "Gerir fíds."
-
 #. Translators: the name of a menu item.
 msgid "&Feeds..."
 msgstr "&Fíds..."
-
-#. Translators: the tooltip for a menu item.
-msgid "View and manage feeds"
-msgstr "Ver e gerenciar fíds"
 
 #. Translators: the name of a menu item.
 msgid "&Copy feeds folder..."
 msgstr "&Copiar pasta de fíds..."
 
-#. Translators: the tooltip for a menu item.
-msgid "Backup of feeds"
-msgstr "Cópia de fíds"
-
 #. Translators: the name of a menu item.
 msgid "R&estore feeds..."
 msgstr "R&estaurar fíds..."
-
-#. Translators: the tooltip for a menu item.
-msgid "Restore previously saved feeds"
-msgstr "Restaura fíds anteriormente salvos"
 
 #. Translators: message presented in input mode.
 #, python-format
@@ -264,3 +253,15 @@ msgstr "Leitor de fíds"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Add-on for using NVDA as a feed reader."
 msgstr "Complemento para usar o NVDA como um leitor de fíds."
+
+#~ msgid "Manage feeds."
+#~ msgstr "Gerir fíds."
+
+#~ msgid "View and manage feeds"
+#~ msgstr "Ver e gerenciar fíds"
+
+#~ msgid "Backup of feeds"
+#~ msgstr "Cópia de fíds"
+
+#~ msgid "Restore previously saved feeds"
+#~ msgstr "Restaura fíds anteriormente salvos"

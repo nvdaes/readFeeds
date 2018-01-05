@@ -77,6 +77,11 @@ msgstr "&Preseji med"
 msgid "List of &articles..."
 msgstr "Seznam &člankov..."
 
+#. Translators: The label of a button to open a feed.
+#, fuzzy
+msgid "&Open feed"
+msgstr "Nov vir"
+
 #. Translators: The label of a button to add a new feed.
 msgid "&New..."
 msgstr "&Nov..."
@@ -178,33 +183,17 @@ msgstr "Ni mogoče locirati povezave članka.a"
 msgid "&Read Feeds"
 msgstr "&Bralnik virov"
 
-#. Translators: the tooltip for a submenu.
-msgid "Manage feeds."
-msgstr "Upravljanje z viri"
-
 #. Translators: the name of a menu item.
 msgid "&Feeds..."
 msgstr "&Viri..."
-
-#. Translators: the tooltip for a menu item.
-msgid "View and manage feeds"
-msgstr "Preglej in upravljaj z viri"
 
 #. Translators: the name of a menu item.
 msgid "&Copy feeds folder..."
 msgstr "&Preslikaj mapo z viri..."
 
-#. Translators: the tooltip for a menu item.
-msgid "Backup of feeds"
-msgstr "Varnostna kopija virov"
-
 #. Translators: the name of a menu item.
 msgid "R&estore feeds..."
 msgstr "&Obnovi vire..."
-
-#. Translators: the tooltip for a menu item.
-msgid "Restore previously saved feeds"
-msgstr "Obnovi prej shranjene vire"
 
 #. Translators: message presented in input mode.
 #, python-format
@@ -265,3 +254,15 @@ msgstr "Bralnik Virov"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Add-on for using NVDA as a feed reader."
 msgstr "Dodatek, ki spremeni NVDA tudi v bralnik virov"
+
+#~ msgid "Manage feeds."
+#~ msgstr "Upravljanje z viri"
+
+#~ msgid "View and manage feeds"
+#~ msgstr "Preglej in upravljaj z viri"
+
+#~ msgid "Backup of feeds"
+#~ msgstr "Varnostna kopija virov"
+
+#~ msgid "Restore previously saved feeds"
+#~ msgstr "Obnovi prej shranjene vire"

@@ -77,6 +77,11 @@ msgstr "&Filtreleme kriteri:"
 msgid "List of &articles..."
 msgstr "Haber &listesi..."
 
+#. Translators: The label of a button to open a feed.
+#, fuzzy
+msgid "&Open feed"
+msgstr "Yeni kaynak"
+
 #. Translators: The label of a button to add a new feed.
 msgid "&New..."
 msgstr "&Yeni..."
@@ -175,33 +180,17 @@ msgstr "Haberin bağlantısı alınamadı."
 msgid "&Read Feeds"
 msgstr "R&SS Akışlarını Oku"
 
-#. Translators: the tooltip for a submenu.
-msgid "Manage feeds."
-msgstr "Akışları yönet"
-
 #. Translators: the name of a menu item.
 msgid "&Feeds..."
 msgstr "Akış& listesi..."
-
-#. Translators: the tooltip for a menu item.
-msgid "View and manage feeds"
-msgstr "Akışları Görüntüle/yönet"
 
 #. Translators: the name of a menu item.
 msgid "&Copy feeds folder..."
 msgstr "Besleme dizinini yede&kle..."
 
-#. Translators: the tooltip for a menu item.
-msgid "Backup of feeds"
-msgstr "Akış adreslerinin yedği"
-
 #. Translators: the name of a menu item.
 msgid "R&estore feeds..."
 msgstr "Akışları ge&ri yükle..."
-
-#. Translators: the tooltip for a menu item.
-msgid "Restore previously saved feeds"
-msgstr "Önceden kaydedilmiş akışları geri yükle"
 
 #. Translators: message presented in input mode.
 #, python-format
@@ -262,6 +251,18 @@ msgstr "Akışları Oku"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Add-on for using NVDA as a feed reader."
 msgstr "NVDA'yla RSS vb akışları takip etmeniz için bir eklenti."
+
+#~ msgid "Manage feeds."
+#~ msgstr "Akışları yönet"
+
+#~ msgid "View and manage feeds"
+#~ msgstr "Akışları Görüntüle/yönet"
+
+#~ msgid "Backup of feeds"
+#~ msgstr "Akış adreslerinin yedği"
+
+#~ msgid "Restore previously saved feeds"
+#~ msgstr "Önceden kaydedilmiş akışları geri yükle"
 
 #~ msgid "This feed contains untitled items"
 #~ msgstr "Bu akışta başlıksız ögeler var ya da başlıklar alınamıyor"

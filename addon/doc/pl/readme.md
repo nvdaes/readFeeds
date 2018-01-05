@@ -35,6 +35,7 @@ Otwiera dialog z następującymi kontrolkami:
   wyświetlanego kanału osobistego. Oznacz artykuł, którego chcesz
   przeczytać, a potem naćiśnij przycisk OK, aby otworzyć odnoszącą się
   stronę w przeglądarce www.
+* Open feed: Opens the selected feed in the default application.
 * Nowy: Otwiera okno dialogowe zawierające pole edycyjne, w którym można
   wpisać adres nowego kanału osobistego. Jeżeli adres jest prawidłowy a
   kanał osobisty może być zachowany, nazwa kanału, bazowana na podstawie
@@ -92,6 +93,11 @@ katalog zawierający kanały osobiste.
   osobistego i ilość dostępnych artykułów.
 
 
+
+## Changes for 4.0 ##
+
+* Added a button to open the selected feed from the Feeds dialog.
+
 ## Zmiany dla wersji 3.0 ##
 
 * Dialogi do zarządzania plikami kanałami osobistymi został usunięty. Teraz
@@ -114,6 +120,6 @@ katalog zawierający kanały osobiste.
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=rf
+[1]: http://addons.nvda-project.org/files/get.php?file=rf
 
-[2]: https://addons.nvda-project.org/files/get.php?file=rf-dev
+[2]: http://addons.nvda-project.org/files/get.php?file=rf-dev

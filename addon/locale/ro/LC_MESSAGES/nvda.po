@@ -78,6 +78,11 @@ msgstr "&Filtrează după:"
 msgid "List of &articles..."
 msgstr "Lista &articolelor..."
 
+#. Translators: The label of a button to open a feed.
+#, fuzzy
+msgid "&Open feed"
+msgstr "Flux nou"
+
 #. Translators: The label of a button to add a new feed.
 msgid "&New..."
 msgstr "&Nou..."
@@ -180,33 +185,17 @@ msgstr "Localizarea legăturii pentru articol nereușită."
 msgid "&Read Feeds"
 msgstr "Fluxuri de &citire"
 
-#. Translators: the tooltip for a submenu.
-msgid "Manage feeds."
-msgstr "Gestionare fluxuri."
-
 #. Translators: the name of a menu item.
 msgid "&Feeds..."
 msgstr "&Fluxuri "
-
-#. Translators: the tooltip for a menu item.
-msgid "View and manage feeds"
-msgstr "Vizualizare și gestionare fluxuri."
 
 #. Translators: the name of a menu item.
 msgid "&Copy feeds folder..."
 msgstr "Copiază dosarul fluxurilor"
 
-#. Translators: the tooltip for a menu item.
-msgid "Backup of feeds"
-msgstr "Copia de siguranță a fluxurilor"
-
 #. Translators: the name of a menu item.
 msgid "R&estore feeds..."
 msgstr "R&estaurare fluxuri..."
-
-#. Translators: the tooltip for a menu item.
-msgid "Restore previously saved feeds"
-msgstr "Restabilește fluxurile salvate anterior"
 
 #. Translators: message presented in input mode.
 #, python-format
@@ -268,3 +257,15 @@ msgstr "Read Feeds"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Add-on for using NVDA as a feed reader."
 msgstr "Supliment pentru folosirea NVDA ca cititor de fluxuri."
+
+#~ msgid "Manage feeds."
+#~ msgstr "Gestionare fluxuri."
+
+#~ msgid "View and manage feeds"
+#~ msgstr "Vizualizare și gestionare fluxuri."
+
+#~ msgid "Backup of feeds"
+#~ msgstr "Copia de siguranță a fluxurilor"
+
+#~ msgid "Restore previously saved feeds"
+#~ msgstr "Restabilește fluxurile salvate anterior"

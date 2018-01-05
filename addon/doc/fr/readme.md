@@ -36,6 +36,7 @@ Ouvre une boîte de dialogue avec les contrôles suivants :
   articles de vvos flux actuel. Sélectionnez l'article que vous souhaitez
   lire et appuyer sur le bouton OK pour ouvrir la page correspondante dans
   votre navigateur.
+* Ouvrir le flux : Ouvre le flux sélectionné dans l'application par défaut.
 * Nouveau : Ouvre une boîte de dialogue avec une zone d'édition pour entrer
   l'adresse d'un nouveau flux. Si l'adresse est valide et que le flux peut
   être enregistré, son nom, basé sur le titre du flux, apparaît au bas de la
@@ -91,6 +92,12 @@ contenant des URL de flux.
   flux sélectionné et le nombre d'éléments disponibles.
 
 
+
+## Changements pour la version 4.0 ##
+
+* Ajout d'un bouton pour ouvrir le flux sélectionné dans la boîte de
+  dialogue Flux.
+
 ## Changements pour la version 3.0 ##
 
 * Les boîtes de dialogue pour gérer les fichiers de flux ont été
@@ -115,6 +122,6 @@ contenant des URL de flux.
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=rf
+[1]: http://addons.nvda-project.org/files/get.php?file=rf
 
-[2]: https://addons.nvda-project.org/files/get.php?file=rf-dev
+[2]: http://addons.nvda-project.org/files/get.php?file=rf-dev

@@ -78,6 +78,11 @@ msgstr "&Filtrer efter:"
 msgid "List of &articles..."
 msgstr "Liste over &artikler..."
 
+#. Translators: The label of a button to open a feed.
+#, fuzzy
+msgid "&Open feed"
+msgstr "Nyt feed"
+
 #. Translators: The label of a button to add a new feed.
 msgid "&New..."
 msgstr "&Ny..."
@@ -177,33 +182,17 @@ msgstr "Kan ikke finde link til artikel."
 msgid "&Read Feeds"
 msgstr "&Læs feeds"
 
-#. Translators: the tooltip for a submenu.
-msgid "Manage feeds."
-msgstr "Styring af feeds."
-
 #. Translators: the name of a menu item.
 msgid "&Feeds..."
 msgstr "&Feeds"
-
-#. Translators: the tooltip for a menu item.
-msgid "View and manage feeds"
-msgstr "Gennemse og hold styrpå feeds"
 
 #. Translators: the name of a menu item.
 msgid "&Copy feeds folder..."
 msgstr "Mappe til &kopiering af feeds..."
 
-#. Translators: the tooltip for a menu item.
-msgid "Backup of feeds"
-msgstr "Sikkerhedskopier feeds"
-
 #. Translators: the name of a menu item.
 msgid "R&estore feeds..."
 msgstr "G&endan feeds..."
-
-#. Translators: the tooltip for a menu item.
-msgid "Restore previously saved feeds"
-msgstr "Gendan tidligere gemte feeds"
 
 #. Translators: message presented in input mode.
 #, python-format
@@ -264,3 +253,15 @@ msgstr "Læs feeds"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Add-on for using NVDA as a feed reader."
 msgstr "Tilføjelsesprogram til at bruge NVDA som nyhedslæser."
+
+#~ msgid "Manage feeds."
+#~ msgstr "Styring af feeds."
+
+#~ msgid "View and manage feeds"
+#~ msgstr "Gennemse og hold styrpå feeds"
+
+#~ msgid "Backup of feeds"
+#~ msgstr "Sikkerhedskopier feeds"
+
+#~ msgid "Restore previously saved feeds"
+#~ msgstr "Gendan tidligere gemte feeds"

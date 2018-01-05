@@ -78,6 +78,11 @@ msgstr ""
 msgid "List of &articles..."
 msgstr "רשימת &מאמרים..."
 
+#. Translators: The label of a button to open a feed.
+#, fuzzy
+msgid "&Open feed"
+msgstr "הזנה חדשה"
+
 #. Translators: The label of a button to add a new feed.
 msgid "&New..."
 msgstr "&חדש..."
@@ -176,33 +181,17 @@ msgstr "לא ניתן לאתר את הקישור למאמר."
 msgid "&Read Feeds"
 msgstr "הזנות שלא נקראו"
 
-#. Translators: the tooltip for a submenu.
-msgid "Manage feeds."
-msgstr "ניהול הזנות."
-
 #. Translators: the name of a menu item.
 msgid "&Feeds..."
 msgstr "&הזנות.."
-
-#. Translators: the tooltip for a menu item.
-msgid "View and manage feeds"
-msgstr "תצוגה של ההזנות המנוהלות"
 
 #. Translators: the name of a menu item.
 msgid "&Copy feeds folder..."
 msgstr "גיבוי תיקיית ההזנות האישיות..."
 
-#. Translators: the tooltip for a menu item.
-msgid "Backup of feeds"
-msgstr "גיבוי הזנות"
-
 #. Translators: the name of a menu item.
 msgid "R&estore feeds..."
 msgstr "שחזור ההזנות האישיות..."
-
-#. Translators: the tooltip for a menu item.
-msgid "Restore previously saved feeds"
-msgstr "שחזור ההזנות האישיות"
 
 #. Translators: message presented in input mode.
 #, python-format
@@ -261,3 +250,15 @@ msgstr "Read Feeds"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Add-on for using NVDA as a feed reader."
 msgstr "מאפשר להשתמש בNVDA תוכנת קוראת הזנות."
+
+#~ msgid "Manage feeds."
+#~ msgstr "ניהול הזנות."
+
+#~ msgid "View and manage feeds"
+#~ msgstr "תצוגה של ההזנות המנוהלות"
+
+#~ msgid "Backup of feeds"
+#~ msgstr "גיבוי הזנות"
+
+#~ msgid "Restore previously saved feeds"
+#~ msgstr "שחזור ההזנות האישיות"

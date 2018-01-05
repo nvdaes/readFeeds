@@ -80,6 +80,11 @@ msgstr "&Filtrer par:"
 msgid "List of &articles..."
 msgstr "Liste des &articles..."
 
+#. Translators: The label of a button to open a feed.
+#, fuzzy
+msgid "&Open feed"
+msgstr "Nouveau flux"
+
 #. Translators: The label of a button to add a new feed.
 msgid "&New..."
 msgstr "&Nouveau..."
@@ -181,33 +186,17 @@ msgstr "Impossible de trouver le lien de l'article."
 msgid "&Read Feeds"
 msgstr "&Read Feeds"
 
-#. Translators: the tooltip for a submenu.
-msgid "Manage feeds."
-msgstr "Gestion des flux."
-
 #. Translators: the name of a menu item.
 msgid "&Feeds..."
 msgstr "&Flux..."
-
-#. Translators: the tooltip for a menu item.
-msgid "View and manage feeds"
-msgstr "Affichage et gestion des flux"
 
 #. Translators: the name of a menu item.
 msgid "&Copy feeds folder..."
 msgstr "&Copier le dossier des flux..."
 
-#. Translators: the tooltip for a menu item.
-msgid "Backup of feeds"
-msgstr "Sauvegarder les flux"
-
 #. Translators: the name of a menu item.
 msgid "R&estore feeds..."
 msgstr "R&estaurer les flux..."
-
-#. Translators: the tooltip for a menu item.
-msgid "Restore previously saved feeds"
-msgstr "Restaurer les flux précédemment enregistrés"
 
 #. Translators: message presented in input mode.
 #, python-format
@@ -272,3 +261,15 @@ msgstr "Read Feeds"
 msgid "Add-on for using NVDA as a feed reader."
 msgstr ""
 "Module complémentaire  pour utiliser NVDA comme un lecteur de flux RSS."
+
+#~ msgid "Manage feeds."
+#~ msgstr "Gestion des flux."
+
+#~ msgid "View and manage feeds"
+#~ msgstr "Affichage et gestion des flux"
+
+#~ msgid "Backup of feeds"
+#~ msgstr "Sauvegarder les flux"
+
+#~ msgid "Restore previously saved feeds"
+#~ msgstr "Restaurer les flux précédemment enregistrés"

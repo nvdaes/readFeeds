@@ -80,6 +80,11 @@ msgstr "&Филтриране по:"
 msgid "List of &articles..."
 msgstr "Списък на &статиите..."
 
+#. Translators: The label of a button to open a feed.
+#, fuzzy
+msgid "&Open feed"
+msgstr "Нов източник"
+
 #. Translators: The label of a button to add a new feed.
 msgid "&New..."
 msgstr "&Нов..."
@@ -182,33 +187,17 @@ msgstr "Връзката към статията не може да бъде н�
 msgid "&Read Feeds"
 msgstr "Четене на &източници"
 
-#. Translators: the tooltip for a submenu.
-msgid "Manage feeds."
-msgstr "Управление на източниците."
-
 #. Translators: the name of a menu item.
 msgid "&Feeds..."
 msgstr "&Източници..."
-
-#. Translators: the tooltip for a menu item.
-msgid "View and manage feeds"
-msgstr "Преглед и управление на източниците"
 
 #. Translators: the name of a menu item.
 msgid "&Copy feeds folder..."
 msgstr "&Копирай папката с източниците..."
 
-#. Translators: the tooltip for a menu item.
-msgid "Backup of feeds"
-msgstr "Резервно копие на източниците"
-
 #. Translators: the name of a menu item.
 msgid "R&estore feeds..."
 msgstr "&Възстанови източници..."
-
-#. Translators: the tooltip for a menu item.
-msgid "Restore previously saved feeds"
-msgstr "Възстановява предишно запазени източници"
 
 #. Translators: message presented in input mode.
 #, python-format
@@ -269,3 +258,15 @@ msgstr "Read Feeds"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Add-on for using NVDA as a feed reader."
 msgstr "Добавка за използване на NVDA като четец на новинарски източници."
+
+#~ msgid "Manage feeds."
+#~ msgstr "Управление на източниците."
+
+#~ msgid "View and manage feeds"
+#~ msgstr "Преглед и управление на източниците"
+
+#~ msgid "Backup of feeds"
+#~ msgstr "Резервно копие на източниците"
+
+#~ msgid "Restore previously saved feeds"
+#~ msgstr "Възстановява предишно запазени източници"

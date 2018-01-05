@@ -35,6 +35,7 @@ Extras zugreifen. Es stehen folgende Menüoptionen zur Verfügung:
 * Artikelliste: Öffnet einen Dialog mit der Artikelliste des aktuellen
   Feeds. Wählen Sie den gewünschten Artikel aus und drücken Sie die
   OK-Taste, um die entsprechende Seite in Ihrem Browser zu öffnen.
+* Feed öffnen: Öffnet den ausgewählten Feed in der Standardanwendung.
 * Neu: Öffnet einen Dialog mit einem Eingabefeld zur Eingabe der Adresse
   eines neuen RSS-Feeds. Wenn die Adresse gültig ist und der Feed
   gespeichert werden kann, erscheint sein Name, basierend auf dem
@@ -91,6 +92,12 @@ Feed-URLs auswählen.
   ausgewählten Feeds und die Anzahl der verfügbaren Artikel angezeigt.
 
 
+
+## Änderungen in 4.0 ##
+
+* Schaltfläche zum Öffnen des ausgewählten Feeds über den Feed-Dialog
+  hinzugefügt.
+
 ## Änderungen in 3.0 ##
 
 * Die Dialoge zur Verwaltung von RSS-Feed-Dateien wurden entfernt. Jetzt ist
@@ -114,6 +121,6 @@ Feed-URLs auswählen.
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=rf
+[1]: http://addons.nvda-project.org/files/get.php?file=rf
 
-[2]: https://addons.nvda-project.org/files/get.php?file=rf-dev
+[2]: http://addons.nvda-project.org/files/get.php?file=rf-dev

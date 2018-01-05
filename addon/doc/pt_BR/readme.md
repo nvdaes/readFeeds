@@ -32,6 +32,7 @@ Abre um diálogo com os seguintes controles:
 * List of articles: Opens a dialog which presents the articles list from
   your current feed. Select the article you want to read and press OK button
   to open the corresponding page in your browser.
+* Open feed: Opens the selected feed in the default application.
 * New: Opens a dialog with an edit box to enter the address of a new
   feed. If the address is valid and the feed can be saved, its name, based
   on the feed title, will appear at the bottom of the feeds list.
@@ -83,6 +84,11 @@ personalFeeds folder. Make sure you load a folder containing feeds URLs.
   número de itens disponíveis.
 
 
+
+## Changes for 4.0 ##
+
+* Added a button to open the selected feed from the Feeds dialog.
+
 ## Mudanças na 3.0 ##
 
 * Os diálogos para gerir arquivos de fíds foram removidos. Agora a
@@ -104,6 +110,6 @@ personalFeeds folder. Make sure you load a folder containing feeds URLs.
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=rf
+[1]: http://addons.nvda-project.org/files/get.php?file=rf
 
-[2]: https://addons.nvda-project.org/files/get.php?file=rf-dev
+[2]: http://addons.nvda-project.org/files/get.php?file=rf-dev
