@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: readFeeds 1.0-dev\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-11-16 13:26+0100\n"
-"PO-Revision-Date: 2018-01-01 18:15+0100\n"
+"PO-Revision-Date: 2018-01-06 12:57+0100\n"
 "Last-Translator: Patryk <patric3031@wp.pl>\n"
 "Language-Team: Polish <killer@tyflonet.com>\n"
 "Language: pl\n"
@@ -78,9 +78,8 @@ msgid "List of &articles..."
 msgstr "Lista &Artykułów..."
 
 #. Translators: The label of a button to open a feed.
-#, fuzzy
 msgid "&Open feed"
-msgstr "Nowy kanał osobisty"
+msgstr "&otwórz kanal"
 
 #. Translators: The label of a button to add a new feed.
 msgid "&New..."

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: readFeeds 1.0-dev\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-11-23 12:28+0100\n"
-"PO-Revision-Date: 2017-12-27 12:23+0100\n"
+"PO-Revision-Date: 2018-01-05 13:40+0100\n"
 "Last-Translator: Bue Vester-Andersen <bue@vester-andersen.dk>\n"
 "Language-Team: Danish <LL@li.org>\n"
 "Language: da\n"
@@ -79,9 +79,8 @@ msgid "List of &articles..."
 msgstr "Liste over &artikler..."
 
 #. Translators: The label of a button to open a feed.
-#, fuzzy
 msgid "&Open feed"
-msgstr "Nyt feed"
+msgstr "&Åbn feed"
 
 #. Translators: The label of a button to add a new feed.
 msgid "&New..."

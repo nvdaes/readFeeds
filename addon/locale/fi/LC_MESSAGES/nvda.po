@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: readFeeds\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-11-16 13:26+0100\n"
-"PO-Revision-Date: 2017-11-19 07:38+0200\n"
+"PO-Revision-Date: 2018-01-05 14:11+0200\n"
 "Last-Translator: Jani Kinnunen <jani.kinnunen@wippies.fi>\n"
 "Language-Team: Finnish <jani.kinnunen@wippies.fi>\n"
 "Language: fi\n"
@@ -79,9 +79,8 @@ msgid "List of &articles..."
 msgstr "&Artikkeliluettelo..."
 
 #. Translators: The label of a button to open a feed.
-#, fuzzy
 msgid "&Open feed"
-msgstr "Uusi syöte"
+msgstr "&Avaa syöte"
 
 #. Translators: The label of a button to add a new feed.
 msgid "&New..."
