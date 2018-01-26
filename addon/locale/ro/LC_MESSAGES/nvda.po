@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: readFeeds 2.6\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2016-02-12 18:00+1000\n"
-"PO-Revision-Date: 2017-11-19 15:42+0200\n"
+"PO-Revision-Date: 2018-01-21 15:02+0200\n"
 "Last-Translator: Florian Ionașcu <florianionascu@hotmail.com>\n"
 "Language-Team: \n"
 "Language: ro\n"
@@ -79,9 +79,8 @@ msgid "List of &articles..."
 msgstr "Lista &articolelor..."
 
 #. Translators: The label of a button to open a feed.
-#, fuzzy
 msgid "&Open feed"
-msgstr "Flux nou"
+msgstr "&Deschidere flux"
 
 #. Translators: The label of a button to add a new feed.
 msgid "&New..."

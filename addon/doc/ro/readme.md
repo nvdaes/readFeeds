@@ -45,7 +45,8 @@ Deschide un dialog cu următoarele controale:
   implicit: Setează fluxul selectat ca implicit, deci articolele sale pot fi
   accesate cu gesturile NVDA-ului.  - Închidere: Închide dialogul
   fluxurilor.
-* Open feed: Opens the selected feed in the default application.
+* Deschide flux: Deschide fluxul selectat in aplicația standard
+  corespunzătoare.
 * Nou: Deschide un dialog cu o casetă de editare pentru introducerea adresei
   unui nou flux. Dacă adresa este validă și fluxul poate fi salvat, numele
   său bazat pe titlul acestuia va apărea la sfârșitul listei de fluxuri.
@@ -102,9 +103,10 @@ ce conține URL-urile fluxurilor.
 
 
 
-## Changes for 4.0 ##
+## Modificări în 4.0 ##
 
-* Added a button to open the selected feed from the Feeds dialog.
+* S-a adaugat un buton pentru deschiderea fluxului selectat din dialogul
+  pentru alegerea fluxurilor.
 
 ## Modificări în 3.0 ##
 
