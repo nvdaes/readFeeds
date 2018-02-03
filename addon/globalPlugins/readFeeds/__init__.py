@@ -30,9 +30,7 @@ addonHandler.initTranslation()
 
 ### Constants
 
-ADDON_DIR = os.path.join(os.path.dirname(__file__), "..", "..")  # The root of the addon folder
-ADDON_INSTANCE = addonHandler.Addon(ADDON_DIR)
-ADDON_SUMMARY = ADDON_INSTANCE.manifest['summary']
+ADDON_SUMMARY = addonHandler.getCodeAddon().manifest['summary']
 FEEDS_PATH = os.path.join(os.path.dirname(__file__), "personalFeeds").decode("mbcs")
 CONFIG_PATH = globalVars.appArgs.configPath
 DEFAULT_ADDRESS_FILE = "addressFile"
