@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: readFeeds 2.5\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2015-09-12 04:00+1000\n"
-"PO-Revision-Date: 2017-11-15 13:13+0200\n"
+"PO-Revision-Date: 2018-02-13 02:39+0100\n"
 "Last-Translator: shmuel_naaman@yahoo.com\n"
 "Language-Team: \n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.4\n"
+"X-Generator: Poedit 2.0.6\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Translators: the label of a message box dialog.
@@ -72,16 +72,15 @@ msgstr "קר הזנות"
 
 #. Label of a dialog (message translated in NVDA core in different contexts).
 msgid "&Filter by:"
-msgstr ""
+msgstr "&סינון לפי:"
 
 #. Translators: The label of a button to open the list of articles of a feed.
 msgid "List of &articles..."
 msgstr "רשימת &מאמרים..."
 
 #. Translators: The label of a button to open a feed.
-#, fuzzy
 msgid "&Open feed"
-msgstr "הזנה חדשה"
+msgstr "&הזנה חדשה"
 
 #. Translators: The label of a button to add a new feed.
 msgid "&New..."
