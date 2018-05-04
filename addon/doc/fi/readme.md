@@ -68,14 +68,14 @@ vain syötteiden URL-osoitteita sisältävän kansion.
 
 ### Näppäinkomennot: ###
 
-* Ctrl+Shift+NVDA+Välilyönti: Ilmoittaa nykyisen artikkelin
+* Ctrl+Vaihto+NVDA+Väli: Ilmoittaa nykyisen artikkelin
   URL-osoitteen. Kahdesti painettaessa avataan sen verkkosivu.
-* Ctrl+Shift+NVDA+8: Päivittää valitun syötteen ja ilmoittaa sen uusimman
+* Ctrl+Vaihto+NVDA+8: Päivittää valitun syötteen ja ilmoittaa sen uusimman
   artikkelin otsikon.
-* Ctrl+Shift+NVDA+I: Ilmoittaa nykyisen syötteen otsikon ja linkin. Kahdesti
-  painettaessa ne kopioidaan leikepöydälle.
-* Ctrl+Shift+NVDA+U: Ilmoittaa edellisen syötteen otsikon.
-* Ctrl+Shift+NVDA+O: Ilmoittaa seuraavan syötteen otsikon.
+* Ctrl+Vaihto+NVDA+I: Ilmoittaa nykyisen syötteen otsikon ja
+  linkin. Kahdesti painettaessa ne kopioidaan leikepöydälle.
+* Ctrl+Vaihto+NVDA+U: Ilmoittaa edellisen syötteen otsikon.
+* Ctrl+Vaihto+NVDA+O: Ilmoittaa seuraavan syötteen otsikon.
 
 ## Ilmoitukset: ##
 
