@@ -1,21 +1,21 @@
-# Read Feeds / czytaj kanały osobiste #
+# Read Feeds #
 
 * Autorzy: Noelia Ruiz Martínez, Mesar Hameed
 * Pobierz [Wersja stabilna][1]
 * Pobierz [Wersja rozwojowa][2]
 
-Ten dodatek dostarcza prosty sposób odczytywania przez NVDA kanałów
-informacyjnych w formatach Atom lub RSS.  Kanały nie będą odświeżane
-automatycznie.  Mówiąc o kanałach, mamy na myśli kanały w formatach RSS i
-ATOM.
+Ten dodatek umożliwia odczytywanie przez NVDA kanałów informacyjnych w
+formatach Atom lub RSS.  Kanały nie będą odświeżane automatycznie.  Mówiąc o
+kanałach, mamy na myśli kanały w formatach RSS i ATOM.
 
 ## Instalacja i aktualizacja: ##
 
-If you used a previous version of this addon, and there is an RSS or
-personalFeeds folder in your personal NVDA configuration folder, when
-installing the current version, a dialog will ask if you want to upgrade or
-install.  Choose update to preserve your saved feeds and to continue using
-them in the new installed version of readFeeds.
+Jeśli używałeś poprzedniej wersji tego dodatku i w Twoim folderze
+konfiguracji NVDA znajdują się katalogi RSS lub personalFeeds , podczas
+instalacji wersji 6.0 lub nowszej, pojawi się okno dialogowe z pytaniem, czy
+chcesz aktualizować, czy zainstalować.  Wybierz aktualizację, aby
+zaktualizować osobiste kanały i kontynuować ich używanie w nowo
+zainstalowanej wersji.
 
 ## Polecenia: ##
 
@@ -35,7 +35,7 @@ Otwiera dialog z następującymi kontrolkami:
   wyświetlanego kanału osobistego. Oznacz artykuł, którego chcesz
   przeczytać, a potem naćiśnij przycisk OK, aby otworzyć odnoszącą się
   stronę w przeglądarce www.
-* Open feed: Opens the selected feed in the default application.
+* Otwórz kanał: otwiera wybrany kanał w domyślnej aplikacji.
 * Nowy: Otwiera okno dialogowe zawierające pole edycyjne, w którym można
   wpisać adres nowego kanału osobistego. Jeżeli adres jest prawidłowy a
   kanał osobisty może być zachowany, nazwa kanału, bazowana na podstawie
@@ -94,9 +94,10 @@ katalog zawierający kanały osobiste.
 
 
 
-## Changes for 4.0 ##
+## Zmiany w wersji 4.0 ##
 
-* Added a button to open the selected feed from the Feeds dialog.
+* Dodano przycisk służący do otwierania wybranego kanału z dialogu kanałów
+  osobistych.
 
 ## Zmiany dla wersji 3.0 ##
 
