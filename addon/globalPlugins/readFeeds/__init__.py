@@ -99,7 +99,7 @@ class FeedsDialog(wx.Dialog):
 			return
 		FeedsDialog._instance = self
 		# Translators: The title of a dialog.
-		super(FeedsDialog, self).__init__(parent, title=_(u"Feed: {defaultFeed} ({configProfile})".format(configProfile=getActiveProfile(),
+		super(FeedsDialog, self).__init__(parent, title=_(u"Feeds: {defaultFeed} ({configProfile})".format(configProfile=getActiveProfile(),
 			defaultFeed=config.conf["readFeeds"]["addressFile"])))
 
 		mainSizer = wx.BoxSizer(wx.VERTICAL)
@@ -286,8 +286,7 @@ class CopyDialog(wx.Dialog):
 		sHelper = gui.guiHelper.BoxSizerHelper(self, orientation=wx.VERTICAL)
 
 		# Translators: An informational message displayed in the Copy dialog.
-		dialogCaption=_("""Select a folder to save a backup of your current feeds.\n
-		They will be copied from %s.""" % FEEDS_PATH)
+		dialogCaption=_("Select a folder to save a backup of your current feeds")
 		sHelper.addItem(wx.StaticText(self, label=dialogCaption))
 
 		# Translators: The label of a grouping containing controls to select the destination directory in the Copy dialog.
@@ -355,8 +354,7 @@ class RestoreDialog(wx.Dialog):
 		sHelper = gui.guiHelper.BoxSizerHelper(self, orientation=wx.VERTICAL)
 
 		# Translators: An informational message displayed in the Restore dialog.
-		dialogCaption=_("""Select a folder to restore a backup of your previous copied feeds.\n
-		They will be copied to %s.""" % FEEDS_PATH)
+		dialogCaption=_("Select a folder to restore a backup of your previous copied feeds")
 		sHelper.addItem(wx.StaticText(self, label=dialogCaption))
 
 		# Translators: The label of a grouping containing controls to select the destination directory in the Restore dialog.
