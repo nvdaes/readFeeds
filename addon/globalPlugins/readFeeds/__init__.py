@@ -46,6 +46,13 @@ config.conf.spec["readFeeds"] = confspec
 
 ### Dialogs
 
+def getActiveProfile():
+	activeProfile = config.conf.profiles[-1].name
+	if not activeProfile:
+		# Message translated in NVDA core.
+		activeProfile = translate("normal configuration")
+	return activeProfile
+
 def doCopy(copyDirectory):
 	try:
 		shutil.rmtree(copyDirectory, ignore_errors=True)
@@ -92,7 +99,8 @@ class FeedsDialog(wx.Dialog):
 			return
 		FeedsDialog._instance = self
 		# Translators: The title of a dialog.
-		super(FeedsDialog, self).__init__(parent, title=_("Feeds"))
+		super(FeedsDialog, self).__init__(parent, title=_(u"Feed: {defaultFeed} ({configProfile})".format(configProfile=getActiveProfile(),
+			defaultFeed=config.conf["readFeeds"]["addressFile"])))
 
 		mainSizer = wx.BoxSizer(wx.VERTICAL)
 		sHelper = guiHelper.BoxSizerHelper(self,orientation=wx.VERTICAL)
