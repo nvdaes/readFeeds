@@ -68,8 +68,9 @@ msgid "Feeds restored"
 msgstr "Fíds restaurados"
 
 #. Translators: The title of a dialog.
-msgid "Feeds"
-msgstr "Fíds"
+#, python-brace-format
+msgid "Feeds: {defaultFeed} ({configProfile})"
+msgstr ""
 
 #. Label of a dialog (message translated in NVDA core in different contexts).
 msgid "&Filter by:"
@@ -129,11 +130,8 @@ msgid "Copy feeds"
 msgstr "Copiar fíds"
 
 #. Translators: An informational message displayed in the Copy dialog.
-#, python-format
-msgid ""
-"Select a folder to save a backup of your current feeds.\n"
-"\n"
-"\t\tThey will be copied from %s."
+#, fuzzy
+msgid "Select a folder to save a backup of your current feeds"
 msgstr ""
 "Selecione uma pasta para salvar cópia dos fíds atuais.\n"
 "\n"
@@ -152,11 +150,8 @@ msgid "Restore feeds"
 msgstr "Restaurar fíds"
 
 #. Translators: An informational message displayed in the Restore dialog.
-#, python-format
-msgid ""
-"Select a folder to restore a backup of your previous copied feeds.\n"
-"\n"
-"\t\tThey will be copied to %s."
+#, fuzzy
+msgid "Select a folder to restore a backup of your previous copied feeds"
 msgstr ""
 "Selecione uma pasta para restaurar cópia de fíds anteriormente copiados.\n"
 "\n"
@@ -253,6 +248,9 @@ msgstr "Leitor de fíds"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Add-on for using NVDA as a feed reader."
 msgstr "Complemento para usar o NVDA como um leitor de fíds."
+
+#~ msgid "Feeds"
+#~ msgstr "Fíds"
 
 #~ msgid "Manage feeds."
 #~ msgstr "Gerir fíds."

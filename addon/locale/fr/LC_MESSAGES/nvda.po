@@ -69,8 +69,9 @@ msgid "Feeds restored"
 msgstr "Flux restaurés"
 
 #. Translators: The title of a dialog.
-msgid "Feeds"
-msgstr "Flux"
+#, python-brace-format
+msgid "Feeds: {defaultFeed} ({configProfile})"
+msgstr ""
 
 #. Label of a dialog (message translated in NVDA core in different contexts).
 msgid "&Filter by:"
@@ -130,11 +131,8 @@ msgid "Copy feeds"
 msgstr "Copier les flux"
 
 #. Translators: An informational message displayed in the Copy dialog.
-#, python-format
-msgid ""
-"Select a folder to save a backup of your current feeds.\n"
-"\n"
-"\t\tThey will be copied from %s."
+#, fuzzy
+msgid "Select a folder to save a backup of your current feeds"
 msgstr ""
 "Sélectionnez le dossier afin d'enregistrer une sauvegarde de vos flux "
 "actuels.\n"
@@ -154,11 +152,8 @@ msgid "Restore feeds"
 msgstr "Restaurer les flux"
 
 #. Translators: An informational message displayed in the Restore dialog.
-#, python-format
-msgid ""
-"Select a folder to restore a backup of your previous copied feeds.\n"
-"\n"
-"\t\tThey will be copied to %s."
+#, fuzzy
+msgid "Select a folder to restore a backup of your previous copied feeds"
 msgstr ""
 "Sélectionnez le dossier afin de restaurer une sauvegarde de vos précédents "
 "flux copiées.\n"
@@ -260,6 +255,9 @@ msgstr "Read Feeds"
 msgid "Add-on for using NVDA as a feed reader."
 msgstr ""
 "Module complémentaire  pour utiliser NVDA comme un lecteur de flux RSS."
+
+#~ msgid "Feeds"
+#~ msgstr "Flux"
 
 #~ msgid "Manage feeds."
 #~ msgstr "Gestion des flux."

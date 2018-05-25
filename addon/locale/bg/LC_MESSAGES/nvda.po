@@ -69,8 +69,9 @@ msgid "Feeds restored"
 msgstr "Източниците са възстановени"
 
 #. Translators: The title of a dialog.
-msgid "Feeds"
-msgstr "Източници"
+#, python-brace-format
+msgid "Feeds: {defaultFeed} ({configProfile})"
+msgstr ""
 
 #. Label of a dialog (message translated in NVDA core in different contexts).
 msgid "&Filter by:"
@@ -131,11 +132,8 @@ msgid "Copy feeds"
 msgstr "Копиране на източници"
 
 #. Translators: An informational message displayed in the Copy dialog.
-#, python-format
-msgid ""
-"Select a folder to save a backup of your current feeds.\n"
-"\n"
-"\t\tThey will be copied from %s."
+#, fuzzy
+msgid "Select a folder to save a backup of your current feeds"
 msgstr ""
 "Изберете папка за записване на архивно копие на вашите текущи информационни "
 "източници.\n"
@@ -155,11 +153,8 @@ msgid "Restore feeds"
 msgstr "Възстановяване на източници"
 
 #. Translators: An informational message displayed in the Restore dialog.
-#, python-format
-msgid ""
-"Select a folder to restore a backup of your previous copied feeds.\n"
-"\n"
-"\t\tThey will be copied to %s."
+#, fuzzy
+msgid "Select a folder to restore a backup of your previous copied feeds"
 msgstr ""
 "Изберете папка, от която да възстановите архивно копие на вашите предишно "
 "копирани информационни източници.\n"
@@ -257,6 +252,9 @@ msgstr "Read Feeds"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Add-on for using NVDA as a feed reader."
 msgstr "Добавка за използване на NVDA като четец на новинарски източници."
+
+#~ msgid "Feeds"
+#~ msgstr "Източници"
 
 #~ msgid "Manage feeds."
 #~ msgstr "Управление на източниците."

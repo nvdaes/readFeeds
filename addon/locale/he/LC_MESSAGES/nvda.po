@@ -67,8 +67,9 @@ msgid "Feeds restored"
 msgstr "התיקייה שוחזרה"
 
 #. Translators: The title of a dialog.
-msgid "Feeds"
-msgstr "קר הזנות"
+#, python-brace-format
+msgid "Feeds: {defaultFeed} ({configProfile})"
+msgstr ""
 
 #. Label of a dialog (message translated in NVDA core in different contexts).
 msgid "&Filter by:"
@@ -127,11 +128,8 @@ msgid "Copy feeds"
 msgstr "העתק הזנה"
 
 #. Translators: An informational message displayed in the Copy dialog.
-#, python-format
-msgid ""
-"Select a folder to save a backup of your current feeds.\n"
-"\n"
-"\t\tThey will be copied from %s."
+#, fuzzy
+msgid "Select a folder to save a backup of your current feeds"
 msgstr ""
 "בחר תיקייה לשמור את גיבוי ההזנות הנוכחי..\n"
 "\n"
@@ -150,11 +148,8 @@ msgid "Restore feeds"
 msgstr "שחזור ההזנות"
 
 #. Translators: An informational message displayed in the Restore dialog.
-#, python-format
-msgid ""
-"Select a folder to restore a backup of your previous copied feeds.\n"
-"\n"
-"\t\tThey will be copied to %s."
+#, fuzzy
+msgid "Select a folder to restore a backup of your previous copied feeds"
 msgstr ""
 "בחר תיקייה לשחזור ההזנות מהגיבוי האחרון שהועתק..\n"
 "\n"
@@ -249,6 +244,9 @@ msgstr "Read Feeds"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Add-on for using NVDA as a feed reader."
 msgstr "מאפשר להשתמש בNVDA תוכנת קוראת הזנות."
+
+#~ msgid "Feeds"
+#~ msgstr "קר הזנות"
 
 #~ msgid "Manage feeds."
 #~ msgstr "ניהול הזנות."

@@ -66,8 +66,9 @@ msgid "Feeds restored"
 msgstr "RSS-Feeds wiederhergestellt"
 
 #. Translators: The title of a dialog.
-msgid "Feeds"
-msgstr "RSS-Feeds"
+#, python-brace-format
+msgid "Feeds: {defaultFeed} ({configProfile})"
+msgstr ""
 
 #. Label of a dialog (message translated in NVDA core in different contexts).
 msgid "&Filter by:"
@@ -128,11 +129,8 @@ msgid "Copy feeds"
 msgstr "RSS-Feeds sichern"
 
 #. Translators: An informational message displayed in the Copy dialog.
-#, python-format
-msgid ""
-"Select a folder to save a backup of your current feeds.\n"
-"\n"
-"\t\tThey will be copied from %s."
+#, fuzzy
+msgid "Select a folder to save a backup of your current feeds"
 msgstr ""
 "Bitte wählen Sie einen Ordner zum Speichern des Backups Ihrer aktuellen RSS-"
 "Feeds aus:\n"
@@ -152,11 +150,8 @@ msgid "Restore feeds"
 msgstr "RSS-Feeds wiederherstellen"
 
 #. Translators: An informational message displayed in the Restore dialog.
-#, python-format
-msgid ""
-"Select a folder to restore a backup of your previous copied feeds.\n"
-"\n"
-"\t\tThey will be copied to %s."
+#, fuzzy
+msgid "Select a folder to restore a backup of your previous copied feeds"
 msgstr ""
 "Den Speicherort auswählen, an dem Sie Ihre RSS-Feeds gesichert haben.\n"
 "\n"
@@ -256,6 +251,9 @@ msgstr "RSS-Feeds lesen"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Add-on for using NVDA as a feed reader."
 msgstr "Erweiterung mit dem Sie NVDA als Reader für RSS-Feeds benutzen können."
+
+#~ msgid "Feeds"
+#~ msgstr "RSS-Feeds"
 
 #~ msgid "Manage feeds."
 #~ msgstr "RSS-Feeds verwalten."

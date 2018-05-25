@@ -66,8 +66,9 @@ msgid "Feeds restored"
 msgstr "Viri obnovljeni"
 
 #. Translators: The title of a dialog.
-msgid "Feeds"
-msgstr "Viri"
+#, python-brace-format
+msgid "Feeds: {defaultFeed} ({configProfile})"
+msgstr ""
 
 #. Label of a dialog (message translated in NVDA core in different contexts).
 msgid "&Filter by:"
@@ -127,11 +128,8 @@ msgid "Copy feeds"
 msgstr "Preslikava virov"
 
 #. Translators: An informational message displayed in the Copy dialog.
-#, python-format
-msgid ""
-"Select a folder to save a backup of your current feeds.\n"
-"\n"
-"\t\tThey will be copied from %s."
+#, fuzzy
+msgid "Select a folder to save a backup of your current feeds"
 msgstr ""
 "Izberite mapo, kamor želite shraniti varnostno kopijo vaših trenutnih "
 "virov.\n"
@@ -151,11 +149,8 @@ msgid "Restore feeds"
 msgstr "Obnovi vire"
 
 #. Translators: An informational message displayed in the Restore dialog.
-#, python-format
-msgid ""
-"Select a folder to restore a backup of your previous copied feeds.\n"
-"\n"
-"\t\tThey will be copied to %s."
+#, fuzzy
+msgid "Select a folder to restore a backup of your previous copied feeds"
 msgstr ""
 "Izberite mapo, kamor se bodo obnovili viri iz prej ustvarjene varnostne "
 "kopije.\n"
@@ -253,6 +248,9 @@ msgstr "Bralnik Virov"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Add-on for using NVDA as a feed reader."
 msgstr "Dodatek, ki spremeni NVDA tudi v bralnik virov"
+
+#~ msgid "Feeds"
+#~ msgstr "Viri"
 
 #~ msgid "Manage feeds."
 #~ msgstr "Upravljanje z viri"
