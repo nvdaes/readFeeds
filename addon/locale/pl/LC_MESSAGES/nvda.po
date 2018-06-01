@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: readFeeds 1.0-dev\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-11-16 13:26+0100\n"
-"PO-Revision-Date: 2018-01-06 12:57+0100\n"
+"PO-Revision-Date: 2018-05-27 13:58+0100\n"
 "Last-Translator: Patryk <patric3031@wp.pl>\n"
 "Language-Team: Polish <killer@tyflonet.com>\n"
 "Language: pl\n"
@@ -68,7 +68,7 @@ msgstr "Kanały osobiste zostały przywrócone pomyślnie"
 #. Translators: The title of a dialog.
 #, python-brace-format
 msgid "Feeds: {defaultFeed} ({configProfile})"
-msgstr ""
+msgstr "Kanały osobiste: {defaultFeed} ({configProfile})"
 
 #. Label of a dialog (message translated in NVDA core in different contexts).
 msgid "&Filter by:"
@@ -129,12 +129,8 @@ msgid "Copy feeds"
 msgstr "Kopiuj kanały osobiste"
 
 #. Translators: An informational message displayed in the Copy dialog.
-#, fuzzy
 msgid "Select a folder to save a backup of your current feeds"
-msgstr ""
-"Oznacz katalog do zapisu twojej kopii zapasowej twoich kanałów osobistych.\n"
-"\n"
-"\t\tKanały będą skopiowane z %s."
+msgstr "Wybierz katalog do zapisywania kopii swoich kanałów osobistych"
 
 #. Translators: The label of a grouping containing controls to select the destination directory in the Copy dialog.
 msgid "directory for backup:"
@@ -149,13 +145,9 @@ msgid "Restore feeds"
 msgstr "P&rzywróć kanały osobiste..."
 
 #. Translators: An informational message displayed in the Restore dialog.
-#, fuzzy
 msgid "Select a folder to restore a backup of your previous copied feeds"
 msgstr ""
-"Wybierz katalog, w którym zostanie przywrucona kopia twoich kanałów "
-"osobistych.\n"
-"\n"
-"\t\tKanały będą skopiowane do %s."
+"Wybierz folder w którym ma być przywrócona twoja kopia kanałów osobistych"
 
 #. Translators: The label of a grouping containing controls to select the destination directory in the Restore dialog.
 msgid "directory containing backup:"

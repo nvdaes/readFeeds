@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Read feeds 4.0\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-11-16 13:26+0100\n"
-"PO-Revision-Date: 2018-02-13 11:49+0300\n"
+"PO-Revision-Date: 2018-05-28 16:46+0300\n"
 "Last-Translator: Çağrı Doğan <cagrid@hotmail.com>\n"
 "Language-Team: cagrid@hotmail.com\n"
 "Language: tr\n"
@@ -14,7 +14,7 @@ msgstr ""
 "X-Poedit-Basepath: C:/Users/cagri.dogan/AppData/Roaming/nvda/addons/"
 "ReadFeeds/globalPlugins\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 2.0.4\n"
+"X-Generator: Poedit 2.0.7\n"
 "X-Poedit-SearchPath-0: C:/Users/cagri.dogan/AppData/Roaming/nvda/addons/"
 "ReadFeeds/globalPlugins\n"
 
@@ -68,7 +68,7 @@ msgstr "Kaynaklar geri yüklendi"
 #. Translators: The title of a dialog.
 #, python-brace-format
 msgid "Feeds: {defaultFeed} ({configProfile})"
-msgstr ""
+msgstr "Haber Akışları: {defaultFeed} ({configProfile})"
 
 #. Label of a dialog (message translated in NVDA core in different contexts).
 msgid "&Filter by:"
@@ -127,12 +127,8 @@ msgid "Copy feeds"
 msgstr "Akışları kopyala"
 
 #. Translators: An informational message displayed in the Copy dialog.
-#, fuzzy
 msgid "Select a folder to save a backup of your current feeds"
-msgstr ""
-"Mevcut kaynakları yedeklemek için bir klasör seçin.\n"
-"\n"
-"\t\t%s adresinden kopyalanacak."
+msgstr "Mevcut kaynakları yedeklemek için bir klasör seçin"
 
 #. Translators: The label of a grouping containing controls to select the destination directory in the Copy dialog.
 msgid "directory for backup:"
@@ -147,12 +143,8 @@ msgid "Restore feeds"
 msgstr "Akışları geri yükle"
 
 #. Translators: An informational message displayed in the Restore dialog.
-#, fuzzy
 msgid "Select a folder to restore a backup of your previous copied feeds"
-msgstr ""
-"Daha önce yedeklediğiniz kaynakları geri yüklemek için klasör seçin.\n"
-"\n"
-"\t\t%s adresine kopyalanacak."
+msgstr "Daha önce yedeklediğiniz kaynakları geri yüklemek için klasör seçin"
 
 #. Translators: The label of a grouping containing controls to select the destination directory in the Restore dialog.
 msgid "directory containing backup:"
@@ -176,7 +168,7 @@ msgstr "R&SS Akışlarını Oku"
 
 #. Translators: the name of a menu item.
 msgid "&Feeds..."
-msgstr "Akış& listesi..."
+msgstr "Akış &listesi..."
 
 #. Translators: the name of a menu item.
 msgid "&Copy feeds folder..."

@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: readFeeds 1.0-dev\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-11-16 13:26+0100\n"
-"PO-Revision-Date: 2018-01-05 17:53+0100\n"
-"Last-Translator: Juan C. Buño <quetzatl@eresmas.net>\n"
+"PO-Revision-Date: 2018-05-27 23:05+0100\n"
+"Last-Translator: Iván Novegil <ivan.novegil.cancelas@gmail.com>\n"
 "Language-Team: galician NVDA add-ons translation team <oprisniki@gmail.com>\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
@@ -69,7 +69,7 @@ msgstr "Feeds restaurados"
 #. Translators: The title of a dialog.
 #, python-brace-format
 msgid "Feeds: {defaultFeed} ({configProfile})"
-msgstr ""
+msgstr "Feeds: {defaultFeed} ({configProfile})"
 
 #. Label of a dialog (message translated in NVDA core in different contexts).
 msgid "&Filter by:"
@@ -128,13 +128,9 @@ msgid "Copy feeds"
 msgstr "Copiar feeds"
 
 #. Translators: An informational message displayed in the Copy dialog.
-#, fuzzy
 msgid "Select a folder to save a backup of your current feeds"
 msgstr ""
-"Seleciona un cartafol para gardar unha copia de seguridade dos feeds "
-"actuais.\n"
-"\n"
-"\t\tCopiaránse de %s."
+"Seleciona un cartafol para gardar unha copia de seguridade dos feeds actuais"
 
 #. Translators: The label of a grouping containing controls to select the destination directory in the Copy dialog.
 msgid "directory for backup:"
@@ -149,13 +145,10 @@ msgid "Restore feeds"
 msgstr "Restaurar feeds..."
 
 #. Translators: An informational message displayed in the Restore dialog.
-#, fuzzy
 msgid "Select a folder to restore a backup of your previous copied feeds"
 msgstr ""
-"Seleciona un cartafol para restaurar unha copia de seguridade of do teu feed "
-"copiado con anterioridade.\n"
-"\n"
-"\t\tCopiaráse en %s."
+"Seleciona un cartafol para restaurar unha copia de seguridade do teu feed "
+"copiado con anterioridade"
 
 #. Translators: The label of a grouping containing controls to select the destination directory in the Restore dialog.
 msgid "directory containing backup:"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: readFeeds 1.0-dev\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-11-16 13:26+0100\n"
-"PO-Revision-Date: 2017-12-05 21:49+0000\n"
+"PO-Revision-Date: 2018-05-25 19:00+0100\n"
 "Last-Translator: Ângelo Miguel Abrantes <ampa4374@gmail.com>\n"
 "Language-Team: Equipa portuguesa de tradução do NVDA "
 "<angelomiguelabrantes@sapo.pt>\n"
@@ -71,7 +71,7 @@ msgstr "RSS recuperados!"
 #. Translators: The title of a dialog.
 #, python-brace-format
 msgid "Feeds: {defaultFeed} ({configProfile})"
-msgstr ""
+msgstr "RSS: {defaultFeed} ({configProfile})"
 
 #. Label of a dialog (message translated in NVDA core in different contexts).
 msgid "&Filter by:"
@@ -82,9 +82,8 @@ msgid "List of &articles..."
 msgstr "Lista de &artigos..."
 
 #. Translators: The label of a button to open a feed.
-#, fuzzy
 msgid "&Open feed"
-msgstr "Novo RSS"
+msgstr "&Abrir RSS"
 
 #. Translators: The label of a button to add a new feed.
 msgid "&New..."
@@ -131,12 +130,8 @@ msgid "Copy feeds"
 msgstr "Copiar os RSS"
 
 #. Translators: An informational message displayed in the Copy dialog.
-#, fuzzy
 msgid "Select a folder to save a backup of your current feeds"
-msgstr ""
-"Seleccione uma pasta para guardar um backup dos seus RSS actuais.\n"
-"\n"
-"\t\tEles serão copiados a partir de %s."
+msgstr "Seleccione uma pasta para guardar um backup dos seus RSS actuais."
 
 #. Translators: The label of a grouping containing controls to select the destination directory in the Copy dialog.
 msgid "directory for backup:"
@@ -151,13 +146,10 @@ msgid "Restore feeds"
 msgstr "Recuperar os RSS"
 
 #. Translators: An informational message displayed in the Restore dialog.
-#, fuzzy
 msgid "Select a folder to restore a backup of your previous copied feeds"
 msgstr ""
 "Seleccione uma pasta para recuperar um backup dos ficheiros previamente "
-"copiados.\n"
-"\n"
-"\t\tSerão copiados para %s."
+"copiados."
 
 #. Translators: The label of a grouping containing controls to select the destination directory in the Restore dialog.
 msgid "directory containing backup:"

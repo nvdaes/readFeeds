@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: readFeeds 4.0\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-12-06 18:00+0100\n"
-"PO-Revision-Date: 2018-05-10 20:03+0100\n"
-"Last-Translator: Bachir BENANOU <ben_bach@yahoo.fr>\n"
+"PO-Revision-Date: 2018-05-25 13:14+0200\n"
+"Last-Translator: Rémy Ruiz <remyruiz@gmail.com>\n"
 "Language-Team: Rémy Ruiz <remyruiz@gmail.com>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.6\n"
+"X-Generator: Poedit 1.8.12\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
 #. Translators: the label of a message box dialog.
@@ -71,7 +71,7 @@ msgstr "Flux restaurés"
 #. Translators: The title of a dialog.
 #, python-brace-format
 msgid "Feeds: {defaultFeed} ({configProfile})"
-msgstr ""
+msgstr "Flux : {defaultFeed} ({configProfile})"
 
 #. Label of a dialog (message translated in NVDA core in different contexts).
 msgid "&Filter by:"
@@ -131,13 +131,9 @@ msgid "Copy feeds"
 msgstr "Copier les flux"
 
 #. Translators: An informational message displayed in the Copy dialog.
-#, fuzzy
 msgid "Select a folder to save a backup of your current feeds"
 msgstr ""
-"Sélectionnez le dossier afin d'enregistrer une sauvegarde de vos flux "
-"actuels.\n"
-"\n"
-"\t\tIls seront copiés de %s."
+"Sélectionnez le dossier afin d'enregistrer une sauvegarde de vos flux actuels"
 
 #. Translators: The label of a grouping containing controls to select the destination directory in the Copy dialog.
 msgid "directory for backup:"
@@ -152,13 +148,10 @@ msgid "Restore feeds"
 msgstr "Restaurer les flux"
 
 #. Translators: An informational message displayed in the Restore dialog.
-#, fuzzy
 msgid "Select a folder to restore a backup of your previous copied feeds"
 msgstr ""
 "Sélectionnez le dossier afin de restaurer une sauvegarde de vos précédents "
-"flux copiées.\n"
-"\n"
-"\t\tIls seront copiés  dans %s."
+"flux copiées"
 
 #. Translators: The label of a grouping containing controls to select the destination directory in the Restore dialog.
 msgid "directory containing backup:"
