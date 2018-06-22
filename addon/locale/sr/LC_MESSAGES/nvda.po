@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: readFeeds 2.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2014-12-19 18:00+1000\n"
-"PO-Revision-Date: 2017-05-03 18:01+0100\n"
+"PO-Revision-Date: 2018-06-16 16:39+0100\n"
 "Last-Translator: Nikola Jović <wwenikola123@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: sr\n"
@@ -68,20 +68,19 @@ msgstr "Izvodi vraćeni"
 #. Translators: The title of a dialog.
 #, python-brace-format
 msgid "Feeds: {defaultFeed} ({configProfile})"
-msgstr ""
+msgstr "Izvodi: {defaultFeed} ({configProfile})"
 
 #. Label of a dialog (message translated in NVDA core in different contexts).
 msgid "&Filter by:"
-msgstr ""
+msgstr "Izdvoji po:"
 
 #. Translators: The label of a button to open the list of articles of a feed.
 msgid "List of &articles..."
 msgstr "&Lista članaka..."
 
 #. Translators: The label of a button to open a feed.
-#, fuzzy
 msgid "&Open feed"
-msgstr "Novi izvod"
+msgstr "&Otvori izvod"
 
 #. Translators: The label of a button to add a new feed.
 msgid "&New..."
@@ -130,11 +129,9 @@ msgid "Copy feeds"
 msgstr "Kopiraj izvode"
 
 #. Translators: An informational message displayed in the Copy dialog.
-#, fuzzy
 msgid "Select a folder to save a backup of your current feeds"
 msgstr ""
 "Izaberite folder za čuvanje rezervne kopije vaših izvoda.\n"
-"\n"
 "\t\tOni će biti kopirani iz %s."
 
 #. Translators: The label of a grouping containing controls to select the destination directory in the Copy dialog.
@@ -150,12 +147,10 @@ msgid "Restore feeds"
 msgstr "Vrati izvode"
 
 #. Translators: An informational message displayed in the Restore dialog.
-#, fuzzy
 msgid "Select a folder to restore a backup of your previous copied feeds"
 msgstr ""
 "Izaberite folder za vraćanje prethodno napravljene rezervne kopije vaših "
 "izvoda.\n"
-"\n"
 "\t\tOni će biti kopirani u folder %s."
 
 #. Translators: The label of a grouping containing controls to select the destination directory in the Restore dialog.
