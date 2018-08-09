@@ -284,6 +284,7 @@ class ArticlesDialog(wx.Dialog):
 		articlesText = _("List of articles")
 		articlesChoices = [parent.feed.getArticleTitle(index) for index in xrange(parent.feed.getNumberOfArticles())]
 		self.articlesList = sHelper.addLabeledControl(articlesText, wx.ListBox, choices=articlesChoices)
+		self.articlesList.Selection = 0
 		self.articlesList.Bind(wx.EVT_CHOICE, self.onArticlesListChoice)
 		
 		buttonHelper = guiHelper.ButtonHelper(wx.VERTICAL)
