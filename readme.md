@@ -26,7 +26,7 @@ Opens a dialog with the following controls:
 
 * Filter by: An edit box to search previously saved feeds.
 * A list of the saved feeds.
-* List of articles: Opens a dialog which presents the articles list from your current feed. Select the article you want to read and press OK button to open the corresponding page in your browser.
+* List of articles: Opens a dialog which presents the articles list from your current feed. Select the article you want to read and press Enteror Open web page of selected article button to open the corresponding page in your browser.
 * Open feed: Opens the selected feed in the default application.
 * New: Opens a dialog with an edit box to enter the address of a new feed. If the address is valid and the feed can be saved, its name, based on the feed title, will appear at the bottom of the feeds list.
 * Rename: Opens a dialog with an edit box to rename the selected feed.
@@ -62,7 +62,10 @@ Opens a dialog to select a folder which replaces your feeds in the personalFeeds
 * NVDA will display an error message if it was not possible to backup or restore the personalFeeds folder.
 * The title of the articles list dialog displays the selected feed name and number of items available.
 
+## Changes for 5.0 ##
 
+* In the articles list dialog, OK and Cancel buttons have been replaced with a button to open the webpage of the selected article and a Close button, making easier to add new actions.
+* Requires NVDA 2018.3.
 
 ## Changes for 4.0 ##
 
