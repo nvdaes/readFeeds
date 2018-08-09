@@ -1,7 +1,7 @@
 # -*- coding: UTF-8 -*-
 
 # Read feeds: A simple plugin for reading feeds with NVDA
-#Copyright (C) 2012-2017 Noelia Ruiz Martínez, Mesar Hameed
+#Copyright (C) 2012-2018 Noelia Ruiz Martínez, Mesar Hameed
 # Released under GPL 2
 
 import os
@@ -13,6 +13,7 @@ import globalVars
 import config
 import urllib
 import scriptHandler
+from scriptHandler import script
 import api
 import gui
 from gui import guiHelper
@@ -148,7 +149,7 @@ class FeedsDialog(wx.Dialog):
 		self.deleteButton = buttonHelper.addButton(self, label=_("&Delete..."))
 		self.deleteButton.Bind(wx.EVT_BUTTON, self.onDelete)
 
-# Translators: The label of a button to set a feed as default.
+		# Translators: The label of a button to set a feed as default.
 		self.defaultButton = buttonHelper.addButton(self, label=_("S&et default"))
 		self.defaultButton.Bind(wx.EVT_BUTTON, self.onDefault)
 
@@ -168,7 +169,7 @@ class FeedsDialog(wx.Dialog):
 		mainSizer.Fit(self)
 		self.Sizer = mainSizer
 		self.searchTextEdit.SetFocus()
-		self.Center(wx.BOTH | wx.CENTER_ON_SCREEN)
+		self.CentreOnScreen()
 
 	def __del__(self):
 		FeedsDialog._instance = None
@@ -214,16 +215,9 @@ class FeedsDialog(wx.Dialog):
 		with open(os.path.join(FEEDS_PATH, "%s.txt" % self.stringSel), "r") as f:
 			address = f.read()
 			f.close()
-		feed = Feed(address)
-		with wx.SingleChoiceDialog(self,
-			# Translators: the label of a single choice dialog.
-			_("Open web page of selected article."),
-			# Translators: Title of a dialog.
-			u"{feedTitle} ({feedNumber})".format(feedTitle=self.stringSel, feedNumber=feed.getNumberOfArticles()),
-			[feed.getArticleTitle(index) for index in xrange(feed.getNumberOfArticles())]) as d:
-			if d.ShowModal() == wx.ID_CANCEL:
-				return
-			os.startfile(feed.getArticleLink(d.Selection))
+		self.feed = Feed(address)
+		self.Disable()
+		ArticlesDialog(self).Show()
 
 	def onOpen(self, evt):
 		with open(os.path.join(FEEDS_PATH, "%s.txt" % self.stringSel), "r") as f:
@@ -264,7 +258,7 @@ class FeedsDialog(wx.Dialog):
 		# Translators: The label of a field to enter a new name for a feed.
 		with wx.TextEntryDialog(self, _("New name:"),
 			# Translators: The title of a dialog to rename a feed.
-			_("Rename feed"), defaultValue=self.stringSel) as d:
+			_("Rename feed"), value=self.stringSel) as d:
 			if d.ShowModal() == wx.ID_CANCEL or not d.Value:
 				return
 			curName = "%s.txt" % self.stringSel
@@ -274,6 +268,47 @@ class FeedsDialog(wx.Dialog):
 		self.feedsList.SetString(self.sel, os.path.splitext(newName)[0])
 
 	def onClose(self, evt):
+		self.Destroy()
+		FeedsDialog._instance = None
+
+class ArticlesDialog(wx.Dialog):
+
+	def __init__(self, parent):
+		# Translators: The title of the articles dialog.
+		super(ArticlesDialog, self).__init__(parent, title=u"{feedTitle} ({feedNumber})".format(feedTitle=parent.stringSel, feedNumber=parent.feed.getNumberOfArticles()))
+
+		mainSizer = wx.BoxSizer(wx.VERTICAL)
+		sHelper = guiHelper.BoxSizerHelper(self, orientation=wx.VERTICAL)
+
+		# Translators: The label of the articles list in the articles dialog.
+		articlesText = _("List of articles")
+		articlesChoices = [parent.feed.getArticleTitle(index) for index in xrange(parent.feed.getNumberOfArticles())]
+		self.articlesList = sHelper.addLabeledControl(articlesText, wx.ListBox, choices=articlesChoices)
+		self.articlesList.Bind(wx.EVT_CHOICE, self.onArticlesListChoice)
+		
+		buttonHelper = guiHelper.ButtonHelper(wx.VERTICAL)
+		# Translators: The label of a button to open the list of articles of a feed.
+		self.articlesButton = wx.Button(self, label=_("Open web page of selected article."))
+		self.articlesButton.Bind(wx.EVT_BUTTON, self.onArticlesListChoice)
+		self.AffirmativeId = self.articlesButton.Id
+		self.articlesButton.SetDefault()
+		buttonHelper.addButton(self.articlesButton)
+
+		closeButton = sHelper.addDialogDismissButtons(wx.Button(self, wx.ID_CLOSE, label=_("&Close")))
+		closeButton.Bind(wx.EVT_BUTTON, lambda evt: self.Close())
+		self.Bind(wx.EVT_CLOSE, self.onClose)
+		self.EscapeId = wx.ID_CLOSE
+		mainSizer.Add(buttonHelper.sizer)
+		mainSizer.Add(sHelper.sizer, border = guiHelper.BORDER_FOR_DIALOGS, flag=wx.ALL)
+		mainSizer.Fit(self)
+		self.Sizer = mainSizer
+		self.CentreOnScreen()
+
+	def onArticlesListChoice(self, evt):
+		os.startfile(self.Parent.feed.getArticleLink(self.articlesList.Selection))
+
+	def onClose(self, evt):
+		self.Parent.Enable()
 		self.Destroy()
 
 class CopyDialog(wx.Dialog):
@@ -308,7 +343,7 @@ class CopyDialog(wx.Dialog):
 		mainSizer.Add(sHelper.sizer, border=gui.guiHelper.BORDER_FOR_DIALOGS, flag=wx.ALL)
 		self.Sizer = mainSizer
 		mainSizer.Fit(self)
-		self.Center(wx.BOTH | wx.CENTER_ON_SCREEN)
+		self.CentreOnScreen()
 
 	def onCopy(self, evt):
 		if not self.copyDirectoryEdit.Value:
@@ -378,7 +413,7 @@ class RestoreDialog(wx.Dialog):
 		mainSizer.Add(sHelper.sizer, border=gui.guiHelper.BORDER_FOR_DIALOGS, flag=wx.ALL)
 		self.Sizer = mainSizer
 		mainSizer.Fit(self)
-		self.Center(wx.BOTH | wx.CENTER_ON_SCREEN)
+		self.CentreOnScreen()
 
 	def onRestore(self, evt):
 		if not self.restoreDirectoryEdit.Value:
@@ -485,7 +520,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	scriptCategory = unicode(ADDON_SUMMARY)
 
 	def __init__(self):
-		super(globalPluginHandler.GlobalPlugin, self).__init__()
+		super(GlobalPlugin, self).__init__()
 		self.menu = gui.mainFrame.sysTrayIcon.toolsMenu
 		self.readFeedsMenu = wx.Menu()
 		# Translators: the name of a submenu.
@@ -504,8 +539,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def terminate(self):
 		try:
-			self.menu.RemoveItem(self.mainItem)
-		except wx.PyDeadObjectError:
+			self.menu.Remove(self.mainItem)
+		except:
 			pass
 
 	def onFeeds(self, evt):
@@ -514,10 +549,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		d.Show()
 		gui.mainFrame.postPopup()
 
+	@script(
+		# Translators: message presented in input mode.
+		description=_("Activates the Feeds dialog of %s." % ADDON_SUMMARY)
+	)
 	def script_activateFeedsDialog(self, gesture):
 		wx.CallAfter(self.onFeeds, None)
-	# Translators: message presented in input mode.
-	script_activateFeedsDialog.__doc__ = _("Activates the Feeds dialog of %s." % ADDON_SUMMARY)
 
 	def onCopy(self, evt):
 		gui.mainFrame.prePopup()
@@ -525,10 +562,13 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		d.Show()
 		gui.mainFrame.postPopup()
 
+	@script(
+		# Translators: message presented in input mode.
+		description=_("Activates the Copy dialog of %s." % ADDON_SUMMARY)
+	)
 	def script_activateCopyDialog(self, gesture):
 		wx.CallAfter(self.onCopy, None)
-	# Translators: message presented in input mode.
-	script_activateCopyDialog.__doc__ = _("Activates the Copy dialog of %s." % ADDON_SUMMARY)
+
 
 	def onRestore(self, evt):
 		gui.mainFrame.prePopup()
@@ -536,10 +576,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		d.Show()
 		gui.mainFrame.postPopup()
 
+	@script(
+		# Translators: message presented in input mode.
+		description=_("Activates the Restore dialog of %s." % ADDON_SUMMARY)
+	)
 	def script_activateRestoreDialog(self, gesture):
 		wx.CallAfter(self.onRestore, None)
-	# Translators: message presented in input mode.
-	script_activateRestoreDialog.__doc__ = _("Activates the Restore dialog of %s." % ADDON_SUMMARY)
 
 	def getFirstArticle(self):
 		try:
@@ -552,13 +594,21 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			ui.message(CAN_NOT_REPORT)
 			raise e
 
+	@script(
+		# Translators: message presented in input mode.
+		description=_("Refreshes the current feed and announces the most recent article title."),
+		gesture="kb:control+shift+NVDA+8"
+	)
 	def script_readFirstArticle(self, gesture):
 		self.getFirstArticle()
 		if self.feed:
 			ui.message(self.feed.getArticleTitle())
-	# Translators: message presented in input mode.
-	script_readFirstArticle.__doc__ = _("Refreshes the current feed and announces the most recent article title.")
 
+	@script(
+		# Translators: message presented in input mode.
+		description=_("Announces the title of the current article. Pressed two times, copies title and related link to the clipboard."),
+		gesture="kb:control+shift+NVDA+i"
+	)
 	def script_readCurrentArticle(self, gesture):
 		if not self.feed:
 			self.getFirstArticle()
@@ -568,25 +618,34 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			ui.message(_("Copied to clipboard %s") % articleInfo)
 		else:
 			ui.message(articleInfo)
-	# Translators: message presented in input mode.
-	script_readCurrentArticle.__doc__ = _("Announces the title of the current article. Pressed two times, copies title and related link to the clipboard.")
 
+	@script(
+		# Translators: message presented in input mode.
+		description=_("Announces the title of the next article."),
+		gesture="kb:control+shift+NVDA+o"
+	)
 	def script_readNextArticle(self, gesture):
 		if not self.feed:
 			self.getFirstArticle()
 		self.feed.next()
 		ui.message(self.feed.getArticleTitle())
-	# Translators: message presented in input mode.
-	script_readNextArticle.__doc__ = _("Announces the title of the next article.")
 
+	@script(
+		# Translators: message presented in input mode.
+		description=_("Announces the title of the previous article."),
+		gesture="kb:control+shift+NVDA+u"
+	)
 	def script_readPriorArticle(self, gesture):
 		if not self.feed:
 			self.getFirstArticle()
 		self.feed.previous()
 		ui.message(self.feed.getArticleTitle())
-	# Translators: message presented in input mode.
-	script_readPriorArticle.__doc__ = _("Announces the title of the previous article.")
 
+	@script(
+		# Translators: message presented in input mode.
+		description=_("Announces article link, when pressed two times, opens related web page."),
+		gesture="kb:control+shift+NVDA+space"
+	)
 	def script_reportLink(self, gesture):
 		if not self.feed:
 			self.getFirstArticle()
@@ -595,9 +654,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			os.startfile(articleLink)
 		else:
 			ui.message(articleLink)
-	# Translators: message presented in input mode.
-	script_reportLink.__doc__ = _("Announces article link, when pressed two times, opens related web page.")
 
+	@script(
+		# Translators: message presented in input mode.
+		description=_("Copies title and related link of the current article to the clipboard.")
+	)
 	def script_copyArticleInfo(self, gesture):
 		if not self.feed:
 			self.getFirstArticle()
@@ -605,14 +666,3 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if api.copyToClip(articleInfo):
 			# Translators: message presented when the information about an article of a feed is copied to the clipboard.
 			ui.message(_("Copied to clipboard %s") % articleInfo)
-	# Translators: message presented in input mode.
-	script_copyArticleInfo.__doc__ = _("Copies title and related link of the current article to the clipboard.")
-
-	__gestures = {
-		"kb:control+shift+NVDA+8": "readFirstArticle",
-		"kb:control+shift+NVDA+i": "readCurrentArticle",
-		"kb:control+shift+NVDA+o": "readNextArticle",
-		"kb:control+shift+NVDA+u": "readPriorArticle",
-		"kb:control+shift+NVDA+space": "reportLink",
-	}
-
