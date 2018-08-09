@@ -66,6 +66,7 @@ Opens a dialog to select a folder which replaces your feeds in the personalFeeds
 
 * In the articles list dialog, OK and Cancel buttons have been replaced with a button to open the webpage of the selected article and a Close button, making easier to add new actions.
 * Requires NVDA 2018.3.
+* If needed, you can download the [last version compatible with NVDA 2017.3][3].
 
 ## Changes for 4.0 ##
 
@@ -90,3 +91,4 @@ Opens a dialog to select a folder which replaces your feeds in the personalFeeds
 [1]: http://addons.nvda-project.org/files/get.php?file=rf
 
 [2]: http://addons.nvda-project.org/files/get.php?file=rf-dev
+[3]: https://github.com/nvdaes/readFeeds/releases/download/4.5/readFeeds-4.5.nvda-addon
