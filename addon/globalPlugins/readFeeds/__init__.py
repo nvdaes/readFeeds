@@ -288,13 +288,13 @@ class ArticlesDialog(wx.Dialog):
 		
 		buttonHelper = guiHelper.ButtonHelper(wx.VERTICAL)
 		# Translators: The label of a button to open the list of articles of a feed.
-		self.articlesButton = wx.Button(self, label=_("Open web page of selected article."))
+		self.articlesButton = wx.Button(self, label=_("Open &web page of selected article."))
 		self.articlesButton.Bind(wx.EVT_BUTTON, self.onArticlesListChoice)
 		self.AffirmativeId = self.articlesButton.Id
 		self.articlesButton.SetDefault()
 		buttonHelper.addButton(self.articlesButton)
 
-		closeButton = sHelper.addDialogDismissButtons(wx.Button(self, wx.ID_CLOSE, label=_("&Close")))
+		closeButton = sHelper.addDialogDismissButtons(wx.Button(self, wx.ID_CLOSE, label=translate("&Close")))
 		closeButton.Bind(wx.EVT_BUTTON, lambda evt: self.Close())
 		self.Bind(wx.EVT_CLOSE, self.onClose)
 		self.EscapeId = wx.ID_CLOSE
