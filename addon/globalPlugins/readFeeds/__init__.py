@@ -288,13 +288,18 @@ class ArticlesDialog(wx.Dialog):
 		self.articlesList.Bind(wx.EVT_CHOICE, self.onArticlesListChoice)
 		
 		buttonHelper = guiHelper.ButtonHelper(wx.VERTICAL)
-		# Translators: The label of a button to open the list of articles of a feed.
-		self.articlesButton = wx.Button(self, label=_("Open &web page of selected article."))
-		self.articlesButton.Bind(wx.EVT_BUTTON, self.onArticlesListChoice)
-		self.AffirmativeId = self.articlesButton.Id
-		self.articlesButton.SetDefault()
-		buttonHelper.addButton(self.articlesButton)
-
+		# Translators: The label of a button to open the selected article of a feed.
+		self.articleButton = wx.Button(self, label=_("Open &web page of selected article."))
+		self.articleButton.Bind(wx.EVT_BUTTON, self.onArticlesListChoice)
+		self.AffirmativeId = self.articleButton.Id
+		self.articleButton.SetDefault()
+		buttonHelper.addButton(self.articleButton)
+		
+		# Translators: The label of a button to show information of a feed article.
+		self.infoButton = wx.Button(self, label=_("&About article..."))
+		self.infoButton.Bind(wx.EVT_BUTTON, self.onArticlesListInfo)
+		buttonHelper.addButton(self.infoButton)
+		
 		closeButton = sHelper.addDialogDismissButtons(wx.Button(self, wx.ID_CLOSE, label=translate("&Close")))
 		closeButton.Bind(wx.EVT_BUTTON, lambda evt: self.Close())
 		self.Bind(wx.EVT_CLOSE, self.onClose)
@@ -307,6 +312,16 @@ class ArticlesDialog(wx.Dialog):
 
 	def onArticlesListChoice(self, evt):
 		os.startfile(self.Parent.feed.getArticleLink(self.articlesList.Selection))
+
+	def onArticlesListInfo(self, evt):
+		articleInfo = u"{title}\r\n\r\n{address}".format(title=self.Parent.feed.getArticleTitle(self.articlesList.Selection), address=self.Parent.feed.getArticleLink(self.articlesList.Selection))
+		if gui.messageBox(
+			# Translators: the label of a message box dialog.
+			_("%s\r\n\r\nDo you want to copy article title and link to the clipboard?" % articleInfo),
+			# Translators: the title of a message box dialog.
+			_("Article information"),
+			wx.YES|wx.NO|wx.CANCEL|wx.ICON_QUESTION) == wx.YES:
+			api.copyToClip(articleInfo)
 
 	def onClose(self, evt):
 		self.Parent.Enable()
