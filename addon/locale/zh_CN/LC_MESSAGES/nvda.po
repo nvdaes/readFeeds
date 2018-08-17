@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: readFeeds 4.3\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2018-05-20 11:53+0200\n"
-"PO-Revision-Date: 2018-05-22 11:56+0800\n"
+"PO-Revision-Date: 2018-08-14 04:11+0800\n"
 "Last-Translator: dingpengyu <dingpengyu06@gmail.com>\n"
 "Language-Team: \n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.7\n"
+"X-Generator: Poedit 2.1.1\n"
 
 #. Translators: the label of a message box dialog.
 msgid ""
@@ -50,14 +50,12 @@ msgid "Feeds copied"
 msgstr "Feeds已复制"
 
 #. Translators: label of error dialog shown when cannot copy feeds folder.
-#, fuzzy
 msgid "Folder not copied"
-msgstr "文件夹未恢复"
+msgstr "文件夹未复制"
 
 #. Translators: title of error dialog shown when cannot copy feeds folder.
-#, fuzzy
 msgid "Copy Error"
-msgstr "备份错误"
+msgstr "复制错误"
 
 #. Translators: Message presented when feeds have been restored.
 msgid "Feeds restored"
@@ -65,11 +63,11 @@ msgstr "恢复Feeds"
 
 #. Translators: The title of a dialog.
 msgid "Feeds: {defaultFeed} ({configProfile})"
-msgstr ""
+msgstr "Feeds源: {defaultFeed} ({configProfile})"
 
 #. Label of a dialog (message translated in NVDA core in different contexts).
 msgid "&Filter by:"
-msgstr "&过滤字符:"
+msgstr "&过滤作者:"
 
 #. Translators: The label of a button to open the list of articles of a feed.
 msgid "List of &articles..."
@@ -77,7 +75,7 @@ msgstr "文章列表(&L)..."
 
 #. Translators: The label of a button to open a feed.
 msgid "&Open feed"
-msgstr "打开feed(&O)"
+msgstr "打开feed源(&O)"
 
 #. Translators: The label of a button to add a new feed.
 msgid "&New..."
@@ -97,7 +95,7 @@ msgstr "恢复默认设置(&E)"
 
 #. Translators: the label of a single choice dialog.
 msgid "Open web page of selected article."
-msgstr "打开选择的文章页面"
+msgstr "打开选择的文章页面。"
 
 #. Translators: The label of a field to enter an address for a new feed.
 msgid "Address of a new feed:"
@@ -117,7 +115,7 @@ msgstr "新名称:"
 
 #. Translators: The title of a dialog to rename a feed.
 msgid "Rename feed"
-msgstr "重命名Feed"
+msgstr "重命名Feed源"
 
 #. Translators: The title of the Copy dialog.
 msgid "Copy feeds"
@@ -125,7 +123,7 @@ msgstr "复制feeds"
 
 #. Translators: An informational message displayed in the Copy dialog.
 msgid "Select a folder to save a backup of your current feeds"
-msgstr "选择一个文件夹以保存当前Feeds的备份"
+msgstr "选择一个文件夹以保存当前Feeds源的备份"
 
 #. Translators: The label of a grouping containing controls to select the destination directory in the Copy dialog.
 msgid "directory for backup:"
@@ -137,11 +135,11 @@ msgstr "选择要复制的目录"
 
 #. Translators: The title of the Restore dialog.
 msgid "Restore feeds"
-msgstr "恢复feeds"
+msgstr "恢复feeds源"
 
 #. Translators: An informational message displayed in the Restore dialog.
 msgid "Select a folder to restore a backup of your previous copied feeds"
-msgstr "选择一个文件夹来恢复先前复制的feeds的备份"
+msgstr "选择一个文件夹来恢复先前复制的feeds源的备份"
 
 #. Translators: The label of a grouping containing controls to select the destination directory in the Restore dialog.
 msgid "directory containing backup:"
@@ -161,11 +159,11 @@ msgstr "不能定位文章链接。"
 
 #. Translators: the name of a submenu.
 msgid "&Read Feeds"
-msgstr "阅读源(&R)"
+msgstr "阅读源"
 
 #. Translators: the name of a menu item.
 msgid "&Feeds..."
-msgstr "阅读源(&R)"
+msgstr "阅读源(&R)..."
 
 #. Translators: the name of a menu item.
 msgid "&Copy feeds folder..."
@@ -224,9 +222,7 @@ msgstr "复制当前文章的标题和相关链接到剪贴板。"
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
 msgid "Read Feeds"
-msgstr ""
-"Read Feeds\n"
-"翻译者：雪岭冰龙"
+msgstr "Read Feeds"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
