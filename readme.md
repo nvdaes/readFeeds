@@ -65,7 +65,7 @@ Opens a dialog to select a folder which replaces your feeds in the personalFeeds
 ## Changes for 5.0 ##
 
 * The articles list dialog has been enhanced.
-* Requires NVDA 2018.3.
+* Compatible with NVDA 2018.3 or later (required).
 * If needed, you can download the [last version compatible with NVDA 2017.3][3].
 
 ## Changes for 4.0 ##
