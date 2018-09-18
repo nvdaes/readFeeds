@@ -26,7 +26,7 @@ Opens a dialog with the following controls:
 
 * Filter by: An edit box to search previously saved feeds.
 * A list of the saved feeds.
-* List of articles: Opens a dialog which presents the articles list from your current feed. Select the article you want to read and press OK button to open the corresponding page in your browser.
+* List of articles: Opens a dialog which presents the articles list from your current feed. Select the article you want to read and press Enter or Open web page of selected article button to open the corresponding page in your browser. Press About article button to open a dialog showing title and link of the selected article; from this dialog, you'll be able to copy this info to the clipboard.
 * Open feed: Opens the selected feed in the default application.
 * New: Opens a dialog with an edit box to enter the address of a new feed. If the address is valid and the feed can be saved, its name, based on the feed title, will appear at the bottom of the feeds list.
 * Rename: Opens a dialog with an edit box to rename the selected feed.
@@ -62,7 +62,11 @@ Opens a dialog to select a folder which replaces your feeds in the personalFeeds
 * NVDA will display an error message if it was not possible to backup or restore the personalFeeds folder.
 * The title of the articles list dialog displays the selected feed name and number of items available.
 
+## Changes for 5.0 ##
 
+* The articles list dialog has been enhanced.
+* Compatible with NVDA 2018.3 or later (required).
+* If needed, you can download the [last version compatible with NVDA 2017.3][3].
 
 ## Changes for 4.0 ##
 
@@ -87,3 +91,4 @@ Opens a dialog to select a folder which replaces your feeds in the personalFeeds
 [1]: http://addons.nvda-project.org/files/get.php?file=rf
 
 [2]: http://addons.nvda-project.org/files/get.php?file=rf-dev
+[3]: https://github.com/nvdaes/readFeeds/releases/download/4.5/readFeeds-4.5.nvda-addon
