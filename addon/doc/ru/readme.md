@@ -32,9 +32,12 @@ readFeeds.
 * Фильтр по: поле редактирования для поиска ранее сохраненных новостных
   лент.
 * Список сохраненных новостных лент.
-* Список статей: открывает диалог, в котором приводится перечень статей
-  текущей новостной ленты. Выберите статью, которую вы хотите прочитать, и
-  нажмите кнопку ОК, чтобы открыть соответствующую страницу в браузере.
+* List of articles: Opens a dialog which presents the articles list from
+  your current feed. Select the article you want to read and press Enter or
+  Open web page of selected article button to open the corresponding page in
+  your browser. Press About article button to open a dialog showing title
+  and link of the selected article; from this dialog, you'll be able to copy
+  this info to the clipboard.
 * Открыть новостную ленту: Открывает выбранную новостную ленту в приложении
   по умолчанию.
 * Новый: открывает диалог с полем редактирования, где можно ввести адрес
@@ -91,7 +94,12 @@ URL-адреса новостных лент.
 * Диалог с названием списка статей отображает имя выбранной новостной ленты
   с количеством доступных элементов.
 
+## Changes for 5.0 ##
 
+* The articles list dialog has been enhanced.
+* Compatible with NVDA 2018.3 or later (required).
+* If needed, you can download the [last version compatible with NVDA
+  2017.3][3].
 
 ## Изменения для 4.0 ##
 
@@ -119,6 +127,7 @@ URL-адреса новостных лент.
 
 [[!tag dev stable]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=rf
+[1]: https://addons.nvda-project.org/files/get.php?file=rf
 
-[2]: http://addons.nvda-project.org/files/get.php?file=rf-dev
+[2]: https://addons.nvda-project.org/files/get.php?file=rf-dev [3]:
+https://github.com/nvdaes/readFeeds/releases/download/4.5/readFeeds-4.5.nvda-addon

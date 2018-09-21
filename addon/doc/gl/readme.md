@@ -32,9 +32,12 @@ Abre un diálogo cos seguintes controis:
 * Filtrar por: unha Caixa de edición para procurar feeds gardados
   anteriormente.
 * Unha listaxe dos feeds gardados.
-* Listaxe de artigos: abre un diálogo que presenta a listaxe de artigos do
-  teu feed actual. Seleciona o artigo que queras ler e preme o botón Aceptar
-  para abrir a páxina correspondente no teu navegador.
+* Listaxe de artigos: abre un diálogo que amosa a listaxe de artigos do teu
+  feed actual. Seleciona o artigo que desexes ler e preme Intro ou o botón
+  Abrir páxina web do artigo selecionado para abrir a páxina correspondente
+  no teu navegador. Preme o botón Acerca do artigo para abrir un diálogo que
+  amose o título e a liga do artigo selecionado; dende este diálogo, poderás
+  copiar esta información ao portapapeis.
 * Abrir feed: abre o feed selecionado na aplicación predeterminada.
 * Novo: abre un diálogo cunha Caixa de edición para introducir o enderezo
   dun feed novo. Se o enderezo é válido e o feed pode gardarse, o seu nome,
@@ -90,7 +93,12 @@ feeds.
 * O título do diálogo da listaxe de artigos amopsa o nome do feed
   selecionado e o número de elementos dispoñibles.
 
+## Cambios para 5.0 ##
 
+* Mellorouse o diálogo listaxe de artigos.
+* Compatible co NVDA 2018.3 ou posterior (requerido).
+* Se fora necesario, podes descargar a [última versión compatible co NVDA
+  2017.3][3].
 
 ## Cambios para 4.0 ##
 
@@ -118,6 +126,7 @@ feeds.
 
 [[!tag dev stable]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=rf
+[1]: https://addons.nvda-project.org/files/get.php?file=rf
 
-[2]: http://addons.nvda-project.org/files/get.php?file=rf-dev
+[2]: https://addons.nvda-project.org/files/get.php?file=rf-dev [3]:
+https://github.com/nvdaes/readFeeds/releases/download/4.5/readFeeds-4.5.nvda-addon

@@ -32,9 +32,12 @@ de følgende menupunkter er tilgængelige:
 * Filtrér efter: Et redigeringsfelt til at søge i tidligere gemte
   nyhedskanaler.
 * En liste over de gemte nyhedskanaler.
-* Liste over artikler: Åbner en dialogboks, som viser en liste af artikler
-  fra din aktuelle nyhedskanal. Vælg den artikel du vil læse og tryk på OK
-  for at åbne den tilsvarende side i din browser.
+* List of articles: Opens a dialog which presents the articles list from
+  your current feed. Select the article you want to read and press Enter or
+  Open web page of selected article button to open the corresponding page in
+  your browser. Press About article button to open a dialog showing title
+  and link of the selected article; from this dialog, you'll be able to copy
+  this info to the clipboard.
 * Åbn nyhedskanal: Åbner den markerede kanal i standardprogrammet.
 * Ny: Åbner en dialogboks med et redigeringsfelt til at indtaste adressen på
   en ny nyhedskanal. Hvis adressen er gyldig og kanalen kan gemmes, vises
@@ -91,7 +94,12 @@ URL-adresser på nyhedskanaler.
 * Titlen på dialogen der viser listen over artikler viser navnet på den
   aktuelle kanal, samt antallet af artikler til rådighed.
 
+## Changes for 5.0 ##
 
+* The articles list dialog has been enhanced.
+* Compatible with NVDA 2018.3 or later (required).
+* If needed, you can download the [last version compatible with NVDA
+  2017.3][3].
 
 ## Ændringer i4.0  ##
 
@@ -119,6 +127,7 @@ URL-adresser på nyhedskanaler.
 
 [[!tag dev stable]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=rf
+[1]: https://addons.nvda-project.org/files/get.php?file=rf
 
-[2]: http://addons.nvda-project.org/files/get.php?file=rf-dev
+[2]: https://addons.nvda-project.org/files/get.php?file=rf-dev [3]:
+https://github.com/nvdaes/readFeeds/releases/download/4.5/readFeeds-4.5.nvda-addon

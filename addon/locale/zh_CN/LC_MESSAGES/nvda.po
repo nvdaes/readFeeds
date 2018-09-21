@@ -2,7 +2,7 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: readFeeds 4.3\n"
@@ -62,6 +62,7 @@ msgid "Feeds restored"
 msgstr "恢复Feeds"
 
 #. Translators: The title of a dialog.
+#, python-brace-format
 msgid "Feeds: {defaultFeed} ({configProfile})"
 msgstr "Feeds源: {defaultFeed} ({configProfile})"
 
@@ -93,10 +94,6 @@ msgstr "删除(&D)..."
 msgid "S&et default"
 msgstr "恢复默认设置(&E)"
 
-#. Translators: the label of a single choice dialog.
-msgid "Open web page of selected article."
-msgstr "打开选择的文章页面。"
-
 #. Translators: The label of a field to enter an address for a new feed.
 msgid "Address of a new feed:"
 msgstr "新Feed地址："
@@ -116,6 +113,33 @@ msgstr "新名称:"
 #. Translators: The title of a dialog to rename a feed.
 msgid "Rename feed"
 msgstr "重命名Feed源"
+
+#. Translators: The label of the articles list in the articles dialog.
+#, fuzzy
+msgid "List of articles"
+msgstr "文章列表(&L)..."
+
+#. Translators: The label of a button to open the selected article of a feed.
+#, fuzzy
+msgid "Open &web page of selected article."
+msgstr "打开选择的文章页面。"
+
+#. Translators: The label of a button to show information of a feed article.
+#, fuzzy
+msgid "&About article..."
+msgstr "文章列表(&L)..."
+
+#. Translators: the label of a message box dialog.
+#, python-format
+msgid ""
+"%s\r\n"
+"\r\n"
+"Do you want to copy article title and link to the clipboard?"
+msgstr ""
+
+#. Translators: the title of a message box dialog.
+msgid "Article information"
+msgstr ""
 
 #. Translators: The title of the Copy dialog.
 msgid "Copy feeds"
@@ -192,16 +216,16 @@ msgstr "激活“恢复”对话框%s."
 msgid "Refreshes the current feed and announces the most recent article title."
 msgstr "刷新当前源并朗读最近庚心文章的标题。"
 
-#. Translators: message presented when the information about an article of a feed is copied to the clipboard.
-#, python-format
-msgid "Copied to clipboard %s"
-msgstr "%s已复制到剪贴板"
-
 #. Translators: message presented in input mode.
 msgid ""
 "Announces the title of the current article. Pressed two times, copies title "
 "and related link to the clipboard."
 msgstr "朗读当前文章的标题，连按两次复制标题和相关的链接到剪贴板。"
+
+#. Translators: message presented when the information about an article of a feed is copied to the clipboard.
+#, python-format
+msgid "Copied to clipboard %s"
+msgstr "%s已复制到剪贴板"
 
 #. Translators: message presented in input mode.
 msgid "Announces the title of the next article."

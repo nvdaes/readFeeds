@@ -97,10 +97,6 @@ msgstr "&حذف..."
 msgid "S&et default"
 msgstr "إ&عداد الافتراضي"
 
-#. Translators: the label of a single choice dialog.
-msgid "Open web page of selected article."
-msgstr "افتح صفحة المقال المحدد"
-
 #. Translators: The label of a field to enter an address for a new feed.
 msgid "Address of a new feed:"
 msgstr "عنوان التلقيم الجديد: "
@@ -120,6 +116,33 @@ msgstr "الاسم الجديد: "
 #. Translators: The title of a dialog to rename a feed.
 msgid "Rename feed"
 msgstr "إعادة تسمية التلقيم"
+
+#. Translators: The label of the articles list in the articles dialog.
+#, fuzzy
+msgid "List of articles"
+msgstr "قائمة ال&مقالات..."
+
+#. Translators: The label of a button to open the selected article of a feed.
+#, fuzzy
+msgid "Open &web page of selected article."
+msgstr "افتح صفحة المقال المحدد"
+
+#. Translators: The label of a button to show information of a feed article.
+#, fuzzy
+msgid "&About article..."
+msgstr "قائمة ال&مقالات..."
+
+#. Translators: the label of a message box dialog.
+#, python-format
+msgid ""
+"%s\r\n"
+"\r\n"
+"Do you want to copy article title and link to the clipboard?"
+msgstr ""
+
+#. Translators: the title of a message box dialog.
+msgid "Article information"
+msgstr ""
 
 #. Translators: The title of the Copy dialog.
 msgid "Copy feeds"
@@ -204,11 +227,6 @@ msgstr "تنشيط محاورة الاسترجاع من %s"
 msgid "Refreshes the current feed and announces the most recent article title."
 msgstr "تنشيط التلقيم الحالي ويعلن عن عنوان أحدث مقال."
 
-#. Translators: message presented when the information about an article of a feed is copied to the clipboard.
-#, python-format
-msgid "Copied to clipboard %s"
-msgstr "تم نسخ %s للحافظة"
-
 #. Translators: message presented in input mode.
 msgid ""
 "Announces the title of the current article. Pressed two times, copies title "
@@ -216,6 +234,11 @@ msgid ""
 msgstr ""
 "الإعلان عن عنوان المقال الحالي, بالضغط عليه مرتين, يقوم بنسخ العنوان ورابط "
 "الصفحة الموجود بها المقال للحافظة."
+
+#. Translators: message presented when the information about an article of a feed is copied to the clipboard.
+#, python-format
+msgid "Copied to clipboard %s"
+msgstr "تم نسخ %s للحافظة"
 
 #. Translators: message presented in input mode.
 msgid "Announces the title of the next article."

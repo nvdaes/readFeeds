@@ -31,9 +31,12 @@ RSS или personalFeeds във вашата папка с потребител�
 
 * Филтриране по: Текстово поле за търсене на предходно запазени емисии.
 * Списък на запазените емисии.
-* Списък на статиите: Отваря диалогов прозорец, който представя списъка със
-  статиите от текущата емисия. Изберете статията, която искате да прочетете
-  и задействайте бутона OK, за да отворите съответната страница в браузъра.
+* List of articles: Opens a dialog which presents the articles list from
+  your current feed. Select the article you want to read and press Enter or
+  Open web page of selected article button to open the corresponding page in
+  your browser. Press About article button to open a dialog showing title
+  and link of the selected article; from this dialog, you'll be able to copy
+  this info to the clipboard.
 * Отвори емисията: Отваря избраната емисия в приложението по подразбиране.
 * Нов: Отваря се диалогов прозорец с текстово поле за въвеждане адреса на
   нова емисия. Ако адресът е валиден и емисията може да бъдат записани,
@@ -92,7 +95,12 @@ RSS или personalFeeds във вашата папка с потребител�
 * Заглавието на диалога за списъка със статиите показва името на избраната
   емисия и номера на наличните статии.
 
+## Changes for 5.0 ##
 
+* The articles list dialog has been enhanced.
+* Compatible with NVDA 2018.3 or later (required).
+* If needed, you can download the [last version compatible with NVDA
+  2017.3][3].
 
 ## Промени във версия 4.0 ##
 
@@ -122,6 +130,7 @@ RSS или personalFeeds във вашата папка с потребител�
 
 [[!tag dev stable]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=rf
+[1]: https://addons.nvda-project.org/files/get.php?file=rf
 
-[2]: http://addons.nvda-project.org/files/get.php?file=rf-dev
+[2]: https://addons.nvda-project.org/files/get.php?file=rf-dev [3]:
+https://github.com/nvdaes/readFeeds/releases/download/4.5/readFeeds-4.5.nvda-addon

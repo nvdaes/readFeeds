@@ -99,10 +99,6 @@ msgstr "&Izbriši..."
 msgid "S&et default"
 msgstr "&postavi kao zadano"
 
-#. Translators: the label of a single choice dialog.
-msgid "Open web page of selected article."
-msgstr "Otvori web stranicu trenutnog članka."
-
 #. Translators: The label of a field to enter an address for a new feed.
 msgid "Address of a new feed:"
 msgstr "Adresa novog feeda:"
@@ -123,6 +119,33 @@ msgstr "Novi naziv:"
 #. Translators: The title of a dialog to rename a feed.
 msgid "Rename feed"
 msgstr "Preimenuj feed"
+
+#. Translators: The label of the articles list in the articles dialog.
+#, fuzzy
+msgid "List of articles"
+msgstr "Popis &Članaka..."
+
+#. Translators: The label of a button to open the selected article of a feed.
+#, fuzzy
+msgid "Open &web page of selected article."
+msgstr "Otvori web stranicu trenutnog članka."
+
+#. Translators: The label of a button to show information of a feed article.
+#, fuzzy
+msgid "&About article..."
+msgstr "Popis &Članaka..."
+
+#. Translators: the label of a message box dialog.
+#, python-format
+msgid ""
+"%s\r\n"
+"\r\n"
+"Do you want to copy article title and link to the clipboard?"
+msgstr ""
+
+#. Translators: the title of a message box dialog.
+msgid "Article information"
+msgstr ""
 
 #. Translators: The title of the Copy dialog.
 msgid "Copy feeds"
@@ -207,11 +230,6 @@ msgstr "Aktivira dijaloški okvir vraćanja %s."
 msgid "Refreshes the current feed and announces the most recent article title."
 msgstr "osvježava trenutni feed i čita trenutni naslov članka"
 
-#. Translators: message presented when the information about an article of a feed is copied to the clipboard.
-#, python-format
-msgid "Copied to clipboard %s"
-msgstr "kopirano u međuspremnik %s"
-
 #. Translators: message presented in input mode.
 msgid ""
 "Announces the title of the current article. Pressed two times, copies title "
@@ -219,6 +237,11 @@ msgid ""
 msgstr ""
 "Čita naslov trenutnog članka. Kad se pritisne dva put, kopira naslov i "
 "vezani link u međuspremnik."
+
+#. Translators: message presented when the information about an article of a feed is copied to the clipboard.
+#, python-format
+msgid "Copied to clipboard %s"
+msgstr "kopirano u međuspremnik %s"
 
 #. Translators: message presented in input mode.
 msgid "Announces the title of the next article."

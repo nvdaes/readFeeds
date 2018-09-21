@@ -30,9 +30,12 @@ Abre um diálogo com os seguintes controlos:
 * Filtrar por: Uma caixa de edição para procurar feeds guardados
   anteriormente.
 * Uma lista dos feeds guardados;
-* Lista de artigos: Abre um diálogo que apresenta a lista de artigos do seu
-  feed actual. Seleccione o artigo que deseja ler e pressione o botão OK
-  para abrir a página correspondente no seu navegador.
+* List of articles: Opens a dialog which presents the articles list from
+  your current feed. Select the article you want to read and press Enter or
+  Open web page of selected article button to open the corresponding page in
+  your browser. Press About article button to open a dialog showing title
+  and link of the selected article; from this dialog, you'll be able to copy
+  this info to the clipboard.
 * Abrir RSS: abre o feed seleccionado na aplicação padrão.
 * Novo: abre uma caixa de diálogo com uma caixa de edição para inserir o
   endereço de um novo feed. Se o endereço for válido e o feed puder ser
@@ -89,7 +92,12 @@ URLs de feeds.
 * O título da caixa de diálogo da lista de artigos mostra o nome do feed
   selecionado e o número de itens disponíveis.
 
+## Changes for 5.0 ##
 
+* The articles list dialog has been enhanced.
+* Compatible with NVDA 2018.3 or later (required).
+* If needed, you can download the [last version compatible with NVDA
+  2017.3][3].
 
 ## Alterações para 4.0: ##
 
@@ -118,6 +126,7 @@ URLs de feeds.
 
 [[!tag dev stable]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=rf
+[1]: https://addons.nvda-project.org/files/get.php?file=rf
 
-[2]: http://addons.nvda-project.org/files/get.php?file=rf-dev
+[2]: https://addons.nvda-project.org/files/get.php?file=rf-dev [3]:
+https://github.com/nvdaes/readFeeds/releases/download/4.5/readFeeds-4.5.nvda-addon

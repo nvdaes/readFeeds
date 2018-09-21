@@ -32,10 +32,12 @@ Ouvre une boîte de dialogue avec les contrôles suivants :
 * Filtrer par : Une zone d'édition pour rechercher des flux précédemment
   enregistrés.
 * Une liste des flux enregistrés.
-* Liste des articles : Ouvre une boîte de dialogue qui présente la liste des
-  articles de vvos flux actuel. Sélectionnez l'article que vous souhaitez
-  lire et appuyer sur le bouton OK pour ouvrir la page correspondante dans
-  votre navigateur.
+* List of articles: Opens a dialog which presents the articles list from
+  your current feed. Select the article you want to read and press Enter or
+  Open web page of selected article button to open the corresponding page in
+  your browser. Press About article button to open a dialog showing title
+  and link of the selected article; from this dialog, you'll be able to copy
+  this info to the clipboard.
 * Ouvrir le flux : Ouvre le flux sélectionné dans l'application par défaut.
 * Nouveau : Ouvre une boîte de dialogue avec une zone d'édition pour entrer
   l'adresse d'un nouveau flux. Si l'adresse est valide et que le flux peut
@@ -91,7 +93,12 @@ contenant des URL de flux.
 * La boîte de dialogue affiche Le titre de la Liste de l'article le nom de
   flux sélectionné et le nombre d'éléments disponibles.
 
+## Changes for 5.0 ##
 
+* The articles list dialog has been enhanced.
+* Compatible with NVDA 2018.3 or later (required).
+* If needed, you can download the [last version compatible with NVDA
+  2017.3][3].
 
 ## Changements pour la version 4.0 ##
 
@@ -122,6 +129,7 @@ contenant des URL de flux.
 
 [[!tag dev stable]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=rf
+[1]: https://addons.nvda-project.org/files/get.php?file=rf
 
-[2]: http://addons.nvda-project.org/files/get.php?file=rf-dev
+[2]: https://addons.nvda-project.org/files/get.php?file=rf-dev [3]:
+https://github.com/nvdaes/readFeeds/releases/download/4.5/readFeeds-4.5.nvda-addon

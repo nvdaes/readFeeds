@@ -31,8 +31,11 @@ Avaa valintaikkunan, jossa on seuraavat säätimet:
 * Suodata: Muokkauskenttä aiemmin tallennettujen syötteiden etsimiseen.
 * Tallennettujen syötteiden luettelo.
 * Artikkeliluettelo: Avaa valintaikkunan, joka näyttää luettelon nykyisen
-  syötteesi artikkeleista. Valitse artikkeli, jonka haluat lukea ja paina
-  OK-painiketta avataksesi vastaavan sivun selaimessasi.
+  syötteen artikkeleista. Valitse artikkeli, jonka haluat lukea, ja paina
+  Enter tai Avaa valitun artikkelin verkkosivu -painiketta avataksesi
+  vastaavan sivun selaimessa. Paina Tietoa artikkelista -painiketta
+  avataksesi valintaikkunan, jossa näytetään valitun artikkelin otsikko ja
+  linkki. Tiedot on myös mahdollista kopioida leikepöydälle.
 * Avaa syöte: Avaa valitun syötteen oletussovelluksessa.
 * Uusi: Avaa muokkausruudun sisältävän valintaikkunan, johon voit kirjoittaa
   uuden syötteen osoitteen. Mikäli syöte on kelvollinen ja se voidaan
@@ -56,7 +59,7 @@ Avaa valintaikkunan, jossa on seuraavat säätimet:
 
 ####Kopioi syötekansio... ####
 
-Avaa valintaikkunan, josta voit valita, minne syötteesi sisältävä
+Avaa valintaikkunan, josta voit valita, minne syötteet sisältävä
 personalFeeds-kansio luodaan. Kansiona on oletusarvoisesti NVDA:n
 asetushakemisto.
 
@@ -87,7 +90,12 @@ vain syötteiden URL-osoitteita sisältävän kansion.
 * Valitun syötteen nimi ja saatavilla olevien artikkeleiden määrä näytetään
   Artikkeliluettelo-valintaikkunan otsikossa.
 
+## Muutokset versiossa 5.0 ##
 
+* Artikkeliluettelovalintaikkunaa on paranneltu.
+* Yhteensopiva NVDA 2018.3:n tai uudemman kanssa (vaaditaan).
+* Viimeisen NVDA 2017.3:n kanssa yhteensopivan version voi ladata
+  [tästä. ][3]
 
 ## Muutokset versiossa 4.0 ##
 
@@ -114,6 +122,7 @@ vain syötteiden URL-osoitteita sisältävän kansion.
 
 [[!tag dev stable]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=rf
+[1]: https://addons.nvda-project.org/files/get.php?file=rf
 
-[2]: http://addons.nvda-project.org/files/get.php?file=rf-dev
+[2]: https://addons.nvda-project.org/files/get.php?file=rf-dev [3]:
+https://github.com/nvdaes/readFeeds/releases/download/4.5/readFeeds-4.5.nvda-addon

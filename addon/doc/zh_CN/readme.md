@@ -22,7 +22,7 @@
 
 * 过滤条件：用于搜索以前保存的feed的编辑框。
 * 已保存的feed列表。
-* 文章列表：打开一个对话框，显示当前Feed中的文章列表。选择要阅读的文章，然后按OK按钮在浏览器中打开相应的页面。
+* 文章列表：打开一个对话框，显示当前Feed中的文章列表。选择要阅读的文章，然后按Enter或打开所选文章的网页按钮，在浏览器中打开相应的页面。按关于文章按钮打开一个对话框，显示所选文章的标题和链接;在此对话框中，您将能够将此信息复制到剪贴板。
 * 打开feed：在默认应用程序中打开所选feed。
 * 新建：打开带有编辑框的对话框，以输入新Feed的地址。如果地址有效且可以保存Feed，则其名称（基于Feed标题）将显示在Feed列表的底部。
 * 重命名：打开一个带有编辑框的对话框，以重命名所选的源。
@@ -58,7 +58,11 @@
 * 如果无法备份或还原personalFeeds文件夹，NVDA将显示错误消息。
 * “文章列表”对话框的标题显示所选的源名称和可用项目数。
 
+## 版本5.0 ##
 
+* 文章列表对话框已得到增强。
+* 兼容NVDA 2018.3或更高版本（必需）。
+* 如果需要，您可以下载[与NVDA 2017.3兼容的最新版本] [3]。
 
 ## 版本4.0 ##
 
@@ -82,6 +86,7 @@
 
 [[!tag dev stable]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=rf
+[1]: https://addons.nvda-project.org/files/get.php?file=rf
 
-[2]: http://addons.nvda-project.org/files/get.php?file=rf-dev
+[2]: https://addons.nvda-project.org/files/get.php?file=rf-dev [3]:
+https://github.com/nvdaes/readFeeds/releases/download/4.5/readFeeds-4.5.nvda-addon

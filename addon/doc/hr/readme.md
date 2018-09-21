@@ -31,9 +31,12 @@ Otvara dijaloški okvir sa sljedećim kontrolama:
 * Filtriraj prema: Uređivačko polje za pretraživanje prethodno spremljenih
   sažetaka.
 * Popis spremljenih sažetaka.
-* Popis članaka: Otvara dijaloški okvir koji prikazuje popis članaka iz
-  trenutnog sažetka.Odaberite članak koji želite čitati i pritisnite gumb OK
-  kako biste otvorili odgovarajuću stranicu u vašem pregledniku.
+* List of articles: Opens a dialog which presents the articles list from
+  your current feed. Select the article you want to read and press Enter or
+  Open web page of selected article button to open the corresponding page in
+  your browser. Press About article button to open a dialog showing title
+  and link of the selected article; from this dialog, you'll be able to copy
+  this info to the clipboard.
 * Otvori sažetak: Otvara odabrani sažetak u zadanoj aplikaciji.
 * Novi: Otvara dijaloški okvir s uređivačkim poljem za unos adrese novog
   sažetka. Ako je adresa ispravna i sažetak se može pohraniti, njegovo ime,
@@ -87,7 +90,12 @@ sažeci. Provjerite jeste li učitali mapu koja sadrži adrese sažetaka.
 * Popis naslova članaka prikazuje ime odabranog sažetka i broj dostupnih
   stavki.
 
+## Changes for 5.0 ##
 
+* The articles list dialog has been enhanced.
+* Compatible with NVDA 2018.3 or later (required).
+* If needed, you can download the [last version compatible with NVDA
+  2017.3][3].
 
 ## Promjene u inačici 4.0 ##
 
@@ -114,6 +122,7 @@ sažeci. Provjerite jeste li učitali mapu koja sadrži adrese sažetaka.
 
 [[!tag dev stable]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=rf
+[1]: https://addons.nvda-project.org/files/get.php?file=rf
 
-[2]: http://addons.nvda-project.org/files/get.php?file=rf-dev
+[2]: https://addons.nvda-project.org/files/get.php?file=rf-dev [3]:
+https://github.com/nvdaes/readFeeds/releases/download/4.5/readFeeds-4.5.nvda-addon

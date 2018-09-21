@@ -101,10 +101,6 @@ msgstr "&Apagar..."
 msgid "S&et default"
 msgstr "&Definir por padrão"
 
-#. Translators: the label of a single choice dialog.
-msgid "Open web page of selected article."
-msgstr "Abrir a página Web do artigo seleccionado."
-
 #. Translators: The label of a field to enter an address for a new feed.
 msgid "Address of a new feed:"
 msgstr "Endereço de um RSS novo:"
@@ -124,6 +120,33 @@ msgstr "Novo nome:"
 #. Translators: The title of a dialog to rename a feed.
 msgid "Rename feed"
 msgstr "Renomear o RSS"
+
+#. Translators: The label of the articles list in the articles dialog.
+#, fuzzy
+msgid "List of articles"
+msgstr "Lista de &artigos..."
+
+#. Translators: The label of a button to open the selected article of a feed.
+#, fuzzy
+msgid "Open &web page of selected article."
+msgstr "Abrir a página Web do artigo seleccionado."
+
+#. Translators: The label of a button to show information of a feed article.
+#, fuzzy
+msgid "&About article..."
+msgstr "Lista de &artigos..."
+
+#. Translators: the label of a message box dialog.
+#, python-format
+msgid ""
+"%s\r\n"
+"\r\n"
+"Do you want to copy article title and link to the clipboard?"
+msgstr ""
+
+#. Translators: the title of a message box dialog.
+msgid "Article information"
+msgstr ""
 
 #. Translators: The title of the Copy dialog.
 msgid "Copy feeds"
@@ -202,11 +225,6 @@ msgstr "Activa o diálogo de recuperação de %s."
 msgid "Refreshes the current feed and announces the most recent article title."
 msgstr "Actualiza o rss corrente e mostra o título do artigo mais recente."
 
-#. Translators: message presented when the information about an article of a feed is copied to the clipboard.
-#, python-format
-msgid "Copied to clipboard %s"
-msgstr "Copiado para a área de transferência %s."
-
 #. Translators: message presented in input mode.
 msgid ""
 "Announces the title of the current article. Pressed two times, copies title "
@@ -214,6 +232,11 @@ msgid ""
 msgstr ""
 "Diz o título do artigo corrent e, se pressionada duas vezes, copia o título "
 "e a ligaçã para a área de transferência."
+
+#. Translators: message presented when the information about an article of a feed is copied to the clipboard.
+#, python-format
+msgid "Copied to clipboard %s"
+msgstr "Copiado para a área de transferência %s."
 
 #. Translators: message presented in input mode.
 msgid "Announces the title of the next article."

@@ -33,8 +33,12 @@ Abre un diálogo con los siguientes controles:
   anterioridad.
 * Una lista de los feeds guardados.
 * Lista de artículos: abre un diálogo que presenta la lista de artículos de
-  tu feed actual. Selecciona el artículo que quieras leer y pulsa el botón
-  Aceptar para abrir la página correspondiente en tu navegador.
+  tu feed actual. Selecciona el artículo que desees leer y pulsa Intro o el
+  botón Abrir página web del artículo seleccionado para abrir la página
+  correspondiente en tu navegador. Presiona el botón Acerca del artículo
+  para abrir un diálogo que muestre el título y el enlace del artículo
+  seleccionado; desde este diálogo, podrás copiar esta información al
+  portapapeles.
 * Abrir feed: abre el feed seleccionado en la aplicación predeterminada.
 * Nuevo: abre un diálogo con un cuadro de edición para introducir la
   dirección de un feed nuevo. Si la dirección es válida y el feed puede
@@ -91,7 +95,12 @@ feeds.
 * El título del diálogo de lista de artículos muestra el nombre del feed
   seleccionado y el número de elementos disponibles.
 
+## Cambios para 5.0 ##
 
+* El diálogo lista de artículos se ha mejorado.
+* Compatible con NVDA 2018.3 o posterior (requerido).
+* Si fuese necesario, puedes descargar la [última  versión compatible con
+  NVDA 2017.3][3].
 
 ## Cambios para 4.0 ##
 
@@ -120,6 +129,7 @@ feeds.
 
 [[!tag dev stable]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=rf
+[1]: https://addons.nvda-project.org/files/get.php?file=rf
 
-[2]: http://addons.nvda-project.org/files/get.php?file=rf-dev
+[2]: https://addons.nvda-project.org/files/get.php?file=rf-dev [3]:
+https://github.com/nvdaes/readFeeds/releases/download/4.5/readFeeds-4.5.nvda-addon

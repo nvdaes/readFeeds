@@ -32,9 +32,13 @@ Extras zugreifen. Es stehen folgende Menüoptionen zur Verfügung:
 
 * Filtern nach: Ein Eingabefeld, um zuvor gespeicherte Feeds zu durchsuchen.
 * Eine Liste der gespeicherten RSS-Feeds.
-* Artikelliste: Öffnet einen Dialog mit der Artikelliste des aktuellen
-  Feeds. Wählen Sie den gewünschten Artikel aus und drücken Sie die
-  OK-Taste, um die entsprechende Seite in Ihrem Browser zu öffnen.
+* Liste der Artikel: Öffnet einen Dialog, der die Artikelliste aus Ihrem
+  aktuellen Feed anzeigt. Wählen Sie den Artikel, den Sie lesen möchten, und
+  drücken Sie die Eingabetaste oder die Schaltfläche Webseite des
+  ausgewählten Artikels öffnen, um die entsprechende Seite in Ihrem Browser
+  zu öffnen. Klicken Sie auf die Schaltfläche Info-Artikel, um einen Dialog
+  mit Titel und Link des ausgewählten Artikels zu öffnen; von diesem Dialog
+  aus können Sie diese Informationen in die Zwischenablage kopieren.
 * Feed öffnen: Öffnet den ausgewählten Feed in der Standardanwendung.
 * Neu: Öffnet einen Dialog mit einem Eingabefeld zur Eingabe der Adresse
   eines neuen RSS-Feeds. Wenn die Adresse gültig ist und der Feed
@@ -57,7 +61,7 @@ Extras zugreifen. Es stehen folgende Menüoptionen zur Verfügung:
   AddressFile-Feed wird als Standard verwendet, wenn die Konfiguration
   zurückgesetzt wird. Daher kann dieser Ordner nicht gelöscht werden.
 
-####Artikelordner kopieren... ####
+####Artikelordner kopieren...####
 
 Öffnet einen Dialog zur Auswahl eines Ordners, in dem Sie das
 personalFeeds-Verzeichnis Ihrer Artikel speichern können. Standardmäßig ist
@@ -71,15 +75,15 @@ Feed-URLs auswählen.
 
 ### Tastenkombinationen: ###
 
-* STRG+Umschalt+NVDA+Leertaste: sagt die aktuelle Adresse des Artikels
+* STRG+Umschalt+NVDA+Leertaste: Sagt die aktuelle Adresse des Artikels
   an. Zweimaliges Drücken öffnet die Webseite des Artikels.
-* STRG+Umschalt+NVDA+8: das ausgewählte RSS-Feed wir neugeladen und der
+* STRG+Umschalt+NVDA+8: Das ausgewählte RSS-Feed wir neugeladen und der
   aktuellste Titel wird angesagt.
-* Strg+Umschalt+NVDA+I: sagt den aktuellen Feed-Titel und -Link an. Durch
+* Strg+Umschalt+NVDA+I: Sagt den aktuellen Feed-Titel und -Link an. Durch
   zweimaliges Drücken wird der Titel und der zugehörige Link in die
   Zwischenablage kopiert.
-* STRG+Umschalt+NVDA+U: sagt den Titel des vorherigen RSS-Feeds an.
-* STRG+Umschalt+NVDA+O: sagt den Titel des nächsten RSS-Feeds an.
+* STRG+Umschalt+NVDA+U: Sagt den Titel des vorherigen RSS-Feeds an.
+* STRG+Umschalt+NVDA+O: Sagt den Titel des nächsten RSS-Feeds an.
 
 ## Benachrichtigungen werden ausgegeben: ##
 
@@ -91,7 +95,12 @@ Feed-URLs auswählen.
 * Im Titel des Dialogs für die Artikellisten werden der Name des
   ausgewählten Feeds und die Anzahl der verfügbaren Artikel angezeigt.
 
+## Änderungen für 5.0 ##
 
+* Der Dialog der Artikelliste wurde erweitert.
+* Kompatibel mit NVDA 2018.3 oder neuer (erforderlich).
+* Bei Bedarf können Sie die [letzte Version][3], die mit NVDA 2017.3
+  kompatibel ist herunterladen.
 
 ## Änderungen in 4.0 ##
 
@@ -121,6 +130,7 @@ Feed-URLs auswählen.
 
 [[!tag dev stable]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=rf
+[1]: https://addons.nvda-project.org/files/get.php?file=rf
 
-[2]: http://addons.nvda-project.org/files/get.php?file=rf-dev
+[2]: https://addons.nvda-project.org/files/get.php?file=rf-dev [3]:
+https://github.com/nvdaes/readFeeds/releases/download/4.5/readFeeds-4.5.nvda-addon

@@ -31,10 +31,12 @@ Otwiera dialog z następującymi kontrolkami:
 * Filtruj Według: Pole edycyjne do wyszukiwania poprzednio zapisanych
   kanałów osobistych.
 * Lista zachowanych kanałów osobistych.
-* Lista artykułow: Otwiera dialog wyświetlający spis arytykułów z teraz
-  wyświetlanego kanału osobistego. Oznacz artykuł, którego chcesz
-  przeczytać, a potem naćiśnij przycisk OK, aby otworzyć odnoszącą się
-  stronę w przeglądarce www.
+* List of articles: Opens a dialog which presents the articles list from
+  your current feed. Select the article you want to read and press Enter or
+  Open web page of selected article button to open the corresponding page in
+  your browser. Press About article button to open a dialog showing title
+  and link of the selected article; from this dialog, you'll be able to copy
+  this info to the clipboard.
 * Otwórz kanał: otwiera wybrany kanał w domyślnej aplikacji.
 * Nowy: Otwiera okno dialogowe zawierające pole edycyjne, w którym można
   wpisać adres nowego kanału osobistego. Jeżeli adres jest prawidłowy a
@@ -92,7 +94,12 @@ katalog zawierający kanały osobiste.
 * Dialog Spisu nagłówków artykułów Wyświetla nazwę oznaczonego kanału
   osobistego i ilość dostępnych artykułów.
 
+## Changes for 5.0 ##
 
+* The articles list dialog has been enhanced.
+* Compatible with NVDA 2018.3 or later (required).
+* If needed, you can download the [last version compatible with NVDA
+  2017.3][3].
 
 ## Zmiany w wersji 4.0 ##
 
@@ -121,6 +128,7 @@ katalog zawierający kanały osobiste.
 
 [[!tag dev stable]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=rf
+[1]: https://addons.nvda-project.org/files/get.php?file=rf
 
-[2]: http://addons.nvda-project.org/files/get.php?file=rf-dev
+[2]: https://addons.nvda-project.org/files/get.php?file=rf-dev [3]:
+https://github.com/nvdaes/readFeeds/releases/download/4.5/readFeeds-4.5.nvda-addon

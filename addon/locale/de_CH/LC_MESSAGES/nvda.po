@@ -98,10 +98,6 @@ msgstr "&Löschen..."
 msgid "S&et default"
 msgstr "Als Standard &festlegen"
 
-#. Translators: the label of a single choice dialog.
-msgid "Open web page of selected article."
-msgstr "Artikel-Webseite öffnen"
-
 #. Translators: The label of a field to enter an address for a new feed.
 msgid "Address of a new feed:"
 msgstr "Neue Adresse des Rss-Feeds:"
@@ -123,6 +119,33 @@ msgstr "Neuer Name:"
 #. Translators: The title of a dialog to rename a feed.
 msgid "Rename feed"
 msgstr "Rss-Feed umbenennen"
+
+#. Translators: The label of the articles list in the articles dialog.
+#, fuzzy
+msgid "List of articles"
+msgstr "Artikelliste..."
+
+#. Translators: The label of a button to open the selected article of a feed.
+#, fuzzy
+msgid "Open &web page of selected article."
+msgstr "Artikel-Webseite öffnen"
+
+#. Translators: The label of a button to show information of a feed article.
+#, fuzzy
+msgid "&About article..."
+msgstr "Artikelliste..."
+
+#. Translators: the label of a message box dialog.
+#, python-format
+msgid ""
+"%s\r\n"
+"\r\n"
+"Do you want to copy article title and link to the clipboard?"
+msgstr ""
+
+#. Translators: the title of a message box dialog.
+msgid "Article information"
+msgstr ""
 
 #. Translators: The title of the Copy dialog.
 msgid "Copy feeds"
@@ -210,11 +233,6 @@ msgstr ""
 "Ruft den aktuellen Rss-Feed ab und liest die neuen Überschriften der Artikel "
 "vor."
 
-#. Translators: message presented when the information about an article of a feed is copied to the clipboard.
-#, python-format
-msgid "Copied to clipboard %s"
-msgstr "%s in die Zwischenablage kopiert."
-
 #. Translators: message presented in input mode.
 msgid ""
 "Announces the title of the current article. Pressed two times, copies title "
@@ -222,6 +240,11 @@ msgid ""
 msgstr ""
 "Liest die aktuelle Überschrift des Artikels vor. Zweimal gedrückt wird die "
 "Überschrift und die dazugehörige Adresse in die Zwischenablage kopiert."
+
+#. Translators: message presented when the information about an article of a feed is copied to the clipboard.
+#, python-format
+msgid "Copied to clipboard %s"
+msgstr "%s in die Zwischenablage kopiert."
 
 #. Translators: message presented in input mode.
 msgid "Announces the title of the next article."

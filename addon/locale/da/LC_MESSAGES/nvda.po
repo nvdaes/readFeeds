@@ -99,10 +99,6 @@ msgstr "&Slet..."
 msgid "S&et default"
 msgstr "Sæt som st&andard"
 
-#. Translators: the label of a single choice dialog.
-msgid "Open web page of selected article."
-msgstr "Åbn webside for den valgte artikel."
-
 #. Translators: The label of a field to enter an address for a new feed.
 msgid "Address of a new feed:"
 msgstr "Adresse på ny nyhedskanal:"
@@ -124,6 +120,33 @@ msgstr "Nyt navn:"
 #. Translators: The title of a dialog to rename a feed.
 msgid "Rename feed"
 msgstr "Omdøb kanal"
+
+#. Translators: The label of the articles list in the articles dialog.
+#, fuzzy
+msgid "List of articles"
+msgstr "Liste over &artikler..."
+
+#. Translators: The label of a button to open the selected article of a feed.
+#, fuzzy
+msgid "Open &web page of selected article."
+msgstr "Åbn webside for den valgte artikel."
+
+#. Translators: The label of a button to show information of a feed article.
+#, fuzzy
+msgid "&About article..."
+msgstr "Liste over &artikler..."
+
+#. Translators: the label of a message box dialog.
+#, python-format
+msgid ""
+"%s\r\n"
+"\r\n"
+"Do you want to copy article title and link to the clipboard?"
+msgstr ""
+
+#. Translators: the title of a message box dialog.
+msgid "Article information"
+msgstr ""
 
 #. Translators: The title of the Copy dialog.
 msgid "Copy feeds"
@@ -203,11 +226,6 @@ msgstr ""
 "Opdaterer den aktuelle nyhedskanal og annoncerer titlen på den seneste "
 "artikel."
 
-#. Translators: message presented when the information about an article of a feed is copied to the clipboard.
-#, python-format
-msgid "Copied to clipboard %s"
-msgstr "%s kopieret til udklipsholder"
-
 #. Translators: message presented in input mode.
 msgid ""
 "Announces the title of the current article. Pressed two times, copies title "
@@ -215,6 +233,11 @@ msgid ""
 msgstr ""
 "Annoncerer titlen på den aktuelle artikel. Tryk to gange for at kopiere "
 "titel og tilhørende link til udklipsholderen."
+
+#. Translators: message presented when the information about an article of a feed is copied to the clipboard.
+#, python-format
+msgid "Copied to clipboard %s"
+msgstr "%s kopieret til udklipsholder"
 
 #. Translators: message presented in input mode.
 msgid "Announces the title of the next article."

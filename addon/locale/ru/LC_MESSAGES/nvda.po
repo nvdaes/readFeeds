@@ -98,10 +98,6 @@ msgstr "У&далить..."
 msgid "S&et default"
 msgstr "&Установить по умолчанию"
 
-#. Translators: the label of a single choice dialog.
-msgid "Open web page of selected article."
-msgstr "Открыть веб-страницу выбранной статьи."
-
 #. Translators: The label of a field to enter an address for a new feed.
 msgid "Address of a new feed:"
 msgstr "Адрес новой новостной ленты:"
@@ -123,6 +119,33 @@ msgstr "Новое имя:"
 #. Translators: The title of a dialog to rename a feed.
 msgid "Rename feed"
 msgstr "Переименовать новостную ленту"
+
+#. Translators: The label of the articles list in the articles dialog.
+#, fuzzy
+msgid "List of articles"
+msgstr "Список &Статей..."
+
+#. Translators: The label of a button to open the selected article of a feed.
+#, fuzzy
+msgid "Open &web page of selected article."
+msgstr "Открыть веб-страницу выбранной статьи."
+
+#. Translators: The label of a button to show information of a feed article.
+#, fuzzy
+msgid "&About article..."
+msgstr "Список &Статей..."
+
+#. Translators: the label of a message box dialog.
+#, python-format
+msgid ""
+"%s\r\n"
+"\r\n"
+"Do you want to copy article title and link to the clipboard?"
+msgstr ""
+
+#. Translators: the title of a message box dialog.
+msgid "Article information"
+msgstr ""
 
 #. Translators: The title of the Copy dialog.
 msgid "Copy feeds"
@@ -209,11 +232,6 @@ msgstr ""
 "Обновляет текущую новостную ленту и объявляет самое последнее название "
 "статьи."
 
-#. Translators: message presented when the information about an article of a feed is copied to the clipboard.
-#, python-format
-msgid "Copied to clipboard %s"
-msgstr "%s скопировано в буфер обмена"
-
 #. Translators: message presented in input mode.
 msgid ""
 "Announces the title of the current article. Pressed two times, copies title "
@@ -221,6 +239,11 @@ msgid ""
 msgstr ""
 "Объявляет название текущей статьи. Двойное нажатие копирует название и "
 "связанную ссылку в буфер обмена."
+
+#. Translators: message presented when the information about an article of a feed is copied to the clipboard.
+#, python-format
+msgid "Copied to clipboard %s"
+msgstr "%s скопировано в буфер обмена"
 
 #. Translators: message presented in input mode.
 msgid "Announces the title of the next article."

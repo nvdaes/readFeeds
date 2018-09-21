@@ -32,19 +32,12 @@ Deschide un dialog cu următoarele controale:
 * Filtrează după: O casetă de editare pentru căutarea fluxurilor salvate
   anterior.
 * O listă a fluxurilor salvate.
-* - Filtrat după: O casetă de editare pentru a căuta fluxurilr salvate
-  înainte.  - O listă a fluxurilor salvate.  - listă de articole: Deschide
-  un dialog care prezintă lista de articole din fluxul curent. Selectați
-  articolul pe care vreți să-l citiți și apăsați butonul OK pentru a
-  deschide pagina în navigator.  - Nou: Deschide un dialog cu o casetă de
-  editare pentru a introduce adresa unui flux nou. Dacă adresa este validă
-  și fluxul poate fi salvat, numele său, bazat pe titlul fluxului, va apărea
-  la sfârșitul listei de fluxuri.  -  Redenumire: Deschide un dialog cu o
-  casetă de editare pentru a redenumi fluxul selectat.  - Ștergere: Deschide
-  un dialog pentru a șterge fluxul selectat după confirmare.  -  Setează
-  implicit: Setează fluxul selectat ca implicit, deci articolele sale pot fi
-  accesate cu gesturile NVDA-ului.  - Închidere: Închide dialogul
-  fluxurilor.
+* List of articles: Opens a dialog which presents the articles list from
+  your current feed. Select the article you want to read and press Enter or
+  Open web page of selected article button to open the corresponding page in
+  your browser. Press About article button to open a dialog showing title
+  and link of the selected article; from this dialog, you'll be able to copy
+  this info to the clipboard.
 * Deschide flux: Deschide fluxul selectat in aplicația standard
   corespunzătoare.
 * Nou: Deschide un dialog cu o casetă de editare pentru introducerea adresei
@@ -101,7 +94,12 @@ ce conține URL-urile fluxurilor.
 * Dialogul titlului listei articolelor afișează numele fluxului selectat și
   numărul elementelor disponibile.
 
+## Changes for 5.0 ##
 
+* The articles list dialog has been enhanced.
+* Compatible with NVDA 2018.3 or later (required).
+* If needed, you can download the [last version compatible with NVDA
+  2017.3][3].
 
 ## Modificări în 4.0 ##
 
@@ -130,6 +128,7 @@ ce conține URL-urile fluxurilor.
 
 [[!tag dev stable]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=rf
+[1]: https://addons.nvda-project.org/files/get.php?file=rf
 
-[2]: http://addons.nvda-project.org/files/get.php?file=rf-dev
+[2]: https://addons.nvda-project.org/files/get.php?file=rf-dev [3]:
+https://github.com/nvdaes/readFeeds/releases/download/4.5/readFeeds-4.5.nvda-addon
