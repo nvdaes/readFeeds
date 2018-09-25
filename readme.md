@@ -91,4 +91,5 @@ Opens a dialog to select a folder which replaces your feeds in the personalFeeds
 [1]: http://addons.nvda-project.org/files/get.php?file=rf
 
 [2]: http://addons.nvda-project.org/files/get.php?file=rf-dev
-[3]: https://github.com/nvdaes/readFeeds/releases/download/4.5/readFeeds-4.5.nvda-addon
+
+[3]: http://addons.nvda-project.org/files/get.php?file=rf-o
