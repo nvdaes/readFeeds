@@ -124,5 +124,6 @@ vain syötteiden URL-osoitteita sisältävän kansion.
 
 [1]: https://addons.nvda-project.org/files/get.php?file=rf
 
-[2]: https://addons.nvda-project.org/files/get.php?file=rf-dev [3]:
-https://github.com/nvdaes/readFeeds/releases/download/4.5/readFeeds-4.5.nvda-addon
+[2]: https://addons.nvda-project.org/files/get.php?file=rf-dev
+
+[3]: https://addons.nvda-project.org/files/get.php?file=rf-o

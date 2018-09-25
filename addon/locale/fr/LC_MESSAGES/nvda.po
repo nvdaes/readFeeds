@@ -5,10 +5,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: readFeeds 4.0\n"
+"Project-Id-Version: readFeeds 5.0\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-12-06 18:00+0100\n"
-"PO-Revision-Date: 2018-05-25 13:14+0200\n"
+"PO-Revision-Date: 2018-09-22 15:01+0200\n"
 "Last-Translator: Rémy Ruiz <remyruiz@gmail.com>\n"
 "Language-Team: Rémy Ruiz <remyruiz@gmail.com>\n"
 "Language: fr\n"
@@ -123,19 +123,16 @@ msgid "Rename feed"
 msgstr "Renommer le flux"
 
 #. Translators: The label of the articles list in the articles dialog.
-#, fuzzy
 msgid "List of articles"
-msgstr "Liste des &articles..."
+msgstr "Liste des articles"
 
 #. Translators: The label of a button to open the selected article of a feed.
-#, fuzzy
 msgid "Open &web page of selected article."
-msgstr "Ouvrir la page web de l'article sélectionné."
+msgstr "Ouvrir la page &web de l'article sélectionné."
 
 #. Translators: The label of a button to show information of a feed article.
-#, fuzzy
 msgid "&About article..."
-msgstr "Liste des &articles..."
+msgstr "&À propos des articles..."
 
 #. Translators: the label of a message box dialog.
 #, python-format
@@ -144,10 +141,13 @@ msgid ""
 "\r\n"
 "Do you want to copy article title and link to the clipboard?"
 msgstr ""
+"%s\r\n"
+"\r\n"
+"Voulez-vous copier le titre de l'article et le lien dans le presse-papiers ?"
 
 #. Translators: the title of a message box dialog.
 msgid "Article information"
-msgstr ""
+msgstr "Informations de l'article"
 
 #. Translators: The title of the Copy dialog.
 msgid "Copy feeds"

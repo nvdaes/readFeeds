@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Read feeds 4.0\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-11-16 13:26+0100\n"
-"PO-Revision-Date: 2018-05-28 16:46+0300\n"
+"PO-Revision-Date: 2018-09-23 19:11+0300\n"
 "Last-Translator: Çağrı Doğan <cagrid@hotmail.com>\n"
 "Language-Team: cagrid@hotmail.com\n"
 "Language: tr\n"
@@ -14,7 +14,7 @@ msgstr ""
 "X-Poedit-Basepath: C:/Users/cagri.dogan/AppData/Roaming/nvda/addons/"
 "ReadFeeds/globalPlugins\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 2.0.7\n"
+"X-Generator: Poedit 2.1.1\n"
 "X-Poedit-SearchPath-0: C:/Users/cagri.dogan/AppData/Roaming/nvda/addons/"
 "ReadFeeds/globalPlugins\n"
 
@@ -119,19 +119,16 @@ msgid "Rename feed"
 msgstr "Akış adını değiştir"
 
 #. Translators: The label of the articles list in the articles dialog.
-#, fuzzy
 msgid "List of articles"
-msgstr "Haber &listesi..."
+msgstr "Haber &listesi"
 
 #. Translators: The label of a button to open the selected article of a feed.
-#, fuzzy
 msgid "Open &web page of selected article."
-msgstr "Seçili haberin ayrıntıları  için  web sayfasını aç."
+msgstr "Seçili haberle ilgili web sayfasını aç."
 
 #. Translators: The label of a button to show information of a feed article.
-#, fuzzy
 msgid "&About article..."
-msgstr "Haber &listesi..."
+msgstr "Haber hakkında..."
 
 #. Translators: the label of a message box dialog.
 #, python-format
@@ -140,10 +137,13 @@ msgid ""
 "\r\n"
 "Do you want to copy article title and link to the clipboard?"
 msgstr ""
+"%s\r\n"
+"\r\n"
+"Haber başlığı ve adresini panoya kopyalamak istiyor musunuz?"
 
 #. Translators: the title of a message box dialog.
 msgid "Article information"
-msgstr ""
+msgstr "haber bilgisi"
 
 #. Translators: The title of the Copy dialog.
 msgid "Copy feeds"

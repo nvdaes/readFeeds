@@ -32,12 +32,14 @@ Ouvre une boîte de dialogue avec les contrôles suivants :
 * Filtrer par : Une zone d'édition pour rechercher des flux précédemment
   enregistrés.
 * Une liste des flux enregistrés.
-* List of articles: Opens a dialog which presents the articles list from
-  your current feed. Select the article you want to read and press Enter or
-  Open web page of selected article button to open the corresponding page in
-  your browser. Press About article button to open a dialog showing title
-  and link of the selected article; from this dialog, you'll be able to copy
-  this info to the clipboard.
+* Liste des articles : Ouvre une boîte de dialogue qui présente la liste des
+  articles de vvos flux actuel. Sélectionnez l'article que vous souhaitez
+  lire et appuyer sur Entrée ou Ouvrir la page Web du bouton de l'article
+  sélectionné pour ouvrir la page correspondante dans votre
+  navigateur. Appuyez sur le bouton À propos de l'article pour ouvrir une
+  boîte de dialogue affichant le titre et le lien de l’article sélectionné ;
+  dans cette boîte de dialogue, vous serez en mesure de copier ces
+  informations dans le presse-papiers.
 * Ouvrir le flux : Ouvre le flux sélectionné dans l'application par défaut.
 * Nouveau : Ouvre une boîte de dialogue avec une zone d'édition pour entrer
   l'adresse d'un nouveau flux. Si l'adresse est valide et que le flux peut
@@ -93,12 +95,12 @@ contenant des URL de flux.
 * La boîte de dialogue affiche Le titre de la Liste de l'article le nom de
   flux sélectionné et le nombre d'éléments disponibles.
 
-## Changes for 5.0 ##
+## Changements pour la version 5.0 ##
 
-* The articles list dialog has been enhanced.
-* Compatible with NVDA 2018.3 or later (required).
-* If needed, you can download the [last version compatible with NVDA
-  2017.3][3].
+* La boîte de dialogue Liste des articles a été améliorée.
+* Compatible avec NVDA 2018.3 ou version ultérieure (requis).
+* Si nécessaire, vous pouvez télécharger la [dernière version compatible
+  avec NVDA 2017.3][3].
 
 ## Changements pour la version 4.0 ##
 
@@ -131,5 +133,6 @@ contenant des URL de flux.
 
 [1]: https://addons.nvda-project.org/files/get.php?file=rf
 
-[2]: https://addons.nvda-project.org/files/get.php?file=rf-dev [3]:
-https://github.com/nvdaes/readFeeds/releases/download/4.5/readFeeds-4.5.nvda-addon
+[2]: https://addons.nvda-project.org/files/get.php?file=rf-dev
+
+[3]: https://addons.nvda-project.org/files/get.php?file=rf-o

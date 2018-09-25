@@ -2,13 +2,13 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: readFeeds 4.3\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2018-05-20 11:53+0200\n"
-"PO-Revision-Date: 2018-08-14 04:11+0800\n"
+"PO-Revision-Date: 2018-09-21 16:20+0800\n"
 "Last-Translator: dingpengyu <dingpengyu06@gmail.com>\n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -115,19 +115,16 @@ msgid "Rename feed"
 msgstr "重命名Feed源"
 
 #. Translators: The label of the articles list in the articles dialog.
-#, fuzzy
 msgid "List of articles"
-msgstr "文章列表(&L)..."
+msgstr "文章列表"
 
 #. Translators: The label of a button to open the selected article of a feed.
-#, fuzzy
 msgid "Open &web page of selected article."
-msgstr "打开选择的文章页面。"
+msgstr "打开所选文章的网页。"
 
 #. Translators: The label of a button to show information of a feed article.
-#, fuzzy
 msgid "&About article..."
-msgstr "文章列表(&L)..."
+msgstr "关于文章(&B)..."
 
 #. Translators: the label of a message box dialog.
 #, python-format
@@ -135,11 +132,11 @@ msgid ""
 "%s\r\n"
 "\r\n"
 "Do you want to copy article title and link to the clipboard?"
-msgstr ""
+msgstr "%s要复制文章标题并保存到剪贴板吗？"
 
 #. Translators: the title of a message box dialog.
 msgid "Article information"
-msgstr ""
+msgstr "文章信息"
 
 #. Translators: The title of the Copy dialog.
 msgid "Copy feeds"
