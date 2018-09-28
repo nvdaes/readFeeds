@@ -30,12 +30,13 @@ Abre um diálogo com os seguintes controlos:
 * Filtrar por: Uma caixa de edição para procurar feeds guardados
   anteriormente.
 * Uma lista dos feeds guardados;
-* List of articles: Opens a dialog which presents the articles list from
-  your current feed. Select the article you want to read and press Enter or
-  Open web page of selected article button to open the corresponding page in
-  your browser. Press About article button to open a dialog showing title
-  and link of the selected article; from this dialog, you'll be able to copy
-  this info to the clipboard.
+* Lista de artigos: abre uma caixa de diálogo que apresenta a lista de
+  artigos do seu feed actual. Seleccione o artigo que deseja ler e pressione
+  Enter ou o botão Abrir página da web do artigo seleccionado para abrir a
+  página correspondente no seu navegador. Pressione o botão Sobre o artigo
+  para abrir uma caixa de diálogo que mostra o título e o link do artigo
+  seleccionado; nesta caixa de diálogo, poderá copiar essa informação para a
+  área de transferência.
 * Abrir RSS: abre o feed seleccionado na aplicação padrão.
 * Novo: abre uma caixa de diálogo com uma caixa de edição para inserir o
   endereço de um novo feed. Se o endereço for válido e o feed puder ser
@@ -92,12 +93,12 @@ URLs de feeds.
 * O título da caixa de diálogo da lista de artigos mostra o nome do feed
   selecionado e o número de itens disponíveis.
 
-## Changes for 5.0 ##
+## Alterações para 5.0: ##
 
-* The articles list dialog has been enhanced.
-* Compatible with NVDA 2018.3 or later (required).
-* If needed, you can download the [last version compatible with NVDA
-  2017.3][3].
+* A caixa de diálogo da lista de artigos foi melhorada.
+* Compatível com o NVDA 2018.3 ou posterior (requerido).
+* Se necessário, pode fazer o download da [última versão compatível com o
+  NVDA 2017.3] [3].
 
 ## Alterações para 4.0: ##
 

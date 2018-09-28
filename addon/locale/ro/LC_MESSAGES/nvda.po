@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: readFeeds 2.6\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2016-02-12 18:00+1000\n"
-"PO-Revision-Date: 2018-05-31 09:25+0300\n"
+"PO-Revision-Date: 2018-09-26 18:51+0300\n"
 "Last-Translator: Florian Ionașcu <florianionascu@hotmail.com>\n"
 "Language-Team: \n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 2.1.1\n"
 
 #. Translators: the label of a message box dialog.
 msgid ""
@@ -122,19 +122,16 @@ msgid "Rename feed"
 msgstr "Redenumire flux"
 
 #. Translators: The label of the articles list in the articles dialog.
-#, fuzzy
 msgid "List of articles"
-msgstr "Lista &articolelor..."
+msgstr "Lista &articolelor.."
 
 #. Translators: The label of a button to open the selected article of a feed.
-#, fuzzy
 msgid "Open &web page of selected article."
-msgstr "Deschide pagina web a articolului selectat"
+msgstr "Deschide pagina web a articolului selectat."
 
 #. Translators: The label of a button to show information of a feed article.
-#, fuzzy
 msgid "&About article..."
-msgstr "Lista &articolelor..."
+msgstr "&Despre articol..."
 
 #. Translators: the label of a message box dialog.
 #, python-format
@@ -143,10 +140,13 @@ msgid ""
 "\r\n"
 "Do you want to copy article title and link to the clipboard?"
 msgstr ""
+"%s/r\n"
+"/r\n"
+"Vreți să copiați titlul articolului și link-ul acestuia pe planșetă?"
 
 #. Translators: the title of a message box dialog.
 msgid "Article information"
-msgstr ""
+msgstr "Informații articol"
 
 #. Translators: The title of the Copy dialog.
 msgid "Copy feeds"
