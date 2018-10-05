@@ -32,12 +32,13 @@ Deschide un dialog cu următoarele controale:
 * Filtrează după: O casetă de editare pentru căutarea fluxurilor salvate
   anterior.
 * O listă a fluxurilor salvate.
-* List of articles: Opens a dialog which presents the articles list from
-  your current feed. Select the article you want to read and press Enter or
-  Open web page of selected article button to open the corresponding page in
-  your browser. Press About article button to open a dialog showing title
-  and link of the selected article; from this dialog, you'll be able to copy
-  this info to the clipboard.
+* Lista articolelor: Deschide un dialog care  prezintă lista articolelor de
+  la fluxul curent. Selectați articolul pe care vreți să îl citiți și
+  apăsați Enter sau butonul „Deschide pagina web a articolului selectat”
+  pentru a deschide pagina corespunzătoare în navigatorul web. Apăsați
+  butonul „Despre articol” pentru a deschide un dialog care arată titlul și
+  link-ul articolului selectat; din acest dialog, veți putea să copiați
+  aceste informații pe planșetă.
 * Deschide flux: Deschide fluxul selectat in aplicația standard
   corespunzătoare.
 * Nou: Deschide un dialog cu o casetă de editare pentru introducerea adresei
@@ -94,11 +95,11 @@ ce conține URL-urile fluxurilor.
 * Dialogul titlului listei articolelor afișează numele fluxului selectat și
   numărul elementelor disponibile.
 
-## Changes for 5.0 ##
+## Modificări în 5.0 ##
 
-* The articles list dialog has been enhanced.
-* Compatible with NVDA 2018.3 or later (required).
-* If needed, you can download the [last version compatible with NVDA
+* A fost îmbunătățit dialogul listei articolelor.
+* Compatibil cu NVDA 2018.3 sau mai nou (necesar).
+* Dacă e musai, puteți descărca [ultima versiune compatibilă cu NVDA
   2017.3][3].
 
 ## Modificări în 4.0 ##
