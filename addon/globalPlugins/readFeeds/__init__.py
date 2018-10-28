@@ -600,14 +600,19 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		wx.CallAfter(self.onRestore, None)
 
 	def getFirstArticle(self):
+		addressFile = "%s.txt" % config.conf["readFeeds"]["addressFile"]
+		with open(os.path.join(FEEDS_PATH, addressFile), "r") as f:
+			address = f.read()
+			f.close()
+		if self.feed and self.feed.getUrl == address:
+			curFeed = self.feed
+		else:
+			curFeed = None
 		try:
-			addressFile = "%s.txt" % config.conf["readFeeds"]["addressFile"]
-			with open(os.path.join(FEEDS_PATH, addressFile), "r") as f:
-				address = f.read()
-				f.close()
 			self.feed = Feed(address)
 		except Exception as e:
 			ui.message(CAN_NOT_REPORT)
+			self.feed = curFeed
 			raise e
 
 	@script(
