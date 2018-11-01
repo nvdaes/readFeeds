@@ -604,7 +604,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		with open(os.path.join(FEEDS_PATH, addressFile), "r") as f:
 			address = f.read()
 			f.close()
-		if self.feed and self.feed.getUrl == address:
+		if self.feed and self.feed.getFeedUrl() == address:
 			curFeed = self.feed
 		else:
 			curFeed = None
