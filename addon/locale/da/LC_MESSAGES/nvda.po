@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: readFeeds 1.0-dev\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-11-23 12:28+0100\n"
-"PO-Revision-Date: 2018-05-27 10:49+0200\n"
+"PO-Revision-Date: 2018-10-30 20:13+0100\n"
 "Last-Translator: Nicolai Svendsen <chojiro1990@gmail.com>\n"
-"Language-Team: Danish <LL@li.org>\n"
+"Language-Team: Danish <dansk@nvda.dk>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.7\n"
+"X-Generator: Poedit 2.2\n"
 
 #. Translators: the label of a message box dialog.
 msgid ""
@@ -28,7 +28,7 @@ msgstr ""
 
 #. Translators: the title of a message box dialog.
 msgid "Uninstall incompatible add-on"
-msgstr "Afinstaller inkompatibelt tilføjelsesprogram"
+msgstr "Afinstallerer inkompatibelt tilføjelsesprogram"
 
 #. Translators: the label of a message box dialog.
 msgid ""
@@ -36,7 +36,7 @@ msgid ""
 "from a previous version of this add-on. Do you want to update it?"
 msgstr ""
 "Din mappe med opsætning til NVDA indeholder filer, som ser ud til at stamme "
-"fra dette tilføjelsesprogram. Vil du opdatere dem?"
+"fra dette tilføjelsesprogram. Vil du opdatere den?"
 
 #. Translators: the title of a message box dialog.
 msgid "Install or update add-on"
@@ -122,19 +122,16 @@ msgid "Rename feed"
 msgstr "Omdøb kanal"
 
 #. Translators: The label of the articles list in the articles dialog.
-#, fuzzy
 msgid "List of articles"
-msgstr "Liste over &artikler..."
+msgstr "Liste over artikler"
 
 #. Translators: The label of a button to open the selected article of a feed.
-#, fuzzy
 msgid "Open &web page of selected article."
-msgstr "Åbn webside for den valgte artikel."
+msgstr "Åbn &webside for den valgte artikel."
 
 #. Translators: The label of a button to show information of a feed article.
-#, fuzzy
 msgid "&About article..."
-msgstr "Liste over &artikler..."
+msgstr "&Om artikel..."
 
 #. Translators: the label of a message box dialog.
 #, python-format
@@ -143,10 +140,13 @@ msgid ""
 "\r\n"
 "Do you want to copy article title and link to the clipboard?"
 msgstr ""
+"%s\n"
+"\n"
+"Ønsker du at kopiere artiklens titel og link til udklipsholderen?"
 
 #. Translators: the title of a message box dialog.
 msgid "Article information"
-msgstr ""
+msgstr "Artikeloplysninger"
 
 #. Translators: The title of the Copy dialog.
 msgid "Copy feeds"
@@ -237,7 +237,7 @@ msgstr ""
 #. Translators: message presented when the information about an article of a feed is copied to the clipboard.
 #, python-format
 msgid "Copied to clipboard %s"
-msgstr "%s kopieret til udklipsholder"
+msgstr "Kopieret til udklipsholder %s"
 
 #. Translators: message presented in input mode.
 msgid "Announces the title of the next article."
