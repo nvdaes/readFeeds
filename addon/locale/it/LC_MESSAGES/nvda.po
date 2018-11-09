@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: ReadFeeds 3.0-dev\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
 "POT-Creation-Date: 2015-07-24 10:22+0200\n"
-"PO-Revision-Date: 2018-02-05 11:30+0100\n"
+"PO-Revision-Date: 2018-11-02 10:06+0100\n"
 "Last-Translator: Simone Dal Maso <simone.dalmaso@gmail.com>\n"
 "Language-Team: Italian <simone.dalmaso@gmail.com>\n"
 "Language: it_IT\n"
@@ -68,7 +68,7 @@ msgstr "Feed ripristinati"
 #. Translators: The title of a dialog.
 #, python-brace-format
 msgid "Feeds: {defaultFeed} ({configProfile})"
-msgstr ""
+msgstr "Feeds: {defaultFeed} ({configProfile})"
 
 #. Label of a dialog (message translated in NVDA core in different contexts).
 msgid "&Filter by:"
@@ -120,19 +120,16 @@ msgid "Rename feed"
 msgstr "Rinomina feed"
 
 #. Translators: The label of the articles list in the articles dialog.
-#, fuzzy
 msgid "List of articles"
-msgstr "Elenco &articoli..."
+msgstr "Elenco articoli"
 
 #. Translators: The label of a button to open the selected article of a feed.
-#, fuzzy
 msgid "Open &web page of selected article."
-msgstr "Seleziona un articolo da leggere."
+msgstr "Apri la pagina &web dell'articolo selezionato"
 
 #. Translators: The label of a button to show information of a feed article.
-#, fuzzy
 msgid "&About article..."
-msgstr "Elenco &articoli..."
+msgstr "Informazioni &articolo..."
 
 #. Translators: the label of a message box dialog.
 #, python-format
@@ -141,21 +138,21 @@ msgid ""
 "\r\n"
 "Do you want to copy article title and link to the clipboard?"
 msgstr ""
+"%s\n"
+"\n"
+"Vuoi copiare titolo e link dell'articolo negli appunti?"
 
 #. Translators: the title of a message box dialog.
 msgid "Article information"
-msgstr ""
+msgstr "Informazioni articolo"
 
 #. Translators: The title of the Copy dialog.
 msgid "Copy feeds"
 msgstr "Copia feed"
 
 #. Translators: An informational message displayed in the Copy dialog.
-#, fuzzy
 msgid "Select a folder to save a backup of your current feeds"
-msgstr ""
-"Selezionare una cartella per salvare una copia di backup dei feed.\n"
-"\t\tVerranno copiati da %s. "
+msgstr "Selezionare una cartella per salvare una copia di backup dei feed."
 
 #. Translators: The label of a grouping containing controls to select the destination directory in the Copy dialog.
 msgid "directory for backup:"
@@ -170,11 +167,8 @@ msgid "Restore feeds"
 msgstr "Ripristina feed"
 
 #. Translators: An informational message displayed in the Restore dialog.
-#, fuzzy
 msgid "Select a folder to restore a backup of your previous copied feeds"
-msgstr ""
-"Seleziona la cartella contenente il backup dei feed.\n"
-"\t\tVerranno copiati in %s."
+msgstr "Seleziona la cartella contenente il backup dei feed."
 
 #. Translators: The label of a grouping containing controls to select the destination directory in the Restore dialog.
 msgid "directory containing backup:"
