@@ -62,6 +62,12 @@ Opens a dialog to select a folder which replaces your feeds in the personalFeeds
 * NVDA will display an error message if it was not possible to backup or restore the personalFeeds folder.
 * The title of the articles list dialog displays the selected feed name and number of items available.
 
+
+## Changes for 6.0 ##
+
+* When the default feed has been updated and it stops working due to server issues, the previous articles aren't deleted and can be read with the corresponding keystrokes.
+* Fix regression: The default feed can be updated twice again.
+
 ## Changes for 5.0 ##
 
 * The articles list dialog has been enhanced.
