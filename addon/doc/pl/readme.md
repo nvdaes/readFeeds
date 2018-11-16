@@ -94,6 +94,13 @@ katalog zawierający kanały osobiste.
 * Dialog Spisu nagłówków artykułów Wyświetla nazwę oznaczonego kanału
   osobistego i ilość dostępnych artykułów.
 
+## Changes for 6.0 ##
+
+* When the default feed has been updated and it stops working due to server
+  issues, the previous articles aren't deleted and can be read with the
+  corresponding keystrokes.
+* Fix regression: The default feed can be updated twice again.
+
 ## Changes for 5.0 ##
 
 * The articles list dialog has been enhanced.

@@ -95,6 +95,13 @@ Feed-URLs auswählen.
 * Im Titel des Dialogs für die Artikellisten werden der Name des
   ausgewählten Feeds und die Anzahl der verfügbaren Artikel angezeigt.
 
+## Changes for 6.0 ##
+
+* When the default feed has been updated and it stops working due to server
+  issues, the previous articles aren't deleted and can be read with the
+  corresponding keystrokes.
+* Fix regression: The default feed can be updated twice again.
+
 ## Änderungen für 5.0 ##
 
 * Der Dialog der Artikelliste wurde erweitert.

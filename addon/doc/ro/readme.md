@@ -95,6 +95,13 @@ ce conține URL-urile fluxurilor.
 * Dialogul titlului listei articolelor afișează numele fluxului selectat și
   numărul elementelor disponibile.
 
+## Changes for 6.0 ##
+
+* When the default feed has been updated and it stops working due to server
+  issues, the previous articles aren't deleted and can be read with the
+  corresponding keystrokes.
+* Fix regression: The default feed can be updated twice again.
+
 ## Modificări în 5.0 ##
 
 * A fost îmbunătățit dialogul listei articolelor.

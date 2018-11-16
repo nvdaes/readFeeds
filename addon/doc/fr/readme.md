@@ -95,6 +95,14 @@ contenant des URL de flux.
 * La boîte de dialogue affiche Le titre de la Liste de l'article le nom de
   flux sélectionné et le nombre d'éléments disponibles.
 
+## Changements pour la version 6.0 ##
+
+* Lorsque le flux par défaut a été mis à jour et qu'il cesse de fonctionner
+  en raison de problèmes de serveur, les articles précédents ne sont pas
+  supprimés et peuvent être lus à l'aide des frappes correspondantes.
+* Correction de la régression : Le flux par défaut peut être mis à jour deux
+  fois.
+
 ## Changements pour la version 5.0 ##
 
 * La boîte de dialogue Liste des articles a été améliorée.

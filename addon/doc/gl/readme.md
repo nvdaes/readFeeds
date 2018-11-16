@@ -93,6 +93,14 @@ feeds.
 * O título do diálogo da listaxe de artigos amopsa o nome do feed
   selecionado e o número de elementos dispoñibles.
 
+## Cambios para 6.0 ##
+
+* Cando se refresca o feed por omisión e deixa de funcionar por problemas no
+  servidor, os artigos anteriores non se borran e poden lerse coas ordes
+  correspondentes.
+* Solucionada regresión: O feed por defecto pódese actualizar dúas veces
+  novamente.
+
 ## Cambios para 5.0 ##
 
 * Mellorouse o diálogo listaxe de artigos.

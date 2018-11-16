@@ -90,6 +90,13 @@ sažeci. Provjerite jeste li učitali mapu koja sadrži adrese sažetaka.
 * Popis naslova članaka prikazuje ime odabranog sažetka i broj dostupnih
   stavki.
 
+## Changes for 6.0 ##
+
+* When the default feed has been updated and it stops working due to server
+  issues, the previous articles aren't deleted and can be read with the
+  corresponding keystrokes.
+* Fix regression: The default feed can be updated twice again.
+
 ## Changes for 5.0 ##
 
 * The articles list dialog has been enhanced.

@@ -90,6 +90,14 @@ URLs de feeds.
 * O título do diálogo Lista de artigos mostra o nome do feed selecionado e o
   número de itens disponíveis.
 
+## Mudanças na 6.0 ##
+
+* Quando o feed padrão é atualizado e ele para de funcionar devido a
+  problemas do servidor, os artigos anteriores não são excluídos e podem ser
+  lidos com os pressionamentos de teclas correspondentes.
+* Correção de regressão: o feed padrão pode ser atualizado duas vezes
+  novamente.
+
 ## Mudanças na 5.0 ##
 
 * A caixa de diálogo da lista de artigos foi aprimorada.

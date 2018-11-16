@@ -95,6 +95,14 @@ feeds.
 * El título del diálogo de lista de artículos muestra el nombre del feed
   seleccionado y el número de elementos disponibles.
 
+## Cambios para 6.0 ##
+
+* Cuando se refresca el feed por defecto y deja de funcionar por errores en
+  el servidor, los artículos anteriores no se borran y pueden leerse con los
+  atajos correspondientes.
+* Solucionada regresión: El feed por defecto puede actualizarse dos veces
+  nuevamente.
+
 ## Cambios para 5.0 ##
 
 * El diálogo lista de artículos se ha mejorado.

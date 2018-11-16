@@ -90,6 +90,13 @@ vain syötteiden URL-osoitteita sisältävän kansion.
 * Valitun syötteen nimi ja saatavilla olevien artikkeleiden määrä näytetään
   Artikkeliluettelo-valintaikkunan otsikossa.
 
+## Muutokset versiossa 6.0 ##
+
+* Kun oletussyöte on päivitetty ja se lakkaa toimimasta palvelinongelmien
+  vuoksi, aiempia artikkeleita ei poisteta, vaan niitä voidaan lukea
+  tarkoitukseen varatuilla näppäinkomennoilla.
+* Oletussyöte voidaan taas päivittää kahdesti.
+
 ## Muutokset versiossa 5.0 ##
 
 * Artikkeliluettelovalintaikkunaa on paranneltu.
