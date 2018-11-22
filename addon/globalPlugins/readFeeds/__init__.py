@@ -25,6 +25,7 @@ from .skipTranslation import translate
 
 sys.path.append(os.path.join(os.path.dirname(__file__), "..", ".."))
 from xml2.dom import minidom
+from xml2.etree import ElementTree
 del sys.path[-1]
 
 addonHandler.initTranslation()
@@ -465,24 +466,29 @@ class Feed(object):
 		self._articles = []
 		self.refresh()
 
+	def buildTag(self, tag, ns=None):
+		return "%s%s" %(ns, tag) if ns else tag
+
 	def refresh(self):
 		try:
-			self._document = minidom.parse(urllib.urlopen(self._url))
+			#self._document = minidom.parse(urllib.urlopen(self._url))
+			self._document = ElementTree.parse(urllib.urlopen(self._url))
 		except Exception as e:
 			raise e
+		tag = self._document.getroot().tag
+		self.ns = "%s}" % tag.split("}", 1)[0] if "}" in tag else None
 		# Check if we are dealing with an rss or atom feed.
-		rssFeed = self._document.getElementsByTagName('channel')
-		if len(rssFeed):
-			self._feedType = 'rss'
-			self._articles = self._document.getElementsByTagName('item')
+		if tag.endswith("rss"):
+			main = self._document.getroot().find(self.buildTag("channel", self.ns))
+			self._articles = main.findall(self.buildTag("item", self.ns))
+			self._feedType = "rss"
+		elif tag.endswith("feed"):
+			main = self._document.getroot()
+			self._articles = main.findall(self.buildTag("entry", self.ns))
+			self._feedType = "atom"
 		else:
-			atomFeed = self._document.getElementsByTagName('feed')
-			if len(atomFeed):
-				self._feedType = 'atom'
-				self._articles = self._document.getElementsByTagName('entry')
-			else:
-				log.debugWarning("Unknown type of current feed", exc_info=True)
-				raise
+			log.debugWarning("Unknown type of current feed", exc_info=True)
+			raise
 		self._index = 0
 
 	def getFeedUrl(self):
@@ -493,14 +499,14 @@ class Feed(object):
 
 	def getFeedName(self):
 		try:
-			return self._document.getElementsByTagName('title')[0].firstChild.data
+			return self._document.getroot().find(self.buildTag("title", self.ns)).text
 		except:
 			return ""
 
 	def getArticleTitle(self, index=None):
 		if index is None: index = self._index
 		try:
-			return self._articles[index].getElementsByTagName('title')[0].firstChild.data
+			return self._articles[index].find(self.buildTag("title", self.ns)).text
 		except:
 			# Translators: Presented when the current article does not have an associated title.
 			return _("Unable to locate article title.")
@@ -509,9 +515,9 @@ class Feed(object):
 		if index is None: index = self._index
 		try:
 			if self.getFeedType() == u'rss':
-				return self._articles[index].getElementsByTagName('link')[0].firstChild.data
+				return self._articles[index].find(self.buildTag("link", self.ns)).text
 			elif self.getFeedType() == u'atom':
-				return self._articles[index].getElementsByTagName('link')[0].getAttribute('href')
+				return self._articles[index].find(self.buildTag("link", self.ns)).get("href")
 		except:
 			# Translators: Presented when the current article does not have an associated link.
 			return _("Unable to locate article link.")
