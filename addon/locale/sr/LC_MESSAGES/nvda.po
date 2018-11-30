@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: readFeeds 2.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2014-12-19 18:00+1000\n"
-"PO-Revision-Date: 2018-06-16 16:39+0100\n"
+"PO-Revision-Date: 2018-11-25 22:13+0100\n"
 "Last-Translator: Nikola Jović <wwenikola123@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: sr\n"
@@ -121,19 +121,16 @@ msgid "Rename feed"
 msgstr "Preimenuj izvod"
 
 #. Translators: The label of the articles list in the articles dialog.
-#, fuzzy
 msgid "List of articles"
-msgstr "&Lista članaka..."
+msgstr "Lista članaka"
 
 #. Translators: The label of a button to open the selected article of a feed.
-#, fuzzy
 msgid "Open &web page of selected article."
-msgstr "Otvori Web stranicu izabranog članka"
+msgstr "Otvori &Web stranicu izabranog članka."
 
 #. Translators: The label of a button to show information of a feed article.
-#, fuzzy
 msgid "&About article..."
-msgstr "&Lista članaka..."
+msgstr "&O članku..."
 
 #. Translators: the label of a message box dialog.
 #, python-format
@@ -142,10 +139,13 @@ msgid ""
 "\r\n"
 "Do you want to copy article title and link to the clipboard?"
 msgstr ""
+"%s\r\n"
+"\r\n"
+"Da li želite da kopirate naslov članka i link u privremenu memoriju?"
 
 #. Translators: the title of a message box dialog.
 msgid "Article information"
-msgstr ""
+msgstr "Informacije o članku"
 
 #. Translators: The title of the Copy dialog.
 msgid "Copy feeds"
