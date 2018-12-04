@@ -17,6 +17,7 @@ from scriptHandler import script
 import api
 import gui
 from gui import guiHelper
+import core
 import wx
 import ui
 from logHandler import log
@@ -58,7 +59,7 @@ def doCopy(copyDirectory):
 	try:
 		shutil.rmtree(copyDirectory, ignore_errors=True)
 		shutil.copytree(FEEDS_PATH, copyDirectory)
-		wx.CallLater(100, ui.message,
+		core.callLater(100, ui.message,
 			# Translators: Message presented when feeds have been copied.
 			_("Feeds copied"))
 	except Exception as e:
@@ -74,7 +75,7 @@ def doRestore(restoreDirectory):
 	try:
 		shutil.rmtree(FEEDS_PATH, ignore_errors=True)
 		shutil.copytree(restoreDirectory, FEEDS_PATH)
-		wx.CallLater(100, ui.message,
+		core.callLater(100, ui.message,
 			# Translators: Message presented when feeds have been restored.
 			_("Feeds restored"))
 	except Exception as e:
