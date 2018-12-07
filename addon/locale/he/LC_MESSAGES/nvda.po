@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: readFeeds 2.5\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2015-09-12 04:00+1000\n"
-"PO-Revision-Date: 2018-02-13 02:39+0100\n"
-"Last-Translator: shmuel_naaman@yahoo.com\n"
+"PO-Revision-Date: 2018-12-06 16:58+0200\n"
+"Last-Translator: shmuel naaman <shmuel_naaman@yahoo.com>\n"
 "Language-Team: \n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 1.6.10\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Translators: the label of a message box dialog.
@@ -69,7 +69,7 @@ msgstr "התיקייה שוחזרה"
 #. Translators: The title of a dialog.
 #, python-brace-format
 msgid "Feeds: {defaultFeed} ({configProfile})"
-msgstr ""
+msgstr "הזנות: {defaultFeed} ({configProfile})"
 
 #. Label of a dialog (message translated in NVDA core in different contexts).
 msgid "&Filter by:"
@@ -120,19 +120,16 @@ msgid "Rename feed"
 msgstr "שנה שם הזנה"
 
 #. Translators: The label of the articles list in the articles dialog.
-#, fuzzy
 msgid "List of articles"
-msgstr "רשימת &מאמרים..."
+msgstr "רשימת מאמרים"
 
 #. Translators: The label of a button to open the selected article of a feed.
-#, fuzzy
 msgid "Open &web page of selected article."
-msgstr "פתיחת דף האינטרנט של המאמר שנבחר."
+msgstr "פתיחת &דף האינטרנט של המאמר שנבחר."
 
 #. Translators: The label of a button to show information of a feed article.
-#, fuzzy
 msgid "&About article..."
-msgstr "רשימת &מאמרים..."
+msgstr "אודות המאמר..."
 
 #. Translators: the label of a message box dialog.
 #, python-format
@@ -141,22 +138,21 @@ msgid ""
 "\r\n"
 "Do you want to copy article title and link to the clipboard?"
 msgstr ""
+"%s \n"
+"\r\n"
+"\rהאם ברצונך להעתיק את כותרת המאמר ולקשר ללוח הגזירים?"
 
 #. Translators: the title of a message box dialog.
 msgid "Article information"
-msgstr ""
+msgstr "מידע על המאמר"
 
 #. Translators: The title of the Copy dialog.
 msgid "Copy feeds"
 msgstr "העתק הזנה"
 
 #. Translators: An informational message displayed in the Copy dialog.
-#, fuzzy
 msgid "Select a folder to save a backup of your current feeds"
-msgstr ""
-"בחר תיקייה לשמור את גיבוי ההזנות הנוכחי..\n"
-"\n"
-"\t\t הם יועתקו  מ %s."
+msgstr "בחר תיקייה לשמור את גיבוי ההזנות הנוכחי"
 
 #. Translators: The label of a grouping containing controls to select the destination directory in the Copy dialog.
 msgid "directory for backup:"
@@ -171,12 +167,8 @@ msgid "Restore feeds"
 msgstr "שחזור ההזנות"
 
 #. Translators: An informational message displayed in the Restore dialog.
-#, fuzzy
 msgid "Select a folder to restore a backup of your previous copied feeds"
-msgstr ""
-"בחר תיקייה לשחזור ההזנות מהגיבוי האחרון שהועתק..\n"
-"\n"
-"\t\tהם יועתקו ל %s."
+msgstr "בחר תיקייה לשחזור ההזנות מהגיבוי האחרון שהועתק"
 
 #. Translators: The label of a grouping containing controls to select the destination directory in the Restore dialog.
 msgid "directory containing backup:"
