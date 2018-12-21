@@ -1,6 +1,7 @@
 # RSS-Feed-Reader #
 
 * Authors: Noelia Ruiz Martínez, Mesar Hameed
+* NVDA compatibility: 2018.3 to 2019.1
 * [Stabile Version herunterladen][1]
 * [Entwicklungsversion herunterladen][2]
 
@@ -95,12 +96,13 @@ Feed-URLs auswählen.
 * Im Titel des Dialogs für die Artikellisten werden der Name des
   ausgewählten Feeds und die Anzahl der verfügbaren Artikel angezeigt.
 
-## Changes for 6.0 ##
+## Änderungen bis 6.0 ##
 
-* When the default feed has been updated and it stops working due to server
-  issues, the previous articles aren't deleted and can be read with the
-  corresponding keystrokes.
-* Fix regression: The default feed can be updated twice again.
+* Wenn der Standardfeed aktualisiert wurde und er aufgrund von
+  Serverproblemen nicht mehr funktioniert, werden die vorherigen Artikel
+  nicht gelöscht und können mit den entsprechenden Tastenkombinationen
+  gelesen werden.
+* Fehler behoben: Der Standardfeed kann noch zweimal aktualisiert werden.
 
 ## Änderungen für 5.0 ##
 

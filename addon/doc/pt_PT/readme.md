@@ -1,6 +1,7 @@
 # Leitor de RSS #
 
 * Autores: Noelia Ruiz Martínez, Mesar Hameed
+* Compatibilidade com o NVDA: 2018.3 até 2019.1
 * Baixar [versão estável][1]
 * Baixar [versão de desenvolvimento][2]
 

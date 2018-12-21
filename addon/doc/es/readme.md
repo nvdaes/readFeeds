@@ -1,6 +1,7 @@
 # Read Feeds #
 
 * Authors: Noelia Ruiz Martínez, Mesar Hameed
+* Compatibilidad con NVDA: de 2018.3 a 2019.1
 * Descargar [versión estable][1]
 * Descargar [versión de desarrollo][2]
 
@@ -57,7 +58,7 @@ Abre un diálogo con los siguientes controles:
 * Si se crea un feed llamado tempFeed, por favor renómbralo, ya que este
   fichero podría reemplazarse cuando sea necesario crear un feed cuyo nombre
   ya exista.
-*  El feed configurado como el predeterminado puede eliminarse. el feed
+* El feed configurado como el predeterminado puede eliminarse. el feed
   addressFile se utilizará como el predeterminado cuando la configuración se
   reinicie, así no puede eliminarse.
 

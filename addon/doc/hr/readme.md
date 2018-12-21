@@ -1,6 +1,7 @@
 # Čitaj sažetke #
 
 * Autori: Noelia Ruiz Martínez, Mesar Hameed 
+* NVDA compatibility: 2018.3 to 2019.1
 * Preuzmi [stabilnu inačicu][1]
 * Preuzmi [razvojnu inačicu][2]
 

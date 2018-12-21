@@ -1,6 +1,7 @@
 # Read Feeds-NVDA-RSS阅读插件 #
 
 * 作者: Noelia Ruiz Martínez, Mesar Hameed
+* NVDA兼容版本: 2018.3至2019.1
 * 下载 [稳定版][1]
 * 下载 [开发板][2]
 

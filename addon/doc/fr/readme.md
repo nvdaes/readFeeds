@@ -1,6 +1,7 @@
 # Read Feeds #
 
 * Auteurs : Noelia Ruiz Martínez, Mesar Hameed
+* Compatibilité NVDA: 2018.3 à 2019.1
 * Télécharger [version stable][1]
 * Télécharger [version de développement][2]
 
