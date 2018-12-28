@@ -8,14 +8,17 @@ msgstr ""
 "Project-Id-Version: readFeeds 1.0-dev\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-11-16 13:26+0100\n"
-"PO-Revision-Date: 2017-04-20 13:53+0200\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2018-12-22 16:46+0200\n"
+"Last-Translator: wafiqtaher <wafiqtaher@gmail.com>\n"
+"Language-Team: arabic <wafiqtaher@gmail.com fatmamehanna@gmail.com>\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.7\n"
+"X-Generator: Poedit 1.6.11\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
 
 #. Translators: the label of a message box dialog.
 msgid ""
@@ -66,20 +69,19 @@ msgstr "تم استرجاع التلقيمات"
 #. Translators: The title of a dialog.
 #, python-brace-format
 msgid "Feeds: {defaultFeed} ({configProfile})"
-msgstr ""
+msgstr "الخلاصات: {defaultFeed} ({configProfile})"
 
 #. Label of a dialog (message translated in NVDA core in different contexts).
 msgid "&Filter by:"
-msgstr ""
+msgstr "ت&صفية حسب:"
 
 #. Translators: The label of a button to open the list of articles of a feed.
 msgid "List of &articles..."
 msgstr "قائمة ال&مقالات..."
 
 #. Translators: The label of a button to open a feed.
-#, fuzzy
 msgid "&Open feed"
-msgstr "تلقيم جديد"
+msgstr "&فتح المقال"
 
 #. Translators: The label of a button to add a new feed.
 msgid "&New..."
@@ -95,7 +97,7 @@ msgstr "&حذف..."
 
 #. Translators: The label of a button to set a feed as default.
 msgid "S&et default"
-msgstr "إ&عداد الافتراضي"
+msgstr "إست&عادة الافتراضي"
 
 #. Translators: The label of a field to enter an address for a new feed.
 msgid "Address of a new feed:"
@@ -118,19 +120,16 @@ msgid "Rename feed"
 msgstr "إعادة تسمية التلقيم"
 
 #. Translators: The label of the articles list in the articles dialog.
-#, fuzzy
 msgid "List of articles"
-msgstr "قائمة ال&مقالات..."
+msgstr "قائمة من المقالات"
 
 #. Translators: The label of a button to open the selected article of a feed.
-#, fuzzy
 msgid "Open &web page of selected article."
-msgstr "افتح صفحة المقال المحدد"
+msgstr "ا&فتح صفحة المقال المحدد"
 
 #. Translators: The label of a button to show information of a feed article.
-#, fuzzy
 msgid "&About article..."
-msgstr "قائمة ال&مقالات..."
+msgstr "&حول..."
 
 #. Translators: the label of a message box dialog.
 #, python-format
@@ -139,22 +138,21 @@ msgid ""
 "\r\n"
 "Do you want to copy article title and link to the clipboard?"
 msgstr ""
+"%s\r\n"
+" \r\n"
+" هل تريد نسخ عنوان المقال و الرابط إلى الحافظة?"
 
 #. Translators: the title of a message box dialog.
 msgid "Article information"
-msgstr ""
+msgstr "معلومات المادة"
 
 #. Translators: The title of the Copy dialog.
 msgid "Copy feeds"
 msgstr "نسخ التلقيمات"
 
 #. Translators: An informational message displayed in the Copy dialog.
-#, fuzzy
 msgid "Select a folder to save a backup of your current feeds"
-msgstr ""
-"حدد مجلد لحفظ نسخة احطياطية من تلقيماتك الحالية.\n"
-"\n"
-"\t\tسيتم نسخهم من %s."
+msgstr "حدد مجلد لحفظ نسخة احطياطية من تلقيماتك الحالية"
 
 #. Translators: The label of a grouping containing controls to select the destination directory in the Copy dialog.
 msgid "directory for backup:"
@@ -169,12 +167,8 @@ msgid "Restore feeds"
 msgstr "استرجاع التلقيمات"
 
 #. Translators: An informational message displayed in the Restore dialog.
-#, fuzzy
 msgid "Select a folder to restore a backup of your previous copied feeds"
-msgstr ""
-"اختر مجلد لاسترجاع تلقيماتك الشخصية به.\n"
-"\n"
-"\t\tسيتم النسخ إلى %s."
+msgstr "اختر مجلد لاسترجاع تلقيماتك الشخصية"
 
 #. Translators: The label of a grouping containing controls to select the destination directory in the Restore dialog.
 msgid "directory containing backup:"
@@ -194,7 +188,7 @@ msgstr "تعذر تحديد رابط المقال"
 
 #. Translators: the name of a submenu.
 msgid "&Read Feeds"
-msgstr "&قراءة التلقيمات"
+msgstr "&قراءة الخلاصات"
 
 #. Translators: the name of a menu item.
 msgid "&Feeds..."
@@ -261,24 +255,9 @@ msgstr "نسخ عنوان ورابط المقال الحالي للحافظة."
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
 msgid "Read Feeds"
-msgstr "Read Feeds"
+msgstr "قراءة الخلاصات"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Add-on for using NVDA as a feed reader."
 msgstr "إضافة برمجية تمكن من استخدام NVDA كقارئ للتلقيمات"
-
-#~ msgid "Feeds"
-#~ msgstr "تلقيمات"
-
-#~ msgid "Manage feeds."
-#~ msgstr "إدارة التلقيمات"
-
-#~ msgid "View and manage feeds"
-#~ msgstr "عرض وإدارة التلقيمات"
-
-#~ msgid "Backup of feeds"
-#~ msgstr "نسخة احطياطية من التلقيمات"
-
-#~ msgid "Restore previously saved feeds"
-#~ msgstr "استرجاع التلقيمات المحفوظة من قبل"
