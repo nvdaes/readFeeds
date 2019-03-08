@@ -5,19 +5,19 @@
 * Télécharger [version stable][1]
 * Télécharger [version de développement][2]
 
-Ce module complémentaire fournit un moyen simple de lire les flux aux
-formats Atom ou RSS à l'aide de NVDA. Les flux ne sont pas actualisées
-automatiquement.  Ci-dessous lorsque nous mentionnons flux, nous voulons
-dire que les deux signifient flux RSS et ATOM.
+Cette extension fournit un moyen simple de lire les flux aux formats Atom ou
+RSS à l'aide de NVDA. Les flux ne sont pas actualisés automatiquement.
+Ci-dessous lorsque nous mentionnons flux, nous voulons dire que les deux
+signifient flux RSS et ATOM.
 
 ## Installation ou Mise à jour : ##
 
-Si vous utilisiez une version antérieure de ce module complémentaire, il y a
-un dossier RSS ou personalFeeds dans votre dossier de configuration
-personnel de NVDA, lorsque vous installez la version actuelle, une boîte de
-dialogue vous demandera si vous souhaitez mettre à jour ou installer.
-Choisissez mise à jour pour préserver vos flux enregistrés et pour continuer
-à les utiliser dans la nouvelle version installée de readFeeds.
+Si vous utilisiez une version antérieure de cette extension, il y a un
+dossier RSS ou personalFeeds dans votre dossier de configuration personnel
+de NVDA, lorsque vous installez la version actuelle, une boîte de dialogue
+vous demandera si vous souhaitez mettre à jour ou installer.  Choisissez
+mise à jour pour préserver vos flux enregistrés et pour continuer à les
+utiliser dans la nouvelle version installée de readFeeds.
 
 ## Commandes : ##
 
@@ -131,8 +131,8 @@ contenant des URL de flux.
 
 ## Changements pour la version 2.0 ##
 
-* L'aide du module complémentaire est disponible à partir du Gestionnaire de
-  modules complémentaires.
+* L'aide de l'extension est disponible à partir du Gestionnaire
+  d'extensions.
 
 ## Changements pour la version 1.0 ##
 
