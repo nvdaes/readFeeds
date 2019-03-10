@@ -206,6 +206,7 @@ class FeedsDialog(wx.Dialog):
 			[control.Disable() for control in self.feedsList, self.articlesButton, self.openButton, self.renameButton, self.deleteButton, self.defaultButton]
 
 	def onFeedsListChoice(self, evt):
+		self.feedsList.Enable()
 		self.sel = self.feedsList.Selection
 		self.stringSel = self.feedsList.StringSelection
 		self.articlesButton.Enabled = self.sel>= 0
