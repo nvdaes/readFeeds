@@ -154,6 +154,10 @@ class FeedsDialog(wx.Dialog):
 		self.defaultButton = buttonHelper.addButton(self, label=_("S&et default"))
 		self.defaultButton.Bind(wx.EVT_BUTTON, self.onDefault)
 
+		# Translators: The label of a button to open a folder containing a backup of feeds.
+		self.openFolderButton = buttonHelper.addButton(self, label=_("&Open folder containing a backup of feeds"))
+		self.openFolderButton.Bind(wx.EVT_BUTTON, self.onOpenFolder)
+		
 		feedsListGroupContents.Add(buttonHelper.sizer)
 		feedsListGroupSizer.Add(feedsListGroupContents, border=guiHelper.BORDER_FOR_DIALOGS, flag=wx.ALL)
 		sHelper.addItem(feedsListGroupSizer)
@@ -195,8 +199,11 @@ class FeedsDialog(wx.Dialog):
 			if filter and not filterReg.match(choice):
 				continue
 			self.feedsList.Append(choice)
-		self.feedsList.Selection = 0
-		self.onFeedsListChoice(None)
+		try:
+			self.feedsList.Selection = 0
+			self.onFeedsListChoice(None)
+		except:
+			[control.Disable() for control in self.feedsList, self.articlesButton, self.openButton, self.renameButton, self.deleteButton, self.defaultButton]
 
 	def onFeedsListChoice(self, evt):
 		self.sel = self.feedsList.Selection
@@ -218,7 +225,10 @@ class FeedsDialog(wx.Dialog):
 			f.close()
 		self.feed = Feed(address)
 		self.Disable()
-		ArticlesDialog(self).Show()
+		try:
+			ArticlesDialog(self).Show()
+		except Exception as e:
+			raise e
 
 	def onOpen(self, evt):
 		with open(os.path.join(FEEDS_PATH, "%s.txt" % self.stringSel), "r") as f:
@@ -271,6 +281,12 @@ class FeedsDialog(wx.Dialog):
 	def onClose(self, evt):
 		self.Destroy()
 		FeedsDialog._instance = None
+
+	def onOpenFolder(self, evt):
+		path = os.path.join(CONFIG_PATH, "personalFeeds")
+		if not os.path.isdir(path):
+			os.makedirs(path)
+		os.startfile(path)
 
 class ArticlesDialog(wx.Dialog):
 
