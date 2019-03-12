@@ -155,7 +155,7 @@ class FeedsDialog(wx.Dialog):
 		self.defaultButton.Bind(wx.EVT_BUTTON, self.onDefault)
 
 		# Translators: The label of a button to open a folder containing a backup of feeds.
-		self.openFolderButton = buttonHelper.addButton(self, label=_("&Open folder containing a backup of feeds"))
+		self.openFolderButton = buttonHelper.addButton(self, label=_("Open &folder containing a backup of feeds"))
 		self.openFolderButton.Bind(wx.EVT_BUTTON, self.onOpenFolder)
 		
 		feedsListGroupContents.Add(buttonHelper.sizer)
@@ -229,6 +229,7 @@ class FeedsDialog(wx.Dialog):
 		try:
 			ArticlesDialog(self).Show()
 		except Exception as e:
+			self.Enable()
 			raise e
 
 	def onOpen(self, evt):

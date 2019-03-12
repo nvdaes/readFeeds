@@ -66,7 +66,7 @@ Opens a dialog to select a folder which replaces your feeds in the personalFeeds
 
 ## Changes for 7.0 ##
 
-* The Feeds dialog contains a button to open a folder which may contain a backup of feeds.
+* The Feeds dialog includes a button to open a folder which may contain a backup of feeds.
 * When using the edit box to filter feeds, if no results are found, the list of feeds and other controls are disabled, so that NVDA doesn't report "unknown" in the empty list.
 * If the list of articles dialog can't be shown, for example due to errors in the feed, NVDA will raise an error, so that the feeds dialog can be used without restarting NVDA.
 
