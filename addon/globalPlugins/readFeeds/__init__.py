@@ -1,7 +1,7 @@
 # -*- coding: UTF-8 -*-
 
 # Read feeds: A simple plugin for reading feeds with NVDA
-#Copyright (C) 2012-2018 Noelia Ruiz Martínez, Mesar Hameed
+#Copyright (C) 2012-2019 Noelia Ruiz Martínez, Mesar Hameed
 # Released under GPL 2
 
 import os
