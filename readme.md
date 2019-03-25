@@ -33,6 +33,7 @@ Opens a dialog with the following controls:
 * Rename: Opens a dialog with an edit box to rename the selected feed.
 * Delete: Opens a dialog to delete the selected feed after confirmation.
 * Set default: Sets the selected feed as the default, so that its articles can be accessed with NVDA's gestures.
+* Open folder containing a backup of feeds: Opens a folder which may contain a backup of feeds. This can be useful to explore and delete feeds which shouldn't be imported when the add-on is updated.
 * Close: Closes the Feeds dialog.
 
 ##### Notes #####
@@ -63,6 +64,11 @@ Opens a dialog to select a folder which replaces your feeds in the personalFeeds
 * NVDA will display an error message if it was not possible to backup or restore the personalFeeds folder.
 * The title of the articles list dialog displays the selected feed name and number of items available.
 
+## Changes for 7.0 ##
+
+* The Feeds dialog includes a button to open a folder which may contain a backup of feeds.
+* When using the edit box to filter feeds, if no results are found, the list of feeds and other controls are disabled, so that NVDA doesn't report "unknown" in the empty list.
+* If the list of articles dialog can't be shown, for example due to errors in the feed, NVDA will raise an error, so that the feeds dialog can be used without restarting NVDA.
 
 ## Changes for 6.0 ##
 
