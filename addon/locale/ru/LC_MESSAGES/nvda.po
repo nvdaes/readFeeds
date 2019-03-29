@@ -98,6 +98,14 @@ msgstr "У&далить..."
 msgid "S&et default"
 msgstr "&Установить по умолчанию"
 
+#. Translators: The label of a button to open a folder containing a backup of feeds.
+#, fuzzy
+msgid "Open &folder containing a backup of feeds"
+msgstr ""
+"Выберите папку для сохранения резервной копии ваших текущих новостных лент.\n"
+"\n"
+"\t\tОна будет скопирована из %s."
+
 #. Translators: The label of a field to enter an address for a new feed.
 msgid "Address of a new feed:"
 msgstr "Адрес новой новостной ленты:"

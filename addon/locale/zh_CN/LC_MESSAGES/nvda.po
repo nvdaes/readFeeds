@@ -95,6 +95,11 @@ msgstr "删除(&D)..."
 msgid "S&et default"
 msgstr "恢复默认设置(&E)"
 
+#. Translators: The label of a button to open a folder containing a backup of feeds.
+#, fuzzy
+msgid "Open &folder containing a backup of feeds"
+msgstr "选择一个文件夹以保存当前Feeds源的备份"
+
 #. Translators: The label of a field to enter an address for a new feed.
 msgid "Address of a new feed:"
 msgstr "新Feed地址："

@@ -48,6 +48,9 @@ Otvara dijaloški okvir sa sljedećim kontrolama:
   brisanja.
 * Postavi kao zadani: Postavlja odabrani sažetak kao zadani, tako da se tim
   člancima može pristupiti koristeći NVDA geste.
+* Open folder containing a backup of feeds: Opens a folder which may contain
+  a backup of feeds. This can be useful to explore and delete feeds which
+  shouldn't be imported when the add-on is updated.
 * Zatvori: Zatvara dijaloški okvir Sažetaka.
 
 ##### Napomene #####
@@ -90,6 +93,17 @@ sažeci. Provjerite jeste li učitali mapu koja sadrži adrese sažetaka.
   kopiju ili vratiti mapu Osobni sažeci.
 * Popis naslova članaka prikazuje ime odabranog sažetka i broj dostupnih
   stavki.
+
+## Changes for 7.0 ##
+
+* The Feeds dialog includes a button to open a folder which may contain a
+  backup of feeds.
+* When using the edit box to filter feeds, if no results are found, the list
+  of feeds and other controls are disabled, so that NVDA doesn't report
+  "unknown" in the empty list.
+* If the list of articles dialog can't be shown, for example due to errors
+  in the feed, NVDA will raise an error, so that the feeds dialog can be
+  used without restarting NVDA.
 
 ## Changes for 6.0 ##
 

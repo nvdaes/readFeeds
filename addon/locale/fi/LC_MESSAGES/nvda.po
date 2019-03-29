@@ -99,6 +99,11 @@ msgstr "&Poista..."
 msgid "S&et default"
 msgstr "A&seta oletukseksi"
 
+#. Translators: The label of a button to open a folder containing a backup of feeds.
+#, fuzzy
+msgid "Open &folder containing a backup of feeds"
+msgstr "Valitse kansio, johon nykyisten syötteidesi varmuuskopio tallennetaan."
+
 #. Translators: The label of a field to enter an address for a new feed.
 msgid "Address of a new feed:"
 msgstr "Uuden syötteen osoite:"

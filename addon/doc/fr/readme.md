@@ -52,6 +52,9 @@ Ouvre une boîte de dialogue avec les contrôles suivants :
   après confirmation.
 * Définir par défaut : Définit le flux sélectionné comme valeur par défaut,
   afin que ses articles soient accessibles avec les gestes de NVDA.
+* Open folder containing a backup of feeds: Opens a folder which may contain
+  a backup of feeds. This can be useful to explore and delete feeds which
+  shouldn't be imported when the add-on is updated.
 * Fermer : Ferme la boîte de dialogue Flux.
 
 ##### Notes #####
@@ -95,6 +98,17 @@ contenant des URL de flux.
   sauvegarder ou de restaurer le dossier personalFeeds.
 * La boîte de dialogue affiche Le titre de la Liste de l'article le nom de
   flux sélectionné et le nombre d'éléments disponibles.
+
+## Changes for 7.0 ##
+
+* The Feeds dialog includes a button to open a folder which may contain a
+  backup of feeds.
+* When using the edit box to filter feeds, if no results are found, the list
+  of feeds and other controls are disabled, so that NVDA doesn't report
+  "unknown" in the empty list.
+* If the list of articles dialog can't be shown, for example due to errors
+  in the feed, NVDA will raise an error, so that the feeds dialog can be
+  used without restarting NVDA.
 
 ## Changements pour la version 6.0 ##
 

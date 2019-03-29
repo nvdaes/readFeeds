@@ -101,6 +101,11 @@ msgstr "&Изтрий..."
 msgid "S&et default"
 msgstr "&Задай по подразбиране"
 
+#. Translators: The label of a button to open a folder containing a backup of feeds.
+#, fuzzy
+msgid "Open &folder containing a backup of feeds"
+msgstr "Изберете папка за записване на архивно копие на вашите текущи емисии"
+
 #. Translators: The label of a field to enter an address for a new feed.
 msgid "Address of a new feed:"
 msgstr "Адрес на нов източник:"

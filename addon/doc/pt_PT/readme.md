@@ -49,6 +49,9 @@ Abre um diálogo com os seguintes controlos:
   confirmação.
 * Definir por defeito: define o feed seleccionado como padrão, para que os
   seus artigos possam ser acedidos ​​com os comandos do NVDA.
+* Abrir pasta que contenha um backup de feeds: Abre uma pasta que pode
+  conter um backup de feeds. Isto pode ser útil para explorar e excluir
+  feeds que não devam ser importados quando o extra é actualizado.
 * Fechar: fecha o diálogo de RSS;
 
 ##### Notas: #####
@@ -93,6 +96,17 @@ URLs de feeds.
   restaurar a pasta pessoalFeeds.
 * O título da caixa de diálogo da lista de artigos mostra o nome do feed
   selecionado e o número de itens disponíveis.
+
+## Alterações para 7.0: ##
+
+* A caixa de diálogo Feeds inclui um botão para abrir uma pasta que pode
+  conter um backup de feeds.
+* Ao usar a caixa de edição para filtrar os feeds, se não for encontrado
+  qualquer resultado, a lista de feeds e outros controlos será desactivada,
+  para que o NVDA não diga "desconhecido", na lista vazia.
+* Se o diálogo de lista de artigos não puder ser mostrado, por exemplo,
+  devido a erros no feed, o NVDA irá gerar um erro, para que o diálogo de
+  feeds possa ser usado sem reiniciar o NVDA.
 
 ## Alterações para 6.0: ##
 

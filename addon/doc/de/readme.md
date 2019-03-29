@@ -51,6 +51,9 @@ Extras zugreifen. Es stehen folgende Menüoptionen zur Verfügung:
 * Als standard festlegen: Legt den ausgewählten RSS-Feed als Standard fest,
   so dass auf seine Artikel mit den Tastenkürzel von NVDA zugegriffen werden
   kann.
+* Open folder containing a backup of feeds: Opens a folder which may contain
+  a backup of feeds. This can be useful to explore and delete feeds which
+  shouldn't be imported when the add-on is updated.
 * Schließen: Schließt den Dialog.
 
 ##### Hinweise #####
@@ -95,6 +98,17 @@ Feed-URLs auswählen.
   Wiederherstellung des Ordners personalFeeds nicht möglich war.
 * Im Titel des Dialogs für die Artikellisten werden der Name des
   ausgewählten Feeds und die Anzahl der verfügbaren Artikel angezeigt.
+
+## Changes for 7.0 ##
+
+* The Feeds dialog includes a button to open a folder which may contain a
+  backup of feeds.
+* When using the edit box to filter feeds, if no results are found, the list
+  of feeds and other controls are disabled, so that NVDA doesn't report
+  "unknown" in the empty list.
+* If the list of articles dialog can't be shown, for example due to errors
+  in the feed, NVDA will raise an error, so that the feeds dialog can be
+  used without restarting NVDA.
 
 ## Änderungen bis 6.0 ##
 

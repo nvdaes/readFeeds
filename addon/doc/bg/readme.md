@@ -51,6 +51,9 @@ RSS или personalFeeds във вашата папка с потребител�
 * Задай по подразбиране: Задава избраната емисия като такава по
   подразбиране, така че нейните статии могат да бъдат достъпвани посредством
   жестовете на NVDA.
+* Open folder containing a backup of feeds: Opens a folder which may contain
+  a backup of feeds. This can be useful to explore and delete feeds which
+  shouldn't be imported when the add-on is updated.
 * Затвори: Затваря диалоговия прозорец с емисиите.
 
 ##### Бележки #####
@@ -96,6 +99,17 @@ RSS или personalFeeds във вашата папка с потребител�
   възстанови папката "personalFeeds".
 * Заглавието на диалога за списъка със статиите показва името на избраната
   емисия и номера на наличните статии.
+
+## Changes for 7.0 ##
+
+* The Feeds dialog includes a button to open a folder which may contain a
+  backup of feeds.
+* When using the edit box to filter feeds, if no results are found, the list
+  of feeds and other controls are disabled, so that NVDA doesn't report
+  "unknown" in the empty list.
+* If the list of articles dialog can't be shown, for example due to errors
+  in the feed, NVDA will raise an error, so that the feeds dialog can be
+  used without restarting NVDA.
 
 ## Промени във версия 6.0 ##
 

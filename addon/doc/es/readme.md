@@ -51,6 +51,9 @@ Abre un diálogo con los siguientes controles:
   una confirmación.
 * Configurar predeterminado: configura el feed seleccionado como el
   predeterminado, así que su artículo puede accederse con gestos de NVDA.
+* Open folder containing a backup of feeds: Opens a folder which may contain
+  a backup of feeds. This can be useful to explore and delete feeds which
+  shouldn't be imported when the add-on is updated.
 * Cerrar: cierra el diálogo Feeds.
 
 ##### Notas #####
@@ -95,6 +98,17 @@ feeds.
   la carpeta personalFeeds.
 * El título del diálogo de lista de artículos muestra el nombre del feed
   seleccionado y el número de elementos disponibles.
+
+## Changes for 7.0 ##
+
+* The Feeds dialog includes a button to open a folder which may contain a
+  backup of feeds.
+* When using the edit box to filter feeds, if no results are found, the list
+  of feeds and other controls are disabled, so that NVDA doesn't report
+  "unknown" in the empty list.
+* If the list of articles dialog can't be shown, for example due to errors
+  in the feed, NVDA will raise an error, so that the feeds dialog can be
+  used without restarting NVDA.
 
 ## Cambios para 6.0 ##
 

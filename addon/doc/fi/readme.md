@@ -48,6 +48,10 @@ Avaa valintaikkunan, jossa on seuraavat säätimet:
   valitun syötteen.
 * Aseta oletukseksi: Asettaa valitun syötteen oletukseksi, jotta sen
   artikkeleihin pääsee NVDA:n syötekomennoilla.
+* Avaa syötteiden varmuuskopiokansio: Avaa kansion, joka saattaa sisältää
+  syötteiden varmuuskopion. Tästä voi olla hyötyä sellaisten syötteiden
+  tutkimisessa ja poistamisessa, joita ei haluta tuotavan lisäosaa
+  päivitettäessä.
 * Sulje: Sulkee Syötteet-valintaikkunan.
 
 ##### Huomautuksia #####
@@ -90,6 +94,19 @@ vain syötteiden URL-osoitteita sisältävän kansion.
   varmuuskopiointi tai palautus ei ollut mahdollista.
 * Valitun syötteen nimi ja saatavilla olevien artikkeleiden määrä näytetään
   Artikkeliluettelo-valintaikkunan otsikossa.
+
+## Muutokset versiossa 7.0 ##
+
+* Syötteet-valintaikkunassa on painike, jolla voidaan avata mahdollisen
+  syöttteiden varmuuskopion sisältävä kansio.
+* Kun muokkauskenttää käytetään syötteiden suodattamiseen ja jos
+  hakutuloksia ei löydy, syötteiden luettelo sekä muut säätimet poistetaan
+  käytöstä, jottei NVDA sano "tuntematon" kohdistuksen siirtyessä tähän
+  tyhjään luetteloon.
+* Mikäli Artikkeliluettelo-valintaikkunaa ei voida näyttää, esim. syötteessä
+  olevien virheiden vuoksi, NVDA ilmoittaa virheestä, jotta
+  Syötteet-valintaikkunaa voidaan käyttää ilman NVDA:n
+  uudelleenkäynnistystä.
 
 ## Muutokset versiossa 6.0 ##
 

@@ -98,6 +98,11 @@ msgstr "&Sil..."
 msgid "S&et default"
 msgstr "Var&sayılan olarak ayarla"
 
+#. Translators: The label of a button to open a folder containing a backup of feeds.
+#, fuzzy
+msgid "Open &folder containing a backup of feeds"
+msgstr "Mevcut kaynakları yedeklemek için bir klasör seçin"
+
 #. Translators: The label of a field to enter an address for a new feed.
 msgid "Address of a new feed:"
 msgstr "Yeni bir Akış adresi:"
