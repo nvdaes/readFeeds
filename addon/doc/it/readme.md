@@ -47,9 +47,9 @@ Apre una finestra con i seguenti controlli:
 * Imposta predefinito: permette di impostare il feed selezionato come
   predefinito, in modo che il feed selezionato si potrà anche aprire con i
   comandi di NVDA.
-* Open folder containing a backup of feeds: Opens a folder which may contain
-  a backup of feeds. This can be useful to explore and delete feeds which
-  shouldn't be imported when the add-on is updated.
+* Cartella backup: apre una cartella che contiene feed precedentemente
+  salvati. Può essere utile per cancellare feed non più necessari che non si
+  vogliono caricare durante l'aggiornamento del componente.
 * Chiudi: chiude la finestra dei feed.
 
 ##### Nota: #####
@@ -98,14 +98,14 @@ l'URL dei feed.
 
 ## Changes for 7.0 ##
 
-* The Feeds dialog includes a button to open a folder which may contain a
-  backup of feeds.
-* When using the edit box to filter feeds, if no results are found, the list
-  of feeds and other controls are disabled, so that NVDA doesn't report
-  "unknown" in the empty list.
-* If the list of articles dialog can't be shown, for example due to errors
-  in the feed, NVDA will raise an error, so that the feeds dialog can be
-  used without restarting NVDA.
+* Aggiunto un pulsante Nella finestra Feed che consente di aprire una
+  cartella di backup. 
+* Quando non si trova nessun risultato dal campo editazione, l'elenco Feed e
+  gli altri controlli vengono disattivati. In questo modo NVDA non
+  annuncierà più Sconosciuto in elenchi vuoti.
+* Se l'elenco degli articoli non può essere visualizzato, dovuto per esempio
+  ad un problema di feed, verrà rilasciato un errore. In questo modo non
+  sarà più necessario riavviare NVDA per usare la finestra Feed.
 
 ## Changes for 6.0 ##
 

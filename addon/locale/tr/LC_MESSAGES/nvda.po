@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Read feeds 4.0\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-11-16 13:26+0100\n"
-"PO-Revision-Date: 2018-09-23 19:11+0300\n"
+"PO-Revision-Date: 2019-04-03 16:27+0300\n"
 "Last-Translator: Çağrı Doğan <cagrid@hotmail.com>\n"
 "Language-Team: cagrid@hotmail.com\n"
 "Language: tr\n"
@@ -14,7 +14,7 @@ msgstr ""
 "X-Poedit-Basepath: C:/Users/cagri.dogan/AppData/Roaming/nvda/addons/"
 "ReadFeeds/globalPlugins\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 2.1.1\n"
+"X-Generator: Poedit 2.2.1\n"
 "X-Poedit-SearchPath-0: C:/Users/cagri.dogan/AppData/Roaming/nvda/addons/"
 "ReadFeeds/globalPlugins\n"
 
@@ -99,9 +99,8 @@ msgid "S&et default"
 msgstr "Var&sayılan olarak ayarla"
 
 #. Translators: The label of a button to open a folder containing a backup of feeds.
-#, fuzzy
 msgid "Open &folder containing a backup of feeds"
-msgstr "Mevcut kaynakları yedeklemek için bir klasör seçin"
+msgstr "Akışların &yedeğini içeren klasörü açın"
 
 #. Translators: The label of a field to enter an address for a new feed.
 msgid "Address of a new feed:"

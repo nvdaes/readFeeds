@@ -47,11 +47,11 @@
 
 ### 键盘快捷键： ###
 
-* Ctrl + Shift + NVDA + Space：宣布当前文章的URL。按两次将打开网页。
-* Ctrl + Shift + NVDA + 8：刷新选定的Feed并宣布其最新的标题。
-* Ctrl + Shift + NVDA + I：宣布当前的Feed标题和链接。按两次将标题和相关链接复制到剪贴板。
-* Ctrl + Shift + NVDA + U：宣布以前的Feed标题。
-* Ctrl + Shift + NVDA + O：宣布下一个Feed标题。
+* Ctrl + Shift + NVDA + Space：朗读当前文章的URL。按两次将打开网页。
+* Ctrl + Shift + NVDA + 8：刷新选定的Feed并朗读其最新的标题。
+* Ctrl + Shift + NVDA + I：朗读当前RSS源的标题和链接。按两次将标题和相关链接复制到剪贴板。
+* Ctrl + Shift + NVDA + U：朗读当前源的上一个的标题。
+* Ctrl + Shift + NVDA + O：朗读当前源的下一个标题。
 
 ## 通知： ##
 

@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: readFeeds\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-11-16 13:26+0100\n"
-"PO-Revision-Date: 2018-09-21 11:18+0200\n"
-"Last-Translator: Jani Kinnunen <jani.kinnunen@wippies.fi>\n"
+"PO-Revision-Date: 2019-03-29 13:49+0200\n"
+"Last-Translator: Jani Kinnunen <janikinnunen340@gmail.com>\n"
 "Language-Team: Finnish <jani.kinnunen@wippies.fi>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
@@ -100,9 +100,8 @@ msgid "S&et default"
 msgstr "A&seta oletukseksi"
 
 #. Translators: The label of a button to open a folder containing a backup of feeds.
-#, fuzzy
 msgid "Open &folder containing a backup of feeds"
-msgstr "Valitse kansio, johon nykyisten syötteidesi varmuuskopio tallennetaan."
+msgstr "Avaa s&yötteiden varmuuskopiokansio"
 
 #. Translators: The label of a field to enter an address for a new feed.
 msgid "Address of a new feed:"

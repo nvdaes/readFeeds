@@ -49,9 +49,10 @@ de følgende menupunkter er tilgængelige:
   bekræftelse.
 * Sæt som standard: Indstiller den valgte nyhedskanal som standard, så dens
   artikler kan tilgås med NVDAs inputbevægelser.
-* Open folder containing a backup of feeds: Opens a folder which may contain
-  a backup of feeds. This can be useful to explore and delete feeds which
-  shouldn't be imported when the add-on is updated.
+* Åbn mappen med sikkerhedskopierne for dine nyhedskanaler: Åbner en mappe,
+  der indeholder sikkerhedskopier af dine nyhedskanaler. Dette kan være
+  nyttigt, hvis du evt. vil slette kanaler der ikke skal importeres, når
+  tilføjelsen opdateres.
 * Luk: Lukker dialogen Nyhedskanaler.
 
 ##### Noter #####
@@ -98,16 +99,16 @@ URL-adresser på nyhedskanaler.
 * Titlen på dialogen der viser listen over artikler viser navnet på den
   aktuelle kanal, samt antallet af artikler til rådighed.
 
-## Changes for 7.0 ##
+## Ændringer i7.0 ##
 
-* The Feeds dialog includes a button to open a folder which may contain a
-  backup of feeds.
-* When using the edit box to filter feeds, if no results are found, the list
-  of feeds and other controls are disabled, so that NVDA doesn't report
-  "unknown" in the empty list.
-* If the list of articles dialog can't be shown, for example due to errors
-  in the feed, NVDA will raise an error, so that the feeds dialog can be
-  used without restarting NVDA.
+* Dialogboksen "Nyhedskanaler" indeholder en knap for at åbne en mappe, der
+  indeholder en sikkerhedskopi af nyhedskanaler.
+* Når du bruger redigeringsboksen til at filtrere feeds, og hvis der ikke
+  findes nogen resultater, er listen over kanaler og andre kontroller
+  deaktiveret, så NVDA ikke rapporterer "ukendt" i den tomme liste.
+* Hvis dialogen "Liste over artikler" ikke kan vises, for eksempel på grund
+  af fejl med kanalen, vil NVDA fejle, så dialogen kan bruges uden at
+  genstarte NVDA.
 
 ## Ændringer i 6.0 ##
 
