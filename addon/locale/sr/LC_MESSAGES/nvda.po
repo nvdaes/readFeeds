@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: readFeeds 2.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2014-12-19 18:00+1000\n"
-"PO-Revision-Date: 2018-11-25 22:13+0100\n"
+"PO-Revision-Date: 2019-04-22 19:51+0100\n"
 "Last-Translator: Nikola Jović <wwenikola123@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: sr\n"
@@ -99,11 +99,8 @@ msgid "S&et default"
 msgstr "&Podesi kao podrazumevani"
 
 #. Translators: The label of a button to open a folder containing a backup of feeds.
-#, fuzzy
 msgid "Open &folder containing a backup of feeds"
-msgstr ""
-"Izaberite folder za čuvanje rezervne kopije vaših izvoda.\n"
-"\t\tOni će biti kopirani iz %s."
+msgstr "Otvori &folder sa rezervnim kopijama izvoda"
 
 #. Translators: The label of a field to enter an address for a new feed.
 msgid "Address of a new feed:"
