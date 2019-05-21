@@ -66,6 +66,7 @@ msgid "Feeds restored"
 msgstr "Viri obnovljeni"
 
 #. Translators: The title of a dialog.
+#, python-brace-format
 msgid "Feeds: {defaultFeed} ({configProfile})"
 msgstr "Viri: {defaultFeed} ({configProfile})"
 
@@ -96,6 +97,12 @@ msgstr "&Izbriši..."
 #. Translators: The label of a button to set a feed as default.
 msgid "S&et default"
 msgstr "&Nastavitev za privzetega"
+
+#. Translators: The label of a button to open a folder containing a backup of feeds.
+#, fuzzy
+msgid "Open &folder containing a backup of feeds"
+msgstr ""
+"Izberite mapo, kamor želite shraniti varnostno kopijo vaših trenutnih virov."
 
 #. Translators: The label of a field to enter an address for a new feed.
 msgid "Address of a new feed:"

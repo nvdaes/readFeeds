@@ -49,6 +49,10 @@ Abre un diálogo cos seguintes controis:
   confirmación.
 * Configurar predeterminado: configura o feed selecionado coma o
   predeterminado, así que o seu artigo pode acederse cos xestos do NVDA.
+* Abrir cartafol que contén unha copia de seguridade das fontes: Abre un
+  cartafol que podería conter unha copia de seguridade das fontes. Isto
+  podería ser útil para explorar e eliminar fontes que non deberían
+  importarse cando o complemento se actualice.
 * Pechar: pecha o diálogo Feeds.
 
 ##### Notas #####
@@ -93,6 +97,17 @@ feeds.
   restaurar o cartafol personalFeeds.
 * O título do diálogo da listaxe de artigos amopsa o nome do feed
   selecionado e o número de elementos dispoñibles.
+
+## Cambios para 7.0 ##
+
+* O diálogo Fontes contén un botón para abrir un cartafol que podería conter
+  unha copia de seguridade das fontes.
+* Ao usar a caixa de edición para filtrar fontes, se non se atopan
+  resultados, amosaranse a lista de feeds e outros controis, de tal modo que
+  NVDA non anuncie "Descoñecido" na lista baleira.
+* Se o diálogo lista de artículos non se pode amosar, debido a erros no
+  feed, por exemplo, NVDA disparará un erro, de modo que o diálogo de fontes
+  se poida usar sen reiniciar NVDA.
 
 ## Cambios para 6.0 ##
 

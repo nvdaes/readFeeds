@@ -47,6 +47,9 @@ Apre una finestra con i seguenti controlli:
 * Imposta predefinito: permette di impostare il feed selezionato come
   predefinito, in modo che il feed selezionato si potrà anche aprire con i
   comandi di NVDA.
+* Cartella backup: apre una cartella che contiene feed precedentemente
+  salvati. Può essere utile per cancellare feed non più necessari che non si
+  vogliono caricare durante l'aggiornamento del componente.
 * Chiudi: chiude la finestra dei feed.
 
 ##### Nota: #####
@@ -92,6 +95,17 @@ l'URL dei feed.
   ripristinare o aggiornare la cartella personalFeeds.
 * Nel titolo della finestra elenco articoli viene indicato il feed
   selezionato ed il numero di elementi disponibili.
+
+## Changes for 7.0 ##
+
+* Aggiunto un pulsante Nella finestra Feed che consente di aprire una
+  cartella di backup. 
+* Quando non si trova nessun risultato dal campo editazione, l'elenco Feed e
+  gli altri controlli vengono disattivati. In questo modo NVDA non
+  annuncierà più Sconosciuto in elenchi vuoti.
+* Se l'elenco degli articoli non può essere visualizzato, dovuto per esempio
+  ad un problema di feed, verrà rilasciato un errore. In questo modo non
+  sarà più necessario riavviare NVDA per usare la finestra Feed.
 
 ## Changes for 6.0 ##
 

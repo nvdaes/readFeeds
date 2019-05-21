@@ -98,6 +98,11 @@ msgstr "&Usuń..."
 msgid "S&et default"
 msgstr "U&staw domyślnie"
 
+#. Translators: The label of a button to open a folder containing a backup of feeds.
+#, fuzzy
+msgid "Open &folder containing a backup of feeds"
+msgstr "Wybierz katalog do zapisywania kopii swoich kanałów osobistych"
+
 #. Translators: The label of a field to enter an address for a new feed.
 msgid "Address of a new feed:"
 msgstr "Adres nowego kanału osobistego:"

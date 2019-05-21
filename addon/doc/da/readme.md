@@ -49,6 +49,10 @@ de følgende menupunkter er tilgængelige:
   bekræftelse.
 * Sæt som standard: Indstiller den valgte nyhedskanal som standard, så dens
   artikler kan tilgås med NVDAs inputbevægelser.
+* Åbn mappen med sikkerhedskopierne for dine nyhedskanaler: Åbner en mappe,
+  der indeholder sikkerhedskopier af dine nyhedskanaler. Dette kan være
+  nyttigt, hvis du evt. vil slette kanaler der ikke skal importeres, når
+  tilføjelsen opdateres.
 * Luk: Lukker dialogen Nyhedskanaler.
 
 ##### Noter #####
@@ -94,6 +98,17 @@ URL-adresser på nyhedskanaler.
   sikkerhedskopiere eller gendanne mappen personalFeeds.
 * Titlen på dialogen der viser listen over artikler viser navnet på den
   aktuelle kanal, samt antallet af artikler til rådighed.
+
+## Ændringer i7.0 ##
+
+* Dialogboksen "Nyhedskanaler" indeholder en knap for at åbne en mappe, der
+  indeholder en sikkerhedskopi af nyhedskanaler.
+* Når du bruger redigeringsboksen til at filtrere feeds, og hvis der ikke
+  findes nogen resultater, er listen over kanaler og andre kontroller
+  deaktiveret, så NVDA ikke rapporterer "ukendt" i den tomme liste.
+* Hvis dialogen "Liste over artikler" ikke kan vises, for eksempel på grund
+  af fejl med kanalen, vil NVDA fejle, så dialogen kan bruges uden at
+  genstarte NVDA.
 
 ## Ændringer i 6.0 ##
 

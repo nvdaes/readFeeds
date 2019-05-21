@@ -49,6 +49,9 @@ Otwiera dialog z następującymi kontrolkami:
   osobistego po potwierdzeniu.
 * Ustaw jako domyślny: Ustawia kanał osobisty jako domyślny, aby można było
   się dostać do artykułów za pomocą gestów NVDA.
+* Open folder containing a backup of feeds: Opens a folder which may contain
+  a backup of feeds. This can be useful to explore and delete feeds which
+  shouldn't be imported when the add-on is updated.
 * Zamknij: Zamyka dialog kanały osobiste.
 
 ##### Uwagi #####
@@ -94,6 +97,17 @@ katalog zawierający kanały osobiste.
   kopii zapasowej, lub przywracanie katalogu personalFeeds.
 * Dialog Spisu nagłówków artykułów Wyświetla nazwę oznaczonego kanału
   osobistego i ilość dostępnych artykułów.
+
+## Changes for 7.0 ##
+
+* The Feeds dialog includes a button to open a folder which may contain a
+  backup of feeds.
+* When using the edit box to filter feeds, if no results are found, the list
+  of feeds and other controls are disabled, so that NVDA doesn't report
+  "unknown" in the empty list.
+* If the list of articles dialog can't be shown, for example due to errors
+  in the feed, NVDA will raise an error, so that the feeds dialog can be
+  used without restarting NVDA.
 
 ## Changes for 6.0 ##
 
