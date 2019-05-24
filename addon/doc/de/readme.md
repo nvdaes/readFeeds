@@ -3,7 +3,7 @@
 * Authors: Noelia Ruiz Martínez, Mesar Hameed
 * NVDA-Kompatibilität: 2018.3 bis 2019.1
 * [Stabile Version herunterladen][1]
-* [Entwicklungsversion herunterladen][2]
+* [Entwicklerversion herunterladen][2]
 
 Diese Erweiterung bietet eine einfache Möglichkeit, RSS-Feeds in den
 Formaten Atom oder RSS mit NVDA zu lesen. Die Feeds werden nicht automatisch

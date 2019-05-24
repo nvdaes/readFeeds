@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: readFeeds 1.0-dev\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-11-16 13:26+0100\n"
-"PO-Revision-Date: 2018-09-24 11:33+0200\n"
-"Last-Translator: René Linke <rene.linke@hamburg.de>\n"
+"PO-Revision-Date: 2019-05-18 21:47+0200\n"
+"Last-Translator: Bernd Dorer <bdorer@mailbox.org>\n"
 "Language-Team: \n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.1.1\n"
+"X-Generator: Poedit 2.2.2\n"
 
 #. Translators: the label of a message box dialog.
 msgid ""
@@ -99,11 +99,8 @@ msgid "S&et default"
 msgstr "Als Standard &festlegen"
 
 #. Translators: The label of a button to open a folder containing a backup of feeds.
-#, fuzzy
 msgid "Open &folder containing a backup of feeds"
-msgstr ""
-"Bitte wählen Sie einen Ordner zum Speichern des Backups Ihrer aktuellen RSS-"
-"Feeds aus"
+msgstr "ö&ffnen Sie einen Ordner der gesicherte Feeds enthält"
 
 #. Translators: The label of a field to enter an address for a new feed.
 msgid "Address of a new feed:"
