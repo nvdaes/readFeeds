@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: readFeeds 1.0-dev\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-11-16 13:26+0100\n"
-"PO-Revision-Date: 2019-05-18 21:47+0200\n"
-"Last-Translator: Bernd Dorer <bdorer@mailbox.org>\n"
+"PO-Revision-Date: 2019-06-02 20:12+0100\n"
+"Last-Translator: Waldschmetterling <a.r.waldschmetterling@gmx.de>\n"
 "Language-Team: \n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.2\n"
+"X-Generator: Poedit 1.5.7\n"
 
 #. Translators: the label of a message box dialog.
 msgid ""
@@ -66,7 +66,6 @@ msgid "Feeds restored"
 msgstr "RSS-Feeds wiederhergestellt"
 
 #. Translators: The title of a dialog.
-#, python-brace-format
 msgid "Feeds: {defaultFeed} ({configProfile})"
 msgstr "Feeds: {defaultFeed} ({configProfile})"
 
@@ -177,8 +176,8 @@ msgstr "RSS-Feeds wiederherstellen"
 #. Translators: An informational message displayed in the Restore dialog.
 msgid "Select a folder to restore a backup of your previous copied feeds"
 msgstr ""
-"Bitte wählen Sie einen Ordner zum wiederherstellen des Backups Ihrer vorig "
-"kopierten RSS-Feeds aus"
+"Bitte wählen Sie einen Ordner zum wiederherstellen des Backups Ihrer "
+"vorherigen kopierten RSS-Feeds aus"
 
 #. Translators: The label of a grouping containing controls to select the destination directory in the Restore dialog.
 msgid "directory containing backup:"
