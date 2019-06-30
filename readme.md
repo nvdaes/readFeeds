@@ -64,6 +64,9 @@ Opens a dialog to select a folder which replaces your feeds in the personalFeeds
 * NVDA will display an error message if it was not possible to backup or restore the personalFeeds folder.
 * The title of the articles list dialog displays the selected feed name and number of items available.
 
+## Changes for 8.0 ##
+
+* When the add-on is updated, feeds saved in the previous version of the add-on will be automatically copied to the new version, unless you prefer to import feeds saved in the main configuration folder of NVDA.
 ## Changes for 7.0 ##
 
 * The Feeds dialog includes a button to open a folder which may contain a backup of feeds.
