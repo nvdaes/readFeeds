@@ -56,8 +56,13 @@ def getActiveProfile():
 	return activeProfile
 
 def doCopy(copyDirectory):
+	# to ensure that the removed directory will not be one of the main directories such as documents or music or other important ones
+	if not os.path.basename(copyDirectory)== "personalFeeds":
+		copyDirectory=os.path.join(copyDirectory, "personalFeeds")
 	try:
-		shutil.rmtree(copyDirectory, ignore_errors=True)
+		if os.path.exists(copyDirectory):
+			#if it exists, only personalFeeds folder will be remove, which is the base name of copyDirectory path
+			shutil.rmtree(copyDirectory, ignore_errors=True)
 		shutil.copytree(FEEDS_PATH, copyDirectory)
 		core.callLater(100, ui.message,
 			# Translators: Message presented when feeds have been copied.
