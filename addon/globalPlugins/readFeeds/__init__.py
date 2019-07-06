@@ -61,7 +61,7 @@ def doCopy(copyDirectory):
 		copyDirectory=os.path.join(copyDirectory, "personalFeeds")
 	try:
 		if os.path.exists(copyDirectory):
-			#if it exists, only personalFeeds folder will be remove, which is the base name of copyDirectory path
+			#if it exists, only personalFeeds folder will be removed, which is the base name of copyDirectory path
 			shutil.rmtree(copyDirectory, ignore_errors=True)
 		shutil.copytree(FEEDS_PATH, copyDirectory)
 		core.callLater(100, ui.message,
