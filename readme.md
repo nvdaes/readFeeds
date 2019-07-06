@@ -67,6 +67,8 @@ Opens a dialog to select a folder which replaces your feeds in the personalFeeds
 ## Changes for 8.0 ##
 
 * When the add-on is updated, feeds saved in the previous version of the add-on will be automatically copied to the new version, unless you prefer to import feeds saved in the main configuration folder of NVDA.
+* When using the dialog to copy feeds, if the chosen folder is not named personalFeeds, a subfolder with this name will be created to prevent the deletion of directories containing important data, such as Documents or Downloads.
+
 ## Changes for 7.0 ##
 
 * The Feeds dialog includes a button to open a folder which may contain a backup of feeds.
