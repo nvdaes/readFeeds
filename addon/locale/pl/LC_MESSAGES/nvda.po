@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: readFeeds 1.0-dev\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-11-16 13:26+0100\n"
-"PO-Revision-Date: 2018-09-22 17:09+0100\n"
+"PO-Revision-Date: 2019-07-06 22:16+0100\n"
 "Last-Translator: Zvonimir Stanečić <zvonimirek222@webczatnet.pl>\n"
 "Language-Team: Polish <killer@tyflonet.com>\n"
 "Language: pl\n"
@@ -99,9 +99,8 @@ msgid "S&et default"
 msgstr "U&staw domyślnie"
 
 #. Translators: The label of a button to open a folder containing a backup of feeds.
-#, fuzzy
 msgid "Open &folder containing a backup of feeds"
-msgstr "Wybierz katalog do zapisywania kopii swoich kanałów osobistych"
+msgstr "otwórz &folder zawierający kopię twoich osobistych kanałów"
 
 #. Translators: The label of a field to enter an address for a new feed.
 msgid "Address of a new feed:"
