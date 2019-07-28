@@ -1,6 +1,7 @@
 # Read Feeds #
 
 * Forfattere: Noelia Ruiz Martínez, Mesar Hameed
+* NVDA-kompatibilitet: 2018.3 til 2019.1
 * Download [stabil version][1]
 * download [udviklingsversion][2]
 
@@ -32,12 +33,12 @@ de følgende menupunkter er tilgængelige:
 * Filtrér efter: Et redigeringsfelt til at søge i tidligere gemte
   nyhedskanaler.
 * En liste over de gemte nyhedskanaler.
-* List of articles: Opens a dialog which presents the articles list from
-  your current feed. Select the article you want to read and press Enter or
-  Open web page of selected article button to open the corresponding page in
-  your browser. Press About article button to open a dialog showing title
-  and link of the selected article; from this dialog, you'll be able to copy
-  this info to the clipboard.
+* Liste over artikler: Åbner en dialog, der præsenterer artikellisten fra
+  din nuværende kanal. Vælg den artikel, du vil læse, og tryk på Enter eller
+  Åbn webside for den valgte artikelknap for at åbne den tilsvarende side i
+  din browser. Tryk på Om artiklen knap for at åbne en dialog med titel og
+  link for den valgte artikel; Fra denne dialog kan du kopiere denne
+  information til udklipsholderen.
 * Åbn nyhedskanal: Åbner den markerede kanal i standardprogrammet.
 * Ny: Åbner en dialogboks med et redigeringsfelt til at indtaste adressen på
   en ny nyhedskanal. Hvis adressen er gyldig og kanalen kan gemmes, vises
@@ -48,6 +49,10 @@ de følgende menupunkter er tilgængelige:
   bekræftelse.
 * Sæt som standard: Indstiller den valgte nyhedskanal som standard, så dens
   artikler kan tilgås med NVDAs inputbevægelser.
+* Åbn mappen med sikkerhedskopierne for dine nyhedskanaler: Åbner en mappe,
+  der indeholder sikkerhedskopier af dine nyhedskanaler. Dette kan være
+  nyttigt, hvis du evt. vil slette kanaler der ikke skal importeres, når
+  tilføjelsen opdateres.
 * Luk: Lukker dialogen Nyhedskanaler.
 
 ##### Noter #####
@@ -94,11 +99,29 @@ URL-adresser på nyhedskanaler.
 * Titlen på dialogen der viser listen over artikler viser navnet på den
   aktuelle kanal, samt antallet af artikler til rådighed.
 
-## Changes for 5.0 ##
+## Ændringer i7.0 ##
 
-* The articles list dialog has been enhanced.
-* Compatible with NVDA 2018.3 or later (required).
-* If needed, you can download the [last version compatible with NVDA
+* Dialogboksen "Nyhedskanaler" indeholder en knap for at åbne en mappe, der
+  indeholder en sikkerhedskopi af nyhedskanaler.
+* Når du bruger redigeringsboksen til at filtrere feeds, og hvis der ikke
+  findes nogen resultater, er listen over kanaler og andre kontroller
+  deaktiveret, så NVDA ikke rapporterer "ukendt" i den tomme liste.
+* Hvis dialogen "Liste over artikler" ikke kan vises, for eksempel på grund
+  af fejl med kanalen, vil NVDA fejle, så dialogen kan bruges uden at
+  genstarte NVDA.
+
+## Ændringer i 6.0 ##
+
+* Når standardkanalen er opdateret, og det ophører med at fungere på grund
+  af serverproblemer, fjernes de tidligere artikler ikke og kan læses med de
+  tilsvarende tastetryk.
+* Rettede regression: Standardkanalen kan opdateres to gange igen.
+
+## Ændringer i 5.0 ##
+
+* Dialogen med listen over artikler er blevet forbedret.
+* Kompatibel med NVDA 2018.3 eller nyere (påkrævet).
+* Hvis nødvendigt, kan du hente [den sidste version kompatibel med NVDA
   2017.3][3].
 
 ## Ændringer i4.0  ##

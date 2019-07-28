@@ -1,22 +1,23 @@
 # Read Feeds #
 
 * Auteurs : Noelia Ruiz Martínez, Mesar Hameed
+* Compatibilité NVDA: 2018.3 à 2019.1
 * Télécharger [version stable][1]
 * Télécharger [version de développement][2]
 
-Ce module complémentaire fournit un moyen simple de lire les flux aux
-formats Atom ou RSS à l'aide de NVDA. Les flux ne sont pas actualisées
-automatiquement.  Ci-dessous lorsque nous mentionnons flux, nous voulons
-dire que les deux signifient flux RSS et ATOM.
+Cette extension fournit un moyen simple de lire les flux aux formats Atom ou
+RSS à l'aide de NVDA. Les flux ne sont pas actualisés automatiquement.
+Ci-dessous lorsque nous mentionnons flux, nous voulons dire que les deux
+signifient flux RSS et ATOM.
 
 ## Installation ou Mise à jour : ##
 
-Si vous utilisiez une version antérieure de ce module complémentaire, il y a
-un dossier RSS ou personalFeeds dans votre dossier de configuration
-personnel de NVDA, lorsque vous installez la version actuelle, une boîte de
-dialogue vous demandera si vous souhaitez mettre à jour ou installer.
-Choisissez mise à jour pour préserver vos flux enregistrés et pour continuer
-à les utiliser dans la nouvelle version installée de readFeeds.
+Si vous utilisiez une version antérieure de cette extension, il y a un
+dossier RSS ou personalFeeds dans votre dossier de configuration personnel
+de NVDA, lorsque vous installez la version actuelle, une boîte de dialogue
+vous demandera si vous souhaitez mettre à jour ou installer.  Choisissez
+mise à jour pour préserver vos flux enregistrés et pour continuer à les
+utiliser dans la nouvelle version installée de readFeeds.
 
 ## Commandes : ##
 
@@ -51,6 +52,9 @@ Ouvre une boîte de dialogue avec les contrôles suivants :
   après confirmation.
 * Définir par défaut : Définit le flux sélectionné comme valeur par défaut,
   afin que ses articles soient accessibles avec les gestes de NVDA.
+* Open folder containing a backup of feeds: Opens a folder which may contain
+  a backup of feeds. This can be useful to explore and delete feeds which
+  shouldn't be imported when the add-on is updated.
 * Fermer : Ferme la boîte de dialogue Flux.
 
 ##### Notes #####
@@ -95,6 +99,25 @@ contenant des URL de flux.
 * La boîte de dialogue affiche Le titre de la Liste de l'article le nom de
   flux sélectionné et le nombre d'éléments disponibles.
 
+## Changes for 7.0 ##
+
+* The Feeds dialog includes a button to open a folder which may contain a
+  backup of feeds.
+* When using the edit box to filter feeds, if no results are found, the list
+  of feeds and other controls are disabled, so that NVDA doesn't report
+  "unknown" in the empty list.
+* If the list of articles dialog can't be shown, for example due to errors
+  in the feed, NVDA will raise an error, so that the feeds dialog can be
+  used without restarting NVDA.
+
+## Changements pour la version 6.0 ##
+
+* Lorsque le flux par défaut a été mis à jour et qu'il cesse de fonctionner
+  en raison de problèmes de serveur, les articles précédents ne sont pas
+  supprimés et peuvent être lus à l'aide des frappes correspondantes.
+* Correction de la régression : Le flux par défaut peut être mis à jour deux
+  fois.
+
 ## Changements pour la version 5.0 ##
 
 * La boîte de dialogue Liste des articles a été améliorée.
@@ -122,8 +145,8 @@ contenant des URL de flux.
 
 ## Changements pour la version 2.0 ##
 
-* L'aide du module complémentaire est disponible à partir du Gestionnaire de
-  modules complémentaires.
+* L'aide de l'extension est disponible à partir du Gestionnaire
+  d'extensions.
 
 ## Changements pour la version 1.0 ##
 

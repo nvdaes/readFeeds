@@ -1,6 +1,7 @@
 # Read Feeds #
 
-* Authors: Noelia Ruiz Martínez, Mesar Hameed
+* Autores: Noelia Ruiz Martínez, Mesar Hameed
+* Compatibilidad con NVDA: de 2018.3 a 2019.1
 * Descargar [versión estable][1]
 * Descargar [versión de desarrollo][2]
 
@@ -50,6 +51,10 @@ Abre un diálogo con los siguientes controles:
   una confirmación.
 * Configurar predeterminado: configura el feed seleccionado como el
   predeterminado, así que su artículo puede accederse con gestos de NVDA.
+* Abrir carpeta que contiene una copia de seguridad de las fuentes: Abre una
+  carpeta que podría contener una copia de seguridad de las fuentes. Esto
+  puede ser útil para explorar y eliminar fuentes que no deberían importarse
+  cuando el complemento se actualice.
 * Cerrar: cierra el diálogo Feeds.
 
 ##### Notas #####
@@ -57,7 +62,7 @@ Abre un diálogo con los siguientes controles:
 * Si se crea un feed llamado tempFeed, por favor renómbralo, ya que este
   fichero podría reemplazarse cuando sea necesario crear un feed cuyo nombre
   ya exista.
-*  El feed configurado como el predeterminado puede eliminarse. el feed
+* El feed configurado como el predeterminado puede eliminarse. el feed
   addressFile se utilizará como el predeterminado cuando la configuración se
   reinicie, así no puede eliminarse.
 
@@ -94,6 +99,25 @@ feeds.
   la carpeta personalFeeds.
 * El título del diálogo de lista de artículos muestra el nombre del feed
   seleccionado y el número de elementos disponibles.
+
+## Cambios para 7.0 ##
+
+* El diálogo Fuentes incluye un botón para abrir una carpeta que podría
+  contener una copia de seguridad de las fuentes.
+* Al usar el cuadro de edición para filtrar fuentes, si no se encuentran
+  resultados, la lista de fuentes y otros controles están deshabilitados, de
+  manera que NVDA no anuncie "desconocido" en la lista vacía.
+* Si el diálogo de lista de artículos no se puede mostrar, por ejemplo
+  debido a errores en la fuente, NVDA disparará un error, de forma que el
+  diálogo de fuentes pueda usarse sin reiniciar NVDA.
+
+## Cambios para 6.0 ##
+
+* Cuando se refresca el feed por defecto y deja de funcionar por errores en
+  el servidor, los artículos anteriores no se borran y pueden leerse con los
+  atajos correspondientes.
+* Solucionada regresión: El feed por defecto puede actualizarse dos veces
+  nuevamente.
 
 ## Cambios para 5.0 ##
 

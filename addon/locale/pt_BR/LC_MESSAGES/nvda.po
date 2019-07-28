@@ -100,6 +100,12 @@ msgstr "&Apagar..."
 msgid "S&et default"
 msgstr "D&efinir como padrão"
 
+#. Translators: The label of a button to open a folder containing a backup of feeds.
+#, fuzzy
+msgid "Open &folder containing a backup of feeds"
+msgstr ""
+"Selecione uma pasta para salvar cópia de segurança dos seus feeds atuais"
+
 #. Translators: The label of a field to enter an address for a new feed.
 msgid "Address of a new feed:"
 msgstr "Endereço do novo feed:"

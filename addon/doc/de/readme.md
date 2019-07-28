@@ -1,8 +1,9 @@
 # RSS-Feed-Reader #
 
 * Authors: Noelia Ruiz Martínez, Mesar Hameed
+* NVDA-Kompatibilität: 2018.3 bis 2019.1
 * [Stabile Version herunterladen][1]
-* [Entwicklungsversion herunterladen][2]
+* [Entwicklerversion herunterladen][2]
 
 Diese Erweiterung bietet eine einfache Möglichkeit, RSS-Feeds in den
 Formaten Atom oder RSS mit NVDA zu lesen. Die Feeds werden nicht automatisch
@@ -15,15 +16,15 @@ Wenn Sie eine frühere Version dieser Erweiterung verwendet haben und in
 Ihrem persönlichen NVDA-Konfigurationsordner ein RSS- oder
 personalFeeds-Ordner vorhanden ist, wird bei der Installation der aktuellen
 Version ein Dialogfeld angezeigt. In diesem Dialog werden Sie gefragt, ob
-Sie ein Upgrade oder eine Installation durchführen möchten.  Wählen Sie
-update, um Ihre gespeicherten Feeds zu behalten und sie in der neu
-installierten Version von RSS-Feed-Reader weiter zu verwenden.
+Sie eine Aktualisierung oder eine Installation durchführen möchten.  Wählen
+Sie aktualisieren, um Ihre gespeicherten Feeds zu behalten und sie in der
+neu installierten Version von RSS-Feed-Reader weiter zu verwenden.
 
 ## Befehle: ##
 
 ### Feed-Reader-Menü ###
 
-Sie können auf das Untermenü RSS-Feed-Reader aus dem nvda-Menü, Untermenü
+Sie können auf das Untermenü RSS-Feed-Reader aus dem NVDA-Menü, Untermenü
 Extras zugreifen. Es stehen folgende Menüoptionen zur Verfügung:
 
 #### RSS-Feeds... ####
@@ -50,34 +51,39 @@ Extras zugreifen. Es stehen folgende Menüoptionen zur Verfügung:
 * Als standard festlegen: Legt den ausgewählten RSS-Feed als Standard fest,
   so dass auf seine Artikel mit den Tastenkürzel von NVDA zugegriffen werden
   kann.
+* Backup Ordner öffnen: Öffnet einen Ordner, in welchem eine Sicherung der
+  RSS Feeds enthalten sein kann. Nützlich um vorhandene RSS Feeds zu prüfen
+  und diejenigen  zu löschen, die bei einer Aktualisierung der Erweiterung
+  nicht importiert werden sollen. 
 * Schließen: Schließt den Dialog.
 
 ##### Hinweise #####
 
 * Wenn ein Feed namens tempFeed erstellt wird, benennen Sie ihn bitte
-  um. Sie könnten diese Datei bei Bedarf ersetzen, um einen Feed zu
-  erstellen, dessen Name bereits existiert.
+  um. Andernfalls könnte er ersetzt werden, wenn erneut ein Ordner mit
+  diesem Namen erstellt wird. 
 * Der als Standard eingestellte Feed kann nicht entfernt werden. Der
   AddressFile-Feed wird als Standard verwendet, wenn die Konfiguration
   zurückgesetzt wird. Daher kann dieser Ordner nicht gelöscht werden.
 
 ####Artikelordner kopieren...####
 
-Öffnet einen Dialog zur Auswahl eines Ordners, in dem Sie das
-personalFeeds-Verzeichnis Ihrer Artikel speichern können. Standardmäßig ist
-der ausgewählte Ordner das Konfigurationsverzeichnis von NVDA.
+Öffnet einen Dialog, in dem Sie einen Ordner auswählen können, um Ihre
+persönlichen RSS Feed Artikel zu speichern. Standardmäßig ist der
+ausgewählte Ordner das Konfigurationsverzeichnis von NVDA und der Ordner
+heißt personalFeeds.
 
 #### RSS-Feeds wiederherstellen... ####
 
-Öffnet einen Dialog zur Auswahl eines Ordners, der Ihre Feeds im
-personalFeeds-Ordner ersetzt. Stellen Sie sicher, dass Sie einen Ordner mit
-Feed-URLs auswählen.
+Öffnet einen Dialog um einen Ordner zu wählen, der ihren Ordner mit
+persönlichen FEEDS ersetzt. Stellen Sie sicher, dass Sie einen Ordner
+wählen, der URLs von RSS Feeds enthält.
 
 ### Tastenkombinationen: ###
 
 * STRG+Umschalt+NVDA+Leertaste: Sagt die aktuelle Adresse des Artikels
   an. Zweimaliges Drücken öffnet die Webseite des Artikels.
-* STRG+Umschalt+NVDA+8: Das ausgewählte RSS-Feed wir neugeladen und der
+* STRG+Umschalt+NVDA+8: Der ausgewählte RSS-Feed wird neu geladen und der
   aktuellste Titel wird angesagt.
 * Strg+Umschalt+NVDA+I: Sagt den aktuellen Feed-Titel und -Link an. Durch
   zweimaliges Drücken wird der Titel und der zugehörige Link in die
@@ -94,6 +100,26 @@ Feed-URLs auswählen.
   Wiederherstellung des Ordners personalFeeds nicht möglich war.
 * Im Titel des Dialogs für die Artikellisten werden der Name des
   ausgewählten Feeds und die Anzahl der verfügbaren Artikel angezeigt.
+
+## Änderungen bis 7.0 ##
+
+* Der RSS Feeds Dialog wird mit einen Schalter erweitert, um einen
+  Backup-Ordner zu öffnen, der gesicherte Feeds enthalten kann. 
+* Wenn Sie das Eingabeveld verwenden, um RSS Feeds zu filtern und keine
+  Ergebnisse gefunden werden, sind die Liste der Feeds und andere
+  Dialogelemente nicht vorhanden so dass NVDA nicht mehr die Meldung
+  "unbekannt" in der leeren Liste nennt. 
+* Wenn die Artikelliste nicht gezeigt werden kann, beispielsweise wegen
+  Fehlern beim Rss Feed, wird NVDA einen Fehler auslösen. Dadurch können Sie
+  den RSS Feed Dialog nutzen, ohne NVDA neu starten zu müssen. 
+
+## Änderungen bis 6.0 ##
+
+* Wenn der Standardfeed aktualisiert wurde und er aufgrund von
+  Serverproblemen nicht mehr funktioniert, werden die vorherigen Artikel
+  nicht gelöscht und können mit den entsprechenden Tastenkombinationen
+  gelesen werden.
+* Fehler behoben: Der Standardfeed kann noch zweimal aktualisiert werden.
 
 ## Änderungen für 5.0 ##
 

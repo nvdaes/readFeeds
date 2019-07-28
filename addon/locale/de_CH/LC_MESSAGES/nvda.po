@@ -98,6 +98,15 @@ msgstr "&Löschen..."
 msgid "S&et default"
 msgstr "Als Standard &festlegen"
 
+#. Translators: The label of a button to open a folder containing a backup of feeds.
+#, fuzzy
+msgid "Open &folder containing a backup of feeds"
+msgstr ""
+"Bitte wählen Sie einen Ordner zum Speichern des Backups Ihrer aktuellen Rss-"
+"Feeds aus:\n"
+"\n"
+"\t\tSie werden aus %s gesichert."
+
 #. Translators: The label of a field to enter an address for a new feed.
 msgid "Address of a new feed:"
 msgstr "Neue Adresse des Rss-Feeds:"

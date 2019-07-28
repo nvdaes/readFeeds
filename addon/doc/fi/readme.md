@@ -1,6 +1,7 @@
 # Lue syötteet #
 
 * Tekijät: Noelia Ruiz Martínez, Mesar Hameed
+* NVDA-yhteensopivuus: 2018.3-2019.1
 * Lataa [vakaa versio][1]
 * Lataa [kehitysversio][2]
 
@@ -47,6 +48,10 @@ Avaa valintaikkunan, jossa on seuraavat säätimet:
   valitun syötteen.
 * Aseta oletukseksi: Asettaa valitun syötteen oletukseksi, jotta sen
   artikkeleihin pääsee NVDA:n syötekomennoilla.
+* Avaa syötteiden varmuuskopiokansio: Avaa kansion, joka saattaa sisältää
+  syötteiden varmuuskopion. Tästä voi olla hyötyä sellaisten syötteiden
+  tutkimisessa ja poistamisessa, joita ei haluta tuotavan lisäosaa
+  päivitettäessä.
 * Sulje: Sulkee Syötteet-valintaikkunan.
 
 ##### Huomautuksia #####
@@ -89,6 +94,26 @@ vain syötteiden URL-osoitteita sisältävän kansion.
   varmuuskopiointi tai palautus ei ollut mahdollista.
 * Valitun syötteen nimi ja saatavilla olevien artikkeleiden määrä näytetään
   Artikkeliluettelo-valintaikkunan otsikossa.
+
+## Muutokset versiossa 7.0 ##
+
+* Syötteet-valintaikkunassa on painike, jolla voidaan avata mahdollisen
+  syöttteiden varmuuskopion sisältävä kansio.
+* Kun muokkauskenttää käytetään syötteiden suodattamiseen ja jos
+  hakutuloksia ei löydy, syötteiden luettelo sekä muut säätimet poistetaan
+  käytöstä, jottei NVDA sano "tuntematon" kohdistuksen siirtyessä tähän
+  tyhjään luetteloon.
+* Mikäli Artikkeliluettelo-valintaikkunaa ei voida näyttää, esim. syötteessä
+  olevien virheiden vuoksi, NVDA ilmoittaa virheestä, jotta
+  Syötteet-valintaikkunaa voidaan käyttää ilman NVDA:n
+  uudelleenkäynnistystä.
+
+## Muutokset versiossa 6.0 ##
+
+* Kun oletussyöte on päivitetty ja se lakkaa toimimasta palvelinongelmien
+  vuoksi, aiempia artikkeleita ei poisteta, vaan niitä voidaan lukea
+  tarkoitukseen varatuilla näppäinkomennoilla.
+* Oletussyöte voidaan taas päivittää kahdesti.
 
 ## Muutokset versiossa 5.0 ##
 
