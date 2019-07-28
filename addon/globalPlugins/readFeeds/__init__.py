@@ -11,7 +11,7 @@ import addonHandler
 import globalPluginHandler
 import globalVars
 import config
-import urllib
+import urllib.request
 import scriptHandler
 from scriptHandler import script
 import api
@@ -24,9 +24,8 @@ from logHandler import log
 import re
 from .skipTranslation import translate
 
-sys.path.append(os.path.join(os.path.dirname(__file__), "..", ".."))
-from xml2.dom import minidom
-from xml2.etree import ElementTree
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
+from xml.etree import ElementTree
 del sys.path[-1]
 
 addonHandler.initTranslation()
@@ -34,7 +33,7 @@ addonHandler.initTranslation()
 ### Constants
 
 ADDON_SUMMARY = addonHandler.getCodeAddon().manifest['summary']
-FEEDS_PATH = os.path.join(os.path.dirname(__file__), "personalFeeds").decode("mbcs")
+FEEDS_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), "personalFeeds"))
 CONFIG_PATH = globalVars.appArgs.configPath
 DEFAULT_ADDRESS_FILE = "addressFile"
 # Translators: message presented when feeds cannot be reported.
@@ -192,7 +191,6 @@ class FeedsDialog(wx.Dialog):
 			feedName = "tempFeed"
 		with open(os.path.join(FEEDS_PATH, "%s.txt" % feedName), "w") as f:
 			f.write(address)
-			f.close()
 		return feedName
 
 	def onSearchEditTextChange(self, evt):
@@ -209,7 +207,8 @@ class FeedsDialog(wx.Dialog):
 			self.feedsList.Selection = 0
 			self.onFeedsListChoice(None)
 		except:
-			[control.Disable() for control in self.feedsList, self.articlesButton, self.openButton, self.renameButton, self.deleteButton, self.defaultButton]
+			for control in (self.feedsList, self.articlesButton, self.openButton, self.renameButton, self.deleteButton, self.defaultButton):
+				control.disable
 
 	def onFeedsListChoice(self, evt):
 		self.feedsList.Enable()
@@ -229,7 +228,6 @@ class FeedsDialog(wx.Dialog):
 	def onArticles(self, evt):
 		with open(os.path.join(FEEDS_PATH, "%s.txt" % self.stringSel), "r") as f:
 			address = f.read()
-			f.close()
 		self.feed = Feed(address)
 		self.Disable()
 		try:
@@ -241,7 +239,6 @@ class FeedsDialog(wx.Dialog):
 	def onOpen(self, evt):
 		with open(os.path.join(FEEDS_PATH, "%s.txt" % self.stringSel), "r") as f:
 			address = f.read()
-			f.close()
 		os.startfile(address)
 
 	def onNew(self, evt):
@@ -307,7 +304,7 @@ class ArticlesDialog(wx.Dialog):
 
 		# Translators: The label of the articles list in the articles dialog.
 		articlesText = _("List of articles")
-		articlesChoices = [parent.feed.getArticleTitle(index) for index in xrange(parent.feed.getNumberOfArticles())]
+		articlesChoices = [parent.feed.getArticleTitle(index) for index in range(parent.feed.getNumberOfArticles())]
 		self.articlesList = sHelper.addLabeledControl(articlesText, wx.ListBox, choices=articlesChoices)
 		self.articlesList.Selection = 0
 		self.articlesList.Bind(wx.EVT_CHOICE, self.onArticlesListChoice)
@@ -495,20 +492,19 @@ class Feed(object):
 
 	def refresh(self):
 		try:
-			#self._document = minidom.parse(urllib.urlopen(self._url))
-			self._document = ElementTree.parse(urllib.urlopen(self._url))
+			self._document = ElementTree.parse(urllib.request.urlopen(self._url))
 		except Exception as e:
 			raise e
 		tag = self._document.getroot().tag
 		self.ns = "%s}" % tag.split("}", 1)[0] if "}" in tag else None
 		# Check if we are dealing with an rss or atom feed.
 		if tag.endswith("rss"):
-			main = self._document.getroot().find(self.buildTag("channel", self.ns))
-			self._articles = main.findall(self.buildTag("item", self.ns))
+			self._main = self._document.getroot().find(self.buildTag("channel", self.ns))
+			self._articles = self._main.findall(self.buildTag("item", self.ns))
 			self._feedType = "rss"
 		elif tag.endswith("feed"):
-			main = self._document.getroot()
-			self._articles = main.findall(self.buildTag("entry", self.ns))
+			self._main = self._document.getroot()
+			self._articles = self._main.findall(self.buildTag("entry", self.ns))
 			self._feedType = "atom"
 		else:
 			log.debugWarning("Unknown type of current feed", exc_info=True)
@@ -523,7 +519,7 @@ class Feed(object):
 
 	def getFeedName(self):
 		try:
-			return self._document.getroot().find(self.buildTag("title", self.ns)).text
+			return self._main.find(self.buildTag("title", self.ns)).text
 		except:
 			return ""
 
@@ -563,7 +559,7 @@ class Feed(object):
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
-	scriptCategory = unicode(ADDON_SUMMARY)
+	scriptCategory = ADDON_SUMMARY
 
 	def __init__(self):
 		super(GlobalPlugin, self).__init__()
@@ -633,7 +629,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		addressFile = "%s.txt" % config.conf["readFeeds"]["addressFile"]
 		with open(os.path.join(FEEDS_PATH, addressFile), "r") as f:
 			address = f.read()
-			f.close()
 		if self.feed and self.feed.getFeedUrl() == address:
 			curFeed = self.feed
 		else:

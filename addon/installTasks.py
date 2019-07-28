@@ -12,7 +12,7 @@ import glob
 import gui
 import wx
 
-ADDON_DIR = os.path.dirname(__file__).decode("mbcs")
+ADDON_DIR = os.path.abspath(os.path.dirname(__file__))
 FEEDS_PATH = os.path.join(ADDON_DIR, "globalPlugins", "readFeeds", "personalFeeds")
 CONFIG_PATH = globalVars.appArgs.configPath
 
