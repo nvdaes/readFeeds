@@ -1,7 +1,7 @@
 # Read Feeds #
 
 * Forfattere: Noelia Ruiz Martínez, Mesar Hameed
-* NVDA-kompatibilitet: 2018.3 til 2019.1
+* NVDA compatibility: 2018.3 to 2019.2
 * Download [stabil version][1]
 * download [udviklingsversion][2]
 
@@ -98,6 +98,16 @@ URL-adresser på nyhedskanaler.
   sikkerhedskopiere eller gendanne mappen personalFeeds.
 * Titlen på dialogen der viser listen over artikler viser navnet på den
   aktuelle kanal, samt antallet af artikler til rådighed.
+
+## Changes for 8.0 ##
+
+* When the add-on is updated, feeds saved in the previous version of the
+  add-on will be automatically copied to the new version, unless you prefer
+  to import feeds saved in the main configuration folder of NVDA.
+* When using the dialog to copy feeds, if the chosen folder is not named
+  personalFeeds, a subfolder with this name will be created to prevent the
+  deletion of directories containing important data, such as Documents or
+  Downloads.
 
 ## Ændringer i7.0 ##
 

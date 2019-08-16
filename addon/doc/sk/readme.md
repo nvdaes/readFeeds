@@ -1,7 +1,7 @@
 # RSS Čítačka #
 
 * Autori: Noelia Ruiz Martínez, Mesar Hameed
-* NVDA kompatibilita: 2018.3 až 2019.1
+* NVDA compatibility: 2018.3 to 2019.2
 * Stiahnuť [stabilná verzia][1]
 * Stiahnúť [Vývojovú verziu ][2]
 
@@ -97,6 +97,16 @@ adresy URL informačných kanálov.
   priečinok personalFeeds.
 * Názov dialógového okna so zoznamom článkov obsahuje vybratý názov
   informačného kanála a počet dostupných položiek.
+
+## Changes for 8.0 ##
+
+* When the add-on is updated, feeds saved in the previous version of the
+  add-on will be automatically copied to the new version, unless you prefer
+  to import feeds saved in the main configuration folder of NVDA.
+* When using the dialog to copy feeds, if the chosen folder is not named
+  personalFeeds, a subfolder with this name will be created to prevent the
+  deletion of directories containing important data, such as Documents or
+  Downloads.
 
 ## Zmeny vo verzii 7.0 ##
 

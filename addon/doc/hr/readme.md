@@ -1,7 +1,7 @@
 # Čitaj sažetke #
 
 * Autori: Noelia Ruiz Martínez, Mesar Hameed 
-* NVDA compatibility: 2018.3 to 2019.1
+* NVDA compatibility: 2018.3 to 2019.2
 * Preuzmi [stabilnu inačicu][1]
 * Preuzmi [razvojnu inačicu][2]
 
@@ -93,6 +93,16 @@ sažeci. Provjerite jeste li učitali mapu koja sadrži adrese sažetaka.
   kopiju ili vratiti mapu Osobni sažeci.
 * Popis naslova članaka prikazuje ime odabranog sažetka i broj dostupnih
   stavki.
+
+## Changes for 8.0 ##
+
+* When the add-on is updated, feeds saved in the previous version of the
+  add-on will be automatically copied to the new version, unless you prefer
+  to import feeds saved in the main configuration folder of NVDA.
+* When using the dialog to copy feeds, if the chosen folder is not named
+  personalFeeds, a subfolder with this name will be created to prevent the
+  deletion of directories containing important data, such as Documents or
+  Downloads.
 
 ## Changes for 7.0 ##
 
