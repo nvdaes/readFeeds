@@ -5,7 +5,6 @@
 # Released under GPL 2
 
 import os
-import sys
 import shutil
 import addonHandler
 import globalPluginHandler
@@ -23,10 +22,7 @@ import ui
 from logHandler import log
 import re
 from .skipTranslation import translate
-
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
-from xml.etree import ElementTree
-del sys.path[-1]
+from .xml.etree import ElementTree
 
 addonHandler.initTranslation()
 
@@ -189,7 +185,7 @@ class FeedsDialog(wx.Dialog):
 		feedName = api.filterFileName(feed.getFeedName())
 		if os.path.isfile(os.path.join(FEEDS_PATH, "%s.txt" % feedName)):
 			feedName = "tempFeed"
-		with open(os.path.join(FEEDS_PATH, "%s.txt" % feedName), "w") as f:
+		with open(os.path.join(FEEDS_PATH, "%s.txt" % feedName), "w", encoding="utf-8") as f:
 			f.write(address)
 		return feedName
 
@@ -226,7 +222,7 @@ class FeedsDialog(wx.Dialog):
 			self.stringSel != config.conf["readFeeds"]["addressFile"])
 
 	def onArticles(self, evt):
-		with open(os.path.join(FEEDS_PATH, "%s.txt" % self.stringSel), "r") as f:
+		with open(os.path.join(FEEDS_PATH, "%s.txt" % self.stringSel), "r", encoding="utf-8") as f:
 			address = f.read()
 		self.feed = Feed(address)
 		self.Disable()
@@ -237,7 +233,7 @@ class FeedsDialog(wx.Dialog):
 			raise e
 
 	def onOpen(self, evt):
-		with open(os.path.join(FEEDS_PATH, "%s.txt" % self.stringSel), "r") as f:
+		with open(os.path.join(FEEDS_PATH, "%s.txt" % self.stringSel), "r", encoding="utf-8") as f:
 			address = f.read()
 		os.startfile(address)
 
@@ -339,7 +335,7 @@ class ArticlesDialog(wx.Dialog):
 		articleInfo = u"{title}\r\n\r\n{address}".format(title=self.Parent.feed.getArticleTitle(self.articlesList.Selection), address=self.Parent.feed.getArticleLink(self.articlesList.Selection))
 		if gui.messageBox(
 			# Translators: the label of a message box dialog.
-			_("%s\r\n\r\nDo you want to copy article title and link to the clipboard?" % articleInfo),
+			_("%sDo you want to copy article title and link to the clipboard?" % (articleInfo + "\r\n\r\n")),
 			# Translators: the title of a message box dialog.
 			_("Article information"),
 			wx.YES|wx.NO|wx.CANCEL|wx.ICON_QUESTION) == wx.YES:
@@ -627,7 +623,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def getFirstArticle(self):
 		addressFile = "%s.txt" % config.conf["readFeeds"]["addressFile"]
-		with open(os.path.join(FEEDS_PATH, addressFile), "r") as f:
+		with open(os.path.join(FEEDS_PATH, addressFile), "r", encoding="utf-8") as f:
 			address = f.read()
 		if self.feed and self.feed.getFeedUrl() == address:
 			curFeed = self.feed
