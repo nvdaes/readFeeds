@@ -1,7 +1,7 @@
 # Read Feeds #
 
 * Authors: Noelia Ruiz Martínez, Mesar Hameed
-* NVDA compatibility: 2018.3 to 2019.2
+* NVDA compatibility: 2019.3
 * Download [stable version][1]
 * Download [development version][2]
 
@@ -63,6 +63,10 @@ Opens a dialog to select a folder which replaces your feeds in the personalFeeds
 * When unable to connect/refresh a feed, or the URL does not correspond to a valid feed.
 * NVDA will display an error message if it was not possible to backup or restore the personalFeeds folder.
 * The title of the articles list dialog displays the selected feed name and number of items available.
+
+## Changes for 9.0 ##
+
+* Requires NVDA 2019.3.
 
 ## Changes for 8.0 ##
 
