@@ -1,7 +1,7 @@
 # Read Feeds #
 
 * Authors: Noelia Ruiz Martínez, Mesar Hameed
-* NVDA compatibility: 2019.3
+* NVDA compatibility: 2019.3 or later
 * Download [stable version][1]
 * Download [development version][2]
 
@@ -66,7 +66,7 @@ Opens a dialog to select a folder which replaces your feeds in the personalFeeds
 
 ## Changes for 9.0 ##
 
-* Requires NVDA 2019.3.
+* Requires NVDA 2019.3 or later.
 
 ## Changes for 8.0 ##
 
