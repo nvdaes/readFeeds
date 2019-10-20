@@ -1,4 +1,4 @@
-# RSS-Feed-Reader #
+# Feeds lesen #
 
 * Authors: Noelia Ruiz Martínez, Mesar Hameed
 * NVDA-Kompatibilität: 2018.3 bis 2019.1
