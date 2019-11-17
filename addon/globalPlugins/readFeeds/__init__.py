@@ -203,8 +203,9 @@ class FeedsDialog(wx.Dialog):
 		self.feedsList.Clear()
 		# Based on the filter of the Input gestures dialog of NVDA's core.
 		filter = self.searchTextEdit.Value
-		filter = re.escape(filter)
-		filterReg = re.compile(r'(?=.*?' + r')(?=.*?'.join(filter.split('\ ')) + r')', re.U|re.IGNORECASE)
+		if filter:
+			filter = re.escape(filter)
+			filterReg = re.compile(r'(?=.*?' + r')(?=.*?'.join(filter.split('\ ')) + r')', re.U|re.IGNORECASE)
 		for choice in self.choices:
 			if filter and not filterReg.match(choice):
 				continue
