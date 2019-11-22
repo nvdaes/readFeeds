@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: readFeeds 1.0-dev\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-11-16 13:26+0100\n"
-"PO-Revision-Date: 2018-09-24 18:55-0300\n"
-"Last-Translator: Tiago Melo Casal <tcasal@intervox.nce.ufrj.br>\n"
+"PO-Revision-Date: 2019-11-16 22:28-0300\n"
+"Last-Translator: Cleverson Casarin Uliana <clever97@gmail.com>\n"
 "Language-Team: Equipe de tradução do NVDA para Português do Brasil "
 "<clever97@gmail.com>\n"
 "Language: pt_BR\n"
@@ -101,10 +101,8 @@ msgid "S&et default"
 msgstr "D&efinir como padrão"
 
 #. Translators: The label of a button to open a folder containing a backup of feeds.
-#, fuzzy
 msgid "Open &folder containing a backup of feeds"
-msgstr ""
-"Selecione uma pasta para salvar cópia de segurança dos seus feeds atuais"
+msgstr "Abrir pasta com cópia de segurança dos &feeds"
 
 #. Translators: The label of a field to enter an address for a new feed.
 msgid "Address of a new feed:"
