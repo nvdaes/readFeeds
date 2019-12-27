@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: readFeeds 1.0-dev\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-11-23 12:28+0100\n"
-"PO-Revision-Date: 2019-04-04 21:13+0200\n"
+"PO-Revision-Date: 2019-10-13 15:09+0200\n"
 "Last-Translator: Nicolai Svendsen <chojiro1990@gmail.com>\n"
 "Language-Team: Dansk NVDA <dansk@nvda.dk>\n"
 "Language: da\n"
@@ -22,7 +22,7 @@ msgid ""
 "You have installed the ReadFeeds add-on, probably an old and incompatible "
 "version with this one. Do you want to uninstall the old version?"
 msgstr ""
-"Du har instaleret tilføjelsesprogrammet Read Feeds, sandsynligvis en gammel "
+"Du har instaleret tilføjelsesprogrammet Læs Feeds, sandsynligvis en gammel "
 "version, som er inkompatibel med denne version. Vil du afinstallere den "
 "gamle version?"
 
@@ -35,24 +35,24 @@ msgid ""
 "Your configuration folder for NVDA contains files that seem to be derived "
 "from a previous version of this add-on. Do you want to update it?"
 msgstr ""
-"Din mappe med opsætning til NVDA indeholder filer, som ser ud til at stamme "
+"Din konfigurationsmappe til NVDA indeholder filer, som ser ud til at stamme "
 "fra dette tilføjelsesprogram. Vil du opdatere den?"
 
 #. Translators: the title of a message box dialog.
 msgid "Install or update add-on"
-msgstr "Installer eller opdater tilføjelsesprogram"
+msgstr "Installér eller opdater tilføjelse"
 
 #. Translators: message presented when feeds cannot be reported.
 msgid ""
 "Unable to refresh feed. Check your Internet conectivity or that the "
 "specified feed address is correct."
 msgstr ""
-"Kan ikke opdatere kanalen. Kontroller din internetforbindelse, og at den "
-"angivne adresse er korrekt."
+"Kan ikke opdatere feed. Kontroller din internetforbindelse, og sørg for, at "
+"den angivne adresse er korrekt."
 
 #. Translators: Message presented when feeds have been copied.
 msgid "Feeds copied"
-msgstr "Kanaler kopieret"
+msgstr "Feeds kopieret"
 
 #. Translators: label of error dialog shown when cannot copy feeds folder.
 msgid "Folder not copied"
@@ -64,12 +64,12 @@ msgstr "Kopieringsfejl"
 
 #. Translators: Message presented when feeds have been restored.
 msgid "Feeds restored"
-msgstr "Kanaler gendannet"
+msgstr "Feeds gendannet"
 
 #. Translators: The title of a dialog.
 #, python-brace-format
 msgid "Feeds: {defaultFeed} ({configProfile})"
-msgstr "Nyhedskanaler: {defaultFeed} ({configProfile})"
+msgstr "Feeds: {defaultFeed} ({configProfile})"
 
 #. Label of a dialog (message translated in NVDA core in different contexts).
 msgid "&Filter by:"
@@ -81,7 +81,7 @@ msgstr "Liste over &artikler..."
 
 #. Translators: The label of a button to open a feed.
 msgid "&Open feed"
-msgstr "&Åbn kanal"
+msgstr "&Åbn feed"
 
 #. Translators: The label of a button to add a new feed.
 msgid "&New..."
@@ -97,25 +97,24 @@ msgstr "&Slet..."
 
 #. Translators: The label of a button to set a feed as default.
 msgid "S&et default"
-msgstr "Sæt som st&andard"
+msgstr "Indstil som st&andard"
 
 #. Translators: The label of a button to open a folder containing a backup of feeds.
 msgid "Open &folder containing a backup of feeds"
-msgstr "Åbn &mappen med sikkerhedskopierne for dine nyhedskanaler"
+msgstr "Åbn &mappen med sikkerhedskopierne for dine feeds"
 
 #. Translators: The label of a field to enter an address for a new feed.
 msgid "Address of a new feed:"
-msgstr "Adresse på ny nyhedskanal:"
+msgstr "Adresse på nyt feed:"
 
 #. Translators: The title of a dialog to create a new feed.
 msgid "New feed"
-msgstr "Ny nyhedskanal"
+msgstr "Nyt feed"
 
 #. Translators: The confirmation prompt displayed when the user requests to delete a feed.
 msgid "Are you sure you want to delete this feed? This cannot be undone."
 msgstr ""
-"Er du sikker på, at du vil slette denne nyhedskanal? Dette kan ikke "
-"fortrydes."
+"Er du sikker på, at du vil slette dette feed? Dette kan ikke fortrydes."
 
 #. Translators: The label of a field to enter a new name for a feed.
 msgid "New name:"
@@ -123,7 +122,7 @@ msgstr "Nyt navn:"
 
 #. Translators: The title of a dialog to rename a feed.
 msgid "Rename feed"
-msgstr "Omdøb kanal"
+msgstr "Omdøb feed"
 
 #. Translators: The label of the articles list in the articles dialog.
 msgid "List of articles"
@@ -154,12 +153,11 @@ msgstr "Artikeloplysninger"
 
 #. Translators: The title of the Copy dialog.
 msgid "Copy feeds"
-msgstr "Kopier kanaler"
+msgstr "Kopier feeds"
 
 #. Translators: An informational message displayed in the Copy dialog.
 msgid "Select a folder to save a backup of your current feeds"
-msgstr ""
-"Vælg en mappe for at gemme en sikkerhedskopi af dine aktuelle nyhedskanaler"
+msgstr "Vælg en mappe for at gemme en sikkerhedskopi af dine aktuelle feeds"
 
 #. Translators: The label of a grouping containing controls to select the destination directory in the Copy dialog.
 msgid "directory for backup:"
@@ -171,11 +169,11 @@ msgstr "Vælg mappe til kopiering"
 
 #. Translators: The title of the Restore dialog.
 msgid "Restore feeds"
-msgstr "Gendan kanaler"
+msgstr "Gendan feeds"
 
 #. Translators: An informational message displayed in the Restore dialog.
 msgid "Select a folder to restore a backup of your previous copied feeds"
-msgstr "Vælg en mappe for at gendanne dine tidligere kopierede nyhedskanaler"
+msgstr "Vælg en mappe for at gendanne dine tidligere kopierede feeds"
 
 #. Translators: The label of a grouping containing controls to select the destination directory in the Restore dialog.
 msgid "directory containing backup:"
@@ -195,24 +193,24 @@ msgstr "Kan ikke finde link til artikel."
 
 #. Translators: the name of a submenu.
 msgid "&Read Feeds"
-msgstr "&Læs nyhedskanaler"
+msgstr "&Læs Feeds"
 
 #. Translators: the name of a menu item.
 msgid "&Feeds..."
-msgstr "&Nyhedskanaler..."
+msgstr "&Feeds..."
 
 #. Translators: the name of a menu item.
 msgid "&Copy feeds folder..."
-msgstr "Mappe til &kopiering af nyhedskanaler..."
+msgstr "Mappe til &kopiering af feeds..."
 
 #. Translators: the name of a menu item.
 msgid "R&estore feeds..."
-msgstr "G&endan nyhedskanaler..."
+msgstr "G&endan feeds..."
 
 #. Translators: message presented in input mode.
 #, python-format
 msgid "Activates the Feeds dialog of %s."
-msgstr "Aktiverer dialogen til nyhedskanaler i %s."
+msgstr "Aktiverer dialogen til feeds i %s."
 
 #. Translators: message presented in input mode.
 #, python-format
@@ -227,8 +225,7 @@ msgstr "Aktiverer dialogen til gendannelse i %s."
 #. Translators: message presented in input mode.
 msgid "Refreshes the current feed and announces the most recent article title."
 msgstr ""
-"Opdaterer den aktuelle nyhedskanal og annoncerer titlen på den seneste "
-"artikel."
+"Opdaterer det aktuelle feed og annoncerer titlen på den seneste artikel."
 
 #. Translators: message presented in input mode.
 msgid ""
@@ -254,7 +251,7 @@ msgstr "Annoncerer titlen på den forrige artikel."
 #. Translators: message presented in input mode.
 msgid "Announces article link, when pressed two times, opens related web page."
 msgstr ""
-"Annoncerer link til artikel. Tryk to gange for at åbne den tilhørende "
+"Annoncerer link til artikel. Tryk to gange for at åbne den tilsvarende "
 "webside."
 
 #. Translators: message presented in input mode.
@@ -264,7 +261,7 @@ msgstr "Kopierer titel og link fra den aktuelle artikel til udklipsholderen."
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
 msgid "Read Feeds"
-msgstr "Læs nyhedskanaler"
+msgstr "Læs Feeds"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager

@@ -1,7 +1,7 @@
 # Четене на емисии (Read Feeds) #
 
 * Автори: Noelia Ruiz Martínez, Mesar Hameed
-* Съвместимост с NVDA: от 2018.3 до 2019.1
+* NVDA compatibility: 2018.3 to 2019.2
 * Изтегляне на [стабилна версия][1]
 * Изтегляне на [тестова версия][2]
 
@@ -99,6 +99,16 @@ RSS или personalFeeds във вашата папка с потребител�
   възстанови папката "personalFeeds".
 * Заглавието на диалога за списъка със статиите показва името на избраната
   емисия и номера на наличните статии.
+
+## Changes for 8.0 ##
+
+* When the add-on is updated, feeds saved in the previous version of the
+  add-on will be automatically copied to the new version, unless you prefer
+  to import feeds saved in the main configuration folder of NVDA.
+* When using the dialog to copy feeds, if the chosen folder is not named
+  personalFeeds, a subfolder with this name will be created to prevent the
+  deletion of directories containing important data, such as Documents or
+  Downloads.
 
 ## Changes for 7.0 ##
 

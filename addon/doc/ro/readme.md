@@ -1,7 +1,7 @@
 # Read Feeds #
 
 * Autori: Noelia Ruiz Martínez, Mesar Hameed
-* Compatibilitate NVDA: 2018.3 - 2019.1
+* NVDA compatibility: 2018.3 to 2019.2
 * Descărcați [versiunea stabilă][1]
 * Descărcați [versiunea în dezvoltare][2]
 
@@ -98,6 +98,16 @@ ce conține URL-urile fluxurilor.
   copii de siguranță sau restaurarea dosarului personalFeeds.
 * Dialogul titlului listei articolelor afișează numele fluxului selectat și
   numărul elementelor disponibile.
+
+## Changes for 8.0 ##
+
+* When the add-on is updated, feeds saved in the previous version of the
+  add-on will be automatically copied to the new version, unless you prefer
+  to import feeds saved in the main configuration folder of NVDA.
+* When using the dialog to copy feeds, if the chosen folder is not named
+  personalFeeds, a subfolder with this name will be created to prevent the
+  deletion of directories containing important data, such as Documents or
+  Downloads.
 
 ## Changes for 7.0 ##
 

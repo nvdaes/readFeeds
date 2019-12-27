@@ -1,7 +1,7 @@
 # Read Feeds #
 
 * Autores: Noelia Ruiz Martínez, Mesar Hameed
-* Compatibilidad con NVDA: de 2018.3 a 2019.1
+* Compatibilidad con NVDA: de 2018.3 a 2019.2
 * Descargar [versión estable][1]
 * Descargar [versión de desarrollo][2]
 
@@ -99,6 +99,17 @@ feeds.
   la carpeta personalFeeds.
 * El título del diálogo de lista de artículos muestra el nombre del feed
   seleccionado y el número de elementos disponibles.
+
+## Cambios para 8.0 ##
+
+* Cuando se actualice el complemento, las fuentes guardadas en la versión
+  anterior del complemento se copiarán automáticamente a la nueva versión, a
+  menos que prefieras importar fuentes guardadas en la carpeta de
+  configuración principal de NVDA.
+* Al usar el diálogo para copiar fuentes, si la carpeta elegida no se llama
+  personalFeeds, se creará una subcarpeta con este nombre para evitar la
+  eliminación de directorios que contengan datos importantes, como
+  Documentos o Descargas.
 
 ## Cambios para 7.0 ##
 

@@ -1,7 +1,7 @@
 # Read Feeds #
 
 * Autorzy: Noelia Ruiz Martínez, Mesar Hameed
-* NVDA compatibility: 2018.3 to 2019.1
+* NVDA compatibility: 2018.3 to 2019.2
 * Pobierz [Wersja stabilna][1]
 * Pobierz [Wersja rozwojowa][2]
 
@@ -32,12 +32,11 @@ Otwiera dialog z następującymi kontrolkami:
 * Filtruj Według: Pole edycyjne do wyszukiwania poprzednio zapisanych
   kanałów osobistych.
 * Lista zachowanych kanałów osobistych.
-* List of articles: Opens a dialog which presents the articles list from
-  your current feed. Select the article you want to read and press Enter or
-  Open web page of selected article button to open the corresponding page in
-  your browser. Press About article button to open a dialog showing title
-  and link of the selected article; from this dialog, you'll be able to copy
-  this info to the clipboard.
+* Lista artykułow: Otwiera dialog wyświetlający spis artykułów z teraz
+  wyświetlanego kanału osobistego. Oznacz artykuł, którego chcesz
+  przeczytać, a potem naciśnij przycisk OK, aby otworzyć odnoszącą się
+  stronę w przeglądarce. Z tego oka dialogowego, będzie można skopiować tę
+  informację do schowka.
 * Otwórz kanał: otwiera wybrany kanał w domyślnej aplikacji.
 * Nowy: Otwiera okno dialogowe zawierające pole edycyjne, w którym można
   wpisać adres nowego kanału osobistego. Jeżeli adres jest prawidłowy a
@@ -98,7 +97,17 @@ katalog zawierający kanały osobiste.
 * Dialog Spisu nagłówków artykułów Wyświetla nazwę oznaczonego kanału
   osobistego i ilość dostępnych artykułów.
 
-## Changes for 7.0 ##
+## Zmiany w wersji 8.0 ##
+
+* When the add-on is updated, feeds saved in the previous version of the
+  add-on will be automatically copied to the new version, unless you prefer
+  to import feeds saved in the main configuration folder of NVDA.
+* When using the dialog to copy feeds, if the chosen folder is not named
+  personalFeeds, a subfolder with this name will be created to prevent the
+  deletion of directories containing important data, such as Documents or
+  Downloads.
+
+## Zmiany w wersji 7.0 ##
 
 * The Feeds dialog includes a button to open a folder which may contain a
   backup of feeds.
@@ -109,18 +118,18 @@ katalog zawierający kanały osobiste.
   in the feed, NVDA will raise an error, so that the feeds dialog can be
   used without restarting NVDA.
 
-## Changes for 6.0 ##
+## Zmiany w wersji 6.0 ##
 
 * When the default feed has been updated and it stops working due to server
   issues, the previous articles aren't deleted and can be read with the
   corresponding keystrokes.
 * Fix regression: The default feed can be updated twice again.
 
-## Changes for 5.0 ##
+## zmiany w wersji 5.0 ##
 
-* The articles list dialog has been enhanced.
-* Compatible with NVDA 2018.3 or later (required).
-* If needed, you can download the [last version compatible with NVDA
+* Ulepszone okno dialogowe artykułów.
+* Zgodny z NVDA 2018.3 lub nowszą (wymagane).
+* Jeżeli to potrzebne, można pobrać [ostatnią wersję zgodną z NVDA
   2017.3][3].
 
 ## Zmiany w wersji 4.0 ##

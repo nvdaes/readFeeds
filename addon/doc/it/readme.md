@@ -1,7 +1,7 @@
 # Read Feeds #
 
 * Autori: Noelia Ruiz Martínez, Mesar Hameed
-* Compatibilità con NVDA: dalla 2018.3 alla  2019.1
+* NVDA compatibility: 2018.3 to 2019.2
 * Scarica la [versione stabile][1]
 * Scarica la [versione in sviluppo][2]
 
@@ -95,6 +95,16 @@ l'URL dei feed.
   ripristinare o aggiornare la cartella personalFeeds.
 * Nel titolo della finestra elenco articoli viene indicato il feed
   selezionato ed il numero di elementi disponibili.
+
+## Changes for 8.0 ##
+
+* When the add-on is updated, feeds saved in the previous version of the
+  add-on will be automatically copied to the new version, unless you prefer
+  to import feeds saved in the main configuration folder of NVDA.
+* When using the dialog to copy feeds, if the chosen folder is not named
+  personalFeeds, a subfolder with this name will be created to prevent the
+  deletion of directories containing important data, such as Documents or
+  Downloads.
 
 ## Changes for 7.0 ##
 

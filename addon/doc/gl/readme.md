@@ -1,7 +1,7 @@
 # Read Feeds #
 
 * Autores: Noelia Ruiz Martínez, Mesar Hameed
-* Compatibilidade con NVDA: da 2018.3 á 2019.1
+* Compatibilidade con NVDA: da 2018.3 á 2019.2
 * Descargar [versión estable][1]
 * Descargar [versión de desenvolvemento][2]
 
@@ -97,6 +97,17 @@ feeds.
   restaurar o cartafol personalFeeds.
 * O título do diálogo da listaxe de artigos amopsa o nome do feed
   selecionado e o número de elementos dispoñibles.
+
+## Cambios para 8.0 ##
+
+* Cando o complemento se actualice, os feeds gardados na versión anterior do
+  complemento copiaranse automaticamente á nova versión, a menos que
+  prefiras importar os feeds gardados no cartafol principal de configuración
+  de NVDA.
+* Ao utilizar o diálogo para copiar feeds, se o cartafol escollido non se
+  chama personalFeeds, crearase un subcartafol con ese nome para previr a
+  eliminación de directorios que conteñan datos importantes, como Documentos
+  ou Descargas.
 
 ## Cambios para 7.0 ##
 

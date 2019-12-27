@@ -1,7 +1,7 @@
 # Lue syötteet #
 
 * Tekijät: Noelia Ruiz Martínez, Mesar Hameed
-* NVDA-yhteensopivuus: 2018.3-2019.1
+* Yhteensopivuus: NVDA 2018.3-2019.2
 * Lataa [vakaa versio][1]
 * Lataa [kehitysversio][2]
 
@@ -94,6 +94,16 @@ vain syötteiden URL-osoitteita sisältävän kansion.
   varmuuskopiointi tai palautus ei ollut mahdollista.
 * Valitun syötteen nimi ja saatavilla olevien artikkeleiden määrä näytetään
   Artikkeliluettelo-valintaikkunan otsikossa.
+
+## Muutokset versiossa 8.0 ##
+
+* Kun lisäosa päivitetään, aiemmassa versiossa tallennetut syötteet
+  kopioidaan  automaattisesti uuteen versioon, paitsi jos haluat tuoda ne
+  NVDA-asetusten pääkansiosta.
+* Jos valitulle kansiolle ei ole Syötteidenkopiointivalintaikkunassa annettu
+  nimeksi personalFeeds, sen niminen alikansio luodaan, jotta estetään
+  tärkeää dataa sisältävien hakemistojen, kuten Tiedostot tai Ladatut
+  tiedostot, poistaminen.
 
 ## Muutokset versiossa 7.0 ##
 
