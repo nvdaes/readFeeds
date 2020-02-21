@@ -1,96 +1,92 @@
 # RSS Čítačka #
 
 * Autori: Noelia Ruiz Martínez, Mesar Hameed
-* NVDA compatibility: 2018.3 to 2019.2
-* Stiahnuť [stabilná verzia][1]
+* Funguje s NVDA od verzie 2019.3.
+* Stiahnuť [stabilnú verzia][1]
 * Stiahnúť [Vývojovú verziu ][2]
 
-Tento doplnok poskytuje jednoduchý spôsob čítania kanálov vo formátoch Atom
-alebo RSS pomocou NVDA. Kanály sa neobnovia automaticky. Nižšie, keď
-spomíname informačné kanály, máme na mysli informačné kanály RSS aj ATOM.
+Poskytuje jednoduchý spôsob čítania kanálov vo formátoch Atom alebo RSS
+pomocou NVDA. Kanály sa neobnovia automaticky. Nižšie, keď spomíname
+informačné kanály, máme na mysli informačné kanály RSS aj ATOM.
 
 ## Inštalácia alebo aktualizácia: ##
 
-Ak ste použili predchádzajúcu verziu tohto doplnku a vo vašom osobnom
-konfiguračnom priečinku NVDA sa nachádza priečinok RSS alebo personalFeeds,
-pri inštalácii aktuálnej verzie sa zobrazí dialógové okno s otázkou, či
-chcete aktualizovať alebo nainštalovať. Vyberte aktualizáciu, aby ste
-zachovali uložené kanály a pokračovali v ich používaní v novej
-nainštalovanej verzii readFeeds.
+Ak ste používali predchádzajúcu verziu tohto doplnku a v priečinku s
+nastaveniami NVDA sa nachádza priečinok RSS alebo personalFeeds, pri
+inštalácii aktuálnej verzie sa zobrazí dialógové okno s otázkou, či chcete
+aktualizovať alebo nainštalovať. Vyberte aktualizáciu, aby ste zachovali
+uložené kanály a pokračovali v ich používaní v novej nainštalovanej verzii
+doplnku.
 
 ## Príkazy: ##
 
 ### Menu RSS čítačky ###
 
-Menu RSS čítačky je dostupné z menu NVDA (nvda+n) a obsahuje tieto možnosti:
+Menu RSS čítačky je dostupné z menu NVDA > nástroje a obsahuje tieto
+možnosti:
 
 #### Informačné kanály... ####
 
-Otvorí dialógové okno s nasledujúcimi ovládacími prvkami:
+Otvorí dialógové okno s nasledujúcimi možnosťami:
 
-* Filtrovať podľa: Editačné pole na vyhľadávanie predtým uložených kanálov.
+* Filter: Editačné pole na vyhľadávanie uložených kanálov.
 * Zoznam uložených informačných kanálov.
-* Zoznam článkov: Otvorí sa dialógové okno, ktoré predstavuje zoznam článkov
-  z vášho aktuálneho informačného kanála. Vyberte článok, ktorý si chcete
-  prečítať, a stlačte kláves Enter alebo Otvoriť webovú stránku tlačidla
-  vybraného článku, aby ste otvorili príslušnú stránku v
-  prehliadači. Stlačením tlačidla Informácie o článku otvoríte dialógové
+* Zoznam článkov: Otvorí zoznam článkov z vášho aktuálneho informačného
+  kanála. Vyberte článok, ktorý si chcete prečítať, a stlačte kláves Enter
+  alebo tlačidlo Otvoriť webovú stránku, aby ste otvorili príslušnú stránku
+  v prehliadači. Stlačením tlačidla Informácie o článku otvoríte dialógové
   okno s názvom a odkazom na vybraný článok; z tohto dialógového okna budete
   môcť tieto informácie skopírovať do schránky.
 * Otvoriť informačný kanál: Otvorí vybraný informačný kanál v predvolenej
   aplikácii.
-* Nové: otvorí dialógové okno s editovaním zadajte adresu nového
-  informačného kanála. Ak je adresa platná a informačný kanál je možné
-  uložiť, v spodnej časti zoznamu informačných kanálov sa zobrazí jeho názov
-  na základe názvu informačného kanála.
-* Premenovať: Otvorí dialógové okno s editovaným na premenovanie vybraného
-  informačného kanála.
-* Odstrániť: Otvorí sa dialógové okno, ktoré po potvrdení odstráni vybraný
-  informačný kanál.
+* Nový: otvorí dialógové okno, kde môžete vložiť adresu informačného
+  kanála. Ak je adresa platná a informačný kanál je možné uložiť, Kanál je
+  pridaný na koniec zoznamu kanálov.
+* Premenovať: Otvorí dialógové okno v ktorom môžete zadať nový názov kanála.
+* Odstrániť: Umožní odstrániť vybratý informačný kanál.
 * Nastaviť predvolené: Nastaví vybraný informačný kanál ako predvolený, aby
-  k jeho článkom bolo možné pristupovať pomocou gesta NVDA.
-* Otvoriť priečinok obsahujúci zálohu zdrojov: Otvorí priečinok, ktorý môže
+  k jeho článkom bolo možné pristupovať pomocou klávesových skratiek.
+* Otvoriť priečinok so zálohou zdrojov: Otvorí priečinok, ktorý môže
   obsahovať zálohu zdrojov. To môže byť užitočné pri skúmaní a odstraňovaní
   informačných kanálov, ktoré by sa po aktualizácii doplnku nemali
   importovať.
-* Zatvoriť: Zatvorí dialógové okno informačné kanály
+* Zatvoriť: Zatvorí dialógové okno informačné kanály.
 
 ##### Poznámky #####
 
-* Ak sa vytvorí informačný kanál s názvom tempFeed, premenujte ho, pretože v
-  prípade potreby je možné tento súbor nahradiť a vytvoriť informačný kanál,
-  ktorého názov už existuje.
+* Ak sa vytvorí informačný kanál s názvom tempFeed, premenujte ho a prideľte
+  mu zmysluplný názov. V opačnom prípade môže byť tento kanál prepísaný pri
+  pridaní nasledujúceho kanála.
 * Zdroj nastavený ako predvolený nie je možné odstrániť. Informačný kanál
   AddressFile sa použije ako predvolený pri resetovaní konfigurácie, takže
   ho nemožno odstrániť.
 
-Skopýrovať priečinok informačného kanála...
+####Skopírovať informačné kanály...####
 
-Otvorí dialógové okno pre výber priečinka, do ktorého si môžete uložiť
-priečinok personalFeeds vašich informačných kanálov. V predvolenom nastavení
-je vybratý priečinok konfiguračným adresárom NVDA, ktorý vytvorí adresár
-personalFeeds.
+Otvorí dialógové okno pre výber priečinka, do ktorého si môžete uložiť vaše
+informačné kanály. V predvolenom nastavení je vybratý priečinok s
+nastaveniami NVDA. Kanály sa vždy ukladajú do adresára personalfeeds.
 
 #### Obnoviť informačné kanály... ####
 
-Otvorí dialógové okno pre výber priečinka, ktoré nahradí vaše informačné
-kanály v priečinku personalFeeds. Nezabudnite načítať priečinok obsahujúci
-adresy URL informačných kanálov.
+Umožní nahradiť aktuálne informačné kanály súbormi so zálohy. Ustite sa, že
+ste zvolili priečinok s RSS adresami.
 
 ### Klávesové skratky: ###
 
-* Ctrl+Shift+NVDA+Medzera: Oznamuje URL aktuálneho článku. Stlačené dva-krát
-  otvorí webovú stránku.
-* Ctrl+Shift+NVDA+8: Obnoví vybraný informačný kanál a oznámi jeho najnovšiu
-  aktualizáciu.
+* Ctrl+Shift+NVDA+Medzera: Oznamuje URL aktuálneho článku. Stlačené dvakrát
+  rýchlo za sebou otvorí webovú stránku.
+* Ctrl+Shift+NVDA+8: Obnoví vybraný informačný kanál a oznámi názov
+  posledného článku.
 * Ctrl+Shift+NVDA+I: Oznamuje aktuálny názov informačného kanála a
-  odkaz. Stlačené dva-krát sa skopíruje názov a odkaz do schránky.
-* Ctrl+Shift+NVDA+U: Oznamuje predchádzajúci názov informačného kanála.
-* Ctrl+Shift+NVDA+O: Oznamuje ďalší názov informačného kanála.
+  odkaz. Stlačené dvakrát rýchlo za sebou skopíruje názov a odkaz do
+  schránky.
+* Ctrl+Shift+NVDA+U: oznámi predchádzajúci článok.
+* Ctrl+Shift+NVDA+O: Oznámi nasledujúci článok.
 
-## Oznámenia: ##
+## Upozornenia: ##
 
-* Po skopírovaní názvu alebo adresy URL.
+* Po skopírovaní názvu alebo adresy URL do schránky.
 * Ak sa nedá pripojiť/obnoviť informačný kanál alebo webová adresa
   nezodpovedá platnému informačnému kanálu.
 * NVDA zobrazí chybové hlásenie, ak nebolo možné zálohovať alebo obnoviť
@@ -98,39 +94,39 @@ adresy URL informačných kanálov.
 * Názov dialógového okna so zoznamom článkov obsahuje vybratý názov
   informačného kanála a počet dostupných položiek.
 
-## Changes for 8.0 ##
+## Zmeny vo verzii 9.0 ##
 
-* When the add-on is updated, feeds saved in the previous version of the
-  add-on will be automatically copied to the new version, unless you prefer
-  to import feeds saved in the main configuration folder of NVDA.
-* When using the dialog to copy feeds, if the chosen folder is not named
-  personalFeeds, a subfolder with this name will be created to prevent the
-  deletion of directories containing important data, such as Documents or
-  Downloads.
+* Vyžaduje NVDA od verzie 2019.3.
+
+## Zmeny vo verzii 8.0 ##
+
+* Po inštalácii novej verzie doplnku sa automaticky importujú uložené
+  kanály, v prípade, že nepreferujete ukladanie do hlavného adresára s
+  nastaveniami NVDA.
+* Ak kopírujete kanály a nový priečinok sa nevolá personalFeeds, bude takýto
+  priečinok vytvorený a do neho budú importované nastavenia, aby nedošlo k
+  zmazaniu dôležitých adresárov.
 
 ## Zmeny vo verzii 7.0 ##
 
-* Dialógové okno Kanály obsahuje tlačidlo na otvorenie priečinka, ktorý môže
-  obsahovať zálohu informačných kanálov.
-* Ak sa na filtrovanie kanálov používa editovacie pole, ak sa nenájdu žiadne
-  výsledky, zoznam informačných kanálov a ďalších ovládacích prvkov sa
-  deaktivuje, takže NVDA v prázdnom zozname nehlási „neznámy“.
+* Pridané tlačidlo na otvorenie adresára so zálohou.
+* Ak ste zadali reťazec na filtrovanie a žiadna položka nezodpovedá filtru,
+  ostatné položky v dialógu sa skryjú.
 * Ak nie je možné zobraziť zoznam článkov, napríklad z dôvodu chýb v
-  informačnom kanáli, NVDA vyvolá chybu, takže dialógové okno informačných
+  informačnom kanáli, NVDA zobrazí chybu, takže dialógové okno informačných
   kanálov sa dá použiť bez reštartovania NVDA.
 
 ## Zmeny vo verzii 6.0 ##
 
-* Po aktualizácii predvoleného informačného kanála a jeho zastavení z dôvodu
-  problémov so serverom sa predchádzajúce články neodstránia a dajú sa
-  prečítať pomocou zodpovedajúcich stlačení klávesov.
-* Opraviť regresiu: Predvolený informačný kanál možno znova aktualizovať
-  dvakrát.
+* Po aktualizácii predvoleného informačného kanála a jeho nefunkčnosti z
+  dôvodu problémov so serverom sa predchádzajúce články neodstránia a dajú
+  sa prečítať pomocou klávesových skratiek.
+* Predvolený informačný kanál možno znova aktualizovať dvakrát.
 
 ## Zmeny vo verzii 5.0 ##
 
-* Dialógové okno so zoznamom článkov bolo vylepšené.
-* Kompatibilné s NVDA 2018.3 alebo novším (povinné).
+* Vylepšené okno so zoznamom článkov.
+* Vyžaduje sa NVDA od verzie 2018.3.
 * V prípade potreby si môžete stiahnuť [poslednú verziu kompatibilnú s NVDA
   2017.3] [3].
 
@@ -141,12 +137,11 @@ adresy URL informačných kanálov.
 
 ## Zmeny vo verzii 3.0 ##
 
-* Dialógové okná na správu súborov informačného kanála boli odstránené. Ich
-  funkčnosť je teraz zahrnutá v dialógovom okne Informačné kanály.
-* Vizuálna prezentácia dialógov bola vylepšená, pričom sa zachovala podoba
-  dialógov zobrazených v NVDA.
-* Predvolený informačný kanál je uložený v konfigurácii NVDA. Preto je možné
-  v konfiguračných profiloch nastaviť rôzne predvolené informačné kanály.
+* Dialógové okná na správu súborov informačného kanála boli
+  odstránené. Funkcie sú zahrnuté v dialógovom okne Informačné kanály.
+* Vylepšená vizuálna prezentácia dialógov.
+* Predvolený informačný kanál je uložený v nastaveniach NVDA. Preto je možné
+  mať v rôznych profiloch rôzne predvolené informačné kanály.
 * Vyžaduje NVDA 2016.4.
 
 

@@ -1,7 +1,7 @@
 # Leitor de feeds #
 
 * Autores: Noelia Ruiz Martínez, Mesar Hameed
-* NVDA compatibility: 2018.3 to 2019.2
+* Compatibilidade com NVDA: 2019.3 ou posterior.
 * Baixe a [versão estável][1]
 * Baixe a [versão em desenvolvimento][2]
 
@@ -47,9 +47,9 @@ Abre um diálogo com os seguintes controles:
 * Excluir: Abre um diálogo para excluir o feed selecionado após confirmação.
 * Definir padrão: define o feed selecionado como padrão, para que seus
   artigos possam ser acessados com os gestos — comandos — do NVDA.
-* Open folder containing a backup of feeds: Opens a folder which may contain
-  a backup of feeds. This can be useful to explore and delete feeds which
-  shouldn't be imported when the add-on is updated.
+* Abrir pasta que contém cópia dos feeds: Abre uma pasta que pode conter uma
+  cópia dos feeds. Isso pode ser útil para explorar e apagar feeds que não
+  devem ser importados quando o complemento é atualizado.
 * Fechar: Fecha o diálogo feeds.
 
 ##### Notas #####
@@ -94,26 +94,31 @@ URLs de feeds.
 * O título do diálogo Lista de artigos mostra o nome do feed selecionado e o
   número de itens disponíveis.
 
-## Changes for 8.0 ##
+## Mudanças na 9.0 ##
 
-* When the add-on is updated, feeds saved in the previous version of the
-  add-on will be automatically copied to the new version, unless you prefer
-  to import feeds saved in the main configuration folder of NVDA.
-* When using the dialog to copy feeds, if the chosen folder is not named
-  personalFeeds, a subfolder with this name will be created to prevent the
-  deletion of directories containing important data, such as Documents or
-  Downloads.
+* Requer NVDA 2019.3 ou posterior.
 
-## Changes for 7.0 ##
+## Mudanças na 8.0 ##
 
-* The Feeds dialog includes a button to open a folder which may contain a
-  backup of feeds.
-* When using the edit box to filter feeds, if no results are found, the list
-  of feeds and other controls are disabled, so that NVDA doesn't report
-  "unknown" in the empty list.
-* If the list of articles dialog can't be shown, for example due to errors
-  in the feed, NVDA will raise an error, so that the feeds dialog can be
-  used without restarting NVDA.
+* Quando o complemento for atualizado, feeds salvos da versão anterior do
+  complemento serão automaticamente copiados para a nova versão, a não ser
+  que você prefira importar os feeds salvos na pasta principal de
+  configurações do NVDA.
+* Ao usar o diálogo de copiar feeds, caso a pasta escolhida não seja nomeada
+  personalFeeds, será criada uma subpasta com esse nome para prevenir o
+  apagamento de diretórios que contenham dados importantes, tais como
+  Documentos ou Downloads.
+
+## Mudanças na 7.0 ##
+
+* O diálogo de feeds inclui um botão para abrir uma pasta que pode conter
+  uma cópia dos feeds.
+* Ao usar a caixa de edição para filtrar os feeds, se nenhum resultado for
+  encontrado, a lista de feeds e outros controles serão desabilitados, para
+  que o NVDA não anuncie "desconhecido" na lista vazia.
+* Se o diálogo de lista de Artigos não puder ser mostrado, por exemplo
+  devido a erros no feed, o NVDA disparará um erro, de modo que o diálogo de
+  feeds possa ser usado sem reiniciar o NVDA.
 
 ## Mudanças na 6.0 ##
 

@@ -1,7 +1,7 @@
 # Læs feeds #
 
 * Forfattere: Noelia Ruiz Martínez, Mesar Hameed
-* NVDA-kompatibilitet: 2018.3 til 2019.2
+* NVDA compatibility: 2019.3 or later
 * Download [stabil version][1]
 * download [udviklingsversion][2]
 
@@ -92,6 +92,10 @@ på feeds.
   sikkerhedskopiere eller gendanne mappen personalFeeds.
 * Titlen på dialogen der viser listen over artikler viser navnet på det
   aktuelle feed, samt antallet af artikler til rådighed.
+
+## Changes for 9.0 ##
+
+* Requires NVDA 2019.3 or later.
 
 ## Ændringer i 8.0 ##
 

@@ -1,7 +1,7 @@
 # Read Feeds #
 
 * Autores: Noelia Ruiz Martínez, Mesar Hameed
-* Compatibilidade con NVDA: da 2018.3 á 2019.2
+* Compatibilidade con NVDA: 2019.3 ou posterior
 * Descargar [versión estable][1]
 * Descargar [versión de desenvolvemento][2]
 
@@ -97,6 +97,10 @@ feeds.
   restaurar o cartafol personalFeeds.
 * O título do diálogo da listaxe de artigos amopsa o nome do feed
   selecionado e o número de elementos dispoñibles.
+
+## Cambios para 9.0 ##
+
+* Require NVDA 2019.3 ou posterior.
 
 ## Cambios para 8.0 ##
 

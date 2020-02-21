@@ -1,7 +1,7 @@
 # Read Feeds #
 
 * Auteurs : Noelia Ruiz Martínez, Mesar Hameed
-* NVDA compatibility: 2018.3 to 2019.2
+* NVDA compatibility: 2019.3 or later
 * Télécharger [version stable][1]
 * Télécharger [version de développement][2]
 
@@ -98,6 +98,10 @@ contenant des URL de flux.
   sauvegarder ou de restaurer le dossier personalFeeds.
 * La boîte de dialogue affiche Le titre de la Liste de l'article le nom de
   flux sélectionné et le nombre d'éléments disponibles.
+
+## Changes for 9.0 ##
+
+* Requires NVDA 2019.3 or later.
 
 ## Changes for 8.0 ##
 

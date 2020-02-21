@@ -1,7 +1,7 @@
 # Read Feeds #
 
 * Авторы: Noelia Ruiz Martínez, Mesar Hameed
-* NVDA compatibility: 2018.3 to 2019.2
+* NVDA compatibility: 2019.3 or later
 * Загрузить [стабильную версию][1]
 * Загрузить [разрабатываемую версию][2]
 
@@ -97,6 +97,10 @@ URL-адреса новостных лент.
   восстановить резервную копию папки personalFeeds.
 * Диалог с названием списка статей отображает имя выбранной новостной ленты
   с количеством доступных элементов.
+
+## Changes for 9.0 ##
+
+* Requires NVDA 2019.3 or later.
 
 ## Changes for 8.0 ##
 

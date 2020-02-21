@@ -1,7 +1,7 @@
 # Čitaj feedove #
 
 * Autori: Noelia Ruiz Martínez, Mesar Hameed
-* NVDA kompatibilnost: 2018.3 do 2019.2
+* NVDA compatibility: 2019.3 or later
 * Preuzmi [stabilnu verziju][1]
 * Preuzmi [razvojnu verziju][2]
 
@@ -96,6 +96,10 @@ adrese feedova.
   kopiju ili vratiti „personalFeeds” mapu osobnih feedova.
 * Naslov dijaloškog okvira popisa članaka prikazuje odabrani naziv feeda i
   broj dostupnih stavki.
+
+## Changes for 9.0 ##
+
+* Requires NVDA 2019.3 or later.
 
 ## Promjene u verziji 8.0 ##
 

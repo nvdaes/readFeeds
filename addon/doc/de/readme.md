@@ -1,7 +1,7 @@
 # Feeds lesen #
 
 * Authors: Noelia Ruiz Martínez, Mesar Hameed
-* NVDA-Kompatibilität: 2018.3 bis 2019.2
+* NVDA compatibility: 2019.3 or later
 * [Stabile Version herunterladen][1]
 * [Entwicklerversion herunterladen][2]
 
@@ -100,6 +100,10 @@ wählen, der URLs von RSS Feeds enthält.
   Wiederherstellung des Ordners personalFeeds nicht möglich war.
 * Im Titel des Dialogs für die Artikellisten werden der Name des
   ausgewählten Feeds und die Anzahl der verfügbaren Artikel angezeigt.
+
+## Changes for 9.0 ##
+
+* Requires NVDA 2019.3 or later.
 
 ## Änderungen in 8.0 ##
 

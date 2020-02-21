@@ -1,7 +1,7 @@
 # Read Feeds #
 
 * Autorzy: Noelia Ruiz Martínez, Mesar Hameed
-* NVDA compatibility: 2018.3 to 2019.2
+* NVDA compatibility: 2019.3 or later
 * Pobierz [Wersja stabilna][1]
 * Pobierz [Wersja rozwojowa][2]
 
@@ -96,6 +96,10 @@ katalog zawierający kanały osobiste.
   kopii zapasowej, lub przywracanie katalogu personalFeeds.
 * Dialog Spisu nagłówków artykułów Wyświetla nazwę oznaczonego kanału
   osobistego i ilość dostępnych artykułów.
+
+## Changes for 9.0 ##
+
+* Requires NVDA 2019.3 or later.
 
 ## Zmiany w wersji 8.0 ##
 

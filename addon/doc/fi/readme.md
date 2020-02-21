@@ -1,7 +1,7 @@
 # Lue syötteet #
 
 * Tekijät: Noelia Ruiz Martínez, Mesar Hameed
-* Yhteensopivuus: NVDA 2018.3-2019.2
+* Yhteensopivuus: NVDA 2019.3 tai uudempi
 * Lataa [vakaa versio][1]
 * Lataa [kehitysversio][2]
 
@@ -94,6 +94,10 @@ vain syötteiden URL-osoitteita sisältävän kansion.
   varmuuskopiointi tai palautus ei ollut mahdollista.
 * Valitun syötteen nimi ja saatavilla olevien artikkeleiden määrä näytetään
   Artikkeliluettelo-valintaikkunan otsikossa.
+
+## Muutokset versiossa 9.0 ##
+
+* Edellyttää NVDA 2019.3:a tai uudempaa.
 
 ## Muutokset versiossa 8.0 ##
 

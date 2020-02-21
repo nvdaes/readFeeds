@@ -1,7 +1,7 @@
 # Read Feeds #
 
 * Autores: Noelia Ruiz Martínez, Mesar Hameed
-* Compatibilidad con NVDA: de 2018.3 a 2019.2
+* Compatibilidad con NVDA: 2019.3 o posterior
 * Descargar [versión estable][1]
 * Descargar [versión de desarrollo][2]
 
@@ -99,6 +99,10 @@ feeds.
   la carpeta personalFeeds.
 * El título del diálogo de lista de artículos muestra el nombre del feed
   seleccionado y el número de elementos disponibles.
+
+## Cambios para 9.0 ##
+
+* Se requiere NVDA 2019.3 o posterior.
 
 ## Cambios para 8.0 ##
 

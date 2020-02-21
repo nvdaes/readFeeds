@@ -1,7 +1,7 @@
 # Leitor de RSS #
 
 * Autores: Noelia Ruiz Martínez, Mesar Hameed
-* NVDA compatibility: 2018.3 to 2019.2
+* NVDA compatibility: 2019.3 or later
 * Baixar [versão estável][1]
 * Baixar [versão de desenvolvimento][2]
 
@@ -96,6 +96,10 @@ URLs de feeds.
   restaurar a pasta pessoalFeeds.
 * O título da caixa de diálogo da lista de artigos mostra o nome do feed
   selecionado e o número de itens disponíveis.
+
+## Changes for 9.0 ##
+
+* Requires NVDA 2019.3 or later.
 
 ## Changes for 8.0 ##
 

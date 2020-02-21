@@ -256,7 +256,7 @@ msgstr "Liest die vorherige Überschrift des Artikels vor."
 #. Translators: message presented in input mode.
 msgid "Announces article link, when pressed two times, opens related web page."
 msgstr ""
-"Bei zweimaligem Drücken wird die Überschrift des Artikels vorgelesen und die "
+"Bei zweimal Drücken wird die Überschrift des Artikels vorgelesen und die "
 "dazugehörige Webseite aufgerufen."
 
 #. Translators: message presented in input mode.

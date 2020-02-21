@@ -1,7 +1,7 @@
 # Read Feeds #
 
 * Autori: Noelia Ruiz Martínez, Mesar Hameed
-* NVDA compatibility: 2018.3 to 2019.2
+* NVDA compatibility: 2019.3 or later
 * Descărcați [versiunea stabilă][1]
 * Descărcați [versiunea în dezvoltare][2]
 
@@ -98,6 +98,10 @@ ce conține URL-urile fluxurilor.
   copii de siguranță sau restaurarea dosarului personalFeeds.
 * Dialogul titlului listei articolelor afișează numele fluxului selectat și
   numărul elementelor disponibile.
+
+## Changes for 9.0 ##
+
+* Requires NVDA 2019.3 or later.
 
 ## Changes for 8.0 ##
 
