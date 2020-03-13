@@ -1,7 +1,7 @@
-# Čitaj feedove #
+# Čitaj feedove (Read Feeds) #
 
 * Autori: Noelia Ruiz Martínez, Mesar Hameed
-* NVDA compatibility: 2019.3 or later
+* NVDA kompatibilnost: 2019.3 i novija
 * Preuzmi [stabilnu verziju][1]
 * Preuzmi [razvojnu verziju][2]
 
@@ -77,15 +77,15 @@ adrese feedova.
 
 ### Tipkovnički prečaci: ###
 
-* Ctrl+Shift+NVDA+Razmaknica: Najavljuje adresu trenutačnog
+* Kontrol+šift+NVDA+razmaknica: Najavljuje adresu trenutačnog
   članka. Dvostrukim pritiskom otvorit će se web stranica.
-* Ctrl+Shift+NVDA+8: Aktualizira odabrani feed i najavljuje njegov najnoviji
-  naslov.
-* Ctrl+Shift+NVDA+I: Najavljuje naslov trenutačnog feeda i
+* Kontrol+šift+NVDA+8: Aktualizira odabrani feed i najavljuje njegov
+  najnoviji naslov.
+* Kontrol+šift+NVDA+I: Najavljuje naslov trenutačnog feeda i
   poveznicu. Dvostrukim pritiskom kopirat će se naslov i poveznica u
   međuspremnik.
-* Ctrl+Shift+NVDA+U: Najavljuje naslov prethodnog feeda.
-* Ctrl+Shift+NVDA+O: Najavljuje naslov sljedećeg feeda.
+* Kontrol+šift+NVDA+U: Najavljuje naslov prethodnog feeda.
+* Kontrol+šift+NVDA+O: Najavljuje naslov sljedećeg feeda.
 
 ## Obavještenja: ##
 
@@ -97,9 +97,9 @@ adrese feedova.
 * Naslov dijaloškog okvira popisa članaka prikazuje odabrani naziv feeda i
   broj dostupnih stavki.
 
-## Changes for 9.0 ##
+## Promjene u verziji 9.0 ##
 
-* Requires NVDA 2019.3 or later.
+* Zahtijeva NVDA verziju 2019.3 ili noviju.
 
 ## Promjene u verziji 8.0 ##
 
