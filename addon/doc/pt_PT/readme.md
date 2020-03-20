@@ -1,7 +1,7 @@
 # Leitor de RSS #
 
 * Autores: Noelia Ruiz Martínez, Mesar Hameed
-* NVDA compatibility: 2019.3 or later
+* Compatibilidade com o NVDA: 2019.3 e posteriores
 * Baixar [versão estável][1]
 * Baixar [versão de desenvolvimento][2]
 
@@ -97,19 +97,20 @@ URLs de feeds.
 * O título da caixa de diálogo da lista de artigos mostra o nome do feed
   selecionado e o número de itens disponíveis.
 
-## Changes for 9.0 ##
+## Alterações para 9.0: ##
 
-* Requires NVDA 2019.3 or later.
+* Requer NVDA 2019.3 ou posterior.
 
-## Changes for 8.0 ##
+## Alterações para 8.0: ##
 
-* When the add-on is updated, feeds saved in the previous version of the
-  add-on will be automatically copied to the new version, unless you prefer
-  to import feeds saved in the main configuration folder of NVDA.
-* When using the dialog to copy feeds, if the chosen folder is not named
-  personalFeeds, a subfolder with this name will be created to prevent the
-  deletion of directories containing important data, such as Documents or
-  Downloads.
+* Quando o extra é actualizado, os feeds guardados na versão anterior do
+  extra serão automaticamente copiados para a nova versão, a menos que
+  prefira que os feeds sejam guardados na pasta de configuração principal do
+  NVDA.
+* Ao usar o diálogo para copiar feeds, se a pasta escolhida não tiver o nome
+  personalFeeds, uma subpasta com este nome será criada para evitar a
+  exclusão de directórios que contenham dados importantes, tais como
+  documentos ou downloads.
 
 ## Alterações para 7.0: ##
 
