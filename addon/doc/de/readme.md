@@ -1,7 +1,7 @@
 # Feeds lesen #
 
 * Authors: Noelia Ruiz Martínez, Mesar Hameed
-* NVDA compatibility: 2019.3 or later
+* NVDA-Kompatibilität: 2019.3 oder neuer
 * [Stabile Version herunterladen][1]
 * [Entwicklerversion herunterladen][2]
 
@@ -101,9 +101,9 @@ wählen, der URLs von RSS Feeds enthält.
 * Im Titel des Dialogs für die Artikellisten werden der Name des
   ausgewählten Feeds und die Anzahl der verfügbaren Artikel angezeigt.
 
-## Changes for 9.0 ##
+## Änderungen für 9.0 ##
 
-* Requires NVDA 2019.3 or later.
+* Erfordert NVDA 2019.3 oder höher.
 
 ## Änderungen in 8.0 ##
 
