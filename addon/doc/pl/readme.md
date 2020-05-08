@@ -1,7 +1,7 @@
 # Read Feeds #
 
 * Autorzy: Noelia Ruiz Martínez, Mesar Hameed
-* NVDA compatibility: 2019.3 or later
+* Zgodność z wersjami NVDA: 2019.3 lub nowszą
 * Pobierz [Wersja stabilna][1]
 * Pobierz [Wersja rozwojowa][2]
 
@@ -97,9 +97,9 @@ katalog zawierający kanały osobiste.
 * Dialog Spisu nagłówków artykułów Wyświetla nazwę oznaczonego kanału
   osobistego i ilość dostępnych artykułów.
 
-## Changes for 9.0 ##
+## Zmiany w wersji 9.0 ##
 
-* Requires NVDA 2019.3 or later.
+* Wymaga NVDA 2019.3 lub nowszą.
 
 ## Zmiany w wersji 8.0 ##
 
@@ -127,7 +127,7 @@ katalog zawierający kanały osobiste.
 * When the default feed has been updated and it stops working due to server
   issues, the previous articles aren't deleted and can be read with the
   corresponding keystrokes.
-* Fix regression: The default feed can be updated twice again.
+* Naprawiony błąd: Domyślny kanał może być aktualizowany znowu dwa razy.
 
 ## zmiany w wersji 5.0 ##
 
