@@ -1,17 +1,18 @@
-# Leitor de feeds #
+# Leitor de Feeds (Read Feeds) #
 
 * Autores: Noelia Ruiz Martínez, Mesar Hameed
-* Compatibilidade com NVDA: 2019.3 ou posterior.
+* Compatibilidade com NVDA: 2019.3 ou posterior
 * Baixe a [versão estável][1]
 * Baixe a [versão em desenvolvimento][2]
 
-Este complemento fornece uma maneira direta de ler feeds em formato Atom ou
-RSS usando o NVDA. Os feeds não são atualizados automaticamente.  Ao
-mencionarmos feeds abaixo, referimo-nos tanto a feeds RSS como ATOM.
+Esse complemento fornece uma maneira direta de ler feeds
+(alimentadores/canais/fluxos/fontes) em formato Atom ou RSS usando o
+NVDA. Os feeds não serão atualizados automaticamente. Ao mencionarmos feeds
+abaixo, referimo-nos tanto a feeds RSS como ATOM.
 
 ## Instalar ou atualizar: ##
 
-Se você usou uma versão anterior deste addon, e há uma pasta RSS ou
+Se você usou uma versão anterior deste complemento, e há uma pasta RSS ou
 personalFeeds na sua pasta pessoal de configuração do NVDA, ao instalar a
 versão atual, uma caixa de diálogo perguntará se você deseja atualizar ou
 instalar. Escolha atualizar para preservar seus feeds salvos e continuar
@@ -30,23 +31,23 @@ Abre um diálogo com os seguintes controles:
 
 * Filtrar por: Um campo de edição para procurar feeds anteriormente salvos.
 * Uma lista com os feeds salvos.
-* Lista de artigos: abre uma caixa de diálogo que apresenta a lista de
+* Lista de artigos: Abre uma caixa de diálogo que apresenta a lista de
   artigos do seu feed atual. Selecione o artigo que deseja ler e pressione
   Enter ou o botão Abrir página da web do artigo selecionado para abrir a
   página correspondente no seu navegador. Pressione o botão Sobre o artigo
   para abrir uma caixa de diálogo mostrando o título e o link do artigo
   selecionado; desta caixa de diálogo, você poderá copiar essa informação
   para a área de transferência.
-* Abrir feed: abre o feed selecionado no aplicativo padrão.
-* Novo: abre uma caixa de diálogo com uma caixa de edição para inserir o
+* Abrir feed: Abre o feed selecionado no aplicativo padrão.
+* Novo: Abre uma caixa de diálogo com uma caixa de edição para inserir o
   endereço de um novo feed. Se o endereço for válido e o feed puder ser
   salvo, seu nome, com base no título do feed, aparecerá na parte inferior
   da lista de feeds.
 * Renomear: Abre um diálogo com um campo de edição para renomear o feed
   selecionado.
 * Excluir: Abre um diálogo para excluir o feed selecionado após confirmação.
-* Definir padrão: define o feed selecionado como padrão, para que seus
-  artigos possam ser acessados com os gestos — comandos — do NVDA.
+* Definir padrão: Define o feed selecionado como padrão, para que seus
+  artigos possam ser acessados com os comandos (gestos) do NVDA.
 * Abrir pasta que contém cópia dos feeds: Abre uma pasta que pode conter uma
   cópia dos feeds. Isso pode ser útil para explorar e apagar feeds que não
   devem ser importados quando o complemento é atualizado.
@@ -56,9 +57,9 @@ Abre um diálogo com os seguintes controles:
 
 * Se um feed chamado tempFeed for criado, renomeie-o, pois esse arquivo pode
   ser substituído quando necessário para criar um feed cujo nome já exista.
-* O feed definido como padrão não pode ser removido. O endereço addressFile
-  feed será usado como padrão quando a configuração for redefinida, por isso
-  não pode ser excluída.
+* O feed definido como padrão não pode ser removido. O endereço do arquivo
+  (addressFile) do feed será usado como padrão quando a configuração for
+  redefinida, por isso não pode ser excluída.
 
 ####Copiar pasta de feeds... ####
 
