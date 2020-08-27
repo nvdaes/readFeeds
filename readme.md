@@ -29,6 +29,7 @@ Opens a dialog with the following controls:
 * A list of the saved feeds.
 * List of articles: Opens a dialog which presents the articles list from your current feed. Select the article you want to read and press Enter or Open web page of selected article button to open the corresponding page in your browser. Press About article button to open a dialog showing title and link of the selected article; from this dialog, you'll be able to copy this info to the clipboard.
 * Open feed: Opens the selected feed in the default application.
+* Open feed as HTML: Opens the selected feed in the default web browser.
 * New: Opens a dialog with an edit box to enter the address of a new feed. If the address is valid and the feed can be saved, its name, based on the feed title, will appear at the bottom of the feeds list.
 * Rename: Opens a dialog with an edit box to rename the selected feed.
 * Delete: Opens a dialog to delete the selected feed after confirmation.
@@ -61,8 +62,13 @@ Opens a dialog to select a folder which replaces your feeds in the personalFeeds
 
 * When the title or URL have been copied.
 * When unable to connect/refresh a feed, or the URL does not correspond to a valid feed.
-* NVDA will display an error message if it was not possible to backup or restore the personalFeeds folder.
+* NVDA will display an error message if it was not possible to backup or restore the personalFeeds folder, and if a new feed cannot be created.
 * The title of the articles list dialog displays the selected feed name and number of items available.
+
+## Changes for 10.0 ##
+
+* Added a button to open the selected feed as HTML in the default web browser.
+* If a new feed cannot be created, this will be notified in an error dialog.
 
 ## Changes for 9.0 ##
 

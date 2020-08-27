@@ -1,7 +1,7 @@
 # -*- coding: UTF-8 -*-
 
 # Read feeds: A simple plugin for reading feeds with NVDA
-#Copyright (C) 2012-2019 Noelia Ruiz Martínez, Mesar Hameed
+#Copyright (C) 2012-2020 Noelia Ruiz Martínez, Mesar Hameed
 # Released under GPL 2
 
 import os
@@ -23,7 +23,7 @@ from logHandler import log
 import re
 from .skipTranslation import translate
 from .xml.etree import ElementTree
-
+import languageHandler
 addonHandler.initTranslation()
 
 ### Constants
@@ -149,6 +149,10 @@ class FeedsDialog(wx.Dialog):
 		self.openButton = buttonHelper.addButton(self, label=_("&Open feed"))
 		self.openButton.Bind(wx.EVT_BUTTON, self.onOpen)
 
+		# Translators: The label of a button to open a feed as HTML.
+		self.openHtmlButton = buttonHelper.addButton(self, label=_("Open feed as &HTML"))
+		self.openHtmlButton.Bind(wx.EVT_BUTTON, self.onOpenHtml)
+		
 		# Translators: The label of a button to add a new feed.
 		newButton = buttonHelper.addButton(self, label=_("&New..."))
 		newButton.Bind(wx.EVT_BUTTON, self.onNew)
@@ -191,7 +195,12 @@ class FeedsDialog(wx.Dialog):
 		FeedsDialog._instance = None
 
 	def createFeed(self, address):
-		feed = Feed(address)
+		try:
+			feed = Feed(address)
+		except Exception as e:
+			# Translators: Message presented when a feed cannot be added.
+			wx.CallAfter(gui.messageBox,_('Cannot add feed: %s' % e), _("Error"), wx.OK|wx.ICON_ERROR)
+			raise e
 		feedName = api.filterFileName(feed.getFeedName())
 		if os.path.isfile(os.path.join(FEEDS_PATH, "%s.txt" % feedName)):
 			feedName = "tempFeed"
@@ -223,6 +232,7 @@ class FeedsDialog(wx.Dialog):
 		self.stringSel = self.feedsList.StringSelection
 		self.articlesButton.Enabled = self.sel>= 0
 		self.openButton.Enabled = self.sel>= 0
+		self.openHtmlButton.Enabled = self.sel>= 0
 		self.deleteButton.Enabled = (
 			self.sel >= 0 and 
 			self.stringSel != DEFAULT_ADDRESS_FILE and 
@@ -254,6 +264,12 @@ class FeedsDialog(wx.Dialog):
 			address = f.read()
 		os.startfile(address)
 
+	def onOpenHtml(self, evt):
+		with open(os.path.join(FEEDS_PATH, "%s.txt" % self.stringSel), "r", encoding="utf-8") as f:
+			address = f.read()
+		self.feed = Feed(address)
+		self.feed.buildHtml()
+
 	def onNew(self, evt):
 		# Translators: The label of a field to enter an address for a new feed.
 		with wx.TextEntryDialog(
@@ -264,7 +280,7 @@ class FeedsDialog(wx.Dialog):
 			if d.ShowModal() == wx.ID_CANCEL:
 				return
 			name = self.createFeed(d.Value)
-		self.feedsList.Append(name)
+			self.feedsList.Append(name)
 
 	def onDelete(self, evt):
 		if gui.messageBox(
@@ -550,6 +566,12 @@ class Feed(object):
 		except:
 			return ""
 
+	def getFeedLanguage(self):
+		try:
+			return self._main.find(self.buildTag("language", self.ns)).text
+		except:
+			return languageHandler.getLanguage().replace("_", "-")
+
 	def getArticleTitle(self, index=None):
 		if index is None: index = self._index
 		try:
@@ -569,6 +591,28 @@ class Feed(object):
 			# Translators: Presented when the current article does not have an associated link.
 			return _("Unable to locate article link.")
 
+	def getArticleDescription(self, index=None):
+		if index is None: index = self._index
+		try:
+			if self.getFeedType() == u'rss':
+				return self._articles[index].find(self.buildTag("description", self.ns)).text
+			elif self.getFeedType() == 'atom':
+				description = self._articles[index].find(self.buildTag("summary", self.ns)).text
+				if description == "":
+					description = self._articles[index].find(self.buildTag("content", self.ns)).text
+				return description
+		except:
+			return ""
+
+	def getArticleEnclosure(self, index=None):
+		if index is None: index = self._index
+		try:
+			if self.getFeedType() == u'rss':
+				return self._articles[index].find(self.buildTag("enclosure", self.ns))
+			return None
+		except:
+			return None
+
 	def next(self):
 		self._index += 1
 		if self._index == self.getNumberOfArticles():
@@ -581,6 +625,21 @@ class Feed(object):
 
 	def getNumberOfArticles(self):
 		return len(self._articles)
+
+	def buildHtml(self):
+		raw = "<!DOCTYPE html><html lang=\"" + self.getFeedLanguage() + "\"><head><title>" + self.getFeedName() + "</title><meta charset=\"utf-8\" /><meta http-equiv='X-UA-Compatible' content='IE=edge'><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"></head><body><h1><a href=\"" + self.getFeedUrl() + "\">" + self.getFeedName() +"</a></h1>"
+		for index in range(self.getNumberOfArticles()):
+			raw += "<h2><a href=\"" + self.getArticleLink(index) + "\">" + self.getArticleTitle(index) + "</a></h2>"
+			if self.getArticleDescription(index):
+				raw += "<div>" + self.getArticleDescription(index) + "</div>"
+			enclosure = self.getArticleEnclosure(index)
+			if enclosure:
+				raw += "<div><a href=\"" + enclosure.get("url") + "\">" + enclosure.get("type") + enclosure.get("length") / 1024 + "kB</div>"
+		raw += "</body></html>"
+		with open(os.path.join(FEEDS_PATH, "feed.html"), "w", encoding="utf-8") as f:
+			f.write(raw)
+		os.startfile(os.path.join(FEEDS_PATH, "%s.html" % self.getFeedName()))
+
 
 ### Global plugin
 
