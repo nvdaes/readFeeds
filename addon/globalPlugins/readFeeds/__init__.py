@@ -638,7 +638,7 @@ class Feed(object):
 		raw += "</body></html>"
 		with open(os.path.join(FEEDS_PATH, "feed.html"), "w", encoding="utf-8") as f:
 			f.write(raw)
-		os.startfile(os.path.join(FEEDS_PATH, "%s.html" % self.getFeedName()))
+		os.startfile(os.path.join(FEEDS_PATH, "feed.html"))
 
 
 ### Global plugin
