@@ -24,6 +24,9 @@ import re
 from .skipTranslation import translate
 from .xml.etree import ElementTree
 import languageHandler
+import time
+import datetime
+import locale
 addonHandler.initTranslation()
 
 ### Constants
@@ -34,6 +37,7 @@ CONFIG_PATH = globalVars.appArgs.configPath
 DEFAULT_ADDRESS_FILE = "addressFile"
 # Translators: message presented when feeds cannot be reported.
 CAN_NOT_REPORT = _("Unable to refresh feed. Check your Internet conectivity or that the specified feed address is correct.")
+TAG_REGEXP = re.compile('<.*?>')
 
 ### Configuration
 
@@ -201,7 +205,7 @@ class FeedsDialog(wx.Dialog):
 			# Translators: Message presented when a feed cannot be added.
 			wx.CallAfter(gui.messageBox,_('Cannot add feed: %s' % e), _("Error"), wx.OK|wx.ICON_ERROR)
 			raise e
-		feedName = api.filterFileName(feed.getFeedName())
+		feedName = api.filterFileName(feed.getFeedName()).strip()
 		if os.path.isfile(os.path.join(FEEDS_PATH, "%s.txt" % feedName)):
 			feedName = "tempFeed"
 		with open(os.path.join(FEEDS_PATH, "%s.txt" % feedName), "w", encoding="utf-8") as f:
@@ -269,6 +273,7 @@ class FeedsDialog(wx.Dialog):
 			address = f.read()
 		self.feed = Feed(address)
 		self.feed.buildHtml()
+		os.startfile(os.path.join(FEEDS_PATH, "feed.html"))
 
 	def onNew(self, evt):
 		# Translators: The label of a field to enter an address for a new feed.
@@ -339,11 +344,11 @@ class ArticlesDialog(wx.Dialog):
 
 		# Translators: The label of the articles list in the articles dialog.
 		articlesText = _("List of articles")
-		articlesChoices = [parent.feed.getArticleTitle(index) for index in range(parent.feed.getNumberOfArticles())]
+		articlesChoices = [re.sub(TAG_REGEXP, '', parent.feed.getArticleTitle(index)) for index in range(parent.feed.getNumberOfArticles())]
 		self.articlesList = sHelper.addLabeledControl(articlesText, wx.ListBox, choices=articlesChoices)
 		self.articlesList.Selection = 0
 		self.articlesList.Bind(wx.EVT_CHOICE, self.onArticlesListChoice)
-		
+
 		buttonHelper = guiHelper.ButtonHelper(wx.VERTICAL)
 		# Translators: The label of a button to open the selected article of a feed.
 		self.articleButton = wx.Button(self, label=_("Open &web page of selected article."))
@@ -371,7 +376,10 @@ class ArticlesDialog(wx.Dialog):
 		os.startfile(self.Parent.feed.getArticleLink(self.articlesList.Selection))
 
 	def onArticlesListInfo(self, evt):
-		articleInfo = "{title}\r\n\r\n{address}".format(title=self.Parent.feed.getArticleTitle(self.articlesList.Selection), address=self.Parent.feed.getArticleLink(self.articlesList.Selection))
+		articleInfo = "{title}\r\n\r\n{address}".format(
+			title=self.articlesList.StringSelection,
+			address=self.Parent.feed.getArticleLink(self.articlesList.Selection)
+		)
 		if gui.messageBox(
 			# Translators: the label of a message box dialog.
 			_("%sDo you want to copy article title and link to the clipboard?" % (articleInfo + "\r\n\r\n")),
@@ -533,9 +541,28 @@ class Feed(object):
 	def buildTag(self, tag, ns=None):
 		return "%s%s" %(ns, tag) if ns else tag
 
+	def getArticleTimestamp(self, article):
+		locale.setlocale(locale.LC_TIME, "en")
+		try:
+			if self.getFeedType() == u'rss':
+				date =  article.find(self.buildTag("pubDate", self.ns)).text
+				timestamp = time.mktime(datetime.datetime.strptime(date, "%a, %d %b %Y %H:%M:%S %Z").timetuple())
+			elif self.getFeedType() == 'atom':
+				date = article.find(self.buildTag("updated", self.ns)).text
+				timestamp = time.mktime(datetime.datetime.strptime(date, "%Y-%m-%dT%H:%M:%S%Z").timetuple())
+			return timestamp
+		except:
+			return 0
+
 	def refresh(self):
+		# data = None
+		# userAgent = "UniversalFeedParser/3.3 +http://feedparser.org/"
+		# headers = {'User-Agent': userAgent}
+		# req = urllib.request.Request(self._url, data, headers)
+		# response = urllib.request.urlopen(req)
 		try:
 			self._document = ElementTree.parse(urllib.request.urlopen(self._url))
+			# self._document = ElementTree.parse(response)
 		except Exception as e:
 			raise e
 		tag = self._document.getroot().tag
@@ -552,6 +579,7 @@ class Feed(object):
 		else:
 			log.debugWarning("Unknown type of current feed", exc_info=True)
 			raise
+		self._articles.sort(key=self.getArticleTimestamp, reverse=True)
 		self._index = 0
 
 	def getFeedUrl(self):
@@ -613,6 +641,17 @@ class Feed(object):
 		except:
 			return None
 
+	def getArticleDate(self, index=None):
+		if index is None: index = self._index
+		try:
+			if self.getFeedType() == u'rss':
+				date = self._articles[index].find(self.buildTag("pubDate", self.ns)).text
+			elif self.getFeedType() == 'atom':
+				date = self._articles[index].find(self.buildTag("updated", self.ns)).text
+			return date
+		except:
+				return None
+
 	def next(self):
 		self._index += 1
 		if self._index == self.getNumberOfArticles():
@@ -630,6 +669,8 @@ class Feed(object):
 		raw = "<!DOCTYPE html><html lang=\"" + self.getFeedLanguage() + "\"><head><title>" + self.getFeedName() + "</title><meta charset=\"utf-8\" /><meta http-equiv='X-UA-Compatible' content='IE=edge'><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"></head><body><h1><a href=\"" + self.getFeedUrl() + "\">" + self.getFeedName() +"</a></h1>"
 		for index in range(self.getNumberOfArticles()):
 			raw += "<h2><a href=\"" + self.getArticleLink(index) + "\">" + self.getArticleTitle(index) + "</a></h2>"
+			if self.getArticleDate(index):
+				raw += "<div>" + self.getArticleDate(index) + "</div>"
 			if self.getArticleDescription(index):
 				raw += "<div>" + self.getArticleDescription(index) + "</div>"
 			enclosure = self.getArticleEnclosure(index)
@@ -638,8 +679,6 @@ class Feed(object):
 		raw += "</body></html>"
 		with open(os.path.join(FEEDS_PATH, "feed.html"), "w", encoding="utf-8") as f:
 			f.write(raw)
-		os.startfile(os.path.join(FEEDS_PATH, "feed.html"))
-
 
 ### Global plugin
 
@@ -697,7 +736,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def script_activateCopyDialog(self, gesture):
 		wx.CallAfter(self.onCopy, None)
 
-
 	def onRestore(self, evt):
 		gui.mainFrame.prePopup()
 		d = RestoreDialog(gui.mainFrame)
@@ -734,7 +772,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def script_readFirstArticle(self, gesture):
 		self.getFirstArticle()
 		if self.feed:
-			ui.message(self.feed.getArticleTitle())
+			ui.message(re.sub(TAG_REGEXP, '', self.feed.getArticleTitle()))
 
 	@script(
 		# Translators: message presented in input mode.
@@ -744,7 +782,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def script_readCurrentArticle(self, gesture):
 		if not self.feed:
 			self.getFirstArticle()
-		articleInfo = "{title}\r\n\r\n{address}".format(title=self.feed.getArticleTitle(), address=self.feed.getArticleLink())
+		articleInfo = "{title}\r\n\r\n{address}".format(
+			title=re.sub(TAG_REGEXP, '', self.feed.getArticleTitle()),
+			address=self.feed.getArticleLink()
+		)
 		if scriptHandler.getLastScriptRepeatCount()==1 and api.copyToClip(articleInfo):
 			# Translators: message presented when the information about an article of a feed is copied to the clipboard.
 			ui.message(_("Copied to clipboard %s") % articleInfo)
@@ -760,7 +801,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if not self.feed:
 			self.getFirstArticle()
 		self.feed.next()
-		ui.message(self.feed.getArticleTitle())
+		ui.message(re.sub(TAG_REGEXP, '', self.feed.getArticleTitle()))
 
 	@script(
 		# Translators: message presented in input mode.
@@ -771,7 +812,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if not self.feed:
 			self.getFirstArticle()
 		self.feed.previous()
-		ui.message(self.feed.getArticleTitle())
+		ui.message(re.sub(TAG_REGEXP, '', self.feed.getArticleTitle()))
 
 	@script(
 		# Translators: message presented in input mode.
@@ -794,7 +835,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def script_copyArticleInfo(self, gesture):
 		if not self.feed:
 			self.getFirstArticle()
-		articleInfo = "{title}\r\n\r\n{address}".format(title=self.feed.getArticleTitle(), address=self.feed.getArticleLink())
+		articleInfo = "{title}\r\n\r\n{address}".format(
+			title=re.sub(TAG_REGEXP, '', self.feed.getArticleTitle()),
+			address=self.feed.getArticleLink()
+		)
 		if api.copyToClip(articleInfo):
 			# Translators: message presented when the information about an article of a feed is copied to the clipboard.
 			ui.message(_("Copied to clipboard %s") % articleInfo)
