@@ -29,7 +29,7 @@ Opens a dialog with the following controls:
 * A list of the saved feeds.
 * List of articles: Opens a dialog which presents the articles list from your current feed. Select the article you want to read and press Enter or Open web page of selected article button to open the corresponding page in your browser. Press About article button to open a dialog showing title and link of the selected article; from this dialog, you'll be able to copy this info to the clipboard.
 * Open feed: Opens the selected feed in the default application.
-* Open feed as HTML: Opens the selected feed in the default web browser.
+* Open feed as HTML: Opens the selected feed in the default web browser. You will be able to show or hide publication dates and buttons to copy information about articles to clipboard.
 * New: Opens a dialog with an edit box to enter the address of a new feed. If the address is valid and the feed can be saved, its name, based on the feed title, will appear at the bottom of the feeds list.
 * Rename: Opens a dialog with an edit box to rename the selected feed.
 * Delete: Opens a dialog to delete the selected feed after confirmation.
@@ -42,7 +42,7 @@ Opens a dialog with the following controls:
 * If a feed named tempFeed is created, please rename it, as this file could be replaced when needed to create a feed whose name already exists.
 * The feed set as the default can't be removed. The addressFile feed will be use as the default when the configuration is reset, so it can't be deleted.
 
-####Copy feeds folder... ####
+#### Copy feeds folder... ####
 
 Opens a dialog to choose a folder where you can save the personalFeeds directory of your feeds. By default the selected folder is the NVDA's configuration directory, which will create the personalFeeds directory.
 
@@ -70,6 +70,7 @@ Opens a dialog to select a folder which replaces your feeds in the personalFeeds
 * Added a button to open the selected feed as HTML in the default web browser.
 * If a new feed cannot be created, this will be notified in an error dialog.
 * Improved order and presentation of some articles.
+* More feed supported.
 
 ## Changes for 9.0 ##
 

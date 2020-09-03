@@ -33,6 +33,7 @@ addonHandler.initTranslation()
 
 ADDON_SUMMARY = addonHandler.getCodeAddon().manifest['summary']
 FEEDS_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), "personalFeeds"))
+HTML_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), "html"))
 CONFIG_PATH = globalVars.appArgs.configPath
 DEFAULT_ADDRESS_FILE = "addressFile"
 # Translators: message presented when feeds cannot be reported.
@@ -273,7 +274,7 @@ class FeedsDialog(wx.Dialog):
 			address = f.read()
 		self.feed = Feed(address)
 		self.feed.buildHtml()
-		os.startfile(os.path.join(FEEDS_PATH, "feed.html"))
+		os.startfile(os.path.join(HTML_PATH, "feed.html"))
 
 	def onNew(self, evt):
 		# Translators: The label of a field to enter an address for a new feed.
@@ -555,14 +556,12 @@ class Feed(object):
 			return 0
 
 	def refresh(self):
-		# data = None
-		# userAgent = "UniversalFeedParser/3.3 +http://feedparser.org/"
-		# headers = {'User-Agent': userAgent}
-		# req = urllib.request.Request(self._url, data, headers)
-		# response = urllib.request.urlopen(req)
+		userAgent = "UniversalFeedParser/3.3 +http://feedparser.org/"
+		headers = {'User-Agent': userAgent}
+		req = urllib.request.Request(self._url, None, headers)
+		response = urllib.request.urlopen(req)
 		try:
-			self._document = ElementTree.parse(urllib.request.urlopen(self._url))
-			# self._document = ElementTree.parse(response)
+			self._document = ElementTree.parse(response)
 		except Exception as e:
 			raise e
 		tag = self._document.getroot().tag
@@ -666,18 +665,29 @@ class Feed(object):
 		return len(self._articles)
 
 	def buildHtml(self):
-		raw = "<!DOCTYPE html><html lang=\"" + self.getFeedLanguage() + "\"><head><title>" + self.getFeedName() + "</title><meta charset=\"utf-8\" /><meta http-equiv='X-UA-Compatible' content='IE=edge'><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"></head><body><h1><a href=\"" + self.getFeedUrl() + "\">" + self.getFeedName() +"</a></h1>"
+		raw = "<!DOCTYPE html><html lang=\"" + self.getFeedLanguage() + "\"><head><title>" + self.getFeedName() + "</title><meta charset=\"utf-8\" /><meta http-equiv='X-UA-Compatible' content='IE=edge'><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"></head><body><h1><a href=\"" + self.getFeedUrl() + "\">" + self.getFeedName() +"</a></h1><p><label>"
+		# Translators: Label of a checkbox to choose if date should be presented for each feed.
+		label = _("Show date")
+		raw += label
+		raw += "<input type=\"checkbox\" id=\"showDate\" onclick=\"setDatePresentation()\" accesskey=\"0\"></label></p><p><label>"
+		# Translators: Label for a checkbox to show buttons for copying to clipboard.
+		label = _("Show buttons to copy")
+		raw += label
+		raw += "<input id=\"copy\" accesskey=\"8\" type=\"checkbox\" onclick=\"setCopyPresentation()\"></label></p>"
 		for index in range(self.getNumberOfArticles()):
-			raw += "<h2><a href=\"" + self.getArticleLink(index) + "\">" + self.getArticleTitle(index) + "</a></h2>"
+			raw += "<div class=\"heading\"><h2><a href=\"" + self.getArticleLink(index) + "\">" + self.getArticleTitle(index) + "</a></h2>"
+			# Translators: Label for a button to copy to clipboard.
+			label = _("Copy") + " " + str(index+1)
+			raw += "<button aria-hidden=\"true\" aria-pressed=\"false\">" + label + "</button></div>"
 			if self.getArticleDate(index):
-				raw += "<div>" + self.getArticleDate(index) + "</div>"
+				raw += "<div class=\"date\" aria-hidden=\"true\">" + self.getArticleDate(index) + "</div>"
 			if self.getArticleDescription(index):
 				raw += "<div>" + self.getArticleDescription(index) + "</div>"
 			enclosure = self.getArticleEnclosure(index)
 			if enclosure:
 				raw += "<div><a href=\"" + enclosure.get("url") + "\">" + enclosure.get("type") + enclosure.get("length") / 1024 + "kB</div>"
-		raw += "</body></html>"
-		with open(os.path.join(FEEDS_PATH, "feed.html"), "w", encoding="utf-8") as f:
+		raw += "<script src=\"feed.js\"></script></body></html>"
+		with open(os.path.join(HTML_PATH, "feed.html"), "w", encoding="utf-8") as f:
 			f.write(raw)
 
 ### Global plugin
