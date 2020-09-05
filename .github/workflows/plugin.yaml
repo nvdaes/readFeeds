@@ -25,3 +25,8 @@ jobs:
         # flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Build add-on
       run: scons
+    - name: Upload artifact 
+      uses: actions/upload-artifact@v2
+      with:
+        name: my-artifact
+        path: *.nvda-addon
