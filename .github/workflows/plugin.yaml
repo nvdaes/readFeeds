@@ -21,6 +21,8 @@ jobs:
         pip install Markdown
         pip install flake8
         pip install flake8-tabs
+    - name: Download gettext
+      run: |
         curl -O https://github.com/nvaccess/nvda-misc-deps/blob/master/tools/msgfmt.exe
         curl -O https://github.com/nvaccess/nvda-misc-deps/blob/master/tools/xgettext.exe
     - name: Lint with flake8
