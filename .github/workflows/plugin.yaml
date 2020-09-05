@@ -15,13 +15,14 @@ jobs:
       with:
         python-version: '3.7'
         architecture: 'x86' # optional x64 or x86. Defaults to x64 if not specified
-    - name: Install dependencies
+    - name: Install and download dependencies
       run: |
-        pip install wheel
         pip install scons
         pip install Markdown
         pip install flake8
         pip install flake8-tabs
+        curl -O https://github.com/nvaccess/nvda-misc-deps/blob/master/tools/msgfmt.exe
+        curl -O https://github.com/nvaccess/nvda-misc-deps/blob/master/tools/xgettext.exe
     - name: Lint with flake8
       run:
         flake8 --config .github/extra_resources/setup.cfg --exit-zero addon
