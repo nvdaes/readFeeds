@@ -17,7 +17,7 @@ jobs:
         architecture: 'x86' # optional x64 or x86. Defaults to x64 if not specified
     - name: Install dependencies
       run: |
-      pip install wheel
+        pip install wheel
         pip install scons
         pip install Markdown
         pip install flake8
