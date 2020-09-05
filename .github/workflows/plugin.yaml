@@ -30,6 +30,8 @@ jobs:
         # flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Build add-on
       run: scons
+    - name: dir
+      run: dir
     - name: Create Release
       if: contains(github.ref, '/tags/')
       uses: actions/create-release@latest
