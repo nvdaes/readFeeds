@@ -10,11 +10,6 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-    - name: Set up Python 3.7
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.7'
-        architecture: 'x86' # optional x64 or x86. Defaults to x64 if not specified
     - name: Install and download dependencies
       run: |
         pip install scons
