@@ -70,7 +70,8 @@ Opens a dialog to select a folder which replaces your feeds in the personalFeeds
 * Added a button to open the selected feed as HTML in the default web browser.
 * If a new feed cannot be created, this will be notified in an error dialog.
 * Improved order and presentation of some articles.
-* More feed supported.
+* More feeds may be supported.
+* When the feeds dialog is opened, the list of feeds will be focused.
 
 ## Changes for 9.0 ##
 

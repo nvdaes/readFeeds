@@ -193,7 +193,7 @@ class FeedsDialog(wx.Dialog):
 		mainSizer.Add(sHelper.sizer, flag=wx.ALL, border=guiHelper.BORDER_FOR_DIALOGS)
 		mainSizer.Fit(self)
 		self.Sizer = mainSizer
-		self.searchTextEdit.SetFocus()
+		self.feedsList.SetFocus()
 		self.CentreOnScreen()
 
 	def __del__(self):
@@ -305,7 +305,7 @@ class FeedsDialog(wx.Dialog):
 	def onDefault(self, evt):
 		config.conf["readFeeds"]["addressFile"] = self.stringSel
 		self.onFeedsListChoice(None)
-		self.searchTextEdit.SetFocus()
+		self.feedsList.SetFocus()
 
 	def onRename(self, evt):
 		# Translators: The label of a field to enter a new name for a feed.
