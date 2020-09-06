@@ -80,10 +80,11 @@ jobs:
       run: |
         cd source
         pythonw.exe nvda.pyw -m --debug-logging
+        ping 127.0.0.1 /n 20
     - name: Quit NVDA
-      run: pythonw.exe nvda.pyw -q
-    - name: Pause
-      run: ping 127.0.0.1 /n 40
+      run: |
+        pythonw.exe nvda.pyw -q
+        ping 127.0.0.1 /n 20
     - name: Upload log
       uses: actions/upload-artifact@v2
       with:
