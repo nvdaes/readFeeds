@@ -83,8 +83,7 @@ jobs:
     - name: Quit NVDA
       run: pythonw.exe nvda.pyw -q
     - name: Pause
-      run: timeout /t 10
-      shell: cmd
+      run: ping 127.0.0.1 /n 40
     - name: Upload log
       uses: actions/upload-artifact@v2
       with:
