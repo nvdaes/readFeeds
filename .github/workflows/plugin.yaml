@@ -79,5 +79,11 @@ jobs:
     - name: Start NVDA
       run: |
         cd source
-        pythonw.exe nvda.pyw -m
-        
+        pythonw.exe nvda.pyw -m --debug-logging
+    - name: Quit NVDA
+      run: nvda -q
+    - name: Upload log
+      uses: actions/upload-artifact@v2
+      with:
+        name: nvda-log
+        path: source\nvda.log
