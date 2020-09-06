@@ -3,7 +3,8 @@ name: Build and release NVDA add-on
 on: [push, pull_request]
 
 jobs:
-  add-on:
+
+  addon:
 
     runs-on: windows-latest
 
@@ -43,6 +44,8 @@ jobs:
         file_glob: true        
 
   NVDA:
+  
+    needs: addon
   
     runs-on: windows-latest
 
