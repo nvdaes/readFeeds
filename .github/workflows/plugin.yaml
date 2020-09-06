@@ -88,4 +88,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: nvda-log
-        path: source\nvda-old.log
+        path: source\nvda.log
