@@ -68,3 +68,9 @@ jobs:
     - name: Prepare NVDA's source tree
       run: scons source
       shell: cmd
+    - name: Download add-on
+      uses: actions/download-artifact@v2
+      with:
+        name: nvda-addon
+    - name: Dir
+      run: dir
