@@ -80,8 +80,10 @@ jobs:
       run: |
         cd source
         pythonw.exe nvda.pyw -m --debug-logging
-    - name: Restart NVDA
-      run: pythonw.exe nvda.pyw -rm
+    - name: Quit NVDA
+      run: pythonw.exe nvda.pyw -q
+    - name: Dir # Trying to upload full log
+      run: dir
     - name: Upload log
       uses: actions/upload-artifact@v2
       with:
