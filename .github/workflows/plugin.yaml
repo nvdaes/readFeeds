@@ -76,6 +76,8 @@ jobs:
       run: |
         move *.nvda-addon addon.zip
         expand-archive addon.zip source\userConfig\addons\addon
+    - name: Lint add-on
+      run: scons lint source\userConfig\addons\addon\**\*.py
     - name: Start NVDA
       run: |
         cd source
