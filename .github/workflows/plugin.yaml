@@ -78,5 +78,5 @@ jobs:
         expand-archive addon.zip source\userConfig\addons\addon
     - Start NVDA
       run: |
-      cd source
+        cd source
         pythonw.exe nvda.pyw -m
