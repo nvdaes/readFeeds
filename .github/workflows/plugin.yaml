@@ -26,6 +26,10 @@ jobs:
         repository: nvaccess/nvda
         path: nvda
         submodules: true
+    - name: Prepare NVDA's source tree
+      run: |
+        cd nvda
+        scons source
     # - name: Lint with flake8
       # run:
         # flake8 --exit-zero addon
