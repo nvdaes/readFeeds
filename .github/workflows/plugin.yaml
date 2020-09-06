@@ -73,7 +73,8 @@ jobs:
     - name: Copy add-on
       run: |
         move *.nvda-addon addon.zip
-        expand-archive addon.zip source\userConfig\addons\addon
+        Expand-Archive addon.zip source\userConfig\addons\addon
+        Copy-Item -Path source\userConfig\addons\* -Destination lintAddon
     - name: Lint
       run: scons lint base=origin/master
       shell: cmd
