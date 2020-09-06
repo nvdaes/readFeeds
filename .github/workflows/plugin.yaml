@@ -31,6 +31,7 @@ jobs:
       run: |
         cd nvda
         scons source
+        cd..
       shell: cmd
     # - name: Lint with flake8
       # run:
