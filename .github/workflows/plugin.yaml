@@ -76,8 +76,13 @@ jobs:
         Expand-Archive addon.zip source\userConfig\addons\addon
         Copy-Item -Path source\userConfig\addons\* -Destination lintAddon
     - name: Lint
-      run: scons lint base=origin/master
+      run: scons lint base=origin/master --no-warn-script-location > lint.txt
       shell: cmd
+    - name: Upload lint report
+      uses: actions/upload-artifact@v2
+      with:
+        name: lint
+        path: lint.txt
     - name: Start NVDA
       run: |
         cd source
