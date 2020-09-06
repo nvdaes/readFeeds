@@ -17,7 +17,7 @@ jobs:
         python-version: 3.7
     - name: Install dependencies
       run: |
-        pip install scons==3.0
+        pip install scons
         pip install Markdown
         pip install flake8
         pip install flake8-tabs
@@ -43,14 +43,14 @@ jobs:
         overwrite: true
         file_glob: true        
 
-  NVDA:
+  nvda:
   
     needs: addon
   
     runs-on: windows-latest
 
     steps:
-      - name: Set up Python 3.7 x86
+    - name: Set up Python 3.7 x86
       uses: actions/setup-python@v2
       with:
         python-version: 3.7
