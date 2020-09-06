@@ -193,7 +193,7 @@ class FeedsDialog(wx.Dialog):
 		mainSizer.Add(sHelper.sizer, flag=wx.ALL, border=guiHelper.BORDER_FOR_DIALOGS)
 		mainSizer.Fit(self)
 		self.Sizer = mainSizer
-		self.searchTextEdit.SetFocus()
+	self.feedsList.SetFocus()
 		self.CentreOnScreen()
 
 	def __del__(self):
@@ -305,7 +305,7 @@ class FeedsDialog(wx.Dialog):
 	def onDefault(self, evt):
 		config.conf["readFeeds"]["addressFile"] = self.stringSel
 		self.onFeedsListChoice(None)
-		self.searchTextEdit.SetFocus()
+		self.feedsList.SetFocus()
 
 	def onRename(self, evt):
 		# Translators: The label of a field to enter a new name for a feed.
@@ -665,7 +665,12 @@ class Feed(object):
 		return len(self._articles)
 
 	def buildHtml(self):
-		raw = "<!DOCTYPE html><html lang=\"" + self.getFeedLanguage() + "\"><head><title>" + self.getFeedName() + "</title><meta charset=\"utf-8\" /><meta http-equiv='X-UA-Compatible' content='IE=edge'><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"></head><body><h1><a href=\"" + self.getFeedUrl() + "\">" + self.getFeedName() +"</a></h1><p><label>"
+		raw = "<!DOCTYPE html><html lang=\"" + self.getFeedLanguage()
+		+ "\"><head><title>" + self.getFeedName()
+		+ "</title><meta charset=\"utf-8\" />"
+		+ "<meta http-equiv='X-UA-Compatible' content='IE=edge'>"
+		+ "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"></head>"
+		+ "<body><h1><a href=\"" + self.getFeedUrl() + "\">" + self.getFeedName() +"</a></h1><p><label>"
 		# Translators: Label of a checkbox to choose if date should be presented for each feed.
 		label = _("Show date")
 		raw += label
@@ -675,7 +680,8 @@ class Feed(object):
 		raw += label
 		raw += "<input id=\"copy\" accesskey=\"8\" type=\"checkbox\" onclick=\"setCopyPresentation()\"></label></p>"
 		for index in range(self.getNumberOfArticles()):
-			raw += "<div class=\"heading\"><h2><a href=\"" + self.getArticleLink(index) + "\">" + self.getArticleTitle(index) + "</a></h2>"
+			raw += "<div class=\"heading\"><h2><a href=\""
+			+ self.getArticleLink(index) + "\">" + self.getArticleTitle(index) + "</a></h2>"
 			# Translators: Label for a button to copy to clipboard.
 			label = _("Copy") + " " + str(index+1)
 			raw += "<button aria-hidden=\"true\" aria-pressed=\"false\">" + label + "</button></div>"
@@ -685,7 +691,8 @@ class Feed(object):
 				raw += "<div>" + self.getArticleDescription(index) + "</div>"
 			enclosure = self.getArticleEnclosure(index)
 			if enclosure:
-				raw += "<div><a href=\"" + enclosure.get("url") + "\">" + enclosure.get("type") + enclosure.get("length") / 1024 + "kB</div>"
+				raw += "<div><a href=\"" + enclosure.get("url") + "\">" + enclosure.get("type")
+				+ enclosure.get("length") / 1024 + "kB</div>"
 		raw += "<script src=\"feed.js\"></script></body></html>"
 		with open(os.path.join(HTML_PATH, "feed.html"), "w", encoding="utf-8") as f:
 			f.write(raw)

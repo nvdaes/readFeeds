@@ -5,28 +5,28 @@
 * Download [stable version][1]
 * Download [development version][2]
 
-This addon provides a straightforward  way to read feeds in Atom or RSS formats using NVDA. 
+This addon provides a straightforward  way to read feeds in Atom or RSS formats using NVDA.
 The feeds will not be refreshed automatically.
 Below when we mention feeds, we mean both RSS and ATOM feeds.
 
-## Installation or Update: ##
+## Installation or Update ##
 
-If you used a previous version of this addon, and there is an RSS or personalFeeds folder in your personal NVDA configuration folder, 
+If you used a previous version of this addon, and there is an RSS or personalFeeds folder in your personal NVDA configuration folder,
 when installing the current version, a dialog will ask if you want to upgrade or install.
-Choose update to preserve your saved feeds and to continue using them in the new installed version of readFeeds. 
+Choose update to preserve your saved feeds and to continue using them in the new installed version of readFeeds.
 
-## Commands: ##
+## Commands ##
 
 ### Read Feeds menu ###
 
 You can access the Read Feeds submenu from the nvda menu, Tools submenu, where the following menu options are available:
 
-#### Feeds... ####
+#### Feeds ####
 
 Opens a dialog with the following controls:
 
 * Filter by: An edit box to search previously saved feeds.
-* A list of the saved feeds.
+* A list of the saved feeds, focused when the dialog is opened.
 * List of articles: Opens a dialog which presents the articles list from your current feed. Select the article you want to read and press Enter or Open web page of selected article button to open the corresponding page in your browser. Press About article button to open a dialog showing title and link of the selected article; from this dialog, you'll be able to copy this info to the clipboard.
 * Open feed: Opens the selected feed in the default application.
 * Open feed as HTML: Opens the selected feed in the default web browser. You will be able to show or hide publication dates and buttons to copy information about articles to clipboard.
@@ -42,15 +42,15 @@ Opens a dialog with the following controls:
 * If a feed named tempFeed is created, please rename it, as this file could be replaced when needed to create a feed whose name already exists.
 * The feed set as the default can't be removed. The addressFile feed will be use as the default when the configuration is reset, so it can't be deleted.
 
-#### Copy feeds folder... ####
+#### Copy feeds folder ####
 
 Opens a dialog to choose a folder where you can save the personalFeeds directory of your feeds. By default the selected folder is the NVDA's configuration directory, which will create the personalFeeds directory.
 
-#### Restore feeds... ####
+#### Restore feeds ####
 
 Opens a dialog to select a folder which replaces your feeds in the personalFeeds folder. Make sure you load a folder containing feeds URLs.
 
-### Keyboard commands: ###
+### Keyboard commands ###
 
 * Ctrl+Shift+NVDA+Space: Announces current article's URL. Pressing twice will open the web page.
 * Ctrl+Shift+NVDA+8: Refreshes the selected feed and announces its most recent title.
@@ -58,7 +58,7 @@ Opens a dialog to select a folder which replaces your feeds in the personalFeeds
 * Ctrl+Shift+NVDA+U: Announces previous feed title.
 * Ctrl+Shift+NVDA+O: Announces next feed title.
 
-## Notifications: ##
+## Notifications ##
 
 * When the title or URL have been copied.
 * When unable to connect/refresh a feed, or the URL does not correspond to a valid feed.
@@ -70,7 +70,8 @@ Opens a dialog to select a folder which replaces your feeds in the personalFeeds
 * Added a button to open the selected feed as HTML in the default web browser.
 * If a new feed cannot be created, this will be notified in an error dialog.
 * Improved order and presentation of some articles.
-* More feed supported.
+* More feeds may be supported.
+* When the feeds dialog is opened, the list of feeds will be focused instead of the search edit box.
 
 ## Changes for 9.0 ##
 
@@ -108,7 +109,6 @@ Opens a dialog to select a folder which replaces your feeds in the personalFeeds
 * The visual presentation of the dialogs has been enhanced, adhering to the appearance of the dialogs shown in NVDA.
 * The default feed is saved on the NVDA's configuration. Therefore, it's possible to set different default feeds in configuration profiles.
 * Requires NVDA 2016.4.
-
 
 ## Changes for 2.0 ##
 
