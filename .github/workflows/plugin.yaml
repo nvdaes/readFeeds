@@ -83,9 +83,7 @@ jobs:
     - name: Quit NVDA
       run: pythonw.exe nvda.pyw -q
     - name: Pause
-      uses: jakejarvis/wait-action@master
-      with:
-        time: '10s'
+      run: TIMEOUT /T 10
     - name: Upload log
       uses: actions/upload-artifact@v2
       with:
