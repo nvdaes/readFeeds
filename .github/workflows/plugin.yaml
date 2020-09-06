@@ -21,6 +21,10 @@ jobs:
         pip install Markdown
         pip install flake8
         pip install flake8-tabs
+    - name: Download flake8.ini
+      run: curl -O https://github.com/nvaccess/nvda/blob/master/tests/lint/flake8.ini
+    - name: Lint add-on
+      run: flake8 --config flake8.ini --exit-zero addon
     - name: Build add-on
       run: scons
       shell: cmd
@@ -76,9 +80,6 @@ jobs:
       run: |
         move *.nvda-addon addon.zip
         expand-archive addon.zip source\userConfig\addons\addon
-    - name: Lint add-on
-      run: scons lint source\userConfig\addons\addon
-      shell: cmd
     - name: Start NVDA
       run: |
         cd source
