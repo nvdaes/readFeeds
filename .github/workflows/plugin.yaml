@@ -76,6 +76,7 @@ jobs:
         expand-archive addon.zip source\userConfig\addons\addon
     - name: Lint
       run: scons lint base=origin/master
+      shell: cmd
     - name: Start NVDA
       run: |
         cd source
