@@ -193,7 +193,7 @@ class FeedsDialog(wx.Dialog):
 		mainSizer.Add(sHelper.sizer, flag=wx.ALL, border=guiHelper.BORDER_FOR_DIALOGS)
 		mainSizer.Fit(self)
 		self.Sizer = mainSizer
-	self.feedsList.SetFocus()
+		self.feedsList.SetFocus()
 		self.CentreOnScreen()
 
 	def __del__(self):
