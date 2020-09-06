@@ -80,10 +80,12 @@ jobs:
       run: |
         cd source
         pythonw.exe nvda.pyw -m --debug-logging
-    - name: Dir # Trying to upload full log
-      run: dir
     - name: Quit NVDA
       run: pythonw.exe nvda.pyw -q
+    - name: Pause
+      uses: jakejarvis/wait-action@master
+      with:
+        time: '10s'
     - name: Upload log
       uses: actions/upload-artifact@v2
       with:
