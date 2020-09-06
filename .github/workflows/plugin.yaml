@@ -24,6 +24,11 @@ jobs:
     - name: Build add-on
       run: scons
       shell: cmd
+    - name: Upload add-on
+      uses: actions/upload-artifact@v2
+      with:
+        name: nvda-addon
+        path: *.nvda-addon
     - name: Create Release
       if: contains(github.ref, '/tags/')
       uses: actions/create-release@latest
@@ -63,6 +68,10 @@ jobs:
     - name: Prepare NVDA's source tree
       run: scons source
       shell: cmd
+    - name: Download add-on
+      uses: actions/download-artifact@v2
+      with:
+        name: nvda-addon
     # - name: Lint with flake8
       # run:
         # flake8 --exit-zero addon
