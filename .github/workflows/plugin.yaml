@@ -10,17 +10,11 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-    - name: Set up Python 3.7
+    - name: Set up Python 3.7 x86
       uses: actions/setup-python@v2
       with:
         python-version: 3.7
         architecture: x86
-    - name: Install dependencies
-      run: |
-        pip install scons
-        pip install Markdown
-        pip install flake8
-        pip install flake8-tabs
     - name: Checkout NVDA
       uses: actions/checkout@v2
       with:
@@ -31,6 +25,12 @@ jobs:
       run: |
         cd nvda
         scons source
+    - name: Install dependencies
+      run: |
+        pip install scons==3.0
+        pip install Markdown
+        pip install flake8
+        pip install flake8-tabs
     # - name: Lint with flake8
       # run:
         # flake8 --exit-zero addon
