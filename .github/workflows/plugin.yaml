@@ -1,4 +1,4 @@
-name: Build and test addon with NVDA's plugin
+name: Build and release NVDA add-on
 
 on: [push, pull_request]
 
@@ -10,18 +10,69 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
+    - name: Set up Python 3.7
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.7
     - name: Install dependencies
       run: |
         pip install scons
         pip install Markdown
         pip install flake8
         pip install flake8-tabs
+    - name: Download dependencies
+      run: |
+        curl -O https://github.com/nvaccess/nvda/blob/master/tests/lint/flake8.ini
+        curl -O https://github.com/nvaccess/nvda-misc-deps/blob/fc1e9c47dc7f797fa0bca6cd91a32590fbf30edf/tools/msgfmt.exe
+        curl -O https://github.com/nvaccess/nvda-misc-deps/blob/fc1e9c47dc7f797fa0bca6cd91a32590fbf30edf/tools/xgettext.exe
     - name: Lint with flake8
       run:
-        flake8 --config .github/extra_resources/setup.cfg --exit-zero addon
+        flake8 --config flake8.ini --exit-zero addon
         # stop the build if there are Python syntax errors or undefined names
         # flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         # flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Build add-on
       run: scons
+    - name: Build pot file
+      run: scons pot
+    - name: Checkout NVDA
+      uses: actions/checkout@v2
+      with:
+        repository: nvaccess/nvda
+        ref: release-2020.2
+        path: nvda
+        submodules: recursive
+    - name: Prepare NVDA's source tree
+      run: |
+        cd nvda
+        scons source
+        cd..
+      shel: cmd
+    - name: Copy NVDA resources
+      run: |
+        move *.nvda-addon addon.zip
+        expand-archive addon.zip nvda\source\userConfig\addons\addon
+    - name: Start NVDA
+      run: |
+        cd nvda\source
+        pythonw.exe nvda.pyw
+      shell: cmd
+    - name: Create Release
+      if: contains(github.ref, '/tags/')
+      uses: actions/create-release@latest
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+      with:
+        tag_name: ${{ github.ref }}
+        release_name: Release ${{ github.ref }}
+        prerelease: ${{ endsWith(github.ref, '-dev') }}
+    - name: Upload binaries to release
+      if: contains(github.ref, '/tags/')
+      uses: svenstaro/upload-release-action@v1-release
+      with:
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        file: '*.nvda-addon'
+        tag: ${{ github.ref }}
+        overwrite: true
+        file_glob: true

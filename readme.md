@@ -26,7 +26,7 @@ You can access the Read Feeds submenu from the nvda menu, Tools submenu, where t
 Opens a dialog with the following controls:
 
 * Filter by: An edit box to search previously saved feeds.
-* A list of the saved feeds.
+* A list of the saved feeds, focused when the dialog is opened.
 * List of articles: Opens a dialog which presents the articles list from your current feed. Select the article you want to read and press Enter or Open web page of selected article button to open the corresponding page in your browser. Press About article button to open a dialog showing title and link of the selected article; from this dialog, you'll be able to copy this info to the clipboard.
 * Open feed: Opens the selected feed in the default application.
 * Open feed as HTML: Opens the selected feed in the default web browser. You will be able to show or hide publication dates and buttons to copy information about articles to clipboard.
@@ -70,7 +70,8 @@ Opens a dialog to select a folder which replaces your feeds in the personalFeeds
 * Added a button to open the selected feed as HTML in the default web browser.
 * If a new feed cannot be created, this will be notified in an error dialog.
 * Improved order and presentation of some articles.
-* More feed supported.
+* More feeds may be supported.
+* When the feeds dialog is opened, the list of feeds will be focused instead of the search edit box.
 
 ## Changes for 9.0 ##
 
