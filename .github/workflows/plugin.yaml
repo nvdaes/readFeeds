@@ -76,7 +76,7 @@ jobs:
         Expand-Archive addon.zip source\userConfig\addons\addon
         Copy-Item -Path source\userConfig\addons\* -Destination lintAddon
     - name: Lint
-      run: scons lint base=origin/master --no-warn-script-location > lint.txt
+      run: scons lint base=origin/master > lint.txt
       shell: cmd
     - name: Upload lint report
       uses: actions/upload-artifact@v2
