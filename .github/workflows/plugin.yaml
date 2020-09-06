@@ -31,6 +31,7 @@ jobs:
       run: |
         cd nvda
         scons source
+      shell: cmd
     # - name: Lint with flake8
       # run:
         # flake8 --exit-zero addon
@@ -40,6 +41,7 @@ jobs:
         # flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Build add-on
       run: scons
+      shell: cmd
     - name: Create Release
       if: contains(github.ref, '/tags/')
       uses: actions/create-release@latest
