@@ -219,7 +219,7 @@ class FeedsDialog(wx.Dialog):
 		filter = self.searchTextEdit.Value
 		if filter:
 			filter = re.escape(filter)
-			filterReg = re.compile(r'(?=.*?' + r')(?=.*?'.join(filter.split('\ ')) + r')', re.U|re.IGNORECASE)
+			filterReg = re.compile(r"(?=.*?" + r")(?=.*?".join(filter.split(r"\ ")) + r")", re.U | re.IGNORECASE)
 		for choice in self.choices:
 			if filter and not filterReg.match(choice):
 				continue
