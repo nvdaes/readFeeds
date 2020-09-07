@@ -666,11 +666,11 @@ class Feed(object):
 
 	def buildHtml(self):
 		raw = "<!DOCTYPE html><html lang=\"" + self.getFeedLanguage()
-		+ "\"><head><title>" + self.getFeedName()
-		+ "</title><meta charset=\"utf-8\" />"
-		+ "<meta http-equiv='X-UA-Compatible' content='IE=edge'>"
-		+ "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"></head>"
-		+ "<body><h1><a href=\"" + self.getFeedUrl() + "\">" + self.getFeedName() +"</a></h1><p><label>"
+		raw += "\"><head><title>" + self.getFeedName()
+		raw += "</title><meta charset=\"utf-8\" />"
+		raw += "<meta http-equiv='X-UA-Compatible' content='IE=edge'>"
+		raw += "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"></head>"
+		raw += "<body><h1><a href=\"" + self.getFeedUrl() + "\">" + self.getFeedName() +"</a></h1><p><label>"
 		# Translators: Label of a checkbox to choose if date should be presented for each feed.
 		label = _("Show date")
 		raw += label
@@ -681,7 +681,7 @@ class Feed(object):
 		raw += "<input id=\"copy\" accesskey=\"8\" type=\"checkbox\" onclick=\"setCopyPresentation()\"></label></p>"
 		for index in range(self.getNumberOfArticles()):
 			raw += "<div class=\"heading\"><h2><a href=\""
-			+ self.getArticleLink(index) + "\">" + self.getArticleTitle(index) + "</a></h2>"
+			raw += self.getArticleLink(index) + "\">" + self.getArticleTitle(index) + "</a></h2>"
 			# Translators: Label for a button to copy to clipboard.
 			label = _("Copy") + " " + str(index+1)
 			raw += "<button aria-hidden=\"true\" aria-pressed=\"false\">" + label + "</button></div>"
@@ -692,7 +692,7 @@ class Feed(object):
 			enclosure = self.getArticleEnclosure(index)
 			if enclosure:
 				raw += "<div><a href=\"" + enclosure.get("url") + "\">" + enclosure.get("type")
-				+ enclosure.get("length") / 1024 + "kB</div>"
+				raw += enclosure.get("length") / 1024 + "kB</div>"
 		raw += "<script src=\"feed.js\"></script></body></html>"
 		with open(os.path.join(HTML_PATH, "feed.html"), "w", encoding="utf-8") as f:
 			f.write(raw)
