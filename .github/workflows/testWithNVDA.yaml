@@ -35,8 +35,8 @@ jobs:
         path: "*.nvda-addon"
     - name: lint
       run: |
-        set mergeBase = git merge-base origin/master HEAD
-        git diff -U0 %mergeBase%
+        $mergeBase = git merge-base origin/master HEAD
+        git diff -U0 $mergeBase
         type current.diff | py -3 -m flake8 --diff --config="extraResources/flake8.ini"
         
   nvda:
