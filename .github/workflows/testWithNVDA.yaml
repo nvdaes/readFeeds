@@ -63,7 +63,7 @@ jobs:
         Expand-Archive addon.zip source\userConfig\addons\addon
     - name: Lint
       run: |
-        scons lint
+        pip install -r tests\lint\lintInstall\requirements.txt
         set mergeBase = git merge-base origin/master HEAD
         git diff -U0 %mergeBase% -- source/userConfig/addons/addon/.
         type current.diff | py -3 -m flake8 --diff --config="tests/lint/flake8.ini"
