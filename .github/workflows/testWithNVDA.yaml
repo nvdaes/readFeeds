@@ -24,6 +24,7 @@ jobs:
       run: |
         pip install scons
         pip install Markdown
+        pip install -r .github/extraResources/requirements.txt
     - name: Build add-on
       run: scons
       shell: cmd
@@ -32,7 +33,12 @@ jobs:
       with:
         name: nvda-addon
         path: "*.nvda-addon"
-
+    - name: lint
+      run: |
+        set mergeBase = git merge-base origin/master HEAD
+        git diff -U0 %mergeBase%
+        type current.diff | py -3 -m flake8 --diff --config="extraResources/flake8.ini"
+        
   nvda:
   
     needs: addon
@@ -61,18 +67,6 @@ jobs:
       run: |
         move *.nvda-addon addon.zip
         Expand-Archive addon.zip source\userConfig\addons\addon
-    - name: Lint
-      run: |
-        pip install -r tests\lint\lintInstall\requirements.txt
-        set mergeBase = git merge-base origin/master HEAD
-        git diff -U0 %mergeBase% -- source/userConfig/addons/addon/.
-        type current.diff | py -3 -m flake8 --diff --config="tests/lint/flake8.ini"
-      shell: cmd
-    - name: Upload lint report
-      uses: actions/upload-artifact@v2
-      with:
-        name: lint
-        path: lint.txt
     - name: Start NVDA
       run: |
         cd source
