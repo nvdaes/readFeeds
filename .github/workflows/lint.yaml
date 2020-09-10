@@ -31,6 +31,6 @@ jobs:
           const result = await github.request(diff_url)
           return result.data
     - name: Show data
-      run: flake8 --diff -- config .github/extraResources/flake8.ini py -3 -m "${{steps.diffUrl.outputs.result}}"
+      run: flake8 addon --diff -- config .github/extraResources/flake8.ini py -3 -m "${{steps.diffUrl.outputs.result}}"
       shell: cmd
       
