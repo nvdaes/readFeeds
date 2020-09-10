@@ -29,4 +29,6 @@ jobs:
         script: |
           const diff_url = context.payload.pull_request.diff_url
           const result = await github.request(diff_url)
-    
+          return result.data
+    - name: Show data
+      run: echo "${{steps.diffUrl.outputs.result}}"
