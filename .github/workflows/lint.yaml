@@ -12,7 +12,8 @@ jobs:
     runs-on: windows-latest
 
     steps:
-
+    - name: Checkout code
+      uses: actions/checkout@v2
     - name: Install dependencies
       run: pip install -r .github/extraResources/requirements.txt
     - name: Get diff url

@@ -1,4 +1,4 @@
-name: Build NVDA add-on
+name: Build and test NVDA add-on
 
 on:
   push:
@@ -9,15 +9,13 @@ on:
       - master
 jobs:
 
-  build:
+  addon:
 
     runs-on: windows-latest
 
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-      with:
-        fetch-depth: 0 
     - name: Set up Python 3.7
       uses: actions/setup-python@v2
       with:
