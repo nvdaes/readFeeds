@@ -1,0 +1,28 @@
+name: Lint diff
+
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+
+  diff:
+
+    runs-on: windows-latest
+
+    steps:
+
+    - name: Install dependencies
+      run: pip install -r .github/extraResources/requirements.txt
+    - name: Get diff url
+      id: diffUrl
+      uses: actions/github-script@v3
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            const diff_url = context.payload.pull_request.diff_url
+            const result = await github.request(diff_url)
+    - name: lint
+      run: ${{steps.difUrl.outputs.result.data}} | py -3 -m flake8 --diff --config=".github/extraResources/flake8.ini"
+        

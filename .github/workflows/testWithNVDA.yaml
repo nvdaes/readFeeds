@@ -1,4 +1,4 @@
-name: Build and release NVDA add-on
+name: Build NVDA add-on
 
 on:
   push:
@@ -9,7 +9,7 @@ on:
       - master
 jobs:
 
-  addon:
+  build:
 
     runs-on: windows-latest
 
@@ -26,7 +26,6 @@ jobs:
       run: |
         pip install scons
         pip install Markdown
-        pip install -r .github/extraResources/requirements.txt
     - name: Build add-on
       run: scons
       shell: cmd
@@ -35,10 +34,7 @@ jobs:
       with:
         name: nvda-addon
         path: "*.nvda-addon"
-    - name: lint
-      run: |
-        git diff $(git merge-base origin/master HEAD) -U0 | py -3 -m flake8 --diff --config="extraResources/flake8.ini"
-        
+ 
   nvda:
   
     needs: addon
