@@ -30,5 +30,5 @@ jobs:
             const diff_url = context.payload.pull_request.diff_url
             const result = await github.request(diff_url)
     - name: lint
-      run: ${{steps.difUrl.outputs.result.data}} | py -3 -m flake8 --diff --config=".github/extraResources/flake8.ini"
+      run: ${{steps.diffUrl.outputs.result.data}} | py -3 -m flake8 --diff --config=".github/extraResources/flake8.ini"
         
