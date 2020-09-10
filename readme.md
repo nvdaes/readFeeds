@@ -123,3 +123,4 @@ Opens a dialog to select a folder which replaces your feeds in the personalFeeds
 [2]: http://addons.nvda-project.org/files/get.php?file=rf-dev
 
 [3]: http://addons.nvda-project.org/files/get.php?file=rf-o
+Dummy
