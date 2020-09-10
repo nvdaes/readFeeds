@@ -31,4 +31,4 @@ jobs:
           const result = await github.request(diff_url)
           return result.data
     - name: Show data
-      run: echo "${{steps.diffUrl.outputs.result}}"
+      run: echo ${{steps.diffUrl.outputs.result}}
