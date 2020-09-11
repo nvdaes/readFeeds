@@ -34,7 +34,7 @@ jobs:
           #return result.data
     - name: Lint
       run: |
-        git diff -U0 master...HEAD > flake8.diff
+        git diff -U0 origin/master...HEAD > flake8.diff
         flake8.diff | py -Xutf8 -m flake8 --diff --output-file="flake8.txt" --tee --config="extraResources/flake8.ini"
     - name: Upload lint results
       uses: actions/upload-artifact@v2
