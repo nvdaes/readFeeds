@@ -38,8 +38,9 @@ jobs:
         type flake8.diff | flake8 --diff --output-file=flake8.txt --tee
     - name: Comment on PR
       if: failure()
-      uses: unsplash/comment-on-pr@master
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        msg: "Please note that this pull request introduces flake8 errors."
+      uses: mshick/add-pr-comment@v1
+        with:
+          message: This PR introduces flake8 errors.
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          repo-token-user-login: 'github-actions[bot]' # The user.login for temporary GitHub tokens
+          allow-repeats: false # This is the default
