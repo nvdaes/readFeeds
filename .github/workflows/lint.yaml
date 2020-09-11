@@ -37,10 +37,10 @@ jobs:
         git diff -U0 origin/master...HEAD > flake8.diff
         type flake8.diff | flake8 --diff --output-file=flake8.txt --tee
     - name: Comment on PR
-      if: failure()
       uses: mshick/add-pr-comment@v1
-        with:
-          message: This PR introduces flake8 errors.
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          repo-token-user-login: 'github-actions[bot]' # The user.login for temporary GitHub tokens
-          allow-repeats: false # This is the default
+      if: failure()
+      with:
+        message: This PR introduces flake8 errors.
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        repo-token-user-login: 'github-actions[bot]' # The user.login for temporary GitHub tokens
+        allow-repeats: false # This is the default
