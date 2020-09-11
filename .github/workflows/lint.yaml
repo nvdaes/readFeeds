@@ -35,7 +35,7 @@ jobs:
     - name: Lint
       run: |
         git diff -U0 origin/master...HEAD > flake8.diff
-        type flake8.diff | flake8 --diff --output-file=flake8.txt --tee --config=.github/extraResources/flake8.ini
+        type flake8.diff | flake8 --diff --output-file=flake8.txt --tee
     - name: Upload lint results
       uses: actions/upload-artifact@v2
       if: failure()
