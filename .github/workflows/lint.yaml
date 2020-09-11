@@ -22,7 +22,7 @@ jobs:
       with:
         python-version: 3.7
     - name: Install dependencies
-      run: pip install -r extraResources/requirements.txt
+      run: pip install -r .github/extraResources/requirements.txt
     #- name: Get diff url
       #id: diffUrl
       #uses: actions/github-script@v3
