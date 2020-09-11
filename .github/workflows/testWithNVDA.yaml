@@ -10,6 +10,9 @@ on:
 jobs:
 
   addon:
+  
+  
+    name: addon
 
     runs-on: windows-latest
 
@@ -34,6 +37,8 @@ jobs:
         path: "*.nvda-addon"
  
   nvda:
+  
+    name: NVDA
   
     needs: addon
   
