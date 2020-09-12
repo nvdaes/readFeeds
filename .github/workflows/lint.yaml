@@ -37,11 +37,14 @@ jobs:
         git diff -U0 origin/master...HEAD > flake8.diff
         type flake8.diff | flake8 --config=extraResources/flake8.ini --diff --output-file=flake8.txt --tee
     - name: Comment on PR
-      uses: mshick/add-pr-comment@v1
+      uses: actions/github-script@v3
       if: failure()
       with:
-        message: This PR introduces flake8 errors.
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
-        repo-token-user-login: 'github-actions[bot]' # The user.login for temporary GitHub tokens
-        allow-repeats: true # This is the default
-        
+        github-token: ${{secrets.GITHUB_TOKEN}}
+        script: |
+          github.issues.createComment({
+            issue_number: context.issue.number,
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            body: 'This PR introduces flake8 errors'
+          })
