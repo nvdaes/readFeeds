@@ -22,7 +22,7 @@ jobs:
       with:
         python-version: 3.7
     - name: Install dependencies
-      run: pip install -r extraResources/requirements.txt
+      run: pip install -r /extraResources/requirements.txt
     - name: Lint
       run: |
         git diff -U0 origin/master...HEAD -- addon/. > flake8.diff
