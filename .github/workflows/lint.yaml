@@ -22,11 +22,11 @@ jobs:
       with:
         python-version: 3.7
     - name: Install dependencies
-      run: pip install -r .github/extraResources/requirements.txt
+      run: pip install -r extraResources/requirements.txt
     - name: Lint
       run: |
         git diff -U0 origin/master...HEAD -- addon/. > flake8.diff
-        type flake8.diff | flake8 --config=".github/extraResources/flake8.ini" --diff --output-file=flake8.txt --tee
+        type flake8.diff | flake8 --config=extraResources/flake8.ini --diff --output-file=flake8.txt --tee
     - name: Comment on PR
       uses: actions/github-script@v3
       if: failure()
