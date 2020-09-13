@@ -695,7 +695,7 @@ class Feed(object):
 				raw += enclosure.get("length") / 1024 + "kB</div>"
 		raw += "<script src=\"feed.js\"></script></body></html>"
 		with open(os.path.join(HTML_PATH, "feed.html"), "w", encoding="utf-8") as f:
-		f.write(raw)
+			f.write(raw)
 
 ### Global plugin
 

@@ -1,6 +1,6 @@
 # -*- coding: UTF-8 -*-
 
-#installTasks for the readFeeds add-on
+# installTasks for the readFeeds add-on
 # Copyright (C) 2013-2019 Noelia Ruiz Martínez, other contributors
 # Released under GPL2
 
@@ -17,6 +17,7 @@ FEEDS_PATH = os.path.join(ADDON_DIR, "globalPlugins", "readFeeds", "personalFeed
 CONFIG_PATH = globalVars.appArgs.configPath
 
 addonHandler.initTranslation()
+
 
 def onInstall():
 	addonPath = [os.path.join(CONFIG_PATH, "RSS"), os.path.join(CONFIG_PATH, "personalFeeds")]
