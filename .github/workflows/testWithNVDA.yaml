@@ -35,6 +35,10 @@ jobs:
       with:
         name: nvda-addon
         path: "*.nvda-addon"
+        
+    - name: Build pot
+      run: scons pot
+      shell: cmd
  
   nvda:
   
