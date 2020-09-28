@@ -189,6 +189,7 @@ class FeedsDialog(wx.Dialog):
 		self.Bind(wx.EVT_CLOSE, self.onClose)
 		self.EscapeId = wx.ID_CLOSE
 
+
 		self.onFeedsListChoice(None)
 		mainSizer.Add(sHelper.sizer, flag=wx.ALL, border=guiHelper.BORDER_FOR_DIALOGS)
 		mainSizer.Fit(self)
@@ -392,7 +393,9 @@ class ArticlesDialog(wx.Dialog):
 
 	def onClose(self, evt):
 		self.Parent.Enable()
+		self.Parent.feedsList.SetFocus()
 		self.Destroy()
+		self.parent.feedsList.SetFocus()
 
 class CopyDialog(wx.Dialog):
 
