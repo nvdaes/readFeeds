@@ -15,22 +15,28 @@ jobs:
 
     - name: Checkout code
       uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
     - name: Set up Python 3.7
       uses: actions/setup-python@v2
       with:
         python-version: 3.7
     - name: Install dependencies
-      run: pip install -r .github/extraResources/requirements.txt
-    - name: Get diff url
-      id: diffUrl
+      run: pip install -r requirements.txt
+    - name: Lint
+      run: |
+        git diff -U0 origin/master...HEAD -- addon/. > flake8.diff
+        type flake8.diff | flake8 --diff --output-file=flake8.txt --tee
+    - name: Comment on PR
       uses: actions/github-script@v3
+      if: failure()
       with:
         github-token: ${{secrets.GITHUB_TOKEN}}
         script: |
-          const diff_url = context.payload.pull_request.diff_url
-          const result = await github.request(diff_url)
-          return result.data
-    - name: Lint
-      run: flake8 --diff -- config .github/extraResources/flake8.ini py -3 -m "${{steps.diffUrl.outputs.result}}"
-      shell: cmd
-      
+          github.issues.createComment({
+            issue_number: context.issue.number,
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            body: 'This PR introduces flake8 errors'
+          })
+          
