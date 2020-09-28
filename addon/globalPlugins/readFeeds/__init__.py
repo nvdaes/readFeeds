@@ -212,7 +212,7 @@ class FeedsDialog(wx.Dialog):
 				_('Cannot add feed: %s' % e),
 				# Translators: error message.
 				_("Error"),
-				wx.OK|wx.ICON_ERROR
+				wx.OK | wx.ICON_ERROR
 			)
 			raise e
 		feedName = api.filterFileName(feed.getFeedName()).strip()
