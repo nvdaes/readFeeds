@@ -115,13 +115,14 @@ class FeedsDialog(wx.Dialog):
 		FeedsDialog._instance = self
 		# Translators: The title of a dialog.
 		super(
+			# Translators: Title of a dialog.
 			FeedsDialog, self).__init__(parent, title=_("Feeds: {defaultFeed} ({configProfile})".format(configProfile=getActiveProfile(),
 			defaultFeed=config.conf["readFeeds"]["addressFile"]))
 		)
 
 		mainSizer = wx.BoxSizer(wx.VERTICAL)
 		sHelper = guiHelper.BoxSizerHelper(self,orientation=wx.VERTICAL)
-		# Label of a dialog (message translated in NVDA core in different contexts).
+		# Translators: Label of a dialog (message translated in NVDA's core in different contexts).
 		searchTextLabel = _("&Filter by:")
 		self.searchTextEdit = sHelper.addLabeledControl(searchTextLabel, wx.TextCtrl)
 		self.searchTextEdit.Bind(wx.EVT_TEXT, self.onSearchEditTextChange)
@@ -204,8 +205,15 @@ class FeedsDialog(wx.Dialog):
 		try:
 			feed = Feed(address)
 		except Exception as e:
-			# Translators: Message presented when a feed cannot be added.
-			wx.CallAfter(gui.messageBox,_('Cannot add feed: %s' % e), _("Error"), wx.OK|wx.ICON_ERROR)
+			
+			wx.CallAfter(
+				gui.messageBox,
+				# Translators: Message presented when a feed cannot be added.
+				_('Cannot add feed: %s' % e),
+				# Translators: error message.
+				_("Error"),
+				wx.OK|wx.ICON_ERROR
+			)
 			raise e
 		feedName = api.filterFileName(feed.getFeedName()).strip()
 		if os.path.isfile(os.path.join(FEEDS_PATH, "%s.txt" % feedName)):
@@ -280,6 +288,7 @@ class FeedsDialog(wx.Dialog):
 	def onNew(self, evt):
 		# Translators: The label of a field to enter an address for a new feed.
 		with wx.TextEntryDialog(
+			# Translators: Label of a dialog.
 			self, _("Address of a new feed:"),
 			# Translators: The title of a dialog to create a new feed.
 			_("New feed")
@@ -309,8 +318,8 @@ class FeedsDialog(wx.Dialog):
 		self.feedsList.SetFocus()
 
 	def onRename(self, evt):
-		# Translators: The label of a field to enter a new name for a feed.
 		with wx.TextEntryDialog(
+			# Translators: The label of a field to enter a new name for a feed.
 			self, _("New name:"),
 			# Translators: The title of a dialog to rename a feed.
 			_("Rename feed"), value=self.stringSel
