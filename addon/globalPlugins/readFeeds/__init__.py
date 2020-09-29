@@ -158,7 +158,7 @@ class FeedsDialog(wx.Dialog):
 		# Translators: The label of a button to open a feed as HTML.
 		self.openHtmlButton = buttonHelper.addButton(self, label=_("Open feed as &HTML"))
 		self.openHtmlButton.Bind(wx.EVT_BUTTON, self.onOpenHtml)
-		
+
 		# Translators: The label of a button to add a new feed.
 		newButton = buttonHelper.addButton(self, label=_("&New..."))
 		newButton.Bind(wx.EVT_BUTTON, self.onNew)
@@ -178,7 +178,7 @@ class FeedsDialog(wx.Dialog):
 		# Translators: The label of a button to open a folder containing a backup of feeds.
 		self.openFolderButton = buttonHelper.addButton(self, label=_("Open &folder containing a backup of feeds"))
 		self.openFolderButton.Bind(wx.EVT_BUTTON, self.onOpenFolder)
-		
+
 		feedsListGroupContents.Add(buttonHelper.sizer)
 		feedsListGroupSizer.Add(feedsListGroupContents, border=guiHelper.BORDER_FOR_DIALOGS, flag=wx.ALL)
 		sHelper.addItem(feedsListGroupSizer)
@@ -189,7 +189,6 @@ class FeedsDialog(wx.Dialog):
 		sHelper.addDialogDismissButtons(closeButton)
 		self.Bind(wx.EVT_CLOSE, self.onClose)
 		self.EscapeId = wx.ID_CLOSE
-
 
 		self.onFeedsListChoice(None)
 		mainSizer.Add(sHelper.sizer, flag=wx.ALL, border=guiHelper.BORDER_FOR_DIALOGS)
@@ -205,7 +204,6 @@ class FeedsDialog(wx.Dialog):
 		try:
 			feed = Feed(address)
 		except Exception as e:
-			
 			wx.CallAfter(
 				gui.messageBox,
 				# Translators: Message presented when a feed cannot be added.
@@ -277,6 +275,7 @@ class FeedsDialog(wx.Dialog):
 		with open(os.path.join(FEEDS_PATH, "%s.txt" % self.stringSel), "r", encoding="utf-8") as f:
 			address = f.read()
 		os.startfile(address)
+		self.onClose(None)
 
 	def onOpenHtml(self, evt):
 		with open(os.path.join(FEEDS_PATH, "%s.txt" % self.stringSel), "r", encoding="utf-8") as f:
@@ -284,6 +283,7 @@ class FeedsDialog(wx.Dialog):
 		self.feed = Feed(address)
 		self.feed.buildHtml()
 		os.startfile(os.path.join(HTML_PATH, "feed.html"))
+		self.onClose(None)
 
 	def onNew(self, evt):
 		# Translators: The label of a field to enter an address for a new feed.
@@ -294,9 +294,11 @@ class FeedsDialog(wx.Dialog):
 			_("New feed")
 		) as d:
 			if d.ShowModal() == wx.ID_CANCEL:
+				self.feedsList.SetFocus()
 				return
 			name = self.createFeed(d.Value)
 			self.feedsList.Append(name)
+			self.feedsList.SetFocus()
 
 	def onDelete(self, evt):
 		if gui.messageBox(
@@ -306,11 +308,13 @@ class FeedsDialog(wx.Dialog):
 			translate("Confirm Deletion"),
 			wx.YES | wx.NO | wx.ICON_QUESTION, self
 		) == wx.NO:
+			self.feedsList.SetFocus()
 			return
 		os.remove(os.path.join(FEEDS_PATH, "%s.txt" % self.stringSel))
 		self.feedsList.Delete(self.sel)
 		self.feedsList.Selection = 0
 		self.onFeedsListChoice(None)
+		self.feedsList.SetFocus()
 
 	def onDefault(self, evt):
 		config.conf["readFeeds"]["addressFile"] = self.stringSel
@@ -325,6 +329,7 @@ class FeedsDialog(wx.Dialog):
 			_("Rename feed"), value=self.stringSel
 		) as d:
 			if d.ShowModal() == wx.ID_CANCEL or not d.Value:
+				self.feedsList.SetFocus()
 				return
 			curName = "%s.txt" % self.stringSel
 			newName = "%s.txt" % api.filterFileName(d.Value)
@@ -333,6 +338,7 @@ class FeedsDialog(wx.Dialog):
 			os.path.join(FEEDS_PATH, newName)
 		)
 		self.feedsList.SetString(self.sel, os.path.splitext(newName)[0])
+		self.feedsList.SetFocus()
 
 	def onClose(self, evt):
 		self.Destroy()
@@ -343,6 +349,7 @@ class FeedsDialog(wx.Dialog):
 		if not os.path.isdir(path):
 			os.makedirs(path)
 		os.startfile(path)
+		self.onClose(None)
 
 class ArticlesDialog(wx.Dialog):
 
@@ -404,7 +411,7 @@ class ArticlesDialog(wx.Dialog):
 		self.Parent.Enable()
 		self.Parent.feedsList.SetFocus()
 		self.Destroy()
-		self.parent.feedsList.SetFocus()
+
 
 class CopyDialog(wx.Dialog):
 
