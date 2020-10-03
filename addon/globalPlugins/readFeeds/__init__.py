@@ -565,7 +565,7 @@ class AddonSettingsPanel(SettingsPanel):
 	def onSave(self):
 		config.conf["readFeeds"]["filterAfterList"] = self.filterAfterList.GetValue()
 
-# Feed object 
+# Feed object
 
 class Feed(object):
 
