@@ -41,6 +41,7 @@ Opens a dialog with the following controls:
 
 * If a feed named tempFeed is created, please rename it, as this file could be replaced when needed to create a feed whose name already exists.
 * The feed set as the default can't be removed. The addressFile feed will be use as the default when the configuration is reset, so it can't be deleted.
+* The Filter by edit box can be placed after the list of feeds from NVDA's menu, Preferences, Settings, Read feeds category.
 
 #### Copy feeds folder ####
 
@@ -72,6 +73,7 @@ Opens a dialog to select a folder which replaces your feeds in the personalFeeds
 * Improved order and presentation of some articles.
 * More feeds may be supported.
 * When the feeds dialog is opened, the list of feeds will be focused instead of the search edit box.
+* You can choose if the search edit box is placed after the list of feeds, useful to focus the list event when switching from another window, for example by pressing alt+alt without closing the feeds dialog.
 
 ## Changes for 9.0 ##
 

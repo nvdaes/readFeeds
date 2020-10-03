@@ -15,10 +15,11 @@ import scriptHandler
 from scriptHandler import script
 import api
 import gui
-from gui import guiHelper
+from gui import SettingsPanel, NVDASettingsDialog, guiHelper
 import core
 import wx
 import ui
+from globalCommands import SCRCAT_CONFIG
 from logHandler import log
 import re
 from .skipTranslation import translate
@@ -29,9 +30,10 @@ import datetime
 import locale
 addonHandler.initTranslation()
 
-### Constants
+# Constants
 
 ADDON_SUMMARY = addonHandler.getCodeAddon().manifest['summary']
+ADDON_PANEL_TITLE = ADDON_SUMMARY
 FEEDS_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), "personalFeeds"))
 HTML_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), "html"))
 CONFIG_PATH = globalVars.appArgs.configPath
@@ -40,14 +42,15 @@ DEFAULT_ADDRESS_FILE = "addressFile"
 CAN_NOT_REPORT = _("Unable to refresh feed. Check your Internet conectivity or that the specified feed address is correct.")
 TAG_REGEXP = re.compile('<.*?>')
 
-### Configuration
+# Configuration
 
 confspec = {
 	"addressFile": "string(default=addressFile)",
+	"filterAfterList": "boolean(default=False)",
 }
 config.conf.spec["readFeeds"] = confspec
 
-### Dialogs
+# Dialogs
 
 def getActiveProfile():
 	activeProfile = config.conf.profiles[-1].name
@@ -547,7 +550,22 @@ class RestoreDialog(wx.Dialog):
 	def onCancel(self, evt):
 		self.Destroy()
 
-### Feed object 
+
+class AddonSettingsPanel(SettingsPanel):
+
+	title = ADDON_PANEL_TITLE
+
+	def makeSettings(self, settingsSizer):
+		sHelper = guiHelper.BoxSizerHelper(self, sizer=settingsSizer)
+
+		# Translators: label of a dialog.
+		self.filterAfterList = sHelper.addItem(wx.CheckBox(self, label=_("&Search edit box after feeds list")))
+		self.filterAfterList.SetValue(config.conf["readFeeds"]["filterAfterList"])
+
+	def onSave(self):
+		config.conf["readFeeds"]["filterAfterList"] = self.filterAfterList.GetValue()
+
+# Feed object 
 
 class Feed(object):
 
@@ -716,7 +734,7 @@ class Feed(object):
 		with open(os.path.join(HTML_PATH, "feed.html"), "w", encoding="utf-8") as f:
 			f.write(raw)
 
-### Global plugin
+# Global plugin
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
@@ -724,6 +742,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def __init__(self):
 		super(GlobalPlugin, self).__init__()
+		NVDASettingsDialog.categoryClasses.append(AddonSettingsPanel)
 		self.menu = gui.mainFrame.sysTrayIcon.toolsMenu
 		self.readFeedsMenu = wx.Menu()
 		# Translators: the name of a submenu.
@@ -743,6 +762,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def terminate(self):
 		try:
 			self.menu.Remove(self.mainItem)
+			NVDASettingsDialog.categoryClasses.remove(AddonSettingsPanel)
 		except:
 			pass
 
@@ -784,6 +804,17 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	)
 	def script_activateRestoreDialog(self, gesture):
 		wx.CallAfter(self.onRestore, None)
+
+	def onSettings(self, evt):
+		gui.mainFrame._popupSettingsDialog(NVDASettingsDialog, AddonSettingsPanel)
+
+	@script(
+		# Translators: message presented in input mode.
+		description=_("Shows the %s settings." % ADDON_SUMMARY),
+		category=SCRCAT_CONFIG
+	)
+	def script_settings(self, gesture):
+		wx.CallAfter(self.onSettings, None)
 
 	def getFirstArticle(self):
 		addressFile = "%s.txt" % config.conf["readFeeds"]["addressFile"]
