@@ -50,6 +50,7 @@ confspec = {
 }
 config.conf.spec["readFeeds"] = confspec
 
+
 def onSettings(evt):
 	gui.mainFrame._popupSettingsDialog(NVDASettingsDialog, AddonSettingsPanel)
 
