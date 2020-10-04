@@ -50,6 +50,9 @@ confspec = {
 }
 config.conf.spec["readFeeds"] = confspec
 
+def onSettings(evt):
+	gui.mainFrame._popupSettingsDialog(NVDASettingsDialog, AddonSettingsPanel)
+
 # Dialogs
 
 def getActiveProfile():
@@ -127,8 +130,8 @@ class FeedsDialog(wx.Dialog):
 		sHelper = guiHelper.BoxSizerHelper(self,orientation=wx.VERTICAL)
 		# Translators: Label of a dialog (message translated in NVDA's core in different contexts).
 		searchTextLabel = _("&Filter by:")
-		self.searchTextEdit = sHelper.addLabeledControl(searchTextLabel, wx.TextCtrl)
-		self.searchTextEdit.Bind(wx.EVT_TEXT, self.onSearchEditTextChange)
+		if not config.conf["readFeeds"]["filterAfterList"]:
+			self.searchTextEdit = sHelper.addLabeledControl(searchTextLabel, wx.TextCtrl)
 
 		feedsListGroupSizer = wx.StaticBoxSizer(wx.StaticBox(self), wx.HORIZONTAL)
 		feedsListGroupContents = wx.BoxSizer(wx.HORIZONTAL)
@@ -152,6 +155,11 @@ class FeedsDialog(wx.Dialog):
 
 		feedsListGroupContents.Add(changeFeedsSizer, flag = wx.EXPAND)
 		feedsListGroupContents.AddSpacer(guiHelper.SPACE_BETWEEN_ASSOCIATED_CONTROL_HORIZONTAL)
+
+		if config.conf["readFeeds"]["filterAfterList"]:
+			self.searchTextEdit = sHelper.addLabeledControl(searchTextLabel, wx.TextCtrl)
+
+		self.searchTextEdit.Bind(wx.EVT_TEXT, self.onSearchEditTextChange)
 
 		buttonHelper = guiHelper.ButtonHelper(wx.VERTICAL)
 		# Translators: The label of a button to open a feed.
@@ -182,6 +190,9 @@ class FeedsDialog(wx.Dialog):
 		self.openFolderButton = buttonHelper.addButton(self, label=_("Open &folder containing a backup of feeds"))
 		self.openFolderButton.Bind(wx.EVT_BUTTON, self.onOpenFolder)
 
+		# Translators: The label of a button to open the settings dialog for readFeeds.
+		self.settingsButton = buttonHelper.addButton(self, label=_("&Preferences..."))
+		self.settingsButton.Bind(wx.EVT_BUTTON, onSettings)
 		feedsListGroupContents.Add(buttonHelper.sizer)
 		feedsListGroupSizer.Add(feedsListGroupContents, border=guiHelper.BORDER_FOR_DIALOGS, flag=wx.ALL)
 		sHelper.addItem(feedsListGroupSizer)
@@ -805,16 +816,13 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def script_activateRestoreDialog(self, gesture):
 		wx.CallAfter(self.onRestore, None)
 
-	def onSettings(self, evt):
-		gui.mainFrame._popupSettingsDialog(NVDASettingsDialog, AddonSettingsPanel)
-
 	@script(
 		# Translators: message presented in input mode.
 		description=_("Shows the %s settings." % ADDON_SUMMARY),
 		category=SCRCAT_CONFIG
 	)
 	def script_settings(self, gesture):
-		wx.CallAfter(self.onSettings, None)
+		wx.CallAfter(onSettings, None)
 
 	def getFirstArticle(self):
 		addressFile = "%s.txt" % config.conf["readFeeds"]["addressFile"]
