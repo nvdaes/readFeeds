@@ -290,7 +290,6 @@ class FeedsDialog(wx.Dialog):
 		with open(os.path.join(FEEDS_PATH, "%s.txt" % self.stringSel), "r", encoding="utf-8") as f:
 			address = f.read()
 		os.startfile(address)
-		self.onClose(None)
 
 	def onOpenHtml(self, evt):
 		with open(os.path.join(FEEDS_PATH, "%s.txt" % self.stringSel), "r", encoding="utf-8") as f:
@@ -298,7 +297,6 @@ class FeedsDialog(wx.Dialog):
 		self.feed = Feed(address)
 		self.feed.buildHtml()
 		os.startfile(os.path.join(HTML_PATH, "feed.html"))
-		self.onClose(None)
 
 	def onNew(self, evt):
 		# Translators: The label of a field to enter an address for a new feed.
@@ -364,7 +362,6 @@ class FeedsDialog(wx.Dialog):
 		if not os.path.isdir(path):
 			os.makedirs(path)
 		os.startfile(path)
-		self.onClose(None)
 
 class ArticlesDialog(wx.Dialog):
 
