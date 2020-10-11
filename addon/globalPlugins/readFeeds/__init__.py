@@ -592,7 +592,7 @@ class Feed(object):
 		locale.setlocale(locale.LC_TIME, "en")
 		try:
 			if self.getFeedType() == u'rss':
-				date =  article.find(self.buildTag("pubDate", self.ns)).text
+				date = article.find(self.buildTag("pubDate", self.ns)).text
 				timestamp = time.mktime(datetime.datetime.strptime(date, "%a, %d %b %Y %H:%M:%S %Z").timetuple())
 			elif self.getFeedType() == 'atom':
 				date = article.find(self.buildTag("updated", self.ns)).text
@@ -666,16 +666,17 @@ class Feed(object):
 
 	def getArticleDescription(self, index=None):
 		if index is None: index = self._index
+		description = None
 		try:
 			if self.getFeedType() == u'rss':
-				return self._articles[index].find(self.buildTag("description", self.ns)).text
+				description = self._articles[index].find(self.buildTag("description", self.ns)).text
 			elif self.getFeedType() == 'atom':
 				description = self._articles[index].find(self.buildTag("summary", self.ns)).text
-				if description == "":
+				if description is None:
 					description = self._articles[index].find(self.buildTag("content", self.ns)).text
-				return description
+			return description
 		except:
-			return ""
+			return None
 
 	def getArticleEnclosure(self, index=None):
 		if index is None: index = self._index
@@ -733,7 +734,7 @@ class Feed(object):
 			raw += "<button aria-hidden=\"true\" aria-pressed=\"false\">" + label + "</button></div>"
 			if self.getArticleDate(index):
 				raw += "<div class=\"date\" aria-hidden=\"true\">" + self.getArticleDate(index) + "</div>"
-			if self.getArticleDescription(index):
+			if self.getArticleDescription(index) is not None:
 				raw += "<div>" + self.getArticleDescription(index) + "</div>"
 			enclosure = self.getArticleEnclosure(index)
 			if enclosure:
@@ -783,7 +784,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	@script(
 		# Translators: message presented in input mode.
-		description=_("Activates the Feeds dialog of %s." % ADDON_SUMMARY)
+		description=_("Activates the Feeds dialog of Read Feeds.")
 	)
 	def script_activateFeedsDialog(self, gesture):
 		wx.CallAfter(self.onFeeds, None)
@@ -796,7 +797,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	@script(
 		# Translators: message presented in input mode.
-		description=_("Activates the Copy dialog of %s." % ADDON_SUMMARY)
+		description=_("Activates the Copy dialog of Read Feeds.")
 	)
 	def script_activateCopyDialog(self, gesture):
 		wx.CallAfter(self.onCopy, None)
@@ -809,7 +810,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	@script(
 		# Translators: message presented in input mode.
-		description=_("Activates the Restore dialog of %s." % ADDON_SUMMARY)
+		description=_("Activates the Restore dialog of Read Feeds.")
 	)
 	def script_activateRestoreDialog(self, gesture):
 		wx.CallAfter(self.onRestore, None)
