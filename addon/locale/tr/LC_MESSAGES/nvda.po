@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Read feeds 4.0\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2020-10-12 15:31+0300\n"
-"PO-Revision-Date: 2020-10-12 15:37+0300\n"
+"PO-Revision-Date: 2020-10-16 11:34+0300\n"
 "Last-Translator: Çağrı Doğan <cagrid@hotmail.com>\n"
 "Language-Team: cagrid@hotmail.com\n"
 "Language: tr\n"
@@ -21,20 +21,24 @@ msgid ""
 "You have installed the ReadFeeds add-on, probably an old and incompatible "
 "version with this one. Do you want to uninstall the old version?"
 msgstr ""
+"Muhtemelen bunun eski ve uyumsuz bir sürümü olan ReadFeeds eklentisini "
+"yüklediniz. Eski sürümü kaldırmak istiyor musunuz?"
 
 #. Translators: the title of a message box dialog.
 msgid "Uninstall incompatible add-on"
-msgstr ""
+msgstr "Uyumsuz eklentiyi kaldırın"
 
 #. Translators: the label of a message box dialog.
 msgid ""
 "Your configuration folder for NVDA contains files that seem to be derived "
 "from a previous version of this add-on. Do you want to update it?"
 msgstr ""
+"NVDA için yapılandırma klasörünüz, bu eklentinin önceki bir sürümünden "
+"türetilmiş gibi görünen dosyalar içeriyor. Güncellemek ister misiniz?"
 
 #. Translators: the title of a message box dialog.
 msgid "Install or update add-on"
-msgstr ""
+msgstr "Eklentiyi yükleyin veya güncelleyin"
 
 #. Translators: message presented when feeds cannot be reported.
 msgid ""
@@ -129,7 +133,7 @@ msgid "&About article..."
 msgstr "Haber hakkında..."
 
 #. Translators: the label of a message box dialog.
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "%s\r\n"
 "\r\n"
@@ -197,19 +201,19 @@ msgid "R&estore feeds..."
 msgstr "Akışları ge&ri yükle..."
 
 #. Translators: message presented in input mode.
-#, fuzzy, python-format
+#, python-format
 msgid "Activates the Feeds dialog of %s."
-msgstr "Akış listesini aç"
+msgstr "%s akış listesini açar."
 
 #. Translators: message presented in input mode.
-#, fuzzy, python-format
+#, python-format
 msgid "Activates the Copy dialog of %s."
-msgstr "Akış kopyalama iletişim kutusunu aç"
+msgstr "%s kopyalama iletişim kutusunu açar."
 
 #. Translators: message presented in input mode.
-#, fuzzy, python-format
+#, python-format
 msgid "Activates the Restore dialog of %s."
-msgstr "Akış yedekleme iletişim kutusunu aç"
+msgstr "%s geri yükleme iletişim kutusunu açar."
 
 #. Translators: message presented in input mode.
 msgid "Refreshes the current feed and announces the most recent article title."
@@ -248,14 +252,13 @@ msgstr "Mevcut haber başlığı ve linkini panoya kopyalar."
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
-#, fuzzy
 msgid "Read Feeds"
-msgstr "R&SS Akışlarını Oku"
+msgstr "Akışları Oku"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Add-on for using NVDA as a feed reader."
-msgstr ""
+msgstr "NVDA'yı bir yayın okuyucu olarak kullanmak için eklenti."
 
 #~ msgid "Open feed as &HTML"
 #~ msgstr "Akışı &HTML olarak aç"
