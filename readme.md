@@ -35,12 +35,14 @@ Opens a dialog with the following controls:
 * Delete: Opens a dialog to delete the selected feed after confirmation.
 * Set default: Sets the selected feed as the default, so that its articles can be accessed with NVDA's gestures.
 * Open folder containing a backup of feeds: Opens a folder which may contain a backup of feeds. This can be useful to explore and delete feeds which shouldn't be imported when the add-on is updated.
+* Preferences: Opens the settings dialog for readFeeds, also available in NVDA's menu, Preferences, settings, readFeeds category.
 * Close: Closes the Feeds dialog.
 
 ##### Notes #####
 
 * If a feed named tempFeed is created, please rename it, as this file could be replaced when needed to create a feed whose name already exists.
 * The feed set as the default can't be removed. The addressFile feed will be use as the default when the configuration is reset, so it can't be deleted.
+* The Filter by edit box can be placed after the Open article button from NVDA's menu, Preferences, Settings, Read feeds category, or pressing the Preferences button of the Feeds dialog.
 
 #### Copy feeds folder ####
 
@@ -72,6 +74,7 @@ Opens a dialog to select a folder which replaces your feeds in the personalFeeds
 * Improved order and presentation of some articles.
 * More feeds may be supported.
 * When the feeds dialog is opened, the list of feeds will be focused instead of the search edit box.
+* You can choose if the search edit box is placed after the list of feeds, useful to focus the list event when switching from another window without closing the Feeds dialog.
 
 ## Changes for 9.0 ##
 
