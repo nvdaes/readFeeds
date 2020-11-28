@@ -668,13 +668,16 @@ class Feed(object):
 		if index is None: index = self._index
 		description = None
 		try:
-			description = self._articles[index].find(self.buildTag("content", self.ns)).text
+			if self.getFeedUrl().startswith("https://www.google.com") and "/alerts/" in self.getFeedUrl():
+				description = self._articles[index].find(self.buildTag("content", self.ns)).text
 			if description is not None:
 				return description
 			if self.getFeedType() == u'rss':
 				description = self._articles[index].find(self.buildTag("description", self.ns)).text
 			elif self.getFeedType() == 'atom':
 				description = self._articles[index].find(self.buildTag("summary", self.ns)).text
+				if description is None:
+					description = self._articles[index].find(self.buildTag("content", self.ns)).text
 			return description
 		except:
 			return None
