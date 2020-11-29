@@ -171,6 +171,10 @@ class FeedsDialog(wx.Dialog):
 		self.openHtmlButton = buttonHelper.addButton(self, label=_("Open feed as &HTML"))
 		self.openHtmlButton.Bind(wx.EVT_BUTTON, self.onOpenHtml)
 
+		# Translators: The label of a button to copy the feed URL.
+		self.copyButton = buttonHelper.addButton(self, label=_("Cop&y feed address"))
+		self.copyButton.Bind(wx.EVT_BUTTON, self.onCopy)
+
 		# Translators: The label of a button to add a new feed.
 		newButton = buttonHelper.addButton(self, label=_("&New..."))
 		newButton.Bind(wx.EVT_BUTTON, self.onNew)
@@ -297,6 +301,18 @@ class FeedsDialog(wx.Dialog):
 		self.feed = Feed(address)
 		self.feed.buildHtml()
 		os.startfile(os.path.join(HTML_PATH, "feed.html"))
+
+	def onCopy(self, evt):
+		with open(os.path.join(FEEDS_PATH, "%s.txt" % self.stringSel), "r", encoding="utf-8") as f:
+			address = f.read()
+		if gui.messageBox(
+			# Translators: the label of a message box dialog.
+			_("Do you want to copy feed address to the clipboard\r\n\r\n{feedAddress}?".format(feedAddress=address)),
+			# Translators: the title of a message box dialog.
+			_("Copy feed address"),
+			wx.YES | wx.NO | wx.CANCEL | wx.ICON_QUESTION
+		) == wx.YES:
+			api.copyToClip(address)
 
 	def onNew(self, evt):
 		# Translators: The label of a field to enter an address for a new feed.

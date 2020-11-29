@@ -5,7 +5,7 @@
 * Download [stable version][1]
 * Download [development version][2]
 
-This addon provides a straightforward  way to read feeds in Atom or RSS formats using NVDA.
+This addon provides a straightforward way to read feeds in Atom or RSS formats using NVDA.
 The feeds will not be refreshed automatically.
 Below when we mention feeds, we mean both RSS and ATOM feeds.
 
@@ -30,6 +30,7 @@ Opens a dialog with the following controls:
 * List of articles: Opens a dialog which presents the articles list from your current feed. Select the article you want to read and press Enter or Open web page of selected article button to open the corresponding page in your browser. Press About article button to open a dialog showing title and link of the selected article; from this dialog, you'll be able to copy this info to the clipboard.
 * Open feed: Opens the selected feed in the default application.
 * Open feed as HTML: Opens the selected feed in the default web browser. You will be able to show or hide publication dates and buttons to copy information about articles to clipboard.
+* Copy feed address: Opens a dialog to confirm if you want to copy the feed address to clipboard.
 * New: Opens a dialog with an edit box to enter the address of a new feed. If the address is valid and the feed can be saved, its name, based on the feed title, will appear at the bottom of the feeds list.
 * Rename: Opens a dialog with an edit box to rename the selected feed.
 * Delete: Opens a dialog to delete the selected feed after confirmation.
@@ -75,6 +76,7 @@ Opens a dialog to select a folder which replaces your feeds in the personalFeeds
 * More feeds may be supported.
 * When the feeds dialog is opened, the list of feeds will be focused instead of the search edit box.
 * You can choose if the search edit box is placed after the list of feeds, useful to focus the list event when switching from another window without closing the Feeds dialog.
+* Added a button to copy the feed address to clipboard from the feeds dialog.
 
 ## Changes for 9.0 ##
 
