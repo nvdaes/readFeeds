@@ -310,7 +310,7 @@ class FeedsDialog(wx.Dialog):
 			_("Do you want to copy feed address to the clipboard\r\n\r\n{feedAddress}?".format(address)),
 			# Translators: the title of a message box dialog.
 			_("Copy feed address"),
-			wx.YES|wx.NO|wx.CANCEL|wx.ICON_QUESTION
+			wx.YES | wx.NO | wx.CANCEL | wx.ICON_QUESTION
 		) == wx.YES:
 			api.copyToClip(address)
 
