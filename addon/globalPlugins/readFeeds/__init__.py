@@ -307,7 +307,7 @@ class FeedsDialog(wx.Dialog):
 			address = f.read()
 		if gui.messageBox(
 			# Translators: the label of a message box dialog.
-			_("Do you want to copy feed address to the clipboard\r\n\r\n{feedAddress}?".format(address)),
+			_("Do you want to copy feed address to the clipboard\r\n\r\n{feedAddress}?".format(feedAddress=address)),
 			# Translators: the title of a message box dialog.
 			_("Copy feed address"),
 			wx.YES | wx.NO | wx.CANCEL | wx.ICON_QUESTION
