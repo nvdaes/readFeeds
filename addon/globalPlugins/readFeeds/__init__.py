@@ -1,52 +1,60 @@
 # -*- coding: UTF-8 -*-
 
 # Read feeds: A simple plugin for reading feeds with NVDA
-#Copyright (C) 2012-2019 Noelia Ruiz Martínez, Mesar Hameed
+#Copyright (C) 2012-2020 Noelia Ruiz Martínez, Mesar Hameed
 # Released under GPL 2
 
 import os
-import sys
 import shutil
 import addonHandler
 import globalPluginHandler
 import globalVars
 import config
-import urllib
+import urllib.request
 import scriptHandler
 from scriptHandler import script
 import api
 import gui
-from gui import guiHelper
+from gui import SettingsPanel, NVDASettingsDialog, guiHelper
 import core
 import wx
 import ui
+from globalCommands import SCRCAT_CONFIG
 from logHandler import log
 import re
 from .skipTranslation import translate
-
-sys.path.append(os.path.join(os.path.dirname(__file__), "..", ".."))
-from xml2.dom import minidom
-del sys.path[-1]
-
+from .xml.etree import ElementTree
+import languageHandler
+import time
+import datetime
+import locale
 addonHandler.initTranslation()
 
-### Constants
+# Constants
 
 ADDON_SUMMARY = addonHandler.getCodeAddon().manifest['summary']
-FEEDS_PATH = os.path.join(os.path.dirname(__file__), "personalFeeds").decode("mbcs")
+ADDON_PANEL_TITLE = ADDON_SUMMARY
+FEEDS_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), "personalFeeds"))
+HTML_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), "html"))
 CONFIG_PATH = globalVars.appArgs.configPath
 DEFAULT_ADDRESS_FILE = "addressFile"
 # Translators: message presented when feeds cannot be reported.
 CAN_NOT_REPORT = _("Unable to refresh feed. Check your Internet conectivity or that the specified feed address is correct.")
+TAG_REGEXP = re.compile('<.*?>')
 
-### Configuration
+# Configuration
 
 confspec = {
 	"addressFile": "string(default=addressFile)",
+	"filterAfterList": "boolean(default=False)",
 }
 config.conf.spec["readFeeds"] = confspec
 
-### Dialogs
+
+def onSettings(evt):
+	gui.mainFrame._popupSettingsDialog(NVDASettingsDialog, AddonSettingsPanel)
+
+# Dialogs
 
 def getActiveProfile():
 	activeProfile = config.conf.profiles[-1].name
@@ -66,30 +74,37 @@ def doCopy(copyDirectory):
 		shutil.copytree(FEEDS_PATH, copyDirectory)
 		core.callLater(100, ui.message,
 			# Translators: Message presented when feeds have been copied.
-			_("Feeds copied"))
+			_("Feeds copied")
+		)
 	except Exception as e:
-		wx.CallAfter(gui.messageBox,
+		wx.CallAfter(
+			gui.messageBox,
 			# Translators: label of error dialog shown when cannot copy feeds folder.
 			_("Folder not copied"),
 			# Translators: title of error dialog shown when cannot copy feeds folder.
 			_("Copy Error"),
-			wx.OK|wx.ICON_ERROR)
+			wx.OK|wx.ICON_ERROR
+		)
 		raise e
 
 def doRestore(restoreDirectory):
 	try:
 		shutil.rmtree(FEEDS_PATH, ignore_errors=True)
 		shutil.copytree(restoreDirectory, FEEDS_PATH)
-		core.callLater(100, ui.message,
+		core.callLater(
+			100, ui.message,
 			# Translators: Message presented when feeds have been restored.
-			_("Feeds restored"))
+			_("Feeds restored")
+		)
 	except Exception as e:
-		wx.CallAfter(gui.messageBox,
+		wx.CallAfter(
+			gui.messageBox,
 			# Translators: label of error dialog shown when cannot copy feeds folder.
 			_("Folder not copied"),
 			# Translators: title of error dialog shown when cannot copy feeds folder.
 			_("Copy Error"),
-			wx.OK|wx.ICON_ERROR)
+			wx.OK|wx.ICON_ERROR
+		)
 		raise e
 
 class FeedsDialog(wx.Dialog):
@@ -106,23 +121,27 @@ class FeedsDialog(wx.Dialog):
 			return
 		FeedsDialog._instance = self
 		# Translators: The title of a dialog.
-		super(FeedsDialog, self).__init__(parent, title=_(u"Feeds: {defaultFeed} ({configProfile})".format(configProfile=getActiveProfile(),
-			defaultFeed=config.conf["readFeeds"]["addressFile"])))
+		super(
+			# Translators: Title of a dialog.
+			FeedsDialog, self).__init__(parent, title=_("Feeds: {defaultFeed} ({configProfile})".format(configProfile=getActiveProfile(),
+			defaultFeed=config.conf["readFeeds"]["addressFile"]))
+		)
 
 		mainSizer = wx.BoxSizer(wx.VERTICAL)
 		sHelper = guiHelper.BoxSizerHelper(self,orientation=wx.VERTICAL)
-		# Label of a dialog (message translated in NVDA core in different contexts).
+		# Translators: Label of a dialog (message translated in NVDA's core in different contexts).
 		searchTextLabel = _("&Filter by:")
-		self.searchTextEdit = sHelper.addLabeledControl(searchTextLabel, wx.TextCtrl)
-		self.searchTextEdit.Bind(wx.EVT_TEXT, self.onSearchEditTextChange)
+		if not config.conf["readFeeds"]["filterAfterList"]:
+			self.searchTextEdit = sHelper.addLabeledControl(searchTextLabel, wx.TextCtrl)
 
 		feedsListGroupSizer = wx.StaticBoxSizer(wx.StaticBox(self), wx.HORIZONTAL)
 		feedsListGroupContents = wx.BoxSizer(wx.HORIZONTAL)
 		changeFeedsSizer = wx.BoxSizer(wx.VERTICAL)
 
 		self.choices = [os.path.splitext(filename)[0] for filename in os.listdir(FEEDS_PATH)]
-		self.feedsList = wx.ListBox(self,
-			choices=self.choices)
+		self.feedsList = wx.ListBox(
+			self, choices=self.choices
+		)
 		self.feedsList.Selection = 0
 		self.feedsList.Bind(wx.EVT_LISTBOX, self.onFeedsListChoice)
 		changeFeedsSizer.Add(self.feedsList, proportion=1.0)
@@ -138,10 +157,23 @@ class FeedsDialog(wx.Dialog):
 		feedsListGroupContents.Add(changeFeedsSizer, flag = wx.EXPAND)
 		feedsListGroupContents.AddSpacer(guiHelper.SPACE_BETWEEN_ASSOCIATED_CONTROL_HORIZONTAL)
 
+		if config.conf["readFeeds"]["filterAfterList"]:
+			self.searchTextEdit = sHelper.addLabeledControl(searchTextLabel, wx.TextCtrl)
+
+		self.searchTextEdit.Bind(wx.EVT_TEXT, self.onSearchEditTextChange)
+
 		buttonHelper = guiHelper.ButtonHelper(wx.VERTICAL)
 		# Translators: The label of a button to open a feed.
 		self.openButton = buttonHelper.addButton(self, label=_("&Open feed"))
 		self.openButton.Bind(wx.EVT_BUTTON, self.onOpen)
+
+		# Translators: The label of a button to open a feed as HTML.
+		self.openHtmlButton = buttonHelper.addButton(self, label=_("Open feed as &HTML"))
+		self.openHtmlButton.Bind(wx.EVT_BUTTON, self.onOpenHtml)
+
+		# Translators: The label of a button to copy the feed URL.
+		self.copyButton = buttonHelper.addButton(self, label=_("Cop&y feed address"))
+		self.copyButton.Bind(wx.EVT_BUTTON, self.onCopy)
 
 		# Translators: The label of a button to add a new feed.
 		newButton = buttonHelper.addButton(self, label=_("&New..."))
@@ -162,7 +194,10 @@ class FeedsDialog(wx.Dialog):
 		# Translators: The label of a button to open a folder containing a backup of feeds.
 		self.openFolderButton = buttonHelper.addButton(self, label=_("Open &folder containing a backup of feeds"))
 		self.openFolderButton.Bind(wx.EVT_BUTTON, self.onOpenFolder)
-		
+
+		# Translators: The label of a button to open the settings dialog for readFeeds.
+		self.settingsButton = buttonHelper.addButton(self, label=_("&Preferences..."))
+		self.settingsButton.Bind(wx.EVT_BUTTON, onSettings)
 		feedsListGroupContents.Add(buttonHelper.sizer)
 		feedsListGroupSizer.Add(feedsListGroupContents, border=guiHelper.BORDER_FOR_DIALOGS, flag=wx.ALL)
 		sHelper.addItem(feedsListGroupSizer)
@@ -178,28 +213,39 @@ class FeedsDialog(wx.Dialog):
 		mainSizer.Add(sHelper.sizer, flag=wx.ALL, border=guiHelper.BORDER_FOR_DIALOGS)
 		mainSizer.Fit(self)
 		self.Sizer = mainSizer
-		self.searchTextEdit.SetFocus()
+		self.feedsList.SetFocus()
 		self.CentreOnScreen()
 
 	def __del__(self):
 		FeedsDialog._instance = None
 
 	def createFeed(self, address):
-		feed = Feed(address)
-		feedName = api.filterFileName(feed.getFeedName())
+		try:
+			feed = Feed(address)
+		except Exception as e:
+			wx.CallAfter(
+				gui.messageBox,
+				# Translators: Message presented when a feed cannot be added.
+				_('Cannot add feed: %s' % e),
+				# Translators: error message.
+				_("Error"),
+				wx.OK | wx.ICON_ERROR
+			)
+			raise e
+		feedName = api.filterFileName(feed.getFeedName()).strip()
 		if os.path.isfile(os.path.join(FEEDS_PATH, "%s.txt" % feedName)):
 			feedName = "tempFeed"
-		with open(os.path.join(FEEDS_PATH, "%s.txt" % feedName), "w") as f:
+		with open(os.path.join(FEEDS_PATH, "%s.txt" % feedName), "w", encoding="utf-8") as f:
 			f.write(address)
-			f.close()
 		return feedName
 
 	def onSearchEditTextChange(self, evt):
 		self.feedsList.Clear()
 		# Based on the filter of the Input gestures dialog of NVDA's core.
 		filter = self.searchTextEdit.Value
-		filter = re.escape(filter)
-		filterReg = re.compile(r'(?=.*?' + r')(?=.*?'.join(filter.split('\ ')) + r')', re.U|re.IGNORECASE)
+		if filter:
+			filter = re.escape(filter)
+			filterReg = re.compile(r"(?=.*?" + r")(?=.*?".join(filter.split(r"\ ")) + r")", re.U | re.IGNORECASE)
 		for choice in self.choices:
 			if filter and not filterReg.match(choice):
 				continue
@@ -208,7 +254,8 @@ class FeedsDialog(wx.Dialog):
 			self.feedsList.Selection = 0
 			self.onFeedsListChoice(None)
 		except:
-			[control.Disable() for control in self.feedsList, self.articlesButton, self.openButton, self.renameButton, self.deleteButton, self.defaultButton]
+			for control in (self.feedsList, self.articlesButton, self.openButton, self.renameButton, self.deleteButton, self.defaultButton):
+				control.disable
 
 	def onFeedsListChoice(self, evt):
 		self.feedsList.Enable()
@@ -216,19 +263,25 @@ class FeedsDialog(wx.Dialog):
 		self.stringSel = self.feedsList.StringSelection
 		self.articlesButton.Enabled = self.sel>= 0
 		self.openButton.Enabled = self.sel>= 0
-		self.deleteButton.Enabled = (self.sel >= 0 and 
+		self.openHtmlButton.Enabled = self.sel>= 0
+		self.deleteButton.Enabled = (
+			self.sel >= 0 and 
 			self.stringSel != DEFAULT_ADDRESS_FILE and 
-			config.conf["readFeeds"]["addressFile"] != self.stringSel)
-		self.renameButton.Enabled = (self.sel >= 0 and
+			config.conf["readFeeds"]["addressFile"] != self.stringSel
+		)
+		self.renameButton.Enabled = (
+			self.sel >= 0 and
 			self.stringSel != DEFAULT_ADDRESS_FILE and 
-			config.conf["readFeeds"]["addressFile"] != self.stringSel)
-		self.defaultButton.Enabled = (self.sel >= 0 and 
-			self.stringSel != config.conf["readFeeds"]["addressFile"])
+			config.conf["readFeeds"]["addressFile"] != self.stringSel
+		)
+		self.defaultButton.Enabled = (
+			self.sel >= 0 and 
+			self.stringSel != config.conf["readFeeds"]["addressFile"]
+		)
 
 	def onArticles(self, evt):
-		with open(os.path.join(FEEDS_PATH, "%s.txt" % self.stringSel), "r") as f:
+		with open(os.path.join(FEEDS_PATH, "%s.txt" % self.stringSel), "r", encoding="utf-8") as f:
 			address = f.read()
-			f.close()
 		self.feed = Feed(address)
 		self.Disable()
 		try:
@@ -238,20 +291,43 @@ class FeedsDialog(wx.Dialog):
 			raise e
 
 	def onOpen(self, evt):
-		with open(os.path.join(FEEDS_PATH, "%s.txt" % self.stringSel), "r") as f:
+		with open(os.path.join(FEEDS_PATH, "%s.txt" % self.stringSel), "r", encoding="utf-8") as f:
 			address = f.read()
-			f.close()
 		os.startfile(address)
+
+	def onOpenHtml(self, evt):
+		with open(os.path.join(FEEDS_PATH, "%s.txt" % self.stringSel), "r", encoding="utf-8") as f:
+			address = f.read()
+		self.feed = Feed(address)
+		self.feed.buildHtml()
+		os.startfile(os.path.join(HTML_PATH, "feed.html"))
+
+	def onCopy(self, evt):
+		with open(os.path.join(FEEDS_PATH, "%s.txt" % self.stringSel), "r", encoding="utf-8") as f:
+			address = f.read()
+		if gui.messageBox(
+			# Translators: the label of a message box dialog.
+			_("Do you want to copy feed address to the clipboard\r\n\r\n{feedAddress}?".format(feedAddress=address)),
+			# Translators: the title of a message box dialog.
+			_("Copy feed address"),
+			wx.YES | wx.NO | wx.CANCEL | wx.ICON_QUESTION
+		) == wx.YES:
+			api.copyToClip(address)
 
 	def onNew(self, evt):
 		# Translators: The label of a field to enter an address for a new feed.
-		with wx.TextEntryDialog(self, _("Address of a new feed:"),
+		with wx.TextEntryDialog(
+			# Translators: Label of a dialog.
+			self, _("Address of a new feed:"),
 			# Translators: The title of a dialog to create a new feed.
-			_("New feed")) as d:
+			_("New feed")
+		) as d:
 			if d.ShowModal() == wx.ID_CANCEL:
+				self.feedsList.SetFocus()
 				return
 			name = self.createFeed(d.Value)
-		self.feedsList.Append(name)
+			self.feedsList.Append(name)
+			self.feedsList.SetFocus()
 
 	def onDelete(self, evt):
 		if gui.messageBox(
@@ -261,29 +337,37 @@ class FeedsDialog(wx.Dialog):
 			translate("Confirm Deletion"),
 			wx.YES | wx.NO | wx.ICON_QUESTION, self
 		) == wx.NO:
+			self.feedsList.SetFocus()
 			return
 		os.remove(os.path.join(FEEDS_PATH, "%s.txt" % self.stringSel))
 		self.feedsList.Delete(self.sel)
 		self.feedsList.Selection = 0
 		self.onFeedsListChoice(None)
+		self.feedsList.SetFocus()
 
 	def onDefault(self, evt):
 		config.conf["readFeeds"]["addressFile"] = self.stringSel
 		self.onFeedsListChoice(None)
-		self.searchTextEdit.SetFocus()
+		self.feedsList.SetFocus()
 
 	def onRename(self, evt):
-		# Translators: The label of a field to enter a new name for a feed.
-		with wx.TextEntryDialog(self, _("New name:"),
+		with wx.TextEntryDialog(
+			# Translators: The label of a field to enter a new name for a feed.
+			self, _("New name:"),
 			# Translators: The title of a dialog to rename a feed.
-			_("Rename feed"), value=self.stringSel) as d:
+			_("Rename feed"), value=self.stringSel
+		) as d:
 			if d.ShowModal() == wx.ID_CANCEL or not d.Value:
+				self.feedsList.SetFocus()
 				return
 			curName = "%s.txt" % self.stringSel
 			newName = "%s.txt" % api.filterFileName(d.Value)
-		os.rename(os.path.join(FEEDS_PATH, curName),
-			os.path.join(FEEDS_PATH, newName))
+		os.rename(
+			os.path.join(FEEDS_PATH, curName),
+			os.path.join(FEEDS_PATH, newName)
+		)
 		self.feedsList.SetString(self.sel, os.path.splitext(newName)[0])
+		self.feedsList.SetFocus()
 
 	def onClose(self, evt):
 		self.Destroy()
@@ -299,18 +383,18 @@ class ArticlesDialog(wx.Dialog):
 
 	def __init__(self, parent):
 		# Translators: The title of the articles dialog.
-		super(ArticlesDialog, self).__init__(parent, title=u"{feedTitle} ({feedNumber})".format(feedTitle=parent.stringSel, feedNumber=parent.feed.getNumberOfArticles()))
+		super(ArticlesDialog, self).__init__(parent, title="{feedTitle} ({feedNumber})".format(feedTitle=parent.stringSel, feedNumber=parent.feed.getNumberOfArticles()))
 
 		mainSizer = wx.BoxSizer(wx.VERTICAL)
 		sHelper = guiHelper.BoxSizerHelper(self, orientation=wx.VERTICAL)
 
 		# Translators: The label of the articles list in the articles dialog.
 		articlesText = _("List of articles")
-		articlesChoices = [parent.feed.getArticleTitle(index) for index in xrange(parent.feed.getNumberOfArticles())]
+		articlesChoices = [re.sub(TAG_REGEXP, '', parent.feed.getArticleTitle(index)) for index in range(parent.feed.getNumberOfArticles())]
 		self.articlesList = sHelper.addLabeledControl(articlesText, wx.ListBox, choices=articlesChoices)
 		self.articlesList.Selection = 0
 		self.articlesList.Bind(wx.EVT_CHOICE, self.onArticlesListChoice)
-		
+
 		buttonHelper = guiHelper.ButtonHelper(wx.VERTICAL)
 		# Translators: The label of a button to open the selected article of a feed.
 		self.articleButton = wx.Button(self, label=_("Open &web page of selected article."))
@@ -338,18 +422,24 @@ class ArticlesDialog(wx.Dialog):
 		os.startfile(self.Parent.feed.getArticleLink(self.articlesList.Selection))
 
 	def onArticlesListInfo(self, evt):
-		articleInfo = u"{title}\r\n\r\n{address}".format(title=self.Parent.feed.getArticleTitle(self.articlesList.Selection), address=self.Parent.feed.getArticleLink(self.articlesList.Selection))
+		articleInfo = "{title}\r\n\r\n{address}".format(
+			title=self.articlesList.StringSelection,
+			address=self.Parent.feed.getArticleLink(self.articlesList.Selection)
+		)
 		if gui.messageBox(
 			# Translators: the label of a message box dialog.
-			_("%s\r\n\r\nDo you want to copy article title and link to the clipboard?" % articleInfo),
+			_("%sDo you want to copy article title and link to the clipboard?" % (articleInfo + "\r\n\r\n")),
 			# Translators: the title of a message box dialog.
 			_("Article information"),
-			wx.YES|wx.NO|wx.CANCEL|wx.ICON_QUESTION) == wx.YES:
+			wx.YES|wx.NO|wx.CANCEL|wx.ICON_QUESTION
+		) == wx.YES:
 			api.copyToClip(articleInfo)
 
 	def onClose(self, evt):
 		self.Parent.Enable()
+		self.Parent.feedsList.SetFocus()
 		self.Destroy()
+
 
 class CopyDialog(wx.Dialog):
 
@@ -388,18 +478,21 @@ class CopyDialog(wx.Dialog):
 	def onCopy(self, evt):
 		if not self.copyDirectoryEdit.Value:
 			# Message translated in NVDA core.
-			gui.messageBox(translate("Please specify a directory."),
+			gui.messageBox(
+				translate("Please specify a directory."),
 				# Message translated in NVDA core.
 				translate("Error"),
 				wx.OK | wx.ICON_ERROR)
 			return
 		drv=os.path.splitdrive(self.copyDirectoryEdit.Value)[0]
 		if drv and not os.path.isdir(drv):
-			# Message translated in NVDA core.
-			gui.messageBox(translate("Invalid drive %s")%drv,
+			gui.messageBox(
+				# Message translated in NVDA core.
+				translate("Invalid drive %s")%drv,
 				# Message translated in NVDA core.
 				translate("Error"),
-				wx.OK | wx.ICON_ERROR)
+				wx.OK | wx.ICON_ERROR
+			)
 			return
 		self.Hide()
 		doCopy(self.copyDirectoryEdit.Value)
@@ -457,19 +550,23 @@ class RestoreDialog(wx.Dialog):
 
 	def onRestore(self, evt):
 		if not self.restoreDirectoryEdit.Value:
-			# Message translated in NVDA core.
-			gui.messageBox(translate("Please specify a directory."),
+			gui.messageBox(
+				# Message translated in NVDA core.
+				translate("Please specify a directory."),
 				# Message translated in NVDA core.
 				translate("Error"),
-				wx.OK | wx.ICON_ERROR)
+				wx.OK | wx.ICON_ERROR
+			)
 			return
 		drv=os.path.splitdrive(self.restoreDirectoryEdit.Value)[0]
 		if drv and not os.path.isdir(drv):
-			# Message translated in NVDA core.
-			gui.messageBox(translate("Invalid drive %s")%drv,
+			gui.messageBox(
+				# Message translated in NVDA core.
+				translate("Invalid drive %s")%drv,
 				# Message translated in NVDA core.
 				translate("Error"),
-				wx.OK | wx.ICON_ERROR)
+				wx.OK | wx.ICON_ERROR
+			)
 			return
 		self.Hide()
 		doRestore(self.restoreDirectoryEdit.Value)
@@ -478,7 +575,22 @@ class RestoreDialog(wx.Dialog):
 	def onCancel(self, evt):
 		self.Destroy()
 
-### Feed object 
+
+class AddonSettingsPanel(SettingsPanel):
+
+	title = ADDON_PANEL_TITLE
+
+	def makeSettings(self, settingsSizer):
+		sHelper = guiHelper.BoxSizerHelper(self, sizer=settingsSizer)
+
+		# Translators: label of a dialog.
+		self.filterAfterList = sHelper.addItem(wx.CheckBox(self, label=_("&Search edit box after feeds list")))
+		self.filterAfterList.SetValue(config.conf["readFeeds"]["filterAfterList"])
+
+	def onSave(self):
+		config.conf["readFeeds"]["filterAfterList"] = self.filterAfterList.GetValue()
+
+# Feed object
 
 class Feed(object):
 
@@ -489,24 +601,46 @@ class Feed(object):
 		self._articles = []
 		self.refresh()
 
-	def refresh(self):
+	def buildTag(self, tag, ns=None):
+		return "%s%s" %(ns, tag) if ns else tag
+
+	def getArticleTimestamp(self, article):
+		locale.setlocale(locale.LC_TIME, "en")
 		try:
-			self._document = minidom.parse(urllib.urlopen(self._url))
+			if self.getFeedType() == u'rss':
+				date = article.find(self.buildTag("pubDate", self.ns)).text
+				timestamp = time.mktime(datetime.datetime.strptime(date, "%a, %d %b %Y %H:%M:%S %Z").timetuple())
+			elif self.getFeedType() == 'atom':
+				date = article.find(self.buildTag("updated", self.ns)).text
+				timestamp = time.mktime(datetime.datetime.strptime(date, "%Y-%m-%dT%H:%M:%S%Z").timetuple())
+			return timestamp
+		except:
+			return 0
+
+	def refresh(self):
+		userAgent = "UniversalFeedParser/3.3 +http://feedparser.org/"
+		headers = {'User-Agent': userAgent}
+		req = urllib.request.Request(self._url, None, headers)
+		response = urllib.request.urlopen(req)
+		try:
+			self._document = ElementTree.parse(response)
 		except Exception as e:
 			raise e
+		tag = self._document.getroot().tag
+		self.ns = "%s}" % tag.split("}", 1)[0] if "}" in tag else None
 		# Check if we are dealing with an rss or atom feed.
-		rssFeed = self._document.getElementsByTagName('channel')
-		if len(rssFeed):
-			self._feedType = 'rss'
-			self._articles = self._document.getElementsByTagName('item')
+		if tag.endswith("rss"):
+			self._main = self._document.getroot().find(self.buildTag("channel", self.ns))
+			self._articles = self._main.findall(self.buildTag("item", self.ns))
+			self._feedType = "rss"
+		elif tag.endswith("feed"):
+			self._main = self._document.getroot()
+			self._articles = self._main.findall(self.buildTag("entry", self.ns))
+			self._feedType = "atom"
 		else:
-			atomFeed = self._document.getElementsByTagName('feed')
-			if len(atomFeed):
-				self._feedType = 'atom'
-				self._articles = self._document.getElementsByTagName('entry')
-			else:
-				log.debugWarning("Unknown type of current feed", exc_info=True)
-				raise
+			log.debugWarning("Unknown type of current feed", exc_info=True)
+			raise
+		self._articles.sort(key=self.getArticleTimestamp, reverse=True)
 		self._index = 0
 
 	def getFeedUrl(self):
@@ -517,14 +651,20 @@ class Feed(object):
 
 	def getFeedName(self):
 		try:
-			return self._document.getElementsByTagName('title')[0].firstChild.data
+			return self._main.find(self.buildTag("title", self.ns)).text
 		except:
 			return ""
+
+	def getFeedLanguage(self):
+		try:
+			return self._main.find(self.buildTag("language", self.ns)).text
+		except:
+			return languageHandler.getLanguage().replace("_", "-")
 
 	def getArticleTitle(self, index=None):
 		if index is None: index = self._index
 		try:
-			return self._articles[index].getElementsByTagName('title')[0].firstChild.data
+			return self._articles[index].find(self.buildTag("title", self.ns)).text
 		except:
 			# Translators: Presented when the current article does not have an associated title.
 			return _("Unable to locate article title.")
@@ -533,12 +673,50 @@ class Feed(object):
 		if index is None: index = self._index
 		try:
 			if self.getFeedType() == u'rss':
-				return self._articles[index].getElementsByTagName('link')[0].firstChild.data
-			elif self.getFeedType() == u'atom':
-				return self._articles[index].getElementsByTagName('link')[0].getAttribute('href')
+				return self._articles[index].find(self.buildTag("link", self.ns)).text
+			elif self.getFeedType() == 'atom':
+				return self._articles[index].find(self.buildTag("link", self.ns)).get("href")
 		except:
 			# Translators: Presented when the current article does not have an associated link.
 			return _("Unable to locate article link.")
+
+	def getArticleDescription(self, index=None):
+		if index is None: index = self._index
+		description = None
+		try:
+			if self.getFeedUrl().startswith("https://www.google.com") and "/alerts/" in self.getFeedUrl():
+				description = self._articles[index].find(self.buildTag("content", self.ns)).text
+			if description is not None:
+				return description
+			if self.getFeedType() == u'rss':
+				description = self._articles[index].find(self.buildTag("description", self.ns)).text
+			elif self.getFeedType() == 'atom':
+				description = self._articles[index].find(self.buildTag("summary", self.ns)).text
+				if description is None:
+					description = self._articles[index].find(self.buildTag("content", self.ns)).text
+			return description
+		except:
+			return None
+
+	def getArticleEnclosure(self, index=None):
+		if index is None: index = self._index
+		try:
+			if self.getFeedType() == u'rss':
+				return self._articles[index].find(self.buildTag("enclosure", self.ns))
+			return None
+		except:
+			return None
+
+	def getArticleDate(self, index=None):
+		if index is None: index = self._index
+		try:
+			if self.getFeedType() == u'rss':
+				date = self._articles[index].find(self.buildTag("pubDate", self.ns)).text
+			elif self.getFeedType() == 'atom':
+				date = self._articles[index].find(self.buildTag("updated", self.ns)).text
+			return date
+		except:
+				return None
 
 	def next(self):
 		self._index += 1
@@ -553,14 +731,48 @@ class Feed(object):
 	def getNumberOfArticles(self):
 		return len(self._articles)
 
-### Global plugin
+	def buildHtml(self):
+		raw = "<!DOCTYPE html><html lang=\"" + self.getFeedLanguage()
+		raw += "\"><head><title>" + self.getFeedName()
+		raw += "</title><meta charset=\"utf-8\" />"
+		raw += "<meta http-equiv='X-UA-Compatible' content='IE=edge'>"
+		raw += "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"></head>"
+		raw += "<body><h1><a href=\"" + self.getFeedUrl() + "\">" + self.getFeedName() +"</a></h1><p><label>"
+		# Translators: Label of a checkbox to choose if date should be presented for each feed.
+		label = _("Show date")
+		raw += label
+		raw += "<input type=\"checkbox\" id=\"showDate\" onclick=\"setDatePresentation()\" accesskey=\"0\"></label></p><p><label>"
+		# Translators: Label for a checkbox to show buttons for copying to clipboard.
+		label = _("Show buttons to copy")
+		raw += label
+		raw += "<input id=\"copy\" accesskey=\"8\" type=\"checkbox\" onclick=\"setCopyPresentation()\"></label></p>"
+		for index in range(self.getNumberOfArticles()):
+			raw += "<div class=\"heading\"><h2><a href=\""
+			raw += self.getArticleLink(index) + "\">" + self.getArticleTitle(index) + "</a></h2>"
+			# Translators: Label for a button to copy to clipboard.
+			label = _("Copy") + " " + str(index+1)
+			raw += "<button aria-hidden=\"true\" aria-pressed=\"false\">" + label + "</button></div>"
+			if self.getArticleDate(index):
+				raw += "<div class=\"date\" aria-hidden=\"true\">" + self.getArticleDate(index) + "</div>"
+			if self.getArticleDescription(index) is not None:
+				raw += "<div>" + self.getArticleDescription(index) + "</div>"
+			enclosure = self.getArticleEnclosure(index)
+			if enclosure:
+				raw += "<div><a href=\"" + enclosure.get("url") + "\">" + enclosure.get("type")
+				raw += enclosure.get("length") / 1024 + "kB</div>"
+		raw += "<script src=\"feed.js\"></script></body></html>"
+		with open(os.path.join(HTML_PATH, "feed.html"), "w", encoding="utf-8") as f:
+			f.write(raw)
+
+# Global plugin
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
-	scriptCategory = unicode(ADDON_SUMMARY)
+	scriptCategory = ADDON_SUMMARY
 
 	def __init__(self):
 		super(GlobalPlugin, self).__init__()
+		NVDASettingsDialog.categoryClasses.append(AddonSettingsPanel)
 		self.menu = gui.mainFrame.sysTrayIcon.toolsMenu
 		self.readFeedsMenu = wx.Menu()
 		# Translators: the name of a submenu.
@@ -580,6 +792,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def terminate(self):
 		try:
 			self.menu.Remove(self.mainItem)
+			NVDASettingsDialog.categoryClasses.remove(AddonSettingsPanel)
 		except:
 			pass
 
@@ -591,7 +804,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	@script(
 		# Translators: message presented in input mode.
-		description=_("Activates the Feeds dialog of %s." % ADDON_SUMMARY)
+		description=_("Activates the Feeds dialog of Read Feeds.")
 	)
 	def script_activateFeedsDialog(self, gesture):
 		wx.CallAfter(self.onFeeds, None)
@@ -604,11 +817,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	@script(
 		# Translators: message presented in input mode.
-		description=_("Activates the Copy dialog of %s." % ADDON_SUMMARY)
+		description=_("Activates the Copy dialog of Read Feeds.")
 	)
 	def script_activateCopyDialog(self, gesture):
 		wx.CallAfter(self.onCopy, None)
-
 
 	def onRestore(self, evt):
 		gui.mainFrame.prePopup()
@@ -618,16 +830,23 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	@script(
 		# Translators: message presented in input mode.
-		description=_("Activates the Restore dialog of %s." % ADDON_SUMMARY)
+		description=_("Activates the Restore dialog of Read Feeds.")
 	)
 	def script_activateRestoreDialog(self, gesture):
 		wx.CallAfter(self.onRestore, None)
 
+	@script(
+		# Translators: message presented in input mode.
+		description=_("Shows the %s settings." % ADDON_SUMMARY),
+		category=SCRCAT_CONFIG
+	)
+	def script_settings(self, gesture):
+		wx.CallAfter(onSettings, None)
+
 	def getFirstArticle(self):
 		addressFile = "%s.txt" % config.conf["readFeeds"]["addressFile"]
-		with open(os.path.join(FEEDS_PATH, addressFile), "r") as f:
+		with open(os.path.join(FEEDS_PATH, addressFile), "r", encoding="utf-8") as f:
 			address = f.read()
-			f.close()
 		if self.feed and self.feed.getFeedUrl() == address:
 			curFeed = self.feed
 		else:
@@ -647,7 +866,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def script_readFirstArticle(self, gesture):
 		self.getFirstArticle()
 		if self.feed:
-			ui.message(self.feed.getArticleTitle())
+			ui.message(re.sub(TAG_REGEXP, '', self.feed.getArticleTitle()))
 
 	@script(
 		# Translators: message presented in input mode.
@@ -657,7 +876,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def script_readCurrentArticle(self, gesture):
 		if not self.feed:
 			self.getFirstArticle()
-		articleInfo = u"{title}\r\n\r\n{address}".format(title=self.feed.getArticleTitle(), address=self.feed.getArticleLink())
+		articleInfo = "{title}\r\n\r\n{address}".format(
+			title=re.sub(TAG_REGEXP, '', self.feed.getArticleTitle()),
+			address=self.feed.getArticleLink()
+		)
 		if scriptHandler.getLastScriptRepeatCount()==1 and api.copyToClip(articleInfo):
 			# Translators: message presented when the information about an article of a feed is copied to the clipboard.
 			ui.message(_("Copied to clipboard %s") % articleInfo)
@@ -673,7 +895,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if not self.feed:
 			self.getFirstArticle()
 		self.feed.next()
-		ui.message(self.feed.getArticleTitle())
+		ui.message(re.sub(TAG_REGEXP, '', self.feed.getArticleTitle()))
 
 	@script(
 		# Translators: message presented in input mode.
@@ -684,7 +906,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if not self.feed:
 			self.getFirstArticle()
 		self.feed.previous()
-		ui.message(self.feed.getArticleTitle())
+		ui.message(re.sub(TAG_REGEXP, '', self.feed.getArticleTitle()))
 
 	@script(
 		# Translators: message presented in input mode.
@@ -707,7 +929,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def script_copyArticleInfo(self, gesture):
 		if not self.feed:
 			self.getFirstArticle()
-		articleInfo = u"{title}\r\n\r\n{address}".format(title=self.feed.getArticleTitle(), address=self.feed.getArticleLink())
+		articleInfo = "{title}\r\n\r\n{address}".format(
+			title=re.sub(TAG_REGEXP, '', self.feed.getArticleTitle()),
+			address=self.feed.getArticleLink()
+		)
 		if api.copyToClip(articleInfo):
 			# Translators: message presented when the information about an article of a feed is copied to the clipboard.
 			ui.message(_("Copied to clipboard %s") % articleInfo)
