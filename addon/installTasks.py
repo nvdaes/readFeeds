@@ -1,7 +1,7 @@
 # -*- coding: UTF-8 -*-
 
 # installTasks for the readFeeds add-on
-# Copyright (C) 2013-2019 Noelia Ruiz Martínez, other contributors
+# Copyright (C) 2013-2020 Noelia Ruiz Martínez, other contributors
 # Released under GPL2
 
 import addonHandler
@@ -9,7 +9,6 @@ import globalVars
 import os
 import shutil
 import glob
-import gui
 import wx
 
 ADDON_DIR = os.path.abspath(os.path.dirname(__file__))
@@ -20,6 +19,7 @@ addonHandler.initTranslation()
 
 
 def onInstall():
+	import gui
 	addonPath = [os.path.join(CONFIG_PATH, "RSS"), os.path.join(CONFIG_PATH, "personalFeeds")]
 	for path in addonPath:
 		if not os.path.isdir(path):
