@@ -37,7 +37,7 @@ jobs:
       shell: python 
     - name: Set version
       run: |
-        import buildVars
+        "import ${{ github.workspace }}.buildVars"
         "buildVars.addon_info['addon_version'] = ${{ github.sha }}"
       shell: python
     - name: Build add-on
