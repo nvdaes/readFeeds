@@ -35,13 +35,12 @@ jobs:
         import sys
         "sys.path.append(${{ github.workspace }})"
       shell: python 
-    - name: Set version
+    - name: Build add-on
       run: |
         "import ${{ github.workspace }}.buildVars"
         "buildVars.addon_info['addon_version'] = ${{ github.sha }}"
+        os.startfile("scons")
       shell: python
-    - name: Build add-on
-      run: scons
     - name: Upload add-on
       uses: actions/upload-artifact@v2
       with:
