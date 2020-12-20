@@ -34,7 +34,7 @@ jobs:
         import os
         import sys
         "sys.path.append(${{ github.workspace }})"
-                "import ${{ github.workspace }}.buildVars"
+        "import ${{ github.workspace }}.buildVars"
         "buildVars.addon_info['addon_version'] = ${{ github.sha }}"
         os.startfile("scons.bat")
       shell: python 
