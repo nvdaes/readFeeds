@@ -33,7 +33,7 @@ jobs:
       run: |
         import os
         import sys
-        sys.path.append("${{ github.workspace }}")
+        "sys.path.append(${{ github.workspace }})"
         import buildVars
         buildVars.addon_info["addon_version"] = ${{ github.sha }}
       shell: python 
