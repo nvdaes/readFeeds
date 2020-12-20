@@ -32,6 +32,8 @@ jobs:
     - name: Set version
       if: ${{ github.event_name == 'pull_request' }}
       run |
+        import os
+        os.path.append(os.path.dirname(__file__))
         import buildVars
         buildVars.addon_info["addon_version"] = ${{ github.sha }}
       shell: python
