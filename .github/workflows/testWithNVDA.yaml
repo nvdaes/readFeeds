@@ -34,13 +34,10 @@ jobs:
         import os
         import sys
         "sys.path.append(${{ github.workspace }})"
-      shell: python 
-    - name: Build add-on
-      run: |
-        "import ${{ github.workspace }}.buildVars"
+                "import ${{ github.workspace }}.buildVars"
         "buildVars.addon_info['addon_version'] = ${{ github.sha }}"
-        os.startfile("scons")
-      shell: python
+        os.startfile("scons.bat")
+      shell: python 
     - name: Upload add-on
       uses: actions/upload-artifact@v2
       with:
