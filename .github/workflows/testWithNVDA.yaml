@@ -33,10 +33,10 @@ jobs:
       run: |
         import os
         import sys
-        sys.path.append(os.path.dirname(__file__))
+        sys.path.append(${{ github.workspace }}
         import buildVars
         buildVars.addon_info["addon_version"] = ${{ github.sha }}
-      shell: python
+      shell: python 
     - name: Build add-on
       run: scons
     - name: Upload add-on
