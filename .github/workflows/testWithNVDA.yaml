@@ -36,7 +36,8 @@ jobs:
         "sys.path.append(${{ github.workspace }})"
         "import ${{ github.workspace }}.buildVars"
         "buildVars.addon_info['addon_version'] = ${{ github.sha }}"
-        os.open("scons.bat")
+        import subprocess
+        subprocess.call("scons")
       shell: python 
     - name: Upload add-on
       uses: actions/upload-artifact@v2
