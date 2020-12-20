@@ -35,7 +35,7 @@ jobs:
         import os
         os.path.append(os.path.dirname(__file__))
         import buildVars
-        buildVars.addon_info["addon_version"] = ${{ github.sha }}
+        buildVars.addon_info["addon_version"] = "${{ github.sha }}"
       shell: python
     - name: Build add-on
       run: scons
