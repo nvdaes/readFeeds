@@ -31,8 +31,9 @@ jobs:
         sudo apt install gettext
     - name: Set version
       if: ${{ github.event_name == 'pull_request' }}
-      import buildVars
-      buildVars.addon_info["addon_version"] = ${{ github.sha }}
+      run |
+        import buildVars
+        buildVars.addon_info["addon_version"] = ${{ github.sha }}
       shell: python
     - name: Build add-on
       run: scons
