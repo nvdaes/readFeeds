@@ -31,13 +31,12 @@ jobs:
         sudo apt install gettext
     - name: Add add-on version
       run: |
-        with open("buildVars.py", 'r+') as f:
+        with open("buildVars.py", 'r+', encoding='utf-8') as f:
           text = f.read()
-          "text = re.sub("\"addon_version\" : ", "\"addon_version\" : \"${{ github.sha }}\",", text)"
+          "text = re.sub("\"addon_version\" : ", "\"addon_version\" : \"${{ github.sha }}\"", text)"
           f.seek(0)
           f.write(text)
           f.truncate()
-        pass
       shell: python 
     - name: Build add-on
       run: scons
