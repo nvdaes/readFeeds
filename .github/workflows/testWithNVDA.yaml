@@ -63,13 +63,14 @@ jobs:
             repo: context.repo.repo,
           });
           const artifacts = await github.paginate(opts);
+          let text = ""
           for (const artifact of artifacts) {
             if (artifact.name === "nvda-addon") {
               const text = "[" + artifact.name + "](" + artifact.archive_download_url + ")";
               break;
             }
           }
-          if (text === undefined) { return }
+          if (text === "") { return }
           github.issues.createComment({
             issue_number: context.issue.number,
             owner: context.repo.owner,
