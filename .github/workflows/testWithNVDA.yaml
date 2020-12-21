@@ -31,6 +31,7 @@ jobs:
         sudo apt install gettext
     - name: Add add-on version
       run: |
+        import re
         with open("buildVars.py", 'r+', encoding='utf-8') as f:
           text = f.read()
           text = re.sub("\"addon_version\" : ", "\"addon_version\" : \"${{ github.sha }}\"", text)
