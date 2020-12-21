@@ -58,7 +58,7 @@ jobs:
       with:
         github-token: ${{secrets.GITHUB_TOKEN}}
         script: |
-          const opts = github.actions.listArtifactsForRepo({
+          const opts = await github.actions.listArtifactsForRepo({
             owner: context.repo.owner,
             repo: context.repo.repo
           });
