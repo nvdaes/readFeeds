@@ -65,6 +65,7 @@ jobs:
           let text = "";
           for (const artifact of artifacts) {
             text += "- [" + artifact.name + "](" + artifact.archive_download_url + ")\n";
+          }
           github.issues.createComment({
             issue_number: context.issue.number,
             owner: context.repo.owner,
