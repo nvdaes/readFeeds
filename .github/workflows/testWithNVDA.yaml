@@ -63,7 +63,7 @@ jobs:
             repo: context.repo.repo
           });
           let text = "";
-          for (const artifact of artifacts.artifacts) {
+          for (const artifact of artifacts) {
             text += "- [" + artifact.name + "](" + artifact.archive_download_url + ")\n";
           }
           github.issues.createComment({
