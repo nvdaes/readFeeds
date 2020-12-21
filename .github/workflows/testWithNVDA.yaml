@@ -60,7 +60,7 @@ jobs:
         script: |
           const artifact = await github.actions.getArtifact({
             owner: context.repo.owner,
-            repo: context.repo.repo
+            repo: context.repo.repo,
             artifact_id: 1
           });
           let text = "[" + artifact.name + "]" + "(" + artifact.archive_download_url + ")"
