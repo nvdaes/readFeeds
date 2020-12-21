@@ -58,10 +58,11 @@ jobs:
       with:
         github-token: ${{secrets.GITHUB_TOKEN}}
         script: |
-          const artifacts = await github.actions.listArtifactsForRepo({
+          const opts = github.actions.listArtifactsForRepo({
             owner: context.repo.owner,
             repo: context.repo.repo
           });
+          const artifacts = await github.paginate(opts)
           let text = "";
           for (const artifact of artifacts) {
             text += "- [" + artifact.name + "](" + artifact.archive_download_url + ")\n";
