@@ -10,8 +10,7 @@ on:
 jobs:
 
   addon:
-  
-  
+
     name: addon
 
     runs-on: ubuntu-latest
@@ -53,30 +52,7 @@ jobs:
       with:
         name: pot-file
         path: "*.pot"
-    - name: Publish artifacts
-      uses: actions/github-script@v3
-      with:
-        github-token: ${{secrets.GITHUB_TOKEN}}
-        script: |
-          const opts = await github.actions.listArtifactsForRepo({
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-          });
-          const artifacts = await github.paginate(opts);
-          let text = ""
-          for (const artifact of artifacts) {
-            if (artifact.name === "nvda-addon") {
-              const text = "[" + artifact.name + "](" + artifact.archive_download_url + ")";
-              break;
-            }
-          }
-          if (text === "") { return }
-          await github.issues.createComment({
-            issue_number: context.issue.number,
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-            body: text
-          });
+
         
   nvda:
   
