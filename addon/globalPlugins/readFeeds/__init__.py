@@ -618,10 +618,13 @@ class Feed(object):
 			return 0
 
 	def refresh(self):
-		userAgent = "UniversalFeedParser/3.3 +http://feedparser.org/"
-		headers = {'User-Agent': userAgent}
-		req = urllib.request.Request(self._url, None, headers)
-		response = urllib.request.urlopen(req)
+		try:
+			response = urllib.request.urlopen(self._url)
+		except Exception:
+			userAgent = "UniversalFeedParser/3.3 +http://feedparser.org/"
+			headers = {'User-Agent': userAgent}
+			req = urllib.request.Request(self._url, None, headers)
+			response = urllib.request.urlopen(req)
 		try:
 			self._document = ElementTree.parse(response)
 		except Exception as e:
