@@ -19,21 +19,11 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Translators: the label of a message box dialog.
-msgid ""
-"You have installed the ReadFeeds add-on, probably an old and incompatible "
-"version with this one. Do you want to uninstall the old version?"
-msgstr ""
-"instalaches o complemento ReadFeeds, probablemente unha versión vella e "
-"incompatible con éste. ¿Queres desinstalar a versión anterior?"
-
-#. Translators: the title of a message box dialog.
-msgid "Uninstall incompatible add-on"
-msgstr "Desinstalando complemento incompatible"
-
-#. Translators: the label of a message box dialog.
+#, fuzzy
 msgid ""
 "Your configuration folder for NVDA contains files that seem to be derived "
-"from a previous version of this add-on. Do you want to update it?"
+"from a previous version of this add-on.\n"
+"\t\t\tDo you want to update it?"
 msgstr ""
 "A carpeta de configuración do NVDA contén ficheiros que parecen derivar "
 "dunha versión anterior de este complemento. ¿Queres actualizala?"
@@ -66,12 +56,12 @@ msgstr "Erro da copia"
 msgid "Feeds restored"
 msgstr "Feeds restaurados"
 
-#. Translators: The title of a dialog.
+#. Translators: Title of a dialog.
 #, python-brace-format
 msgid "Feeds: {defaultFeed} ({configProfile})"
 msgstr "Feeds: {defaultFeed} ({configProfile})"
 
-#. Label of a dialog (message translated in NVDA core in different contexts).
+#. Translators: Label of a dialog (message translated in NVDA's core in different contexts).
 msgid "&Filter by:"
 msgstr "&Filtrar por:"
 
@@ -82,6 +72,16 @@ msgstr "Lista de &artigos..."
 #. Translators: The label of a button to open a feed.
 msgid "&Open feed"
 msgstr "&Abrir feed"
+
+#. Translators: The label of a button to open a feed as HTML.
+#, fuzzy
+msgid "Open feed as &HTML"
+msgstr "&Abrir feed"
+
+#. Translators: The label of a button to copy the feed URL.
+#, fuzzy
+msgid "Cop&y feed address"
+msgstr "Copiar feeds"
 
 #. Translators: The label of a button to add a new feed.
 msgid "&New..."
@@ -103,7 +103,38 @@ msgstr "&Configurar predeterminado"
 msgid "Open &folder containing a backup of feeds"
 msgstr "Abrir &cartafol que contén unha copia de seguridade das fontes"
 
-#. Translators: The label of a field to enter an address for a new feed.
+#. Translators: The label of a button to open the settings dialog for readFeeds.
+#, fuzzy
+msgid "&Preferences..."
+msgstr "R&estaurar feeds..."
+
+#. Translators: Message presented when a feed cannot be added.
+#, python-format
+msgid "Cannot add feed: %s"
+msgstr ""
+
+#. Translators: error message.
+#, fuzzy
+msgid "Error"
+msgstr "Erro da copia"
+
+#. Translators: the label of a message box dialog.
+#, fuzzy, python-brace-format
+msgid ""
+"Do you want to copy feed address to the clipboard\r\n"
+"\r\n"
+"{feedAddress}?"
+msgstr ""
+"%s\r\n"
+"\r\n"
+"¿Queres copiar o título do artigo e a liga ao portapapeis?"
+
+#. Translators: the title of a message box dialog.
+#, fuzzy
+msgid "Copy feed address"
+msgstr "Copiar feeds"
+
+#. Translators: Label of a dialog.
 msgid "Address of a new feed:"
 msgstr "Enderezo dun feed novo:"
 
@@ -136,11 +167,8 @@ msgid "&About article..."
 msgstr "&Acerca do artigo..."
 
 #. Translators: the label of a message box dialog.
-#, python-format
-msgid ""
-"%s\r\n"
-"\r\n"
-"Do you want to copy article title and link to the clipboard?"
+#, fuzzy, python-format
+msgid "%sDo you want to copy article title and link to the clipboard?"
 msgstr ""
 "%s\r\n"
 "\r\n"
@@ -185,6 +213,10 @@ msgstr "directorio que contén copias de seguridade:"
 msgid "Select directory to restore"
 msgstr "Selecionar directorio a restaurar"
 
+#. Translators: label of a dialog.
+msgid "&Search edit box after feeds list"
+msgstr ""
+
 #. Translators: Presented when the current article does not have an associated title.
 msgid "Unable to locate article title."
 msgstr "Non se atopa o título do artigo."
@@ -192,6 +224,18 @@ msgstr "Non se atopa o título do artigo."
 #. Translators: Presented when the current article does not have an associated link.
 msgid "Unable to locate article link."
 msgstr "Non se atopa a liga do artigo."
+
+#. Translators: Label of a checkbox to choose if date should be presented for each feed.
+msgid "Show date"
+msgstr ""
+
+#. Translators: Label for a checkbox to show buttons for copying to clipboard.
+msgid "Show buttons to copy"
+msgstr ""
+
+#. Translators: Label for a button to copy to clipboard.
+msgid "Copy"
+msgstr ""
 
 #. Translators: the name of a submenu.
 msgid "&Read Feeds"
@@ -210,19 +254,24 @@ msgid "R&estore feeds..."
 msgstr "R&estaurar feeds..."
 
 #. Translators: message presented in input mode.
-#, python-format
-msgid "Activates the Feeds dialog of %s."
+#, fuzzy
+msgid "Activates the Feeds dialog of Read Feeds."
 msgstr "Activa o diálogo Feeds de %s."
 
 #. Translators: message presented in input mode.
-#, python-format
-msgid "Activates the Copy dialog of %s."
+#, fuzzy
+msgid "Activates the Copy dialog of Read Feeds."
 msgstr "Activa o diálogo Copiar de %s."
 
 #. Translators: message presented in input mode.
-#, python-format
-msgid "Activates the Restore dialog of %s."
+#, fuzzy
+msgid "Activates the Restore dialog of Read Feeds."
 msgstr "Activa o diálogo Restaurar de %s."
+
+#. Translators: message presented in input mode.
+#, python-format
+msgid "Shows the %s settings."
+msgstr ""
 
 #. Translators: message presented in input mode.
 msgid "Refreshes the current feed and announces the most recent article title."
@@ -268,6 +317,16 @@ msgstr "Read Feeds"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Add-on for using NVDA as a feed reader."
 msgstr "Complemento para o uso do NVDA como un lector de feeds."
+
+#~ msgid ""
+#~ "You have installed the ReadFeeds add-on, probably an old and incompatible "
+#~ "version with this one. Do you want to uninstall the old version?"
+#~ msgstr ""
+#~ "instalaches o complemento ReadFeeds, probablemente unha versión vella e "
+#~ "incompatible con éste. ¿Queres desinstalar a versión anterior?"
+
+#~ msgid "Uninstall incompatible add-on"
+#~ msgstr "Desinstalando complemento incompatible"
 
 #~ msgid "Feeds"
 #~ msgstr "Feeds"

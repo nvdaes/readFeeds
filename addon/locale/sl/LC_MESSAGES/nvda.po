@@ -18,21 +18,11 @@ msgstr ""
 "X-Generator: Poedit 1.5.7\n"
 
 #. Translators: the label of a message box dialog.
-msgid ""
-"You have installed the ReadFeeds add-on, probably an old and incompatible "
-"version with this one. Do you want to uninstall the old version?"
-msgstr ""
-"Čeprav imate nameščen dodatek ReadFeeds, je ta zastarel in ni združljiv s to "
-"različico. Želite odstraniti staro različico?"
-
-#. Translators: the title of a message box dialog.
-msgid "Uninstall incompatible add-on"
-msgstr "Odstrani nezdružljiv dodatek"
-
-#. Translators: the label of a message box dialog.
+#, fuzzy
 msgid ""
 "Your configuration folder for NVDA contains files that seem to be derived "
-"from a previous version of this add-on. Do you want to update it?"
+"from a previous version of this add-on.\n"
+"\t\t\tDo you want to update it?"
 msgstr ""
 "Vaša NVDA konfiguracijska mapa vsebuje datoteke, za katere izgleda, da so "
 "del prejšnje različice tega dodatka. Jih želite posodobiti?"
@@ -65,11 +55,12 @@ msgstr "Napaka Preslikave"
 msgid "Feeds restored"
 msgstr "Viri obnovljeni"
 
-#. Translators: The title of a dialog.
+#. Translators: Title of a dialog.
+#, python-brace-format
 msgid "Feeds: {defaultFeed} ({configProfile})"
 msgstr "Viri: {defaultFeed} ({configProfile})"
 
-#. Label of a dialog (message translated in NVDA core in different contexts).
+#. Translators: Label of a dialog (message translated in NVDA's core in different contexts).
 msgid "&Filter by:"
 msgstr "&Preseji med"
 
@@ -80,6 +71,16 @@ msgstr "Seznam &člankov..."
 #. Translators: The label of a button to open a feed.
 msgid "&Open feed"
 msgstr "&Odpri vir"
+
+#. Translators: The label of a button to open a feed as HTML.
+#, fuzzy
+msgid "Open feed as &HTML"
+msgstr "&Odpri vir"
+
+#. Translators: The label of a button to copy the feed URL.
+#, fuzzy
+msgid "Cop&y feed address"
+msgstr "Preslikava virov"
 
 #. Translators: The label of a button to add a new feed.
 msgid "&New..."
@@ -101,7 +102,38 @@ msgstr "&Nastavitev za privzetega"
 msgid "Open &folder containing a backup of feeds"
 msgstr "Odpri &mapo, ki vsebuje varnostno kopijo virov"
 
-#. Translators: The label of a field to enter an address for a new feed.
+#. Translators: The label of a button to open the settings dialog for readFeeds.
+#, fuzzy
+msgid "&Preferences..."
+msgstr "&Obnovi vire..."
+
+#. Translators: Message presented when a feed cannot be added.
+#, python-format
+msgid "Cannot add feed: %s"
+msgstr ""
+
+#. Translators: error message.
+#, fuzzy
+msgid "Error"
+msgstr "Napaka Preslikave"
+
+#. Translators: the label of a message box dialog.
+#, fuzzy, python-brace-format
+msgid ""
+"Do you want to copy feed address to the clipboard\r\n"
+"\r\n"
+"{feedAddress}?"
+msgstr ""
+"%s\r\n"
+"\r\n"
+"Želite preslikati naslov članka in povezavo nanj v odložišče?"
+
+#. Translators: the title of a message box dialog.
+#, fuzzy
+msgid "Copy feed address"
+msgstr "Preslikava virov"
+
+#. Translators: Label of a dialog.
 msgid "Address of a new feed:"
 msgstr "Naslov novega vira:"
 
@@ -135,11 +167,8 @@ msgid "&About article..."
 msgstr "&O članku..."
 
 #. Translators: the label of a message box dialog.
-#, python-format
-msgid ""
-"%s\r\n"
-"\r\n"
-"Do you want to copy article title and link to the clipboard?"
+#, fuzzy, python-format
+msgid "%sDo you want to copy article title and link to the clipboard?"
 msgstr ""
 "%s\r\n"
 "\r\n"
@@ -184,6 +213,10 @@ msgstr "imenik, ki vsebuje varnostno kopijo"
 msgid "Select directory to restore"
 msgstr "Izbira mape za obnovitev"
 
+#. Translators: label of a dialog.
+msgid "&Search edit box after feeds list"
+msgstr ""
+
 #. Translators: Presented when the current article does not have an associated title.
 msgid "Unable to locate article title."
 msgstr "Ni mogoče locirati naslova članka."
@@ -191,6 +224,18 @@ msgstr "Ni mogoče locirati naslova članka."
 #. Translators: Presented when the current article does not have an associated link.
 msgid "Unable to locate article link."
 msgstr "Ni mogoče locirati povezave članka.a"
+
+#. Translators: Label of a checkbox to choose if date should be presented for each feed.
+msgid "Show date"
+msgstr ""
+
+#. Translators: Label for a checkbox to show buttons for copying to clipboard.
+msgid "Show buttons to copy"
+msgstr ""
+
+#. Translators: Label for a button to copy to clipboard.
+msgid "Copy"
+msgstr ""
 
 #. Translators: the name of a submenu.
 msgid "&Read Feeds"
@@ -209,19 +254,24 @@ msgid "R&estore feeds..."
 msgstr "&Obnovi vire..."
 
 #. Translators: message presented in input mode.
-#, python-format
-msgid "Activates the Feeds dialog of %s."
+#, fuzzy
+msgid "Activates the Feeds dialog of Read Feeds."
 msgstr "Sproži pogovorno okno virov za %s."
 
 #. Translators: message presented in input mode.
-#, python-format
-msgid "Activates the Copy dialog of %s."
+#, fuzzy
+msgid "Activates the Copy dialog of Read Feeds."
 msgstr "Sproži pogovorno okno preslikave za %s."
 
 #. Translators: message presented in input mode.
-#, python-format
-msgid "Activates the Restore dialog of %s."
+#, fuzzy
+msgid "Activates the Restore dialog of Read Feeds."
 msgstr "Sproži pogovorno okno obnovitve za %s."
+
+#. Translators: message presented in input mode.
+#, python-format
+msgid "Shows the %s settings."
+msgstr ""
 
 #. Translators: message presented in input mode.
 msgid "Refreshes the current feed and announces the most recent article title."
@@ -267,6 +317,16 @@ msgstr "Bralnik Virov"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Add-on for using NVDA as a feed reader."
 msgstr "Dodatek, ki spremeni NVDA tudi v bralnik virov"
+
+#~ msgid ""
+#~ "You have installed the ReadFeeds add-on, probably an old and incompatible "
+#~ "version with this one. Do you want to uninstall the old version?"
+#~ msgstr ""
+#~ "Čeprav imate nameščen dodatek ReadFeeds, je ta zastarel in ni združljiv s "
+#~ "to različico. Želite odstraniti staro različico?"
+
+#~ msgid "Uninstall incompatible add-on"
+#~ msgstr "Odstrani nezdružljiv dodatek"
 
 #~ msgid "Feeds"
 #~ msgstr "Viri"

@@ -5,11 +5,12 @@
 * Download [stabil version][1]
 * download [udviklingsversion][2]
 
+
 Dette tilføjelsesprogram giver en nem og ligetil måde at læse nyheader i
 atom- eller RSS-format med NVDA. Feeds vil ikke blive opdateret
 automatisk. Når vi nedenfor nævner feeds, mener vi både RSS- og atom-feeds.
 
-## Installation eller opdatering: ##
+## Installation or Update ##
 
 Hvis du har brugt en tidligere version af dette tilføjelsesprogram, og hvis
 der er en mappe med navnet RSS eller personalFeeds i mappen med dine
@@ -18,19 +19,19 @@ version fremkomme en dialog, som spørger, om du vil opgradere eller
 installere. Vælg opdater for at bevare dine gemte feeds og fortsætte med at
 bruge dem i den nyinstallerede version af Læs Feeds.
 
-## Kommandoer: ##
+## Commands ##
 
 ### Menuen Læs feeds ###
 
 Du kan få adgang til undermenuen Læs Feeds fra NVDA-menuen værktøjer, hvor
 de følgende menupunkter er tilgængelige:
 
-#### Feeds... ####
+#### Feeds ####
 
 Åbner en dialogboks med følgende kontrolelementer:
 
 * Filtrér efter: Et redigeringsfelt til at søge i tidligere gemte feeds.
-* En liste over de gemte feeds.
+* A list of the saved feeds, focused when the dialog is opened.
 * Liste over artikler: Åbner en dialog, der viser en liste over artikler fra
   dit nuværende feed. Vælg den artikel, du vil læse, og tryk på Enter eller
   Åbn webside for den valgte artikel for at åbne den tilsvarende side i din
@@ -38,6 +39,11 @@ de følgende menupunkter er tilgængelige:
   link for den valgte artikel; Fra denne dialog kan du kopiere denne
   information til udklipsholderen.
 * Åbn feed: Åbner det valgte feed i standardprogrammet.
+* Open feed as HTML: Opens the selected feed in the default web browser. You
+  will be able to show or hide publication dates and buttons to copy
+  information about articles to clipboard.
+* Copy feed address: Opens a dialog to confirm if you want to copy the feed
+  address to clipboard.
 * Ny: Åbner en dialogboks med et redigeringsfelt til at indtaste adressen på
   et nyt feed. Hvis adressen er gyldig og feedet kan gemmes, vises dets
   navn, baseret på feedets titel nederst på listen over feeds.
@@ -49,6 +55,8 @@ de følgende menupunkter er tilgængelige:
 * Åbn mappen med sikkerhedskopierne for dine feeds: Åbner en mappe, der
   indeholder sikkerhedskopier af dine feeds. Dette kan være nyttigt, hvis du
   evt. vil slette feeds der ikke skal importeres, når tilføjelsen opdateres.
+* Preferences: Opens the settings dialog for readFeeds, also available in
+  NVDA's menu, Preferences, settings, readFeeds category.
 * Luk: Lukker dialogen Nyhedskanaler.
 
 ##### Bemærkninger #####
@@ -59,21 +67,24 @@ de følgende menupunkter er tilgængelige:
 * Det feed der er angivet som standard kan ikke fjernes. AddressFile-feedet
   vil blive brugt som standard, når konfigurationen er nulstillet. Den kan
   ikke fjernes.
+* The Filter by edit box can be placed after the Open article button from
+  NVDA's menu, Preferences, Settings, Read feeds category, or pressing the
+  Preferences button of the Feeds dialog.
 
-####Mappe til kopiering af feeds... ####
+#### Copy feeds folder ####
 
 Åbner en dialogboks for at vælge en mappe, hvor du kan gemme mappen
 personalFeeds der indeholder dine feeds. Den valgte mappe er som standard
 NVDAs konfigurationsmappe. Tilføjelsespakken vil oprette mappen
 personalFeeds.
 
-#### Gendan feeds... ####
+#### Restore feeds ####
 
 Åbner en dialogboks for at vælge en mappe, som erstatter dine feeds i mappen
 personalFeeds. Sørg for, at du indlæser en mappe der indeholder URL-adresser
 på feeds.
 
-### Tastaturkommandoer: ###
+### Keyboard commands ###
 
 * CTRL+Skift+NVDA+Mellemrum: Annoncerer URL på den aktuelle artikel. Ved at
   trykke to gange åbnes adressen i din browser.
@@ -83,15 +94,30 @@ på feeds.
 * CTRL+Skift+NVDA+U: Annoncerer titel på det forrige feed.
 * CTRL+Skift+NVDA+O: Annoncerer titel på det næste feed.
 
-## Meddelelser: ##
+## Notifications ##
 
 * Når titlen eller URL-adressen er blevet kopieret.
 * Når det ikke er muligt at forbinde/opdatere et feed, eller den angivne URL
   ikke svarer til et gyldigt feed.
-* NVDA vil vise en fejlmeddelelse, hvis det ikke var muligt at
-  sikkerhedskopiere eller gendanne mappen personalFeeds.
+* NVDA will display an error message if it was not possible to backup or
+  restore the personalFeeds folder, and if a new feed cannot be created.
 * Titlen på dialogen der viser listen over artikler viser navnet på det
   aktuelle feed, samt antallet af artikler til rådighed.
+
+## Changes for 10.0 ##
+
+* Added a button to open the selected feed as HTML in the default web
+  browser.
+* If a new feed cannot be created, this will be notified in an error dialog.
+* Improved order and presentation of some articles.
+* More feeds may be supported.
+* When the feeds dialog is opened, the list of feeds will be focused instead
+  of the search edit box.
+* You can choose if the search edit box is placed after the list of feeds,
+  useful to focus the list even when switching from another window without
+  closing the Feeds dialog.
+* Added a button to copy the feed address to clipboard from the feeds
+  dialog.
 
 ## Changes for 9.0 ##
 
@@ -146,7 +172,6 @@ på feeds.
 * Standardfeed er gemt i NVDA-konfigurationen. Derfor er det muligt at
   indstille forskellige standardfeeds i konfigurationsprofilerne.
 * Kræver NVDA 2016.4.
-
 
 ## Ændringer i 2.0 ##
 

@@ -5,12 +5,13 @@
 * Descărcați [versiunea stabilă][1]
 * Descărcați [versiunea în dezvoltare][2]
 
+
 Acest supliment oferă o modalitate simplă de a citi feed-uri în format Atom
 sau RSS folosind NVDA. Feed-urile nu vor fi actualizate în mod
 automat. Atunci când menționăm feed-uri, ne referim atât la fluxuri RSS cât
 și la cele Atom.
 
-## Instalare sau Actualizare: ##
+## Installation or Update ##
 
 Dacă ați utilizat o versiune anterioară a acestui add-on și există un dosar
 RSS sau un dosar de feed-uri personale în dosarul dumneavoastră de
@@ -19,20 +20,20 @@ vă va întreba dacă vreți să upgradați sau instalați. Alegeți actualizare
 pentru a păstra feed-urile salvate și pentru a continua să le folosiți în
 noua versiune instalată a cititorului de feed-uri.
 
-## Comenzi: ##
+## Commands ##
 
 ### Meniul Read Feeds  ###
 
 Puteți accesa submeniul Read Feeds din meniul NVDA, NVDA+N, unde sunt
 disponibile următoarele opțiuni:
 
-#### Fluxuri ####
+#### Feeds ####
 
 Deschide un dialog cu următoarele controale:
 
 * Filtrează după: O casetă de editare pentru căutarea fluxurilor salvate
   anterior.
-* O listă a fluxurilor salvate.
+* A list of the saved feeds, focused when the dialog is opened.
 * Lista articolelor: Deschide un dialog care  prezintă lista articolelor de
   la fluxul curent. Selectați articolul pe care vreți să îl citiți și
   apăsați Enter sau butonul „Deschide pagina web a articolului selectat”
@@ -42,6 +43,11 @@ Deschide un dialog cu următoarele controale:
   aceste informații pe planșetă.
 * Deschide flux: Deschide fluxul selectat in aplicația standard
   corespunzătoare.
+* Open feed as HTML: Opens the selected feed in the default web browser. You
+  will be able to show or hide publication dates and buttons to copy
+  information about articles to clipboard.
+* Copy feed address: Opens a dialog to confirm if you want to copy the feed
+  address to clipboard.
 * Nou: Deschide un dialog cu o casetă de editare pentru introducerea adresei
   unui nou flux. Dacă adresa este validă și fluxul poate fi salvat, numele
   său bazat pe titlul acestuia va apărea la sfârșitul listei de fluxuri.
@@ -54,6 +60,8 @@ Deschide un dialog cu următoarele controale:
 * Open folder containing a backup of feeds: Opens a folder which may contain
   a backup of feeds. This can be useful to explore and delete feeds which
   shouldn't be imported when the add-on is updated.
+* Preferences: Opens the settings dialog for readFeeds, also available in
+  NVDA's menu, Preferences, settings, readFeeds category.
 * Închidere: Închide dialogul fluxurilor.
 
 ##### Note #####
@@ -64,20 +72,23 @@ Deschide un dialog cu următoarele controale:
 * Fluxul setat ca implicit nu poate fi șters. Fluxul addressFile va fi
   utilizat ca implicit atunci când configurația este resetată, deci nu poate
   fi șters.
+* The Filter by edit box can be placed after the Open article button from
+  NVDA's menu, Preferences, Settings, Read feeds category, or pressing the
+  Preferences button of the Feeds dialog.
 
-Copiază dosarul fluxurilor... 
+#### Copy feeds folder ####
 
 Deschide un dialog pentru a alege un dosar unde să puteți salva dosarul
 personalFeeds al fluxurilor dumneavoastră. În mod implicit, folderul
 selectat este cel al configurației NVDA, care va crea dosarul personalFeeds.
 
-#### Restaurare fluxuri... ####
+#### Restore feeds ####
 
 Deschide un dialog pentru selectarea unui dosar care înlocuiește fluxurile
 dumneavoastră în dosarul personalFeeds. Asigurați-vă că încărcați un dosar
 ce conține URL-urile fluxurilor.
 
-### Comenzi de taste: ###
+### Keyboard commands ###
 
 * Ctrl+Shift+NVDA+Spațiu: Anunță URL-ul articolului curent. Apăsarea de două
   ori va deschide pagina web.
@@ -89,15 +100,30 @@ ce conține URL-urile fluxurilor.
 * Ctrl+Shift+NVDA+U: Anunță titlul fluxului precedent.
 * Ctrl+Shift+NVDA+O: Anunță titlul fluxului succedent.
 
-## Notificări: ##
+## Notifications ##
 
 * Când titlul sau URL-ul a fost copiat.
 * Atunci când nu se poate conecta/reîmprospăta un flux, sau URL-ul nu
   corespunde unui flux valid.
-* NVDA va afișa un mesaj de eroare dacă nu a fost posibilă crearea unei
-  copii de siguranță sau restaurarea dosarului personalFeeds.
+* NVDA will display an error message if it was not possible to backup or
+  restore the personalFeeds folder, and if a new feed cannot be created.
 * Dialogul titlului listei articolelor afișează numele fluxului selectat și
   numărul elementelor disponibile.
+
+## Changes for 10.0 ##
+
+* Added a button to open the selected feed as HTML in the default web
+  browser.
+* If a new feed cannot be created, this will be notified in an error dialog.
+* Improved order and presentation of some articles.
+* More feeds may be supported.
+* When the feeds dialog is opened, the list of feeds will be focused instead
+  of the search edit box.
+* You can choose if the search edit box is placed after the list of feeds,
+  useful to focus the list even when switching from another window without
+  closing the Feeds dialog.
+* Added a button to copy the feed address to clipboard from the feeds
+  dialog.
 
 ## Changes for 9.0 ##
 
@@ -153,7 +179,6 @@ ce conține URL-urile fluxurilor.
   posibilă setarea fluxurilor implicite diferite în configurarea
   profilurilor.
 * Necesită NVDA 2016.4.
-
 
 ## Modificări în 2.0 ##
 

@@ -5,12 +5,13 @@
 * Загрузить [стабильную версию][1]
 * Загрузить [разрабатываемую версию][2]
 
+
 Это дополнение обеспечивает простой способ читать новости формата Atom или
 RSS, используя NVDA.  Новостные ленты не будут обновляться автоматически.
 Ниже, когда мы упоминаем новостные ленты, мы имеем в виду как RSS, так и
 ATOM каналы.
 
-## Установка или Обновление: ##
+## Installation or Update ##
 
 Если вы использовали предыдущую версию этого дополнения, и есть папка RSS
 или personalFeeds в пользовательской папке конфигурации NVDA, при установке
@@ -19,20 +20,20 @@ ATOM каналы.
 новостей и продолжать использовать их в новой установленной версии
 readFeeds.
 
-## Команды: ##
+## Commands ##
 
 ### Меню Чтение Новостей ###
 
 Вы можете получить доступ к подменю чтение новостей из меню NVDA, Сервис,
 где доступны следующие пункты меню:
 
-#### Новостные ленты... ####
+#### Feeds ####
 
 Открывает диалог со следующими элементами управления:
 
 * Фильтр по: поле редактирования для поиска ранее сохраненных новостных
   лент.
-* Список сохраненных новостных лент.
+* A list of the saved feeds, focused when the dialog is opened.
 * List of articles: Opens a dialog which presents the articles list from
   your current feed. Select the article you want to read and press Enter or
   Open web page of selected article button to open the corresponding page in
@@ -41,6 +42,11 @@ readFeeds.
   this info to the clipboard.
 * Открыть новостную ленту: Открывает выбранную новостную ленту в приложении
   по умолчанию.
+* Open feed as HTML: Opens the selected feed in the default web browser. You
+  will be able to show or hide publication dates and buttons to copy
+  information about articles to clipboard.
+* Copy feed address: Opens a dialog to confirm if you want to copy the feed
+  address to clipboard.
 * Новый: открывает диалог с полем редактирования, где можно ввести адрес
   новой ленты. Если адрес действителен и новостная лента может быть
   сохранена, её имя появится в низу списка новостных лент, исходя из
@@ -54,6 +60,8 @@ readFeeds.
 * Open folder containing a backup of feeds: Opens a folder which may contain
   a backup of feeds. This can be useful to explore and delete feeds which
   shouldn't be imported when the add-on is updated.
+* Preferences: Opens the settings dialog for readFeeds, also available in
+  NVDA's menu, Preferences, settings, readFeeds category.
 * Закрыть: закрывает диалог новостных лент.
 
 ##### Примечания #####
@@ -63,20 +71,23 @@ readFeeds.
   существующим именем.
 * Новостная лента по умолчанию не может быть удалена. Она используется для
   сброса настроек в файле addressFile, и поэтому не может быть удалена.
+* The Filter by edit box can be placed after the Open article button from
+  NVDA's menu, Preferences, Settings, Read feeds category, or pressing the
+  Preferences button of the Feeds dialog.
 
-####Копировать Папку новостных лент... ####
+#### Copy feeds folder ####
 
 Открывает диалог для выбора папки, куда можно сохранить каталог
 personalFeeds. По умолчанию выбран каталог конфигурации nvda, в котором
 возможно создать каталог personalFeeds.
 
-#### Восстановить новостные ленты... ####
+#### Restore feeds ####
 
 Открывает диалог для выбора папки, из которой заменяются ваши новостные
 ленты в папке personalFeeds. Убедитесь, что вы загружаете папку, содержащую
 URL-адреса новостных лент.
 
-### Команды клавиш ###
+### Keyboard commands ###
 
 * Ctrl+Shift+NVDA+Пробел: Объявляет URL текущей статьи. Двойное нажатие
   откроет веб-страницу.
@@ -88,15 +99,30 @@ URL-адреса новостных лент.
 * Ctrl+Shift+NVDA+U: Объявляет название предыдущей новостной ленты.
 * Ctrl+Shift+NVDA+O: Объявляет название следующей новостной ленты.
 
-## Оповещения: ##
+## Notifications ##
 
 * Когда название или URL были скопированы.
 * Когда не удается подключить/обновить ленту, или URL-адрес не соответствует
   допустимой новостной ленте.
-* NVDA отобразит сообщение об ошибке, если не удалось сделать или
-  восстановить резервную копию папки personalFeeds.
+* NVDA will display an error message if it was not possible to backup or
+  restore the personalFeeds folder, and if a new feed cannot be created.
 * Диалог с названием списка статей отображает имя выбранной новостной ленты
   с количеством доступных элементов.
+
+## Changes for 10.0 ##
+
+* Added a button to open the selected feed as HTML in the default web
+  browser.
+* If a new feed cannot be created, this will be notified in an error dialog.
+* Improved order and presentation of some articles.
+* More feeds may be supported.
+* When the feeds dialog is opened, the list of feeds will be focused instead
+  of the search edit box.
+* You can choose if the search edit box is placed after the list of feeds,
+  useful to focus the list even when switching from another window without
+  closing the Feeds dialog.
+* Added a button to copy the feed address to clipboard from the feeds
+  dialog.
 
 ## Changes for 9.0 ##
 
@@ -151,7 +177,6 @@ URL-адреса новостных лент.
   образом, можно установить различные новостные ленты по умолчанию в
   различных профилях конфигурации.
 * Требуется NVDA 2016.4.
-
 
 ## Изменения для 2.0 ##
 

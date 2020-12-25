@@ -10,29 +10,19 @@ msgstr ""
 "POT-Creation-Date: 2013-11-16 13:26+0100\n"
 "PO-Revision-Date: 2020-01-14 07:39+0100\n"
 "Last-Translator: Ondrej Rosík <ondrej.rosik@gmail.com>\n"
+"Language-Team: \n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.6.11\n"
-"Language-Team: \n"
 
 #. Translators: the label of a message box dialog.
-msgid ""
-"You have installed the ReadFeeds add-on, probably an old and incompatible "
-"version with this one. Do you want to uninstall the old version?"
-msgstr ""
-"Našla sa staršia verzia doplnku RSS čítačka, ktorá ale nie je kompatibilná s "
-"týmto doplnkom. Chcete ju odstrániť?"
-
-#. Translators: the title of a message box dialog.
-msgid "Uninstall incompatible add-on"
-msgstr "Odstránenie staršieho doplnku"
-
-#. Translators: the label of a message box dialog.
+#, fuzzy
 msgid ""
 "Your configuration folder for NVDA contains files that seem to be derived "
-"from a previous version of this add-on. Do you want to update it?"
+"from a previous version of this add-on.\n"
+"\t\t\tDo you want to update it?"
 msgstr ""
 "V priečinku s používateľskými dátami NVDA sa našli súbory zo staršej verzie "
 "tohto doplnku. Chcete ich aktualizovať?"
@@ -65,12 +55,12 @@ msgstr "Chyba pri kopýrovaní"
 msgid "Feeds restored"
 msgstr "Informačné kanály obnovené"
 
-#. Translators: The title of a dialog.
+#. Translators: Title of a dialog.
 #, python-brace-format
 msgid "Feeds: {defaultFeed} ({configProfile})"
 msgstr "Informačné kanály: {defaultFeed} ({configProfile})"
 
-#. Label of a dialog (message translated in NVDA core in different contexts).
+#. Translators: Label of a dialog (message translated in NVDA's core in different contexts).
 msgid "&Filter by:"
 msgstr "&filter:"
 
@@ -81,6 +71,16 @@ msgstr "Zoznam &článkov..."
 #. Translators: The label of a button to open a feed.
 msgid "&Open feed"
 msgstr "&otvoriť informačný kanál"
+
+#. Translators: The label of a button to open a feed as HTML.
+#, fuzzy
+msgid "Open feed as &HTML"
+msgstr "&otvoriť informačný kanál"
+
+#. Translators: The label of a button to copy the feed URL.
+#, fuzzy
+msgid "Cop&y feed address"
+msgstr "Skopýrovať informačné kanály"
 
 #. Translators: The label of a button to add a new feed.
 msgid "&New..."
@@ -102,7 +102,38 @@ msgstr "&nastaviť predvolené"
 msgid "Open &folder containing a backup of feeds"
 msgstr "Otvoriť &priečinok so zálohou zdrojov"
 
-#. Translators: The label of a field to enter an address for a new feed.
+#. Translators: The label of a button to open the settings dialog for readFeeds.
+#, fuzzy
+msgid "&Preferences..."
+msgstr "&Obnoviť informačné kanály..."
+
+#. Translators: Message presented when a feed cannot be added.
+#, python-format
+msgid "Cannot add feed: %s"
+msgstr ""
+
+#. Translators: error message.
+#, fuzzy
+msgid "Error"
+msgstr "Chyba pri kopýrovaní"
+
+#. Translators: the label of a message box dialog.
+#, fuzzy, python-brace-format
+msgid ""
+"Do you want to copy feed address to the clipboard\r\n"
+"\r\n"
+"{feedAddress}?"
+msgstr ""
+"%s\r\n"
+"\r\n"
+"Chcete skopírovať názov článku a odkaz do schránky?"
+
+#. Translators: the title of a message box dialog.
+#, fuzzy
+msgid "Copy feed address"
+msgstr "Skopýrovať informačné kanály"
+
+#. Translators: Label of a dialog.
 msgid "Address of a new feed:"
 msgstr "Adresa nového informačného kanála:"
 
@@ -135,11 +166,8 @@ msgid "&About article..."
 msgstr "&o článku..."
 
 #. Translators: the label of a message box dialog.
-#, python-format
-msgid ""
-"%s\r\n"
-"\r\n"
-"Do you want to copy article title and link to the clipboard?"
+#, fuzzy, python-format
+msgid "%sDo you want to copy article title and link to the clipboard?"
 msgstr ""
 "%s\r\n"
 "\r\n"
@@ -182,6 +210,10 @@ msgstr "Adresár so zálohou:"
 msgid "Select directory to restore"
 msgstr "Vyberte adresár na obnovenie"
 
+#. Translators: label of a dialog.
+msgid "&Search edit box after feeds list"
+msgstr ""
+
 #. Translators: Presented when the current article does not have an associated title.
 msgid "Unable to locate article title."
 msgstr "Nepodarilo sa nájsť názov článku."
@@ -189,6 +221,18 @@ msgstr "Nepodarilo sa nájsť názov článku."
 #. Translators: Presented when the current article does not have an associated link.
 msgid "Unable to locate article link."
 msgstr "Nepodarilo sa nájsť odkaz na článok."
+
+#. Translators: Label of a checkbox to choose if date should be presented for each feed.
+msgid "Show date"
+msgstr ""
+
+#. Translators: Label for a checkbox to show buttons for copying to clipboard.
+msgid "Show buttons to copy"
+msgstr ""
+
+#. Translators: Label for a button to copy to clipboard.
+msgid "Copy"
+msgstr ""
 
 #. Translators: the name of a submenu.
 msgid "&Read Feeds"
@@ -207,19 +251,24 @@ msgid "R&estore feeds..."
 msgstr "&Obnoviť informačné kanály..."
 
 #. Translators: message presented in input mode.
-#, python-format
-msgid "Activates the Feeds dialog of %s."
+#, fuzzy
+msgid "Activates the Feeds dialog of Read Feeds."
 msgstr "Zobrazí dialóg s RSS kanálmi %s."
 
 #. Translators: message presented in input mode.
-#, python-format
-msgid "Activates the Copy dialog of %s."
+#, fuzzy
+msgid "Activates the Copy dialog of Read Feeds."
 msgstr "Aktivuje dialógové okno na kopírovanie %s."
 
 #. Translators: message presented in input mode.
-#, python-format
-msgid "Activates the Restore dialog of %s."
+#, fuzzy
+msgid "Activates the Restore dialog of Read Feeds."
 msgstr "Aktivuje dialógové okno na obnovenie %s."
+
+#. Translators: message presented in input mode.
+#, python-format
+msgid "Shows the %s settings."
+msgstr ""
 
 #. Translators: message presented in input mode.
 msgid "Refreshes the current feed and announces the most recent article title."
@@ -265,6 +314,16 @@ msgstr "RSS čítačka"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Add-on for using NVDA as a feed reader."
 msgstr "Doplnok na sledovanie RSS zdrojov."
+
+#~ msgid ""
+#~ "You have installed the ReadFeeds add-on, probably an old and incompatible "
+#~ "version with this one. Do you want to uninstall the old version?"
+#~ msgstr ""
+#~ "Našla sa staršia verzia doplnku RSS čítačka, ktorá ale nie je "
+#~ "kompatibilná s týmto doplnkom. Chcete ju odstrániť?"
+
+#~ msgid "Uninstall incompatible add-on"
+#~ msgstr "Odstránenie staršieho doplnku"
 
 #, fuzzy
 #~ msgid "Feeds"

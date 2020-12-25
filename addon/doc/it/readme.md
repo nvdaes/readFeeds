@@ -5,12 +5,13 @@
 * Scarica la [versione stabile][1]
 * Scarica la [versione in sviluppo][2]
 
+
 Questo componente aggiuntivo fornisce un modo semplice per leggere i feed
 nel formato Atom o RSS usando NVDA. I feed non verranno aggiornati
 automaticamente. Nel seguito, quando menzioneremo i feed, intenderemo sia i
 feed RSS che i feed ATOM.
 
-## Installazione e aggiornamento: ##
+## Installation or Update ##
 
 Se avete installato una versione precedente di questo componente aggiuntivo,
 e sono presenti le cartelle personalFeed o RSS nella cartella di
@@ -19,19 +20,19 @@ finestra di dialogo vi chiederà se volete aggiornare o installare. Scegliete
 Aggiorna per conservare i feed memorizzati e continuare ad utilizzarli nella
 nuova versione di ReadFeed.
 
-## Comandi: ##
+## Commands ##
 
 ### Il Menu di Read Feeds ###
 
 Si può accedere al sottomenu Gestore Feed dal menu NVDA, Strumenti.  Le voci
 del sottomenu sono:
 
-#### Feeds... ####
+#### Feeds ####
 
 Apre una finestra con i seguenti controlli:
 
 * Filtra per: un campo editazione per la ricerca tra i feed salvati.
-* Un elenco dei feed salvati.
+* A list of the saved feeds, focused when the dialog is opened.
 * Elenco degli articoli: apre una finestra che presenta l'elenco degli
   articoli del feed selezionato. Selezionate l'articolo che vi interessa
   leggere, quindi premete Invio o il pulsante Apri feed per aprire
@@ -40,6 +41,11 @@ Apre una finestra con i seguenti controlli:
   dell'articolo selezionato. Queste informazioni possono essere copiate
   negli appunti.
 * Apri feed: apre il feed selezionato nell'applicazione predefinita.
+* Open feed as HTML: Opens the selected feed in the default web browser. You
+  will be able to show or hide publication dates and buttons to copy
+  information about articles to clipboard.
+* Copy feed address: Opens a dialog to confirm if you want to copy the feed
+  address to clipboard.
 * Nuovo: apre una finestra didialogo con un campo editazione per inserire
   l'indirizzo  di un nuovo feed. Se l'indirizzo è valido ed il feed può
   esser salvato, il nome del  feed, basato sul titolo, appare in fondo
@@ -54,6 +60,8 @@ Apre una finestra con i seguenti controlli:
 * Cartella backup: apre una cartella che contiene un backup dei feed. Può
   essere utile per esplorare e cancellare feed non più necessari che non si
   vogliono caricare durante l'aggiornamento del componente.
+* Preferences: Opens the settings dialog for readFeeds, also available in
+  NVDA's menu, Preferences, settings, readFeeds category.
 * Chiudi: chiude la finestra dei feed.
 
 ##### Note #####
@@ -64,22 +72,25 @@ Apre una finestra con i seguenti controlli:
 * Il feed impostato come predefinito non può essere rimosso. Il feed
   addressFile  potrà esser usato come predefinito quando si ripristina la
   configurazione iniziale, perciò anch'esso non può essere rimosso.
+* The Filter by edit box can be placed after the Open article button from
+  NVDA's menu, Preferences, Settings, Read feeds category, or pressing the
+  Preferences button of the Feeds dialog.
 
-####Cartella Copia feed ####
+#### Copy feeds folder ####
 
 Apre una finestra dove è possibile scegliere il percorso per salvare la
 cartella dei vostri feed. Il percorso predefinito è la cartella di
 configurazione di NVDA,  dove verrà salvata una cartella nominata
 personalFeeds.
 
-#### Ripristina feed. ####
+#### Restore feeds ####
 
 Apre una finestra che consente di selezionare una cartella di feed
 precedentemente salvati e che sostituiranno i feed nella cartella
 personalFeeds. Assicurarsi di selezionare una cartella che contiene file con
 l'URL dei feed.
 
-### Comandi da tastiera: ###
+### Keyboard commands ###
 
 * Ctrl+Shift+NVDA+Space: Legge il link dell'articolo selezionato. Premuto
   due volte apre la pagina web dell'articolo.
@@ -91,15 +102,30 @@ l'URL dei feed.
 * Ctrl+Shift+NVDA+U: legge il titolo del precedente feed.
 * Ctrl+Shift+NVDA+O: legge il titolo del feed successivo.
 
-## Avvisi vocali: ##
+## Notifications ##
 
 * Quando si copia un titolo o un link.
 * Quando non è possibile connettersi o aggiornare un feed, o l'URL non
   corrisponde ad un feed valido.
-* NVDA mostrerà un messaggio di errore se non è stato possibile ripristinare
-  o aggiornare la cartella personalFeeds.
+* NVDA will display an error message if it was not possible to backup or
+  restore the personalFeeds folder, and if a new feed cannot be created.
 * Nel titolo della finestra elenco articoli viene indicato il nome del feed
   selezionato ed il numero di elementi disponibili.
+
+## Changes for 10.0 ##
+
+* Added a button to open the selected feed as HTML in the default web
+  browser.
+* If a new feed cannot be created, this will be notified in an error dialog.
+* Improved order and presentation of some articles.
+* More feeds may be supported.
+* When the feeds dialog is opened, the list of feeds will be focused instead
+  of the search edit box.
+* You can choose if the search edit box is placed after the list of feeds,
+  useful to focus the list even when switching from another window without
+  closing the Feeds dialog.
+* Added a button to copy the feed address to clipboard from the feeds
+  dialog.
 
 ## Novità nella versione 9.0 ##
 
@@ -158,7 +184,6 @@ l'URL dei feed.
   NVDA. E' quindi possibile impostare feed predefiniti diversi nei profili
   di configurazione.
 * Richiede NVDA 2016.4.
-
 
 ## Novità nella versione 2.0 ##
 
