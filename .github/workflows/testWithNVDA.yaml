@@ -67,7 +67,9 @@ jobs:
     - name: Add get.php entry
       run: |
         import re
-        with open("/addonFiles/get.php", 'r+', encoding='utf-8') as f:
+        import os
+        filename = os.path.join(os.path.dirname(__file__), "get.php")
+        with open(filename, 'r+', encoding='utf-8') as f:
           text = f.read()
           text = re.sub("(\"rf\" => \")(.*?\")", "\1https://github.com/nvdaes/readFeeds/releases/download/10.0/readFeeds-10.0.nvda-addon", text)
           f.seek(0)
