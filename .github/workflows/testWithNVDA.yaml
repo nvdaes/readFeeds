@@ -57,7 +57,7 @@ jobs:
     - name: Checkout addonFiles
       uses: actions/checkout@v2
       with:
-        repository: nvdaes:addonFiles
+        repository: nvdaes/addonFiles
         ref: test
         path: addonFiles
     - name: Add get.php entry
