@@ -58,8 +58,12 @@ jobs:
       uses: actions/checkout@v2
       with:
         repository: nvdaes/addonFiles
-        ref: test
         path: addonFiles
+    - name: Create branch
+      run: |
+        cd addonFiles
+        git checkout -b readFeeds-test
+        
     - name: Add get.php entry
       run: |
         import re
@@ -74,7 +78,7 @@ jobs:
       run: |
         git config user.name github-actions
         git config user.email github-actions@github.com
-        git add .
+        git add addonFiles/get.php
         git commit -m "Release"
         git push
       
