@@ -72,4 +72,11 @@ jobs:
       run: git checkout -b ${{  steps.get_branch.outputs.result }}
     - name: Create add-on url
       run: |
-        "((Get-Content get.php -Raw) -Replace '"rf".*,', '"rf" >= "${{ buildAndUpload.upload.browser_download_url }}",') | Set-Content -path get.php"
+        import re
+        with open("get.php", 'r+', encoding='utf-8') as f:
+          text = f.read()
+          text = re.sub("\"rf\".*?,", "\"rf\" >= \"${{ buildAndUpload.upload.browser_download_url: }}\",", text)
+          f.seek(0)
+          f.write(text)
+          f.truncate()
+      shell: python 
