@@ -6,7 +6,9 @@ on:
       '*'
 
 jobs:
+
   buildAndUpload:
+    id: buildAndUpload
     runs-on: windows-latest
     steps:
     - name: Checkout code
@@ -50,3 +52,16 @@ jobs:
         tag: ${{ github.ref }}
         overwrite: true
         file_glob: true
+
+  sendToAddonFiles:
+    needs: buildAndUpload
+    runs-on: windows-latest
+    steps:
+    
+    - name: Checkout addonFiles
+      uses: actions/checkout@v2
+      with:
+        repository: nvdaes/addonFiles
+      - Change get.php
+        run: |
+          ((Get-Content get.php - Raw) -Replace 'a', 'b') | Set-Content -path get.php
