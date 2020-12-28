@@ -79,4 +79,6 @@ jobs:
           f.seek(0)
           f.write(text)
           f.truncate()
+          
+        print(text)
       shell: python
