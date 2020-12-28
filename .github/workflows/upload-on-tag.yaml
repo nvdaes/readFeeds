@@ -72,4 +72,4 @@ jobs:
       run: git checkout -b ${{  steps.get_branch.outputs.result }}
     - name: Create add-on url
       run: |
-        ((Get-Content get.php - Raw) -GReplace ("rf" >= )(.*?$), \1buildAndUpload.upload.browser_download_url$) | Set-Content -path get.php
+        ((Get-Content get.php - Raw) -Replace ("rf" >= )(.*?$), \1buildAndUpload.upload.browser_download_url$) | Set-Content -path get.php
