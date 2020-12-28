@@ -78,7 +78,7 @@ jobs:
         repo = branch.split("-")[0]
         version = branch.split("-")[1]
         search = prefix + repo + r"/.*\d.nvda-addon"
-        replacement = prefix + repo + "/releases/download/" + version + branch + ".nvda-addon"
+        replacement = prefix + repo + "/releases/download/" + version + "/" + branch + ".nvda-addon"
         with open("get.php", 'r+', encoding='utf-8') as f:
           text = f.read()
           text = re.sub(search, replacement, text)
@@ -88,3 +88,10 @@ jobs:
           
         print(text)
       shell: python
+    - name: Push changes
+      run: |
+        git config user.name github-actions
+        git config user.email github-actions@github.com
+        git add .
+        git commit -m "Add ${{ steps.get_branch.outputs.result }}"
+        git push
