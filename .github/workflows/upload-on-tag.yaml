@@ -75,7 +75,7 @@ jobs:
         import re
         with open("get.php", 'r+', encoding='utf-8') as f:
           text = f.read()
-          re.sub(r"https://github.com/nvdaes/readFeeds/.*\d.nvda-addon", "$ {{ buildAndUpload.steps.upload.browser_download_url}}", text)
+          text = re.sub(r"https://github.com/nvdaes/readFeeds/.*\d.nvda-addon", "$ {{ buildAndUpload.steps.upload.browser_download_url}}", text)
           f.seek(0)
           f.write(text)
           f.truncate()
