@@ -75,6 +75,6 @@ jobs:
         import re
         with open("get.php", 'r+', encoding='utf-8') as f:
           for line in f.read():
-            if not f.startswith(r"\t\"rf"):
+            if not f.startswith("\t\"rf"):
               continue
-            f.write('\t\"rff')
+            f.write("\t\"rff")
