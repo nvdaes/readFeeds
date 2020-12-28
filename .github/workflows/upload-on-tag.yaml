@@ -76,7 +76,7 @@ jobs:
         replacement = "\"" + "$ {{ buildAndUpload.steps.upload.outputs.browser_download_url }}" + "\""
         with open("get.php", 'r+', encoding='utf-8') as f:
           text = f.read()
-          text = re.sub(r"https://github.com/nvdaes/readFeeds/.*\d.nvda-addon", replacement, taext)
+          text = re.sub(r"https://github.com/nvdaes/readFeeds/.*\d.nvda-addon", replacement, text)
           f.seek(0)
           f.write(text)
           f.truncate()
