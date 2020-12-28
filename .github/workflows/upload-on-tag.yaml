@@ -74,9 +74,7 @@ jobs:
       run: |
         import re
         with open("get.php", 'r+', encoding='utf-8') as f:
-          text = f.read()
-          text = re.sub("a", "b", text)
-          f.seek(0)
-          f.write(text)
-          f.truncate()
-      shell: python 
+          for line in f.read():
+            if not f.startswith(r"\t\"rf"):
+              continue
+            f.write('\t\"rff')
