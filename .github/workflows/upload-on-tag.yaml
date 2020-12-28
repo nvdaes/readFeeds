@@ -65,7 +65,7 @@ jobs:
       uses: actions/github-script@0.9.0
       with:
         github-token: ${{secrets.GITHUB_TOKEN}}
-        script: return context.repo.repo + "-" + context.payload.ref.split("/")[-1];
+        script: return context.repo.repo + "-" + context.payload.ref.split("/")[2];
         result-encoding: string
     - name: Create branch
       run: git checkout -b ${{  steps.get_branch.outputs.result }}
