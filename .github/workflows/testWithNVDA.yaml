@@ -33,7 +33,7 @@ jobs:
         import re
         with open("buildVars.py", 'r+', encoding='utf-8') as f:
           text = f.read()
-          text = re.sub("\"addon_version\" : ", "\"addon_version\" : \"${{ github.sha }}\"", text)
+          text = re.sub("\"addon_version\" : ,", "\"addon_version\" : \"${{ github.sha }}\",", text)
           f.seek(0)
           f.write(text)
           f.truncate()
@@ -54,34 +54,6 @@ jobs:
         path: "*.pot"
 
         
-    - name: Checkout addonFiles
-      uses: actions/checkout@v2
-      with:
-        repository: nvdaes/addonFiles
-        path: addonFiles
-    - name: Create branch
-      run: |
-        cd addonFiles
-        git checkout -b readFeeds-test
-        
-    - name: Add get.php entry
-      run: |
-        import re
-        with open("./addonFiles/get.php", 'r+', encoding='utf-8') as f:
-          text = f.read()
-          text = re.sub("(\"rf\" => \")(.*?\")", "\1https://github.com/nvdaes/readFeeds/releases/download/10.0/readFeeds-10.0.nvda-addon", text)
-          f.seek(0)
-          f.write(text)
-          f.truncate()
-      shell: python
-    - name: Push changes
-      run: |
-        git config user.name github-actions
-        git config user.email github-actions@github.com
-        git add addonFiles/get.php
-        git commit -m "Release"
-        git push
-      
   nvda:
   
     name: NVDA
@@ -152,5 +124,4 @@ jobs:
             repo: context.repo.repo,
             body: 'This PR has messages without comments for translators'
           })
-          
           
