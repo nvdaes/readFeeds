@@ -73,10 +73,15 @@ jobs:
     - name: Create add-on url
       run: |
         import re
-        replacement = "$ {{ buildAndUpload.steps.upload.outputs.browser_download_url.value }}"
+        branch = "${{ steps.get_branch.outputs.result }}"
+        prefix = "https://github.com/nvdaes/"
+        repo = branch.split("-")[0]
+        version = branch.split("-")[1]
+        search = prefix + repo + r"/.*\d.nvda-addon"
+        replacement = prefix + repo + "/releases/download/" + version + branch + ".nvda-addon"
         with open("get.php", 'r+', encoding='utf-8') as f:
           text = f.read()
-          text = re.sub(r"https://github.com/nvdaes/readFeeds/.*\d.nvda-addon", replacement, text)
+          text = re.sub(search, replacement, text)
           f.seek(0)
           f.write(text)
           f.truncate()
