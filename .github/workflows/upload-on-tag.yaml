@@ -51,3 +51,15 @@ jobs:
         tag: ${{ github.ref }}
         overwrite: true
         file_glob: true
+        
+  sendToAddonFiles:
+    needs: buildAndUpload
+    runs-on: windows-latest
+    steps:
+    - name: Checkout addonFiles
+      uses: actions/checkout@v2
+      with:
+        repository: nvdaes/addonFiles
+    - name: Create branch
+      run: git checkout -b format('{1}-{2}', ${{ github.repository.name }}, ${{ github.ref }})
+        
