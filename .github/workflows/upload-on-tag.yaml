@@ -73,9 +73,10 @@ jobs:
     - name: Create add-on url
       run: |
         import re
+        search = re.compile('\"rf\".*?,')
         with open("get.php", 'r+', encoding='utf-8') as f:
           text = f.read()
-          text = re.sub("\"rf\".*?,", "\"rf\" >= \"${{ buildAndUpload.upload.browser_download_url }}\",", text)
+          text = re.sub(search, '\"rf\" >= \"${{ buildAndUpload.steps.upload.browser_download_url }}\",', text)
           f.seek(0)
           f.write(text)
           f.truncate()
