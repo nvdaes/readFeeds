@@ -94,4 +94,5 @@ jobs:
         git config user.email github-actions@github.com
         git add .
         git commit -m "Add ${{ steps.get_branch.outputs.result }}"
-        git push
+        git push --set-upstream origin ${{ steps.get_branch.outputs.result }}
+        
