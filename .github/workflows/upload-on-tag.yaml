@@ -73,7 +73,7 @@ jobs:
     - name: Create add-on url
       run: |
         import re
-        replacement = "\"" + "$ {{ buildAndUpload.steps.upload.outputs.browser_download_url }}" + "\""
+        replacement = $ {{ buildAndUpload.steps.upload.outputs.browser_download_url }}
         with open("get.php", 'r+', encoding='utf-8') as f:
           text = f.read()
           text = re.sub(r"https://github.com/nvdaes/readFeeds/.*\d.nvda-addon", replacement, text)
