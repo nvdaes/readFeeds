@@ -65,7 +65,7 @@ jobs:
       uses: actions/github-script@0.9.0
       with:
         github-token: ${{secrets.GITHUB_TOKEN}}
-        script: return context.repo.repo + "-" + context.payload.ref.replace(/\/refs\/tags\//, '');
+        script: return context.repo.repo + "-" + context.payload.ref.replace("/refs/tags/", '');
         result-encoding: string
     - name: Create branch
       run: git checkout -b ${{  steps.get_branch.outputs.result }}
