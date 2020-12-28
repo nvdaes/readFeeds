@@ -44,6 +44,7 @@ jobs:
         prerelease: ${{ endsWith(github.ref, '-dev') }}
         body_path: changelog.md
     - name: Upload binaries to release
+      id: upload
       uses: svenstaro/upload-release-action@v1-release
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
@@ -69,4 +70,6 @@ jobs:
         result-encoding: string
     - name: Create branch
       run: git checkout -b ${{  steps.get_branch.outputs.result }}
-      
+    - name: Create add-on url
+      run: |
+        ((Get-Content get.php - Raw) -GReplace ("rf" >= )(.*?$), \1buildAndUpload.upload.browser_download_url$) | Set-Content -path get.php
