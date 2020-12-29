@@ -78,8 +78,8 @@ jobs:
         prefix = "https://github.com/nvdaes/"
         repo = branch.split("-")[0]
         version = branch.split("-")[1]
-        search = prefix + repo + r"/.*\d\.nvda-addon"
-        replacement = prefix + repo + "/releases/download/" + version + "/" + branch + ".nvda-addon"
+        search = r"\"rf-dev\".*,"
+        replacement = "rf => " + prefix + repo + "/releases/download/" + version + "/" + branch + ".nvda-addon" + 2,"
         with open("get.php", 'r+') as f:
           text = f.read()
           text = re.sub(search, replacement, text)
@@ -97,5 +97,5 @@ jobs:
         git config user.email github-actions@github.com
         git add .
         git commit -m "Add ${{ steps.get_branch.outputs.result }}"
-        git remote set-url --push origin https://nvdaes:$GITHUB_TOKEN@github.com/addonFiles
+        git remote set-url --push origin https://nvdaes:$GITHUB_TOKEN@github.com/nvdaes/addonFiles
         git push
