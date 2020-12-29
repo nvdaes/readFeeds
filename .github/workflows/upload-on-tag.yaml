@@ -6,7 +6,6 @@ on:
       '*'
 
 jobs:
-
   buildAndUpload:
     runs-on: windows-latest
     steps:
@@ -27,7 +26,7 @@ jobs:
         with open("buildVars.py", 'r+', encoding='utf-8') as f:
           text = f.read()
           version = "${{ github.ref }}".split("/")[-1]
-          text = re.sub("\"addon_version\" : ", "\"addon_version\" : \"%s\"", text) % version
+          text = re.sub("\"addon_version\" : ,", "\"addon_version\" : \"%s\",", text) % version
           f.seek(0)
           f.write(text)
           f.truncate()
@@ -44,7 +43,6 @@ jobs:
         prerelease: ${{ endsWith(github.ref, '-dev') }}
         body_path: changelog.md
     - name: Upload binaries to release
-      id: upload
       uses: svenstaro/upload-release-action@v1-release
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
@@ -52,54 +50,3 @@ jobs:
         tag: ${{ github.ref }}
         overwrite: true
         file_glob: true
-        
-  sendToAddonFiles:
-    needs: buildAndUpload
-    runs-on: ubuntu-latest
-    steps:
-    - name: Get branch
-      id: get_branch
-      uses: actions/github-script@0.9.0
-      with:
-        github-token: ${{secrets.GITHUB_TOKEN}}
-        script: return context.repo.repo + "-" + context.payload.ref.split("/")[2];
-        result-encoding: string
-    - name: Checkout addonFiles
-      uses: actions/checkout@v2
-      with:
-        repository: nvdaes/addonFiles
-        fetch-depth: 0
-        ref: ${{ steps.get_branch.outputs.result }}
-
-    - name: Create add-on url
-      run: |
-        import re
-        branch = "${{ steps.get_branch.outputs.result }}"
-        prefix = "https://github.com/nvdaes/"
-        repo = branch.split("-")[0]
-        version = branch.split("-")[1]
-        if "${{ github.ref }}".endswith("-dev"):
-          search = r"\"rf-dev\".*,"
-        else:
-          search = r"\"rf-dev\".*,"
-       
-        replacement = "rf => " + prefix + repo + "/releases/download/" + version + "/" + branch + ".nvda-addon" + ","
-        with open("get.php", 'r+') as f:
-          text = f.read()
-          text = re.sub(search, replacement, text)
-          f.seek(0)
-          f.write(text)
-          f.truncate()
-          
-        print(text)
-      shell: python
-    - name: Push changes
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: |
-        git config user.name github-actions
-        git config user.email github-actions@github.com
-        git add .
-        git commit -m "Add ${{ steps.get_branch.outputs.result }}"
-        git remote set-url --push origin https://nvdaes:$GITHUB_TOKEN@github.com/nvdaes/addonFiles
-        git push
