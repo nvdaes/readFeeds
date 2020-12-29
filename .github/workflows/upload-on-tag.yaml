@@ -78,8 +78,12 @@ jobs:
         prefix = "https://github.com/nvdaes/"
         repo = branch.split("-")[0]
         version = branch.split("-")[1]
-        search = r"\"rf-dev\".*,"
-        replacement = "rf => " + prefix + repo + "/releases/download/" + version + "/" + branch + ".nvda-addon" + 2,"
+        if "${{ github.ref }}".endswith("-dev"):
+          search = r"\"rf-dev\".*,"
+       else:
+          search = r"\"rf-dev\".*,"
+       
+        replacement = "rf => " + prefix + repo + "/releases/download/" + version + "/" + branch + ".nvda-addon" + ","
         with open("get.php", 'r+') as f:
           text = f.read()
           text = re.sub(search, replacement, text)
