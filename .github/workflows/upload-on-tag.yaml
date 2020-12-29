@@ -80,7 +80,7 @@ jobs:
         version = branch.split("-")[1]
         if "${{ github.ref }}".endswith("-dev"):
           search = r"\"rf-dev\".*,"
-       else:
+        else:
           search = r"\"rf-dev\".*,"
        
         replacement = "rf => " + prefix + repo + "/releases/download/" + version + "/" + branch + ".nvda-addon" + ","
