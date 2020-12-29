@@ -80,7 +80,7 @@ jobs:
         version = branch.split("-")[1]
         search = prefix + repo + r"/.*\d\.nvda-addon"
         replacement = prefix + repo + "/releases/download/" + version + "/" + branch + ".nvda-addon"
-        with open("get.php", 'r+', encoding='utf-8') as f:
+        with open("get.php", 'r+') as f:
           text = f.read()
           text = re.sub(search, replacement, text)
           f.seek(0)
