@@ -10,7 +10,7 @@ Tämä lisäosa tarjoaa suoraviivaisen tavan lukea Atom -tai RSS-syötteitä
 NVDA:ta käyttäen.  Syötteitä ei päivitetä automaattisesti.  Alla mainitut
 syötteet tarkoittavat sekä Atom- että RSS-syötteitä.
 
-## Installation or Update ##
+## Asennus tai päivitys ##
 
 Mikäli olet käyttänyt tämän lisäosan aiempaa versiota ja jos
 käyttäjäkohtaisessa NVDA:n asetushakemistossa on RSS- tai
@@ -19,19 +19,19 @@ kysytään, haluatko suorittaa päivityksen vai asennuksen.  Säilytä
 tallentamasi syötteet ja jatka niiden käyttöä uudessa lisäosan versiossa
 valitsemalla  päivitys.
 
-## Commands ##
+## Komennot ##
 
 ### Lue syötteet -valikko ###
 
 Pääset Lue syötteet -alavalikkoon NVDA-valikon Työkalut-alavalikosta, jossa
 ovat käytettävissä seuraavat vaihtoehdot:
 
-#### Feeds ####
+#### Syötteet ####
 
 Avaa valintaikkunan, jossa on seuraavat säätimet:
 
 * Suodata: Muokkauskenttä aiemmin tallennettujen syötteiden etsimiseen.
-* A list of the saved feeds, focused when the dialog is opened.
+* Tallennettujen syötteiden luettelo, aktiivisena kun valintaikkuna avataan.
 * Artikkeliluettelo: Avaa valintaikkunan, joka näyttää luettelon nykyisen
   syötteen artikkeleista. Valitse artikkeli, jonka haluat lukea, ja paina
   Enter tai Avaa valitun artikkelin verkkosivu -painiketta avataksesi
@@ -39,11 +39,11 @@ Avaa valintaikkunan, jossa on seuraavat säätimet:
   avataksesi valintaikkunan, jossa näytetään valitun artikkelin otsikko ja
   linkki. Tiedot on myös mahdollista kopioida leikepöydälle.
 * Avaa syöte: Avaa valitun syötteen oletussovelluksessa.
-* Open feed as HTML: Opens the selected feed in the default web browser. You
-  will be able to show or hide publication dates and buttons to copy
-  information about articles to clipboard.
-* Copy feed address: Opens a dialog to confirm if you want to copy the feed
-  address to clipboard.
+* Avaa syöte HTML-muodossa: Avaa valitun syötteen oletusselaimessa. Voit
+  näyttää tai piilottaa julkaisupäivämäärät sekä artikkeleiden tiedot
+  leikepöydälle kopioivat painikkeet.
+* Kopioi syötteen osoite: Avaa valintaikkunan, jossa kysytään vahvistus
+  syötteen osoitteen kopioinnista leikepöydälle.
 * Uusi: Avaa muokkausruudun sisältävän valintaikkunan, johon voit kirjoittaa
   uuden syötteen osoitteen. Mikäli syöte on kelvollinen ja se voidaan
   tallentaa, sen otsikkoon pohjautuva nimi ilmestyy artikkeliluettelon
@@ -58,8 +58,8 @@ Avaa valintaikkunan, jossa on seuraavat säätimet:
   syötteiden varmuuskopion. Tästä voi olla hyötyä sellaisten syötteiden
   tutkimisessa ja poistamisessa, joita ei haluta tuotavan lisäosaa
   päivitettäessä.
-* Preferences: Opens the settings dialog for readFeeds, also available in
-  NVDA's menu, Preferences, settings, readFeeds category.
+* Asetukset: Avaa Lue syötteet -lisäosan asetusvalintaikkunan. Löytyy myös
+  NVDA-valikosta kohdasta Asetukset / Asetukset / Lue syötteet -kategoria.
 * Sulje: Sulkee Syötteet-valintaikkunan.
 
 ##### Huomautuksia #####
@@ -69,23 +69,23 @@ Avaa valintaikkunan, jossa on seuraavat säätimet:
 * Oletukseksi asetettua syötettä ei voi poistaa. AddressFile-nimistä
   syötettä käytetään oletuksena asetuksia nollattaessa, joten sitä ei voi
   poistaa.
-* The Filter by edit box can be placed after the Open article button from
-  NVDA's menu, Preferences, Settings, Read feeds category, or pressing the
-  Preferences button of the Feeds dialog.
+* Suodata-muokkauskenttä voidaan sijoittaa Avaa artikkeli -painikkeen
+  jälkeen NVDA-valikosta kohdasta Asetukset / Asetukset Lue syötteet
+  -kategoria tai painamalla Syötteet-valintaikkunan Asetukset-painiketta.
 
-#### Copy feeds folder ####
+#### Kopioi syötekansio ####
 
 Avaa valintaikkunan, josta voit valita, minne syötteet sisältävä
 personalFeeds-kansio luodaan. Kansiona on oletusarvoisesti NVDA:n
 asetushakemisto.
 
-#### Restore feeds ####
+#### Palauta syötteet ####
 
 Avaa valintaikkunan, josta voit valita kansion, jonka sisältämillä
 syötteillä personalFeeds-kansion syötteet korvataan. Varmista, että valitset
 vain syötteiden URL-osoitteita sisältävän kansion.
 
-### Keyboard commands ###
+### Näppäinkomennot ###
 
 * Ctrl+Vaihto+NVDA+Väli: Ilmoittaa nykyisen artikkelin
   URL-osoitteen. Kahdesti painettaessa avataan sen verkkosivu.
@@ -96,30 +96,31 @@ vain syötteiden URL-osoitteita sisältävän kansion.
 * Ctrl+Vaihto+NVDA+U: Ilmoittaa edellisen syötteen otsikon.
 * Ctrl+Vaihto+NVDA+O: Ilmoittaa seuraavan syötteen otsikon.
 
-## Notifications ##
+## Ilmoitukset ##
 
 * Kun otsikko tai URL-osoite on kopioitu.
 * Kun yhdistäminen/syötteen päivittäminen ei onnistu, tai annetussa
   URL-osoitteessa ei ole kelvollista syötettä.
-* NVDA will display an error message if it was not possible to backup or
-  restore the personalFeeds folder, and if a new feed cannot be created.
+* NVDA näyttää virheilmoituksen, mikäli personalFeeds-kansion
+  varmuuskopiointi tai palautus ei ollut mahdollista ja jos uutta syötettä
+  ei voi luoda.
 * Valitun syötteen nimi ja saatavilla olevien artikkeleiden määrä näytetään
   Artikkeliluettelo-valintaikkunan otsikossa.
 
-## Changes for 10.0 ##
+## Muutokset versiossa 10.0 ##
 
-* Added a button to open the selected feed as HTML in the default web
-  browser.
-* If a new feed cannot be created, this will be notified in an error dialog.
-* Improved order and presentation of some articles.
-* More feeds may be supported.
-* When the feeds dialog is opened, the list of feeds will be focused instead
-  of the search edit box.
-* You can choose if the search edit box is placed after the list of feeds,
-  useful to focus the list even when switching from another window without
-  closing the Feeds dialog.
-* Added a button to copy the feed address to clipboard from the feeds
-  dialog.
+* Lisätty painike valitun syötteen avaamiseen HTML-muodossa
+  oletusselaimessa.
+* Mikäli uutta syötettä ei voi luoda, siitä näytetään virheilmoitus.
+* Parannettu artikkeleiden järjestystä ja näyttämistä.
+* Tuetaan mahdollisesti useampia syötteitä.
+* Syöteluettelo on aktiivisena hakukentän sijaan, kun Syötteet-valintaikkuna
+  avataan.
+* Voit valita, sijoitetaanko hakukenttä syöteluettelon jälkeen, jolloin
+  luettelo tulee aktiiviseksi jopa vaihdettaessa toisesta ikkunasta
+  sulkematta Syötteet-valintaikkunaa.
+* Syötteet-valintaikkunaan lisätty painike syötteen osoitteen kopioimiseen
+  leikepöydälle.
 
 ## Muutokset versiossa 9.0 ##
 

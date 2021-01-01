@@ -10,29 +10,29 @@ Ovaj dodatak pruža najbolji način za čitanje feedova u Atom ili RSS formatu
 koristeći NVDA. Feedovi se neće automatski aktualizirati. U daljnjem tekstu,
 kad govorimo o feedovima, podrazumijevamo RSS i ATOM feedove.
 
-## Installation or Update ##
+## Instaliranje ili ažuriranje ##
 
-Ako već koristiš prijašnju verziju ovog dodatka i ako postoji mapa „RSS” ili
-„personalFeeds” (mapa osobnih feedova) u vašoj mapi NVDA konfiguracije,
-tijekom instaliranja aktualne verzije će dijaloški okvir pitati, želiš li
-nadograditi ili instalirati dodatak. Odaberi nadogradnju, kako bi se
-sačuvali prethodno spremljeni feedovi i nastavili koristiti u novoj
-instaliranoj verziji dodatka „Čitaj feedove”.
+Ako već koristiš prijašnju verziju ovog dodatka, te ako postoji „RSS” mapa
+ili osobna mapa feedova, u tvojoj mapi NVDA konfiguracije, tijekom
+instaliranja aktualne verzije, otvorit će se dijaloški okvir za nadogradnju
+ili instaliranje dodatka. Odaberi nadogradnju, kako bi se sačuvali prethodno
+spremljeni feedovi i ih nastavi koristiti u novoj instaliranoj verziji
+dodatka „Čitaj feedove”.
 
-## Commands ##
+## Naredbe ##
 
 ### Izbornik „Čitaj feedove” ###
 
-Podizbornik „Čitaj feedove” se nalazi u NVDA izborniku, u podizborniku
-Alati, gdje su dostupne sljedeće opcije:
+Podizbornik „Čitaj feedove” nalazi se u NVDA izborniku, u podizborniku
+„Alati”, gdje su dostupne sljedeće opcije:
 
-#### Feeds ####
+#### Feedovi ####
 
 Otvara dijaloški okvir sa sljedećim kontrolama:
 
 * Filtriraj prema: Uređivačko polje za pretraživanje prethodno spremljenih
   feedova.
-* A list of the saved feeds, focused when the dialog is opened.
+* Popis spremljenih feedova, fokusiran kad se otvori dijaloški okvir.
 * Popis članaka: Otvara dijaloški okvir koji prikazuje popis članaka iz
   trenutačnog feeda. Odaberi članak koji želiš čitati i pritisni „Enter” ili
   gumb „Otvori web stranicu odabranog članka”. Time se otvara odgovarajuća
@@ -40,11 +40,11 @@ Otvara dijaloški okvir sa sljedećim kontrolama:
   dijaloški okvir koji sadrži naslov i poveznicu odabranog članka. U ovom
   dijaloškom okviru možeš kopirati te informacije u međuspremnik.
 * Otvori feed: Otvara odabrani feed u zadanoj aplikaciji.
-* Open feed as HTML: Opens the selected feed in the default web browser. You
-  will be able to show or hide publication dates and buttons to copy
-  information about articles to clipboard.
-* Copy feed address: Opens a dialog to confirm if you want to copy the feed
-  address to clipboard.
+* Otvori feed kao HTML: otvara odabrani feed u zadanom web pregledniku. Moći
+  ćeš prikazati ili sakriti datume objavljivanja i gumbe za kopiranje
+  informacija o člancima u međuspremnik.
+* Kopiraj adresu feeda: otvara dijaloški okvir za potvrđivanje kopiranja
+  adrese feeda u međuspremnik.
 * Novi: Otvara dijaloški okvir s uređivačkim poljem za unos adrese novog
   feeda. Ako je adresa ispravna i ako se feed može spremiti, njegov naziv
   (izveden iz naslova feeda) će se pojavit na dnu popisa feedova.
@@ -58,8 +58,8 @@ Otvara dijaloški okvir sa sljedećim kontrolama:
   sadržavati sigurnosnu kopiju feedova. Ovo može biti korisno za
   istraživanje i brisanje feedova, koje ne treba uvoziti kad se dodatak
   nadogradi.
-* Preferences: Opens the settings dialog for readFeeds, also available in
-  NVDA's menu, Preferences, settings, readFeeds category.
+* Postavke: otvara dijaloški okvir postavki za „Čitaj feedove”, također
+  dostupan u NVDA izborniku, Postavke, postavke, kategorija readFeeds.
 * Zatvori: Zatvara dijaloški okvir „Feedovi”.
 
 ##### Napomene #####
@@ -70,23 +70,24 @@ Otvara dijaloški okvir sa sljedećim kontrolama:
 * Feed koji je postavljen kao zadani se ne može ukloniti. Feed „addressFile”
   će se koristiti kao zadani kad se konfiguracija ponovo postavi, te se
   stoga ne može ukloniti.
-* The Filter by edit box can be placed after the Open article button from
-  NVDA's menu, Preferences, Settings, Read feeds category, or pressing the
-  Preferences button of the Feeds dialog.
+* Polje za uređivanje „Filtriraj prema”, može se smjestiti nakon gumba
+  „Otvori članak” u NVDA izborniku, „Postavke”, „Postavke”, kategorija
+  „Čitaj feedove” ili pritisni gumb „Postavke” u dijaloškom okviru
+  „Feedovi”.
 
-#### Copy feeds folder ####
+#### Kopiraj mapu feedova ####
 
 Otvara dijaloški okvir za odabir mape za spremanje „personalFeeds” mape s
 osobnim feedovima. Za to se standardno koristi mapa NVDA konfiguracije, gdje
 će se stvoriti „personalFeeds” mapa.
 
-#### Restore feeds ####
+#### Obnovi feedove ####
 
 Otvara dijaloški okvir za odabir mape koja zamjenjuje feedove u
 „personalFeeds” mapi osobnih feedova. Mapa koju učitaš mora sadrži URL
 adrese feedova.
 
-### Keyboard commands ###
+### Tipkovnički prečaci ###
 
 * Kontrol+šift+NVDA+razmaknica: Najavljuje adresu trenutačnog
   članka. Dvostrukim pritiskom otvorit će se web stranica.
@@ -98,30 +99,33 @@ adrese feedova.
 * Kontrol+šift+NVDA+U: Najavljuje naslov prethodnog feeda.
 * Kontrol+šift+NVDA+O: Najavljuje naslov sljedećeg feeda.
 
-## Notifications ##
+## Obavijesti ##
 
 * Kad su naslov ili URL adresa kopirani.
 * Kad povezivanje ili aktualiziranje feeda nije moguće ili kad URL adresa ne
   odgovara ispravnom feedu.
-* NVDA will display an error message if it was not possible to backup or
-  restore the personalFeeds folder, and if a new feed cannot be created.
+* NVDA će prikazati poruku greške, ako nije bilo moguće spremiti sigurnosnu
+  kopiju ili obnoviti mapu osobnih feedova i ako nije moguće stvoriti nov
+  feed.
 * Naslov dijaloškog okvira popisa članaka prikazuje odabrani naziv feeda i
   broj dostupnih stavki.
 
-## Changes for 10.0 ##
+## Promjene u verziji 10.0 ##
 
-* Added a button to open the selected feed as HTML in the default web
-  browser.
-* If a new feed cannot be created, this will be notified in an error dialog.
-* Improved order and presentation of some articles.
-* More feeds may be supported.
-* When the feeds dialog is opened, the list of feeds will be focused instead
-  of the search edit box.
-* You can choose if the search edit box is placed after the list of feeds,
-  useful to focus the list even when switching from another window without
-  closing the Feeds dialog.
-* Added a button to copy the feed address to clipboard from the feeds
-  dialog.
+* Dodan je gumb za otvaranje odabranog feeda kao HTML u standardnom web
+  pregledniku.
+* Ako se novi feed ne može stvoriti, o tome će se obavijestiti u dijaloškom
+  okviru grešaka.
+* Poboljšan je redoslijed i prezentacija nekih članaka.
+* Moguće je podržati više feedova.
+* Kad se otvori dijaloški okvir feedova, umjesto polja za uređivanje
+  pretraživanja, fokusirat će se popis feedova.
+* Možeš odabrati, hoće li se polje za uređivanje pretraživanja nalaziti
+  nakon popisa feedova. To je korisno za fokusiranje popisa čak i kad se
+  prebacuješ iz jednog drugog prozora, bez da zatvoriš dijaloški okvir
+  „Feedovi”.
+* Dodan je gumb za kopiranje adrese feeda u međuspremnik iz dijaloškog
+  okvira „Feedovi”.
 
 ## Promjene u verziji 9.0 ##
 

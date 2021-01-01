@@ -8,30 +8,29 @@ msgstr ""
 "Project-Id-Version: readFeeds 5.0\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-12-06 18:00+0100\n"
-"PO-Revision-Date: 2018-09-22 15:01+0200\n"
+"PO-Revision-Date: 2020-12-25 09:27+0100\n"
 "Last-Translator: Rémy Ruiz <remyruiz@gmail.com>\n"
 "Language-Team: Rémy Ruiz <remyruiz@gmail.com>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.12\n"
+"X-Generator: Poedit 2.4.2\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
 #. Translators: the label of a message box dialog.
-#, fuzzy
 msgid ""
 "Your configuration folder for NVDA contains files that seem to be derived "
 "from a previous version of this add-on.\n"
 "\t\t\tDo you want to update it?"
 msgstr ""
 "Votre dossier de configuration de NVDA contient des fichiers qui semblent "
-"provenir d'une version antérieure de ce modulle complémentaire. Voulez-vous "
-"les mettre à jour?"
+"provenir d'une version antérieure de cette extension.\n"
+"\t\t\tVoulez-vous les mettre à jour ?"
 
 #. Translators: the title of a message box dialog.
 msgid "Install or update add-on"
-msgstr "Installer ou mettre à jour le module complémentaire"
+msgstr "Installer ou mettre à jour l'extension"
 
 #. Translators: message presented when feeds cannot be reported.
 msgid ""
@@ -75,14 +74,12 @@ msgid "&Open feed"
 msgstr "&Ouvrir le flux"
 
 #. Translators: The label of a button to open a feed as HTML.
-#, fuzzy
 msgid "Open feed as &HTML"
-msgstr "&Ouvrir le flux"
+msgstr "&Ouvrir le flux en 1HTML"
 
 #. Translators: The label of a button to copy the feed URL.
-#, fuzzy
 msgid "Cop&y feed address"
-msgstr "Copier les flux"
+msgstr "Cop&ier l'adresse du flux"
 
 #. Translators: The label of a button to add a new feed.
 msgid "&New..."
@@ -101,41 +98,36 @@ msgid "S&et default"
 msgstr "Définir par d&éfaut"
 
 #. Translators: The label of a button to open a folder containing a backup of feeds.
-#, fuzzy
 msgid "Open &folder containing a backup of feeds"
-msgstr ""
-"Sélectionnez le dossier afin d'enregistrer une sauvegarde de vos flux actuels"
+msgstr "Ouvrir le &dossier contenant une sauvegarde des flux"
 
 #. Translators: The label of a button to open the settings dialog for readFeeds.
-#, fuzzy
 msgid "&Preferences..."
-msgstr "R&estaurer les flux..."
+msgstr "&Préférences..."
 
 #. Translators: Message presented when a feed cannot be added.
 #, python-format
 msgid "Cannot add feed: %s"
-msgstr ""
+msgstr "Impossible d'ajouter le flux : %s"
 
 #. Translators: error message.
-#, fuzzy
 msgid "Error"
-msgstr "Erreur lors de la Copie"
+msgstr "Erreur"
 
 #. Translators: the label of a message box dialog.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid ""
 "Do you want to copy feed address to the clipboard\r\n"
 "\r\n"
 "{feedAddress}?"
 msgstr ""
-"%s\r\n"
+"Voulez-vous copier l'adresse du flux dans le presse-papiers\r\n"
 "\r\n"
-"Voulez-vous copier le titre de l'article et le lien dans le presse-papiers ?"
+"{feedAddress} ?"
 
 #. Translators: the title of a message box dialog.
-#, fuzzy
 msgid "Copy feed address"
-msgstr "Copier les flux"
+msgstr "Copier l'adresse du flux"
 
 #. Translators: Label of a dialog.
 msgid "Address of a new feed:"
@@ -171,12 +163,12 @@ msgid "&About article..."
 msgstr "&À propos des articles..."
 
 #. Translators: the label of a message box dialog.
-#, fuzzy, python-format
+#, python-format
 msgid "%sDo you want to copy article title and link to the clipboard?"
 msgstr ""
 "%s\r\n"
 "\r\n"
-"Voulez-vous copier le titre de l'article et le lien dans le presse-papiers ?"
+"Voulez-vous copier le titre de l'article et le lien dans le presse-papiers ?"
 
 #. Translators: the title of a message box dialog.
 msgid "Article information"
@@ -219,7 +211,7 @@ msgstr "Sélectionnez le dossier à restaurer"
 
 #. Translators: label of a dialog.
 msgid "&Search edit box after feeds list"
-msgstr ""
+msgstr "&Zone de recherche après la liste des flux"
 
 #. Translators: Presented when the current article does not have an associated title.
 msgid "Unable to locate article title."
@@ -231,15 +223,15 @@ msgstr "Impossible de trouver le lien de l'article."
 
 #. Translators: Label of a checkbox to choose if date should be presented for each feed.
 msgid "Show date"
-msgstr ""
+msgstr "Montrer la date"
 
 #. Translators: Label for a checkbox to show buttons for copying to clipboard.
 msgid "Show buttons to copy"
-msgstr ""
+msgstr "Montrer les boutons pour copier"
 
 #. Translators: Label for a button to copy to clipboard.
 msgid "Copy"
-msgstr ""
+msgstr "Copier"
 
 #. Translators: the name of a submenu.
 msgid "&Read Feeds"
@@ -258,24 +250,21 @@ msgid "R&estore feeds..."
 msgstr "R&estaurer les flux..."
 
 #. Translators: message presented in input mode.
-#, fuzzy
 msgid "Activates the Feeds dialog of Read Feeds."
-msgstr "Active le dialogue Flux de %s."
+msgstr "Active le dialogue Flux de Read Feeds."
 
 #. Translators: message presented in input mode.
-#, fuzzy
 msgid "Activates the Copy dialog of Read Feeds."
-msgstr "Active le dialogue Copier de %s."
+msgstr "Active le dialogue Copier de Read Feeds."
 
 #. Translators: message presented in input mode.
-#, fuzzy
 msgid "Activates the Restore dialog of Read Feeds."
-msgstr "Active le dialogue Restaurer de %s."
+msgstr "Active le dialogue Restaurer de Read Feeds."
 
 #. Translators: message presented in input mode.
 #, python-format
 msgid "Shows the %s settings."
-msgstr ""
+msgstr "Montrer les paramètres de %s."
 
 #. Translators: message presented in input mode.
 msgid "Refreshes the current feed and announces the most recent article title."
@@ -325,29 +314,3 @@ msgstr "Read Feeds"
 msgid "Add-on for using NVDA as a feed reader."
 msgstr ""
 "Module complémentaire  pour utiliser NVDA comme un lecteur de flux RSS."
-
-#~ msgid ""
-#~ "You have installed the ReadFeeds add-on, probably an old and incompatible "
-#~ "version with this one. Do you want to uninstall the old version?"
-#~ msgstr ""
-#~ "Vous avez installé probablement une version ancienne du module "
-#~ "complémentaire ReadFeeds, et il est incompatible avec celui-ci. Vous "
-#~ "voulez désinstaller l'ancienne version?"
-
-#~ msgid "Uninstall incompatible add-on"
-#~ msgstr "Désinstaller le module complémentaire incompatible"
-
-#~ msgid "Feeds"
-#~ msgstr "Flux"
-
-#~ msgid "Manage feeds."
-#~ msgstr "Gestion des flux."
-
-#~ msgid "View and manage feeds"
-#~ msgstr "Affichage et gestion des flux"
-
-#~ msgid "Backup of feeds"
-#~ msgstr "Sauvegarder les flux"
-
-#~ msgid "Restore previously saved feeds"
-#~ msgstr "Restaurer les flux précédemment enregistrés"

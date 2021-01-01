@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: readFeeds\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-11-16 13:26+0100\n"
-"PO-Revision-Date: 2019-03-29 13:49+0200\n"
-"Last-Translator: Jani Kinnunen <janikinnunen340@gmail.com>\n"
+"PO-Revision-Date: 2020-12-25 16:10+0200\n"
+"Last-Translator: Jani Kinnunen <jani.kinnunen@wippies.fi>\n"
 "Language-Team: Finnish <jani.kinnunen@wippies.fi>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
@@ -19,14 +19,14 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Translators: the label of a message box dialog.
-#, fuzzy
 msgid ""
 "Your configuration folder for NVDA contains files that seem to be derived "
 "from a previous version of this add-on.\n"
 "\t\t\tDo you want to update it?"
 msgstr ""
 "NVDA:n asetuskansiossa on tiedostoja, jotka ovat peräisin tämän lisäosan "
-"aiemmasta versiosta. Haluatko päivittää ne?"
+"aiemmasta versiosta.\n"
+"\t\t\tHaluatko päivittää ne?"
 
 #. Translators: the title of a message box dialog.
 msgid "Install or update add-on"
@@ -74,14 +74,12 @@ msgid "&Open feed"
 msgstr "&Avaa syöte"
 
 #. Translators: The label of a button to open a feed as HTML.
-#, fuzzy
 msgid "Open feed as &HTML"
-msgstr "&Avaa syöte"
+msgstr "Avaa syöte &HTML-muodossa"
 
 #. Translators: The label of a button to copy the feed URL.
-#, fuzzy
 msgid "Cop&y feed address"
-msgstr "Kopioi syötteet"
+msgstr "Kop&ioi syötteen osoite"
 
 #. Translators: The label of a button to add a new feed.
 msgid "&New..."
@@ -104,35 +102,32 @@ msgid "Open &folder containing a backup of feeds"
 msgstr "Avaa s&yötteiden varmuuskopiokansio"
 
 #. Translators: The label of a button to open the settings dialog for readFeeds.
-#, fuzzy
 msgid "&Preferences..."
-msgstr "P&alauta syötteet..."
+msgstr "&Asetukset..."
 
 #. Translators: Message presented when a feed cannot be added.
 #, python-format
 msgid "Cannot add feed: %s"
-msgstr ""
+msgstr "Ei voi lisätä syötettä: %s"
 
 #. Translators: error message.
-#, fuzzy
 msgid "Error"
-msgstr "Kopiointivirhe"
+msgstr "Virhe"
 
 #. Translators: the label of a message box dialog.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid ""
 "Do you want to copy feed address to the clipboard\r\n"
 "\r\n"
 "{feedAddress}?"
 msgstr ""
-"%s\r\n"
+"Haluatko kopioida syötteen osoitteen leikepöydälle?\r\n"
 "\r\n"
-"Kopioidaanko artikkelin otsikko ja linkki leikepöydälle?"
+"{feedAddress}"
 
 #. Translators: the title of a message box dialog.
-#, fuzzy
 msgid "Copy feed address"
-msgstr "Kopioi syötteet"
+msgstr "Kopioi syötteen osoite"
 
 #. Translators: Label of a dialog.
 msgid "Address of a new feed:"
@@ -167,12 +162,9 @@ msgid "&About article..."
 msgstr "T&ietoa artikkelista..."
 
 #. Translators: the label of a message box dialog.
-#, fuzzy, python-format
+#, python-format
 msgid "%sDo you want to copy article title and link to the clipboard?"
-msgstr ""
-"%s\r\n"
-"\r\n"
-"Kopioidaanko artikkelin otsikko ja linkki leikepöydälle?"
+msgstr "%sHaluatko kopioida artikkelin otsikon ja linkin leikepöydälle?"
 
 #. Translators: the title of a message box dialog.
 msgid "Article information"
@@ -213,7 +205,7 @@ msgstr "Valitse palautettava kansio"
 
 #. Translators: label of a dialog.
 msgid "&Search edit box after feeds list"
-msgstr ""
+msgstr "&Hakukenttä syöteluettelon jälkeen"
 
 #. Translators: Presented when the current article does not have an associated title.
 msgid "Unable to locate article title."
@@ -225,15 +217,15 @@ msgstr "Artikkelin linkkiä ei löydy."
 
 #. Translators: Label of a checkbox to choose if date should be presented for each feed.
 msgid "Show date"
-msgstr ""
+msgstr "Näytä päivämäärä"
 
 #. Translators: Label for a checkbox to show buttons for copying to clipboard.
 msgid "Show buttons to copy"
-msgstr ""
+msgstr "Näytä kopiointipainikkeet"
 
 #. Translators: Label for a button to copy to clipboard.
 msgid "Copy"
-msgstr ""
+msgstr "Kopioi"
 
 #. Translators: the name of a submenu.
 msgid "&Read Feeds"
@@ -252,24 +244,21 @@ msgid "R&estore feeds..."
 msgstr "P&alauta syötteet..."
 
 #. Translators: message presented in input mode.
-#, fuzzy
 msgid "Activates the Feeds dialog of Read Feeds."
-msgstr "Avaa %sin syötteiden valintaikkunan."
+msgstr "Avaa Lue syötteet -lisäosan  Syötteet-valintaikkunan."
 
 #. Translators: message presented in input mode.
-#, fuzzy
 msgid "Activates the Copy dialog of Read Feeds."
-msgstr "Avaa %sin kopiointivalintaikkunan."
+msgstr "Avaa Lue syötteet -lisäosan Kopioi-valintaikkunan."
 
 #. Translators: message presented in input mode.
-#, fuzzy
 msgid "Activates the Restore dialog of Read Feeds."
-msgstr "Avaa %sin palautusvalintaikkunan."
+msgstr "Avaa Lue syötteet -lisäosan Palauta-valintaikkunan."
 
 #. Translators: message presented in input mode.
 #, python-format
 msgid "Shows the %s settings."
-msgstr ""
+msgstr "Näyttää %s -lisäosan asetukset."
 
 #. Translators: message presented in input mode.
 msgid "Refreshes the current feed and announces the most recent article title."

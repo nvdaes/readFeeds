@@ -8,25 +8,25 @@ msgstr ""
 "Project-Id-Version: readFeeds 1.0-dev\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-11-16 13:26+0100\n"
-"PO-Revision-Date: 2019-03-29 09:25+0100\n"
-"Last-Translator: Iván Novegil <ivan.novegil.cancelas@gmail.com>\n"
+"PO-Revision-Date: 2020-12-25 13:26+0100\n"
+"Last-Translator: Iván Novegil Cancelas <ivan.novegil.cancelas@gmail.com>\n"
 "Language-Team: galician NVDA add-ons translation team <oprisniki@gmail.com>\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Poedit 2.4.2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Translators: the label of a message box dialog.
-#, fuzzy
 msgid ""
 "Your configuration folder for NVDA contains files that seem to be derived "
 "from a previous version of this add-on.\n"
 "\t\t\tDo you want to update it?"
 msgstr ""
 "A carpeta de configuración do NVDA contén ficheiros que parecen derivar "
-"dunha versión anterior de este complemento. ¿Queres actualizala?"
+"dunha versión anterior de este complemento.\n"
+"\t\t\tQueres actualizala?"
 
 #. Translators: the title of a message box dialog.
 msgid "Install or update add-on"
@@ -74,14 +74,12 @@ msgid "&Open feed"
 msgstr "&Abrir feed"
 
 #. Translators: The label of a button to open a feed as HTML.
-#, fuzzy
 msgid "Open feed as &HTML"
-msgstr "&Abrir feed"
+msgstr "Abrir feed como &HTML"
 
 #. Translators: The label of a button to copy the feed URL.
-#, fuzzy
 msgid "Cop&y feed address"
-msgstr "Copiar feeds"
+msgstr "&Copiar enderezo do feed"
 
 #. Translators: The label of a button to add a new feed.
 msgid "&New..."
@@ -104,35 +102,32 @@ msgid "Open &folder containing a backup of feeds"
 msgstr "Abrir &cartafol que contén unha copia de seguridade das fontes"
 
 #. Translators: The label of a button to open the settings dialog for readFeeds.
-#, fuzzy
 msgid "&Preferences..."
-msgstr "R&estaurar feeds..."
+msgstr "&Opcións..."
 
 #. Translators: Message presented when a feed cannot be added.
 #, python-format
 msgid "Cannot add feed: %s"
-msgstr ""
+msgstr "Non se puido añadir o feed: %s"
 
 #. Translators: error message.
-#, fuzzy
 msgid "Error"
-msgstr "Erro da copia"
+msgstr "Erro"
 
 #. Translators: the label of a message box dialog.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid ""
 "Do you want to copy feed address to the clipboard\r\n"
 "\r\n"
 "{feedAddress}?"
 msgstr ""
-"%s\r\n"
+"queres copiar o enderezo do feed ao portapapeis\r\n"
 "\r\n"
-"¿Queres copiar o título do artigo e a liga ao portapapeis?"
+"{feedAddress}?"
 
 #. Translators: the title of a message box dialog.
-#, fuzzy
 msgid "Copy feed address"
-msgstr "Copiar feeds"
+msgstr "Copiar enderezo do feed"
 
 #. Translators: Label of a dialog.
 msgid "Address of a new feed:"
@@ -156,7 +151,7 @@ msgstr "Renomear feed"
 
 #. Translators: The label of the articles list in the articles dialog.
 msgid "List of articles"
-msgstr "Listaxe de artigos..."
+msgstr "Listaxe de artigos"
 
 #. Translators: The label of a button to open the selected article of a feed.
 msgid "Open &web page of selected article."
@@ -167,12 +162,9 @@ msgid "&About article..."
 msgstr "&Acerca do artigo..."
 
 #. Translators: the label of a message box dialog.
-#, fuzzy, python-format
+#, python-format
 msgid "%sDo you want to copy article title and link to the clipboard?"
-msgstr ""
-"%s\r\n"
-"\r\n"
-"¿Queres copiar o título do artigo e a liga ao portapapeis?"
+msgstr "%sQueres copiar o título do artigo e a liga ao portapapeis?"
 
 #. Translators: the title of a message box dialog.
 msgid "Article information"
@@ -197,7 +189,7 @@ msgstr "Selecionar directorio a copiar"
 
 #. Translators: The title of the Restore dialog.
 msgid "Restore feeds"
-msgstr "Restaurar feeds..."
+msgstr "Restaurar feeds"
 
 #. Translators: An informational message displayed in the Restore dialog.
 msgid "Select a folder to restore a backup of your previous copied feeds"
@@ -215,7 +207,7 @@ msgstr "Selecionar directorio a restaurar"
 
 #. Translators: label of a dialog.
 msgid "&Search edit box after feeds list"
-msgstr ""
+msgstr "Caixa de edición de &busca despois da listaxe de feeds"
 
 #. Translators: Presented when the current article does not have an associated title.
 msgid "Unable to locate article title."
@@ -227,15 +219,15 @@ msgstr "Non se atopa a liga do artigo."
 
 #. Translators: Label of a checkbox to choose if date should be presented for each feed.
 msgid "Show date"
-msgstr ""
+msgstr "Amosar data"
 
 #. Translators: Label for a checkbox to show buttons for copying to clipboard.
 msgid "Show buttons to copy"
-msgstr ""
+msgstr "Amosar botóns para copiar"
 
 #. Translators: Label for a button to copy to clipboard.
 msgid "Copy"
-msgstr ""
+msgstr "Copiar"
 
 #. Translators: the name of a submenu.
 msgid "&Read Feeds"
@@ -254,24 +246,21 @@ msgid "R&estore feeds..."
 msgstr "R&estaurar feeds..."
 
 #. Translators: message presented in input mode.
-#, fuzzy
 msgid "Activates the Feeds dialog of Read Feeds."
-msgstr "Activa o diálogo Feeds de %s."
+msgstr "Activa o diálogo Feeds de Read Feeds."
 
 #. Translators: message presented in input mode.
-#, fuzzy
 msgid "Activates the Copy dialog of Read Feeds."
-msgstr "Activa o diálogo Copiar de %s."
+msgstr "Activa o diálogo Copiar de Read Feeds."
 
 #. Translators: message presented in input mode.
-#, fuzzy
 msgid "Activates the Restore dialog of Read Feeds."
-msgstr "Activa o diálogo Restaurar de %s."
+msgstr "Activa o diálogo Restaurar de Read Feeds."
 
 #. Translators: message presented in input mode.
 #, python-format
 msgid "Shows the %s settings."
-msgstr ""
+msgstr "Amosa as opcións de %s."
 
 #. Translators: message presented in input mode.
 msgid "Refreshes the current feed and announces the most recent article title."

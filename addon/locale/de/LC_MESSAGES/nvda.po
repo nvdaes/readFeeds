@@ -8,24 +8,24 @@ msgstr ""
 "Project-Id-Version: readFeeds 1.0-dev\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-11-16 13:26+0100\n"
-"PO-Revision-Date: 2019-06-02 20:12+0100\n"
-"Last-Translator: Waldschmetterling <a.r.waldschmetterling@gmx.de>\n"
+"PO-Revision-Date: 2020-12-26 04:54+0100\n"
+"Last-Translator: René Linke <rene.linke@hamburg.de>\n"
 "Language-Team: \n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.7\n"
+"X-Generator: Poedit 2.4.2\n"
 
 #. Translators: the label of a message box dialog.
-#, fuzzy
 msgid ""
 "Your configuration folder for NVDA contains files that seem to be derived "
 "from a previous version of this add-on.\n"
 "\t\t\tDo you want to update it?"
 msgstr ""
-"Ihr Konfigurationsordner von NVDA scheint bereits eine ältere Version der "
-"Erweiterung zu besitzen. Möchten Sie diese aktualisieren?"
+"Ihr Konfigurationsordner für NVDA enthält Dateien, die anscheinend von einer "
+"früheren Version dieser Erweiterung stammen.\\N\n"
+"\t\t\tSollen diese Dateien aktualisiert werden?"
 
 #. Translators: the title of a message box dialog.
 msgid "Install or update add-on"
@@ -36,20 +36,20 @@ msgid ""
 "Unable to refresh feed. Check your Internet conectivity or that the "
 "specified feed address is correct."
 msgstr ""
-"Aktualisieren der Feeds ist fehlgeschlagen. Bitte überprüfen Sie, ob die "
-"Adresse korrekt ist oder ob Sie eine bestehende Internetverbindung haben."
+"Der RSS-Feed konnte nicht aktualisiert werden. Überprüfen Sie bitte Ihre "
+"Internetverbindung oder ob die angegebene RSS-Feed-Adresse korrekt ist."
 
 #. Translators: Message presented when feeds have been copied.
 msgid "Feeds copied"
-msgstr "Feeds gesichert"
+msgstr "RSS-Feeds kopiert"
 
 #. Translators: label of error dialog shown when cannot copy feeds folder.
 msgid "Folder not copied"
-msgstr "Der Ordner konnte nicht gesichert werden."
+msgstr "Der Ordner konnte nicht kopiert werden"
 
 #. Translators: title of error dialog shown when cannot copy feeds folder.
 msgid "Copy Error"
-msgstr "Fehler beim Sichern"
+msgstr "Fehler beim Kopieren"
 
 #. Translators: Message presented when feeds have been restored.
 msgid "Feeds restored"
@@ -58,29 +58,27 @@ msgstr "RSS-Feeds wiederhergestellt"
 #. Translators: Title of a dialog.
 #, python-brace-format
 msgid "Feeds: {defaultFeed} ({configProfile})"
-msgstr "Feeds: {defaultFeed} ({configProfile})"
+msgstr "RSS-Feeds: {defaultFeed} ({configProfile})"
 
 #. Translators: Label of a dialog (message translated in NVDA's core in different contexts).
 msgid "&Filter by:"
-msgstr "&Filtern nach"
+msgstr "&Filter nach:"
 
 #. Translators: The label of a button to open the list of articles of a feed.
 msgid "List of &articles..."
-msgstr "Artikelliste..."
+msgstr "&Artikelliste..."
 
 #. Translators: The label of a button to open a feed.
 msgid "&Open feed"
-msgstr "Feed &öffnen"
+msgstr "RSS-Feed ö&ffnen"
 
 #. Translators: The label of a button to open a feed as HTML.
-#, fuzzy
 msgid "Open feed as &HTML"
-msgstr "Feed &öffnen"
+msgstr "RSS-Feed als &HTML öffnen"
 
 #. Translators: The label of a button to copy the feed URL.
-#, fuzzy
 msgid "Cop&y feed address"
-msgstr "RSS-Feeds sichern"
+msgstr "RSS-Feed-&Adresse kopieren"
 
 #. Translators: The label of a button to add a new feed.
 msgid "&New..."
@@ -96,43 +94,42 @@ msgstr "&Löschen..."
 
 #. Translators: The label of a button to set a feed as default.
 msgid "S&et default"
-msgstr "Als Standard &festlegen"
+msgstr "Als Standard f&estlegen"
 
 #. Translators: The label of a button to open a folder containing a backup of feeds.
 msgid "Open &folder containing a backup of feeds"
-msgstr "ö&ffnen Sie einen Ordner der gesicherte Feeds enthält"
+msgstr "Ordner mit den Sicherungskopien der RSS-Feeds ö&ffnen"
 
 #. Translators: The label of a button to open the settings dialog for readFeeds.
-#, fuzzy
 msgid "&Preferences..."
-msgstr "RSS-Feeds wiederherstellen..."
+msgstr "&Einstellungen..."
 
 #. Translators: Message presented when a feed cannot be added.
 #, python-format
 msgid "Cannot add feed: %s"
-msgstr ""
+msgstr "Der RSS-Feed konnte nicht hinzugefügt werden: %s"
 
 #. Translators: error message.
-#, fuzzy
 msgid "Error"
-msgstr "Fehler beim Sichern"
+msgstr "Fehler"
 
 #. Translators: the label of a message box dialog.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid ""
 "Do you want to copy feed address to the clipboard\r\n"
 "\r\n"
 "{feedAddress}?"
 msgstr ""
-"%s\r\n"
+"Möchten Sie die folgende RSS-Feed-Adresse in die Zwischenablage kopieren?"
+"\\R\n"
+"\n"
 "\r\n"
-"Möchten Sie den Titel und den Link des Artikels in die Zwischenablage "
-"kopieren?"
+"\n"
+"{feedAddress}"
 
 #. Translators: the title of a message box dialog.
-#, fuzzy
 msgid "Copy feed address"
-msgstr "RSS-Feeds sichern"
+msgstr "RSS-Feed-Adresse kopieren"
 
 #. Translators: Label of a dialog.
 msgid "Address of a new feed:"
@@ -162,20 +159,18 @@ msgstr "Artikel-Liste"
 
 #. Translators: The label of a button to open the selected article of a feed.
 msgid "Open &web page of selected article."
-msgstr "&Webseite des Artikels öffnen"
+msgstr "&Webseite des ausgewählten Artikels öffnen"
 
 #. Translators: The label of a button to show information of a feed article.
 msgid "&About article..."
 msgstr "&Info zum Artikel..."
 
 #. Translators: the label of a message box dialog.
-#, fuzzy, python-format
+#, python-format
 msgid "%sDo you want to copy article title and link to the clipboard?"
 msgstr ""
-"%s\r\n"
-"\r\n"
-"Möchten Sie den Titel und den Link des Artikels in die Zwischenablage "
-"kopieren?"
+"%sMöchten Sie den Titel des Artikels kopieren und in die Zwischenablage "
+"verlinken?"
 
 #. Translators: the title of a message box dialog.
 msgid "Article information"
@@ -219,7 +214,7 @@ msgstr "Ordner zum Wiederherstellen auswählen"
 
 #. Translators: label of a dialog.
 msgid "&Search edit box after feeds list"
-msgstr ""
+msgstr "Eingabefeld nach der Liste der RSS-Feeds &suchen"
 
 #. Translators: Presented when the current article does not have an associated title.
 msgid "Unable to locate article title."
@@ -231,15 +226,15 @@ msgstr "Die Adresse des Artikels konnte nicht ermittelt werden."
 
 #. Translators: Label of a checkbox to choose if date should be presented for each feed.
 msgid "Show date"
-msgstr ""
+msgstr "Datum anzeigen"
 
 #. Translators: Label for a checkbox to show buttons for copying to clipboard.
 msgid "Show buttons to copy"
-msgstr ""
+msgstr "Schaltflächen zum Kopieren anzeigen"
 
 #. Translators: Label for a button to copy to clipboard.
 msgid "Copy"
-msgstr ""
+msgstr "Kopieren"
 
 #. Translators: the name of a submenu.
 msgid "&Read Feeds"
@@ -258,24 +253,21 @@ msgid "R&estore feeds..."
 msgstr "RSS-Feeds wiederherstellen..."
 
 #. Translators: message presented in input mode.
-#, fuzzy
 msgid "Activates the Feeds dialog of Read Feeds."
-msgstr "Aktiviert das Dialogfeld der RSS-Feeds von %s."
+msgstr "Aktiviert das Dialogfeld \"RSS-Feeds\" unter \"RSS-Feeds lesen\"."
 
 #. Translators: message presented in input mode.
-#, fuzzy
 msgid "Activates the Copy dialog of Read Feeds."
-msgstr "Aktiviert das Dialogfeld zum Sichern von %s."
+msgstr "Aktiviert das Dialogfeld \"Kopieren\" der \"RSS-Feeds lesen\"."
 
 #. Translators: message presented in input mode.
-#, fuzzy
 msgid "Activates the Restore dialog of Read Feeds."
-msgstr "Aktiviert das Dialogfeld zum Wiederherstellen von %s."
+msgstr "Aktiviert das Dialogfeld \"Wiederherstellen\" der \"RSS-Feeds lesen\"."
 
 #. Translators: message presented in input mode.
 #, python-format
 msgid "Shows the %s settings."
-msgstr ""
+msgstr "Zeigt die %s-Einstellungen an."
 
 #. Translators: message presented in input mode.
 msgid "Refreshes the current feed and announces the most recent article title."
@@ -294,7 +286,7 @@ msgstr ""
 #. Translators: message presented when the information about an article of a feed is copied to the clipboard.
 #, python-format
 msgid "Copied to clipboard %s"
-msgstr "%s in die Zwischenablage kopiert."
+msgstr "%s in die Zwischenablage kopiert"
 
 #. Translators: message presented in input mode.
 msgid "Announces the title of the next article."
@@ -313,7 +305,8 @@ msgstr ""
 #. Translators: message presented in input mode.
 msgid "Copies title and related link of the current article to the clipboard."
 msgstr ""
-"Kopiert die Überschrift und die dazugehörige Adresse in die Zwischenablage"
+"Kopiert den Titel und den zugehörigen Link des aktuellen Artikels in die "
+"Zwischenablage."
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.

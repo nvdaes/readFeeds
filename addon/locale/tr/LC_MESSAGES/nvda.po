@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Read feeds 4.0\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2020-10-12 15:31+0300\n"
-"PO-Revision-Date: 2020-10-16 11:34+0300\n"
+"PO-Revision-Date: 2020-12-26 16:22+0300\n"
 "Last-Translator: Çağrı Doğan <cagrid@hotmail.com>\n"
 "Language-Team: cagrid@hotmail.com\n"
 "Language: tr\n"
@@ -13,11 +13,10 @@ msgstr ""
 "X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
 "X-Poedit-Basepath: ../../../globalPlugins/readFeeds\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 2.4\n"
+"X-Generator: Poedit 2.4.2\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #. Translators: the label of a message box dialog.
-#, fuzzy
 msgid ""
 "Your configuration folder for NVDA contains files that seem to be derived "
 "from a previous version of this add-on.\n"
@@ -75,9 +74,8 @@ msgid "Open feed as &HTML"
 msgstr "Akışı &HTML olarak aç"
 
 #. Translators: The label of a button to copy the feed URL.
-#, fuzzy
 msgid "Cop&y feed address"
-msgstr "Akışları kopyala"
+msgstr "Akış adresini &kopyala"
 
 #. Translators: The label of a button to add a new feed.
 msgid "&New..."
@@ -113,17 +111,19 @@ msgid "Error"
 msgstr "Hata"
 
 #. Translators: the label of a message box dialog.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid ""
 "Do you want to copy feed address to the clipboard\r\n"
 "\r\n"
 "{feedAddress}?"
-msgstr "%sMakale başlığını ve bağlantısını panoya kopyalamak istiyor musunuz?"
+msgstr ""
+"Akış adresini panoya kopyalamak istiyor musunuz?\r\n"
+"\r\n"
+"{feedAddress}?"
 
 #. Translators: the title of a message box dialog.
-#, fuzzy
 msgid "Copy feed address"
-msgstr "Akışları kopyala"
+msgstr "Akış adresini kopyala"
 
 #. Translators: Label of a dialog.
 msgid "Address of a new feed:"
@@ -158,9 +158,9 @@ msgid "&About article..."
 msgstr "Haber hakkında..."
 
 #. Translators: the label of a message box dialog.
-#, fuzzy, python-format
+#, python-format
 msgid "%sDo you want to copy article title and link to the clipboard?"
-msgstr "%sMakale başlığını ve bağlantısını panoya kopyalamak istiyor musunuz?"
+msgstr "%sMakale başlığı ve adresini panoya kopyalamak istiyor musunuz?"
 
 #. Translators: the title of a message box dialog.
 msgid "Article information"
@@ -239,19 +239,16 @@ msgid "R&estore feeds..."
 msgstr "Akışları ge&ri yükle..."
 
 #. Translators: message presented in input mode.
-#, fuzzy
 msgid "Activates the Feeds dialog of Read Feeds."
-msgstr "%s akış listesini açar."
+msgstr "Akış listesini açar."
 
 #. Translators: message presented in input mode.
-#, fuzzy
 msgid "Activates the Copy dialog of Read Feeds."
-msgstr "%s kopyalama iletişim kutusunu açar."
+msgstr "Akışları oku'nun kopyalama iletişim kutusunu açar."
 
 #. Translators: message presented in input mode.
-#, fuzzy
 msgid "Activates the Restore dialog of Read Feeds."
-msgstr "%s geri yükleme iletişim kutusunu açar."
+msgstr "Akışları Oku'nun geri yükleme iletişim kutusunu açar."
 
 #. Translators: message presented in input mode.
 #, python-format
