@@ -23,5 +23,5 @@ jobs:
       run: |
         cd main
         git remote add org ../orgRepo
-        git merge org/stable
+        git merge org/master
         
