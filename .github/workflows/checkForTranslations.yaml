@@ -22,6 +22,6 @@ jobs:
       run: |
         cd main
         git remote add org ../orgRepo
-        git fetch --all org
+        git fetch --all
         git merge org/stable
         
