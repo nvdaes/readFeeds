@@ -10,6 +10,8 @@ jobs:
     steps:
     - name: Checkout main
       uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
     - name: Add remote
       run: |
         git remote add org https://github.com/nvdaaddons/readFeeds
