@@ -10,19 +10,8 @@ jobs:
     steps:
     - name: Checkout main
       uses: actions/checkout@v2
-      with:
-        path: main
-
-    - name: Checkout org
-      uses: actions/checkout@v2
-      with:
-        repository: nvdaaddons/readFeeds
-        path: orgRepo
-        ref: stable
-    - name: Merge stable
+    - name: Add remote
       run: |
-        cd main
-        git remote add org ../orgRepo
+        git remote add org https://github.com/nvdaaddons/readFeeds
         git fetch org
         git merge org/stable
-        
