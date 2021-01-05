@@ -20,15 +20,3 @@ jobs:
       with:
         path: orgRepo
         fetch-depth: 0
-    - name: Update translations
-      run: |
-        git remote add org orgRepo
-        cd main
-
-        git merge org/stable
-
-
-
-        git config user.name github-actions
-        git config user.email github-actions@github.com
-        git push
