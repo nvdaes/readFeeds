@@ -1,16 +1,17 @@
 # Read Feeds #
 
 * Autores: Noelia Ruiz Martínez, Mesar Hameed
-* Compatibilidade con NVDA: da 2018.3 á 2019.1
+* Compatibilidade con NVDA: 2019.3 ou posterior
 * Descargar [versión estable][1]
 * Descargar [versión de desenvolvemento][2]
+
 
 Este complemento proporciona unha maneira sinxela de ler fontes en formatos
 de RSS ou Atom utilizando NVDA.  Os feeds non se actualizarán
 automáticamente.  No futuro cando mencionemos feeds, referirémonos ós feeds
 RSS e ATOM.
 
-## Instalación ou actualización: ##
+## Instalación ou actualización ##
 
 Se utilizaches unha versión anterior deste complemento, e hai un cartafol
 personalFeeds ou RSS na carpeta personal de configuración do NVDA, ó se
@@ -19,20 +20,20 @@ desexas actualizar ou instalar.  Selecciona Actualizar para conservar os
 teus feeds gardados e continuar utilizándoos na nova versión instalada de
 readFeeds.
 
-## Ordes: ##
+## Ordes ##
 
 ### Menú Read Feeds ###
 
 Podes acceder ó submenú Read Feeds dende o menú NVDA, submenú Ferramentas,
 onde están dispoñibles as seguintes opcións:
 
-#### Feeds... ####
+#### Fontes ####
 
 Abre un diálogo cos seguintes controis:
 
 * Filtrar por: unha Caixa de edición para procurar feeds gardados
   anteriormente.
-* Unha listaxe dos feeds gardados.
+* Unha lista das fontes gardadas, enfocada ao abrirse o diálogo.
 * Listaxe de artigos: abre un diálogo que amosa a listaxe de artigos do teu
   feed actual. Seleciona o artigo que desexes ler e preme Intro ou o botón
   Abrir páxina web do artigo selecionado para abrir a páxina correspondente
@@ -40,6 +41,11 @@ Abre un diálogo cos seguintes controis:
   amose o título e a liga do artigo selecionado; dende este diálogo, poderás
   copiar esta información ao portapapeis.
 * Abrir feed: abre o feed selecionado na aplicación predeterminada.
+* Abrir fonte como HTML: Abre a fonte seleccionada no navegador web por
+  defecto. Poderás ocultar datas de publicación e botóns para copiar
+  información sobre os artigos ao portapapeis.
+* Copiar enderezo da fonte: Abre un diálogo para confirmar se queres copiar
+  o enderezo da fonte ó portapapeis.
 * Novo: abre un diálogo cunha Caixa de edición para introducir o enderezo
   dun feed novo. Se o enderezo é válido e o feed pode gardarse, o seu nome,
   baseado no título do feed, aparecerá ao fondo da listaxe dos feeds.
@@ -53,6 +59,8 @@ Abre un diálogo cos seguintes controis:
   cartafol que podería conter unha copia de seguridade das fontes. Isto
   podería ser útil para explorar e eliminar fontes que non deberían
   importarse cando o complemento se actualice.
+* Preferencias: Abre o diálogo de opcións para ReadFeeds, tamén dispoñible
+  no menú NVDA, Preferencias, Opcións, categoría ReadFeeds.
 * Pechar: pecha o diálogo Feeds.
 
 ##### Notas #####
@@ -63,21 +71,24 @@ Abre un diálogo cos seguintes controis:
 * O feed configurado como o predeterminado pode borrarse. O feed addressFile
   usarase coma o predeterminado cando a configuración se reinicie, así non
   pode borrarse.
+* A caixa de edición filtrar por pódese poñer despois do botón Abrir artigo
+  dende o menú NVDA, Preferencias, Opcións, categoría Read Feeds, ou
+  premendo o botón Preferencias do diálogo de fontes.
 
-####Copiar cartafol feeds... ####
+#### Copiar cartafol de feeds ####
 
 Abre un diálogo para escoller un catafol onde podes gardar o directorio
 personalFeeds dos teus feeds. Por defecto a carpeta selecionada é o
 directorio de configuración do NVDA, o que creará o directorio
 personalFeeds.
 
-#### Restaurar feeds... ####
+#### Restaurar feeds ####
 
 Abre un diálogo para seleccionar un cartafol que reemplaza os teus feeds no
 cartafol personalFeeds. Asegúrate de cargar un cartafol contendo URLs de
 feeds.
 
-### Ordes de teclado: ###
+### Ordes de teclado ###
 
 * Ctrl+Shift+NVDA+Espazo: anuncia a URL actual dos artigos. Premendo dúas
   veces abrirá a páxina web.
@@ -88,15 +99,46 @@ feeds.
 * Ctrl+Shift+NVDA+U: anuncia o título do feed anterior.
 * Ctrl+Shift+NVDA+O: anuncia o título do feed seguinte.
 
-## Notificacións: ##
+## Notificacións ##
 
 * Cando o título ou a URL se copiaran.
 * Cando non se pode conectar/refrescar un feed, ou a URL non se corresponde
   cun feed válido.
 * NVDA amosará unha mensaxe de erro se non foi posible respaldar ou
-  restaurar o cartafol personalFeeds.
+  restaurar o cartafol personalFeeds, e se non se pode crear unha nova
+  fonte.
 * O título do diálogo da listaxe de artigos amopsa o nome do feed
   selecionado e o número de elementos dispoñibles.
+
+## Cambios para 10.0 ##
+
+* Engadido un botón para abrir o feed selecionado como HTML no navegador web
+  predeterminado.
+* Se non se pode crear unha nova fonte, notificarase nun diálogo de erro.
+* Mellorada a orde e a presentación dalgúns artigos.
+* Poderíanse soportar máis fontes.
+* Cando se abre o diálogo de fontes, enfocarase a lista de fontes no canto
+  da caixa de edición de busca.
+* Podes escoller se a caixa de edición de busca se sitúa despois da lista de
+  fontes, útil para enfocar a lista aínda despois de moverse dende outra
+  xanela sen pechar o diálogo de fontes.
+* Engadido un botón para copiar o enderezo da fonte ao portapapeis dende o
+  diálogo de fontes.
+
+## Cambios para 9.0 ##
+
+* Require NVDA 2019.3 ou posterior.
+
+## Cambios para 8.0 ##
+
+* Cando o complemento se actualice, os feeds gardados na versión anterior do
+  complemento copiaranse automaticamente á nova versión, a menos que
+  prefiras importar os feeds gardados no cartafol principal de configuración
+  de NVDA.
+* Ao utilizar o diálogo para copiar feeds, se o cartafol escollido non se
+  chama personalFeeds, crearase un subcartafol con ese nome para previr a
+  eliminación de directorios que conteñan datos importantes, como Documentos
+  ou Descargas.
 
 ## Cambios para 7.0 ##
 
@@ -138,7 +180,6 @@ feeds.
   posible configurar diferentes feeds predeterminados nos perfís de
   configuración.
 * Requírese do NVDA 2016.4.
-
 
 ## Cambios para 2.0 ##
 

@@ -8,34 +8,24 @@ msgstr ""
 "Project-Id-Version: readFeeds 2.2\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2015-01-30 18:00+1000\n"
-"PO-Revision-Date: 2017-03-18 10:12+0200\n"
-"Last-Translator: Noelia Ruiz Martínez <nrm1977@gmail.com>\n"
+"PO-Revision-Date: 2020-12-27 23:07+0200\n"
+"Last-Translator: Volodymyr Pyrih <vp88.mobile@gmail.com>\n"
 "Language-Team: \n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.11\n"
-
-#. Translators: the label of a message box dialog.
-msgid ""
-"You have installed the ReadFeeds add-on, probably an old and incompatible "
-"version with this one. Do you want to uninstall the old version?"
-msgstr ""
-"Ви встановили додаток ReadFeeds, який, ймовірно, вже застарілий та не "
-"сумісний з актуальною версією програми. Чи бажаєте видалити застарілу версію?"
-
-#. Translators: the title of a message box dialog.
-msgid "Uninstall incompatible add-on"
-msgstr "Видалити несумісний додаток"
+"X-Generator: Poedit 2.4.2\n"
 
 #. Translators: the label of a message box dialog.
 msgid ""
 "Your configuration folder for NVDA contains files that seem to be derived "
-"from a previous version of this add-on. Do you want to update it?"
+"from a previous version of this add-on.\n"
+"\t\t\tDo you want to update it?"
 msgstr ""
-"Папка конфігурації NVDA містить файли, які ймовірно залишились від "
-"попередньої версії цього додатку. Бажаєте оновити їх?"
+"Папка конфігурації NVDA містить файли, які, ймовірно, залишились від "
+"попередньої версії цього додатка.\n"
+"\t\t\tБажаєте оновити їх?"
 
 #. Translators: the title of a message box dialog.
 msgid "Install or update add-on"
@@ -65,23 +55,30 @@ msgstr "Помилка копіювання"
 msgid "Feeds restored"
 msgstr "Канали відновлено"
 
-#. Translators: The title of a dialog.
+#. Translators: Title of a dialog.
 #, python-brace-format
 msgid "Feeds: {defaultFeed} ({configProfile})"
-msgstr ""
+msgstr "Канали: {defaultFeed} ({configProfile})"
 
-#. Label of a dialog (message translated in NVDA core in different contexts).
+#. Translators: Label of a dialog (message translated in NVDA's core in different contexts).
 msgid "&Filter by:"
-msgstr ""
+msgstr "&Фільтрувати за:"
 
 #. Translators: The label of a button to open the list of articles of a feed.
 msgid "List of &articles..."
 msgstr "Список &статей..."
 
 #. Translators: The label of a button to open a feed.
-#, fuzzy
 msgid "&Open feed"
-msgstr "Новий канал"
+msgstr "&Відкрити канал"
+
+#. Translators: The label of a button to open a feed as HTML.
+msgid "Open feed as &HTML"
+msgstr "Відкрити канал як &HTML"
+
+#. Translators: The label of a button to copy the feed URL.
+msgid "Cop&y feed address"
+msgstr "Скопію&вати адресу каналу"
 
 #. Translators: The label of a button to add a new feed.
 msgid "&New..."
@@ -100,14 +97,38 @@ msgid "S&et default"
 msgstr "В&становити за замовчуванням"
 
 #. Translators: The label of a button to open a folder containing a backup of feeds.
-#, fuzzy
 msgid "Open &folder containing a backup of feeds"
-msgstr ""
-"Виберіть папку для збереження резервної копії Ваших поточних каналів.\n"
-"\n"
-"\t\tВони будуть скопійовані з %s."
+msgstr "Відкрити &папку з резервними копіями каналів"
 
-#. Translators: The label of a field to enter an address for a new feed.
+#. Translators: The label of a button to open the settings dialog for readFeeds.
+msgid "&Preferences..."
+msgstr "&Параметри…"
+
+#. Translators: Message presented when a feed cannot be added.
+#, python-format
+msgid "Cannot add feed: %s"
+msgstr "Неможливо додати канал: %s"
+
+#. Translators: error message.
+msgid "Error"
+msgstr "Помилка"
+
+#. Translators: the label of a message box dialog.
+#, python-brace-format
+msgid ""
+"Do you want to copy feed address to the clipboard\r\n"
+"\r\n"
+"{feedAddress}?"
+msgstr ""
+"Бажаєте скопіювати адресу каналу в буфер обміну\n"
+"\n"
+"{feedAddress}?"
+
+#. Translators: the title of a message box dialog.
+msgid "Copy feed address"
+msgstr "Скопіювати адресу каналу"
+
+#. Translators: Label of a dialog.
 msgid "Address of a new feed:"
 msgstr "Адреса нового каналу:"
 
@@ -129,43 +150,33 @@ msgid "Rename feed"
 msgstr "Перейменувати канал"
 
 #. Translators: The label of the articles list in the articles dialog.
-#, fuzzy
 msgid "List of articles"
-msgstr "Список &статей..."
+msgstr "Список статей"
 
 #. Translators: The label of a button to open the selected article of a feed.
-#, fuzzy
 msgid "Open &web page of selected article."
-msgstr "Відкрити веб-сторінку обраної статті."
+msgstr "Відкрити &веб-сторінку обраної статті."
 
 #. Translators: The label of a button to show information of a feed article.
-#, fuzzy
 msgid "&About article..."
-msgstr "Список &статей..."
+msgstr "&Про статтю…"
 
 #. Translators: the label of a message box dialog.
 #, python-format
-msgid ""
-"%s\r\n"
-"\r\n"
-"Do you want to copy article title and link to the clipboard?"
-msgstr ""
+msgid "%sDo you want to copy article title and link to the clipboard?"
+msgstr "%sБажаєте скопіювати назву статті й посилання на неї в буфер обміну?"
 
 #. Translators: the title of a message box dialog.
 msgid "Article information"
-msgstr ""
+msgstr "Інформація про статтю"
 
 #. Translators: The title of the Copy dialog.
 msgid "Copy feeds"
 msgstr "Скопіювати канали"
 
 #. Translators: An informational message displayed in the Copy dialog.
-#, fuzzy
 msgid "Select a folder to save a backup of your current feeds"
-msgstr ""
-"Виберіть папку для збереження резервної копії Ваших поточних каналів.\n"
-"\n"
-"\t\tВони будуть скопійовані з %s."
+msgstr "Оберіть папку для резервного копіювання каналів"
 
 #. Translators: The label of a grouping containing controls to select the destination directory in the Copy dialog.
 msgid "directory for backup:"
@@ -180,13 +191,8 @@ msgid "Restore feeds"
 msgstr "Відновити канали"
 
 #. Translators: An informational message displayed in the Restore dialog.
-#, fuzzy
 msgid "Select a folder to restore a backup of your previous copied feeds"
-msgstr ""
-"Виберіть папку для відновлення резервної копії попередньо скопійованих Вами "
-"каналів.\n"
-"\n"
-"\t\tВони будуть скопійовані в %s."
+msgstr "Виберіть папку з резервними копіями скопійованих каналів"
 
 #. Translators: The label of a grouping containing controls to select the destination directory in the Restore dialog.
 msgid "directory containing backup:"
@@ -196,6 +202,10 @@ msgstr "каталог, що містить резервну копію:"
 msgid "Select directory to restore"
 msgstr "Виберіть каталог для відновлення"
 
+#. Translators: label of a dialog.
+msgid "&Search edit box after feeds list"
+msgstr "&Розмістити поле пошуку після списку з каналами"
+
 #. Translators: Presented when the current article does not have an associated title.
 msgid "Unable to locate article title."
 msgstr "Не вдалося знайти назву статті."
@@ -203,6 +213,18 @@ msgstr "Не вдалося знайти назву статті."
 #. Translators: Presented when the current article does not have an associated link.
 msgid "Unable to locate article link."
 msgstr "Не вдалося знайти посилання на статтю."
+
+#. Translators: Label of a checkbox to choose if date should be presented for each feed.
+msgid "Show date"
+msgstr "Показувати дату"
+
+#. Translators: Label for a checkbox to show buttons for copying to clipboard.
+msgid "Show buttons to copy"
+msgstr "Показувати кнопки для копіювання"
+
+#. Translators: Label for a button to copy to clipboard.
+msgid "Copy"
+msgstr "Копіювати"
 
 #. Translators: the name of a submenu.
 msgid "&Read Feeds"
@@ -221,19 +243,21 @@ msgid "R&estore feeds..."
 msgstr "В&ідновлення каналів новин."
 
 #. Translators: message presented in input mode.
-#, python-format
-msgid "Activates the Feeds dialog of %s."
-msgstr "Викликає діалогове вікно каналів з %s."
+msgid "Activates the Feeds dialog of Read Feeds."
+msgstr "Активовує вікно з каналами для читання."
+
+#. Translators: message presented in input mode.
+msgid "Activates the Copy dialog of Read Feeds."
+msgstr "Активовує вікно копіювання каналів для читання."
+
+#. Translators: message presented in input mode.
+msgid "Activates the Restore dialog of Read Feeds."
+msgstr "Активовує діалог відновлення каналів для читання."
 
 #. Translators: message presented in input mode.
 #, python-format
-msgid "Activates the Copy dialog of %s."
-msgstr "Викликає діалогове вікно копіювання з %s."
-
-#. Translators: message presented in input mode.
-#, python-format
-msgid "Activates the Restore dialog of %s."
-msgstr "Викликає діалогове вікно відновлення з %s."
+msgid "Shows the %s settings."
+msgstr "Показує налаштування %s."
 
 #. Translators: message presented in input mode.
 msgid "Refreshes the current feed and announces the most recent article title."
@@ -280,6 +304,17 @@ msgstr "Читати канали новин"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Add-on for using NVDA as a feed reader."
 msgstr "Додаток для використання програми NVDA як переглядача каналів новин."
+
+#~ msgid ""
+#~ "You have installed the ReadFeeds add-on, probably an old and incompatible "
+#~ "version with this one. Do you want to uninstall the old version?"
+#~ msgstr ""
+#~ "Ви встановили додаток ReadFeeds, який, ймовірно, вже застарілий та не "
+#~ "сумісний з актуальною версією програми. Чи бажаєте видалити застарілу "
+#~ "версію?"
+
+#~ msgid "Uninstall incompatible add-on"
+#~ msgstr "Видалити несумісний додаток"
 
 #~ msgid "Feeds"
 #~ msgstr "Канали новин"

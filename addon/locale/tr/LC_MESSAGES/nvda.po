@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Read feeds 4.0\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
-"POT-Creation-Date: 2013-11-16 13:26+0100\n"
-"PO-Revision-Date: 2019-04-03 16:27+0300\n"
+"POT-Creation-Date: 2020-10-12 15:31+0300\n"
+"PO-Revision-Date: 2020-12-26 16:22+0300\n"
 "Last-Translator: Çağrı Doğan <cagrid@hotmail.com>\n"
 "Language-Team: cagrid@hotmail.com\n"
 "Language: tr\n"
@@ -11,36 +11,23 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
-"X-Poedit-Basepath: C:/Users/cagri.dogan/AppData/Roaming/nvda/addons/"
-"ReadFeeds/globalPlugins\n"
+"X-Poedit-Basepath: ../../../globalPlugins/readFeeds\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 2.2.1\n"
-"X-Poedit-SearchPath-0: C:/Users/cagri.dogan/AppData/Roaming/nvda/addons/"
-"ReadFeeds/globalPlugins\n"
-
-#. Translators: the label of a message box dialog.
-msgid ""
-"You have installed the ReadFeeds add-on, probably an old and incompatible "
-"version with this one. Do you want to uninstall the old version?"
-msgstr ""
-"Akış takip eklentisini kurmuşsunuz, muhtemelen eski ve bu versiyonla uyumsuz "
-"bir sürümü. Eski sürümü kaldırmak ister misiniz?"
-
-#. Translators: the title of a message box dialog.
-msgid "Uninstall incompatible add-on"
-msgstr "Uyumsuz eklentiyi kaldır"
+"X-Generator: Poedit 2.4.2\n"
+"X-Poedit-SearchPath-0: .\n"
 
 #. Translators: the label of a message box dialog.
 msgid ""
 "Your configuration folder for NVDA contains files that seem to be derived "
-"from a previous version of this add-on. Do you want to update it?"
+"from a previous version of this add-on.\n"
+"\t\t\tDo you want to update it?"
 msgstr ""
-"NVDA kullanıcı konfigürasyon dizininizde eski sürümden kalan dosyalar var.  "
-"Güncellemek ister misiniz?"
+"NVDA için yapılandırma klasörünüz, bu eklentinin önceki bir sürümünden "
+"türetilmiş gibi görünen dosyalar içeriyor. Güncellemek ister misiniz?"
 
 #. Translators: the title of a message box dialog.
 msgid "Install or update add-on"
-msgstr "Eklentiyi güncelle ya da kur"
+msgstr "Eklentiyi yükleyin veya güncelleyin"
 
 #. Translators: message presented when feeds cannot be reported.
 msgid ""
@@ -65,12 +52,12 @@ msgstr "Kopya Hatası"
 msgid "Feeds restored"
 msgstr "Kaynaklar geri yüklendi"
 
-#. Translators: The title of a dialog.
+#. Translators: Title of a dialog.
 #, python-brace-format
 msgid "Feeds: {defaultFeed} ({configProfile})"
 msgstr "Haber Akışları: {defaultFeed} ({configProfile})"
 
-#. Label of a dialog (message translated in NVDA core in different contexts).
+#. Translators: Label of a dialog (message translated in NVDA's core in different contexts).
 msgid "&Filter by:"
 msgstr "&Filtreleme kriteri:"
 
@@ -81,6 +68,14 @@ msgstr "Haber &listesi..."
 #. Translators: The label of a button to open a feed.
 msgid "&Open feed"
 msgstr "&Akışı aç"
+
+#. Translators: The label of a button to open a feed as HTML.
+msgid "Open feed as &HTML"
+msgstr "Akışı &HTML olarak aç"
+
+#. Translators: The label of a button to copy the feed URL.
+msgid "Cop&y feed address"
+msgstr "Akış adresini &kopyala"
 
 #. Translators: The label of a button to add a new feed.
 msgid "&New..."
@@ -102,7 +97,35 @@ msgstr "Var&sayılan olarak ayarla"
 msgid "Open &folder containing a backup of feeds"
 msgstr "Akışların &yedeğini içeren klasörü açın"
 
-#. Translators: The label of a field to enter an address for a new feed.
+#. Translators: The label of a button to open the settings dialog for readFeeds.
+msgid "&Preferences..."
+msgstr "&Tercihler..."
+
+#. Translators: Message presented when a feed cannot be added.
+#, python-format
+msgid "Cannot add feed: %s"
+msgstr "Akış eklenemiyor: %s"
+
+#. Translators: error message.
+msgid "Error"
+msgstr "Hata"
+
+#. Translators: the label of a message box dialog.
+#, python-brace-format
+msgid ""
+"Do you want to copy feed address to the clipboard\r\n"
+"\r\n"
+"{feedAddress}?"
+msgstr ""
+"Akış adresini panoya kopyalamak istiyor musunuz?\r\n"
+"\r\n"
+"{feedAddress}?"
+
+#. Translators: the title of a message box dialog.
+msgid "Copy feed address"
+msgstr "Akış adresini kopyala"
+
+#. Translators: Label of a dialog.
 msgid "Address of a new feed:"
 msgstr "Yeni bir Akış adresi:"
 
@@ -136,14 +159,8 @@ msgstr "Haber hakkında..."
 
 #. Translators: the label of a message box dialog.
 #, python-format
-msgid ""
-"%s\r\n"
-"\r\n"
-"Do you want to copy article title and link to the clipboard?"
-msgstr ""
-"%s\r\n"
-"\r\n"
-"Haber başlığı ve adresini panoya kopyalamak istiyor musunuz?"
+msgid "%sDo you want to copy article title and link to the clipboard?"
+msgstr "%sMakale başlığı ve adresini panoya kopyalamak istiyor musunuz?"
 
 #. Translators: the title of a message box dialog.
 msgid "Article information"
@@ -181,6 +198,10 @@ msgstr "Yedeğin bulunduğu klasör:"
 msgid "Select directory to restore"
 msgstr "Geri yüklemek için klasör seçin"
 
+#. Translators: label of a dialog.
+msgid "&Search edit box after feeds list"
+msgstr "&Filtreleme kriteri akış listesi sonrasında"
+
 #. Translators: Presented when the current article does not have an associated title.
 msgid "Unable to locate article title."
 msgstr "Haberin başlığı alınamadı."
@@ -188,6 +209,18 @@ msgstr "Haberin başlığı alınamadı."
 #. Translators: Presented when the current article does not have an associated link.
 msgid "Unable to locate article link."
 msgstr "Haberin bağlantısı alınamadı."
+
+#. Translators: Label of a checkbox to choose if date should be presented for each feed.
+msgid "Show date"
+msgstr "Tarihi göster"
+
+#. Translators: Label for a checkbox to show buttons for copying to clipboard.
+msgid "Show buttons to copy"
+msgstr "Kopyalama düğmelerini göster"
+
+#. Translators: Label for a button to copy to clipboard.
+msgid "Copy"
+msgstr "Kopyala"
 
 #. Translators: the name of a submenu.
 msgid "&Read Feeds"
@@ -206,19 +239,21 @@ msgid "R&estore feeds..."
 msgstr "Akışları ge&ri yükle..."
 
 #. Translators: message presented in input mode.
-#, python-format
-msgid "Activates the Feeds dialog of %s."
-msgstr "%s için kaynaklar iletişim kutusunu açar."
+msgid "Activates the Feeds dialog of Read Feeds."
+msgstr "Akış listesini açar."
+
+#. Translators: message presented in input mode.
+msgid "Activates the Copy dialog of Read Feeds."
+msgstr "Akışları oku'nun kopyalama iletişim kutusunu açar."
+
+#. Translators: message presented in input mode.
+msgid "Activates the Restore dialog of Read Feeds."
+msgstr "Akışları Oku'nun geri yükleme iletişim kutusunu açar."
 
 #. Translators: message presented in input mode.
 #, python-format
-msgid "Activates the Copy dialog of %s."
-msgstr "%s için kopyalama iletişim kutusunu açar."
-
-#. Translators: message presented in input mode.
-#, python-format
-msgid "Activates the Restore dialog of %s."
-msgstr "%s için geri Yükleme iletişim kutusunu açar."
+msgid "Shows the %s settings."
+msgstr "%s ayarlar iletişim kutusunu göster"
 
 #. Translators: message presented in input mode.
 msgid "Refreshes the current feed and announces the most recent article title."
@@ -263,237 +298,14 @@ msgstr "Akışları Oku"
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Add-on for using NVDA as a feed reader."
-msgstr "NVDA'yla RSS vb akışları takip etmeniz için bir eklenti."
-
-#~ msgid "Feeds"
-#~ msgstr "Haber Akışları"
-
-#~ msgid "Manage feeds."
-#~ msgstr "Akışları yönet"
-
-#~ msgid "View and manage feeds"
-#~ msgstr "Akışları Görüntüle/yönet"
-
-#~ msgid "Backup of feeds"
-#~ msgstr "Akış adreslerinin yedği"
-
-#~ msgid "Restore previously saved feeds"
-#~ msgstr "Önceden kaydedilmiş akışları geri yükle"
-
-#~ msgid "This feed contains untitled items"
-#~ msgstr "Bu akışta başlıksız ögeler var ya da başlıklar alınamıyor"
-
-#~ msgid "This feed contains items without a link"
-#~ msgstr "Bu akış bağlantısız  ögeler içeriyor ya da bağlantılar alınamıyor"
-
-#~ msgid "News &list..."
-#~ msgstr "Haber &listesi"
-
-#~ msgid "View news list"
-#~ msgstr "Haber listesini görüntüle"
-
-#~ msgid "&Temporary address..."
-#~ msgstr "&Geçici adres..."
-
-#~ msgid "View or choose current feed address"
-#~ msgstr "Mevcut RSS kaynağının adresini görüntüle/seç"
-
-#~ msgid "L&oad saved address..."
-#~ msgstr "Kay&ıtlı RSS adresleri..."
-
-#~ msgid "Choose file containing address"
-#~ msgstr "Takip etmek istediğiniz kanalın adresini içeren dosyayı seçin"
-
-#~ msgid "Save current address..."
-#~ msgstr "Geçerli adresi kaydet..."
-
-#~ msgid "Copy current address to text file"
-#~ msgstr "Mevcut adresi dosyaya kaydet"
-
-#~ msgid "Updat&e current feed"
-#~ msgstr "Mevcu&t RSS kaynağını güncelle"
-
-#~ msgid "Reload current feed"
-#~ msgstr "Geçerli akışı güncelle"
-
-#~ msgid "Open &documentation"
-#~ msgstr "Dokümantasyon klasö&rünü aç"
-
-#~ msgid "Open documentation for current language"
-#~ msgstr " Mevcut dil için dokümantasyon dizinini aç"
+msgstr "NVDA'yı bir yayın okuyucu olarak kullanmak için eklenti."
 
 #~ msgid ""
-#~ "Feeds can not be reported. Check your Internet conectivity or specified "
-#~ "address"
+#~ "You have installed the ReadFeeds add-on, probably an old and incompatible "
+#~ "version with this one. Do you want to uninstall the old version?"
 #~ msgstr ""
-#~ "Akışlar alınamıyor. Internet bağlantısını veya belirtilen adresi kontrol "
-#~ "edin"
+#~ "Muhtemelen bunun eski ve uyumsuz bir sürümü olan ReadFeeds eklentisini "
+#~ "yüklediniz. Eski sürümü kaldırmak istiyor musunuz?"
 
-#~ msgid "Update Error"
-#~ msgstr "Güncelleme Hatası"
-
-#~ msgid "Open the web page for reading your selected article"
-#~ msgstr "Seçtiğiniz makaleyi okumak için web sayfasını açın"
-
-#~ msgid "Select a folder for copying your saved feeds"
-#~ msgstr "Kayıtlı beslemelerinizi yedeklemek için bir klasör seçin"
-
-#~ msgid "Updates the selected channel and reads the first feed title."
-#~ msgstr "Seçilen kanalı günceller ve ilk beslemenin başlığını okur"
-
-#~ msgid ""
-#~ "Reads the current feed title. Pressed two times, copies the text to "
-#~ "clipboard."
-#~ msgstr ""
-#~ "Geçerli akıştaki haber başlığını okur. iki kez basılırsa metin panoya "
-#~ "kopyalanır."
-
-#~ msgid "Reads the next feed title."
-#~ msgstr "Sonraki besleme başlığını okur"
-
-#~ msgid "Reads the prior feed title."
-#~ msgstr "Önceki besleme başlığını okur"
-
-#~ msgid ""
-#~ "Reads the article link, that allows open its web page. Pressed two times, "
-#~ "opens the web."
-#~ msgstr "Haberin adresini okur. İki kez basılırsa adres tarayıcıda açılır."
-
-#~ msgid "The address of the channel you wish to follow"
-#~ msgstr "Takip etmek istediğiniz kanalın adresi"
-
-#~ msgid "Address"
-#~ msgstr "Akış adresi"
-
-#~ msgid "Selected %s"
-#~ msgstr "%s seçildi"
-
-#~ msgid "Opens a dialog for setting the address of the feeds channel."
-#~ msgstr ""
-#~ "Takip etmek istediğiniz kanalın adresini gireceğiniz iletişim kutusunu "
-#~ "açar"
-
-#~ msgid "Choose a file containing a channel address"
-#~ msgstr "Takip etmek istediğiniz kanalın adresini içeren dosyayı seçin"
-
-#~ msgid "Text files (*.txt) |*.txt"
-#~ msgstr "Metin dosyaları (*.txt) |*.txt"
-
-#~ msgid ""
-#~ "Opens a dialog for setting the address of the feeds channel from a "
-#~ "selected file."
-#~ msgstr ""
-#~ "Takip etmek istediğiniz kanalın adresini içeren dosyayı seçebileceğiniz "
-#~ "bir iletişim kutusunu açar"
-
-#~ msgid "File for saving your current address"
-#~ msgstr "Mevcut adresi kaydedeceğiniz dosya"
-
-#~ msgid "Text files (*.txt) | *.txt"
-#~ msgstr "Metin dosyaları (*.txt) |*.txt"
-
-#~ msgid "Saved %s"
-#~ msgstr "%s kaydedildi"
-
-#~ msgid "Address can not be saved"
-#~ msgstr "Adres kaydedilemedi"
-
-#~ msgid "Opens a dialog for saving a file containing the selected address."
-#~ msgstr ""
-#~ "Mevcut adresin bir dosyaya kaydedilmesi için ilgili iletişim kutusunu "
-#~ "açar."
-
-#~ msgid "Article &list..."
-#~ msgstr "Haber &listesi..."
-
-#~ msgid "View article list"
-#~ msgstr "Haber listesini görüntüle"
-
-#~ msgid "&Temporary feed address..."
-#~ msgstr "&Geçici akış addressi..."
-
-#~ msgid "L&oad feed address from file..."
-#~ msgstr "akış adresini d&osyadan yükle..."
-
-#~ msgid "Select file which contains feed address."
-#~ msgstr "Akış adresi içeren bir dosya seç"
-
-#~ msgid "Save current feed address to file..."
-#~ msgstr "Mevcut akış adresini dosyaya kaydet..."
-
-#~ msgid "Save current feed address to file"
-#~ msgstr "Mevcut akış adresini dosyaya kaydedin"
-
-#~ msgid "R&efresh current feed"
-#~ msgstr "M&evcut Akışı Güncelle"
-
-#~ msgid "Checks for new articles for the current feed"
-#~ msgstr "Geçerli akış için yeni haberleri denetler"
-
-#~ msgid "&Backup personal feeds folder..."
-#~ msgstr "&Kişisel akış dizinini yedekle..."
-
-#~ msgid "Backs up your personal feeds folder"
-#~ msgstr "Akış dizininin yedeğini alır"
-
-#~ msgid "R&estore personal feeds..."
-#~ msgstr "Kişisel akışları g&eri yükle..."
-
-#~ msgid "Refresh Error"
-#~ msgstr "Güncelleme Hatası"
-
-#~ msgid "Unable to backup folder"
-#~ msgstr "Klasör yedeklemesi yapılamıyor"
-
-#~ msgid "Backup Error"
-#~ msgstr "Yedekleme Hatası"
-
-#~ msgid "Restore personal feeds from backup folder"
-#~ msgstr "Yedekleme klasöründen kişisel akışları geri yükle"
-
-#~ msgid "Restore Error"
-#~ msgstr "Geri yükleme Hatası"
-
-#~ msgid "Refresh your selected feed to read the current article."
-#~ msgstr "Mevcut haberi okumak için seçtiğiniz akışı güncelleyin."
-
-#~ msgid "Feed address to follow"
-#~ msgstr "Takip edilecek akış adresi"
-
-#~ msgid "Feed address"
-#~ msgstr "Akış adresi"
-
-#~ msgid "Opens a dialog for entering a feed address."
-#~ msgstr "Akış adresi girmeniz için bir iletişim kutusu açar"
-
-#~ msgid "Select feed address from file"
-#~ msgstr "akış adresini içeren dosyayı seçin"
-
-#~ msgid "Unable to read feed address, feed can not be selected"
-#~ msgstr "Akış adresi okunamadı. Addres seçilemiyor"
-
-#~ msgid "Opens a dialog for selecting a file containing a feed address."
-#~ msgstr "Akış adresini içeren dosyayı seçmeniz için bir iletişim kutusu açar"
-
-#~ msgid "Feed address can not be saved"
-#~ msgstr "Akış adresi kaydedilemedi"
-
-#~ msgid ""
-#~ "Opens a dialog where you can enter a filename to which the current feed "
-#~ "address will be saved."
-#~ msgstr ""
-#~ "Takip etmekte olduğunuz akış adresini bir dosyaya kaydetmeniz için bir "
-#~ "iletişim kutusu açar"
-
-#~ msgid "Untitled feed"
-#~ msgstr "Başlıksız besleme"
-
-#~ msgid "Documentation folder not found for your language"
-#~ msgstr "Bu dilde dokümantasyon mevcut değil"
-
-#~ msgid ""
-#~ "Saves the address of the current feeds chanel, for loading it "
-#~ "automatically when you reload readFeeds plugin"
-#~ msgstr ""
-#~ "Guarda la dirección del actual canal de noticias, para seleccionarla "
-#~ "automáticamente al recargar el complemento readFeeds"
+#~ msgid "Uninstall incompatible add-on"
+#~ msgstr "Uyumsuz eklentiyi kaldırın"

@@ -1,16 +1,17 @@
 # Read Feeds #
 
 * Autores: Noelia Ruiz Martínez, Mesar Hameed
-* Compatibilidad con NVDA: de 2018.3 a 2019.1
+* Compatibilidad con NVDA: 2019.3 o posterior
 * Descargar [versión estable][1]
 * Descargar [versión de desarrollo][2]
+
 
 Este complemento proporciona una manera fácil de leer fuentes en formatos de
 RSS o Atom utilizando NVDA.  Los feeds no se actualizarán automáticamente.
 En adelante cuando mencionemos feeds, nos referiremos a los feeds RSS y
 ATOM.
 
-## Instalación o actualización: ##
+## Instalación o actualización ##
 
 Si has utilizado una versión anterior de este complemento, y hay una carpeta
 personalFeeds o RSS en la carpeta personal de configuración de NVDA, al
@@ -19,20 +20,21 @@ deseas actualizar o instalar.  Selecciona Actualizar para preservar tus
 feeds guardados y continuar utilizándolos en la nueva versión instalada
 dereadFeeds.
 
-## Órdenes: ##
+## Órdenes ##
 
 ### Menú Read Feeds ###
 
 Puedes acceder al submenú Read Feeds desde el menú NVDA, submenú
 herramientas, donde están disponibles las siguientes opciones:
 
-#### Feeds... ####
+#### Feeds ####
 
 Abre un diálogo con los siguientes controles:
 
 * Filtrar por: un cuadro de edición para buscar feeds guardados con
   anterioridad.
-* Una lista de los feeds guardados.
+* Una lista de los feeds guardados, que recibe el foco cuando se abre el
+  diálogo.
 * Lista de artículos: abre un diálogo que presenta la lista de artículos de
   tu feed actual. Selecciona el artículo que desees leer y pulsa Intro o el
   botón Abrir página web del artículo seleccionado para abrir la página
@@ -41,6 +43,11 @@ Abre un diálogo con los siguientes controles:
   seleccionado; desde este diálogo, podrás copiar esta información al
   portapapeles.
 * Abrir feed: abre el feed seleccionado en la aplicación predeterminada.
+* Abrir feed como HTML: abre el feed seleccionado en el navegador web
+  predeterminado. Podrás mostrar u ocultar fechas de publicación y botones
+  para copiar información sobre los artículos al portapapeles.
+* Copiar dirección del feed: abre un diálogo para confirmar si quieres
+  copiar la dirección del feed al portapapeles.
 * Nuevo: abre un diálogo con un cuadro de edición para introducir la
   dirección de un feed nuevo. Si la dirección es válida y el feed puede
   guardarse, su nombre, basado en el título del feed, aparecerá al fondo de
@@ -55,6 +62,8 @@ Abre un diálogo con los siguientes controles:
   carpeta que podría contener una copia de seguridad de las fuentes. Esto
   puede ser útil para explorar y eliminar fuentes que no deberían importarse
   cuando el complemento se actualice.
+* Preferencias: abre el diálogo de opciones de Read Feeds, también
+  disponible en el menú NVDA, Preferencias, Opciones, categoría Read Feeds.
 * Cerrar: cierra el diálogo Feeds.
 
 ##### Notas #####
@@ -65,21 +74,24 @@ Abre un diálogo con los siguientes controles:
 * El feed configurado como el predeterminado puede eliminarse. el feed
   addressFile se utilizará como el predeterminado cuando la configuración se
   reinicie, así no puede eliminarse.
+* El cuadro de edición Filtrar por se puede situar tras el botón Abrir
+  artículo desde el menú NVDA, Preferencias, Opciones, categoría Read Feeds,
+  o pulsando el botón Preferencias en el diálogo de feeds.
 
-####Copiar carpeta feeds... ####
+#### Copiar carpeta feeds ####
 
 Abre un diálogo para elegir una carpeta donde puedes guardar el directorio
 personalFeeds de tus feeds. Por omisión la carpeta seleccionada es el
 directorio de configuración de NVDA, el cual creará el directorio
 personalFeeds.
 
-#### Restaurar feeds... ####
+#### Restaurar feeds ####
 
 Abre un diálogo para seleccionar una carpeta que reemplaza tus feeds en la
 carpeta personalFeeds. Asegúrate de cargar una carpeta conteniendo URLs de
 feeds.
 
-### Órdenes de teclado: ###
+### Órdenes de teclado ###
 
 * Ctrl+Shift+NVDA+Espacio: anuncia la URL actual de los artículos. Pulsando
   dos veces abrirá la página web.
@@ -90,15 +102,45 @@ feeds.
 * Ctrl+Shift+NVDA+U: anuncia el título del feed anterior.
 * Ctrl+Shift+NVDA+O: anuncia el título del feed siguiente.
 
-## Notificaciones: ##
+## Notificaciones ##
 
 * Cuando el título o la URL se haya copiado.
 * Cuando no se pueda conectar/refrescar un feed, o la URL no se corresponda
   con un feed válido.
 * NVDA mostrará un mensaje de error si no fue posible respaldar o restaurar
-  la carpeta personalFeeds.
+  la carpeta personalFeeds o si no se puede crear un nuevo feed.
 * El título del diálogo de lista de artículos muestra el nombre del feed
   seleccionado y el número de elementos disponibles.
+
+## Cambios para 10.0 ##
+
+* Añadido un botón para abrir el feed seleccionado como HTML en el navegador
+  web predeterminado.
+* Si no se puede crear un nuevo feed, un diálogo de error lo notificará.
+* Mejorado el orden y la presentación de algunos artículos.
+* Se pueden soportar más feeds.
+* Cuando se abra el diálogo de feeds, la lista de feeds recibirá el foco en
+  lugar del cuadro de edición para filtrar.
+* Puedes elegir si el cuadro de búsqueda se sitúa tras la lista de feeds,
+  útil para poner el foco en la lista incluso al pasar desde otra ventana
+  sin cerrar el diálogo de feeds.
+* Añadido un botón para copiar la dirección del feed al portapapeles desde
+  el diálogo de feeds.
+
+## Cambios para 9.0 ##
+
+* Se requiere NVDA 2019.3 o posterior.
+
+## Cambios para 8.0 ##
+
+* Cuando se actualice el complemento, las fuentes guardadas en la versión
+  anterior del complemento se copiarán automáticamente a la nueva versión, a
+  menos que prefieras importar fuentes guardadas en la carpeta de
+  configuración principal de NVDA.
+* Al usar el diálogo para copiar fuentes, si la carpeta elegida no se llama
+  personalFeeds, se creará una subcarpeta con este nombre para evitar la
+  eliminación de directorios que contengan datos importantes, como
+  Documentos o Descargas.
 
 ## Cambios para 7.0 ##
 
@@ -140,7 +182,6 @@ feeds.
   tanto, es posible configurar diferentes feeds predeterminados en los
   perfiles de configuración.
 * Se requiere NVDA 2016.4.
-
 
 ## Cambios para 2.0 ##
 

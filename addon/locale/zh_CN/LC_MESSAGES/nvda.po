@@ -19,19 +19,11 @@ msgstr ""
 "X-Generator: Poedit 2.2.1\n"
 
 #. Translators: the label of a message box dialog.
-msgid ""
-"You have installed the ReadFeeds add-on, probably an old and incompatible "
-"version with this one. Do you want to uninstall the old version?"
-msgstr "您已经安装了一个旧的或者不匹配的老版本 ReadFeeds， 您希望卸载它吗？"
-
-#. Translators: the title of a message box dialog.
-msgid "Uninstall incompatible add-on"
-msgstr "正在卸载不匹配的插件"
-
-#. Translators: the label of a message box dialog.
+#, fuzzy
 msgid ""
 "Your configuration folder for NVDA contains files that seem to be derived "
-"from a previous version of this add-on. Do you want to update it?"
+"from a previous version of this add-on.\n"
+"\t\t\tDo you want to update it?"
 msgstr ""
 "由上一个版本的此插件生成的文件似乎已经被成功从您的 NVDA 配置文件夹中导出。您"
 "希望升级吗？"
@@ -62,12 +54,12 @@ msgstr "复制错误"
 msgid "Feeds restored"
 msgstr "恢复Feeds"
 
-#. Translators: The title of a dialog.
+#. Translators: Title of a dialog.
 #, python-brace-format
 msgid "Feeds: {defaultFeed} ({configProfile})"
 msgstr "Feeds源: {defaultFeed} ({configProfile})"
 
-#. Label of a dialog (message translated in NVDA core in different contexts).
+#. Translators: Label of a dialog (message translated in NVDA's core in different contexts).
 msgid "&Filter by:"
 msgstr "&过滤作者:"
 
@@ -78,6 +70,16 @@ msgstr "文章列表(&L)..."
 #. Translators: The label of a button to open a feed.
 msgid "&Open feed"
 msgstr "打开feed源(&O)"
+
+#. Translators: The label of a button to open a feed as HTML.
+#, fuzzy
+msgid "Open feed as &HTML"
+msgstr "打开feed源(&O)"
+
+#. Translators: The label of a button to copy the feed URL.
+#, fuzzy
+msgid "Cop&y feed address"
+msgstr "源地址"
 
 #. Translators: The label of a button to add a new feed.
 msgid "&New..."
@@ -99,7 +101,38 @@ msgstr "恢复默认设置(&E)"
 msgid "Open &folder containing a backup of feeds"
 msgstr "选择一个文件夹以保存当前Feeds源的备份"
 
-#. Translators: The label of a field to enter an address for a new feed.
+#. Translators: The label of a button to open the settings dialog for readFeeds.
+#, fuzzy
+msgid "&Preferences..."
+msgstr "恢复feeds源(&R)..."
+
+#. Translators: Message presented when a feed cannot be added.
+#, python-format
+msgid "Cannot add feed: %s"
+msgstr ""
+
+#. Translators: error message.
+#, fuzzy
+msgid "Error"
+msgstr "复制错误"
+
+#. Translators: the label of a message box dialog.
+#, fuzzy, python-brace-format
+msgid ""
+"Do you want to copy feed address to the clipboard\r\n"
+"\r\n"
+"{feedAddress}?"
+msgstr ""
+"%s \r\n"
+"\r\n"
+"要复制文章标题并保存到剪贴板吗？"
+
+#. Translators: the title of a message box dialog.
+#, fuzzy
+msgid "Copy feed address"
+msgstr "源地址"
+
+#. Translators: Label of a dialog.
 msgid "Address of a new feed:"
 msgstr "新Feed地址："
 
@@ -132,11 +165,8 @@ msgid "&About article..."
 msgstr "关于文章(&B)..."
 
 #. Translators: the label of a message box dialog.
-#, python-format
-msgid ""
-"%s\r\n"
-"\r\n"
-"Do you want to copy article title and link to the clipboard?"
+#, fuzzy, python-format
+msgid "%sDo you want to copy article title and link to the clipboard?"
 msgstr ""
 "%s \r\n"
 "\r\n"
@@ -178,6 +208,10 @@ msgstr "包含备份的目录："
 msgid "Select directory to restore"
 msgstr "选择要恢复的目录"
 
+#. Translators: label of a dialog.
+msgid "&Search edit box after feeds list"
+msgstr ""
+
 #. Translators: Presented when the current article does not have an associated title.
 msgid "Unable to locate article title."
 msgstr "不能定位文章标题。"
@@ -185,6 +219,18 @@ msgstr "不能定位文章标题。"
 #. Translators: Presented when the current article does not have an associated link.
 msgid "Unable to locate article link."
 msgstr "不能定位文章链接。"
+
+#. Translators: Label of a checkbox to choose if date should be presented for each feed.
+msgid "Show date"
+msgstr ""
+
+#. Translators: Label for a checkbox to show buttons for copying to clipboard.
+msgid "Show buttons to copy"
+msgstr ""
+
+#. Translators: Label for a button to copy to clipboard.
+msgid "Copy"
+msgstr ""
 
 #. Translators: the name of a submenu.
 msgid "&Read Feeds"
@@ -203,19 +249,24 @@ msgid "R&estore feeds..."
 msgstr "恢复feeds源(&R)..."
 
 #. Translators: message presented in input mode.
-#, python-format
-msgid "Activates the Feeds dialog of %s."
+#, fuzzy
+msgid "Activates the Feeds dialog of Read Feeds."
 msgstr "激活“Feeds”对话框%s."
 
 #. Translators: message presented in input mode.
-#, python-format
-msgid "Activates the Copy dialog of %s."
+#, fuzzy
+msgid "Activates the Copy dialog of Read Feeds."
 msgstr "激活“复制”对话框%s."
 
 #. Translators: message presented in input mode.
-#, python-format
-msgid "Activates the Restore dialog of %s."
+#, fuzzy
+msgid "Activates the Restore dialog of Read Feeds."
 msgstr "激活“恢复”对话框%s."
+
+#. Translators: message presented in input mode.
+#, python-format
+msgid "Shows the %s settings."
+msgstr ""
 
 #. Translators: message presented in input mode.
 msgid "Refreshes the current feed and announces the most recent article title."
@@ -257,6 +308,14 @@ msgstr "Read Feeds"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Add-on for using NVDA as a feed reader."
 msgstr "一个提供给 NVDA 的 RSS 阅读器插件。"
+
+#~ msgid ""
+#~ "You have installed the ReadFeeds add-on, probably an old and incompatible "
+#~ "version with this one. Do you want to uninstall the old version?"
+#~ msgstr "您已经安装了一个旧的或者不匹配的老版本 ReadFeeds， 您希望卸载它吗？"
+
+#~ msgid "Uninstall incompatible add-on"
+#~ msgstr "正在卸载不匹配的插件"
 
 #, fuzzy
 #~ msgid "Feeds"
@@ -302,9 +361,6 @@ msgstr "一个提供给 NVDA 的 RSS 阅读器插件。"
 
 #~ msgid "Feed address to follow"
 #~ msgstr "跟踪的源地址"
-
-#~ msgid "Feed address"
-#~ msgstr "源地址"
 
 #~ msgid "Selected %s"
 #~ msgstr "%s已选择"

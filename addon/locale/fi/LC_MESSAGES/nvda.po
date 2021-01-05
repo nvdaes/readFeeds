@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: readFeeds\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-11-16 13:26+0100\n"
-"PO-Revision-Date: 2019-03-29 13:49+0200\n"
-"Last-Translator: Jani Kinnunen <janikinnunen340@gmail.com>\n"
+"PO-Revision-Date: 2020-12-25 16:10+0200\n"
+"Last-Translator: Jani Kinnunen <jani.kinnunen@wippies.fi>\n"
 "Language-Team: Finnish <jani.kinnunen@wippies.fi>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
@@ -20,23 +20,13 @@ msgstr ""
 
 #. Translators: the label of a message box dialog.
 msgid ""
-"You have installed the ReadFeeds add-on, probably an old and incompatible "
-"version with this one. Do you want to uninstall the old version?"
-msgstr ""
-"Asennettuna on vanha Lue syötteet -lisäosa, joka ei ole yhteensopiva tämän "
-"version kanssa. Haluatko poistaa vanhan version?"
-
-#. Translators: the title of a message box dialog.
-msgid "Uninstall incompatible add-on"
-msgstr "Poista yhteensopimaton lisäosa"
-
-#. Translators: the label of a message box dialog.
-msgid ""
 "Your configuration folder for NVDA contains files that seem to be derived "
-"from a previous version of this add-on. Do you want to update it?"
+"from a previous version of this add-on.\n"
+"\t\t\tDo you want to update it?"
 msgstr ""
 "NVDA:n asetuskansiossa on tiedostoja, jotka ovat peräisin tämän lisäosan "
-"aiemmasta versiosta. Haluatko päivittää ne?"
+"aiemmasta versiosta.\n"
+"\t\t\tHaluatko päivittää ne?"
 
 #. Translators: the title of a message box dialog.
 msgid "Install or update add-on"
@@ -66,12 +56,12 @@ msgstr "Kopiointivirhe"
 msgid "Feeds restored"
 msgstr "Syötteet palautettu"
 
-#. Translators: The title of a dialog.
+#. Translators: Title of a dialog.
 #, python-brace-format
 msgid "Feeds: {defaultFeed} ({configProfile})"
 msgstr "Syötteet: {defaultFeed} ({configProfile})"
 
-#. Label of a dialog (message translated in NVDA core in different contexts).
+#. Translators: Label of a dialog (message translated in NVDA's core in different contexts).
 msgid "&Filter by:"
 msgstr "&Suodata:"
 
@@ -82,6 +72,14 @@ msgstr "&Artikkeliluettelo..."
 #. Translators: The label of a button to open a feed.
 msgid "&Open feed"
 msgstr "&Avaa syöte"
+
+#. Translators: The label of a button to open a feed as HTML.
+msgid "Open feed as &HTML"
+msgstr "Avaa syöte &HTML-muodossa"
+
+#. Translators: The label of a button to copy the feed URL.
+msgid "Cop&y feed address"
+msgstr "Kop&ioi syötteen osoite"
 
 #. Translators: The label of a button to add a new feed.
 msgid "&New..."
@@ -103,7 +101,35 @@ msgstr "A&seta oletukseksi"
 msgid "Open &folder containing a backup of feeds"
 msgstr "Avaa s&yötteiden varmuuskopiokansio"
 
-#. Translators: The label of a field to enter an address for a new feed.
+#. Translators: The label of a button to open the settings dialog for readFeeds.
+msgid "&Preferences..."
+msgstr "&Asetukset..."
+
+#. Translators: Message presented when a feed cannot be added.
+#, python-format
+msgid "Cannot add feed: %s"
+msgstr "Ei voi lisätä syötettä: %s"
+
+#. Translators: error message.
+msgid "Error"
+msgstr "Virhe"
+
+#. Translators: the label of a message box dialog.
+#, python-brace-format
+msgid ""
+"Do you want to copy feed address to the clipboard\r\n"
+"\r\n"
+"{feedAddress}?"
+msgstr ""
+"Haluatko kopioida syötteen osoitteen leikepöydälle?\r\n"
+"\r\n"
+"{feedAddress}"
+
+#. Translators: the title of a message box dialog.
+msgid "Copy feed address"
+msgstr "Kopioi syötteen osoite"
+
+#. Translators: Label of a dialog.
 msgid "Address of a new feed:"
 msgstr "Uuden syötteen osoite:"
 
@@ -137,14 +163,8 @@ msgstr "T&ietoa artikkelista..."
 
 #. Translators: the label of a message box dialog.
 #, python-format
-msgid ""
-"%s\r\n"
-"\r\n"
-"Do you want to copy article title and link to the clipboard?"
-msgstr ""
-"%s\r\n"
-"\r\n"
-"Kopioidaanko artikkelin otsikko ja linkki leikepöydälle?"
+msgid "%sDo you want to copy article title and link to the clipboard?"
+msgstr "%sHaluatko kopioida artikkelin otsikon ja linkin leikepöydälle?"
 
 #. Translators: the title of a message box dialog.
 msgid "Article information"
@@ -183,6 +203,10 @@ msgstr "Varmuuskopion sisältävä kansio:"
 msgid "Select directory to restore"
 msgstr "Valitse palautettava kansio"
 
+#. Translators: label of a dialog.
+msgid "&Search edit box after feeds list"
+msgstr "&Hakukenttä syöteluettelon jälkeen"
+
 #. Translators: Presented when the current article does not have an associated title.
 msgid "Unable to locate article title."
 msgstr "Artikkelin otsikkoa ei löydy."
@@ -190,6 +214,18 @@ msgstr "Artikkelin otsikkoa ei löydy."
 #. Translators: Presented when the current article does not have an associated link.
 msgid "Unable to locate article link."
 msgstr "Artikkelin linkkiä ei löydy."
+
+#. Translators: Label of a checkbox to choose if date should be presented for each feed.
+msgid "Show date"
+msgstr "Näytä päivämäärä"
+
+#. Translators: Label for a checkbox to show buttons for copying to clipboard.
+msgid "Show buttons to copy"
+msgstr "Näytä kopiointipainikkeet"
+
+#. Translators: Label for a button to copy to clipboard.
+msgid "Copy"
+msgstr "Kopioi"
 
 #. Translators: the name of a submenu.
 msgid "&Read Feeds"
@@ -208,19 +244,21 @@ msgid "R&estore feeds..."
 msgstr "P&alauta syötteet..."
 
 #. Translators: message presented in input mode.
-#, python-format
-msgid "Activates the Feeds dialog of %s."
-msgstr "Avaa %sin syötteiden valintaikkunan."
+msgid "Activates the Feeds dialog of Read Feeds."
+msgstr "Avaa Lue syötteet -lisäosan  Syötteet-valintaikkunan."
+
+#. Translators: message presented in input mode.
+msgid "Activates the Copy dialog of Read Feeds."
+msgstr "Avaa Lue syötteet -lisäosan Kopioi-valintaikkunan."
+
+#. Translators: message presented in input mode.
+msgid "Activates the Restore dialog of Read Feeds."
+msgstr "Avaa Lue syötteet -lisäosan Palauta-valintaikkunan."
 
 #. Translators: message presented in input mode.
 #, python-format
-msgid "Activates the Copy dialog of %s."
-msgstr "Avaa %sin kopiointivalintaikkunan."
-
-#. Translators: message presented in input mode.
-#, python-format
-msgid "Activates the Restore dialog of %s."
-msgstr "Avaa %sin palautusvalintaikkunan."
+msgid "Shows the %s settings."
+msgstr "Näyttää %s -lisäosan asetukset."
 
 #. Translators: message presented in input mode.
 msgid "Refreshes the current feed and announces the most recent article title."
@@ -265,6 +303,16 @@ msgstr "Lue syötteet"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Add-on for using NVDA as a feed reader."
 msgstr "Lisäosa, jolla NVDA:ta voidaan käyttää syötteenlukijana."
+
+#~ msgid ""
+#~ "You have installed the ReadFeeds add-on, probably an old and incompatible "
+#~ "version with this one. Do you want to uninstall the old version?"
+#~ msgstr ""
+#~ "Asennettuna on vanha Lue syötteet -lisäosa, joka ei ole yhteensopiva "
+#~ "tämän version kanssa. Haluatko poistaa vanhan version?"
+
+#~ msgid "Uninstall incompatible add-on"
+#~ msgstr "Poista yhteensopimaton lisäosa"
 
 #~ msgid "Feeds"
 #~ msgstr "Syötteet"

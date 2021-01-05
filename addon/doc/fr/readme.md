@@ -1,16 +1,17 @@
 # Read Feeds #
 
 * Auteurs : Noelia Ruiz Martínez, Mesar Hameed
-* Compatibilité NVDA: 2018.3 à 2019.1
+* NVDA compatibility: 2019.3 or later
 * Télécharger [version stable][1]
 * Télécharger [version de développement][2]
+
 
 Cette extension fournit un moyen simple de lire les flux aux formats Atom ou
 RSS à l'aide de NVDA. Les flux ne sont pas actualisés automatiquement.
 Ci-dessous lorsque nous mentionnons flux, nous voulons dire que les deux
 signifient flux RSS et ATOM.
 
-## Installation ou Mise à jour : ##
+## Installation or Update ##
 
 Si vous utilisiez une version antérieure de cette extension, il y a un
 dossier RSS ou personalFeeds dans votre dossier de configuration personnel
@@ -19,20 +20,20 @@ vous demandera si vous souhaitez mettre à jour ou installer.  Choisissez
 mise à jour pour préserver vos flux enregistrés et pour continuer à les
 utiliser dans la nouvelle version installée de readFeeds.
 
-## Commandes : ##
+## Commands ##
 
 ### Menu Read Feeds ###
 
 Vous pouvez accéder au sous-menu Read Feeds depuis le menu NVDA, sous-menu
 Outils, où les suivantes  options du menu sont disponibles :
 
-#### Flux... ####
+#### Feeds ####
 
 Ouvre une boîte de dialogue avec les contrôles suivants :
 
 * Filtrer par : Une zone d'édition pour rechercher des flux précédemment
   enregistrés.
-* Une liste des flux enregistrés.
+* A list of the saved feeds, focused when the dialog is opened.
 * Liste des articles : Ouvre une boîte de dialogue qui présente la liste des
   articles de vvos flux actuel. Sélectionnez l'article que vous souhaitez
   lire et appuyer sur Entrée ou Ouvrir la page Web du bouton de l'article
@@ -42,6 +43,11 @@ Ouvre une boîte de dialogue avec les contrôles suivants :
   dans cette boîte de dialogue, vous serez en mesure de copier ces
   informations dans le presse-papiers.
 * Ouvrir le flux : Ouvre le flux sélectionné dans l'application par défaut.
+* Open feed as HTML: Opens the selected feed in the default web browser. You
+  will be able to show or hide publication dates and buttons to copy
+  information about articles to clipboard.
+* Copy feed address: Opens a dialog to confirm if you want to copy the feed
+  address to clipboard.
 * Nouveau : Ouvre une boîte de dialogue avec une zone d'édition pour entrer
   l'adresse d'un nouveau flux. Si l'adresse est valide et que le flux peut
   être enregistré, son nom, basé sur le titre du flux, apparaît au bas de la
@@ -55,6 +61,8 @@ Ouvre une boîte de dialogue avec les contrôles suivants :
 * Open folder containing a backup of feeds: Opens a folder which may contain
   a backup of feeds. This can be useful to explore and delete feeds which
   shouldn't be imported when the add-on is updated.
+* Preferences: Opens the settings dialog for readFeeds, also available in
+  NVDA's menu, Preferences, settings, readFeeds category.
 * Fermer : Ferme la boîte de dialogue Flux.
 
 ##### Notes #####
@@ -64,21 +72,24 @@ Ouvre une boîte de dialogue avec les contrôles suivants :
 * Le flux défini par défaut ne peut pas être supprimé. Le flux addressFile
   sera utilisé comme valeur par défaut lors de la réinitialisation de la
   configuration, donc il ne peut pas être supprimé.
+* The Filter by edit box can be placed after the Open article button from
+  NVDA's menu, Preferences, Settings, Read feeds category, or pressing the
+  Preferences button of the Feeds dialog.
 
-####Copier le dossier des flux... ####
+#### Copy feeds folder ####
 
 Ouvre une boîte de dialogue pour choisir un dossier dans lequel vous pouvez
 enregistrer le dossier personalFeeds de vos flux. Par défaut, le dossier
 sélectionné est dans la configuration de NVDA, qui créera le répertoire
 personalFeeds.
 
-#### Restaurer les flux... ####
+#### Restore feeds ####
 
 Ouvre une boîte de dialogue pour sélectionner un dossier qui remplace vos
 flux dans le dossier personalFeeds. Assurez-vous de charger un dossier
 contenant des URL de flux.
 
-### Commandes clavier : ###
+### Keyboard commands ###
 
 * Ctrl+Maj+NVDA+Espace : Annonce l'URL de l'article actuel. En appuyant deux
   fois ouvrira la page web.
@@ -89,15 +100,44 @@ contenant des URL de flux.
 * Ctrl+Maj+NVDA+U : Annonce le titre du flux précédent.
 * Ctrl+Maj+NVDA+O : Annonce le titre du flux suivant.
 
-## Notifications : ##
+## Notifications ##
 
 * Lorsque le titre ou l'URL ont été copiés.
 * Lorsqu'il est Impossible de se connecter/actualiser un flux, ou l'URL ne
   correspond pas à un flux valide.
-* NVDA affichera un message d'erreur s'Il n'était pas possible de
-  sauvegarder ou de restaurer le dossier personalFeeds.
+* NVDA will display an error message if it was not possible to backup or
+  restore the personalFeeds folder, and if a new feed cannot be created.
 * La boîte de dialogue affiche Le titre de la Liste de l'article le nom de
   flux sélectionné et le nombre d'éléments disponibles.
+
+## Changes for 10.0 ##
+
+* Added a button to open the selected feed as HTML in the default web
+  browser.
+* If a new feed cannot be created, this will be notified in an error dialog.
+* Improved order and presentation of some articles.
+* More feeds may be supported.
+* When the feeds dialog is opened, the list of feeds will be focused instead
+  of the search edit box.
+* You can choose if the search edit box is placed after the list of feeds,
+  useful to focus the list even when switching from another window without
+  closing the Feeds dialog.
+* Added a button to copy the feed address to clipboard from the feeds
+  dialog.
+
+## Changes for 9.0 ##
+
+* Requires NVDA 2019.3 or later.
+
+## Changes for 8.0 ##
+
+* When the add-on is updated, feeds saved in the previous version of the
+  add-on will be automatically copied to the new version, unless you prefer
+  to import feeds saved in the main configuration folder of NVDA.
+* When using the dialog to copy feeds, if the chosen folder is not named
+  personalFeeds, a subfolder with this name will be created to prevent the
+  deletion of directories containing important data, such as Documents or
+  Downloads.
 
 ## Changes for 7.0 ##
 
@@ -141,7 +181,6 @@ contenant des URL de flux.
   conséquent, il est possible de définir des flux différents par défaut dans
   les profils de configuration.
 * Nécessite NVDA 2016.4.
-
 
 ## Changements pour la version 2.0 ##
 
