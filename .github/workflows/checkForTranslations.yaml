@@ -10,17 +10,25 @@ jobs:
   update-translations
     runs-on: windows-latest
     steps:
-    - name: Checkout
+    - name: Checkout main
       uses: actions/checkout@v2
+      with:
+        path: main
+
+    - name: Checkout org
+      uses: actions/checkout@v2
+      with:
+        path: orgRepo
+        fetch-depth: 0
     - name: Update translations
       run: |
-        git remote add org https://github.com/nvdaaddons/readFeeds
-        git fetch org
-        git checkout -b stable
-        git branch -u org/stable
-        git pull
-        git checkout master
-        git merge stable
+        git remote add org orgRepo
+        cd main
+
+        git merge org/stable
+
+
+
         git config user.name github-actions
         git config user.email github-actions@github.com
         git push
