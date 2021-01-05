@@ -16,6 +16,7 @@ jobs:
     - name: Checkout org
       uses: actions/checkout@v2
       with:
+        repository: nvdaaddons/readFeeds
         path: orgRepo
         ref: stable
     - name: Merge stable
