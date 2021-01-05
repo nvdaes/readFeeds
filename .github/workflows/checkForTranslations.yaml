@@ -21,4 +21,7 @@ jobs:
     - name: Merge stable
       run: |
         cd main
-        git merge ../orgRepo/stable 
+        git remote add org ../orgRepo
+        git fetch org
+        git merge org/stable
+        
