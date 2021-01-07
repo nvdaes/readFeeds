@@ -5,336 +5,329 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 'placeMarkers' '7.0'\n"
-"Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
-"POT-Creation-Date: 2013-06-05 23:05+0200\n"
-"PO-Revision-Date: 2019-08-16 12:57+0200\n"
+"Project-Id-Version: readFeeds 1.0-dev\n"
+"Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
+"POT-Creation-Date: 2013-11-16 13:26+0100\n"
+"PO-Revision-Date: 2020-12-25 13:26+0100\n"
 "Last-Translator: Iván Novegil Cancelas <ivan.novegil.cancelas@gmail.com>\n"
-"Language-Team: \n"
+"Language-Team: galician NVDA add-ons translation team <oprisniki@gmail.com>\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.3\n"
+"X-Generator: Poedit 2.4.2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#. Translators: label of a dialog presented when installing this addon and placeMarkersBackup is found.
+#. Translators: the label of a message box dialog.
 msgid ""
 "Your configuration folder for NVDA contains files that seem to be derived "
-"from a previous version of this add-on. Do you want to update it?"
+"from a previous version of this add-on.\n"
+"\t\t\tDo you want to update it?"
 msgstr ""
-"O cartafol de configuración para NVDA contén ficheiros que semellan "
-"derivarse dende unha versión anterior deste complemento. ¿queres actualizalo?"
+"A carpeta de configuración do NVDA contén ficheiros que parecen derivar "
+"dunha versión anterior de este complemento.\n"
+"\t\t\tQueres actualizala?"
 
-#. Translators: title of a dialog presented when installing this addon and placeMarkersBackup is found.
+#. Translators: the title of a message box dialog.
 msgid "Install or update add-on"
 msgstr "Instalar ou actualizar complemento"
 
-#. Translators: message presented when a string of text has been copied to the clipboard.
-#, python-format
-msgid "%s copied to clipboard"
-msgstr "%s copiado ó portapapeis"
+#. Translators: message presented when feeds cannot be reported.
+msgid ""
+"Unable to refresh feed. Check your Internet conectivity or that the "
+"specified feed address is correct."
+msgstr ""
+"No é posible actualizar o feed. Comproba a túa conectividade a Internet ou "
+"que o enderezo de feeds especificado é correcto."
 
-#. Translators: The title of the Specific Search dialog.
-msgid "Specific search"
-msgstr "Procura Específica"
+#. Translators: Message presented when feeds have been copied.
+msgid "Feeds copied"
+msgstr "Feeds copiados"
 
-#. Translators: The label of a combo box in the Specific Search dialog.
-msgid "Sa&ved texts"
-msgstr "Textos &gardados:"
-
-#. Translators: A label for a chekbox in the Specific search dialog.
-msgid "&Remove from history"
-msgstr "&Borrar do historial"
-
-#. Translators: The label of an edit box in the Specific Search dialog.
-msgid "&Text to search:"
-msgstr "&Texto a buscar:"
-
-#. Translators: A label for a chekbox in the Specific search dialog.
-msgid "&Add to history"
-msgstr "&Engadir ao historial"
-
-#. Translators: Label for a set of radio buttons in the Specific search dialog.
-msgid "Action on s&earch"
-msgstr "&Acción na procura"
-
-#. Translators: An action in the Search group of the Specific search dialog.
-msgid "Search &next"
-msgstr "Procurar &seguinte"
-
-#. Translators: An action in the Search group of the Specific search dialog.
-msgid "Search &previous"
-msgstr "Procurar &anterior"
-
-#. Translators: An action in the Search group of the Specific search dialog.
-msgid "&Don't search"
-msgstr "&Non procurar"
-
-#. Translators: Message presented when place markers have been copied.
-msgid "Place markers copied"
-msgstr "Marcadores copiados"
-
-#. Translators: label of error dialog shown when cannot copy placeMarkers folder.
+#. Translators: label of error dialog shown when cannot copy feeds folder.
 msgid "Folder not copied"
 msgstr "Cartafol non copiado"
 
-#. Translators: title of error dialog shown when cannot copy placeMarkers folder.
+#. Translators: title of error dialog shown when cannot copy feeds folder.
 msgid "Copy Error"
-msgstr "Erro da Copia"
+msgstr "Erro da copia"
 
-#. Translators: Message presented when place markers have been restored.
-msgid "Place markers restored"
-msgstr "Marcadores restaurados"
+#. Translators: Message presented when feeds have been restored.
+msgid "Feeds restored"
+msgstr "Feeds restaurados"
 
-#. Translators: The title of the Notes dialog.
-msgid "Notes"
-msgstr "Notas"
+#. Translators: Title of a dialog.
+#, python-brace-format
+msgid "Feeds: {defaultFeed} ({configProfile})"
+msgstr "Feeds: {defaultFeed} ({configProfile})"
 
-#. Translators: The label of a list box in the Notes dialog.
-msgid "&Bookmarks"
-msgstr "&Marcas"
+#. Translators: Label of a dialog (message translated in NVDA's core in different contexts).
+msgid "&Filter by:"
+msgstr "&Filtrar por:"
 
-#. Translators: The label of an edit box in the Notes dialog.
-msgid "Not&e:"
-msgstr "Not&a:"
+#. Translators: The label of a button to open the list of articles of a feed.
+msgid "List of &articles..."
+msgstr "Lista de &artigos..."
 
-#. Translators: The label for a button in the Notes dialog.
-msgid "&Save note"
-msgstr "&Gardar nota"
+#. Translators: The label of a button to open a feed.
+msgid "&Open feed"
+msgstr "&Abrir feed"
 
-#. Translators: The label for a button in the Notes dialog.
+#. Translators: The label of a button to open a feed as HTML.
+msgid "Open feed as &HTML"
+msgstr "Abrir feed como &HTML"
+
+#. Translators: The label of a button to copy the feed URL.
+msgid "Cop&y feed address"
+msgstr "&Copiar enderezo do feed"
+
+#. Translators: The label of a button to add a new feed.
+msgid "&New..."
+msgstr "&Novo..."
+
+#. Translators: The label of a button to rename a feed.
+msgid "&Rename..."
+msgstr "&Renomear..."
+
+#. Translators: The label of a button to delete a feed.
 msgid "&Delete..."
 msgstr "&Borrar..."
 
-#. Translators: The confirmation prompt displayed when the user requests to delete a bookmark.
+#. Translators: The label of a button to set a feed as default.
+msgid "S&et default"
+msgstr "&Configurar predeterminado"
+
+#. Translators: The label of a button to open a folder containing a backup of feeds.
+msgid "Open &folder containing a backup of feeds"
+msgstr "Abrir &cartafol que contén unha copia de seguridade das fontes"
+
+#. Translators: The label of a button to open the settings dialog for readFeeds.
+msgid "&Preferences..."
+msgstr "&Opcións..."
+
+#. Translators: Message presented when a feed cannot be added.
+#, python-format
+msgid "Cannot add feed: %s"
+msgstr "Non se puido añadir o feed: %s"
+
+#. Translators: error message.
+msgid "Error"
+msgstr "Erro"
+
+#. Translators: the label of a message box dialog.
+#, python-brace-format
 msgid ""
-"This bookmark will be permanently deleted. This action cannot be undone."
-msgstr "Esta marca borrarase permanentemente. Esta ación non pode desfacerse."
+"Do you want to copy feed address to the clipboard\r\n"
+"\r\n"
+"{feedAddress}?"
+msgstr ""
+"queres copiar o enderezo do feed ao portapapeis\r\n"
+"\r\n"
+"{feedAddress}?"
 
-#. Translators: The message presented when all bookmarks have been deleted from the Notes dialog.
-#. Translators: message presented when the current document doesn't contain bookmarks.
-msgid "No bookmarks"
-msgstr "Non hai marcas"
+#. Translators: the title of a message box dialog.
+msgid "Copy feed address"
+msgstr "Copiar enderezo do feed"
 
-#. Translators: The title of the warning dialog when all bookmarks have been deleted.
-msgid "Bookmarks deleted"
-msgstr "Marcas borradas"
+#. Translators: Label of a dialog.
+msgid "Address of a new feed:"
+msgstr "Enderezo dun feed novo:"
+
+#. Translators: The title of a dialog to create a new feed.
+msgid "New feed"
+msgstr "Feed novo"
+
+#. Translators: The confirmation prompt displayed when the user requests to delete a feed.
+msgid "Are you sure you want to delete this feed? This cannot be undone."
+msgstr "¿Estás seguro de querer borrar este feed? Esto non se pode desfacer."
+
+#. Translators: The label of a field to enter a new name for a feed.
+msgid "New name:"
+msgstr "Nome novo:"
+
+#. Translators: The title of a dialog to rename a feed.
+msgid "Rename feed"
+msgstr "Renomear feed"
+
+#. Translators: The label of the articles list in the articles dialog.
+msgid "List of articles"
+msgstr "Listaxe de artigos"
+
+#. Translators: The label of a button to open the selected article of a feed.
+msgid "Open &web page of selected article."
+msgstr "Abrir a páxina &web do artigo seleccionado."
+
+#. Translators: The label of a button to show information of a feed article.
+msgid "&About article..."
+msgstr "&Acerca do artigo..."
+
+#. Translators: the label of a message box dialog.
+#, python-format
+msgid "%sDo you want to copy article title and link to the clipboard?"
+msgstr "%sQueres copiar o título do artigo e a liga ao portapapeis?"
+
+#. Translators: the title of a message box dialog.
+msgid "Article information"
+msgstr "Información do artigo"
 
 #. Translators: The title of the Copy dialog.
-msgid "Copy place markers"
-msgstr "Copiar marcadores"
+msgid "Copy feeds"
+msgstr "Copiar feeds"
 
 #. Translators: An informational message displayed in the Copy dialog.
-msgid "Select a folder to save a backup of your current place markers."
+msgid "Select a folder to save a backup of your current feeds"
 msgstr ""
-"Seleciona un cartafol para gardar una copia de seguridade das actuáis marcas."
+"Seleciona un cartafol para gardar unha copia de seguridade dos feeds actuais"
 
 #. Translators: The label of a grouping containing controls to select the destination directory in the Copy dialog.
 msgid "directory for backup:"
 msgstr "directorio para copia de seguridade:"
 
-#. Translators: The title of the dialog presented when browsing for the destination directory when copying place markers.
+#. Translators: The title of the dialog presented when browsing for the destination directory when copying feeds.
 msgid "Select directory to copy"
-msgstr "Seleciona o directorio para copiar"
+msgstr "Selecionar directorio a copiar"
 
 #. Translators: The title of the Restore dialog.
-msgid "Restore place markers"
-msgstr "Restaurar marcadores"
+msgid "Restore feeds"
+msgstr "Restaurar feeds"
 
 #. Translators: An informational message displayed in the Restore dialog.
-msgid ""
-"Select a folder to restore a backup of your previous copied place markers."
+msgid "Select a folder to restore a backup of your previous copied feeds"
 msgstr ""
-"Seleciona un cartafol para restaurar una copia de seguridade das túas marcas "
-"copiadas anteriormente."
+"Seleciona un cartafol para restaurar unha copia de seguridade do teu feed "
+"copiado con anterioridade"
 
 #. Translators: The label of a grouping containing controls to select the destination directory in the Restore dialog.
 msgid "directory containing backup:"
-msgstr "directorio que contén a copia de seguridade:"
+msgstr "directorio que contén copias de seguridade:"
 
-#. Translators: The title of the dialog presented when browsing for the destination directory when restoring place markers.
+#. Translators: The title of the dialog presented when browsing for the destination directory when restoring feeds.
 msgid "Select directory to restore"
-msgstr "Selecciona directorio a restaurar"
+msgstr "Selecionar directorio a restaurar"
 
-#. Translators: the name of addon submenu.
-msgid "P&lace markers"
-msgstr "P&lace markers"
+#. Translators: label of a dialog.
+msgid "&Search edit box after feeds list"
+msgstr "Caixa de edición de &busca despois da listaxe de feeds"
 
-#. Translators: the tooltip text for addon submenu.
-msgid "Bookmarks and Search menu"
-msgstr "Menú Marcas e Buscar"
+#. Translators: Presented when the current article does not have an associated title.
+msgid "Unable to locate article title."
+msgstr "Non se atopa o título do artigo."
 
-#. Translators: the name for an item of addon submenu.
-msgid "&Specific search folder"
-msgstr "Cartafol Busca &Específica"
+#. Translators: Presented when the current article does not have an associated link.
+msgid "Unable to locate article link."
+msgstr "Non se atopa a liga do artigo."
 
-#. Translators: the tooltip text for an item of addon submenu.
-msgid "Opens the specific search folder"
-msgstr "Abre o cartafol busca específica"
+#. Translators: Label of a checkbox to choose if date should be presented for each feed.
+msgid "Show date"
+msgstr "Amosar data"
 
-#. Translators: the name for an item of addon submenu.
-msgid "&Bookmarks folder"
-msgstr "Cartafol &Marcas"
+#. Translators: Label for a checkbox to show buttons for copying to clipboard.
+msgid "Show buttons to copy"
+msgstr "Amosar botóns para copiar"
 
-#. Translators: the tooltip text for an item of addon submenu.
-msgid "Opens the bookmarks folder"
-msgstr "Abre o cartafol marcas"
+#. Translators: Label for a button to copy to clipboard.
+msgid "Copy"
+msgstr "Copiar"
 
-#. Translators: the name for an item of addon submenu.
-msgid "&Copy placeMarkers folder..."
-msgstr "&Copiar cartafol marcas..."
+#. Translators: the name of a submenu.
+msgid "&Read Feeds"
+msgstr "&Read Feeds"
 
-#. Translators: the tooltip text for an item of addon submenu.
-msgid "Backup of place markers"
-msgstr "Copia de seguridade de marcas"
+#. Translators: the name of a menu item.
+msgid "&Feeds..."
+msgstr "&Feeds..."
 
-#. Translators: the name for an item of addon submenu.
-msgid "R&estore place markers..."
-msgstr "R&estaurar marcas..."
+#. Translators: the name of a menu item.
+msgid "&Copy feeds folder..."
+msgstr "&Copiar cartafol de feeds..."
 
-#. Translators: the tooltip text for an item of addon submenu.
-msgid "Restore previously saved place markers"
-msgstr "Restaurar marcas gardadas anteriormente"
+#. Translators: the name of a menu item.
+msgid "R&estore feeds..."
+msgstr "R&estaurar feeds..."
 
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid "Opens the specific search folder."
-msgstr "Abre o cartafol procura específica"
+#. Translators: message presented in input mode.
+msgid "Activates the Feeds dialog of Read Feeds."
+msgstr "Activa o diálogo Feeds de Read Feeds."
 
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid "Opens the bookmarks folder."
-msgstr "Abre o cartafol marcadores"
+#. Translators: message presented in input mode.
+msgid "Activates the Copy dialog of Read Feeds."
+msgstr "Activa o diálogo Copiar de Read Feeds."
 
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
+#. Translators: message presented in input mode.
+msgid "Activates the Restore dialog of Read Feeds."
+msgstr "Activa o diálogo Restaurar de Read Feeds."
+
+#. Translators: message presented in input mode.
 #, python-format
-msgid "Activates the Copy dialog of %s."
-msgstr "Activa o diálogo Copiar de %s."
+msgid "Shows the %s settings."
+msgstr "Amosa as opcións de %s."
 
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-#, python-format
-msgid "Activates the Restore dialog of %s."
-msgstr "Activa o diálogo Restaurar de %s."
+#. Translators: message presented in input mode.
+msgid "Refreshes the current feed and announces the most recent article title."
+msgstr "Actualiza o feed actual e anuncia o título do artigo máis recente."
 
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
+#. Translators: message presented in input mode.
 msgid ""
-"finds a text string from the current cursor position for a specific document."
+"Announces the title of the current article. Pressed two times, copies title "
+"and related link to the clipboard."
 msgstr ""
-"atopa unha secuencia de texto dende a posición actual do cursor dun "
-"documento específico."
+"Anuncia o título do artigo actual. Premedo dúas veces, copia o título e a "
+"liga relacionada ó portapapeis."
 
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid ""
-"finds the next occurrence of the last text searched for any specific "
-"document."
+#. Translators: message presented when the information about an article of a feed is copied to the clipboard.
+#, python-format
+msgid "Copied to clipboard %s"
+msgstr "%s copiado ó portapapeis"
+
+#. Translators: message presented in input mode.
+msgid "Announces the title of the next article."
+msgstr "Anuncia o título do artigo seguinte."
+
+#. Translators: message presented in input mode.
+msgid "Announces the title of the previous article."
+msgstr "Anuncia o título do artigo anterior."
+
+#. Translators: message presented in input mode.
+msgid "Announces article link, when pressed two times, opens related web page."
 msgstr ""
-"atopar a próxima ocorrencia do último texto buscado en calquera documento "
-"específico."
+"Anuncia a liga do artigo, cando se preme dúas veces, abre a Páxina web "
+"relacionada."
 
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid ""
-"finds the previous occurrence of the last text searched for any specific "
-"document."
-msgstr ""
-"atopar a ocorrencia anterior do último texto buscado en calquera documento "
-"específico."
-
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid "Show the Notes dialog for a specific document."
-msgstr "Amosa o diálogo Notas para un documento específico."
-
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid "Saves the current position as a bookmark."
-msgstr "Garda a posición actual como unha marca."
-
-#. Translators: message presented when a position is saved as a bookmark.
-#, python-format
-msgid "Saved position at character %d"
-msgstr "Posición gardada: carácter %d"
-
-#. Translators: message presented when a bookmark cannot be saved.
-msgid "Cannot save bookmark"
-msgstr "Non se poido gardar a marca"
-
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid "Deletes the current bookmark."
-msgstr "Elimina a marca actual."
-
-#. Translators: message presented when the current document has bookmarks, but none is selected.
-msgid "No bookmark selected"
-msgstr "Non hai marca seleccionada"
-
-#. Translators: message presented when a bookmark is deleted.
-msgid "Bookmark deleted"
-msgstr "Marca eliminada"
-
-#. Translators: message presented when cannot delete a bookmark.
-msgid "Cannot delete bookmark"
-msgstr "Non se pode eliminar a marca"
-
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid "Moves to the next bookmark."
-msgstr "Móvese á seguinte marca."
-
-#. Translators: message presented when trying to select a bookmark, but none is found.
-msgid "No bookmarks found"
-msgstr "Non se atoparon marcas"
-
-#. Translators: message presented when a bookmark is selected.
-#, python-format
-msgid "Position: character %d"
-msgstr "Posición: carácter %d"
-
-#. Translators: message presented when the next bookmark is not found.
-msgid "Next bookmark not found"
-msgstr "Non se atopou a seguinte marca"
-
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid "Moves to the previous bookmark."
-msgstr "Móvese á  marca anterior."
-
-#. Translators: message presented when the previous bookmark is not found.
-msgid "Previous bookmark not found"
-msgstr "Non se atopou a marca anterior"
-
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid "Copies the name of the current file for place markers to the clipboard."
-msgstr "Copia ó portapapeis o nome do ficheiro actual para marcas."
-
-#. Translators: message presented when cannot copy the file name corresponding to place markers.
-msgid "Cannot copy file name for place markers"
-msgstr "Non se puido copiar o nome de ficheiro para marcas"
-
-#. Translators: message presented when file name for place markers is copied to clipboard.
-msgid "Place markers file name copied to clipboard"
-msgstr "Nome do ficheiro de marcas copiado ó portapapeis"
-
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid "Saves the current position as a temporary bookmark."
-msgstr "Garda a posición actual coma unha marca temporal."
-
-#. Translators: Message presented when a temporary bookmark is saved.
-#, python-format
-msgid "Saved temporary bookmark at position %d"
-msgstr "A marca gardouse temporalmente na posición %d"
-
-#. Translators: Message presented in input help mode.
-msgid "Moves to the temporary bookmark for the current document."
-msgstr "Móvese cara a marca temporal para o documento actual."
+#. Translators: message presented in input mode.
+msgid "Copies title and related link of the current article to the clipboard."
+msgstr "Copia o título e a liga relacionada do artigo actual ao portapapeis."
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
-msgid "Place markers"
-msgstr "Place markers"
+msgid "Read Feeds"
+msgstr "Read Feeds"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
-msgid "Add-on for setting place markers on specific virtual documents"
-msgstr "Complemento para fixar marcas en documentos virtuais específicos"
+msgid "Add-on for using NVDA as a feed reader."
+msgstr "Complemento para o uso do NVDA como un lector de feeds."
 
-#~ msgid "Bookmark cannot be saved"
-#~ msgstr "A marca non poido ser gardada"
+#~ msgid ""
+#~ "You have installed the ReadFeeds add-on, probably an old and incompatible "
+#~ "version with this one. Do you want to uninstall the old version?"
+#~ msgstr ""
+#~ "instalaches o complemento ReadFeeds, probablemente unha versión vella e "
+#~ "incompatible con éste. ¿Queres desinstalar a versión anterior?"
 
-#~ msgid "Bookmark cannot be deleted"
-#~ msgstr "A marca non pode ser eliminada"
+#~ msgid "Uninstall incompatible add-on"
+#~ msgstr "Desinstalando complemento incompatible"
 
-#~ msgid "Cannot find any bookmarks"
-#~ msgstr "Non se pode atopar ningún marcador"
+#~ msgid "Feeds"
+#~ msgstr "Feeds"
+
+#~ msgid "Manage feeds."
+#~ msgstr "Administrar feeds."
+
+#~ msgid "View and manage feeds"
+#~ msgstr "Ver e xestionar feeds"
+
+#~ msgid "Backup of feeds"
+#~ msgstr "Copia de seguridade de feeds"
+
+#~ msgid "Restore previously saved feeds"
+#~ msgstr "Restaura os feeds previamente gardados"

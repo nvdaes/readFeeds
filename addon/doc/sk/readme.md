@@ -1,154 +1,187 @@
-# Záložky #
-* Autori): Noelia, Chris.
+# RSS Čítačka #
+
+* Autori: Noelia Ruiz Martínez, Mesar Hameed
 * Funguje s NVDA od verzie 2019.3.
-* Stiahnuť [Stabilnú verzia][1]
-* Stiahnuť [Vývojovú verzia][2]
-
-Doplnok dokáže uložiť reťazec pre vyhľadávanie, alebo konkrétne miesto v
-dokumente ako záložku. Funguje na webových stránkach a dokumentoch v režime
-prehliadania. Funguje tiež vo viacriadkových editačných poliach. Ak sa nedá
-aktualizovať systémový kurzor, reťazec je skopírovaný do schránky pre
-hľadanie cez iné nástroje. Záložky a reťazce hľadania sú uložené v
-súboroch. Názvy súborov sú odvodené od cesty, názvu a URL dokumentu.
-
-## Klávesové skratky: ##
-
-*	ctrl+shift+NVDA+f: Otvorí dialóg hľadania a zobrazí naposledy hľadané
-  reťazce. Zo zoznamu môžete vybrať reťazce, ktoré ste už hľadali. Takisto
-  môžete vybraté reťazce odstrániťz histórie začiarknutím príslušného
-  políčka. Takisto môžete určiť, či aktuálny reťazec hľadania chcete uložiť
-  na neskoršie použitie. V tomto okne môžete tiež určiť smer hľadania
-  (hľadať predchádzajúce, hľadať nasledujúce), prípadne nehľadať
-  vôbec. Takisto môžete začiarknuť rozlišovanie malých a veľkých
-  písmen. Hľadanie spustíte tlačidlom OK.
-*	ctrl+shift+NVDA+k: Uloží aktuálne miesto ako záložku. Ak chcete záložku
-  pomenovať, vyberte pred stlačením skratky nejaký text, ktorý sa použije
-  ako názov.
-*	ctrl+shift+NVDA+delete: Odstráni záložku pod kurzorom.
-*	Nvda+k: Presunie kurzor na nasledujúcu záložku.
-*	NVDA+shift+k: Presunie kurzor na predchádzajúcu záložku.
-*	Nedefinované: zobrazí v režime prehliadania názov súboru so záložkami pre
-  aktuálny dokument.
-*	alt+NVDA+k: Otvorí dialóg s uloženými záložkami pre aktuálny dokument. Tu
-  môžete k záložkám priradiť poznámky. Tlačidlom vymazať záložku odstránite
-  vybratú záložku. Tlačidlom OK presuniete kurzor na vybratú záložku.
-*	Nedefinované: Uloží pozíciu kurzora ako dočasnú záložku.
-*	Nedefinované: Presunie kurzor na dočasnú záložku.
-*	Nedefinované: Nájde nasledujúci výskyt posledného hľadaného reťazca v
-  dokumente.
-*	Nedefinované: Nájde predchádzajúci výskyt posledného hľadaného reťazca v
-  dokumente.
+* Stiahnuť [stabilnú verzia][1]
+* Stiahnúť [Vývojovú verziu ][2]
 
 
-## Podmenu záložky (nvda+n) ##
+Poskytuje jednoduchý spôsob čítania kanálov vo formátoch Atom alebo RSS
+pomocou NVDA. Kanály sa neobnovia automaticky. Nižšie, keď spomíname
+informačné kanály, máme na mysli informačné kanály RSS aj ATOM.
 
-Podmenu záložky nájdete v menu možnosti NVDA a obsahuje tieto položky:
+## Installation or Update ##
 
-*	Priečinok s reťazcami hľadania: Otvorí priečinok so súbormi, v ktorých sú
-  uložené reťazce pre hľadanie.
-*	priečinok so záložkami: otvorí priečinok v ktorom sú uložené súbory so
-  záložkami.
-*	Zálohovať záložky: skopíruje priečinok so záložkami na určené miesto.
-*	Obnoviť záložky: Obnoví záložky z uloženého priečinka.
+Ak ste používali predchádzajúcu verziu tohto doplnku a v priečinku s
+nastaveniami NVDA sa nachádza priečinok RSS alebo personalFeeds, pri
+inštalácii aktuálnej verzie sa zobrazí dialógové okno s otázkou, či chcete
+aktualizovať alebo nainštalovať. Vyberte aktualizáciu, aby ste zachovali
+uložené kanály a pokračovali v ich používaní v novej nainštalovanej verzii
+doplnku.
 
-Poznámka: záložky fungujú na základe počtu znakov. Na dinamických stránkach
-je lepšie použiť reťazce hľadania.
+## Commands ##
 
-## Zmeny vo verzii 14.0 ##
-*	Namiesto kopírovania názvu súboru do schránky sa teraz názov zobrazí v
-  režime prehliadania. Funkcia nemá priradenú klávesovú skratku.
-*	Políčka hľadanie a história sa viac neprekrývajú (opravil Cyrille Bougot).
-*	Vyžaduje NVDA od verzie 2019.3.
+### Menu RSS čítačky ###
 
-## Zmeny vo verzii 13.0 ##
-*	Pridané funkcie na vyhľadanie predchádzajúceho a nasledujúceho výskytu
-  hľadaného reťazca. Skratky je potrebné nastaviť ručne.
-*	Vyhľadávanie funguje aj vtedy, ak je otvorený dialóg O NVDA.
-*	Políčko rozlišovať malé a veľké písmená sa začiarkne, ak bolo začiarknuté
-  pri poslednom hľadaní.
-*	Pri aktualizácii sa aktualizujú a presunú aj adresáre so záložkami, pričom
-  stále je možné ponechať súbory aj v hlavnom adresári NVDA.
-*	Pri zálohovaní sa vytvorí priečinok placeMarkersBackup a do neho sa
-  skopírujú príslušné súbory, abysa zabránilo nechcenému odstráneniu súborov
-  a priečinkou s dátami. Toto sa deje len v prípade, ak už vybratý priečinok
-  nemá  názov placeMarkersBackup.
+Menu RSS čítačky je dostupné z menu NVDA > nástroje a obsahuje tieto
+možnosti:
 
-## Zmeny vo verzii 12.0 ##
-*	NVDA viac nepadá pri vybratí čínskych znakov a následnom pokuse napísať
-  poznámku k záložke.
+#### Feeds ####
 
-## Zmeny vo verzii 11.0 ##
-*	Vyžaduje NVDA od verzie 2018.3.
-*	Môžete si stiahnuť [Verziu pre NVDA 2017.3][3].
+Otvorí dialógové okno s nasledujúcimi možnosťami:
 
-## Zmeny vo verzii 10.0 ##
-*	V aplikácii MS edge sú skratky NVDA+k, NVDA+shift+k alebo NVDA+alt+k
-  odosielané aj do aplikácie, aby nedochádzalo k chybám, hlavne pri dlhých
-  dokumentoch.
-*	Špecifické hľadanie funguje aj v aplikácii Edge.
+* Filter: Editačné pole na vyhľadávanie uložených kanálov.
+* A list of the saved feeds, focused when the dialog is opened.
+* Zoznam článkov: Otvorí zoznam článkov z vášho aktuálneho informačného
+  kanála. Vyberte článok, ktorý si chcete prečítať, a stlačte kláves Enter
+  alebo tlačidlo Otvoriť webovú stránku, aby ste otvorili príslušnú stránku
+  v prehliadači. Stlačením tlačidla Informácie o článku otvoríte dialógové
+  okno s názvom a odkazom na vybraný článok; z tohto dialógového okna budete
+  môcť tieto informácie skopírovať do schránky.
+* Otvoriť informačný kanál: Otvorí vybraný informačný kanál v predvolenej
+  aplikácii.
+* Open feed as HTML: Opens the selected feed in the default web browser. You
+  will be able to show or hide publication dates and buttons to copy
+  information about articles to clipboard.
+* Copy feed address: Opens a dialog to confirm if you want to copy the feed
+  address to clipboard.
+* Nový: otvorí dialógové okno, kde môžete vložiť adresu informačného
+  kanála. Ak je adresa platná a informačný kanál je možné uložiť, Kanál je
+  pridaný na koniec zoznamu kanálov.
+* Premenovať: Otvorí dialógové okno v ktorom môžete zadať nový názov kanála.
+* Odstrániť: Umožní odstrániť vybratý informačný kanál.
+* Nastaviť predvolené: Nastaví vybraný informačný kanál ako predvolený, aby
+  k jeho článkom bolo možné pristupovať pomocou klávesových skratiek.
+* Otvoriť priečinok so zálohou zdrojov: Otvorí priečinok, ktorý môže
+  obsahovať zálohu zdrojov. To môže byť užitočné pri skúmaní a odstraňovaní
+  informačných kanálov, ktoré by sa po aktualizácii doplnku nemali
+  importovať.
+* Preferences: Opens the settings dialog for readFeeds, also available in
+  NVDA's menu, Preferences, settings, readFeeds category.
+* Zatvoriť: Zatvorí dialógové okno informačné kanály.
 
-## Zmeny vo verzii 9.0
-*	Prezerací kurzor sleduje systémový kurzor pri aktivovaní záložky z
-  dialógu.
-*	Opravené fungovanie prechodu na predchádzajúcu záložku.
-*	Záložky je možné odstrániť z dialógu s poznámkami.
-*	Odteraz je možné nastaviť skratky pre uloženie a aktivovanie dočasnej
-  záložky.
+##### Poznámky #####
+
+* Ak sa vytvorí informačný kanál s názvom tempFeed, premenujte ho a prideľte
+  mu zmysluplný názov. V opačnom prípade môže byť tento kanál prepísaný pri
+  pridaní nasledujúceho kanála.
+* Zdroj nastavený ako predvolený nie je možné odstrániť. Informačný kanál
+  AddressFile sa použije ako predvolený pri resetovaní konfigurácie, takže
+  ho nemožno odstrániť.
+* The Filter by edit box can be placed after the Open article button from
+  NVDA's menu, Preferences, Settings, Read feeds category, or pressing the
+  Preferences button of the Feeds dialog.
+
+#### Copy feeds folder ####
+
+Otvorí dialógové okno pre výber priečinka, do ktorého si môžete uložiť vaše
+informačné kanály. V predvolenom nastavení je vybratý priečinok s
+nastaveniami NVDA. Kanály sa vždy ukladajú do adresára personalfeeds.
+
+#### Restore feeds ####
+
+Umožní nahradiť aktuálne informačné kanály súbormi so zálohy. Ustite sa, že
+ste zvolili priečinok s RSS adresami.
+
+### Keyboard commands ###
+
+* Ctrl+Shift+NVDA+Medzera: Oznamuje URL aktuálneho článku. Stlačené dvakrát
+  rýchlo za sebou otvorí webovú stránku.
+* Ctrl+Shift+NVDA+8: Obnoví vybraný informačný kanál a oznámi názov
+  posledného článku.
+* Ctrl+Shift+NVDA+I: Oznamuje aktuálny názov informačného kanála a
+  odkaz. Stlačené dvakrát rýchlo za sebou skopíruje názov a odkaz do
+  schránky.
+* Ctrl+Shift+NVDA+U: oznámi predchádzajúci článok.
+* Ctrl+Shift+NVDA+O: Oznámi nasledujúci článok.
+
+## Notifications ##
+
+* Po skopírovaní názvu alebo adresy URL do schránky.
+* Ak sa nedá pripojiť/obnoviť informačný kanál alebo webová adresa
+  nezodpovedá platnému informačnému kanálu.
+* NVDA will display an error message if it was not possible to backup or
+  restore the personalFeeds folder, and if a new feed cannot be created.
+* Názov dialógového okna so zoznamom článkov obsahuje vybratý názov
+  informačného kanála a počet dostupných položiek.
+
+## Changes for 10.0 ##
+
+* Added a button to open the selected feed as HTML in the default web
+  browser.
+* If a new feed cannot be created, this will be notified in an error dialog.
+* Improved order and presentation of some articles.
+* More feeds may be supported.
+* When the feeds dialog is opened, the list of feeds will be focused instead
+  of the search edit box.
+* You can choose if the search edit box is placed after the list of feeds,
+  useful to focus the list even when switching from another window without
+  closing the Feeds dialog.
+* Added a button to copy the feed address to clipboard from the feeds
+  dialog.
+
+## Zmeny vo verzii 9.0 ##
+
+* Vyžaduje NVDA od verzie 2019.3.
 
 ## Zmeny vo verzii 8.0 ##
-*	odstránená identifikácia fragmentov z názvov súborov pre záložky, keďže
-  toto spôsobovalo problémy v programe VitalSource Bookshelf ePUB reader.
-*	Pridaný dialóg, v ktorom je možné k záložkám písať poznámky a tiež
-  presunúť kurzor na vybratú záložku.
+
+* Po inštalácii novej verzie doplnku sa automaticky importujú uložené
+  kanály, v prípade, že nepreferujete ukladanie do hlavného adresára s
+  nastaveniami NVDA.
+* Ak kopírujete kanály a nový priečinok sa nevolá personalFeeds, bude takýto
+  priečinok vytvorený a do neho budú importované nastavenia, aby nedošlo k
+  zmazaniu dôležitých adresárov.
 
 ## Zmeny vo verzii 7.0 ##
-*	Dialóg s uložením špecifického textu hľadania bol nahradený novým. Tu je
-  možné určiť presné parametre hľadania.
-*	Upravený vzhľad dialógov.
-*	Vyhľadanie predchádzajúceho alebo nasledujúceho výskytu rešpektuje
-  nastavenie rozlišovania malých a veľkých písmen.
-*	Vyžaduje NVDA od verzie 2016.4.
-*	Pridaná možnosť nastaviť skratky na zálohu a obnovenie záložiek.
-*	NVDA upozorní po dokončení obnovi alebo zálohy záložiek.
+
+* Pridané tlačidlo na otvorenie adresára so zálohou.
+* Ak ste zadali reťazec na filtrovanie a žiadna položka nezodpovedá filtru,
+  ostatné položky v dialógu sa skryjú.
+* Ak nie je možné zobraziť zoznam článkov, napríklad z dôvodu chýb v
+  informačnom kanáli, NVDA zobrazí chybu, takže dialógové okno informačných
+  kanálov sa dá použiť bez reštartovania NVDA.
 
 ## Zmeny vo verzii 6.0 ##
-* Ak nie sú dostupné funkcie doplnku, doplnok odošle skratky do aktuálneho
-  otvoreného okna príslušnej aplikácie.
+
+* Po aktualizácii predvoleného informačného kanála a jeho nefunkčnosti z
+  dôvodu problémov so serverom sa predchádzajúce články neodstránia a dajú
+  sa prečítať pomocou klávesových skratiek.
+* Predvolený informačný kanál možno znova aktualizovať dvakrát.
 
 ## Zmeny vo verzii 5.0 ##
-* pridané hľadanie s rozlišovaním malých a veľkých písmen.
-* odstránená položka na otvorenie návodu z menu doplnku.
-* Prepracované klávesové skratky.
+
+* Vylepšené okno so zoznamom článkov.
+* Vyžaduje sa NVDA od verzie 2018.3.
+* V prípade potreby si môžete stiahnuť [poslednú verziu kompatibilnú s NVDA
+  2017.3] [3].
 
 ## Zmeny vo verzii 4.0 ##
-* odstránená identifikácia fragmentov z názvov súborov pre záložky, keďže
-  toto spôsobovalo problémy v doplnku ePUBREADER pre Firefox.
-* Návod k doplnku nájdete v správcovi doplnkov.
 
-## Zmeny vo verzii 3.1 ##
-* aktualizované a doplnené preklady.
-* Pozícia záložky nie je oznamovaná počas rýchleho čítania.
+* Pridané tlačidlo na otvorenie vybraného informačného kanála v dialógovom
+  okne Informačné kanály.
 
 ## Zmeny vo verzii 3.0 ##
-* pridaná podpora pre rýchle čítanie
+
+* Dialógové okná na správu súborov informačného kanála boli
+  odstránené. Funkcie sú zahrnuté v dialógovom okne Informačné kanály.
+* Vylepšená vizuálna prezentácia dialógov.
+* Predvolený informačný kanál je uložený v nastaveniach NVDA. Preto je možné
+  mať v rôznych profiloch rôzne predvolené informačné kanály.
+* Vyžaduje NVDA 2016.4.
 
 ## Zmeny vo verzii 2.0 ##
-* pridaná možnosť uložiť rôzne reťazce hľadania pre rôzne dokumenty.
-* opravená chyba, ktorá sa vyskytovala, ak cesta neobsahovala len ascii
-  znaky.
-* Skratky môžete zmeniť v nastaveniach klávesových skratiek NVDA.
+
+* Návod k doplnku nájdete v správcovi doplnkov.
 
 ## Zmeny vo verzii 1.0 ##
-* prvé vydanie
-* Pridané jazyky: Brazílska portugalčina, fínčina, francúzština,
-  galícijčina, nemčina, taliančina, japončina, kórejčina, nepálčina,
-  Perzština, Portugalčina, španielčina, slovenčina, slovinčina, Tamilčina.
 
+* Prvé vydanie.
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=pm
+[1]: https://addons.nvda-project.org/files/get.php?file=rf
 
-[2]: https://addons.nvda-project.org/files/get.php?file=pm-dev
+[2]: https://addons.nvda-project.org/files/get.php?file=rf-dev
 
-[3]: https://addons.nvda-project.org/files/get.php?file=pm-o
+[3]: https://addons.nvda-project.org/files/get.php?file=rf-o

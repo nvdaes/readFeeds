@@ -5,258 +5,250 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 'placeMarkers' '1.0-beta'\n"
-"Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
-"POT-Creation-Date: 2013-06-05 23:05+0200\n"
-"PO-Revision-Date: 2016-02-26 02:18-0800\n"
-"Last-Translator: drishtibachak@gmail.com\n"
+"Project-Id-Version: readFeeds 1.0-dev\n"
+"Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
+"POT-Creation-Date: 2013-11-23 12:28+0100\n"
+"PO-Revision-Date: 2014-10-17 14:02+0545\n"
+"Last-Translator: \n"
 "Language-Team: Nepali <drishtibachak@gmail.com>\n"
 "Language: ne\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.5\n"
+"X-Generator: Poedit 1.6.1\n"
 
-#. Translators: label of a dialog presented when installing this addon and placeMarkersBackup is found.
+#. Translators: the label of a message box dialog.
+msgid ""
+"You have installed the ReadFeeds add-on, probably an old and incompatible "
+"version with this one. Do you want to uninstall the old version?"
+msgstr ""
+"तपाइले यो वाचनपोषण सित नमिल्दो वा पुरानो थप-शाधन भित्र्याउनु भएको रहेछ । के तपाई "
+"यसलाई मेटाउन चाहनु हुन्छ?"
+
+#. Translators: the title of a message box dialog.
+msgid "Uninstall incompatible add-on"
+msgstr "नमिल्दो उपकर्मीलाई मेटाउनु होस् ।"
+
+#. Translators: the label of a message box dialog.
 msgid ""
 "Your configuration folder for NVDA contains files that seem to be derived "
 "from a previous version of this add-on. Do you want to update it?"
 msgstr ""
-"तपाइको नेत्रवाणी अभियोजन थैलीमा यो उपकर्मीका पुराना फाइलहरू रहेछन् । के तपाइ यसलाई "
-"अद्यावधिक गर्न चाहनु हुन्छ ?"
+"नेत्रवाणीका लागी तपाइको अभियोजन घर्राका फाइलहरू  पुरानो उपकर्मीबाट लिइएको देखिन्छ । "
+"के तपाइ यसलाई अद्यावधिककरण गर्न चाहनु हुन्छ ?"
 
-#. Translators: title of a dialog presented when installing this addon and placeMarkersBackup is found.
+#. Translators: the title of a message box dialog.
 msgid "Install or update add-on"
-msgstr "उपकर्मीलाई भित्र्याउ अथवा अद्यावधिक गर ।"
+msgstr "उपकर्मीलाई स्थापित वाअद्यावधिक गर्नु होस् ।"
 
-#. Translators: label of error dialog, translated in NVDA core.
-#, python-format
-msgid "text \"%s\" not found"
-msgstr "पाठ \"%s\" भेट्टिएन ।"
-
-#. Translators: title of error dialog, translated in NVDA core.
-msgid "Find Error"
-msgstr "त्रुटी भेट्टाउ ।"
-
-#. Translators: message presented when a string of text has been copied to the clipboard.
-#, python-format
-msgid "%s copied to clipboard"
-msgstr "%s लाई क्लीपपाटीमा उतारियो ।"
-
-#. Translators: the name of addon submenu.
-msgid "P&lace markers"
-msgstr "श्थान &चिनो"
-
-#. Translators: the tooltip text for addon submenu.
-msgid "Bookmarks and Search menu"
-msgstr "पुस्तकचिनो र खोजी मेनु ।"
-
-#. Translators: the name for an item of addon submenu.
-msgid "&Specific search folder"
-msgstr "&विशेष खोजी थैली"
-
-#. Translators: the tooltip text for an item of addon submenu.
-msgid "Opens the specific search folder"
-msgstr "विशेष खोजी थैलीलाई खोल्ने छ ।"
-
-#. Translators: the name for an item of addon submenu.
-msgid "&Bookmarks folder"
-msgstr "&पुस्तकचिनो थैली"
-
-#. Translators: the tooltip text for an item of addon submenu.
-msgid "Opens the bookmarks folder"
-msgstr "पुस्तकचिनो थैली खोल्ने छ ।"
-
-#. Translators: the name for an item of addon submenu.
-msgid "&Copy placeMarkers folder..."
-msgstr "&स्थान चिनो थैलीको नक्कल उतार्ने छ ।"
-
-#. Translators: the tooltip text for an item of addon submenu.
-msgid "Backup of place markers"
-msgstr "स्थान चिनोको पृष्ट सुरक्षा ।"
-
-#. Translators: the name for an item of addon submenu.
-msgid "R&estore place markers..."
-msgstr "&स्थान चिनोको पुनर्स्थापन ।..."
-
-#. Translators: the tooltip text for an item of addon submenu.
-msgid "Restore previously saved place markers"
-msgstr "विगतमा सञ्चीत स्थान चिनोलाई पुनर्स्थापित गर ।"
-
-#. Translators: label of a dialog presented for copying place markers.
-msgid "Select a folder for copying your saved place markers"
-msgstr "बचत गरिएका स्थान चिनोहरूको नक्कल राख्ने थैलीको चयन गर ।"
-
-#. Translators: label of error dialog shown when cannot copy placeMarkers folder.
-msgid "Folder not copied"
-msgstr "थैलीको नक्कल उतारिएन ।"
-
-#. Translators: title of error dialog shown when cannot copy placeMarkers folder.
-msgid "Copy Error"
-msgstr "नक्कल उतार्दा त्रुटी ।"
-
-#. Translators: label of a dialog presented for restoring place markers.
-msgid "Select the place markers folder you wish to restore"
-msgstr "तपाइले पुनर्स्थापन गर्न चाहेको स्थान चिनो थैलीको चयन गर्नु होस् ।"
-
-#. Translators: label of a dialog presented to save or delete a string for specific search.
+#. Translators: message presented when feeds cannot be reported.
 msgid ""
-"Type the text you wish to save, or delete any text if you want to remove it "
-"from the previous saved searches"
+"Unable to refresh feed. Check your Internet conectivity or that the "
+"specified feed address is correct."
 msgstr ""
-"बचत गर्न इच्छा लागेको पाठ टङ्कण गर्नु होस्, अथवा यदि तपाई विगतमा बचत गरिएको खोजीलाई "
-"हटाउन चाहनु हुन्छ भने त्यो पाठलाई मेट्नु होस् ।"
+"पोषणलाई ताजकि गर्न सकिएन । अन्तरजालको सम्वद्धता वा पोषणको ठेगानाको यकिन गर्नु होस् ।"
 
-#. Translators: title of a dialog presented to save a string for specific search.
-msgid "Save text for specific search"
-msgstr "विशेष खोजीका लागि पाठ बचत गर ।"
+#. Translators: Presented when the current article does not have an associated title.
+msgid "Unable to locate article title."
+msgstr "आलेख शिर्षक पत्तो लगाउन सकिएन ।"
 
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid "Saves a text string for a specific search."
-msgstr "विशेष खोजीका लागि पाठ पदावली बचत गर ।"
+#. Translators: Presented when the current article does not have an associated link.
+msgid "Unable to locate article link."
+msgstr "आलेख लिङ्क पत्तो लगाउन सकिएन ।"
 
-#. Translators: message presented when there is not file for specific search.
-msgid "File for specific search not found"
-msgstr "विशेष खोजीका लागि फाइल पाइएन ।"
+#. Translators: the name of a submenu.
+msgid "&Read Feeds"
+msgstr "&पोषण वाचन"
 
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
+#. Translators: the tooltip for a submenu.
+msgid "Manage feeds."
+msgstr "पोषण व्यबस्थापन गर"
+
+#. Translators: the name of a menu item.
+msgid "Article &list..."
+msgstr "आलेख &सुची"
+
+#. Translators: the tooltip for a menu item.
+msgid "View article list"
+msgstr "आलेख सूची देखाउ"
+
+#. Translators: the name of a menu item.
+msgid "&Temporary feed address..."
+msgstr "&अस्थायी पोषण ठेगाना "
+
+#. Translators: the tooltip for a menu item.
+msgid "View or choose current feed address"
+msgstr "चालू पोषण ठेगाना देखाउ वा रोज ।"
+
+#. Translators: the name of a menu item.
+msgid "L&oad feed address from file..."
+msgstr "&फाइलबाट पोषण ठेगाना बहन गर ।"
+
+#. Translators: the tooltip for a menu item.
+msgid "Select file which contains feed address."
+msgstr "पोषण ठेगाना भएको फाइलको चयन गर्नु होस् ।"
+
+#. Translators: the name of a menu item.
+msgid "Save current feed address to file..."
+msgstr "चालू पोषण ठेगानालाई फाइलमा बचत गर्नु होस् ।"
+
+#. Translators: the tooltip for a menu item.
+#. Translators: the label of a file dialog.
+msgid "Save current feed address to file"
+msgstr "चालू पोषण ठेगानालाई फाइलमा बचत गर्नु होस् ।"
+
+#. Translators: the name of a menu item.
+msgid "R&efresh current feed"
+msgstr "&चालू पोषणलाई ताजकि गर ।"
+
+#. Translators: the tooltip for a menu item.
+msgid "Checks for new articles for the current feed"
+msgstr "चालू पोषणको नयाँ आलेख निरिक्षण गर्छ ।"
+
+#. Translators: the name of a menu item.
+msgid "&ReadFeeds file manager..."
+msgstr ""
+
+#. Translators: the tooltip for a menu item.
+msgid "Opens the ReadFeedsFileManager dialog"
+msgstr ""
+
+#. Translators: the title of an error dialog.
+msgid "Refresh Error"
+msgstr "त्रुटीलाई ताजकि गर ।"
+
+#. Translators: the label of a single choice dialog.
+msgid "Open web page of selected article."
+msgstr "चयनित आलेखको वेभ पृष्ठ पल्टाउ ।"
+
+#. Translators: message presented in input mode.
+msgid "Refreshes the current feed and announces the most recent article title."
+msgstr "ताजकि चालू पोषण हो र सबै भन्दा नया आलेख शिर्षकको घोषणा गर्छ ।"
+
+msgid "Refresh your selected feed to read the current article."
+msgstr "चालू आलेख वाचन गर्नका लागि पोषणलाई ताजकि गर्नु होस् ।"
+
+#. Translators: message presented when the information about an article of a feed is copied to the clipboard.
+#, python-format
+msgid "Copied to clipboard %s"
+msgstr " %s लाई क्लीपपाटीमा उतारियो ।"
+
+#. Translators: message presented in input mode.
 msgid ""
-"finds a text string from the current cursor position for a specific document."
+"Announces the title of the current article. Pressed two times, copies title "
+"and related link to the clipboard."
 msgstr ""
-"विशेष कागजातहरूमा चालू क्रसर रहेको स्थान देखि अगाडी रहेको पाठ पदावलीलाई फेला पार ।"
+"चालू आलेखको शिर्षक बताउने छ ।दुइपटक दबाएमा आलेखको शिर्षक र लिङ्क क्लिपपाटीमा उतार्ने छ ।"
 
-#. Translators: message presented when a bookmark cannot be saved.
-msgid "Bookmark cannot be saved"
-msgstr "पुस्तकचिनोलाई बचत गर्न सकिएन ।"
+#. Translators: message presented in input mode.
+msgid "Announces the title of the next article."
+msgstr "अघिल्लो आलेखको शिर्षक बताउने छ ।"
 
-#. Translators: message presented when the current position was previously saved as a bookmark.
-msgid "This position was already saved"
-msgstr "यो स्थान त पहिले नै बचत गरिएको छ ।"
+#. Translators: message presented in input mode.
+msgid "Announces the title of the previous article."
+msgstr "पछिल्लो आलेखको शिर्षक बताउने छ ।"
 
-#. Translators: message presented when a position is saved as a bookmark.
+#. Translators: message presented in input mode.
+msgid "Announces article link, when pressed two times, opens related web page."
+msgstr "आलेखको लिङ्क बताउने छ, दुई पटक दबाएमा, सम्बन्धित वेभ पृष्ठ पल्टाउने छ ।"
+
+#. Translators: the label of a text entry dialog.
+msgid "Feed address to follow"
+msgstr "पछ्याउनु पर्ने पोषण ठेगाना "
+
+#. Translators: the title of a text entry dialog.
+msgid "Feed address"
+msgstr "पोषण ठेगाना "
+
+#. Translators: message presented when the address of a feed has been selected.
 #, python-format
-msgid "Saved position at character %d"
-msgstr "वर्ण %d स्थानमा बचत गरियो ।"
+msgid "Selected %s"
+msgstr "चयनित %s "
 
-#. Translators: message presented when a bookmark cannot be saved.
-msgid "Cannot save bookmark"
-msgstr "पुस्तकचिनो बचत गर्न सकिदैन ।"
+#. Translators: message presented in input mode.
+msgid "Opens a dialog for entering a feed address."
+msgstr "पोषण ठेगाना प्रविष्टि गरिने पातो पल्टाउने छ।"
 
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid "Saves the current position as a bookmark."
-msgstr "चालु स्थानलाई पुस्तकचिनोको रुपमा बचत गर्ने छ ।"
+#. Translators: the label of a file dialog.
+msgid "Select feed address from file"
+msgstr "फाइलबाट पोषण ठेगानाको चयन गर्नु होस् ।"
 
-#. Translators: message presented when the current document doesn't contain bookmarks.
-msgid "No bookmarks"
-msgstr "कुनै पुस्तकचिनो छैन ।"
+msgid "Text files (*.txt) |*.txt"
+msgstr "पाठ फाइल: (*.txt) |*.txt"
 
-msgid "Bookmark cannot be deleted"
-msgstr "पुस्तकचिनो मेटाउन सकिएन ।"
+#. Translators: message presented when unable to read feed address.
+msgid "Unable to read feed address, feed can not be selected"
+msgstr "पोषण ठेगाना पढ्न सकिएन, पोषणलाई चयन गर्न सकिदैन ।"
 
-#. Translators: message presented when the current document has bookmarks, but none is selected.
-msgid "No bookmark selected"
-msgstr "कुनै पुस्तकचिनो चयनित छैन ।"
+#. Translators: message presented in input mode.
+msgid "Opens a dialog for selecting a file containing a feed address."
+msgstr "पोषण ठेगाना भएको फाइल चयन गर्ने पातो पल्टाउने छ ।"
 
-#. Translators: message presented when a bookmark is deleted.
-msgid "Bookmark deleted"
-msgstr "पुस्तकचिनो मेटीयो ।"
+msgid "Text files (*.txt) | *.txt"
+msgstr "पाठ फाईलहरू (*.txt) | *.txt"
 
-#. Translators: message presented when cannot delete a bookmark.
-msgid "Cannot delete bookmark"
-msgstr "पुस्तकचिनो मेटाउन सकिदैन ।"
-
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid "Deletes the current bookmark."
-msgstr "चालु पुस्तकचिनोलाई मेटाउने छ ।"
-
-#. Translators: message presented when trying to select a bookmark, but none is found.
-msgid "No bookmarks found"
-msgstr "पुस्तक चिनो पाइएन ।"
-
-#. Translators: message presented when cannot find any bookmark.
-msgid "Cannot find any bookmark"
-msgstr "कुनै पुस्तक चिनो पाउन सकिएन ।"
-
-#. Translators: message presented when a bookmark is selected.
+#. Translators: message presented when the address of a feed has been saved.
 #, python-format
-msgid "Position: character %d"
-msgstr "स्थान: वर्ण %d"
+msgid "Saved %s"
+msgstr "%s लाई बचत गरियो ।"
 
-#. Translators: message presented when the next bookmark is not found.
-msgid "Next bookmark not found"
-msgstr "पछिल्लो पुस्तकचिनो पाइएन ।"
+#. Translators: Message presented when the feed address cannot be saved.
+msgid "Feed address can not be saved"
+msgstr "पोषण ठेगाना बचत गर्न सकिदैन ।"
 
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid "Moves to the next bookmark."
-msgstr "पछिल्लो पुस्तकचिनोमा जान्छ ।"
+#. Translators: message presented in input mode.
+msgid ""
+"Opens a dialog where you can enter a filename to which the current feed "
+"address will be saved."
+msgstr "चालू पोषण ठेगाना बचत गरिने फाइल चयन गर्ने पातो पल्टाउने छ ।"
 
-#. Translators: message presented when the previous bookmark is not found.
-msgid "Previous bookmark not found"
-msgstr "अघिल्लो पुस्तकचिनो पाइएन ।"
+msgid "Feeds manager"
+msgstr ""
 
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid "Moves to the previous bookmark."
-msgstr "अघिल्लो पुस्तकचिनोमा जान्छ ।"
+#. Translators: the name of a dialog button.
+msgid "&Backup personal feeds folder..."
+msgstr "&वैयक्तिक पोषण घर्रालाइ थन्क्याउ ।"
 
-#. Translators: message presented when cannot copy the file name corresponding to place markers.
-msgid "Cannot copy file name for place markers"
-msgstr "स्थान चिनोको लागि फाइलको नक्कल उतार्न सकिएन । "
+#. Translators: the name of a dialog button.
+msgid "R&estore personal feeds..."
+msgstr "&वैयक्तिक पोषण घर्रालाइ बहाली गर"
 
-#. Translators: message presented when file name for place markers is copied to clipboard.
-msgid "Place markers file name copied to clipboard"
-msgstr "स्थान चिनो फाइललाई क्लीपपाटीमा उतारियो ।"
+#. Translators: the label of a dialog to select a folder.
+msgid "Select the folder where your personal feeds will be backed up."
+msgstr "तपाइको निजी पोषण थन्क्याइने घर्रालाई चयन गर्नु होस् ।"
 
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid "Copies the name of the current file for place markers to the clipboard."
-msgstr "चालू फाइललाई स्थान चिनोको लागी क्लीपपाटीमा उतार्छ ।"
+#. # Translators: the label of an error dialog.
+msgid "Unable to backup folder"
+msgstr "घर्रालाइ ढिकुटीमा राख्न सकिएन ।"
 
-#. Translators: This is the label for the specific search settings dialog.
-msgid "Specific Search"
-msgstr "विशेष खोजी"
+#. Translators: the title of an error dialog.
+msgid "Backup Error"
+msgstr "ढिकुटीमा त्रुटी"
 
-#. Translators: This is the label for a textfield in the
-#. specific search settings dialog.
-msgid "&Text to search:"
-msgstr "&खोज्नु पर्ने पाठ"
+#. Translators: the label of a dialog to select a folder.
+msgid "Restore personal feeds from backup folder"
+msgstr "ढिकुटीबाट निजी पोषणलाई बहाली गर ।folder"
 
-#. Translators: The label for a setting in specific search to select a saved text.
-msgid "&Saved texts:"
-msgstr "&बचत पाठ"
+#. Translators: the label of an error dialog.
+msgid "Folder not restored"
+msgstr "घर्रालाई बहाली गरिएको छैन ।"
 
-#. Translators: A combo box to choose a saved text.
-msgid "Saved texts to search:"
-msgstr "विशेष खोजीका लागि पाठ बचत गर ।"
-
-#. Translators: the name of an action presented in specific search dialog.
-msgid "Search down"
-msgstr "तल खोजी"
-
-#. Translators: the name of an action presented in specific search dialog.
-msgid "Search up"
-msgstr "माथि खोजी"
-
-#. Translators: the name of an action presented in specific search dialog.
-msgid "Delete"
-msgstr "मेटाउ"
-
-#. Translators: The label for a setting in specific search to select an action.
-msgid "&Actions to choose:"
-msgstr "&कार्यको रोजाई"
-
-#. Translators: A combo box to choose an action.
-msgid "Select an action to perform:"
-msgstr "सम्पादन गरीने कार्यको चयन गर्नु होस् ।"
-
-#. Translators: An option in specific search to perform case-sensitive search, copied from core.
-msgid "Case &sensitive"
-msgstr "वर्ण &संवेदनसिल"
+#. Translators: the title of an error dialog.
+msgid "Restore Error"
+msgstr "बहाली त्रुटि"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
-msgid "Place markers"
-msgstr "स्थान चिनो "
+msgid "Read Feeds"
+msgstr "पोषणवाचन"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
-msgid "Add-on for setting place markers on specific virtual documents"
-msgstr "विशेष अवास्तविक कागजातहरूमा स्थान चिनो अनुकूलन गर्ने उपकर्मी ।"
+msgid "Add-on for using NVDA as a feed reader."
+msgstr "नेत्रवाणिमा पोषण वाचन गर्ने उपकर्मी ।"
+
+#~ msgid "Backs up your personal feeds folder"
+#~ msgstr "तपाइको निजी पोषण घर्रालाइ थन्क्याउँछ ।"
+
+#~ msgid "Restore previously saved feeds"
+#~ msgstr "पहिले वचत गरिएका पोषणलाई बहाली गर ।"

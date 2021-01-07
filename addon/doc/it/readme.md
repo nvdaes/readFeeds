@@ -1,193 +1,202 @@
-# placeMarkers #
-* Autori: Noelia, Chris.
-* Compatibilità con NVDA: versione 2019.3 e successive.
-* scarica la  [versione stabile][1]
-* scarica la [versione in sviluppo][2]
+# Read Feeds #
 
-Questo componente aggiuntivo è utilizzato per salvare e cercare segnaposto e
-stringhe di testo specifiche, sia nelle pagine web che in documenti,
-utilizzando la modalità navigazione di NVDA. E' utile anche per salvare e
-cercare  stringhe di testo in campi editazione multilinea; in questo caso,
-se non è possibile aggiornare il cursore, la stringa corrispondente verrà
-copiata negli appunti, in modo che possa essere cercata utilizzando altri
-strumenti. Il componente aggiuntivo salva  i segnaposto e le ricerche
-specifiche in file il cui nome si basa sul titolo e l'indirizzo  del
-documento attuale. Place Markers deriva da SpecificSearch e Bookmark&Search,
-sviluppati dalla stessa autrice. È preferibile disinstallare i vecchi
-componenti aggiuntivi, dal momento che usano gli stessi comandi ed hanno le
-stesse funzioni di Place Markers.
-
-## Comandi rapidi: ##
-
-*	control+shift+NVDA+f: apre una finestra con un campo editazione che mostra
-  l'ultima ricerca salvata; tramite una casella combinata è anche possibile
-  selezionare una ricerca specifica salvata in precedenza  o rimuovere la
-  stringa selezionata dalle ricerche recenti utilizzando una casella di
-  controllo. Nella stessa finestra, è possibile scegliere se il testo
-  contenuto nel campo editazione verrà aggiunto alle ricerche
-  recenti. Infine è possibile scegliere, tramite pulsanti radio, tra le
-  azioni Cerca successiva, Cerca Precedente o Non Cercare, e specificare se
-  distinguere tra le lettere maiuscole e minuscole nella ricerca. Premendo
-  Ok NVDA cercherà la stringa digitata.
-*	control+shift+NVDA+k: Salva la posizione corrente come segnaposto. Se si
-  desidera dare un nome al segnaposto, selezionare del testo da questa
-  posizione prima di salvarlo.
-*	control+Shift+NVDA+canc: Elimina il segnaposto corrispondente a questa
-  posizione.
-*	NVDA+k: va al segnaposto successivo.
-*	shift+NVDA+k: va al segnaposto precedente.
-*	Tasto non assegnato: mostra il nome del file per il quale verranno salvati
-  i segnaposto e le ricerche in modalità navigazione. (Il nome non contiene
-  l'estensione).
-*	alt+NVDA+k: apre una finestra di dialogo con i segnaposto salvati per il
-  documento corrente. È possibile scrivere una nota per ogni segnaposto;
-  premere Salva nota per salvare le modifiche. Premendo il tasto Canc è
-  possibile rimuovere il segnaposto selezionato. Premendo OK si sposta il
-  cursore nella posizione selezionata.
-*	Tasto non assegnato: Salva la posizione attuale come segnaposto
-  temporaneo.
-*	Tasto non assegnato: sposta il cursore nel segnaposto temporaneo del
-  documento corrente.
-*	Tasto non assegnato: trova l'occorrenza successiva dell'ultimo testo
-  cercato in uno specifico documento.
-*	Tasto non assegnato: trova l'occorrenza precedente dell'ultimo testo
-  cercato in uno specifico documento.
+* Autori: Noelia Ruiz Martínez, Mesar Hameed
+* Compatibilità con NVDA: versione 2019.3 o successive
+* Scarica la [versione stabile][1]
+* Scarica la [versione in sviluppo][2]
 
 
-## Sottomenu Place Markers (NVDA+N) ##
+Questo componente aggiuntivo fornisce un modo semplice per leggere i feed
+nel formato Atom o RSS usando NVDA. I feed non verranno aggiornati
+automaticamente. Nel seguito, quando menzioneremo i feed, intenderemo sia i
+feed RSS che i feed ATOM.
 
-Utilizzando il sottomenu Place markers dal menu Preferenze di NVDA, si può
-accedere a:
+## Installazione o aggiornamento ##
 
-*	Cartella ricerche specifiche: Apre una cartella delle ricerche specifiche
-  precedentemente salvate.
-*	Cartella segnaposto: Apre una cartella dei segnaposto precedentemente
-  salvati.
-*	Copia cartella segnaposto: è possibile salvare una copia della cartella
-  segnaposto.
-*	Ripristina segnaposto: è possibile ripristinare i segnaposto da una
-  cartella  segnaposto precedentemente salvata.
+Se avete installato una versione precedente di questo componente aggiuntivo
+e nella cartella di configurazione di NVDAsono presenti le sottocartelle
+personalFeed o RSS , quando installerete la versione corrente una finestra
+di dialogo vi chiederà se volete aggiornare o installare. Scegliete Aggiorna
+per conservare i feed memorizzati e continuare ad utilizzarli nella nuova
+versione di ReadFeed.
 
-Nota: La posizione del segnaposto è basata sul numero di caratteri; in
-pagine con un contenuto dinamico è meglio utilizzare la ricerca specifica, e
-non i segnaposto, per salvare una posizione precisa.
+## Comandi ##
 
-## Novità nella versione 14.0 ##
-*	Il comando per copiare il nome del file in cui vengono salvati i dati di
-  placeMarkers è stato sostituito da un comando che mostra questo nome file
-  in modalità navigazione. Questo comando non è assegnato ad alcun tasto.
-*	Il campo "Testo da cercare" non si sovrappone più al campo "Testo
-  salvato". (Grazie a Cyrille Bougot).
-*	Richiede NVDA 2019.3 o versioni successive.
+### Il Menu di Read Feeds ###
 
-## Novità nella versione 13.0 ##
-*	Aggiunto un comando, non assegnato ad alcun tasto, per trovare
-  l'occorrenza precedente o successiva dell'ultimo testo cercato in uno
-  specifico documento.
-*	La funzione Ricerca specifica funziona anche quando è aperta la finestra
-  INformazioni su NVDA.
-*	Nella finestra Ricerca specifica, la casella di controllo per distinguere
-  tra lettere maiuscole e minuscole sarà attivata se era già attiva
-  nell'ultima ricerca.
-*	Quando il componente aggiuntivo viene aggiornato, i segnaposto e le
-  stringhe per le ricerche specifiche salvati nella precedente versione
-  saranno automaticamente copiati nella nuova, a meno che non si preferisca
-  importare i segnaposto salvati nella cartella di configurazione principale
+Si può accedere al sottomenu Read Feeds dal menu di NVDA, Strumenti.  Le
+voci del sottomenu sono:
+
+#### Feeds ####
+
+Apre una finestra con i seguenti controlli:
+
+* Filtra per: un campo editazione per la ricerca tra i feed salvati.
+* Un elenco dei feed salvati, che viene focalizzato quando la finestra viene
+  aperta.
+* Elenco articoli: apre una finestra che presenta l'elenco degli articoli
+  del feed selezionato. Selezionate l'articolo che vi interessa leggere,
+  quindi premete Invio o il pulsante Apri feed per aprire l'articolo con il
+  vostro browser predefinito. Premendo il pulsante Informazioni Articolo è
+  possibile visualizzare il link ed il titolo dell'articolo
+  selezionato. Queste informazioni possono essere copiate negli appunti.
+* Apri feed: apre il feed selezionato nell'applicazione predefinita.
+* Apri feed come HTML. Apre il feed selezionato nel vostro browser
+  predefinito. Potrete mostrare o nascondere la data di pubblicazione e il
+  pulsante per copiare negli appunti le informazioni sull'articolo.
+* Copia indirizzo feed. Apre una finestra che vi consente di cfonfermare se
+  volete copiare negli appunti l'indirizzo del feed.
+* Nuovo: apre una finestra didialogo con un campo editazione per inserire
+  l'indirizzo  di un nuovo feed. Se l'indirizzo è valido ed il feed può
+  essere salvato, il nome del  feed, basato sul titolo, apparirà in fondo
+  all'elenco dei feed.
+* Rinomina: apre una finestra con un campo editazione per rinominare il feed
+  selezionato.
+* Elimina: apre una finestra che consente di eliminare il feed selezionato,
+  dopo conferma.
+* Imposta come predefinito: permette di impostare il feed selezionato come
+  predefinito, in modo che si possa accedere ai suoi articoli con i comandi
   di NVDA.
-*	Quando si usa la finestra per copiare i segnaposto, se la cartella scelta
-  non si chiama placeMarkersBackup, verrà creata una sottocartella con
-  questo nome, per evitare la cancellazione di cartelle contenenti dati
-  importanti, quali Documenti o Downloads.
+* Cartella backup: apre una cartella che contiene un backup dei feed. Ciò
+  può essere utile per esplorare e cancellare feed che non si vogliono
+  importare durante l'aggiornamento del componente.
+* Preferenze: apre la finestra impostazioni di ReadFeeds, disponibile anche
+  dal menu di NVDA->Preferenze->Impostazioni, categoria Read Feeds.
+* Chiudi: chiude la finestra dei feed.
 
-## Novità nella versione 12.0 ##
-*	Risolto un errore che causava un crash in NVDA quando si tentava di aprire
-  la finestra di dialogo Note, se venivano selezionati i caratteri cinesi
-  prima di salvare i segnaposto.
+##### Note #####
 
-## Novità nella versione 11.0 ##
-*	Compatibile con NVDA 2018.3 o superiore (richiesto).
-*	Se è necessario, è possibile scaricare la  [versione compatibile  con NVDA
-  2017.3][3].
+* Se è presente un feed chiamato tempFeed, si consiglia di rinominarlo,
+  visto che il feed potrà essere sostituito quando si ha bisogno di creare
+  un feed il cui nome esiste già.
+* Il feed impostato come predefinito non può essere rimosso. Il feed
+  addressFile  sarà usato come predefinito quando si ripristina la
+  configurazione iniziale, perciò anch'esso non può essere rimosso.
+* Il campo editazione "Filtra per" può essere collocato dopo il pulsante
+  "Apri articolo" andando nel menu di NVDA->Preferenze->Impostazioni,
+  categoria Read feeds, oppure attivando il pulsante "Preferenze" della
+  finestra Feeds.
+
+#### Copia cartella feed ####
+
+Apre una finestra da cui è possibile scegliere il percorso per salvare la
+cartella dei vostri feed. Il percorso predefinito è la cartella di
+configurazione di NVDA,  dove verrà salvata una cartella nominata
+personalFeeds.
+
+#### Ripristina feed ####
+
+Apre una finestra che consente di selezionare una cartella di feed
+precedentemente salvati e che sostituiranno i feed nella cartella
+personalFeeds. Assicurarsi di selezionare una cartella che contiene file con
+l'URL dei feed.
+
+### Comandi da tastiera ###
+
+* Ctrl+Shift+NVDA+Spazio: Legge il link dell'articolo selezionato. Se
+  premuto due volte apre la pagina web dell'articolo.
+* Ctrl+Shift+NVDA+8: Aggiorna il feed selezionato e legge il titolo
+  dell'articolo più recente.
+* Ctrl+Shift+NVDA+I: legge il titolo e il link del feed selezionato. Se
+  premuto due volte, copia queste informazioni negli appunti.
+* Ctrl+Shift+NVDA+U: legge il titolo del feed precedente.
+* Ctrl+Shift+NVDA+O: legge il titolo del feed successivo.
+
+## Avvisi vocali ##
+
+* Quando un titolo o un link sono stati copiati.
+* Quando non è possibile connettersi o aggiornare un feed, o l'URL non
+  corrisponde ad un feed valido.
+* NVDA mostrerà un messaggio di errore se non è stato possibile copiare o
+  ripristinare la cartella personalFeeds e se non è possibile creare un
+  nuovo feed.
+* Nel titolo della finestra elenco articoli viene indicato il nome del feed
+  selezionato ed il numero di elementi disponibili.
 
 ## Novità nella versione 10.0 ##
-*	In Edge, i comandi associati ai segnaposto, come NVDA+k, NVDA+shift+k o
-  NVDA+alt+k, saranno inviati all'applicazione, invece di tentare di
-  spostare il cursore al segnaposto, per evitare errori, specie in documenti
-  lunghi.
-*	Ora la ricerca specifica è supportata anche in Edge.
 
-## Novità nella versione 9.0
-*	Quando ci si sposta ad un segnaposto dalla finestra  Note, il cursore di
-  controllo segue il cursore di sistema.
-*	Il comando per selezionare il segnaposto precedente funziona di nuovo
-  correttamente.
-*	I segnaposto possono essere eliminati dalla finestra  Note.
-*	Ora  è possibile assegnare comandi da tastiera per creare e spostarsi sui
-  segnaposto temporanei.
+* Aggiunto un pulsante per aprire il feed selezionato come HTML nel browser
+  preferito.
+* Se un nuovo feed non può essere creato, apparirà una finestra di errore.
+* Migliorato l'ordine e il layout di alcuni articoli.
+* Aggiunto il supporto per nuove tipologie di feeds.
+* Quando viene aperta la finestra Feeds, verrà focalizzata la lista dei
+  feeds anziché il campo editazione Cerca.
+* E' possibile scegliere se il campo editazione "Cerca" sia mostrato dopo la
+  lista dei feeds; ciò è utile per focalizzare la lista anche quando di
+  viene da un'altra finestra senza chiudere la finestra Feeds.
+* Aggiunto un pulsante per copiare l'indirizzo del feed selezionato dalla
+  finestra Feeds.
+
+## Novità nella versione 9.0 ##
+
+* Richiede NVDA 2019.3 o versioni successive.
 
 ## Novità nella versione 8.0 ##
-*	Rimossi gli identificatori di frammento dai nomi dei file segnaposto, per
-  evitare problemi nell'ePUB reader VitalSource Bookshelf.
-*	Aggiunta una finestra Note, per associare commenti ai segnaposto salvati e
-  spostarsi alla posizione selezionata.
+
+* Quando l'add-on viene aggiornato, i feed salvati nella versione precedente
+  saranno automaticamente copiati nella nuova versione, a meno che non si
+  preferisca importare i feed salvati nella cartella di configurazione di
+  NVDA.
+* Quando si usa la finestra per copiare i feeds, se la cartella scelta non
+  si chiama personalFeeds, verà creata una sottocartella con questo nome,
+  per evitare la cancellazione di cartelle contenenti dati importanti, quali
+  Documenti o Downloads.
 
 ## Novità nella versione 7.0 ##
-*	La finestra di dialogo per salvare una stringa di testo per la ricerca
-  specifica è stata rimossa. Questa funzionalità è ora inserita nella
-  finestra di ricerca Specifica , la quale è stata modificata per eseguire
-  diverse azioni quando si preme il pulsante Ok.
-*	La rappresentazione grafica dell'interfaccia per le finestre di dialogo è
-  stata migliorata, in conformità con il layout delle finestre di dialogo di
-  NVDA.
-*	L'esecuzione dei comandi Trova Successivo o Trova Precedente in Modalità
-  Navigazione  ora darà luogo a una ricerca distinguendo tra lettere
-  maiuscole e minuscole se così era stata impostata la ricerca originale.
-*	Richiede NVDA 2016.4 o superiore.
-*	Ora è possibile assegnare comandi da tastiera per aprire le finestre di
-  dialogo per copiare o ripristinare i segnaposto.
-*	NVDA mostrerà un messaggio di notifica quando i segnaposto saranno copiati
-  o ripristinati mediante le relative finestre.
+
+* Aggiunto un pulsante Nella finestra Feed che consente di aprire una
+  cartella di backup.
+* Quando non si trova nessun risultato dal campo editazione per filtrare i
+  feeds, l'elenco Feed e gli altri controlli vengono disattivati. In questo
+  modo NVDA non annuncierà più "sconosciuto" in elenchi vuoti.
+* Se l'elenco degli articoli non può essere visualizzato, perché per esempio
+  c'è un problema nel feed, NVDA mostrerà un messaggio di errore. In questo
+  modo non sarà più necessario riavviare NVDA per usare la finestra Feed.
 
 ## Novità nella versione 6.0 ##
-* Quando le funzioni dell'add-on non sono utilizzabili, i comandi sono
-  inviati all'applicazione corrispondente.
+
+* Quando il feed predefinito è stato aggiornato, ma per problemi sul server
+  smette di funzionare, gli articoli precedenti non vengono eliminati e
+  possono essere letti con i comandi corrispondenti.
+* Il feed predefinito può essere nuovamente aggiornato due volte (Fix
+  regression).
 
 ## Novità nella versione 5.0 ##
-* Aggiunta la ricerca con distinzione tra lettere maiuscole e minuscole.
-* Rimossa l'opzione per aprire la documentazione dal menu di PlaceMarkers .
-* Comandi rapidi più intuitivi.
+
+* Migliorata la finestra per l'elenco articoli.
+* Compatibile con NVDA 2018.3 o versioni successive (richiesto).
+* Se è necessario, è possibile scaricare l'ultima versione [compatibile con
+  NVDA 2017.3][3].
 
 ## Novità nella versione 4.0 ##
-* Rimossi gli identificatori di frammento dai nomi dei file segnaposto, per
-  evitare problemi nel componente aggiuntivo di Firefox ePUBREADER.
-* La guida dell'add-on è disponibile dal gestore componenti aggiuntivi.
 
-## Novità nella versione 3.1 ##
-* Traduzioni aggiornate e nuove lingue.
-* La posizione dei segnaposto non viene vocalizzata durante la lettura
-  continua.
+* Aggiunto un pulsante per aprire il feed selezionato dalla finestra Feeds.
 
 ## Novità nella versione 3.0 ##
-* Aggiunto il supporto per la lettura continua.
+
+* Le finestre per gestire i file dei feed sono state rimosse. Questa
+  funzione verrà eseguita dalla finestra Feeds.
+* La rappresentazione grafica dell'interfaccia per le finestre di dialogo è
+  stata migliorata, in conformità con il layout delle finestre di dialogo di
+  NVDA.
+* Il feed predefinito viene salvato nella cartella di configurazione di
+  NVDA. E' quindi possibile impostare feed predefiniti diversi nei profili
+  di configurazione.
+* Richiede NVDA 2016.4.
 
 ## Novità nella versione 2.0 ##
-* Aggiunte opzioni per salvare e cancellare ricerche diverse per ogni file.
-* Risolto un problema che si verificava quando i percorsi contenevano
-  caratteri non latini.
-* I tasti possono ora essere riassegnati usando la finestra Gesti e Tasti di
-  Immissione di NVDA.
+
+* Nel gestore componenti aggiuntivi è disponibile la guida dell'add-on.
 
 ## Novità nella versione 1.0 ##
-* Versione Iniziale.
-* Tradotto in: portoghese brasiliano, farsi, finlandese, francese,
-  galiziano, tedesco, italiano, giapponese, coreano, nepalese, portoghese,
-  spagnolo, slovacco, sloveno, tamil.
 
+* Versione iniziale.
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=pm
+[1]: https://addons.nvda-project.org/files/get.php?file=rf
 
-[2]: https://addons.nvda-project.org/files/get.php?file=pm-dev
+[2]: https://addons.nvda-project.org/files/get.php?file=rf-dev
 
-[3]: https://addons.nvda-project.org/files/get.php?file=pm-o
+[3]: https://addons.nvda-project.org/files/get.php?file=rf-o

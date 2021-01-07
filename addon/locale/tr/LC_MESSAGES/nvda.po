@@ -1,341 +1,311 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
 msgid ""
 msgstr ""
-"Project-Id-Version: 'placeMarkers' '8.1\n"
-"Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
-"POT-Creation-Date: 2013-06-05 23:05+0200\n"
-"PO-Revision-Date: 2019-08-20 09:25+0300\n"
+"Project-Id-Version: Read feeds 4.0\n"
+"Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
+"POT-Creation-Date: 2020-10-12 15:31+0300\n"
+"PO-Revision-Date: 2020-12-26 16:22+0300\n"
 "Last-Translator: Çağrı Doğan <cagrid@hotmail.com>\n"
-"Language-Team: tr <cagrid@hotmail.com>\n"
+"Language-Team: cagrid@hotmail.com\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.3\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
+"X-Poedit-Basepath: ../../../globalPlugins/readFeeds\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-Basepath: ../../../globalPlugins\n"
+"X-Generator: Poedit 2.4.2\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#. Translators: label of a dialog presented when installing this addon and placeMarkersBackup is found.
+#. Translators: the label of a message box dialog.
 msgid ""
 "Your configuration folder for NVDA contains files that seem to be derived "
-"from a previous version of this add-on. Do you want to update it?"
+"from a previous version of this add-on.\n"
+"\t\t\tDo you want to update it?"
 msgstr ""
-"NVDA konfigürasyon dizininizde eklentinin önceki versiyonuyla ilgili "
-"dosyalar bulunuyor. Güncellemek ister misiniz?"
+"NVDA için yapılandırma klasörünüz, bu eklentinin önceki bir sürümünden "
+"türetilmiş gibi görünen dosyalar içeriyor. Güncellemek ister misiniz?"
 
-#. Translators: title of a dialog presented when installing this addon and placeMarkersBackup is found.
+#. Translators: the title of a message box dialog.
 msgid "Install or update add-on"
-msgstr "Eklenti kur ya da güncelle"
+msgstr "Eklentiyi yükleyin veya güncelleyin"
 
-#. Translators: message presented when a string of text has been copied to the clipboard.
-#, python-format
-msgid "%s copied to clipboard"
-msgstr "%s panoya kopyalandı"
-
-#. Translators: The title of the Specific Search dialog.
-msgid "Specific search"
-msgstr "Özel arama"
-
-#. Translators: The label of a combo box in the Specific Search dialog.
-msgid "Sa&ved texts"
-msgstr "&Kayıtlı m&etinler:"
-
-#. Translators: A label for a chekbox in the Specific search dialog.
-msgid "&Remove from history"
-msgstr "Geçmişten sil"
-
-#. Translators: The label of an edit box in the Specific Search dialog.
-msgid "&Text to search:"
-msgstr "Aranacak me&tin:"
-
-#. Translators: A label for a chekbox in the Specific search dialog.
-msgid "&Add to history"
-msgstr "Geçmişe ekle"
-
-#. Translators: Label for a set of radio buttons in the Specific search dialog.
-msgid "Action on s&earch"
-msgstr "&Eylem se&çimi"
-
-#. Translators: An action in the Search group of the Specific search dialog.
-msgid "Search &next"
-msgstr "So&nrakini ara"
-
-#. Translators: An action in the Search group of the Specific search dialog.
-msgid "Search &previous"
-msgstr "&Öncekini ara"
-
-#. Translators: An action in the Search group of the Specific search dialog.
-msgid "&Don't search"
-msgstr "A&rama"
-
-#. Translators: Message presented when place markers have been copied.
-msgid "Place markers copied"
-msgstr "Yerimleri kopyalandı"
-
-#. Translators: label of error dialog shown when cannot copy placeMarkers folder.
-msgid "Folder not copied"
-msgstr "Klasör kopyalanmadı"
-
-#. Translators: title of error dialog shown when cannot copy placeMarkers folder.
-msgid "Copy Error"
-msgstr "Kopyalama hatası"
-
-#. Translators: Message presented when place markers have been restored.
-msgid "Place markers restored"
-msgstr "Yerimleri geri yüklendi"
-
-#. Translators: The title of the Notes dialog.
-msgid "Notes"
-msgstr "Notlar"
-
-#. Translators: The label of a list box in the Notes dialog.
-msgid "&Bookmarks"
-msgstr "&Yerimleri"
-
-#. Translators: The label of an edit box in the Notes dialog.
-msgid "Not&e:"
-msgstr "No&t:"
-
-#. Translators: The label for a button in the Notes dialog.
-msgid "&Save note"
-msgstr "Notu kayd&et"
-
-#. Translators: The label for a button in the Notes dialog.
-msgid "&Delete..."
-msgstr "S&il..."
-
-#. Translators: The confirmation prompt displayed when the user requests to delete a bookmark.
+#. Translators: message presented when feeds cannot be reported.
 msgid ""
-"This bookmark will be permanently deleted. This action cannot be undone."
-msgstr "Bu yer imi kalıcı olarak silinecektir. Bu işlem geri alınamaz."
+"Unable to refresh feed. Check your Internet conectivity or that the "
+"specified feed address is correct."
+msgstr ""
+"Akış güncellenemedi. İnternet bağlantınızı ya da  akış adresini kontrol edin"
 
-#. Translators: The message presented when all bookmarks have been deleted from the Notes dialog.
-#. Translators: message presented when the current document doesn't contain bookmarks.
-msgid "No bookmarks"
-msgstr "Yerimi bulunmuyor"
+#. Translators: Message presented when feeds have been copied.
+msgid "Feeds copied"
+msgstr "Kaynaklar kopyalandı"
 
-#. Translators: The title of the warning dialog when all bookmarks have been deleted.
-msgid "Bookmarks deleted"
-msgstr "Yerimleri silindi"
+#. Translators: label of error dialog shown when cannot copy feeds folder.
+msgid "Folder not copied"
+msgstr "Klasör kopyalanamadı"
+
+#. Translators: title of error dialog shown when cannot copy feeds folder.
+msgid "Copy Error"
+msgstr "Kopya Hatası"
+
+#. Translators: Message presented when feeds have been restored.
+msgid "Feeds restored"
+msgstr "Kaynaklar geri yüklendi"
+
+#. Translators: Title of a dialog.
+#, python-brace-format
+msgid "Feeds: {defaultFeed} ({configProfile})"
+msgstr "Haber Akışları: {defaultFeed} ({configProfile})"
+
+#. Translators: Label of a dialog (message translated in NVDA's core in different contexts).
+msgid "&Filter by:"
+msgstr "&Filtreleme kriteri:"
+
+#. Translators: The label of a button to open the list of articles of a feed.
+msgid "List of &articles..."
+msgstr "Haber &listesi..."
+
+#. Translators: The label of a button to open a feed.
+msgid "&Open feed"
+msgstr "&Akışı aç"
+
+#. Translators: The label of a button to open a feed as HTML.
+msgid "Open feed as &HTML"
+msgstr "Akışı &HTML olarak aç"
+
+#. Translators: The label of a button to copy the feed URL.
+msgid "Cop&y feed address"
+msgstr "Akış adresini &kopyala"
+
+#. Translators: The label of a button to add a new feed.
+msgid "&New..."
+msgstr "&Yeni..."
+
+#. Translators: The label of a button to rename a feed.
+msgid "&Rename..."
+msgstr "Yeniden Adlandı&r..."
+
+#. Translators: The label of a button to delete a feed.
+msgid "&Delete..."
+msgstr "&Sil..."
+
+#. Translators: The label of a button to set a feed as default.
+msgid "S&et default"
+msgstr "Var&sayılan olarak ayarla"
+
+#. Translators: The label of a button to open a folder containing a backup of feeds.
+msgid "Open &folder containing a backup of feeds"
+msgstr "Akışların &yedeğini içeren klasörü açın"
+
+#. Translators: The label of a button to open the settings dialog for readFeeds.
+msgid "&Preferences..."
+msgstr "&Tercihler..."
+
+#. Translators: Message presented when a feed cannot be added.
+#, python-format
+msgid "Cannot add feed: %s"
+msgstr "Akış eklenemiyor: %s"
+
+#. Translators: error message.
+msgid "Error"
+msgstr "Hata"
+
+#. Translators: the label of a message box dialog.
+#, python-brace-format
+msgid ""
+"Do you want to copy feed address to the clipboard\r\n"
+"\r\n"
+"{feedAddress}?"
+msgstr ""
+"Akış adresini panoya kopyalamak istiyor musunuz?\r\n"
+"\r\n"
+"{feedAddress}?"
+
+#. Translators: the title of a message box dialog.
+msgid "Copy feed address"
+msgstr "Akış adresini kopyala"
+
+#. Translators: Label of a dialog.
+msgid "Address of a new feed:"
+msgstr "Yeni bir Akış adresi:"
+
+#. Translators: The title of a dialog to create a new feed.
+msgid "New feed"
+msgstr "Yeni kaynak"
+
+#. Translators: The confirmation prompt displayed when the user requests to delete a feed.
+msgid "Are you sure you want to delete this feed? This cannot be undone."
+msgstr "Bu kaynağı silmek istediğinizden emin misiniz? Bu işlem geri alınamaz."
+
+#. Translators: The label of a field to enter a new name for a feed.
+msgid "New name:"
+msgstr "Yeni ad:"
+
+#. Translators: The title of a dialog to rename a feed.
+msgid "Rename feed"
+msgstr "Akış adını değiştir"
+
+#. Translators: The label of the articles list in the articles dialog.
+msgid "List of articles"
+msgstr "Haber &listesi"
+
+#. Translators: The label of a button to open the selected article of a feed.
+msgid "Open &web page of selected article."
+msgstr "Seçili haberle ilgili web sayfasını aç."
+
+#. Translators: The label of a button to show information of a feed article.
+msgid "&About article..."
+msgstr "Haber hakkında..."
+
+#. Translators: the label of a message box dialog.
+#, python-format
+msgid "%sDo you want to copy article title and link to the clipboard?"
+msgstr "%sMakale başlığı ve adresini panoya kopyalamak istiyor musunuz?"
+
+#. Translators: the title of a message box dialog.
+msgid "Article information"
+msgstr "haber bilgisi"
 
 #. Translators: The title of the Copy dialog.
-msgid "Copy place markers"
-msgstr "Yerimlerini kopyala"
+msgid "Copy feeds"
+msgstr "Akışları kopyala"
 
 #. Translators: An informational message displayed in the Copy dialog.
-msgid "Select a folder to save a backup of your current place markers."
-msgstr "Mevcut yerimlerinizin yedekleneceği klasörü seçin."
+msgid "Select a folder to save a backup of your current feeds"
+msgstr "Mevcut kaynakları yedeklemek için bir klasör seçin"
 
 #. Translators: The label of a grouping containing controls to select the destination directory in the Copy dialog.
 msgid "directory for backup:"
-msgstr "Yedekleme dizini:"
+msgstr "Yedekleme için klasör:"
 
-#. Translators: The title of the dialog presented when browsing for the destination directory when copying place markers.
+#. Translators: The title of the dialog presented when browsing for the destination directory when copying feeds.
 msgid "Select directory to copy"
-msgstr "Kopyalanacak dizini seçin"
+msgstr "Kopyalanacak klasörü seçin"
 
 #. Translators: The title of the Restore dialog.
-msgid "Restore place markers"
-msgstr "Yerimlerini geri yükle"
+msgid "Restore feeds"
+msgstr "Akışları geri yükle"
 
 #. Translators: An informational message displayed in the Restore dialog.
-msgid ""
-"Select a folder to restore a backup of your previous copied place markers."
-msgstr ""
-"Daha önce yedeklediğiniz yerimlerini geri yüklemek için bir klasör seçin."
+msgid "Select a folder to restore a backup of your previous copied feeds"
+msgstr "Daha önce yedeklediğiniz kaynakları geri yüklemek için klasör seçin"
 
 #. Translators: The label of a grouping containing controls to select the destination directory in the Restore dialog.
 msgid "directory containing backup:"
-msgstr "Yedeği içeren klasör:"
+msgstr "Yedeğin bulunduğu klasör:"
 
-#. Translators: The title of the dialog presented when browsing for the destination directory when restoring place markers.
+#. Translators: The title of the dialog presented when browsing for the destination directory when restoring feeds.
 msgid "Select directory to restore"
-msgstr "Geri yüklenecek klasörü seçin"
+msgstr "Geri yüklemek için klasör seçin"
 
-#. Translators: the name of addon submenu.
-msgid "P&lace markers"
-msgstr "Yerim&leri"
+#. Translators: label of a dialog.
+msgid "&Search edit box after feeds list"
+msgstr "&Filtreleme kriteri akış listesi sonrasında"
 
-#. Translators: the tooltip text for addon submenu.
-msgid "Bookmarks and Search menu"
-msgstr "Yerimi ve arama menüsü"
+#. Translators: Presented when the current article does not have an associated title.
+msgid "Unable to locate article title."
+msgstr "Haberin başlığı alınamadı."
 
-#. Translators: the name for an item of addon submenu.
-msgid "&Specific search folder"
-msgstr "özel arama kla&sörü"
+#. Translators: Presented when the current article does not have an associated link.
+msgid "Unable to locate article link."
+msgstr "Haberin bağlantısı alınamadı."
 
-#. Translators: the tooltip text for an item of addon submenu.
-msgid "Opens the specific search folder"
-msgstr "Özel arama klasörünü açar"
+#. Translators: Label of a checkbox to choose if date should be presented for each feed.
+msgid "Show date"
+msgstr "Tarihi göster"
 
-#. Translators: the name for an item of addon submenu.
-msgid "&Bookmarks folder"
-msgstr "Yerimi &Klasörü"
+#. Translators: Label for a checkbox to show buttons for copying to clipboard.
+msgid "Show buttons to copy"
+msgstr "Kopyalama düğmelerini göster"
 
-#. Translators: the tooltip text for an item of addon submenu.
-msgid "Opens the bookmarks folder"
-msgstr "Yerimi klasörünü açar"
+#. Translators: Label for a button to copy to clipboard.
+msgid "Copy"
+msgstr "Kopyala"
 
-#. Translators: the name for an item of addon submenu.
-msgid "&Copy placeMarkers folder..."
-msgstr "&Yerimi klasörünü kopyala"
+#. Translators: the name of a submenu.
+msgid "&Read Feeds"
+msgstr "R&SS Akışlarını Oku"
 
-#. Translators: the tooltip text for an item of addon submenu.
-msgid "Backup of place markers"
-msgstr "Yerimleri yedeği"
+#. Translators: the name of a menu item.
+msgid "&Feeds..."
+msgstr "Akış &listesi..."
 
-#. Translators: the name for an item of addon submenu.
-msgid "R&estore place markers..."
-msgstr "Y&erimlerini geri al"
+#. Translators: the name of a menu item.
+msgid "&Copy feeds folder..."
+msgstr "Besleme dizinini yede&kle..."
 
-#. Translators: the tooltip text for an item of addon submenu.
-msgid "Restore previously saved place markers"
-msgstr "Önceden kaydedilen yerimlerini geri al"
+#. Translators: the name of a menu item.
+msgid "R&estore feeds..."
+msgstr "Akışları ge&ri yükle..."
 
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid "Opens the specific search folder."
-msgstr "Özel arama klasörünü açar"
+#. Translators: message presented in input mode.
+msgid "Activates the Feeds dialog of Read Feeds."
+msgstr "Akış listesini açar."
 
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid "Opens the bookmarks folder."
-msgstr "Yerimi klasörünü açar"
+#. Translators: message presented in input mode.
+msgid "Activates the Copy dialog of Read Feeds."
+msgstr "Akışları oku'nun kopyalama iletişim kutusunu açar."
 
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
+#. Translators: message presented in input mode.
+msgid "Activates the Restore dialog of Read Feeds."
+msgstr "Akışları Oku'nun geri yükleme iletişim kutusunu açar."
+
+#. Translators: message presented in input mode.
 #, python-format
-msgid "Activates the Copy dialog of %s."
-msgstr "%s Kopyalama iletişim kutusunu açar."
+msgid "Shows the %s settings."
+msgstr "%s ayarlar iletişim kutusunu göster"
 
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-#, python-format
-msgid "Activates the Restore dialog of %s."
-msgstr "%s geri yükleme iletişim kutusunu açar."
+#. Translators: message presented in input mode.
+msgid "Refreshes the current feed and announces the most recent article title."
+msgstr "Akışı günceller ve ilk haber başlığını okur"
 
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
+#. Translators: message presented in input mode.
 msgid ""
-"finds a text string from the current cursor position for a specific document."
+"Announces the title of the current article. Pressed two times, copies title "
+"and related link to the clipboard."
 msgstr ""
-"Özel bir belge içinde imlecin mevcut konumundan itibaren özel bir metin arar"
+"Mevcut haberin başlığını okur. İki kez basılırsa başlık ve adres  panoya "
+"kopyalanır."
 
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid ""
-"finds the next occurrence of the last text searched for any specific "
-"document."
+#. Translators: message presented when the information about an article of a feed is copied to the clipboard.
+#, python-format
+msgid "Copied to clipboard %s"
+msgstr "%s panoya kopyalandı"
+
+#. Translators: message presented in input mode.
+msgid "Announces the title of the next article."
+msgstr "Sonraki haber başlığını okur"
+
+#. Translators: message presented in input mode.
+msgid "Announces the title of the previous article."
+msgstr "Önceki haber başlığını okur"
+
+#. Translators: message presented in input mode.
+msgid "Announces article link, when pressed two times, opens related web page."
 msgstr ""
-"Özel bir belge içinde daha önce aranan metni belgenin sonraki kısmında arar"
+"Mevcut haberin web adresini okur. İki kez basılırsa haberin girildiği web "
+"sayfası açılır."
 
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid ""
-"finds the previous occurrence of the last text searched for any specific "
-"document."
-msgstr ""
-"Özel bir belge içinde daha önce aranan metni belgenin önceki kısmında arar"
-
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid "Show the Notes dialog for a specific document."
-msgstr "Belli bir belgeyle ilgili notlar iletişim kutusunu gösterir."
-
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid "Saves the current position as a bookmark."
-msgstr "Mevcut konumu yerimi olarak kaydeder"
-
-#. Translators: message presented when a position is saved as a bookmark.
-#, python-format
-msgid "Saved position at character %d"
-msgstr "Kaydedilen konum %d karakter"
-
-#. Translators: message presented when a bookmark cannot be saved.
-msgid "Cannot save bookmark"
-msgstr "Yerimi kaydedilemedi"
-
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid "Deletes the current bookmark."
-msgstr "Mevcut yerimini siler"
-
-#. Translators: message presented when the current document has bookmarks, but none is selected.
-msgid "No bookmark selected"
-msgstr "Seçili yerimi yok"
-
-#. Translators: message presented when a bookmark is deleted.
-msgid "Bookmark deleted"
-msgstr "Yerimi silindi"
-
-#. Translators: message presented when cannot delete a bookmark.
-msgid "Cannot delete bookmark"
-msgstr "Yerimi silinemiyor"
-
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid "Moves to the next bookmark."
-msgstr "Sonraki yerimine gider"
-
-#. Translators: message presented when trying to select a bookmark, but none is found.
-msgid "No bookmarks found"
-msgstr "Yerimi bulunamadı"
-
-#. Translators: message presented when a bookmark is selected.
-#, python-format
-msgid "Position: character %d"
-msgstr "konum: karakter %d"
-
-#. Translators: message presented when the next bookmark is not found.
-msgid "Next bookmark not found"
-msgstr "Sonraki yerimi bulunamadı"
-
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid "Moves to the previous bookmark."
-msgstr "Önceki yerimine gider"
-
-#. Translators: message presented when the previous bookmark is not found.
-msgid "Previous bookmark not found"
-msgstr "Önceki yerimi bulunamadı"
-
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid "Copies the name of the current file for place markers to the clipboard."
-msgstr "Yerimleri için kullanılan dosya adını panoya kopyalar"
-
-#. Translators: message presented when cannot copy the file name corresponding to place markers.
-msgid "Cannot copy file name for place markers"
-msgstr "Yerimleri için dosya adı kopyalanamadı"
-
-#. Translators: message presented when file name for place markers is copied to clipboard.
-msgid "Place markers file name copied to clipboard"
-msgstr "Yerimi dosya adı panoya kopyalandı"
-
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid "Saves the current position as a temporary bookmark."
-msgstr "Mevcut konumu geçici yerimi olarak kaydeder"
-
-#. Translators: Message presented when a temporary bookmark is saved.
-#, python-format
-msgid "Saved temporary bookmark at position %d"
-msgstr "%d konumunda geçici yer imi kaydedildi"
-
-#. Translators: Message presented in input help mode.
-msgid "Moves to the temporary bookmark for the current document."
-msgstr "Mevcut belgede geçici yer imine gider"
+#. Translators: message presented in input mode.
+msgid "Copies title and related link of the current article to the clipboard."
+msgstr "Mevcut haber başlığı ve linkini panoya kopyalar."
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
-msgid "Place markers"
-msgstr "Yerimleri"
+msgid "Read Feeds"
+msgstr "Akışları Oku"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
-msgid "Add-on for setting place markers on specific virtual documents"
-msgstr "Sanal dokümanlar için yerimi eklentisi"
+msgid "Add-on for using NVDA as a feed reader."
+msgstr "NVDA'yı bir yayın okuyucu olarak kullanmak için eklenti."
 
-#~ msgid "Bookmark cannot be saved"
-#~ msgstr "Yerimi kaydedilemedi"
+#~ msgid ""
+#~ "You have installed the ReadFeeds add-on, probably an old and incompatible "
+#~ "version with this one. Do you want to uninstall the old version?"
+#~ msgstr ""
+#~ "Muhtemelen bunun eski ve uyumsuz bir sürümü olan ReadFeeds eklentisini "
+#~ "yüklediniz. Eski sürümü kaldırmak istiyor musunuz?"
 
-#~ msgid "Bookmark cannot be deleted"
-#~ msgstr "Yerimi silinemedi"
-
-#~ msgid "Cannot find any bookmarks"
-#~ msgstr "Yerimi bulunamadı"
-
-#~ msgid "Case &sensitive"
-#~ msgstr "Büyük &küçük harf duyarlı"
+#~ msgid "Uninstall incompatible add-on"
+#~ msgstr "Uyumsuz eklentiyi kaldırın"

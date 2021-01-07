@@ -1,193 +1,210 @@
-# Lesezeichen #
-* Autoren: Noelia, Chris.
-* NVDA-Kompatibilität: 2019.3 oder höher.
+# RSS-Feeds lesen #
+
+* Autoren: Noelia Ruiz Martínez, Mesar Hameed
+* NVDA-Kompatibilität: 2019.3 oder neuer
 * [Stabile Version herunterladen][1]
 * [Entwicklerversion herunterladen][2]
 
-Mit dieser Erweiterung können Sie innerhalb des Lesemodus von NVDA
-Suchanfragen oder Lesezeichen speichern Bzw. Suchläufe durchführen. Die
-Erweiterung kann auch dazu verwendet werden, Suchanfragen in mehrzeiligen
-Elementen zu starten und zu speichern. Wenn der Cursor nicht an die
-Fundposition gezogen werden kann, wird die Stelle in die Zwischenablage
-kopiert, sodass Sie den Text mittels anderer Tools suchen können. Die
-Lesezeichen und Suchanfragen werden dabei in Text- und «pickle»-Dateien
-gespeichert. Die Namen der Dateien richten sich dabei nach den Titeln und
-URLs der angezeigten Dokumente.
 
-## Tastenkombinationen: ##
+Diese Erweiterung bietet eine einfache Möglichkeit, RSS-Feeds in den
+Formaten Atom oder RSS mit NVDA zu lesen. Die Feeds werden nicht automatisch
+aktualisiert. Wenn wir weiter unten  von Feeds sprechen, dann meinen wir
+sowohl RSS- als auch  ATOM-Feeds.
 
-*	STRG+Umschalt+NVDA+f: Öffnet einen Dialog mit einem Eingabefeld, in dem
-  die zuletzt gespeicherte Suche angezeigt wird. In diesem Dialog können Sie
-  auch die zuvor gespeicherten Suchen aus einem Kombinationsfeld auswählen
-  oder die ausgewählte Zeichenkette über ein Kontrollkästchen aus dem
-  Verlauf entfernen. Sie können wählen, ob der im Eingabefeld enthaltene
-  Text im Verlauf Ihrer gespeicherten Texte aufgenommen werden soll. Wählen
-  Sie abschließend eine Aktion aus der nächsten Gruppe von Auswahlschaltern
-  aus (weiter suchen, Rückwärtssuche oder keine Suche) und geben Sie an, ob
-  NVDA die Groß- und Kleinschreibung berücksichtigen soll. Wenn Sie auf OK
-  drücken, sucht NVDA nach dieser Zeichenfolge.
-*	STRG+Umschalt+NVDA+k: Speichert die aktuelle Position als
-  Lesezeichen. Wenn Sie einen Namen für dieses Lesezeichen vergeben möchten,
-  wählen Sie einen Teil vom Text an dieser Position aus, bevor Sie das
-  Lesezeichen speichern.
-*	STRG+Umschalt+NVDA+Entfernen: Löscht das Lesezeichen an der aktuellen
-  Position.
-*	NVDA+K: Wechselt zum nächsten Lesezeichen.
-*	Umschalt+NVDA+K: Wechselt zum vorherigen Lesezeichen.
-*	Nicht zugewiesen: Zeigt die Datei, in welcher die Lesezeichen gespeichert
-  werden im Lesemodus, ohne deren Erweiterung an.
-*	Alt+NVDA+K: Öffnet einen Dialog mit den für dieses Dokument gespeicherten
-  Lesezeichen. Sie können für jedes Lesezeichen eine Notiz schreiben. Mit
-  Klicken auf "Notiz speichern" können Sie die Änderungen speichern. Mit
-  "Entfernen" können Sie das ausgewählte Lesezeichen löschen und mit dem
-  Schalter OK können Sie zur gewählten Position springen.
-*	Nicht zugewiesen: speichert die Position als temporäres Lesezeichen.
-*	Nicht zugewiesen: springt zum temporären Lesezeichen für das aktuelle
-  Dokument.
-*	Nicht zugeordnet: Findet das nächste Vorkommen des zuletzt gesuchten
-  Textes in einem bestimmten Dokument.
-*	Nicht zugeordnet: Findet das vorherige Vorkommen des zuletzt gesuchten
-  Textes in einem bestimmten Dokument.
+## Installation oder Update ##
 
+Wenn Sie eine frühere Version dieser Erweiterung verwendet haben und in
+Ihrem persönlichen NVDA-Konfigurationsordner ein RSS- oder
+personalFeeds-Ordner vorhanden ist, wird bei der Installation der aktuellen
+Version ein Dialogfeld angezeigt. In diesem Dialog werden Sie gefragt, ob
+Sie eine Aktualisierung oder eine Installation durchführen möchten.  Wählen
+Sie aktualisieren, um Ihre gespeicherten Feeds zu behalten und sie in der
+neu installierten Version von RSS-Feed-Reader weiter zu verwenden.
 
-## Lesezeichen Untermenü (nvda+n) ##
+## Befehle ##
 
-Über das Untermenü Lesezeichen in NVDA-Einstellungen können Sie auf folgende
-Elemente zugreifen:
+### Feed-Reader-Menü ###
 
-*	Suchanfragen: Öffnet einen Ordner, in dem zuvor gespeicherte Suchanfragen
-  abgelegt sind.
-*	Lesezeichen-Ordner: öffnet einen Ordner mit gespeicherten Lesezeichen.
-*	Lesezeichen-Ordner kopieren: Speichert eine Kopie des Lesezeichen-Ordners.
-*	Lesezeichen wiederherstellen: Stellt die Lesezeichen aus einem zuvor
-  gespeicherten Lesezeichen-Ordner wieder her.
+Sie können auf das Untermenü RSS-Feed-Reader aus dem NVDA-Menü, Untermenü
+Extras zugreifen. Es stehen folgende Menüoptionen zur Verfügung:
 
-Anmerkung: Die Lesezeichen basieren auf der Position im Dokument (welche in
-Zeichen vom Dokumentanfang gemessen wird). Bei dynamischen Webseiten
-empfielt sich daher stattdessen Suchanfragen zu verwenden.
+#### RSS-Feeds ####
 
-## Änderungen für 14.0 ##
-*	Der Befehl zum Kopieren des Namens der Datei, in der Lesezeichen
-  gespeichert werden, wurde durch einen Befehl ersetzt, der diesen
-  Dateinamen im Lesemodus anzeigt. Dies ist keiner Geste zugewiesen.
-*	Das Feld "suchen" überlappt nun nicht mehr das Feld "gespeicherter
-  Text". (Danke an Cyrille Bougot).
-*	Erfordert NVDA 2019.3 oder höher.
+Öffnet einen Dialog mit den folgenden Steuerelementen:
 
-## Änderungen in 13.0 ##
-*	Es wurden nicht zugewiesene Befehle hinzugefügt, um das nächste und
-  vorherige Auftreten des zuletzt gesuchten Textes in einem bestimmten
-  Dokument zu finden.
-*	Die spezifische Suche funktioniert auch, wenn das Dialogfeld "Info" von
-  NVDA geöffnet ist.
-*	Im Dialogfeld Spezifische Suche wird das Kontrollkästchen für die
-  Berücksichtigung der Groß-/Kleinschreibung aktiviert, wenn diese Option
-  für die letzte Suche ausgewählt wurde.
-*	Bei der Aktualisierung dieser Erweiterung werden die in der vorherigen
-  Version gespeicherten Lesezeichen und Zeichenketten aus der spezifischen
-  Suche automatisch in die neue Version kopiert, es sei denn, Sie möchten
-  ausdrücklich, dass diese aus dem Hauptkonfigurationsordner von NVDA
-  importiert werden.
-*	Wenn Sie den Dialog zum Kopieren von Lesezeichen verwenden und der
-  ausgewählte Ordner nicht "placeMarkersBackup" heißt, wird ein Unterordner
-  mit diesem Namen erstellt, um das Löschen von Verzeichnissen mit wichtigen
-  Daten wie Dokumente oder Downloads zu verhindern.
+* Filtern nach: Ein Eingabefeld, um zuvor gespeicherte Feeds zu durchsuchen.
+* Eine Liste der gespeicherten RSS-Feeds, die beim Öffnen des Dialogfelds
+  hervorgehoben werden.
+* Liste der Artikel: Öffnet einen Dialog, der die Artikelliste aus Ihrem
+  aktuellen Feed anzeigt. Wählen Sie den Artikel, den Sie lesen möchten, und
+  drücken Sie die Eingabetaste oder die Schaltfläche Webseite des
+  ausgewählten Artikels öffnen, um die entsprechende Seite in Ihrem Browser
+  zu öffnen. Klicken Sie auf die Schaltfläche Info-Artikel, um einen Dialog
+  mit Titel und Link des ausgewählten Artikels zu öffnen; von diesem Dialog
+  aus können Sie diese Informationen in die Zwischenablage kopieren.
+* Feed öffnen: Öffnet den ausgewählten Feed in der Standardanwendung.
+* RSS-Feed als HTML öffnen: Öffnet den ausgewählten RSS-Feed im
+  Standard-Webbrowser. Sie können Veröffentlichungsdaten und Schaltflächen
+  ein- oder ausblenden, um Informationen zu Artikeln in die Zwischenablage
+  zu kopieren.
+* Adresse des RSS-Feed kopieren: Öffnet ein Dialogfeld, in dem bestätigt
+  wird, ob die Feed-Adresse in die Zwischenablage kopiert werden soll.
+* Neu: Öffnet einen Dialog mit einem Eingabefeld zur Eingabe der Adresse
+  eines neuen RSS-Feeds. Wenn die Adresse gültig ist und der Feed
+  gespeichert werden kann, erscheint sein Name, basierend auf dem
+  Feed-Titel, am Ende der Liste der RSS-Feeds.
+* Umbenennen: Öffnet einen Dialog mit einem Eingabefeld zum Umbenennen des
+  ausgewählten Feeds.
+* Löschen: Öffnet einen Dialog zum Löschen des ausgewählten Feeds.
+* Als standard festlegen: Legt den ausgewählten RSS-Feed als Standard fest,
+  so dass auf seine Artikel mit den Tastenkürzel von NVDA zugegriffen werden
+  kann.
+* Backup Ordner öffnen: Öffnet einen Ordner, in welchem Sicherungsdateien
+  der RSS Feeds enthalten sein können. In diesem Ordner können die Feeds
+  gelöscht werden, welche bei einer Aktualisierung der Erweiterung nicht
+  importiert werden sollen.
+* Einstellungen: Öffnet das Dialogfeld mit den Einstellungen der
+  erweiterung, der auch im NVDA-Menü "Einstellungen", "Einstellungen" und
+  "RSS-Feeds lesen" verfügbar ist.
+* Schließen: Schließt den Dialog.
 
-## Änderungen für 12.0 ##
-*	Es wurde ein kritischer Fehler behoben, der dazu führte, dass NVDA beim
-  Versuch, den Notizen-Dialog zu öffnen, abstürzte, wenn chinesische Zeichen
-  ausgewählt wurden bevor Lesezeichen gespeichert wurden.
+##### Hinweise #####
 
-## Änderungen in 11.0 ##
-*	Kompatibel mit NVDA 2018.3 oder neuer (erforderlich).
-*	Bei Bedarf können Sie die [letzte Version][3], die mit NVDA 2017.3
-  kompatibel ist herunterladen.
+* Wenn ein Feed namens tempFeed erstellt wird, benennen Sie ihn bitte
+  um. Andernfalls könnte er ersetzt werden, wenn erneut ein Ordner mit
+  diesem Namen erstellt wird.
+* Der als Standard eingestellte Feed kann nicht entfernt werden. Der
+  AddressFile-Feed wird als Standard verwendet, wenn die Konfiguration
+  zurückgesetzt wird. Daher kann dieser Ordner nicht gelöscht werden.
+* Das Bearbeitungsfeld Filtern nach kann nach der Schaltfläche Artikel
+  öffnen im NVDA-Menü, Einstellungen, Einstellungen, Feeds lesen oder durch
+  Klicken auf die Schaltfläche Einstellungen im Dialogfeld Feeds platziert
+  werden.
+
+#### Ordner der RSS-Feeds kopieren ####
+
+Öffnet einen Dialog, in dem Sie einen Ordner auswählen können, um Ihre
+persönlichen RSS Feed Artikel zu speichern. Standardmäßig ist der
+ausgewählte Ordner das Konfigurationsverzeichnis von NVDA und der Ordner
+heißt personalFeeds.
+
+#### RSS-Feeds wiederherstellen ####
+
+Öffnet einen Dialog um einen Ordner zu wählen, der ihren Ordner mit
+persönlichen FEEDS ersetzt. Stellen Sie sicher, dass Sie einen Ordner
+wählen, der URLs von RSS Feeds enthält.
+
+### Tastaturbefehle ###
+
+* STRG+Umschalt+NVDA+Leertaste: Sagt die aktuelle Adresse des Artikels
+  an. Zweimaliges Drücken öffnet die Webseite des Artikels.
+* STRG+Umschalt+NVDA+8: Der ausgewählte RSS-Feed wird neu geladen und der
+  aktuellste Titel wird angesagt.
+* Strg+Umschalt+NVDA+I: Sagt den aktuellen Feed-Titel und -Link an. Durch
+  zweimaliges Drücken wird der Titel und der zugehörige Link in die
+  Zwischenablage kopiert.
+* STRG+Umschalt+NVDA+U: Sagt den Titel des vorherigen RSS-Feeds an.
+* STRG+Umschalt+NVDA+O: Sagt den Titel des nächsten RSS-Feeds an.
+
+## Benachrichtigungen ##
+
+* Wenn der Titel oder die URL kopiert wurden.
+* Wenn die Verbindung / das Neuladen eines RSS-Feeds fehlgeschlagen ist,
+  oder wenn die URL nicht mit einem gültigen Feed übereinstimmt.
+* NVDA zeigt eine Fehlermeldung an, wenn der Ordner "personalFeeds" nicht
+  gespeichert oder wiederhergestellt sowie wenn kein neuer Feed erstellt
+  werden konnte.
+* Im Titel des Dialogs für die Artikellisten werden der Name des
+  ausgewählten Feeds und die Anzahl der verfügbaren Artikel angezeigt.
 
 ## Änderungen in 10.0 ##
-*	In Microsoft Edge, vor allem in langen Dokumenten, werden bestimmte
-  Tastenkombinationen zur Anwendung weitergereicht ohne den Cursor zu einem
-  Lesezeichen zu bewegen, um Fehlermeldungen zu vermeiden. Dies gilt für
-  Tastenkombinationen, die für das Auswählen von Lesezeichen zugewiesen
-  wurden (z.B. NVDA+k, NVDA+Umschalt+k oder NVDA+Alt+k).
-*	Die gezielte Suche nach Lesezeichen funktioniert jetzt auch in Microsoft
-  Edge.
 
-## Änderungen in 9.0
-*	Der NVDA-Cursor folgt dem System-Cursor, wenn Sie aus dem Dialog für
-  Notizen zu einem Lesezeichen springen.
-*	Der Befehl zum Auswählen des vorherigen Lesezeichens funktioniert wieder
-  ordnungsgemäß.
-*	Lesezeichen können aus dem Dialog für Notizen gelöscht werden.
-*	Nun können dokumentspezifische Tastenkombinationen im NVDA Eingabendialog
-  zugewiesen werden, um temporäre Lesezeichen in einem bestimmten Dokument
-  anzusteuern und zu speichern.
+* Es wurde eine Schaltfläche hinzugefügt, um den ausgewählten RSS-Feed als
+  HTML im Standard-Webbrowser zu öffnen.
+* Wenn kein neuer RSS-Feed erstellt werden konnte, wird dies in einem
+  Fehlerdialog angezeigt.
+* Verbesserte Reihenfolge und Präsentation einiger Artikel.
+* Weitere Feeds werden möglicherweise unterstützt.
+* Wenn das Dialogfeld "Feeds" geöffnet wird, wird die Liste der Feeds
+  anstelle des Bearbeitungsfelds "Suche" hervorgehoben.
+* Sie können auswählen, ob das Suchfeld für die Suche hinter der Liste der
+  Feeds platziert werden soll. Dies ist nützlich, um die Liste auch dann zu
+  fokussieren, wenn Sie aus einem anderen Fenster wechseln, ohne das
+  Dialogfeld "Feeds" zu schließen.
+* Es wurde eine Schaltfläche hinzugefügt, um die Adresse des RSS-Feed aus
+  dem Dialogfeld der Feeds in die Zwischenablage zu kopieren.
+
+## Änderungen für 9.0 ##
+
+* Erfordert NVDA 2019.3 oder höher.
 
 ## Änderungen in 8.0 ##
-*	Fragment-Identifikatoren aus den Dateinamen der Lesezeichen
-  entfernt. Dadurch werden Fehler im  ePUBREADER VitalSource Bookshelf
-  vermieden.
-*	Ein Notizen-Dialog wurde hinzugefügt, um Kommentare für gespeicherte
-  Lesezeichen zuzuordnen und an die ausgewählte Position zu verschieben.
 
-## Änderungen in 7.0 ##
-*	Der Dialog zum Speichern einer Zeichenkette für die spezifische Suche
-  wurde entfernt. Diese Funktionalität ist nun auch im Dialog Spezifische
-  Suche enthalten, der neu gestaltet wurde, um verschiedene Aktionen beim
-  Drücken der Schaltfläche OK zu ermöglichen.
-*	Die visuelle Darstellung der Dialoge wurde verbessert und entspricht dem
-  Erscheinungsbild der Dialoge in NVDA.
-*	Wenn Sie im Lesemodus den Befehl"Weiter suchen" oder"Rückwärtssuche"
-  ausführen, wird nun korrekt nach Groß- und Kleinschreibung gesucht, sofern
-  bei der ursprünglichen Suche die Groß- und Kleinschreibung beachtet wurde.
-*	Benötigt NVDA 2016.4 oder höher.
-*	Nun können Tastenkombinationen im NVDA Eingabendialog unter Einstellungen
-  zugewiesen werden, um die Dialogfelder Lesezeichen Kopieren und
-  Wiederherstellen aufzurufen.
-*	NVDA zeigt eine Meldung an, wenn Lesezeichen kopiert oder mit den
-  entsprechenden Dialogen wiederhergestellt wurden.
+* Bei der Aktualisierung dieser Erweiterung werden die in der vorherigen
+  Version gespeicherten Feeds automatisch in die neue Version kopiert, es
+  sei denn, Sie möchten ausdrücklich, dass Feeds aus dem
+  Hauptkonfigurationsordner von NVDA importiert werden.
+* Wenn Sie den Dialog zum Kopieren von Feeds verwenden und der ausgewählte
+  Ordner nicht "personalFeeds" heißt, wird ein Unterordner mit diesem Namen
+  erstellt, um das Löschen von Verzeichnissen mit wichtigen Daten wie
+  Dokumente oder Downloads zu verhindern.
 
-## Änderungen in 6.0 ##
-* Wenn die Funktionen der Erweiterung nicht verfügbar sind, werden die
-  Tastenkombinationen an die aktuelle Anwendung weitergereicht.
+## Änderungen bis 7.0 ##
 
-## Änderungen in 5.0 ##
-* Die Groß- und Kleinschreibung kann nun bei der Suche berücksichtigt
-  werden.
-* Der Menüpunkt Hilfe wurde aus dem Menü entfernt.
-* Tastenkürzel sind nun intuitiver.
+* Der RSS Feeds Dialog wird mit einen Schalter erweitert, um einen
+  Backup-Ordner zu öffnen, der die Sicherungsdateien der Feeds enthalten
+  kann.
+* Wenn die Eingabe in der Filterfunktion keine Ergebnisse liefert, werden
+  die Liste der Feeds und andere Dialogelemente nicht mehr angezeigt. Somit
+  meldet NVDA nicht mehr "unbekannt" in der leeren Liste.
+* Wenn die Liste der Artikel nicht angezeigt werden kann, beispielsweise
+  wegen Fehlern beim Rss Feed, wird NVDA einen Fehler auslösen. Dadurch
+  können Sie den RSS Feed Dialog nutzen, ohne NVDA neu starten zu müssen.
+
+## Änderungen bis 6.0 ##
+
+* Wenn der Standardfeed aktualisiert wurde und er aufgrund von
+  Serverproblemen nicht mehr funktioniert, werden die vorherigen Artikel
+  nicht gelöscht und können mit den entsprechenden Tastenkombinationen
+  gelesen werden.
+* Fehler behoben: Der Standardfeed kann noch zweimal aktualisiert werden.
+
+## Änderungen für 5.0 ##
+
+* Der Dialog der Artikelliste wurde erweitert.
+* Kompatibel mit NVDA 2018.3 oder neuer (erforderlich).
+* Bei Bedarf können Sie die [letzte Version][3], die mit NVDA 2017.3
+  kompatibel ist herunterladen.
 
 ## Änderungen in 4.0 ##
-* Fragment-Identifikatoren aus den Dateinamen der Lesezeichen
-  entfernt. Dadurch werden Fehler in der Erweiterung ePUBREADER für Firefox
-  vermieden.
-* Die Hilfe zur Erweiterung ist nun über den Erweiterungs-Manager verfügbar.
 
-## Änderungen in 3.1 ##
-* Aktualisierte Übersetzungen und neue Sprache.
-* Die Position von Lesezeichen wird nicht während der Navigation während
-  alles  lesen ausgegeben..
+* Schaltfläche zum Öffnen des ausgewählten Feeds über den Feed-Dialog
+  hinzugefügt.
 
 ## Änderungen in 3.0 ##
-* Unterstützung für "Navigation während alles lesen" hinzugefügt.
+
+* Die Dialoge zur Verwaltung von RSS-Feed-Dateien wurden entfernt. Jetzt ist
+  ihre Funktionalität im RSS-Feeds-Dialog enthalten.
+* Die visuelle Darstellung der Dialoge wurde verbessert und entspricht dem
+  Erscheinungsbild der Dialoge in NVDA.
+* Der Standard-Feed wird in der NVDA-Konfiguration gespeichert. Daher ist es
+  möglich, verschiedene Standard-Feeds in Konfigurationsprofilen
+  einzustellen.
+* NVDA 2016.4 oder höher ist erforderlich.
 
 ## Änderungen in 2.0 ##
-* Option zum Speichern und Löschen verschiedener Suchbegriffe für jede Datei
-  wurde hinzugefügt.
-* Fehler behoben, wenn Pfad-Angaben nichtlateinische Zeichen enthalten.
-* Tastenkombinationen können nun mittels des Eingaben-Dialogs von NVDA
-  geändert werden.
+
+* Hilfe zur Erweiterung ist über den Dialog "Erweiterungen verwalten"
+  verfügbar.
 
 ## Änderungen in 1.0 ##
-* Erstveröffentlichung.
-* Übersetzt in: brasilianisches Portugiesisch, Farsi, Finnisch, französisch,
-  Galizisch, deutsch, italienisch, japanisch, Koreanisch, Nepalesisch,
-  Portugiesisch, Spanisch, Slovakisch, Slovenisch, Tamil.
 
+* Ehrstveröffentlichung.
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=pm
+[1]: https://addons.nvda-project.org/files/get.php?file=rf
 
-[2]: https://addons.nvda-project.org/files/get.php?file=pm-dev
+[2]: https://addons.nvda-project.org/files/get.php?file=rf-dev
 
-[3]: https://addons.nvda-project.org/files/get.php?file=pm-o
+[3]: https://addons.nvda-project.org/files/get.php?file=rf-o

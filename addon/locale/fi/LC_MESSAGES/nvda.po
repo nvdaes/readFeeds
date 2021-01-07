@@ -5,10 +5,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: placeMarkers\n"
-"Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
-"POT-Creation-Date: 2013-06-05 23:05+0200\n"
-"PO-Revision-Date: 2019-08-16 17:06+0200\n"
+"Project-Id-Version: readFeeds\n"
+"Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
+"POT-Creation-Date: 2013-11-16 13:26+0100\n"
+"PO-Revision-Date: 2020-12-25 16:10+0200\n"
 "Last-Translator: Jani Kinnunen <jani.kinnunen@wippies.fi>\n"
 "Language-Team: Finnish <jani.kinnunen@wippies.fi>\n"
 "Language: fi\n"
@@ -18,322 +18,313 @@ msgstr ""
 "X-Generator: Poedit 1.6.11\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#. Translators: label of a dialog presented when installing this addon and placeMarkersBackup is found.
+#. Translators: the label of a message box dialog.
 msgid ""
 "Your configuration folder for NVDA contains files that seem to be derived "
-"from a previous version of this add-on. Do you want to update it?"
+"from a previous version of this add-on.\n"
+"\t\t\tDo you want to update it?"
 msgstr ""
-"NVDA:n asetushakemistossa on tiedostoja, jotka ovat peräisin tämän lisäosan "
-"aiemmasta versiosta. Haluatko päivittää ne?"
+"NVDA:n asetuskansiossa on tiedostoja, jotka ovat peräisin tämän lisäosan "
+"aiemmasta versiosta.\n"
+"\t\t\tHaluatko päivittää ne?"
 
-#. Translators: title of a dialog presented when installing this addon and placeMarkersBackup is found.
+#. Translators: the title of a message box dialog.
 msgid "Install or update add-on"
 msgstr "Lisäosan asennus tai päivitys"
 
-#. Translators: message presented when a string of text has been copied to the clipboard.
-#, python-format
-msgid "%s copied to clipboard"
-msgstr "%s kopioitu leikepöydälle"
+#. Translators: message presented when feeds cannot be reported.
+msgid ""
+"Unable to refresh feed. Check your Internet conectivity or that the "
+"specified feed address is correct."
+msgstr ""
+"Syötettä ei voi päivittää. Tarkista, että internet-yhteys on käytettävissä "
+"tai että määrittämäsi syötteen osoite on oikein."
 
-#. Translators: The title of the Specific Search dialog.
-msgid "Specific search"
-msgstr "Sivukohtainen haku"
+#. Translators: Message presented when feeds have been copied.
+msgid "Feeds copied"
+msgstr "Syötteet kopioitu"
 
-#. Translators: The label of a combo box in the Specific Search dialog.
-msgid "Sa&ved texts"
-msgstr "Ta&llennetut tekstit"
-
-#. Translators: A label for a chekbox in the Specific search dialog.
-msgid "&Remove from history"
-msgstr "&Poista historiasta"
-
-#. Translators: The label of an edit box in the Specific Search dialog.
-msgid "&Text to search:"
-msgstr "Ets&ittävä teksti:"
-
-#. Translators: A label for a chekbox in the Specific search dialog.
-msgid "&Add to history"
-msgstr "&Lisää historiaan"
-
-#. Translators: Label for a set of radio buttons in the Specific search dialog.
-msgid "Action on s&earch"
-msgstr "To&iminto"
-
-#. Translators: An action in the Search group of the Specific search dialog.
-msgid "Search &next"
-msgstr "Etsi &seuraava"
-
-#. Translators: An action in the Search group of the Specific search dialog.
-msgid "Search &previous"
-msgstr "Etsi &edellinen"
-
-#. Translators: An action in the Search group of the Specific search dialog.
-msgid "&Don't search"
-msgstr "&Ei hakua"
-
-#. Translators: Message presented when place markers have been copied.
-msgid "Place markers copied"
-msgstr "Paikkamerkit kopioitu"
-
-#. Translators: label of error dialog shown when cannot copy placeMarkers folder.
+#. Translators: label of error dialog shown when cannot copy feeds folder.
 msgid "Folder not copied"
 msgstr "Kansiota ei kopioitu"
 
-#. Translators: title of error dialog shown when cannot copy placeMarkers folder.
+#. Translators: title of error dialog shown when cannot copy feeds folder.
 msgid "Copy Error"
 msgstr "Kopiointivirhe"
 
-#. Translators: Message presented when place markers have been restored.
-msgid "Place markers restored"
-msgstr "Paikkamerkit palautettu"
+#. Translators: Message presented when feeds have been restored.
+msgid "Feeds restored"
+msgstr "Syötteet palautettu"
 
-#. Translators: The title of the Notes dialog.
-msgid "Notes"
-msgstr "Muistiinpanot"
+#. Translators: Title of a dialog.
+#, python-brace-format
+msgid "Feeds: {defaultFeed} ({configProfile})"
+msgstr "Syötteet: {defaultFeed} ({configProfile})"
 
-#. Translators: The label of a list box in the Notes dialog.
-msgid "&Bookmarks"
-msgstr "&Paikkamerkit"
+#. Translators: Label of a dialog (message translated in NVDA's core in different contexts).
+msgid "&Filter by:"
+msgstr "&Suodata:"
 
-#. Translators: The label of an edit box in the Notes dialog.
-msgid "Not&e:"
-msgstr "Mu&istiinpano:"
+#. Translators: The label of a button to open the list of articles of a feed.
+msgid "List of &articles..."
+msgstr "&Artikkeliluettelo..."
 
-#. Translators: The label for a button in the Notes dialog.
-msgid "&Save note"
-msgstr "Ta&llenna muistiinpano"
+#. Translators: The label of a button to open a feed.
+msgid "&Open feed"
+msgstr "&Avaa syöte"
 
-#. Translators: The label for a button in the Notes dialog.
+#. Translators: The label of a button to open a feed as HTML.
+msgid "Open feed as &HTML"
+msgstr "Avaa syöte &HTML-muodossa"
+
+#. Translators: The label of a button to copy the feed URL.
+msgid "Cop&y feed address"
+msgstr "Kop&ioi syötteen osoite"
+
+#. Translators: The label of a button to add a new feed.
+msgid "&New..."
+msgstr "&Uusi..."
+
+#. Translators: The label of a button to rename a feed.
+msgid "&Rename..."
+msgstr "&Nimeä uudelleen..."
+
+#. Translators: The label of a button to delete a feed.
 msgid "&Delete..."
 msgstr "&Poista..."
 
-#. Translators: The confirmation prompt displayed when the user requests to delete a bookmark.
+#. Translators: The label of a button to set a feed as default.
+msgid "S&et default"
+msgstr "A&seta oletukseksi"
+
+#. Translators: The label of a button to open a folder containing a backup of feeds.
+msgid "Open &folder containing a backup of feeds"
+msgstr "Avaa s&yötteiden varmuuskopiokansio"
+
+#. Translators: The label of a button to open the settings dialog for readFeeds.
+msgid "&Preferences..."
+msgstr "&Asetukset..."
+
+#. Translators: Message presented when a feed cannot be added.
+#, python-format
+msgid "Cannot add feed: %s"
+msgstr "Ei voi lisätä syötettä: %s"
+
+#. Translators: error message.
+msgid "Error"
+msgstr "Virhe"
+
+#. Translators: the label of a message box dialog.
+#, python-brace-format
 msgid ""
-"This bookmark will be permanently deleted. This action cannot be undone."
-msgstr "Tämä paikkamerkki poistetaan pysyvästi. Poistoa ei voi perua."
+"Do you want to copy feed address to the clipboard\r\n"
+"\r\n"
+"{feedAddress}?"
+msgstr ""
+"Haluatko kopioida syötteen osoitteen leikepöydälle?\r\n"
+"\r\n"
+"{feedAddress}"
 
-#. Translators: The message presented when all bookmarks have been deleted from the Notes dialog.
-#. Translators: message presented when the current document doesn't contain bookmarks.
-msgid "No bookmarks"
-msgstr "Ei paikkamerkkejä"
+#. Translators: the title of a message box dialog.
+msgid "Copy feed address"
+msgstr "Kopioi syötteen osoite"
 
-#. Translators: The title of the warning dialog when all bookmarks have been deleted.
-msgid "Bookmarks deleted"
-msgstr "Paikkamerkit poistettu"
+#. Translators: Label of a dialog.
+msgid "Address of a new feed:"
+msgstr "Uuden syötteen osoite:"
+
+#. Translators: The title of a dialog to create a new feed.
+msgid "New feed"
+msgstr "Uusi syöte"
+
+#. Translators: The confirmation prompt displayed when the user requests to delete a feed.
+msgid "Are you sure you want to delete this feed? This cannot be undone."
+msgstr "Haluatko varmasti poistaa tämän syötteen? Poistoa ei voi kumota."
+
+#. Translators: The label of a field to enter a new name for a feed.
+msgid "New name:"
+msgstr "Uusi nimi:"
+
+#. Translators: The title of a dialog to rename a feed.
+msgid "Rename feed"
+msgstr "Nimeä syöte uudelleen"
+
+#. Translators: The label of the articles list in the articles dialog.
+msgid "List of articles"
+msgstr "Artikkeliluettelo"
+
+#. Translators: The label of a button to open the selected article of a feed.
+msgid "Open &web page of selected article."
+msgstr "Avaa valitun artikkelin v&erkkosivu"
+
+#. Translators: The label of a button to show information of a feed article.
+msgid "&About article..."
+msgstr "T&ietoa artikkelista..."
+
+#. Translators: the label of a message box dialog.
+#, python-format
+msgid "%sDo you want to copy article title and link to the clipboard?"
+msgstr "%sHaluatko kopioida artikkelin otsikon ja linkin leikepöydälle?"
+
+#. Translators: the title of a message box dialog.
+msgid "Article information"
+msgstr "Artikkelin tiedot"
 
 #. Translators: The title of the Copy dialog.
-msgid "Copy place markers"
-msgstr "Kopioi paikkamerkit"
+msgid "Copy feeds"
+msgstr "Kopioi syötteet"
 
 #. Translators: An informational message displayed in the Copy dialog.
-msgid "Select a folder to save a backup of your current place markers."
-msgstr ""
-"Valitse kansio, johon nykyisten paikkamerkkiesi varmuuskopio tallennetaan."
+msgid "Select a folder to save a backup of your current feeds"
+msgstr "Valitse kansio, johon nykyisten syötteidesi varmuuskopio tallennetaan."
 
 #. Translators: The label of a grouping containing controls to select the destination directory in the Copy dialog.
 msgid "directory for backup:"
-msgstr "Varmuuskopion tallennuskansio:"
+msgstr "Varmuuskopion kansio:"
 
-#. Translators: The title of the dialog presented when browsing for the destination directory when copying place markers.
+#. Translators: The title of the dialog presented when browsing for the destination directory when copying feeds.
 msgid "Select directory to copy"
-msgstr "Valitse kansio, johon kopioidaan"
+msgstr "Valitse kopioitava kansio"
 
 #. Translators: The title of the Restore dialog.
-msgid "Restore place markers"
-msgstr "Palauta paikkamerkit"
+msgid "Restore feeds"
+msgstr "Palauta syötteet"
 
 #. Translators: An informational message displayed in the Restore dialog.
-msgid ""
-"Select a folder to restore a backup of your previous copied place markers."
+msgid "Select a folder to restore a backup of your previous copied feeds"
 msgstr ""
-"Valitse kansio, josta aiemmin varmuuskopioimasi paikkamerkit palautetaan."
+"Valitse kansio, josta aiemmin kopioimasi syötteiden varmuuskopio palautetaan."
 
 #. Translators: The label of a grouping containing controls to select the destination directory in the Restore dialog.
 msgid "directory containing backup:"
 msgstr "Varmuuskopion sisältävä kansio:"
 
-#. Translators: The title of the dialog presented when browsing for the destination directory when restoring place markers.
+#. Translators: The title of the dialog presented when browsing for the destination directory when restoring feeds.
 msgid "Select directory to restore"
 msgstr "Valitse palautettava kansio"
 
-#. Translators: the name of addon submenu.
-msgid "P&lace markers"
-msgstr "Paikka&merkit"
+#. Translators: label of a dialog.
+msgid "&Search edit box after feeds list"
+msgstr "&Hakukenttä syöteluettelon jälkeen"
 
-#. Translators: the tooltip text for addon submenu.
-msgid "Bookmarks and Search menu"
-msgstr "Paikkamerkkien ja hakujen valikko"
+#. Translators: Presented when the current article does not have an associated title.
+msgid "Unable to locate article title."
+msgstr "Artikkelin otsikkoa ei löydy."
 
-#. Translators: the name for an item of addon submenu.
-msgid "&Specific search folder"
-msgstr "&Sivukohtaisen haun kansio"
+#. Translators: Presented when the current article does not have an associated link.
+msgid "Unable to locate article link."
+msgstr "Artikkelin linkkiä ei löydy."
 
-#. Translators: the tooltip text for an item of addon submenu.
-msgid "Opens the specific search folder"
-msgstr "Avaa sivukohtaisen haun kansion"
+#. Translators: Label of a checkbox to choose if date should be presented for each feed.
+msgid "Show date"
+msgstr "Näytä päivämäärä"
 
-#. Translators: the name for an item of addon submenu.
-msgid "&Bookmarks folder"
-msgstr "&Paikkamerkkien kansio"
+#. Translators: Label for a checkbox to show buttons for copying to clipboard.
+msgid "Show buttons to copy"
+msgstr "Näytä kopiointipainikkeet"
 
-#. Translators: the tooltip text for an item of addon submenu.
-msgid "Opens the bookmarks folder"
-msgstr "Avaa paikkamerkkien kansion"
+#. Translators: Label for a button to copy to clipboard.
+msgid "Copy"
+msgstr "Kopioi"
 
-#. Translators: the name for an item of addon submenu.
-msgid "&Copy placeMarkers folder..."
-msgstr "&Kopioi paikkamerkkien kansio..."
+#. Translators: the name of a submenu.
+msgid "&Read Feeds"
+msgstr "&Lue syötteet"
 
-#. Translators: the tooltip text for an item of addon submenu.
-msgid "Backup of place markers"
-msgstr "Paikkamerkkien varmuuskopio"
+#. Translators: the name of a menu item.
+msgid "&Feeds..."
+msgstr "&Syötteet..."
 
-#. Translators: the name for an item of addon submenu.
-msgid "R&estore place markers..."
-msgstr "&Palauta paikkamerkit..."
+#. Translators: the name of a menu item.
+msgid "&Copy feeds folder..."
+msgstr "&Kopioi syötteiden kansio..."
 
-#. Translators: the tooltip text for an item of addon submenu.
-msgid "Restore previously saved place markers"
-msgstr "Palauta aiemmin tallennetut paikkamerkit"
+#. Translators: the name of a menu item.
+msgid "R&estore feeds..."
+msgstr "P&alauta syötteet..."
 
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid "Opens the specific search folder."
-msgstr "Avaa sivukohtaisen haun kansion."
+#. Translators: message presented in input mode.
+msgid "Activates the Feeds dialog of Read Feeds."
+msgstr "Avaa Lue syötteet -lisäosan  Syötteet-valintaikkunan."
 
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid "Opens the bookmarks folder."
-msgstr "Avaa paikkamerkkien kansion."
+#. Translators: message presented in input mode.
+msgid "Activates the Copy dialog of Read Feeds."
+msgstr "Avaa Lue syötteet -lisäosan Kopioi-valintaikkunan."
 
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
+#. Translators: message presented in input mode.
+msgid "Activates the Restore dialog of Read Feeds."
+msgstr "Avaa Lue syötteet -lisäosan Palauta-valintaikkunan."
+
+#. Translators: message presented in input mode.
 #, python-format
-msgid "Activates the Copy dialog of %s."
-msgstr "Avaa %s-lisäosan kopiointivalintaikkunan."
+msgid "Shows the %s settings."
+msgstr "Näyttää %s -lisäosan asetukset."
 
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-#, python-format
-msgid "Activates the Restore dialog of %s."
-msgstr "Avaa %s-lisäosan palautusvalintaikkunan."
+#. Translators: message presented in input mode.
+msgid "Refreshes the current feed and announces the most recent article title."
+msgstr "Päivittää nykyisen syötteen ja lukee uusimman artikkelin otsikon."
 
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
+#. Translators: message presented in input mode.
 msgid ""
-"finds a text string from the current cursor position for a specific document."
+"Announces the title of the current article. Pressed two times, copies title "
+"and related link to the clipboard."
 msgstr ""
-"Etsii sivukohtaista merkkijonoa kohdistimen nykyisestä sijainnista lähtien."
+"Lukee nykyisen artikkelin otsikon. Kahdesti painettaessa otsikko ja "
+"artikkelin linkki kopioidaan leikepöydälle."
 
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid ""
-"finds the next occurrence of the last text searched for any specific "
-"document."
+#. Translators: message presented when the information about an article of a feed is copied to the clipboard.
+#, python-format
+msgid "Copied to clipboard %s"
+msgstr "%s kopioitu leikepöydälle"
+
+#. Translators: message presented in input mode.
+msgid "Announces the title of the next article."
+msgstr "Lukee seuraavan artikkelin otsikon."
+
+#. Translators: message presented in input mode.
+msgid "Announces the title of the previous article."
+msgstr "Lukee edellisen artikkelin otsikon."
+
+#. Translators: message presented in input mode.
+msgid "Announces article link, when pressed two times, opens related web page."
 msgstr ""
-"Etsii viimeksi haetun merkkijonon seuraavan esiintymän mistä tahansa "
-"määrätystä asiakirjasta."
+"Lukee artikkelin linkin, ja avaa kahdesti painettaessa sen verkkosivun."
 
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid ""
-"finds the previous occurrence of the last text searched for any specific "
-"document."
-msgstr ""
-"Etsii viimeksi haetun merkkijonon edellisen esiintymän mistä tahansa "
-"määrätystä asiakirjasta."
-
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid "Show the Notes dialog for a specific document."
-msgstr "Näytä Muistiinpanot-valintaikkuna nykyiselle dokumentille."
-
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid "Saves the current position as a bookmark."
-msgstr "Tallentaa nykyisen sijainnin paikkamerkiksi."
-
-#. Translators: message presented when a position is saved as a bookmark.
-#, python-format
-msgid "Saved position at character %d"
-msgstr "Sijainti tallennettu merkin %d kohdalle"
-
-#. Translators: message presented when a bookmark cannot be saved.
-msgid "Cannot save bookmark"
-msgstr "Paikkamerkkiä ei voi tallentaa"
-
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid "Deletes the current bookmark."
-msgstr "Poistaa nykyisen paikkamerkin."
-
-#. Translators: message presented when the current document has bookmarks, but none is selected.
-msgid "No bookmark selected"
-msgstr "Paikkamerkkiä ei valittu"
-
-#. Translators: message presented when a bookmark is deleted.
-msgid "Bookmark deleted"
-msgstr "Paikkamerkki poistettu"
-
-#. Translators: message presented when cannot delete a bookmark.
-msgid "Cannot delete bookmark"
-msgstr "Paikkamerkkiä ei voi poistaa"
-
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid "Moves to the next bookmark."
-msgstr "Siirtää seuraavaan paikkamerkkiin."
-
-#. Translators: message presented when trying to select a bookmark, but none is found.
-msgid "No bookmarks found"
-msgstr "Paikkamerkkejä ei löytynyt"
-
-#. Translators: message presented when a bookmark is selected.
-#, python-format
-msgid "Position: character %d"
-msgstr "Sijainti: merkki %d"
-
-#. Translators: message presented when the next bookmark is not found.
-msgid "Next bookmark not found"
-msgstr "Seuraavaa paikkamerkkiä ei löydy"
-
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid "Moves to the previous bookmark."
-msgstr "Siirtää edelliseen paikkamerkkiin."
-
-#. Translators: message presented when the previous bookmark is not found.
-msgid "Previous bookmark not found"
-msgstr "Edellistä paikkamerkkiä ei löydy"
-
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid "Copies the name of the current file for place markers to the clipboard."
-msgstr "Kopioi nykyisen paikkamerkkitiedoston nimen leikepöydälle."
-
-#. Translators: message presented when cannot copy the file name corresponding to place markers.
-msgid "Cannot copy file name for place markers"
-msgstr "Paikkamerkkitiedoston nimeä ei voi kopioida"
-
-#. Translators: message presented when file name for place markers is copied to clipboard.
-msgid "Place markers file name copied to clipboard"
-msgstr "Paikkamerkkkitiedoston nimi kopioitu leikepöydälle"
-
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid "Saves the current position as a temporary bookmark."
-msgstr "Tallentaa nykyisen sijainnin tilapäiseksi paikkamerkiksi."
-
-#. Translators: Message presented when a temporary bookmark is saved.
-#, python-format
-msgid "Saved temporary bookmark at position %d"
-msgstr "Tilapäinen paikkamerkki tallennettu sijaintiin %d"
-
-#. Translators: Message presented in input help mode.
-msgid "Moves to the temporary bookmark for the current document."
-msgstr "Siirtää tilapäiseen paikkamerkkiin nykyisessä dokumentissa."
+#. Translators: message presented in input mode.
+msgid "Copies title and related link of the current article to the clipboard."
+msgstr "Kopioi nykyisen artikkelin otsikon ja linkin leikepöydälle."
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
-msgid "Place markers"
-msgstr "Paikkamerkit"
+msgid "Read Feeds"
+msgstr "Lue syötteet"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
-msgid "Add-on for setting place markers on specific virtual documents"
-msgstr "Lisäosa sivukohtaisten paikkamerkkien määrittämiseen"
+msgid "Add-on for using NVDA as a feed reader."
+msgstr "Lisäosa, jolla NVDA:ta voidaan käyttää syötteenlukijana."
 
-#~ msgid "Bookmark cannot be saved"
-#~ msgstr "Paikkamerkkiä ei voi tallentaa"
+#~ msgid ""
+#~ "You have installed the ReadFeeds add-on, probably an old and incompatible "
+#~ "version with this one. Do you want to uninstall the old version?"
+#~ msgstr ""
+#~ "Asennettuna on vanha Lue syötteet -lisäosa, joka ei ole yhteensopiva "
+#~ "tämän version kanssa. Haluatko poistaa vanhan version?"
 
-#~ msgid "Bookmark cannot be deleted"
-#~ msgstr "Paikkamerkkiä ei voi poistaa"
+#~ msgid "Uninstall incompatible add-on"
+#~ msgstr "Poista yhteensopimaton lisäosa"
 
-#~ msgid "Cannot find any bookmarks"
-#~ msgstr "Paikkamerkkejä ei löydy"
+#~ msgid "Feeds"
+#~ msgstr "Syötteet"
+
+#~ msgid "Manage feeds."
+#~ msgstr "Hallinnoi syötteitä."
+
+#~ msgid "View and manage feeds"
+#~ msgstr "Näytä ja hallinnoi syötteitä"
+
+#~ msgid "Backup of feeds"
+#~ msgstr "Syötteiden varmuuskopio"
+
+#~ msgid "Restore previously saved feeds"
+#~ msgstr "Palauta aiemmin tallennetut syötteet"

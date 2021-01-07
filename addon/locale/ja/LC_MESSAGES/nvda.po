@@ -5,255 +5,252 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: 'placeMarkers' '1.0-beta'\n"
-"Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
-"POT-Creation-Date: 2013-06-05 23:05+0200\n"
-"PO-Revision-Date: 2016-02-26 02:22-0800\n"
+"Project-Id-Version: readFeeds 2.2\n"
+"Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
+"POT-Creation-Date: 2015-01-30 18:00+1000\n"
+"PO-Revision-Date: 2015-08-27 16:28+0900\n"
 "Last-Translator: Takuya Nishimoto <nishimotz@gmail.com>\n"
-"Language-Team: Japanese <nvdajp@nvda.jp>\n"
+"Language-Team: \n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.5\n"
+"X-Generator: Poedit 1.5.7\n"
 
-#. Translators: label of a dialog presented when installing this addon and placeMarkersBackup is found.
+#. Translators: the label of a message box dialog.
+msgid ""
+"You have installed the ReadFeeds add-on, probably an old and incompatible "
+"version with this one. Do you want to uninstall the old version?"
+msgstr ""
+"このアドオンと互換性のない、古いReadFeedsアドオンがインストールされています。"
+"古いバージョンをアンインストールしますか?"
+
+#. Translators: the title of a message box dialog.
+msgid "Uninstall incompatible add-on"
+msgstr "互換性のないアドオンのアンインストール"
+
+#. Translators: the label of a message box dialog.
 msgid ""
 "Your configuration folder for NVDA contains files that seem to be derived "
 "from a previous version of this add-on. Do you want to update it?"
 msgstr ""
-"NVDA設定フォルダに、このアドオンの古いバージョンで保存された情報が見つかりま"
-"した。更新しますか？"
+"NVDAの設定フォルダにこのアドオンの以前のバージョンのファイルが含まれていま"
+"す。更新しますか?"
 
-#. Translators: title of a dialog presented when installing this addon and placeMarkersBackup is found.
+#. Translators: the title of a message box dialog.
 msgid "Install or update add-on"
 msgstr "アドオンのインストールまたは更新"
 
-#. Translators: label of error dialog, translated in NVDA core.
-#, python-format
-msgid "text \"%s\" not found"
-msgstr "テキスト %s が見つかりません"
-
-#. Translators: title of error dialog, translated in NVDA core.
-msgid "Find Error"
-msgstr "検索の失敗"
-
-#. Translators: message presented when a string of text has been copied to the clipboard.
-#, python-format
-msgid "%s copied to clipboard"
-msgstr "%s をクリップボードにコピー"
-
-#. Translators: the name of addon submenu.
-msgid "P&lace markers"
-msgstr "プレイスマーカー"
-
-#. Translators: the tooltip text for addon submenu.
-msgid "Bookmarks and Search menu"
-msgstr "ブックマークと検索のメニュー"
-
-#. Translators: the name for an item of addon submenu.
-msgid "&Specific search folder"
-msgstr "検索保存フォルダー"
-
-#. Translators: the tooltip text for an item of addon submenu.
-msgid "Opens the specific search folder"
-msgstr "検索保存フォルダーを開く"
-
-#. Translators: the name for an item of addon submenu.
-msgid "&Bookmarks folder"
-msgstr "ブックマークフォルダー"
-
-#. Translators: the tooltip text for an item of addon submenu.
-msgid "Opens the bookmarks folder"
-msgstr "ブックマークフォルダーを開く"
-
-#. Translators: the name for an item of addon submenu.
-msgid "&Copy placeMarkers folder..."
-msgstr "マーカー情報のバックアップ..."
-
-#. Translators: the tooltip text for an item of addon submenu.
-msgid "Backup of place markers"
-msgstr "マーカー情報をバックアップします"
-
-#. Translators: the name for an item of addon submenu.
-msgid "R&estore place markers..."
-msgstr "マーカー情報の復元..."
-
-#. Translators: the tooltip text for an item of addon submenu.
-msgid "Restore previously saved place markers"
-msgstr "マーカー情報をバックアップから復元します"
-
-#. Translators: label of a dialog presented for copying place markers.
-msgid "Select a folder for copying your saved place markers"
-msgstr "マーカー情報のバックアップを作るフォルダーを選択"
-
-#. Translators: label of error dialog shown when cannot copy placeMarkers folder.
-msgid "Folder not copied"
-msgstr "フォルダーのコピー失敗"
-
-#. Translators: title of error dialog shown when cannot copy placeMarkers folder.
-msgid "Copy Error"
-msgstr "コピーの失敗"
-
-#. Translators: label of a dialog presented for restoring place markers.
-msgid "Select the place markers folder you wish to restore"
-msgstr "マーカー情報の復元に使うバックアップのフォルダーを指定"
-
-#. Translators: label of a dialog presented to save or delete a string for specific search.
+#. Translators: message presented when feeds cannot be reported.
 msgid ""
-"Type the text you wish to save, or delete any text if you want to remove it "
-"from the previous saved searches"
-msgstr "保存するテキストを入力、または検索保存を消去したいときはテキストを削除"
+"Unable to refresh feed. Check your Internet conectivity or that the "
+"specified feed address is correct."
+msgstr ""
+"フィードを更新できません。インターネット接続を確認、または、記述されたフィー"
+"ドアドレスが正しいことを確認して下さい。"
 
-#. Translators: title of a dialog presented to save a string for specific search.
-msgid "Save text for specific search"
-msgstr "テキスト検索の保存"
+#. Translators: Presented when the current article does not have an associated title.
+msgid "Unable to locate article title."
+msgstr "記事タイトルが見つかりません。"
 
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid "Saves a text string for a specific search."
-msgstr "テキストの検索を保存します"
+#. Translators: Presented when the current article does not have an associated link.
+msgid "Unable to locate article link."
+msgstr "記事リンクが見つかりません。"
 
-#. Translators: message presented when there is not file for specific search.
-msgid "File for specific search not found"
-msgstr "検索保存の情報が見つかりません"
+#. Translators: the name of a submenu.
+msgid "&Read Feeds"
+msgstr "&Read Feeds"
 
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
+#. Translators: the tooltip for a submenu.
+msgid "Manage feeds."
+msgstr "フィードの管理"
+
+#. Translators: the name of a menu item.
+msgid "Article &list..."
+msgstr "記事 リスト(&L)..."
+
+#. Translators: the tooltip for a menu item.
+msgid "View article list"
+msgstr "記事リストを見る"
+
+#. Translators: the name of a menu item.
+msgid "&Temporary feed address..."
+msgstr "一時フィードアドレス(&T)..."
+
+#. Translators: the tooltip for a menu item.
+msgid "View or choose current feed address"
+msgstr "現在のフィードアドレスを見るまたは選択する"
+
+#. Translators: the name of a menu item.
+msgid "L&oad feed address from file..."
+msgstr "ファイルからフィードアドレスを読み込み(&O)"
+
+#. Translators: the tooltip for a menu item.
+msgid "Select file which contains feed address."
+msgstr "フィードアドレスを含むファイルを選択"
+
+#. Translators: the name of a menu item.
+msgid "Save current feed address to file..."
+msgstr "現在のフィードアドレスをファイルに保存..."
+
+#. Translators: the tooltip for a menu item.
+#. Translators: the label of a file dialog.
+msgid "Save current feed address to file"
+msgstr "現在のフィードアドレスをファイルに保存"
+
+#. Translators: the name of a menu item.
+msgid "R&efresh current feed"
+msgstr "現在のフィードを更新(&E)"
+
+#. Translators: the tooltip for a menu item.
+msgid "Checks for new articles for the current feed"
+msgstr "現在のフィードの新しい記事を確認"
+
+#. Translators: the name of a menu item.
+msgid "&ReadFeeds file manager..."
+msgstr ""
+
+#. Translators: the tooltip for a menu item.
+msgid "Opens the ReadFeedsFileManager dialog"
+msgstr ""
+
+#. Translators: the title of an error dialog.
+msgid "Refresh Error"
+msgstr "更新エラー"
+
+#. Translators: the label of a single choice dialog.
+msgid "Open web page of selected article."
+msgstr "選択された記事のWebページを開く"
+
+#. Translators: message presented in input mode.
+msgid "Refreshes the current feed and announces the most recent article title."
+msgstr "現在のフィードを更新して最新の記事タイトルを報告"
+
+msgid "Refresh your selected feed to read the current article."
+msgstr "選択されたフィードを更新して現在の記事を読む"
+
+#. Translators: message presented when the information about an article of a feed is copied to the clipboard.
+#, python-format
+msgid "Copied to clipboard %s"
+msgstr "クリップボードにコピーされました %s"
+
+#. Translators: message presented in input mode.
 msgid ""
-"finds a text string from the current cursor position for a specific document."
-msgstr "ドキュメントの現在のカーソル位置からテキストを検索"
+"Announces the title of the current article. Pressed two times, copies title "
+"and related link to the clipboard."
+msgstr ""
+"現在の記事のタイトルを報告。二回押すとタイトルと関連リンクをクリップボードに"
+"コピー。"
 
-#. Translators: message presented when a bookmark cannot be saved.
-msgid "Bookmark cannot be saved"
-msgstr "ブックマークを保存できません"
+#. Translators: message presented in input mode.
+msgid "Announces the title of the next article."
+msgstr "次の記事のタイトルを報告"
 
-#. Translators: message presented when the current position was previously saved as a bookmark.
-msgid "This position was already saved"
-msgstr "この位置は保存済みです"
+#. Translators: message presented in input mode.
+msgid "Announces the title of the previous article."
+msgstr "前の記事のタイトルを報告"
 
-#. Translators: message presented when a position is saved as a bookmark.
+#. Translators: message presented in input mode.
+msgid "Announces article link, when pressed two times, opens related web page."
+msgstr "記事リンクを報告、二回押すと関連するWebページを開く"
+
+#. Translators: the label of a text entry dialog.
+msgid "Feed address to follow"
+msgstr "フォローするフィードアドレス"
+
+#. Translators: the title of a text entry dialog.
+msgid "Feed address"
+msgstr "フィードアドレス"
+
+#. Translators: message presented when the address of a feed has been selected.
 #, python-format
-msgid "Saved position at character %d"
-msgstr "文字数 %d の位置を保存しました"
+msgid "Selected %s"
+msgstr "選択されました %s"
 
-#. Translators: message presented when a bookmark cannot be saved.
-msgid "Cannot save bookmark"
-msgstr "ブックマークを保存できません"
+#. Translators: message presented in input mode.
+msgid "Opens a dialog for entering a feed address."
+msgstr "フィードアドレスを入力するダイアログを開く"
 
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid "Saves the current position as a bookmark."
-msgstr "現在位置をブックマークとして保存します"
+#. Translators: the label of a file dialog.
+msgid "Select feed address from file"
+msgstr "ファイルからフィードアドレスを選択"
 
-#. Translators: message presented when the current document doesn't contain bookmarks.
-msgid "No bookmarks"
-msgstr "ブックマークなし"
+msgid "Text files (*.txt) |*.txt"
+msgstr "テキストファイル (*.txt) |*.txt"
 
-msgid "Bookmark cannot be deleted"
-msgstr "ブックマークを削除できません"
+#. Translators: message presented when unable to read feed address.
+msgid "Unable to read feed address, feed can not be selected"
+msgstr "フィードアドレスを読み込めません、フィードが選択されていません"
 
-#. Translators: message presented when the current document has bookmarks, but none is selected.
-msgid "No bookmark selected"
-msgstr "ブックマークが選択されていません"
+#. Translators: message presented in input mode.
+msgid "Opens a dialog for selecting a file containing a feed address."
+msgstr "フィードアドレスを含むファイルを選択するダイアログを開く"
 
-#. Translators: message presented when a bookmark is deleted.
-msgid "Bookmark deleted"
-msgstr "ブックマークを削除しました"
+msgid "Text files (*.txt) | *.txt"
+msgstr "テキストファイル (*.txt) | *.txt"
 
-#. Translators: message presented when cannot delete a bookmark.
-msgid "Cannot delete bookmark"
-msgstr "ブックマークが削除できません"
-
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid "Deletes the current bookmark."
-msgstr "現在のブックマークを削除"
-
-#. Translators: message presented when trying to select a bookmark, but none is found.
-msgid "No bookmarks found"
-msgstr "ブックマークが見つかりません"
-
-#. Translators: message presented when cannot find any bookmark.
-msgid "Cannot find any bookmark"
-msgstr "ブックマークが見つかりません"
-
-#. Translators: message presented when a bookmark is selected.
+#. Translators: message presented when the address of a feed has been saved.
 #, python-format
-msgid "Position: character %d"
-msgstr "文字数 %d の位置"
+msgid "Saved %s"
+msgstr "保存されました %s"
 
-#. Translators: message presented when the next bookmark is not found.
-msgid "Next bookmark not found"
-msgstr "次のブックマークがありません"
+#. Translators: Message presented when the feed address cannot be saved.
+msgid "Feed address can not be saved"
+msgstr "フィードアドレスを保存できません"
 
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid "Moves to the next bookmark."
-msgstr "次のブックマークに移動"
+#. Translators: message presented in input mode.
+msgid ""
+"Opens a dialog where you can enter a filename to which the current feed "
+"address will be saved."
+msgstr "現在のフィードアドレスを保存するファイル名を入力するダイアログを開く"
 
-#. Translators: message presented when the previous bookmark is not found.
-msgid "Previous bookmark not found"
-msgstr "前のブックマークがありません"
+msgid "Feeds manager"
+msgstr ""
 
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid "Moves to the previous bookmark."
-msgstr "前のブックマークに移動"
+#. Translators: the name of a dialog button.
+msgid "&Backup personal feeds folder..."
+msgstr "個人フィードフォルダをバックアップ(&B)"
 
-#. Translators: message presented when cannot copy the file name corresponding to place markers.
-msgid "Cannot copy file name for place markers"
-msgstr "プレイスマーカーの名前をコピーできません"
+#. Translators: the name of a dialog button.
+msgid "R&estore personal feeds..."
+msgstr "個人フィードを復元(&E)..."
 
-#. Translators: message presented when file name for place markers is copied to clipboard.
-msgid "Place markers file name copied to clipboard"
-msgstr "プレイスマーカーの名前をクリップボードにコピー"
+#. Translators: the label of a dialog to select a folder.
+msgid "Select the folder where your personal feeds will be backed up."
+msgstr "個人フィードがバックアップされるフォルダを選択"
 
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid "Copies the name of the current file for place markers to the clipboard."
-msgstr "現在のプレイスマーカーを保存するファイル名をクリップボードにコピー"
+#. # Translators: the label of an error dialog.
+msgid "Unable to backup folder"
+msgstr "フォルダをバックアップできません"
 
-#. Translators: This is the label for the specific search settings dialog.
-msgid "Specific Search"
-msgstr "検索保存"
+#. Translators: the title of an error dialog.
+msgid "Backup Error"
+msgstr "バックアップエラー"
 
-#. Translators: This is the label for a textfield in the
-#. specific search settings dialog.
-msgid "&Text to search:"
-msgstr "テキストを検索(&T):"
+#. Translators: the label of a dialog to select a folder.
+msgid "Restore personal feeds from backup folder"
+msgstr "バックアップフォルダから個人フィードを復元"
 
-#. Translators: The label for a setting in specific search to select a saved text.
-msgid "&Saved texts:"
-msgstr "保存したテキスト(&S):"
+#. Translators: the label of an error dialog.
+msgid "Folder not restored"
+msgstr "フォルダが復元されません"
 
-#. Translators: A combo box to choose a saved text.
-msgid "Saved texts to search:"
-msgstr "保存した検索テキスト:"
-
-#. Translators: the name of an action presented in specific search dialog.
-msgid "Search down"
-msgstr "下に検索"
-
-#. Translators: the name of an action presented in specific search dialog.
-msgid "Search up"
-msgstr "上に検索"
-
-#. Translators: the name of an action presented in specific search dialog.
-msgid "Delete"
-msgstr "削除"
-
-#. Translators: The label for a setting in specific search to select an action.
-msgid "&Actions to choose:"
-msgstr "アクションを選択(&A):"
-
-#. Translators: A combo box to choose an action.
-msgid "Select an action to perform:"
-msgstr "実行するアクションを選択:"
-
-#. Translators: An option in specific search to perform case-sensitive search, copied from core.
-msgid "Case &sensitive"
-msgstr "大文字と小文字を区別"
+#. Translators: the title of an error dialog.
+msgid "Restore Error"
+msgstr "復元エラー"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
-msgid "Place markers"
-msgstr "Place markers"
+msgid "Read Feeds"
+msgstr "Read Feeds"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
-msgid "Add-on for setting place markers on specific virtual documents"
-msgstr "ドキュメントにプレイスマーカーを設定できます"
+msgid "Add-on for using NVDA as a feed reader."
+msgstr "NVDAをフィードリーダーとして使用するためのアドオン"
+
+#~ msgid "Backs up your personal feeds folder"
+#~ msgstr "個人フィードフォルダをバックアップ"
+
+#~ msgid "Restore previously saved feeds"
+#~ msgstr "以前保存したフィードを復元"

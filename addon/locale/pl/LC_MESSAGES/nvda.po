@@ -5,11 +5,11 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: placeMarkers 3.0\n"
+"Project-Id-Version: readFeeds 1.0-dev\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
-"POT-Creation-Date: 2013-12-13 17:50+0100\n"
-"PO-Revision-Date: 2020-03-25 14:24+0100\n"
-"Last-Translator: zvonimir stanecic <zvonimirek222@yandex.com>\n"
+"POT-Creation-Date: 2013-11-16 13:26+0100\n"
+"PO-Revision-Date: 2019-07-06 22:16+0100\n"
+"Last-Translator: Zvonimir Stanečić <zvonimirek222@webczatnet.pl>\n"
 "Language-Team: Polish <killer@tyflonet.com>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
@@ -17,319 +17,326 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.6.10\n"
 
-#. Translators: label of a dialog presented when installing this addon and placeMarkersBackup is found.
+#. Translators: the label of a message box dialog.
+#, fuzzy
 msgid ""
 "Your configuration folder for NVDA contains files that seem to be derived "
-"from a previous version of this add-on. Do you want to update it?"
+"from a previous version of this add-on.\n"
+"\t\t\tDo you want to update it?"
 msgstr ""
-"Twój folder konfiguracyjny NVDA zawiera pliki pochodzące z poprzedniej "
-"wersji tego dodatku. Czy chcesz je zaktualizować?"
+"Twój folder konfiguracyjny NVDA zawiera pliki, które wydają się pochodzić z "
+"poprzedniej wersji tego dodatku. Czy chcesz je zaktualizować?"
 
-#. Translators: title of a dialog presented when installing this addon and placeMarkersBackup is found.
+#. Translators: the title of a message box dialog.
 msgid "Install or update add-on"
 msgstr "Zainstaluj lub aktualizuj dodatek"
 
-#. Translators: message presented when a string of text has been copied to the clipboard.
-#, python-format
-msgid "%s copied to clipboard"
-msgstr "%s skopiowane do schowka"
-
-#. Translators: The title of the Specific Search dialog.
-msgid "Specific search"
-msgstr "Określone wyszukiwanie"
-
-#. Translators: The label of a combo box in the Specific Search dialog.
-msgid "Sa&ved texts"
-msgstr "&Zapisane teksty"
-
-#. Translators: A label for a chekbox in the Specific search dialog.
-msgid "&Remove from history"
-msgstr "&Usuń z historii"
-
-#. Translators: The label of an edit box in the Specific Search dialog.
-msgid "&Text to search:"
-msgstr "&tekst do znalezienia:"
-
-#. Translators: A label for a chekbox in the Specific search dialog.
-msgid "&Add to history"
-msgstr "&Dodaj do Historii"
-
-#. Translators: Label for a set of radio buttons in the Specific search dialog.
-msgid "Action on s&earch"
-msgstr "Akcje do &wyszukiwania"
-
-#. Translators: An action in the Search group of the Specific search dialog.
-msgid "Search &next"
-msgstr "Szukaj w &dół"
-
-#. Translators: An action in the Search group of the Specific search dialog.
-msgid "Search &previous"
-msgstr "Szukaj w &górę"
-
-#. Translators: An action in the Search group of the Specific search dialog.
-msgid "&Don't search"
-msgstr "&Nie wyszukuj"
-
-#. Translators: Message presented when place markers have been copied.
-msgid "Place markers copied"
-msgstr "Skopiowano znaczniki miejsc"
-
-#. Translators: label of error dialog shown when cannot copy placeMarkers folder.
-msgid "Folder not copied"
-msgstr "Folder nie został skopiowany"
-
-#. Translators: title of error dialog shown when cannot copy placeMarkers folder.
-msgid "Copy Error"
-msgstr "Błąd kopiowania"
-
-#. Translators: Message presented when place markers have been restored.
-msgid "Place markers restored"
-msgstr "Przywrócono znaczniki miejsc"
-
-#. Translators: The title of the Notes dialog.
-msgid "Notes"
-msgstr "Notatki"
-
-#. Translators: The label of a list box in the Notes dialog.
-msgid "&Bookmarks"
-msgstr "&Zakładki"
-
-#. Translators: The label of an edit box in the Notes dialog.
-msgid "Not&e:"
-msgstr "Not&atka:"
-
-#. Translators: The label for a button in the Notes dialog.
-msgid "&Save note"
-msgstr "&Zachowaj notatkę"
-
-#. Translators: The label for a button in the Notes dialog.
-msgid "&Delete..."
-msgstr "&Skasować..."
-
-#. Translators: The confirmation prompt displayed when the user requests to delete a bookmark.
+#. Translators: message presented when feeds cannot be reported.
 msgid ""
-"This bookmark will be permanently deleted. This action cannot be undone."
+"Unable to refresh feed. Check your Internet conectivity or that the "
+"specified feed address is correct."
 msgstr ""
-"Ten znacznik miejsca będzie skasowany na zawsze. Ta akcja jest nieodwracalna."
+"Nie można odświeżyć kanału. Sprawdź połączenie internetowe i poprawność "
+"podanego adresu kanału."
 
-#. Translators: The message presented when all bookmarks have been deleted from the Notes dialog.
-#. Translators: message presented when the current document doesn't contain bookmarks.
-msgid "No bookmarks"
-msgstr "Brak zakładek"
+#. Translators: Message presented when feeds have been copied.
+msgid "Feeds copied"
+msgstr "Osobiste kanały skopiowany pomyślnie"
 
-#. Translators: The title of the warning dialog when all bookmarks have been deleted.
-msgid "Bookmarks deleted"
-msgstr "Zakładki usunięte"
+#. Translators: label of error dialog shown when cannot copy feeds folder.
+msgid "Folder not copied"
+msgstr "Katalog nie został skopiowany"
+
+#. Translators: title of error dialog shown when cannot copy feeds folder.
+msgid "Copy Error"
+msgstr "Błąd Kopii"
+
+#. Translators: Message presented when feeds have been restored.
+msgid "Feeds restored"
+msgstr "Kanały osobiste zostały przywrócone pomyślnie"
+
+#. Translators: Title of a dialog.
+#, python-brace-format
+msgid "Feeds: {defaultFeed} ({configProfile})"
+msgstr "Kanały osobiste: {defaultFeed} ({configProfile})"
+
+#. Translators: Label of a dialog (message translated in NVDA's core in different contexts).
+msgid "&Filter by:"
+msgstr "&filtruj według"
+
+#. Translators: The label of a button to open the list of articles of a feed.
+msgid "List of &articles..."
+msgstr "Lista &Artykułów..."
+
+#. Translators: The label of a button to open a feed.
+msgid "&Open feed"
+msgstr "&otwórz kanal"
+
+#. Translators: The label of a button to open a feed as HTML.
+#, fuzzy
+msgid "Open feed as &HTML"
+msgstr "&otwórz kanal"
+
+#. Translators: The label of a button to copy the feed URL.
+#, fuzzy
+msgid "Cop&y feed address"
+msgstr "Kopiuj kanały osobiste"
+
+#. Translators: The label of a button to add a new feed.
+msgid "&New..."
+msgstr "&Nowy..."
+
+#. Translators: The label of a button to rename a feed.
+msgid "&Rename..."
+msgstr "&Zmień nazwę..."
+
+#. Translators: The label of a button to delete a feed.
+msgid "&Delete..."
+msgstr "&Usuń..."
+
+#. Translators: The label of a button to set a feed as default.
+msgid "S&et default"
+msgstr "U&staw domyślnie"
+
+#. Translators: The label of a button to open a folder containing a backup of feeds.
+msgid "Open &folder containing a backup of feeds"
+msgstr "otwórz &folder zawierający kopię twoich osobistych kanałów"
+
+#. Translators: The label of a button to open the settings dialog for readFeeds.
+#, fuzzy
+msgid "&Preferences..."
+msgstr "P&rzywróć folder osobistych kanałów..."
+
+#. Translators: Message presented when a feed cannot be added.
+#, python-format
+msgid "Cannot add feed: %s"
+msgstr ""
+
+#. Translators: error message.
+#, fuzzy
+msgid "Error"
+msgstr "Błąd Kopii"
+
+#. Translators: the label of a message box dialog.
+#, fuzzy, python-brace-format
+msgid ""
+"Do you want to copy feed address to the clipboard\r\n"
+"\r\n"
+"{feedAddress}?"
+msgstr ""
+"%s\r\n"
+"\r\n"
+"Czy chcesz skopiować tytuł i link artykułu do schowka?"
+
+#. Translators: the title of a message box dialog.
+#, fuzzy
+msgid "Copy feed address"
+msgstr "Kopiuj kanały osobiste"
+
+#. Translators: Label of a dialog.
+msgid "Address of a new feed:"
+msgstr "Adres nowego kanału osobistego:"
+
+#. Translators: The title of a dialog to create a new feed.
+msgid "New feed"
+msgstr "Nowy kanał osobisty"
+
+#. Translators: The confirmation prompt displayed when the user requests to delete a feed.
+msgid "Are you sure you want to delete this feed? This cannot be undone."
+msgstr ""
+"Czy jesteś pewien, że chcesz usunąć ten kanał osobisty? Ta akcja jest "
+"nieodwracalna."
+
+#. Translators: The label of a field to enter a new name for a feed.
+msgid "New name:"
+msgstr "Nowa nazwa:"
+
+#. Translators: The title of a dialog to rename a feed.
+msgid "Rename feed"
+msgstr "Zmień nazwę kanału osobistego"
+
+#. Translators: The label of the articles list in the articles dialog.
+msgid "List of articles"
+msgstr "Lista artykułów"
+
+#. Translators: The label of a button to open the selected article of a feed.
+msgid "Open &web page of selected article."
+msgstr "Otwórz stronę internetową &wybranego artykułu."
+
+#. Translators: The label of a button to show information of a feed article.
+msgid "&About article..."
+msgstr "&O artykule..."
+
+#. Translators: the label of a message box dialog.
+#, fuzzy, python-format
+msgid "%sDo you want to copy article title and link to the clipboard?"
+msgstr ""
+"%s\r\n"
+"\r\n"
+"Czy chcesz skopiować tytuł i link artykułu do schowka?"
+
+#. Translators: the title of a message box dialog.
+msgid "Article information"
+msgstr "Informacje o artykulę"
 
 #. Translators: The title of the Copy dialog.
-msgid "Copy place markers"
-msgstr "kopiuj znaczniki miejsca"
+msgid "Copy feeds"
+msgstr "Kopiuj kanały osobiste"
 
 #. Translators: An informational message displayed in the Copy dialog.
-msgid "Select a folder to save a backup of your current place markers."
-msgstr "Wybierz katalog do zapisywania kopii znaczników miejsc."
+msgid "Select a folder to save a backup of your current feeds"
+msgstr "Wybierz katalog do zapisywania kopii swoich kanałów osobistych"
 
 #. Translators: The label of a grouping containing controls to select the destination directory in the Copy dialog.
 msgid "directory for backup:"
 msgstr "Katalog dla kopii zapasowej:"
 
-#. Translators: The title of the dialog presented when browsing for the destination directory when copying place markers.
+#. Translators: The title of the dialog presented when browsing for the destination directory when copying feeds.
 msgid "Select directory to copy"
-msgstr "Oznacz katalog do kopiowania"
+msgstr "Wybierz katalog do skopiowania"
 
 #. Translators: The title of the Restore dialog.
-msgid "Restore place markers"
-msgstr "Przywróć znaczniki miejsca"
+msgid "Restore feeds"
+msgstr "P&rzywróć kanały osobiste..."
 
 #. Translators: An informational message displayed in the Restore dialog.
-msgid ""
-"Select a folder to restore a backup of your previous copied place markers."
-msgstr "Wybierz katalog do przywracania kopii znaczników miejsc."
+msgid "Select a folder to restore a backup of your previous copied feeds"
+msgstr ""
+"Wybierz folder w którym ma być przywrócona twoja kopia kanałów osobistych"
 
 #. Translators: The label of a grouping containing controls to select the destination directory in the Restore dialog.
 msgid "directory containing backup:"
 msgstr "Katalog zawierający kopie zapasową:"
 
-#. Translators: The title of the dialog presented when browsing for the destination directory when restoring place markers.
+#. Translators: The title of the dialog presented when browsing for the destination directory when restoring feeds.
 msgid "Select directory to restore"
-msgstr "Wybierz katalog do przywrócenia"
+msgstr "Wybierz katalog, do którego chcesz przywrócić swoje kanały osobiste"
 
-#. Translators: the name of addon submenu.
-msgid "P&lace markers"
-msgstr "Zna&czniki miejsca"
-
-#. Translators: the tooltip text for addon submenu.
-msgid "Bookmarks and Search menu"
-msgstr "menu zakładek i wyszukiwania"
-
-#. Translators: the name for an item of addon submenu.
-msgid "&Specific search folder"
-msgstr "&określony folder wyszukiwania"
-
-#. Translators: the tooltip text for an item of addon submenu.
-msgid "Opens the specific search folder"
-msgstr "Otwiera określony folder wyszukiwania"
-
-#. Translators: the name for an item of addon submenu.
-msgid "&Bookmarks folder"
-msgstr "Folder &zakładek"
-
-#. Translators: the tooltip text for an item of addon submenu.
-msgid "Opens the bookmarks folder"
-msgstr "Otwiera folder zakładek"
-
-#. Translators: the name for an item of addon submenu.
-msgid "&Copy placeMarkers folder..."
-msgstr "s&kopiuj folder znaczników miejsca..."
-
-#. Translators: the tooltip text for an item of addon submenu.
-msgid "Backup of place markers"
-msgstr "Kopia zapasowa znaczników miejsca"
-
-#. Translators: the name for an item of addon submenu.
-msgid "R&estore place markers..."
-msgstr "P&rzywróć znaczniki miejsca..."
-
-#. Translators: the tooltip text for an item of addon submenu.
-msgid "Restore previously saved place markers"
-msgstr "Przywróć poprzednio zapisane znaczniki miejsca"
-
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid "Opens the specific search folder."
-msgstr "Otwiera określony folder wyszukiwania"
-
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid "Opens the bookmarks folder."
-msgstr "Otwiera katalog z zakładkami"
-
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-#, python-format
-msgid "Activates the Copy dialog of %s."
-msgstr "Uaktywnia dialog kopiowania %s."
-
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-#, python-format
-msgid "Activates the Restore dialog of %s."
-msgstr "Uaktywnia dialog \"przywróć\" %s."
-
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid ""
-"finds a text string from the current cursor position for a specific document."
+#. Translators: label of a dialog.
+msgid "&Search edit box after feeds list"
 msgstr ""
-"Poszukuje ciągu znaków od aktualnej pozycji kursora w określonym dokumencie."
 
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
+#. Translators: Presented when the current article does not have an associated title.
+msgid "Unable to locate article title."
+msgstr "Nie można znaleźć tytułu artykułu."
+
+#. Translators: Presented when the current article does not have an associated link.
+msgid "Unable to locate article link."
+msgstr "Nie można znaleźć linku do artykułu."
+
+#. Translators: Label of a checkbox to choose if date should be presented for each feed.
+msgid "Show date"
+msgstr ""
+
+#. Translators: Label for a checkbox to show buttons for copying to clipboard.
+msgid "Show buttons to copy"
+msgstr ""
+
+#. Translators: Label for a button to copy to clipboard.
+msgid "Copy"
+msgstr ""
+
+#. Translators: the name of a submenu.
+msgid "&Read Feeds"
+msgstr "&Czytaj kanały"
+
+#. Translators: the name of a menu item.
+msgid "&Feeds..."
+msgstr "&Kanały osobiste..."
+
+#. Translators: the name of a menu item.
+msgid "&Copy feeds folder..."
+msgstr "&Kopiuj folder osobistych kanałów..."
+
+#. Translators: the name of a menu item.
+msgid "R&estore feeds..."
+msgstr "P&rzywróć folder osobistych kanałów..."
+
+#. Translators: message presented in input mode.
+#, fuzzy
+msgid "Activates the Feeds dialog of Read Feeds."
+msgstr "Aktywuje dialog kanałów osobistych %s."
+
+#. Translators: message presented in input mode.
+#, fuzzy
+msgid "Activates the Copy dialog of Read Feeds."
+msgstr "Aktywuje dialog kopiowania %s."
+
+#. Translators: message presented in input mode.
+#, fuzzy
+msgid "Activates the Restore dialog of Read Feeds."
+msgstr "Aktywuje dialog przywracania %s."
+
+#. Translators: message presented in input mode.
+#, python-format
+msgid "Shows the %s settings."
+msgstr ""
+
+#. Translators: message presented in input mode.
+msgid "Refreshes the current feed and announces the most recent article title."
+msgstr "Odświeża aktualny kanał i oznajmia tytuł najnowszego artykułu."
+
+#. Translators: message presented in input mode.
 msgid ""
-"finds the next occurrence of the last text searched for any specific "
-"document."
-msgstr "Wyszukuje następne występowanie tekstu dla określonego dokumentu."
+"Announces the title of the current article. Pressed two times, copies title "
+"and related link to the clipboard."
+msgstr ""
+"Oznajmia tytuł aktualnego artykułu. Dwukrotne naciśnięcie kopiuje tytuł i "
+"link do schowka."
 
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid ""
-"finds the previous occurrence of the last text searched for any specific "
-"document."
-msgstr "Wyszukuje poprzednie występowanie tekstu dla określonego dokumentu."
-
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid "Show the Notes dialog for a specific document."
-msgstr "Wyświetla okno dialogowe notatek dla określonego dokumentu."
-
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid "Saves the current position as a bookmark."
-msgstr "Zapisuje bieżącą pozycję jako zakładkę."
-
-#. Translators: message presented when a position is saved as a bookmark.
+#. Translators: message presented when the information about an article of a feed is copied to the clipboard.
 #, python-format
-msgid "Saved position at character %d"
-msgstr "Zapisano miejsce na pozycji %d"
+msgid "Copied to clipboard %s"
+msgstr "Skopiowano do schowka %s"
 
-#. Translators: message presented when a bookmark cannot be saved.
-msgid "Cannot save bookmark"
-msgstr "Nie można zapisać zakładki"
+#. Translators: message presented in input mode.
+msgid "Announces the title of the next article."
+msgstr "Oznajmia tytuł następnego artykułu."
 
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid "Deletes the current bookmark."
-msgstr "Usuwa aktualną zakładkę."
+#. Translators: message presented in input mode.
+msgid "Announces the title of the previous article."
+msgstr "Oznajmia tytuł poprzedniego artykułu."
 
-#. Translators: message presented when the current document has bookmarks, but none is selected.
-msgid "No bookmark selected"
-msgstr "Nie wybrano zakładki"
+#. Translators: message presented in input mode.
+msgid "Announces article link, when pressed two times, opens related web page."
+msgstr ""
+"Oznajmia link do artykułu, dwukrotne naciśnięcie otwiera stronę internetową."
 
-#. Translators: message presented when a bookmark is deleted.
-msgid "Bookmark deleted"
-msgstr "Zakładka usunięta"
-
-#. Translators: message presented when cannot delete a bookmark.
-msgid "Cannot delete bookmark"
-msgstr "Nie można usunąć zakładki"
-
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid "Moves to the next bookmark."
-msgstr "Przechodzi do następnej zakładki."
-
-#. Translators: message presented when trying to select a bookmark, but none is found.
-msgid "No bookmarks found"
-msgstr "Nie znaleziono zakładek"
-
-#. Translators: message presented when a bookmark is selected.
-#, python-format
-msgid "Position: character %d"
-msgstr "Pozycja: znak %d"
-
-#. Translators: message presented when the next bookmark is not found.
-msgid "Next bookmark not found"
-msgstr "Nie znaleziono następnej zakładki"
-
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid "Moves to the previous bookmark."
-msgstr "Przechodzi do poprzedniej zakładki."
-
-#. Translators: message presented when the previous bookmark is not found.
-msgid "Previous bookmark not found"
-msgstr "Nie znaleziono poprzedniej zakładki"
-
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid "Copies the name of the current file for place markers to the clipboard."
-msgstr "Kopiuje do schowka nazwę aktualnego pliku znaczników miejsca."
-
-#. Translators: message presented when cannot copy the file name corresponding to place markers.
-msgid "Cannot copy file name for place markers"
-msgstr "Nie można skopiować nazwy pliku znaczników miejsca"
-
-#. Translators: message presented when file name for place markers is copied to clipboard.
-msgid "Place markers file name copied to clipboard"
-msgstr "Nazwa pliku znaczników miejsca skopiowana do schowka."
-
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid "Saves the current position as a temporary bookmark."
-msgstr "Zapisuje bieżącą pozycję jako zakładkę tymczasowa."
-
-#. Translators: Message presented when a temporary bookmark is saved.
-#, python-format
-msgid "Saved temporary bookmark at position %d"
-msgstr "Tymczasowy znacznik miejsc został zapisany w pozycji %d"
-
-#. Translators: Message presented in input help mode.
-msgid "Moves to the temporary bookmark for the current document."
-msgstr "Przemieszcza do tymczasowego znacznika miejsc w aktualnym dokumencie."
+#. Translators: message presented in input mode.
+msgid "Copies title and related link of the current article to the clipboard."
+msgstr "Kopiuje nagłówek i odnoszący się link danego artykułu do schowka."
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
-msgid "Place markers"
-msgstr "Znaczniki miejsca"
+msgid "Read Feeds"
+msgstr "Czytaj wiadomości / Read Feeds"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
-msgid "Add-on for setting place markers on specific virtual documents"
-msgstr ""
-"Dodatek pozwalający ustawić znaczniki miejsca wewnątrz określonych "
-"dokumentów wirtualnych"
+msgid "Add-on for using NVDA as a feed reader."
+msgstr "Dodatek pozwalający używać NVDA jako czytnika kanałów z wiadomościami."
 
-#~ msgid "Bookmark cannot be saved"
-#~ msgstr "Zakładka nie może zostać zapisana."
+#~ msgid ""
+#~ "You have installed the ReadFeeds add-on, probably an old and incompatible "
+#~ "version with this one. Do you want to uninstall the old version?"
+#~ msgstr ""
+#~ "Zainstalowałeś dodatek ReadFeeds prawdopodobnie w starej wersji, "
+#~ "niekompatybilnej z obecną. Czy chcesz odinstalować starą wersję?"
 
-#~ msgid "Bookmark cannot be deleted"
-#~ msgstr "Zakładka nie może zostać usunięta"
+#~ msgid "Uninstall incompatible add-on"
+#~ msgstr "Odinstaluj niekompatybilny dodatek"
 
-#~ msgid "Cannot find any bookmarks"
-#~ msgstr "Nie można znaleźć żadnej zakładki"
+#~ msgid "Feeds"
+#~ msgstr "Kanały osobiste"
+
+#~ msgid "Manage feeds."
+#~ msgstr "Zarządzaj kanałami."
+
+#~ msgid "View and manage feeds"
+#~ msgstr "Przegląd i zarządzanie kanałami"
+
+#~ msgid "Backup of feeds"
+#~ msgstr "Kopia zapasowa kanałów osobistych"
+
+#~ msgid "Restore previously saved feeds"
+#~ msgstr "Przywraca poprzednio zapisane kanały"

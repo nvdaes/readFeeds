@@ -1,182 +1,197 @@
-# Marcadores de lugar #
-* Autores: Noelia, Chris.
-* Compatibilidade: NVDA 2019.3 ou posterior
-* Descarregar [versão estável][1]
-* Descarregar [versão de desenvolvimento][2]
+# Leitor de RSS #
 
-Este extra é usado para guardar e procurar expressões ou marcadores de texto
-específicos. Pode ser usado em páginas da Web ou documentos no modo de
-navegação do NVDA. Também pode ser usado para guardar ou procurar expressões
-em controlos de múltiplas linhas; neste caso, se não for possível actualizar
-o cursor, a expressão será copiada para a área de transferência, para que
-possa ser pesquisada usando outras ferramentas. O extra guarda as expressões
-e marcadores específicos em ficheiros cujo nome se baseia no título e URL do
-documento actual. Este extra é baseado em "SpecificSearch" e
-"Bookmark&Search", desenvolvidos pelo mesmo autor. Deve desinstalá-los para
-usar este, uma vez que têm comandos e recursos comuns.
-
-## Comandos: ##
-
-*	control+shift+NVDA+f: abre uma caixa de diálogo com uma caixa de edição
-  que mostra a última pesquisa guardada; Nesta caixa de diálogo, também pode
-  seleccionar as pesquisas guardadas anteriormente de uma caixa de
-  combinação ou remover a cadeia seleccionada do histórico usando uma caixa
-  de selecção. Pode escolher se o texto contido na caixa de edição será
-  adicionado ao histórico dos seus textos guardados. Finalmente, escolha uma
-  acção do próximo grupo de botões de rádio (entre Pesquisar próximo,
-  Pesquisar anterior ou Não pesquisar) e especifique se o NVDA fará uma
-  pesquisa sensível a maiúsculas e minúsculas. Quando pressiona ok, o NVDA
-  procurará essa cadeia.
-*	control+shift+NVDA+k: guarda a posição actual como marcador. Se quiser
-  fornecer um nome para este marcador, seleccione algum texto desta posição
-  antes de guardá-lo.
-*	control+shift+NVDA+delete: Apaga o marcador correspondente a esta posição.
-*	NVDA+k: Move para o próximo marcador.
-*	shift+NVDA+k: Move para o marcador anterior.
-*	Não atribuído: Mostra o nome do ficheiro onde os dados dos marcadores de
-  lugar serão guardados em modo de navegação, sem uma extensão.
-*	alt+NVDA+k: Abre uma caixa de diálogo com os marcadores guardados para
-  este documento. Pode escrever uma nota para cada marcador; pressione
-  "guardar nota", para guardar as alterações. Pressione Delete para apagar o
-  marcador seleccionado. Pressionando OK, Pode mover-se para a posição
-  seleccionada.
-*	Não atribuído: salva uma posição como um marcador temporário.
-*	Não atribuído: Move para o marcador temporário do documento actual.
-*	Não atribuído: Procura a próxima ocorrência do último texto procurado num
-  documento específico.
-*	Não atribuído: Procura a ocorrência anterior do último texto procurado num
-  documento específico.
+* Autores: Noelia Ruiz Martínez, Mesar Hameed
+* Compatibilidade com o NVDA: 2019.3 e posteriores
+* Baixar [versão estável][1]
+* Baixar [versão de desenvolvimento][2]
 
 
-## Submenu marcadores de lugar(NVDA + N) ##
+Este extra fornece uma maneira directa de ler feeds em formatos Atom ou RSS
+usando o NVDA. Os feeds não serão actualizados automaticamente. quando
+falamos de feeds, queremos dizer feeds RSS e ATOM.
 
-Usando o submenu de Marcadores de lugar, no menu Preferências do NVDA, pode
-aceder a:
+## Installation or Update ##
 
-*	Pasta de procuras específicas: abre uma pasta de buscas específicas
-  anteriormente guardadas.
-*	Pasta de marcadores: abre uma pasta dos marcadores guardados.
-*	Copiar pasta de marcadores: pode guardar uma cópia da pasta de marcadores
-  de lugar.
-*	Restaurar marcadores: Pode restaurar os seus marcadores a partir de uma
-  cópia da pasta de Marcadores de lugar.
+Se usou uma versão anterior deste addon e existe uma pasta RSS ou
+pessoalFeeds na sua pasta pessoal de configuração do NVDA, ao instalar a
+versão actual, uma caixa de diálogo perguntará se deseja actualizar ou
+instalar. Escolha a actualização para preservar os seus feeds guardados e
+continuar a usá-los na nova versão instalada do readFeeds.
 
-Nota: A posição do marcador é baseada no número de caracteres; e, portanto,
-em páginas dinâmicas, é melhor usar a Procura específica, não os marcadores.
+## Commands ##
 
-## Alterações para 14.0 ##
-*	O comando para copiar o nome do ficheiro onde os dados dos marcadores
-  serão guardados foi substituído pelo comando que mostra o nome do ficheiro
-  em modo de navegação. Este comando não tem tecla associada.
-*	O campo "Texto a procurar" já não se sobrepõe ao campo "Textos
-  guardados". (Agradecimentos a Cyrille Bougot).
-*	Requer NVDA 2019.3 ou posterior.
+### Menu do leitor de RSS: ###
 
-## Alterações para 13.0 ##
-*	Adicionado comandos não atribuídos para Procurar a próxima ou a nterior
-  ocorrência da última expressão procurada para qualquer documento
-  específico.
-*	A procura específica funciona no diálogo Sobre o NVDA'.
-*	No diálogo de Procura específica, a caixa de verificação "Ignorar
-  maiúsculas/minúsculas" estará marcada, se esta opção estava marcada na
-  última procura.
-*	Quando o extra é actualizado, os marcadores e expressões para procuras
-  específicas, guardados na versão anterior, são automaticamente copiados
-  para a nova versão, a não ser que prefira importar os marcadores guardados
-  na pasta principal de configurações do NVDA.
-*	Quando se usa o diálogo para copiar marcadores de lugar, se a pasta
-  selecionada não se chamar "placeMarkersBackup", será criada uma subpasta
-  com este nome para prevenir a eventual eliminação de dados importantes,
-  como documentos e transferências.
+Pode aceder ao submenu leitor de RSS no menu do nvda, submenu Ferramentas,
+onde estão disponíveis as seguintes opções de menu:
 
-## Alterações para 12.0 ##
-*	Corrigido um erro crítico que fazia com que o NVDA falhasse ao tentar
-  abrir a caixa de diálogo de Notas, se os caracteres chineses fossem
-  seleccionados antes de guardar os favoritos.
+#### Feeds ####
 
-## Alterações para 11.0 ##
-*	Compatível com o NVDA 2018.3 ou posterior (requerido).
-*	Se necessário, pode fazer o download da [última versão compatível com o
+Abre um diálogo com os seguintes controlos:
+
+* Filtrar por: Uma caixa de edição para procurar feeds guardados
+  anteriormente.
+* A list of the saved feeds, focused when the dialog is opened.
+* Lista de artigos: abre uma caixa de diálogo que apresenta a lista de
+  artigos do seu feed actual. Seleccione o artigo que deseja ler e pressione
+  Enter ou o botão Abrir página da web do artigo seleccionado para abrir a
+  página correspondente no seu navegador. Pressione o botão Sobre o artigo
+  para abrir uma caixa de diálogo que mostra o título e o link do artigo
+  seleccionado; nesta caixa de diálogo, poderá copiar essa informação para a
+  área de transferência.
+* Abrir RSS: abre o feed seleccionado na aplicação padrão.
+* Open feed as HTML: Opens the selected feed in the default web browser. You
+  will be able to show or hide publication dates and buttons to copy
+  information about articles to clipboard.
+* Copy feed address: Opens a dialog to confirm if you want to copy the feed
+  address to clipboard.
+* Novo: abre uma caixa de diálogo com uma caixa de edição para inserir o
+  endereço de um novo feed. Se o endereço for válido e o feed puder ser
+  guardado, o seu nome, com base no título do feed, aparecerá na parte
+  inferior da lista de RSS.
+* Renomear: Abre uma caixa de diálogo com uma caixa de edição para renomear
+  o feed seleccionado.
+* Apagar: abre uma caixa de diálogo para excluir o feed seleccionado, após a
+  confirmação.
+* Definir por defeito: define o feed seleccionado como padrão, para que os
+  seus artigos possam ser acedidos ​​com os comandos do NVDA.
+* Abrir pasta que contenha um backup de feeds: Abre uma pasta que pode
+  conter um backup de feeds. Isto pode ser útil para explorar e excluir
+  feeds que não devam ser importados quando o extra é actualizado.
+* Preferences: Opens the settings dialog for readFeeds, also available in
+  NVDA's menu, Preferences, settings, readFeeds category.
+* Fechar: fecha o diálogo de RSS;
+
+##### Notas: #####
+
+* Se um feed chamado tempFeed for criado, mude-lhe o nome, pois esse
+  ficheiro pode ser substituído quando necessário para criar um feed cujo
+  nome já existe.
+* O feed definido por defeito não pode ser removido. O ficheiro de endereço
+  do feed será usado como padrão quando a configuração for reiniciada,
+  portanto não pode ser excluído.
+* The Filter by edit box can be placed after the Open article button from
+  NVDA's menu, Preferences, Settings, Read feeds category, or pressing the
+  Preferences button of the Feeds dialog.
+
+#### Copy feeds folder ####
+
+Abre uma caixa de diálogo para escolher uma pasta onde pode guardar o seu
+directório pessoal de RSS . Por padrão, a pasta seleccionada é o diretório
+de configuração do NVDA, que criará o diretório de feeds pessoais.
+
+#### Restore feeds ####
+
+Abre uma caixa de diálogo para seleccionar uma pasta que substitui os seus
+feeds na pasta personalFeeds. Certifique-se de carregar uma pasta contendo
+URLs de feeds.
+
+### Keyboard commands ###
+
+* Ctrl+Shift+NVDA+Espaço: anuncia o URL do artigo atual. Ao pressionar duas
+  vezes, a página da Web será aberta.
+* Ctrl+Shift+NVDA+8: Actualiza o feed seleccionado e anuncia o seu título
+  mais recente.
+* Ctrl+Shift+NVDA+I: anuncia o título e o link do feed actual. Pressionando
+  duas vezes, copiará o título e o link relacionado para a área de
+  transferência.
+* Ctrl+Shift+NVDA+U: anuncia o título do feed anterior.
+* Ctrl+Shift+NVDA+O: anuncia o título do próximo feed.
+
+## Notifications ##
+
+* Quando o título ou o URL foram copiados.
+* Quando não é possível conectar / actualizar um feed, ou o URL não
+  corresponde a um feed válido.
+* NVDA will display an error message if it was not possible to backup or
+  restore the personalFeeds folder, and if a new feed cannot be created.
+* O título da caixa de diálogo da lista de artigos mostra o nome do feed
+  selecionado e o número de itens disponíveis.
+
+## Changes for 10.0 ##
+
+* Added a button to open the selected feed as HTML in the default web
+  browser.
+* If a new feed cannot be created, this will be notified in an error dialog.
+* Improved order and presentation of some articles.
+* More feeds may be supported.
+* When the feeds dialog is opened, the list of feeds will be focused instead
+  of the search edit box.
+* You can choose if the search edit box is placed after the list of feeds,
+  useful to focus the list even when switching from another window without
+  closing the Feeds dialog.
+* Added a button to copy the feed address to clipboard from the feeds
+  dialog.
+
+## Alterações para 9.0: ##
+
+* Requer NVDA 2019.3 ou posterior.
+
+## Alterações para 8.0: ##
+
+* Quando o extra é actualizado, os feeds guardados na versão anterior do
+  extra serão automaticamente copiados para a nova versão, a menos que
+  prefira que os feeds sejam guardados na pasta de configuração principal do
+  NVDA.
+* Ao usar o diálogo para copiar feeds, se a pasta escolhida não tiver o nome
+  personalFeeds, uma subpasta com este nome será criada para evitar a
+  exclusão de directórios que contenham dados importantes, tais como
+  documentos ou downloads.
+
+## Alterações para 7.0: ##
+
+* A caixa de diálogo Feeds inclui um botão para abrir uma pasta que pode
+  conter um backup de feeds.
+* Ao usar a caixa de edição para filtrar os feeds, se não for encontrado
+  qualquer resultado, a lista de feeds e outros controlos será desactivada,
+  para que o NVDA não diga "desconhecido", na lista vazia.
+* Se o diálogo de lista de artigos não puder ser mostrado, por exemplo,
+  devido a erros no feed, o NVDA irá gerar um erro, para que o diálogo de
+  feeds possa ser usado sem reiniciar o NVDA.
+
+## Alterações para 6.0: ##
+
+* Quando o feed padrão é actualizado e para de funcionar devido a problemas
+  do servidor, os artigos anteriores não são excluídos e podem ser lidos,
+  pelo uso das teclas correspondentes.
+* Corrigida regressão: o feed padrão pode ser atualizado duas vezes,
+  novamente.
+
+## Alterações para 5.0: ##
+
+* A caixa de diálogo da lista de artigos foi melhorada.
+* Compatível com o NVDA 2018.3 ou posterior (requerido).
+* Se necessário, pode fazer o download da [última versão compatível com o
   NVDA 2017.3] [3].
 
-## Alterações para 10.0 ##
-*	No Edge, os comandos associados à selecção de favoritos, como NVDA + k,
-  NVDA + shift + k ou NVDA + alt + k, serão enviados para a aplicação em vez
-  de tentar mover o cursor para marcadores, para evitar erros, especialmente
-  em documentos longos.
-*	Agora, a pesquisa específica é suportada no Edge.
+## Alterações para 4.0: ##
 
-## Alterações para 9.0
-*	Ao mover-se para um marcador da caixa de diálogo Notas, o cursor de
-  revisão segue o cursor do sistema.
-*	O comando para seleccionar o marcador anterior funciona, novamente, de
-  modo correcto.
-*	Os marcadores podem ser excluídos a partir da caixa de diálogo de Notas.
-*	Agora, pode atribuir comandos para guardar e mover para um marcador
-  temporário para cada documento.
+* Adicionado um botão para abrir o feed seleccionado a partir da  caixa de
+  diálogo de feeds.
 
-## Alterações para 8.0 ##
-*	Foram removidos Identificadores de fragmentos de nomes de marcadores, que
-  podem evitar problemas no leitor de ePUB VitalSource Bookshelf.
-*	Adicionada uma caixa de diálogo Notas, para associar comentários para
-  marcadores guardados e mover para a posição seleccionada.
+## Alterações para 3.0: ##
 
-## Alterações para 7.0 ##
-*	A caixa de diálogo para guardar uma expressão para procura específica foi
-  removida. Esta funcionalidade agora está incluída na caixa de diálogo
-  Procura específica, que foi redesenhada para permitir diferentes acções ao
-  pressionar o botão OK.
-*	A apresentação visual dos diálogos foi aprimorada, seguindo a aparência
-  dos diálogos mostrados no NVDA.
-*	Executar um comando Procurar Próximo ou Procurar Anterior no Modo de
-  Navegação agora irá fazer uma pesquisa sensível a maiúsculas e minúsculas,
-  se a procura original for sensível a maiúsculas e minúsculas.
-*	Requer NVDA 2016.4 ou posterior.
-*	Agora, pode atribuir comandos para abrir as caixas de diálogo de copiar e
-  restaurar Marcadores.
-*	O NVDA apresentará uma mensagem para notificar quando os marcadores foram
-  copiados ou restaurados com as caixas de diálogo correspondentes.
+* As caixas de diálogo para gerir ficheiros de feeds foram removidas. Agora,
+  a sua funcionalidade está incluída no diálogo Feeds.
+* A apresentação visual dos diálogos foi aprimorada, assemelhando-se à
+  aparência dos diálogos mostrados no NVDA.
+* O feed definido por defeito é guardado na configuração do NVDA. Portanto,
+  é possível definir diferentes feeds padrão nos diferentes perfis de
+  configuração.
+* Requer NVDA 2016.4.
 
-## Alterações para 6.0 ##
-* Quando os recursos do extra não são utilizáveis, os comandos são enviados
-  para o aplicativo correspondente.
+## Alterações para 2.0: ##
 
-## Alterações para 5.0 ##
-* Adicionada procura sensível a maiúsculas e minúsculas.
-* Removida a opção para abrir a documentação a partir do menu de marcadores.
-* Comandos mais intuitivos.
+* A ajuda do extra está disponível a partir do gestor de extras.
 
-## Alterações para 4.0 ##
-* Foram removidos Identificadores de fragmentos de nomes de marcadores, que
-  podem provocar problemas no extra ePUBREADER do Firefox.
-* A ajuda do extra passa a estar disponível no gestor de extras.
+## Alterações para 1.0: ##
 
-## Alterações para 3.1 ##
-* Actualização de traduções e um novo idioma.
-* A posição dos marcadores não é anunciada na leitura rápida.
-
-## Alterações para 3.0 ##
-* Adicionado suporte para leitura rápida.
-
-## Alterações para 2.0 ##
-* Adicionadas opções para guardar e excluir pesquisas diferentes para cada
-  ficheiro.
-* Corrigido o erro que desactivava quando os caminhos continham caracteres
-  não latinos.
-* Os atalhos agora podem ser reatribuídos usando a caixa de diálogo de
-  definição de comandos do NVDA.
-
-## Alterações para 1.0 ##
 * Versão inicial.
-* Traduzido para: Português brasileiro, farsi, finlandês, francês, galego,
-  alemão, italiano, japonês, coreano, nepalês, português, espanhol,
-  eslovaco, esloveno, tamil.
-
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=pm
+[1]: https://addons.nvda-project.org/files/get.php?file=rf
 
-[2]: https://addons.nvda-project.org/files/get.php?file=pm-dev
+[2]: https://addons.nvda-project.org/files/get.php?file=rf-dev
 
-[3]: https://addons.nvda-project.org/files/get.php?file=pm-o
+[3]: https://addons.nvda-project.org/files/get.php?file=rf-o

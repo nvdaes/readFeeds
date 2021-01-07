@@ -5,10 +5,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: placeMarkers 1.0-beta\n"
+"Project-Id-Version: readFeeds 1.1-dev\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
-"POT-Creation-Date: 2013-06-26 14:59+0200\n"
-"PO-Revision-Date: 2018-09-26 01:25+0330\n"
+"POT-Creation-Date: 2014-04-11 18:00+0100\n"
+"PO-Revision-Date: 2020-12-25 15:54+0330\n"
 "Last-Translator: Mohammadreza Rashad <mohammadreza5712@gmail.com>\n"
 "Language-Team: NVDA Translation Team <nvda-translations@groups.io>\n"
 "Language: fa\n"
@@ -17,318 +17,305 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.6.10\n"
 
-#. Translators: label of a dialog presented when installing this addon and placeMarkersBackup is found.
+#. Translators: the label of a message box dialog.
 msgid ""
 "Your configuration folder for NVDA contains files that seem to be derived "
-"from a previous version of this add-on. Do you want to update it?"
+"from a previous version of this add-on.\n"
+"\t\t\tDo you want to update it?"
 msgstr ""
-"پوشه‌ی تنظیماتِ NVDAِ شما شامل فایل‌هایی است که به نظر میرسد از نسخه‌ی قبلیِ این "
-"افزونه به دست آمده است. آیا میخواهید به‌روزرسانیش کنید؟"
+"پوشه‌ی پیکربندیِ افزونه‌ی شما حاوی فایل‌هاییست که به نظر میرسد از نسخه‌ای قدیمی "
+"به جا مانده است.\n"
+"\t\t\tمیخواهید آن را به‌روز کنید؟"
 
-#. Translators: title of a dialog presented when installing this addon and placeMarkersBackup is found.
+#. Translators: the title of a message box dialog.
 msgid "Install or update add-on"
 msgstr "نصب یا به‌روزرسانیِ افزونه"
 
-#. Translators: message presented when a string of text has been copied to the clipboard.
-#, python-format
-msgid "%s copied to clipboard"
-msgstr "%s در کلیپ‌برد کپی شد"
+#. Translators: message presented when feeds cannot be reported.
+msgid ""
+"Unable to refresh feed. Check your Internet conectivity or that the "
+"specified feed address is correct."
+msgstr ""
+"نمیتوانم خوراک را نوسازی کنم. اتصال اینترنتتان را بررسی کنید یا مطمئن شوید "
+"که نشانیِ خوراکِ موردِ نظرتان درست باشد."
 
-#. Translators: The title of the Specific Search dialog.
-msgid "Specific search"
-msgstr "جستجوی اختصاصی"
+#. Translators: Message presented when feeds have been copied.
+msgid "Feeds copied"
+msgstr "خوراک‌ها کپی شدند"
 
-#. Translators: The label of a combo box in the Specific Search dialog.
-msgid "Sa&ved texts"
-msgstr "متن‌های &ذخیره‌شده"
-
-#. Translators: A label for a chekbox in the Specific search dialog.
-msgid "&Remove from history"
-msgstr "&حذف کردن از سابقه"
-
-#. Translators: The label of an edit box in the Specific Search dialog.
-msgid "&Text to search:"
-msgstr "&متن برای جستجو:"
-
-#. Translators: A label for a chekbox in the Specific search dialog.
-msgid "&Add to history"
-msgstr "&افزودن به سابقه"
-
-#. Translators: Label for a set of radio buttons in the Specific search dialog.
-msgid "Action on s&earch"
-msgstr "اقدام روی &جستجو"
-
-#. Translators: An action in the Search group of the Specific search dialog.
-msgid "Search &next"
-msgstr "جستجوی &بعدی"
-
-#. Translators: An action in the Search group of the Specific search dialog.
-msgid "Search &previous"
-msgstr "جستجوی &قبلی"
-
-#. Translators: An action in the Search group of the Specific search dialog.
-msgid "&Don't search"
-msgstr "&جستجو نکن"
-
-#. Translators: Message presented when place markers have been copied.
-msgid "Place markers copied"
-msgstr "نشان‌گذاری‌ها کپی شدند"
-
-#. Translators: label of error dialog shown when cannot copy placeMarkers folder.
+#. Translators: label of error dialog shown when cannot copy feeds folder.
 msgid "Folder not copied"
 msgstr "پوشه کپی نشد"
 
-#. Translators: title of error dialog shown when cannot copy placeMarkers folder.
+#. Translators: title of error dialog shown when cannot copy feeds folder.
 msgid "Copy Error"
-msgstr "خطا هنگامِ کپی"
+msgstr "خطای کپی"
 
-#. Translators: Message presented when place markers have been restored.
-msgid "Place markers restored"
-msgstr "نشان‌گذاری‌ها برگردانده شدند"
+#. Translators: Message presented when feeds have been restored.
+msgid "Feeds restored"
+msgstr "خوراک‌ها بازگردانده شدند"
 
-#. Translators: The title of the Notes dialog.
-msgid "Notes"
-msgstr "یادداشت‌ها"
+#. Translators: Title of a dialog.
+#, python-brace-format
+msgid "Feeds: {defaultFeed} ({configProfile})"
+msgstr "خوراک‌ها: {defaultFeed} ({configProfile})"
 
-#. Translators: The label of a list box in the Notes dialog.
-msgid "&Bookmarks"
-msgstr "&نشان‌ها"
+#. Translators: Label of a dialog (message translated in NVDA's core in different contexts).
+msgid "&Filter by:"
+msgstr "&فیلتر کردن با"
 
-#. Translators: The label of an edit box in the Notes dialog.
-msgid "Not&e:"
-msgstr "&یادداشت:"
+#. Translators: The label of a button to open the list of articles of a feed.
+msgid "List of &articles..."
+msgstr "فهرستِ &مقاله‌ها..."
 
-#. Translators: The label for a button in the Notes dialog.
-msgid "&Save note"
-msgstr "&ذخیره کردنِ یادداشت"
+#. Translators: The label of a button to open a feed.
+msgid "&Open feed"
+msgstr "باز کردنِ &خوراک"
 
-#. Translators: The label for a button in the Notes dialog.
+#. Translators: The label of a button to open a feed as HTML.
+msgid "Open feed as &HTML"
+msgstr "باز کردنِ خوراک به صورتِ ا&چ‌تی‌اِم‌ال"
+
+#. Translators: The label of a button to copy the feed URL.
+msgid "Cop&y feed address"
+msgstr "&کپیِ نشانیِ خوراک"
+
+#. Translators: The label of a button to add a new feed.
+msgid "&New..."
+msgstr "&جدید"
+
+#. Translators: The label of a button to rename a feed.
+msgid "&Rename..."
+msgstr "&تغییرِ نام"
+
+#. Translators: The label of a button to delete a feed.
 msgid "&Delete..."
-msgstr "&پاک کردن..."
+msgstr "&حذف کردن"
 
-#. Translators: The confirmation prompt displayed when the user requests to delete a bookmark.
+#. Translators: The label of a button to set a feed as default.
+msgid "S&et default"
+msgstr "تن&ظیم به عنوانِ پیش‌فرض"
+
+#. Translators: The label of a button to open a folder containing a backup of feeds.
+msgid "Open &folder containing a backup of feeds"
+msgstr "باز کردنِ &پوشه‌ی حاویِ نسخه‌ی پشتیبانِ خوراک‌ها"
+
+#. Translators: The label of a button to open the settings dialog for readFeeds.
+msgid "&Preferences..."
+msgstr "ت&نظیمات..."
+
+#. Translators: Message presented when a feed cannot be added.
+#, python-format
+msgid "Cannot add feed: %s"
+msgstr "نمیتوانم خوراک را اضافه کنم: %s"
+
+#. Translators: error message.
+msgid "Error"
+msgstr "خطا"
+
+#. Translators: the label of a message box dialog.
+#, python-brace-format
 msgid ""
-"This bookmark will be permanently deleted. This action cannot be undone."
-msgstr "این نشان بطور همیشگی پاک خواهد شد. این عمل بازگشت‌پذیر نخواهد بود."
+"Do you want to copy feed address to the clipboard\r\n"
+"\r\n"
+"{feedAddress}?"
+msgstr ""
+"آیا میخواهید نشانیِ خوراک را در کلیپ‌برد کپی کنید\r\n"
+"\r\n"
+"{feedAddress}؟"
 
-#. Translators: The message presented when all bookmarks have been deleted from the Notes dialog.
-#. Translators: message presented when the current document doesn't contain bookmarks.
-msgid "No bookmarks"
-msgstr "نشانی وجود ندارد"
+#. Translators: the title of a message box dialog.
+msgid "Copy feed address"
+msgstr "کپیِ نشانیِ خوراک"
 
-#. Translators: The title of the warning dialog when all bookmarks have been deleted.
-msgid "Bookmarks deleted"
-msgstr "نشان‌ها پاک شدند"
+#. Translators: Label of a dialog.
+msgid "Address of a new feed:"
+msgstr "نشانیِ خوراکِ جدید:"
+
+#. Translators: The title of a dialog to create a new feed.
+msgid "New feed"
+msgstr "خوراکِ جدید"
+
+#. Translators: The confirmation prompt displayed when the user requests to delete a feed.
+msgid "Are you sure you want to delete this feed? This cannot be undone."
+msgstr ""
+"آیا مطمئنید که میخواهید این خوراک را حذف کنید؟ این کار بازگشت‌پذیر نیست."
+
+#. Translators: The label of a field to enter a new name for a feed.
+msgid "New name:"
+msgstr "نامِ جدید:"
+
+#. Translators: The title of a dialog to rename a feed.
+msgid "Rename feed"
+msgstr "تغییرِ نامِ خوراک‌ها"
+
+#. Translators: The label of the articles list in the articles dialog.
+msgid "List of articles"
+msgstr "فهرستِ مقاله‌ها"
+
+#. Translators: The label of a button to open the selected article of a feed.
+msgid "Open &web page of selected article."
+msgstr "باز کردنِ صفحه‌ی &وبِ مقاله‌ی انتخاب‌شده"
+
+#. Translators: The label of a button to show information of a feed article.
+msgid "&About article..."
+msgstr "&درباره‌ی مقاله..."
+
+#. Translators: the label of a message box dialog.
+#, python-format
+msgid "%sDo you want to copy article title and link to the clipboard?"
+msgstr "%s میخواهید عنوان و لینکِ مقاله را در کلیپ‌برد کپی کنید؟"
+
+#. Translators: the title of a message box dialog.
+msgid "Article information"
+msgstr "اطلاعاتِ مقاله"
 
 #. Translators: The title of the Copy dialog.
-msgid "Copy place markers"
-msgstr "کپی کردنِ نشان‌گذاری‌ها"
+msgid "Copy feeds"
+msgstr "کپی کردنِ خوراک‌ها"
 
 #. Translators: An informational message displayed in the Copy dialog.
-msgid "Select a folder to save a backup of your current place markers."
-msgstr ""
-"پوشه‌ای را برای ذخیره کردنِ یک پشتیبان از نشان‌گذاری‌های فعلیِ خود انتخاب کنید."
+msgid "Select a folder to save a backup of your current feeds"
+msgstr "پوشه‌ای را برای ذخیره‌ی نسخه‌ی پشتیبان از خوراک‌های جاری انتخاب کنید"
 
 #. Translators: The label of a grouping containing controls to select the destination directory in the Copy dialog.
 msgid "directory for backup:"
-msgstr "پوشه برای پشتیبانگیری:"
+msgstr "پوشه‌ای برای پشتیبانگیری:"
 
-#. Translators: The title of the dialog presented when browsing for the destination directory when copying place markers.
+#. Translators: The title of the dialog presented when browsing for the destination directory when copying feeds.
 msgid "Select directory to copy"
-msgstr "پوشه را برای کپی کردن انتخاب کنید"
+msgstr "پوشه‌ای را برای کپی کردنِ خوراک‌ها در آن انتخاب کنید"
 
 #. Translators: The title of the Restore dialog.
-msgid "Restore place markers"
-msgstr "برگرداندنِ نشان‌گذاری‌ها"
+msgid "Restore feeds"
+msgstr "بازگرداندنِ خوراک‌ها"
 
 #. Translators: An informational message displayed in the Restore dialog.
-msgid ""
-"Select a folder to restore a backup of your previous copied place markers."
-msgstr "پوشه‌ای را برای برگرداندنِ نشان‌گذاری‌های از‌پیش کپی‌شده‌تان انتخاب کنید."
+msgid "Select a folder to restore a backup of your previous copied feeds"
+msgstr ""
+"پوشه‌ای را برای برگرداندنِ یک نسخه‌ی پشتیبان از خوراک‌های از پیش کپی‌شده‌ی‌تان "
+"انتخاب کنید"
 
 #. Translators: The label of a grouping containing controls to select the destination directory in the Restore dialog.
 msgid "directory containing backup:"
-msgstr "پوشه‌ی دارای نسخه‌ی پشتیبان:"
+msgstr "پوشه‌ی حاویِ پشتیبان:"
 
-#. Translators: The title of the dialog presented when browsing for the destination directory when restoring place markers.
+#. Translators: The title of the dialog presented when browsing for the destination directory when restoring feeds.
 msgid "Select directory to restore"
-msgstr "پوشه را برای برگرداندن انتخاب کنید"
+msgstr "پوشه‌ای را برای بازگرداندن انتخاب کنید"
 
-#. Translators: the name of addon submenu.
-msgid "P&lace markers"
-msgstr "&نشان‌گذاری‌ها"
+#. Translators: label of a dialog.
+msgid "&Search edit box after feeds list"
+msgstr "کادرِ ویرایشیِ &جستجو بعد از فهرستِ خوراک‌ها"
 
-#. Translators: the tooltip text for addon submenu.
-msgid "Bookmarks and Search menu"
-msgstr "منوی نشان‌ها و جستجو"
+#. Translators: Presented when the current article does not have an associated title.
+msgid "Unable to locate article title."
+msgstr "نمیتوانم عنوانِ مقاله را پیدا کنم."
 
-#. Translators: the name for an item of addon submenu.
-msgid "&Specific search folder"
-msgstr "پوشه‌ی جستجوی &اختصاصی"
+#. Translators: Presented when the current article does not have an associated link.
+msgid "Unable to locate article link."
+msgstr "نمیتوانم لینکِ مقاله را پیدا کنم."
 
-#. Translators: the tooltip text for an item of addon submenu.
-msgid "Opens the specific search folder"
-msgstr "پوشه‌ی جستجوی اختصاصی را باز میکند"
+#. Translators: Label of a checkbox to choose if date should be presented for each feed.
+msgid "Show date"
+msgstr "نمایشِ تاریخ"
 
-#. Translators: the name for an item of addon submenu.
-msgid "&Bookmarks folder"
-msgstr "پوشه‌ی &نشان‌ها"
+#. Translators: Label for a checkbox to show buttons for copying to clipboard.
+msgid "Show buttons to copy"
+msgstr "نمایشِ دکمه‌ها برای کپی کردن"
 
-#. Translators: the tooltip text for an item of addon submenu.
-msgid "Opens the bookmarks folder"
-msgstr "پوشه‌ی نشان‌ها را باز میکند"
+#. Translators: Label for a button to copy to clipboard.
+msgid "Copy"
+msgstr "کپی کردن"
 
-#. Translators: the name for an item of addon submenu.
-msgid "&Copy placeMarkers folder..."
-msgstr "&کپیِ پوشه‌ی نشان‌گذاری‌ها"
+#. Translators: the name of a submenu.
+msgid "&Read Feeds"
+msgstr "&خوراک‌خوان"
 
-#. Translators: the tooltip text for an item of addon submenu.
-msgid "Backup of place markers"
-msgstr "پشتیبانِ نشان‌گذاری‌ها"
+#. Translators: the name of a menu item.
+msgid "&Feeds..."
+msgstr "خوراک‌ها..."
 
-#. Translators: the name for an item of addon submenu.
-msgid "R&estore place markers..."
-msgstr "&برگرداندنِ نشان‌گذاری‌ها"
+#. Translators: the name of a menu item.
+msgid "&Copy feeds folder..."
+msgstr "&کپیِ پوشه‌ی خوراک‌ها..."
 
-#. Translators: the tooltip text for an item of addon submenu.
-msgid "Restore previously saved place markers"
-msgstr "نشان‌گذاری‌های از‌پیش ذخیره‌شده را برمیگردانَد"
+#. Translators: the name of a menu item.
+msgid "R&estore feeds..."
+msgstr "&بازگرداندنِ خوراک‌ها..."
 
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid "Opens the specific search folder."
-msgstr "پوشه‌ی جستجوی اختصاصی را باز میکند."
+#. Translators: message presented in input mode.
+msgid "Activates the Feeds dialog of Read Feeds."
+msgstr "پنجره‌ی خوراک‌های خوراک‌خوان را فعال میکند."
 
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid "Opens the bookmarks folder."
-msgstr "پوشه‌ی نشان‌ها را باز میکند."
+#. Translators: message presented in input mode.
+msgid "Activates the Copy dialog of Read Feeds."
+msgstr "پنجره‌ی کپیِ خوراک‌خوان را فعال میکند."
 
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
+#. Translators: message presented in input mode.
+msgid "Activates the Restore dialog of Read Feeds."
+msgstr "پنجره‌ی بازگرداندنِ خوراک‌های خوراک‌خوان را فعال میکند."
+
+#. Translators: message presented in input mode.
 #, python-format
-msgid "Activates the Copy dialog of %s."
-msgstr "پنجره‌ی کپیِ %s را فعال میکند."
+msgid "Shows the %s settings."
+msgstr "تنظیماتِ %s را نشان میدهد."
 
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-#, python-format
-msgid "Activates the Restore dialog of %s."
-msgstr "پنجره‌ی بازگردانیِ %s را فعال میکند."
+#. Translators: message presented in input mode.
+msgid "Refreshes the current feed and announces the most recent article title."
+msgstr "خوراکِ جاری را نوسازی کرده و جدید‌ترین عنوانِ مقاله را میخوانَد."
 
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
+#. Translators: message presented in input mode.
 msgid ""
-"finds a text string from the current cursor position for a specific document."
-msgstr "رشته‌ی متنی از محلِ مکان‌نما برای یک سندِ خاص را پیدا میکند"
+"Announces the title of the current article. Pressed two times, copies title "
+"and related link to the clipboard."
+msgstr ""
+"عنوانِ مقاله‌ی جاری را میخوانَد. وقتی دو بار فشرده شود، عنوان و لینک مربوط به "
+"آن را در کلیپ‌برد کپی میکند."
 
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-#, fuzzy
-msgid ""
-"finds the next occurrence of the last text searched for any specific "
-"document."
-msgstr "رشته‌ی متنی از محلِ مکان‌نما برای یک سندِ خاص را پیدا میکند"
-
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-#, fuzzy
-msgid ""
-"finds the previous occurrence of the last text searched for any specific "
-"document."
-msgstr "رشته‌ی متنی از محلِ مکان‌نما برای یک سندِ خاص را پیدا میکند"
-
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid "Show the Notes dialog for a specific document."
-msgstr "پنجره‌ی یادداشت‌ها را برای یک سندِ خاص نشان میدهد."
-
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid "Saves the current position as a bookmark."
-msgstr "موقعیتِ فعلی را به عنوانِ نشان ذخیره میکند."
-
-#. Translators: message presented when a position is saved as a bookmark.
+#. Translators: message presented when the information about an article of a feed is copied to the clipboard.
 #, python-format
-msgid "Saved position at character %d"
-msgstr "موقعیتِ نویسه‌ی %d ذخیره شد"
+msgid "Copied to clipboard %s"
+msgstr "در کلیپ‌برد کپی شد: %s"
 
-#. Translators: message presented when a bookmark cannot be saved.
-msgid "Cannot save bookmark"
-msgstr "نمیتوانم نشان را ذخیره کنم"
+#. Translators: message presented in input mode.
+msgid "Announces the title of the next article."
+msgstr "عنوانِ مقاله‌ی بعدی را میخوانَد"
 
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid "Deletes the current bookmark."
-msgstr "نشانِ فعلی را پاک میکند."
+#. Translators: message presented in input mode.
+msgid "Announces the title of the previous article."
+msgstr "عنوانِ مقاله‌ی قبلی را میخوانَد"
 
-#. Translators: message presented when the current document has bookmarks, but none is selected.
-msgid "No bookmark selected"
-msgstr "نشانی انتخاب نشد"
+#. Translators: message presented in input mode.
+msgid "Announces article link, when pressed two times, opens related web page."
+msgstr ""
+"لینکِ مقاله را میخوانَد. وقتی دو بار فشرده شود، صفحه‌ی وبِ مربوط به آن مقاله را "
+"باز میکند."
 
-#. Translators: message presented when a bookmark is deleted.
-msgid "Bookmark deleted"
-msgstr "نشان پاک شد"
-
-#. Translators: message presented when cannot delete a bookmark.
-msgid "Cannot delete bookmark"
-msgstr "نمیتوانم نشان را پاک کنم"
-
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid "Moves to the next bookmark."
-msgstr "به نشانِ بعدی میرود."
-
-#. Translators: message presented when trying to select a bookmark, but none is found.
-msgid "No bookmarks found"
-msgstr "نشانی پیدا نشد"
-
-#. Translators: message presented when a bookmark is selected.
-#, python-format
-msgid "Position: character %d"
-msgstr "موقعیت: نویسه‌ی %d"
-
-#. Translators: message presented when the next bookmark is not found.
-msgid "Next bookmark not found"
-msgstr "نشانِ بعدی پیدا نشد"
-
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid "Moves to the previous bookmark."
-msgstr "به نشانِ قبلی میرود."
-
-#. Translators: message presented when the previous bookmark is not found.
-msgid "Previous bookmark not found"
-msgstr "نشانِ قبلی پیدا نشد"
-
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid "Copies the name of the current file for place markers to the clipboard."
-msgstr "اسمِ فایلِ فعلی را برای نشان‌گذاری‌ها کپی میکند."
-
-#. Translators: message presented when cannot copy the file name corresponding to place markers.
-msgid "Cannot copy file name for place markers"
-msgstr "نمیتوانم اسمِ فایل را برای نشان‌گذاری‌ها کپی کنم"
-
-#. Translators: message presented when file name for place markers is copied to clipboard.
-msgid "Place markers file name copied to clipboard"
-msgstr "اسمِ فایلِ نشان‌گذاری‌ها در کلیپ‌برد کپی شد"
-
-#. Translators: message presented in input mode, when a keystroke of an addon script is pressed.
-msgid "Saves the current position as a temporary bookmark."
-msgstr "موقعیتِ فعلی را به عنوان نشانِ موقت ذخیره میکند."
-
-#. Translators: Message presented when a temporary bookmark is saved.
-#, python-format
-msgid "Saved temporary bookmark at position %d"
-msgstr "نشانِ موقتی در موقعیت %d ذخیره شد"
-
-#. Translators: Message presented in input help mode.
-msgid "Moves to the temporary bookmark for the current document."
-msgstr "به نشانِ موقتی برای سندِ فعلی میرود."
+#. Translators: message presented in input mode.
+msgid "Copies title and related link of the current article to the clipboard."
+msgstr "عنوان و لینکِ مقاله‌ی جاری را در کلیپ‌برد کپی میکند"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
-msgid "Place markers"
-msgstr "نشان‌گذاری‌ها"
+msgid "Read Feeds"
+msgstr "خوراک‌خوان"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
-msgid "Add-on for setting place markers on specific virtual documents"
-msgstr "افزونه‌ای برای تنظیمِ نشان‌گذاری‌ها در اسنادِ مجازی"
+msgid "Add-on for using NVDA as a feed reader."
+msgstr "افزونه‌ای برای استفاده از NVDA به عنوانِ یک خوراک‌خوان"
 
-#~ msgid "Bookmark cannot be saved"
-#~ msgstr "نشان ذخیره نشد"
+#~ msgid "Uninstall incompatible add-on"
+#~ msgstr "پاک کردن افزونه‌ی ناسازگار"
 
-#~ msgid "Bookmark cannot be deleted"
-#~ msgstr "نشان پاک نمیشود"
+#, fuzzy
+#~ msgid "Feeds"
+#~ msgstr "خوراک‌خوان"
 
-#~ msgid "Cannot find any bookmarks"
-#~ msgstr "نمیتوانم نشانی پیدا کنم"
+#~ msgid "Manage feeds."
+#~ msgstr "سازمان دادن به خوراک‌ها"
+
+#, fuzzy
+#~ msgid "View and manage feeds"
+#~ msgstr "سازمان دادن به خوراک‌ها"

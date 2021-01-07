@@ -1,177 +1,195 @@
-# placeMarkers #
-* Авторы: Noelia, Chris.
-* NVDA compatibility: 2019.3 or later.
-* загрузить [стабильную версию][1]
-* загрузить [разрабатываемую версию][2]
+# Read Feeds #
 
-Это дополнение используется для сохранения и поиска определенных строк
-текста или закладок. Оно может быть использовано на веб-страницах или
-документах в режиме обзора NVDA. также оно может быть использовано для
-сохранения или поиска строк текста в многострочных элементах управления, в
-случае невозможности обновить курсор, соответствующая строка будет
-скопирована в буфер обмена, так что она может быть найдена с помощью других
-инструментов. Дополнение сохраняет указанные строки и закладки в файлах, чье
-имя основано на названии и URL-адресе текущего документа. Это дополнение
-основано на SpecificSearch и Bookmark&Search, разработанных тем же
-автором. Вы должны удалить их, чтобы использовать его, поскольку они имеют
-общие функции и комбинации клавиш.
-
-## Клавиатурные Команды: ##
-
-*	control+shift+NVDA+f: Opens a dialog with an edit box that shows the last
-  saved search; in this dialog you can also select the previously saved
-  searches from a combo box or remove the selected string from the history
-  using a checkbox. You can choose if the text contained in the edit box
-  will be added to the history of your saved texts. Finally, choose an
-  action from the next group of radio buttons (between Search next, Search
-  previous or Don't search), and specify if NVDA will make a case sensitive
-  search. When you press okay, NVDA will search for this string.
-*	control+shift+NVDA+k: Saves the current position as a bookmark. If you
-  want to provide a name for this bookmark, select some text from this
-  position before saving it.
-*	control+shift+NVDA+delete: Deletes the bookmark corresponding to this
-  position.
-*	NVDA+k: Moves to the next bookmark.
-*	shift+NVDA+k: Moves to the previous bookmark.
-*	Not assigned: Shows the file name where the place markers data will be
-  saved in browse mode, without an extension.
-*	alt+NVDA+k: Opens a dialog with the bookmarks saved for this document. You
-  can write a note for each bookmark; press Save note to save
-  changes. Pressing Delete you can remove the selected bookmark. Pressing OK
-  you can move to the selected position.
-*	Not assigned: Saves a position as a temporary bookmark.
-*	Not assigned: Moves to the temporary bookmark for the current document.
-*	Not assigned: Finds the next occurrence of the last text searched for any
-  specific document.
-*	Not assigned: Finds the previous occurrence of the last text searched for
-  any specific document.
+* Авторы: Noelia Ruiz Martínez, Mesar Hameed
+* NVDA compatibility: 2019.3 or later
+* Загрузить [стабильную версию][1]
+* Загрузить [разрабатываемую версию][2]
 
 
-## Подменю Закладки (NVDA+N) ##
+Это дополнение обеспечивает простой способ читать новости формата Atom или
+RSS, используя NVDA.  Новостные ленты не будут обновляться автоматически.
+Ниже, когда мы упоминаем новостные ленты, мы имеем в виду как RSS, так и
+ATOM каналы.
 
-Используя подменю Закладки в меню Параметры NVDA, вы можете получить доступ
-к следующим элементам:
+## Installation or Update ##
 
-*	Папка поисковых запросов; открывает папку сохранённых ранее поисковых
-  запросов.
-*	Папка закладок: открывает папку сохранённых закладок.
-*	Копировать папку закладок: вы можете сохранить копию папки закладок.
-*	Восстановить папку закладок: вы можете востановить ваши закладки из ранее
-  сохранённой копии закладок.
+Если вы использовали предыдущую версию этого дополнения, и есть папка RSS
+или personalFeeds в пользовательской папке конфигурации NVDA, при установке
+текущей версии, появится диалог с запросом  обновления или
+установки. Выберите обновление, чтобы сохранить ваши сохраненные ленты
+новостей и продолжать использовать их в новой установленной версии
+readFeeds.
 
-Примечание: Положение закладки основано на количестве символов; и поэтому на
-страницах с динамическим содержимым лучше использовать конкретный поиск, а
-не закладки которые сохраняют чёткую позицию.
+## Commands ##
 
-## Changes for 14.0 ##
-*	The command to copy the name of the file where place markers data will be
-  saved has been replaced by a command which shows this file name in browse
-  mode. This is not assigned to a gesture.
-*	The "Text to search" field does not overlap the "Saved text" field
-  anymore. (Thanks to Cyrille Bougot).
-*	Requires NVDA 2019.3 or later.
+### Меню Чтение Новостей ###
 
-## Changes for 13.0 ##
-*	Added not assigned commands to find the next and previous occurrences of
-  the last text searched for any specific document.
-*	The specific search feature works when the NVDA's About dialog is open.
-*	In the Specific search dialog, the case sensitive checkbox will be checked
-  if this option was selected for the last search.
-*	When the add-on is updated, bookmarks and strings for specific search
-  saved in the previous version of the add-on will be automatically copied
-  to the new version, unless you prefer to import place markers saved in the
-  main configuration folder of NVDA.
-*	When using the dialog to copy place markers, if the chosen folder is not
-  named placeMarkersBackup, a subfolder with this name will be created to
-  prevent the deletion of directories containing important data, such as
-  Documents or Downloads.
+Вы можете получить доступ к подменю чтение новостей из меню NVDA, Сервис,
+где доступны следующие пункты меню:
 
-## Changes for 12.0 ##
-*	Fixed a critical bug which caused NVDA to crash when trying to open the
-  Notes dialog, if chinese characters were selected before saving bookmarks.
+#### Feeds ####
 
-## Changes for 11.0 ##
-*	Compatible with NVDA 2018.3 or later (required).
-*	If needed, you can download the [last version compatible with NVDA
-  2017.3][3].
+Открывает диалог со следующими элементами управления:
+
+* Фильтр по: поле редактирования для поиска ранее сохраненных новостных
+  лент.
+* A list of the saved feeds, focused when the dialog is opened.
+* List of articles: Opens a dialog which presents the articles list from
+  your current feed. Select the article you want to read and press Enter or
+  Open web page of selected article button to open the corresponding page in
+  your browser. Press About article button to open a dialog showing title
+  and link of the selected article; from this dialog, you'll be able to copy
+  this info to the clipboard.
+* Открыть новостную ленту: Открывает выбранную новостную ленту в приложении
+  по умолчанию.
+* Open feed as HTML: Opens the selected feed in the default web browser. You
+  will be able to show or hide publication dates and buttons to copy
+  information about articles to clipboard.
+* Copy feed address: Opens a dialog to confirm if you want to copy the feed
+  address to clipboard.
+* Новый: открывает диалог с полем редактирования, где можно ввести адрес
+  новой ленты. Если адрес действителен и новостная лента может быть
+  сохранена, её имя появится в низу списка новостных лент, исходя из
+  названия новостной ленты.
+* Переименовать: открывает диалог с полем редактирования для переименования
+  выбранной новостной ленты.
+* Удалить: открывает диалог для удаления выбранной ленты после
+  подтверждения.
+* Установить по умолчанию: устанавливает выбранную новостную ленту по
+  умолчанию, и её статьи могут быть доступны с помощью жестов NVDA.
+* Open folder containing a backup of feeds: Opens a folder which may contain
+  a backup of feeds. This can be useful to explore and delete feeds which
+  shouldn't be imported when the add-on is updated.
+* Preferences: Opens the settings dialog for readFeeds, also available in
+  NVDA's menu, Preferences, settings, readFeeds category.
+* Закрыть: закрывает диалог новостных лент.
+
+##### Примечания #####
+
+* Если создан канал с именем tempFeed, пожалуйста, переименуйте его, так как
+  этот файл может быть заменён, когда потребуется создать канал с  уже
+  существующим именем.
+* Новостная лента по умолчанию не может быть удалена. Она используется для
+  сброса настроек в файле addressFile, и поэтому не может быть удалена.
+* The Filter by edit box can be placed after the Open article button from
+  NVDA's menu, Preferences, Settings, Read feeds category, or pressing the
+  Preferences button of the Feeds dialog.
+
+#### Copy feeds folder ####
+
+Открывает диалог для выбора папки, куда можно сохранить каталог
+personalFeeds. По умолчанию выбран каталог конфигурации nvda, в котором
+возможно создать каталог personalFeeds.
+
+#### Restore feeds ####
+
+Открывает диалог для выбора папки, из которой заменяются ваши новостные
+ленты в папке personalFeeds. Убедитесь, что вы загружаете папку, содержащую
+URL-адреса новостных лент.
+
+### Keyboard commands ###
+
+* Ctrl+Shift+NVDA+Пробел: Объявляет URL текущей статьи. Двойное нажатие
+  откроет веб-страницу.
+* Ctrl+Shift+NVDA+8: Обновляет выбранную новостную ленту и объявляет своё
+  последнее название.
+* Ctrl+Shift+NVDA+I: Объявляет название и ссылку текущей новостной
+  ленты. Двойное нажатие скопирует название и соответствующую ссылку в буфер
+  обмена.
+* Ctrl+Shift+NVDA+U: Объявляет название предыдущей новостной ленты.
+* Ctrl+Shift+NVDA+O: Объявляет название следующей новостной ленты.
+
+## Notifications ##
+
+* Когда название или URL были скопированы.
+* Когда не удается подключить/обновить ленту, или URL-адрес не соответствует
+  допустимой новостной ленте.
+* NVDA will display an error message if it was not possible to backup or
+  restore the personalFeeds folder, and if a new feed cannot be created.
+* Диалог с названием списка статей отображает имя выбранной новостной ленты
+  с количеством доступных элементов.
 
 ## Changes for 10.0 ##
-*	In Edge, gestures associated with bookmarks selection, such as NVDA+k,
-  NVDA+shift+k or NVDA+alt+k, will be sent to the application instead of
-  trying to move the cursor to bookmarks, to avoid errors, especially in
-  long documents.
-*	Now specific search is supported in Edge.
 
-## Changes for 9.0
-*	When moving to a bookmark from the Notes dialog, the review cursor follows
-  the system cursor.
-*	The command to select the previous bookmark works properly again.
-*	Bookmarks can be deleted from the Notes dialog.
-*	Now you can assign gestures to save and move to a temporary bookmark for
-  each document.
+* Added a button to open the selected feed as HTML in the default web
+  browser.
+* If a new feed cannot be created, this will be notified in an error dialog.
+* Improved order and presentation of some articles.
+* More feeds may be supported.
+* When the feeds dialog is opened, the list of feeds will be focused instead
+  of the search edit box.
+* You can choose if the search edit box is placed after the list of feeds,
+  useful to focus the list even when switching from another window without
+  closing the Feeds dialog.
+* Added a button to copy the feed address to clipboard from the feeds
+  dialog.
 
-## Изменения для 8.0 ##
-*	Removed fragment identifiers from bookmark filenames, which can avoid
-  issues in the VitalSource Bookshelf ePUB reader.
-*	Added a Notes dialog, to associate comments for saved bookmarks and move
-  to the selected position.
+## Changes for 9.0 ##
 
-## Изменения для 7.0 ##
-*	The dialog to save a string of text for specific search has been
-  removed. This functionality is now included in the Specific search dialog,
-  which has been redesigned to allow different actions when pressing the OK
-  button.
-*	Визуальное представление диалогов было модифицировано, придерживаясь
-  внешнего вида диалогов, отображаемых в NVDA.
-*	Performing a Find Next or Find Previous command in Browse Mode will now
-  correctly do a case sensitive search if the original Find was case
-  sensitive.
-*	Требуется NVDA 2016.4 или позднее.
-*	Now you can assign gestures to open the Copy and Restore place markers
-  dialogs.
-*	NVDA will present a message to notify when place markers have been copied
-  or restored with the corresponding dialogs.
+* Requires NVDA 2019.3 or later.
 
-## Изменения для 6.0 ##
-* Когда дополнительные функции не могут использоваться, жесты посылаются в
-  соответствующее приложение.
+## Changes for 8.0 ##
 
-## Изменения для 5.0 ##
-* Добавлен поиск с учётом регистра.
-* Удалена возможность открыть документацию из меню Закладки.
-* Более интуитивные комбинации клавиш.
+* When the add-on is updated, feeds saved in the previous version of the
+  add-on will be automatically copied to the new version, unless you prefer
+  to import feeds saved in the main configuration folder of NVDA.
+* When using the dialog to copy feeds, if the chosen folder is not named
+  personalFeeds, a subfolder with this name will be created to prevent the
+  deletion of directories containing important data, such as Documents or
+  Downloads.
+
+## Changes for 7.0 ##
+
+* The Feeds dialog includes a button to open a folder which may contain a
+  backup of feeds.
+* When using the edit box to filter feeds, if no results are found, the list
+  of feeds and other controls are disabled, so that NVDA doesn't report
+  "unknown" in the empty list.
+* If the list of articles dialog can't be shown, for example due to errors
+  in the feed, NVDA will raise an error, so that the feeds dialog can be
+  used without restarting NVDA.
+
+## Changes for 6.0 ##
+
+* When the default feed has been updated and it stops working due to server
+  issues, the previous articles aren't deleted and can be read with the
+  corresponding keystrokes.
+* Fix regression: The default feed can be updated twice again.
+
+## Changes for 5.0 ##
+
+* The articles list dialog has been enhanced.
+* Compatible with NVDA 2018.3 or later (required).
+* If needed, you can download the [last version compatible with NVDA
+  2017.3][3].
 
 ## Изменения для 4.0 ##
-* Удалены идентификаторы фрагментов из имён файлов закладок, что позволяет
-  избежать проблем в EPUBReader - дополнении для FireFox.
-* Справка по дополнению теперь доступна из менеджера дополнений.
 
-## Изменения для 3.1 ##
-* Обновлены переводы и новые языки.
-* Позиция закладки теперь не сообщается при беглом чтении.
+* Добавлена кнопка открытия новостной ленты в диалоге новостных лент.
 
 ## Изменения для 3.0 ##
-* Добавлена поддержка беглого чтения.
+
+* Диалоги управления файлами лент были удалены. Сейчас их функциональность
+  вошла в диалог новостных лент.
+* Визуальное представление диалогов было модифицировано, придерживаясь
+  внешнего вида диалогов, отображаемых в NVDA.
+* Новостная лента по умолчанию сохраняется в конфигурации NVDA. Таким
+  образом, можно установить различные новостные ленты по умолчанию в
+  различных профилях конфигурации.
+* Требуется NVDA 2016.4.
 
 ## Изменения для 2.0 ##
-* Добавлены опции для сохранения и удаления различных поисков для каждого
-  файла.
-* Исправлена ошибка, вызывающая крах, когда пути содержат не латинские
-  буквы.
-* Горячие клавиши теперь могут быть переназначены в диалоге жестов ввода
-  NVDA.
+
+* Справка дополнения доступна в диспетчере дополнений.
 
 ## Изменения для 1.0 ##
-* Первый публичный релиз.
-* Переведено на: бразильский португальский, фарси, финский, французский,
-  галисийский, немецкий, итальянский, японский, корейский, непальский,
-  португальский, испанский, словацкий, словенский, тамильский.
 
+* Первоначальная версия.
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=pm
+[1]: https://addons.nvda-project.org/files/get.php?file=rf
 
-[2]: https://addons.nvda-project.org/files/get.php?file=pm-dev
+[2]: https://addons.nvda-project.org/files/get.php?file=rf-dev
 
-[3]: https://addons.nvda-project.org/files/get.php?file=pm-o
+[3]: https://addons.nvda-project.org/files/get.php?file=rf-o

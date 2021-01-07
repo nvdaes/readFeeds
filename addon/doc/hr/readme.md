@@ -1,181 +1,197 @@
-# Oznake pozicija (placeMarkers) #
-* Autori: Noelia, Chris.
-* NVDA kompatibilnost: 2019.3 ili novija.
+# Čitaj feedove (Read Feeds) #
+
+* Autori: Noelia Ruiz Martínez, Mesar Hameed
+* NVDA kompatibilnost: 2019.3 i novija
 * Preuzmi [stabilnu verziju][1]
-* preuzmi [razvojnu verziju][2]
-
-Ovaj se dodatak koristi za spremanje i pretraživanje određenih tekstualnih
-nizova ili knjižnih oznaka. Može se koristiti za web stranice ili za
-dokumente u NVDA modusu čitanja. Može se koristiti i za spremanje i
-pretraživanje teksta u višerednim kontrolama. Ako nije moguće aktualizirati
-tekstualni kursor, odgovarajući niz će se kopirati u međuspremnik, kako bi
-se mogao pretraživati pomoću drugih alata. Dodatak sprema navedene nizove i
-knjižne oznake u datoteke, čije se ime temelji na naslovu i URL-u
-trenutačnog dokumenta. Ovaj se dodatak temelji na „SpecificSearch” i na
-„Bookmark&Search”, koje je razvio isti autor. Da bi se ovaj dodatak mogao
-koristiti, moraju se deinstalirati navedeni dodaci, jer imaju zajedničke
-tipke i funkcije.
-
-## Tipkovnički prečaci: ##
-
-*	kontrol+šift+NVDA+f: Otvara dijaloški okvir s uređivačkim poljem, koje
-  prikazuje posljednju spremljenu pretragu. Moguće je odabrati prethodno
-  spremljene pretrage iz odabirnog okvira ili ukloniti odabrani niz iz
-  povijesti, pomoću potvrdnog okvira. Moguće je odabrati, hoće li se tekst u
-  uređivačkom polju dodati u povijest spremljenih tekstova. Kao zadnje,
-  odaberi radnju iz sljedeće grupe izbornih gumba (Traži sljedeću, Traži
-  prethodnu ili Ne traži), te odredi osjetljivost na velika i mala slova
-  tijekom pretrage. Pritiskom gumba „U redu”, NVDA će tražiti taj niz.
-*	kontrol+šift+NVDA+k: Sprema trenutačnu poziciju kao knjižnu oznaku. Ako
-  toj knjižnoj oznaci želiš dodijeliti ime, odaberi neki tekst ove pozicije
-  prije spremanja.
-*	kontrol+šift+NVDA+delete: Briše knjižnu oznaku koja odgovara ovoj
-  poziciji.
-*	NVDA+k: Premješta se na sljedeću knjižnu oznaku.
-*	šift+NVDA+k: Premješta se na prethodnu knjižnu oznaku.
-*	Nije dodijeljeno: Pokazuje naziv datoteke u modusu čitanja, bez nastavka.
-*	alt+NVDA+k: Otvara dijaloški okvir sa spremljenim knjižnim oznakama za
-  ovaj dokument. Za svaku knjižnu oznaku je moguće upisati napomenu;
-  pritisni „Spremi napomenu” za spremanje promjene. Pritiskom na „Odustani”
-  brišeš odabranu knjižnu oznaka. Pritiskom na „U redu” premještaš se na
-  odabranu poziciju.
-*	Nije dodijeljeno: Sprema poziciju kao privremenu knjižnu oznaku.
-*	Nije dodijeljeno: Pomiče se na privremenu knjižnu oznaku za trenutačni
-  dokument.
-*	Nije dodijeljeno: Nalazi sljedeći slučaj zadnje pretrage teksta za svaki
-  određeni dokument.
-*	Nije dodijeljeno: Nalazi prethodni slučaj zadnje pretrage teksta za svaki
-  određeni dokument.
+* Preuzmi [razvojnu verziju][2]
 
 
-## Podizbornik „Oznake pozicija” (NVDA+N)  ##
+Ovaj dodatak pruža najbolji način za čitanje feedova u Atom ili RSS formatu
+koristeći NVDA. Feedovi se neće automatski aktualizirati. U daljnjem tekstu,
+kad govorimo o feedovima, podrazumijevamo RSS i ATOM feedove.
 
-Korištenjem podizbornika „Oznake pozicija” u izborniku NVDA postavki, možeš
-pristupiti:
+## Instaliranje ili ažuriranje ##
 
-*	Mapi određene pretrage: otvara mapu prethodno spremljenih određenih
-  pretraživanja.
-*	Mapi knjižnih oznaka: otvara mapu spremljenih knjižnih oznaka.
-*	Kopiraj mapu za „Oznake pozicija”: omogućuje spremanje kopije mape
-  knjižnih oznaka.
-*	Obnovi „Oznake pozicija”: omogućuje obnovljanje knjižnih oznaka iz mape
-  prethodno spremljenih knjižnih oznaka.
+Ako već koristiš prijašnju verziju ovog dodatka, te ako postoji „RSS” mapa
+ili osobna mapa feedova, u tvojoj mapi NVDA konfiguracije, tijekom
+instaliranja aktualne verzije, otvorit će se dijaloški okvir za nadogradnju
+ili instaliranje dodatka. Odaberi nadogradnju, kako bi se sačuvali prethodno
+spremljeni feedovi i ih nastavi koristiti u novoj instaliranoj verziji
+dodatka „Čitaj feedove”.
 
-Napomena: Pozicija knjižne oznake se zasniva na broju znakova. Stoga je u
-dinamičkim stranicama bolje koristiti određenu pretragu, a ne knjižne
-oznake.
+## Naredbe ##
 
-## Promjene u verziji 14.0 ##
-*	Prečac koji kopira ime datoteke u kojoj se spremaju oznake mjesta
-  zamijenjen je prečacem koji to pokazuje u modusu čitanja. Taj prečac nije
-  dodijeljen.
-*	Polje "tekst pretrage" više se ne poklapa s poljem "spremljeni
-  tekst". (Zahvaljujem Cyrilleu Bougotu).
-*	Zahtijeva NVDA 2019.3 ili noviju verziju.
+### Izbornik „Čitaj feedove” ###
 
-## Promjene u verziji 13.0 ##
-*	Dodane se nedodijeljene naredbe za pronalaženje sljedeće i prethodne
-  pojave zadnje traženog teksta za bilo koji određeni dokument.
-*	Funkcija određenog pretraživanje radi, kad je otvoren dijaloški okvir „O
-  programu NVDA”.
-*	U dijaloškom okviru „Određena pretraga”, potvrdit će se potvrdni okvir za
-  velika slova, ako je ova opcija odabrana u zadnjoj pretrazi.
-*	Kad se dodatak nadogradi, knjižne oznake i nizovi za određenu pretragu
-  koji su spremljeni u prethodnoj verziji dodatka, će se automatski kopirati
-  u novu verziju, osim ako ne želiš uvesti oznake pozicija, spremljene u
-  glavnu mapu NVDA konfiguracije.
-*	Kad se koristi dijaloški okvir za kopiranje oznaka pozicija, ako odabrana
-  mapa nije imenovana „placeMarkersBackup”, stvorit će se podmapa s tim
-  nazivom, kako bi se spriječilo brisanje mapa koje sadrže važne podatke,
-  poput „Dokumenati” ili „Preuzimanja”.
+Podizbornik „Čitaj feedove” nalazi se u NVDA izborniku, u podizborniku
+„Alati”, gdje su dostupne sljedeće opcije:
 
-## Promjene u verziji 12.0 ##
-*	Popravljena je kritična greška zbog koje se NVDA rušio prilikom otvaranja
-  dijaloškog okvira „Napomene”, ako su prije spremanja knjižnih oznaka
-  odabrani kineski znakovi.
+#### Feedovi ####
 
-## Promjene u verziji 11.0 ##
-*	Kompatibilno s NVDA 2018.3 i budućim verzijama (obavezno).
-*	Ako treba, moguće je preuzeti [zadnju verziju kompatibilnu s NVDA
-  2017.3][3].
+Otvara dijaloški okvir sa sljedećim kontrolama:
+
+* Filtriraj prema: Uređivačko polje za pretraživanje prethodno spremljenih
+  feedova.
+* Popis spremljenih feedova, fokusiran kad se otvori dijaloški okvir.
+* Popis članaka: Otvara dijaloški okvir koji prikazuje popis članaka iz
+  trenutačnog feeda. Odaberi članak koji želiš čitati i pritisni „Enter” ili
+  gumb „Otvori web stranicu odabranog članka”. Time se otvara odgovarajuća
+  stranica u tvom pregledniku. Pritiskom gumba „O članku”, otvara se
+  dijaloški okvir koji sadrži naslov i poveznicu odabranog članka. U ovom
+  dijaloškom okviru možeš kopirati te informacije u međuspremnik.
+* Otvori feed: Otvara odabrani feed u zadanoj aplikaciji.
+* Otvori feed kao HTML: otvara odabrani feed u zadanom web pregledniku. Moći
+  ćeš prikazati ili sakriti datume objavljivanja i gumbe za kopiranje
+  informacija o člancima u međuspremnik.
+* Kopiraj adresu feeda: otvara dijaloški okvir za potvrđivanje kopiranja
+  adrese feeda u međuspremnik.
+* Novi: Otvara dijaloški okvir s uređivačkim poljem za unos adrese novog
+  feeda. Ako je adresa ispravna i ako se feed može spremiti, njegov naziv
+  (izveden iz naslova feeda) će se pojavit na dnu popisa feedova.
+* Preimenuj: Otvara dijaloški okvir s uređivačkim poljem za preimenovanje
+  odabranog feeda.
+* Izbriši: Otvara dijaloški okvir za brisanje odabranog feeda nakon
+  potvrđivanja.
+* Postavi kao zadani: Postavlja odabrani sažetak kao zadani, tako da se tim
+  člancima može pristupiti koristeći NVDA geste.
+* Otvori mapu sa sigurnosnim kopijama feedova: Otvara mapu koja može
+  sadržavati sigurnosnu kopiju feedova. Ovo može biti korisno za
+  istraživanje i brisanje feedova, koje ne treba uvoziti kad se dodatak
+  nadogradi.
+* Postavke: otvara dijaloški okvir postavki za „Čitaj feedove”, također
+  dostupan u NVDA izborniku, Postavke, postavke, kategorija readFeeds.
+* Zatvori: Zatvara dijaloški okvir „Feedovi”.
+
+##### Napomene #####
+
+* Ako se stvori feed pod nazivom „tempFeed”, preimenuj ga, kako bi se ta
+  datoteka mogla zamijeniti u slučaju da treba stvoriti feed s nazivom koji
+  već postojeći.
+* Feed koji je postavljen kao zadani se ne može ukloniti. Feed „addressFile”
+  će se koristiti kao zadani kad se konfiguracija ponovo postavi, te se
+  stoga ne može ukloniti.
+* Polje za uređivanje „Filtriraj prema”, može se smjestiti nakon gumba
+  „Otvori članak” u NVDA izborniku, „Postavke”, „Postavke”, kategorija
+  „Čitaj feedove” ili pritisni gumb „Postavke” u dijaloškom okviru
+  „Feedovi”.
+
+#### Kopiraj mapu feedova ####
+
+Otvara dijaloški okvir za odabir mape za spremanje „personalFeeds” mape s
+osobnim feedovima. Za to se standardno koristi mapa NVDA konfiguracije, gdje
+će se stvoriti „personalFeeds” mapa.
+
+#### Obnovi feedove ####
+
+Otvara dijaloški okvir za odabir mape koja zamjenjuje feedove u
+„personalFeeds” mapi osobnih feedova. Mapa koju učitaš mora sadrži URL
+adrese feedova.
+
+### Tipkovnički prečaci ###
+
+* Kontrol+šift+NVDA+razmaknica: Najavljuje adresu trenutačnog
+  članka. Dvostrukim pritiskom otvorit će se web stranica.
+* Kontrol+šift+NVDA+8: Aktualizira odabrani feed i najavljuje njegov
+  najnoviji naslov.
+* Kontrol+šift+NVDA+I: Najavljuje naslov trenutačnog feeda i
+  poveznicu. Dvostrukim pritiskom kopirat će se naslov i poveznica u
+  međuspremnik.
+* Kontrol+šift+NVDA+U: Najavljuje naslov prethodnog feeda.
+* Kontrol+šift+NVDA+O: Najavljuje naslov sljedećeg feeda.
+
+## Obavijesti ##
+
+* Kad su naslov ili URL adresa kopirani.
+* Kad povezivanje ili aktualiziranje feeda nije moguće ili kad URL adresa ne
+  odgovara ispravnom feedu.
+* NVDA će prikazati poruku greške, ako nije bilo moguće spremiti sigurnosnu
+  kopiju ili obnoviti mapu osobnih feedova i ako nije moguće stvoriti nov
+  feed.
+* Naslov dijaloškog okvira popisa članaka prikazuje odabrani naziv feeda i
+  broj dostupnih stavki.
 
 ## Promjene u verziji 10.0 ##
-*	U Edgeu, geste koje su povezane s odabirom knjižnih oznaka, kao što su
-  NVDA+k, NVDA+šift+k ili NVDA+alt+k, bit će poslane aplikaciji, umjesto da
-  se pokuša premjestiti pokazivača na knjižne oznake, kako bi se izbjegle
-  greške, posebno u dugačkim dokumentima.
-*	Sada se određena pretraga podržava u Edge.
 
-## Promjene u verziji 9.0
-*	Tijekom premještanja na knjižnu oznaku iz dijaloškog okvira Napomene,
-  pregledni kursor slijedi kursor sustava.
-*	Naredba za biranje prethodne knjižne oznake opet radi ispravno.
-*	Zabilješke se mogu brisati u dijaloškom okviru Napomene.
-*	Sada je moguće dodijeliti geste za spremanje i premještanje na privremenu
-  knjižnu oznaku za svaki dokument.
+* Dodan je gumb za otvaranje odabranog feeda kao HTML u standardnom web
+  pregledniku.
+* Ako se novi feed ne može stvoriti, o tome će se obavijestiti u dijaloškom
+  okviru grešaka.
+* Poboljšan je redoslijed i prezentacija nekih članaka.
+* Moguće je podržati više feedova.
+* Kad se otvori dijaloški okvir feedova, umjesto polja za uređivanje
+  pretraživanja, fokusirat će se popis feedova.
+* Možeš odabrati, hoće li se polje za uređivanje pretraživanja nalaziti
+  nakon popisa feedova. To je korisno za fokusiranje popisa čak i kad se
+  prebacuješ iz jednog drugog prozora, bez da zatvoriš dijaloški okvir
+  „Feedovi”.
+* Dodan je gumb za kopiranje adrese feeda u međuspremnik iz dijaloškog
+  okvira „Feedovi”.
+
+## Promjene u verziji 9.0 ##
+
+* Zahtijeva NVDA verziju 2019.3 ili noviju.
 
 ## Promjene u verziji 8.0 ##
-*	Izmijenjen je način odabira naslova knjižnih oznaka, što rješava problem s
-  nekim aplikacijama kao što je ePUB reader.
-*	Dodan je dijaloški okvir „Napomene”, za dodavanje komentara za spremljene
-  knjižne oznake i premještanje na odabranu poziciju.
+
+* Kad se dodatak nadogradi, spremljeni feedovi u prethodnoj verziji dodatka,
+  automatski će se kopirati u novu verziju, osim ako želoš uvesti feedove
+  koji su spremljeni u glavnoj konfiguracijskoj mapi NVDA čitača.
+* Kad se koristi dijaloški okvir za kopiranje feedova, ako se odabrana mapa
+  ne zove „personalFeeds”, stvorit će se podmapa s tim nazivom, kako bi se
+  spriječilo brisanje mapa koje sadrže važne podatke, poput mape Dokumenti
+  ili mape Preuzimanja.
 
 ## Promjene u verziji 7.0 ##
-*	Dijaloški okvir za spremanje niza teksta za određenu pretragu je
-  uklonjen. Ta funkcija je sada uključena u dijaloški okvir „Određena
-  pretraga”, koji je novo dizajniran, kako bi omogućio različite radnje kad
-  se pritisne gumb „U redu”.
-*	Vizualni prikaz dijaloških okvira je poboljšan, pridržavajući se izgleda
-  dijaloških okvira u NVDA čitaču.
-*	Naredbe „Traži sljedeće” i „Traži prethodno” sada će ispravno izvršavati
-  pretragu osjetljivu na velika i mala slova, ako se početna pretraga
-  zasnivala na razlikovanju velikih i malih slova.
-*	Zahtijeva NVDA verziju 2016.4 ili noviju.
-*	Sada je moguće dodati geste za otvaranje dijaloških okvira za kopiranje i
-  obnavljanje oznaka pozicija.
-*	NVDA će prikazati poruku kako bi obavijestio o kopiranju ili obnavljanju
-  oznaka pozicija pomoću odgovarajućih dijaloških okvira.
+
+* Dijalog „Feedovi” sadrži gumb za otvaranje mape koja može sadržati
+  sigurnosnu kopiju feedova.
+* Kad se koristi okvir za uređivanje za filtriranje feedova, ako nema
+  rezultata, popis feedova i ostale kontrole su deaktivirane. Na taj način
+  NVDA ne javlja „nepoznato” u praznom popisu.
+* Ako se dijalog s popisom članaka ne može prikazati, primjerice zbog
+  grešaka u feedu, NVDA će javiti grešku, tako da se dijaloški okvir s
+  feedovima može koristiti bez ponovnog pokretanja NVDA čitača.
 
 ## Promjene u verziji 6.0 ##
-* Kad funkcije dodatka nisu upotrebljive, geste se šalju odgovarajućoj
-  aplikaciji.
+
+* Kad je zadani feed aktualiziran i prestane raditi zbog problema s
+  poslužiteljem, prethodni se članci ne brišu i mogu se pročitati s
+  odgovarajućim tičkovničkim prečacima.
+* Regresija popravka: Zadani feed se ponovo može aktualizirati dva puta.
 
 ## Promjene u verziji 5.0 ##
-* Dodana je pretraga s osjetljivošću na velika i mala slova.
-* Uklonjena je opcija za otvaranje dokumentacije iz izbornika „Oznake
-  pozicija”.
-* Logičniji prečaci.
+
+* Poboljšan je dijaloški okvir popisa članaka.
+* Kompatibilno s NVDA 2018.3 i novijim verzijama (obavezno).
+* Ako treba, moguće je preuzeti [zadnju verziju kompatibilnu s NVDA
+  2017.3][3].
 
 ## Promjene u verziji 4.0 ##
-* Promijenjen je način definiranja naslova zabilješki, što rješava problem u
-  dodatku EPUBREADER za Firefox.
-* Pomoć za ovaj dodatak je dostupna u Upravljaču dodataka.
 
-## Promjene u verziji 3.1 ##
-* Ažurirani prijevodi i novi jezik.
-* Pozicija knjižne oznake se više ne najavljuje u brzom čitanju dokumenta.
+* Dodan je gumb za otvaranje odabranog feeda iz dijaloškog okvira „Feedovi”.
 
 ## Promjene u verziji 3.0 ##
-* Dodana je podrška za brzo čitanje dokumenta.
+
+* Dijaloški okviri za upravljanje datotekama feedova su uklonjeni. Njihova
+  funkcionalnost je sada uključena u dijaloški okvir „Feedovi”.
+* Poboljšan je vizualni prikaz dijaloških okvira, u skladu s prikazom
+  dijaloških okvira u NVDA čitaču.
+* Zadani feed se sprema u NVDA konfiguraciju. Na taj način je moguće
+  postaviti razne zadane feedove u konfiguracijskim profilima.
+* Zahtijeva NVDA 2016.4.
 
 ## Promjene u verziji 2.0 ##
-* Dodane su opcije za spremanje i brisanje različitih pretraga za svaku
-  datoteku.
-* Ispravljena je greška u baratanju nelatiničnim znakovima u stazama.
-* Prečace je sada moguće nanovo odrediti korištenjem dijaloškog okvira za
-  ulazne geste.
+
+* Pomoć za ovaj dodatak je dostupna u upravljaču za dodatke.
 
 ## Promjene u verziji 1.0 ##
-* Prva verzija.
-* Prevedeno na: brazilski portugalski, farsi, finski, francuski, galicijski,
-  njemački, talijanski, japanski, korejski, nepalski, portugalski,
-  španjolski, slovački, slovenski, tamilski.
 
+* Prva verzija.
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=pm
+[1]: https://addons.nvda-project.org/files/get.php?file=rf
 
-[2]: https://addons.nvda-project.org/files/get.php?file=pm-dev
+[2]: https://addons.nvda-project.org/files/get.php?file=rf-dev
 
-[3]: https://addons.nvda-project.org/files/get.php?file=pm-o
+[3]: https://addons.nvda-project.org/files/get.php?file=rf-o

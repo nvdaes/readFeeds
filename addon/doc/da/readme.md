@@ -1,184 +1,191 @@
-# placeMarkers (Stedmærker) #
-* Forfattere: Noelia, Chris.
-* NVDA-kompatibilitet: 2019.3 eller nyere
+# Læs feeds #
+
+* Forfattere: Noelia Ruiz Martínez, Mesar Hameed
+* NVDA compatibility: 2019.3 or later
 * Download [stabil version][1]
-* download [testversion][2]
-
-Dette tilføjelsesprogram bruges til at gemme og søge efter bestemte
-tekststrenge på websider eller i dokumenter, som understøtter NVDAs
-gennemsynstilstand. Det kan også bruges til at gemme eller søge efter
-tekststrenge i felter med flere linjer. I dette tilfælde, hvis det ikke er
-muligt at flytte markøren, vil den relevante tekst blive kopieret til
-udklipsholderen, så man kan søge med andre værktøjer. Tilføjelsesprogrammet
-gemmer de valgte strenge og bogmærker til filer der har lignende navne
-svarende til de gemte strenge og bogmærker. Denne tilføjelsespakke er
-baseret på Specific Search og Bookmark Search, der er udviklet af samme
-forfatter. Disse tilføjelser deler tastetryk og funktionalitet, så det
-anbefales at du afinstallerer dem, før du bruger denne tilføjelse.
-
-## Tastaturkommandoer: ##
-
-*	CTRL+Skift+NVDA+F: Åbner en dialog der viser den seneste søgning. I denne
-  dialog kan du vælge tidligere udførte søgninger fra en comboboks, eller
-  fjerne dem fra historikken ved hjælp af en checkboks. Du kan vælge om
-  teksten i boksen skal tilføjes til historikken af gemte tekster. Endelig
-  skal du vælge en handling fra gruppen af radioknapper (herunder søg
-  fremad, søg bagud eller søg ikke), og dernæst beslutte om NVDA skal gøre
-  forskel på store og små bogstaver under søgningen. Når du trykker på "ok",
-  vil NVDA udføre din søgning.
-*	CTRL+skift+NVDA+k: Gemmer den aktuelle position som et bogmærke. Hvis du
-  vil angive et navn til dette bogmærke, skal du vælge en tekst fra denne
-  position, før du gemmer den.
-*	CTRL+skift+NVDA+delete: Sletter bogmærket, der svarer til den aktuelle
-  position.
-*	NVDA+K: Flytter til det næste bogmærke.
-*	Skift+NVDA+K: Flytter til det forrige bogmærke.
-*	Ikke tildelt: Viser filnavnet, hvor stedmarkørens data gemmes i
-  gennemsynstilstand uden en filtypenavn.
-*	Alt+NVDA+K: Åbner en dialog med de bogmærker, der er gemt for det aktuelle
-  dokument. Du kan skrive en note til hvert bogmærke. Tryk på "Gem note" for
-  at gemme ændringer. Ved at trykke på OK kan du flytte til den valgte
-  position.
-*	Ikke tildelt: Gemmer en position som et midlertidigt bogmærke.
-*	Ikke tildelt: Flytter til det midlertidige bogmærke for det aktuelle
-  dokument.
-*	Ikke tildelt: Søger efter næste forekomst af den angivne søgestreng i et
-  dokument
-*	Ikke tildelt: Søger efter forrige forekomst af den angivne søgestreng i et
-  dokument
+* download [udviklingsversion][2]
 
 
-## Undermenu for stedmærker (NVDA+n) ##
+Dette tilføjelsesprogram giver en nem og ligetil måde at læse nyheader i
+atom- eller RSS-format med NVDA. Feeds vil ikke blive opdateret
+automatisk. Når vi nedenfor nævner feeds, mener vi både RSS- og atom-feeds.
 
-Ved hjælp af undermenuen for stedmærker (place markers) kan du komme til:
+## Installation or Update ##
 
-*	Mappe med specifikke søgninger: Åbner en mappe med tidligere gemte
-  specifikke søgninger.
-*	Mappe med bogmærker: Åbner en mappe med de tidligere gemte bogmærker.
-*	Kopier mappe med stedmærker: Du kan gemme en kopi af mappen med bogmærker.
-*	Gendan stedmærker: Du kan gendanne dine bogmærker fra en tidligere gemt
-  mappe med stedmærker.
+Hvis du har brugt en tidligere version af dette tilføjelsesprogram, og hvis
+der er en mappe med navnet RSS eller personalFeeds i mappen med dine
+personlige NVDA-indstillinger, vil der, når du installerer den aktuelle
+version fremkomme en dialog, som spørger, om du vil opgradere eller
+installere. Vælg opdater for at bevare dine gemte feeds og fortsætte med at
+bruge dem i den nyinstallerede version af Læs Feeds.
 
-Bemærk: Positionen for et bogmærke er baseret på antallet af tegn. På
-dynamiske sider er det derfor bedre at bruge specifikke søgninger og ikke
-bogmærker, som gemmer en præcis position.
+## Commands ##
 
-## Ændringer for 14.0 ##
-*	Kommandoen til at kopiere navnet på filen, hvor stedmarkeringsdataene
-  gemmes, er blevet erstattet af en kommando, der viser dette filnavn i
-  gennemsynstilstanden. Kommandoen er ikke tildelt et tastetryk som
-  standard.
-*	Feltet "Tekst til søgning" overlapper ikke længere feltet "Gemt
-  tekst". (Tak til Cyrille Bougot).
-*	Kræver NVDA 2019.3 eller nyere.
+### Menuen Læs feeds ###
 
-## Ændringer i 13,0 ##
-*	Tilføjede kommandoer, så du nemt kan søge efter forrige og næste forekomst
-  af den sidst angivne tekststreng. Disse kommandoer har ingen tildelte
-  tastetryk.
-*	Funktionen til specifikke søgninger virker kun, når NVDAs søgedialog er
-  åbnet.
-*	I dialogen til specifike søgninger, vil boksen til at skelne mellem store
-  og små bogstaver forblive markeret, hvis dette var tilfældet under den
-  sidste søgning.
-*	Når tilføjelsesprogrammet er opdateret, kopieres bogmærker og strenge til
-  specifik søgning der er gemt i den tidligere version af tilføjelsen
-  automatisk til den nye version, medmindre du foretrækker at importere
-  stedmærker, der er gemt i den primære konfigurations mappe i NVDA.
-*	Når du bruger dialogen til at kopiere stedmærker, og hvis den valge mappe
-  ikke hedder "placeMarkersBackup", vil en undermappe med dette navn blive
-  oprettet for at forhindre sletning af mapper, der indeholder vigtige data,
-  såsom dokumenter eller overførsler.
+Du kan få adgang til undermenuen Læs Feeds fra NVDA-menuen værktøjer, hvor
+de følgende menupunkter er tilgængelige:
 
-## Ændringer for 12.0 ##
-*	Rettede en kritisk fejl, der forårsagede at NVDA gik ned, når man forsøgte
-  at åbne dialogboksen Noter, hvis kinesiske tegn blev valgt, før bogmærker
-  blev gemt.
+#### Feeds ####
 
-## Ændringer for 11.0 ##
-*	Kompatibel med NVDA 2018.3 eller nyere (påkrævet).
-*	Hvis nødvendigt, kan du hente [den sidste version kompatibel med NVDA
-  2017.3][3].
+Åbner en dialogboks med følgende kontrolelementer:
 
-## Ændringer for 10.0 ##
-*	I Edge vil kommandoer i forbindelse med bogmærkevalg, såsom NVDA+k,
-  NVDA+shift+k eller NVDA+alt+k, blive sendt til applikationen i stedet for
-  at forsøge at flytte markøren til bogmærker for at undgå fejl, især i
-  lange dokumenter.
-*	Nu understøttes specifik søgning i Edge.
+* Filtrér efter: Et redigeringsfelt til at søge i tidligere gemte feeds.
+* A list of the saved feeds, focused when the dialog is opened.
+* Liste over artikler: Åbner en dialog, der viser en liste over artikler fra
+  dit nuværende feed. Vælg den artikel, du vil læse, og tryk på Enter eller
+  Åbn webside for den valgte artikel for at åbne den tilsvarende side i din
+  browser. Tryk på knappen "Om artiklen" for at åbne en dialog med titel og
+  link for den valgte artikel; Fra denne dialog kan du kopiere denne
+  information til udklipsholderen.
+* Åbn feed: Åbner det valgte feed i standardprogrammet.
+* Open feed as HTML: Opens the selected feed in the default web browser. You
+  will be able to show or hide publication dates and buttons to copy
+  information about articles to clipboard.
+* Copy feed address: Opens a dialog to confirm if you want to copy the feed
+  address to clipboard.
+* Ny: Åbner en dialogboks med et redigeringsfelt til at indtaste adressen på
+  et nyt feed. Hvis adressen er gyldig og feedet kan gemmes, vises dets
+  navn, baseret på feedets titel nederst på listen over feeds.
+* Omdøb: Åbner en dialogboks med et redigeringsfelt til at omdøbe det valgte
+  feed.
+* Slet: Åbner en dialogboks for at slette det valgte feed efter bekræftelse.
+* Indstil som standard: Indstiller det valgte feed som standard, så dets
+  artikler kan tilgås med NVDAs inputbevægelser.
+* Åbn mappen med sikkerhedskopierne for dine feeds: Åbner en mappe, der
+  indeholder sikkerhedskopier af dine feeds. Dette kan være nyttigt, hvis du
+  evt. vil slette feeds der ikke skal importeres, når tilføjelsen opdateres.
+* Preferences: Opens the settings dialog for readFeeds, also available in
+  NVDA's menu, Preferences, settings, readFeeds category.
+* Luk: Lukker dialogen Nyhedskanaler.
 
-## Ændringer for 9.0
-*	Når du flytter til et bogmærke i dialogboksen Noter, følger
-  korrekturmarkøren systemmarkøren.
-*	Kommandoen til at vælge det forrige bogmærke fungerer korrekt igen.
-*	Bogmærker kan slettes fra dialogen Noter.
-*	Nu kan du tildele bevægelser, så du lettere kan gemme og flytte til
-  midlertidige bogmærker for hvert dokument.
+##### Bemærkninger #####
+
+* Hvis et feed ved navn tempFeed er oprettet, skal du omdøbe dette feed,
+  eftersom denne fil kunne erstattes, når det er nødvendigt at oprette et
+  feed med et navn der allerede eksisterer.
+* Det feed der er angivet som standard kan ikke fjernes. AddressFile-feedet
+  vil blive brugt som standard, når konfigurationen er nulstillet. Den kan
+  ikke fjernes.
+* The Filter by edit box can be placed after the Open article button from
+  NVDA's menu, Preferences, Settings, Read feeds category, or pressing the
+  Preferences button of the Feeds dialog.
+
+#### Copy feeds folder ####
+
+Åbner en dialogboks for at vælge en mappe, hvor du kan gemme mappen
+personalFeeds der indeholder dine feeds. Den valgte mappe er som standard
+NVDAs konfigurationsmappe. Tilføjelsespakken vil oprette mappen
+personalFeeds.
+
+#### Restore feeds ####
+
+Åbner en dialogboks for at vælge en mappe, som erstatter dine feeds i mappen
+personalFeeds. Sørg for, at du indlæser en mappe der indeholder URL-adresser
+på feeds.
+
+### Keyboard commands ###
+
+* CTRL+Skift+NVDA+Mellemrum: Annoncerer URL på den aktuelle artikel. Ved at
+  trykke to gange åbnes adressen i din browser.
+* CTRL+NVDA+Skift+8: Opdaterer det valgte feed og oplyser den seneste titel.
+* CTRL+Skift+NVDA+I: Annoncerer den aktuelle titel på det valgte feed. Ved
+  to tryk kopieres titlen og det tilsvarende link til udklipsholderen.
+* CTRL+Skift+NVDA+U: Annoncerer titel på det forrige feed.
+* CTRL+Skift+NVDA+O: Annoncerer titel på det næste feed.
+
+## Notifications ##
+
+* Når titlen eller URL-adressen er blevet kopieret.
+* Når det ikke er muligt at forbinde/opdatere et feed, eller den angivne URL
+  ikke svarer til et gyldigt feed.
+* NVDA will display an error message if it was not possible to backup or
+  restore the personalFeeds folder, and if a new feed cannot be created.
+* Titlen på dialogen der viser listen over artikler viser navnet på det
+  aktuelle feed, samt antallet af artikler til rådighed.
+
+## Changes for 10.0 ##
+
+* Added a button to open the selected feed as HTML in the default web
+  browser.
+* If a new feed cannot be created, this will be notified in an error dialog.
+* Improved order and presentation of some articles.
+* More feeds may be supported.
+* When the feeds dialog is opened, the list of feeds will be focused instead
+  of the search edit box.
+* You can choose if the search edit box is placed after the list of feeds,
+  useful to focus the list even when switching from another window without
+  closing the Feeds dialog.
+* Added a button to copy the feed address to clipboard from the feeds
+  dialog.
+
+## Changes for 9.0 ##
+
+* Requires NVDA 2019.3 or later.
 
 ## Ændringer i 8.0 ##
-*	Fjernet fragmenter af identificeringsstrenge fra filnavne på
-  bogmærker. Dette kan forhindre problemer i VitalSource Bookshelf ePUB
-  reader.
-*	Tilføjet en dialogboks, noter, for at knytte kommentarer til gemte
-  bogmærker og flytte til den valgte placering.
 
-## Ændringer i 7,0 ##
-*	Dialogen til at gemme en tekststreng til specifikke søgninger er blevet
-  fjernet. Denne funktionalitet er nu inkluderet i dialogen specifik
-  søgning, som er blevet redesignet til at tillade forskellige handlinger,
-  når du trykker på knappen OK.
-*	Dialogens visuelle præsentation er blevet forbedret og overholder
-  udseendet af de dialoger, der vises i NVDA.
-*	Udføring af en Find næste eller Find forrige kommando i gennemsynstilstand
-  vil nu korrekt udføre en bogstavsøgning der gør forskel på store og små
-  bogstaver, hvis den oprindelige søgning gjorde forskel på store og små
-  bogstaver.
-*	Kræver NVDA 2016.4 eller nyere.
-*	Nu kan du tildele bevægelser til at åbne dialogerne kopier og gendan
-  stedmærker.
-*	NVDA vil informere når stedmærker er blevet kopieret eller gendannet med
-  de tilsvarende dialoger.
+* Når tilføjelsesprogrammet opdateres, bliver feeds, der er gemt i den
+  tidligere version af tilføjelsesprogrammet automatisk kopieret til den nye
+  version, medmindre du foretrækker at importere feeds, der er gemt i den
+  primære konfigurations mappe i NVDA.
+* Når du bruger dialogen til at kopiere feeds, hvis den valgte mappe ikke er
+  navngivet personalFeeds, vil en undermappe med dette navn blive oprettet
+  for at forhindre sletning af mapper, der indeholder vigtige data, såsom
+  dokumenter eller overførsler.
+
+## Ændringer i7.0 ##
+
+* Dialogboksen "Feeds" indeholder en knap for at åbne en mappe, der
+  indeholder en sikkerhedskopi af feeds.
+* Når du bruger redigeringsboksen til at filtrere feeds, og hvis der ikke
+  findes nogen resultater, er listen over feeds og andre kontroller
+  deaktiveret, så NVDA ikke rapporterer "ukendt" i den tomme liste.
+* Hvis dialogen "Liste over artikler" ikke kan vises, for eksempel på grund
+  af fejl med feedet, vil NVDA fejle, så dialogen kan bruges uden at
+  genstarte NVDA.
 
 ## Ændringer i 6.0 ##
-* Når funktionerne i tilføjelsesprogrammet ikke kan bruges, bliver
-  kommandoer sendt til det relevante program.
+
+* Når standardfeedet er opdateret, og det ophører med at fungere på grund af
+  serverproblemer, fjernes de tidligere artikler ikke og kan læses med de
+  tilsvarende tastetryk.
+* Rettede regression: Standardfeedet kan opdateres to gange igen.
 
 ## Ændringer i 5.0 ##
-* Tilføjet Forskel på små og store bogstaver under søgning.
-* Fjernet mulighed for at åbne dokumentationen fra menuen Stedmærker.
-* Mere intuitive tastaturkommandoer.
+
+* Dialogen med listen over artikler er blevet forbedret.
+* Kompatibel med NVDA 2018.3 eller nyere (påkrævet).
+* Hvis nødvendigt, kan du hente [den sidste version kompatibel med NVDA
+  2017.3][3].
 
 ## Ændringer i4.0  ##
-* Fjernet fragmenter af identiceringsstrenge fra filnavne på
-  bogmærker. Dette kan forhindre problemer i tilføjelsesprogrammet
-  ePUBREADER til Firefox.
+
+* Tilføjet en knap for at åbne det valgte feed fra dialogen "Feeds".
+
+## Ændringer i 3.0 ##
+
+* Dialoger til at administrere filer til feeds er blevet fjernet. Nu er
+  deres funktionalitet medtaget i dialogen "Feeds".
+* Dialogens visuelle præsentation er blevet forbedret og overholder
+  udseendet af de dialoger, der vises i NVDA.
+* Standardfeed er gemt i NVDA-konfigurationen. Derfor er det muligt at
+  indstille forskellige standardfeeds i konfigurationsprofilerne.
+* Kræver NVDA 2016.4.
+
+## Ændringer i 2.0 ##
+
 * Hjælp til tilføjelsesprogrammet er til rådighed fra styring af
   tilføjelsesprogrammer.
 
-## Ændringer i 3.1 ##
-* Opdateringer til oversættelse og nye sprog.
-* Positioner for bogmærker bliver ikke annonceret under skimlæsning.
-
-## Ændringer i 3.0 ##
-* Tilføjet understøttelse for skimlæsning.
-
-## Ændringer i 2.0 ##
-* Tilføjet mulighed for at gemme og slette forskellige søgninger for hver
-  fil.
-* Rettet fejl, som kom til udtryk når stier indeholdt ikke-latinske tegn.
-* Genvejstaster kan nu ændres i NVDAs dialog til inputbevægelser.
-
 ## Ændringer i 1.0 ##
-* Første version.
-* Oversat til: Brasiliansk portugisisk, farsi, finsk, fransk, galicisk,
-  tysk, italiensk, japansk, koreansk, nepalesisk, portugisisk, spansk,
-  slovakisk, slovensk og tamilsk.
 
+* Første version.
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=pm
+[1]: https://addons.nvda-project.org/files/get.php?file=rf
 
-[2]: https://addons.nvda-project.org/files/get.php?file=pm-dev
+[2]: https://addons.nvda-project.org/files/get.php?file=rf-dev
 
-[3]: https://addons.nvda-project.org/files/get.php?file=pm-o
+[3]: https://addons.nvda-project.org/files/get.php?file=rf-o

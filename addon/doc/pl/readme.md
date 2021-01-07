@@ -1,175 +1,195 @@
-# placeMarkers #
-* Autorzy: Noelia, Chris.
-* NVDA compatibility: 2019.3 or later.
-* Pobierz [wersja stabilna][1]
-* Pobierz [wersja rozwojowa][2]
+# Read Feeds #
 
-Ten dodatek jest używany do zapisywania i wyszukiwania określonych ciągów
-tekstowych lub zakładek, na stronach internetowych lub dokumentach trybu
-czytania NVDA.  Może również być użyta do zapisania lub wyszukania ciągów
-tekstowych w kontrolkach wieloliniowych; w takim przypadku, jeśli nie jest
-możliwe przemieszczenie kursora, odpowiadający łańcuch zostanie skopiowany
-do schowka, dzięki czemu może zostać wyszukany przy użyciu innych narzędzi.
-Wtyczka zapisuje określone ciągi tekstowe i zakładki w plikach tekstowych i
-.pickle. Nazwa tych plików oparta jest na tytule i adresie bieżącego
-dokumentu.
-
-## Skróty klawiszowe: ##
-
-*	control+shift+NVDA+f: Otwiera dialog z polem edycyjnym wyświetlające
-  ostatnie wyszukiwanie; W tym oknie można także zaznaczyć wczesne
-  wyszukiwania z pola kombi, albo usunąć łańcuch tekstu z historii używając
-  pole wyboru. Można wybierać, czy podany tekst ma być zachowany w historii
-  wyszukiwań,. Nareście można wybrać akcje z następujących przycisków opcji
-  (pomiędzy wyszukaj następny, wyszukaj poprzedni albo nie wyszukuj), i
-  określić, czy NVDA ma zrwacać uwagę na wielkość liter. When you press
-  okay, NVDA will search for this string.
-*	control+shift+NVDA+k: Zapisuje terażniejszą pozycję jako zakładkę. Jeżeli
-  chcesz nadać nazwę tej zakładce, zaznacz jakiś tekst z tej pozycji przed
-  zapisywaniem zakładki.
-*	control+shift+NVDA+delete: Usuwa zakładkę, odnoszącą się do konkretnej
-  pozycji.
-*	NVDA+k: Przemieszcza się do następującej zakładki.
-*	shift+NVDA+k: Przemieszcza się do poprzedniej zakładki.
-*	Not assigned: Shows the file name where the place markers data will be
-  saved in browse mode, without an extension.
-*	alt+NVDA+k: Opens a dialog with the bookmarks saved for this document. You
-  can write a note for each bookmark; press Save note to save
-  changes. Pressing Delete you can remove the selected bookmark. Pressing OK
-  you can move to the selected position.
-*	Not assigned: Saves a position as a temporary bookmark.
-*	Not assigned: Moves to the temporary bookmark for the current document.
-*	Not assigned: Finds the next occurrence of the last text searched for any
-  specific document.
-*	Not assigned: Finds the previous occurrence of the last text searched for
-  any specific document.
+* Autorzy: Noelia Ruiz Martínez, Mesar Hameed
+* Zgodność z wersjami NVDA: 2019.3 lub nowszą
+* Pobierz [Wersja stabilna][1]
+* Pobierz [Wersja rozwojowa][2]
 
 
-## Podmenu Znaczniki miejsc (NVDA+N) ##
+Ten dodatek umożliwia odczytywanie przez NVDA kanałów informacyjnych w
+formatach Atom lub RSS.  Kanały nie będą odświeżane automatycznie.  Mówiąc o
+kanałach, mamy na myśli kanały w formatach RSS i ATOM.
 
-Używając podmenu znaczniki miejsc, w menu NVDA Ustawienia, możesz uzyskać
-dostęp do:
+## Installation or Update ##
 
-*	Folder wyszukiwania: otwiera poprzednio zapisany folder specyficznych
-  wyszukiwań.
-*	Folder zakładek; otwiera folder zapisanych zakładek.
-*	Kopiuj folder znaczników miejsc; możesz zapisać kopię folderu z
-  zakładkami.
-*	Przywróć zakładki; możesz przywrócić zakładki z poprzednio zapisanego
-  folderu znaczników miejsc.
+Jeśli używałeś poprzedniej wersji tego dodatku i w Twoim folderze
+konfiguracji NVDA znajdują się katalogi RSS lub personalFeeds , podczas
+instalacji wersji 6.0 lub nowszej, pojawi się okno dialogowe z pytaniem, czy
+chcesz aktualizować, czy zainstalować.  Wybierz aktualizację, aby
+zaktualizować osobiste kanały i kontynuować ich używanie w nowo
+zainstalowanej wersji.
 
-Uwaga: pozycja zakładki opiera się na ilości znaków; na stronach z
-dynamiczną treścią lepiej używać wyszukiwania , by precyzyjnie zapamiętać
-określone miejsce.
+## Commands ##
 
-## Changes for 14.0 ##
-*	The command to copy the name of the file where place markers data will be
-  saved has been replaced by a command which shows this file name in browse
-  mode. This is not assigned to a gesture.
-*	The "Text to search" field does not overlap the "Saved text" field
-  anymore. (Thanks to Cyrille Bougot).
-*	Requires NVDA 2019.3 or later.
+### Menu Czytaj kanały ###
 
-## Zmiany dla wersji 13.0 ##
-*	Added not assigned commands to find the next and previous occurrences of
-  the last text searched for any specific document.
-*	The specific search feature works when the NVDA's About dialog is open.
-*	In the Specific search dialog, the case sensitive checkbox will be checked
-  if this option was selected for the last search.
-*	When the add-on is updated, bookmarks and strings for specific search
-  saved in the previous version of the add-on will be automatically copied
-  to the new version, unless you prefer to import place markers saved in the
-  main configuration folder of NVDA.
-*	When using the dialog to copy place markers, if the chosen folder is not
-  named placeMarkersBackup, a subfolder with this name will be created to
-  prevent the deletion of directories containing important data, such as
-  Documents or Downloads.
+Możesz przejść do podmenu Czytaj kanały z menu NVDA (klawisz NVDA+N);
+dostępne są tam następujące opcje:
 
-## Zmiany dla wersji 12.0 ##
-*	Fixed a critical bug which caused NVDA to crash when trying to open the
-  Notes dialog, if chinese characters were selected before saving bookmarks.
+#### Feeds ####
 
-## Zmiany dla wersji 11.0 ##
-*	Zgodny z NVDA 2018.3 i nowszymi (wymagane).
-*	Jeżeli jest to konieczne, możesz pobrać [ostatnią wersję zgodną z NVDA
+Otwiera dialog z następującymi kontrolkami:
+
+* Filtruj Według: Pole edycyjne do wyszukiwania poprzednio zapisanych
+  kanałów osobistych.
+* A list of the saved feeds, focused when the dialog is opened.
+* Lista artykułow: Otwiera dialog wyświetlający spis artykułów z teraz
+  wyświetlanego kanału osobistego. Oznacz artykuł, którego chcesz
+  przeczytać, a potem naciśnij przycisk OK, aby otworzyć odnoszącą się
+  stronę w przeglądarce. Z tego oka dialogowego, będzie można skopiować tę
+  informację do schowka.
+* Otwórz kanał: otwiera wybrany kanał w domyślnej aplikacji.
+* Open feed as HTML: Opens the selected feed in the default web browser. You
+  will be able to show or hide publication dates and buttons to copy
+  information about articles to clipboard.
+* Copy feed address: Opens a dialog to confirm if you want to copy the feed
+  address to clipboard.
+* Nowy: Otwiera okno dialogowe zawierające pole edycyjne, w którym można
+  wpisać adres nowego kanału osobistego. Jeżeli adres jest prawidłowy a
+  kanał osobisty może być zachowany, nazwa kanału, bazowana na podstawie
+  tytułu kanału, będzie wyświetlana na końcu listy.
+* Zmień nazwę: Otwiera okno dialogowe zawierające pole edycyjne do zmiany
+  nazwy zaznaczonego kanału osobistego.
+* Usuń: Otwiera okno dialogowe umożliwiające  usuwanie oznaczonego kanału
+  osobistego po potwierdzeniu.
+* Ustaw jako domyślny: Ustawia kanał osobisty jako domyślny, aby można było
+  się dostać do artykułów za pomocą gestów NVDA.
+* Open folder containing a backup of feeds: Opens a folder which may contain
+  a backup of feeds. This can be useful to explore and delete feeds which
+  shouldn't be imported when the add-on is updated.
+* Preferences: Opens the settings dialog for readFeeds, also available in
+  NVDA's menu, Preferences, settings, readFeeds category.
+* Zamknij: Zamyka dialog kanały osobiste.
+
+##### Uwagi #####
+
+* Jeżeli jest stworzony kanał osobisty pod nazwą tempFeed, zmień mu nazwę,
+  dla tego że ten plik może być zamieniony kiedy to jest potrzebne dla
+  kanału, który już istnieje.
+* Kanał ustawiony jako domyślny nie może być usunięty. Kanał osobisty
+  addressFile feed będzie użyty jako domyślny, kiedy konfiguracja jest
+  zresetowana, i dla tego, on nie może być usunięty.
+* The Filter by edit box can be placed after the Open article button from
+  NVDA's menu, Preferences, Settings, Read feeds category, or pressing the
+  Preferences button of the Feeds dialog.
+
+#### Copy feeds folder ####
+
+Otwiera okno dialogowe, w którym można wybrać katalog gdzie można zapisać
+katalog personalFeeds directory z waszymi katalogami osobistymi. Domyślny
+katalog, to katalog konfiguracyjny NVDA, gdzie będzie stworzony katalog
+personalFeeds.
+
+#### Restore feeds ####
+
+Otwiera okno dialogowe w którym można wybrać katalog który zamienia twoje
+kanały osobiste w katalogu personalFeeds folder. Upewnij się, że wybrałeś
+katalog zawierający kanały osobiste.
+
+### Keyboard commands ###
+
+* Ctrl+Szift+NVDA+Spacja: mówi adres artykułu. Jeżeli się naciśnie dwa razy,
+  otwiera stronę.
+* Ctrl+Szift+NVDA+8: Odświeża oznaczony kanał osobisty i wymawia najnowszy
+  teraźniejszy nagłówek.
+* Ctrl+Szift+NVDA+I: Wymawia teraźniejszy tytuł kanału osobistego i
+  link. Dwukrotne naciśnięcie spowoduje kopiowanie tytułu odnoszącego się
+  linku do schowka.
+* Ctrl+Szift+NVDA+U: Wymawia poprzedni tytuł kanału osobistego.
+* Ctrl+Szift+NVDA+O: Wymawia następujący tytuł kanału osobistego.
+
+## Notifications ##
+
+* Kiedy tytuł i adres zostały skopiowane.
+* Kiedy jest niemożliwe odświeżanie/łączenie z kanałem osobistym, albo adres
+  się nie zgadza z prawdziwym kanałem osobistym.
+* NVDA will display an error message if it was not possible to backup or
+  restore the personalFeeds folder, and if a new feed cannot be created.
+* Dialog Spisu nagłówków artykułów Wyświetla nazwę oznaczonego kanału
+  osobistego i ilość dostępnych artykułów.
+
+## Changes for 10.0 ##
+
+* Added a button to open the selected feed as HTML in the default web
+  browser.
+* If a new feed cannot be created, this will be notified in an error dialog.
+* Improved order and presentation of some articles.
+* More feeds may be supported.
+* When the feeds dialog is opened, the list of feeds will be focused instead
+  of the search edit box.
+* You can choose if the search edit box is placed after the list of feeds,
+  useful to focus the list even when switching from another window without
+  closing the Feeds dialog.
+* Added a button to copy the feed address to clipboard from the feeds
+  dialog.
+
+## Zmiany w wersji 9.0 ##
+
+* Wymaga NVDA 2019.3 lub nowszą.
+
+## Zmiany w wersji 8.0 ##
+
+* When the add-on is updated, feeds saved in the previous version of the
+  add-on will be automatically copied to the new version, unless you prefer
+  to import feeds saved in the main configuration folder of NVDA.
+* When using the dialog to copy feeds, if the chosen folder is not named
+  personalFeeds, a subfolder with this name will be created to prevent the
+  deletion of directories containing important data, such as Documents or
+  Downloads.
+
+## Zmiany w wersji 7.0 ##
+
+* The Feeds dialog includes a button to open a folder which may contain a
+  backup of feeds.
+* When using the edit box to filter feeds, if no results are found, the list
+  of feeds and other controls are disabled, so that NVDA doesn't report
+  "unknown" in the empty list.
+* If the list of articles dialog can't be shown, for example due to errors
+  in the feed, NVDA will raise an error, so that the feeds dialog can be
+  used without restarting NVDA.
+
+## Zmiany w wersji 6.0 ##
+
+* When the default feed has been updated and it stops working due to server
+  issues, the previous articles aren't deleted and can be read with the
+  corresponding keystrokes.
+* Naprawiony błąd: Domyślny kanał może być aktualizowany znowu dwa razy.
+
+## zmiany w wersji 5.0 ##
+
+* Ulepszone okno dialogowe artykułów.
+* Zgodny z NVDA 2018.3 lub nowszą (wymagane).
+* Jeżeli to potrzebne, można pobrać [ostatnią wersję zgodną z NVDA
   2017.3][3].
 
-## Zmiany dla wersji 10.0 ##
-*	In Edge, gestures associated with bookmarks selection, such as NVDA+k,
-  NVDA+shift+k or NVDA+alt+k, will be sent to the application instead of
-  trying to move the cursor to bookmarks, to avoid errors, especially in
-  long documents.
-*	Now specific search is supported in Edge.
+## Zmiany w wersji 4.0 ##
 
-## Zmiany dla wersji 8.0
-*	When moving to a bookmark from the Notes dialog, the review cursor follows
-  the system cursor.
-*	The command to select the previous bookmark works properly again.
-*	Bookmarks can be deleted from the Notes dialog.
-*	Now you can assign gestures to save and move to a temporary bookmark for
-  each document.
-
-## Zmiany dla wersji 8.0 ##
-*	Usunięto identyfikatory fragmentów z nazw plików zakładek, co może
-  spowodować uniknięcie problemów  VitalSource ePUBREADER.
-*	Dodano dialog notatek, aby skojarzyć komentarze zapisanych zakładek i
-  przemieszczać się do danej pozycji.
-
-## Zmiany dla wersji 7.0 ##
-*	Dialog do przeszukiwania określonego łańcuchu tekstu jest usunięty. Ta
-  funkcjonalność jest przeniesiona do okna dialogowego określone
-  wyszukiwanie, który jest zmieniony, aby z niego użytkownicy mogli
-  wypełniać różne komendy.
-*	Wizualna prezentacja dialogów została ulepszona, aby była zgodna z
-  wyświetlanymi dialogami w NVDA.
-*	Przy wywołaniu komendy szukaj następne /poprzednie w trybie przeglądania
-  teraz sprawnie zrobi wyszukiwanie uwzględniające wielkie litery, jeżeli
-  wyszukiwanie oryginalne uwzględniało wielkość liter.
-*	Wymagane NVDA 2016.4 lub nowsze.
-*	Teraz można przydzielić zdarzenie wejścia dla okien dialogowych "kopiuj",
-  i "wklej" znaczniki miejsc.
-*	NVDA pokaże wiadomość przy powodzeniu kopiowania lub przywracania
-  znaczników za pomocą określonych okien dialogowych.
-
-## Zmiany dla wersji 6.0 ##
-* Kiedy funkcje dodatku nie są dostępne, zdarzenia wejścia są wysyłane do
-  danej aplikacji.
-
-## Zmiany dla wersji 5.0 ##
-* Dodane wyszukiwanie z uwzględnieniem wielkości liter.
-* Usunięta opcja otwierania dokumentacji z menu dodatku.
-* Bardziej intuicyjne skróty klawiszowe.
-
-## Zmiany dla wersji 4.0 ##
-* Usunięto identyfikatory fragmentów z nazw plików zakładek, co może
-  spowodować uniknięcie problemów w dodatku do Firefox ePUBREADER.
-* Pomoc dodatku dostępna w managerze dodatków.
-
-## Zmiany dla wersji 3.1 ##
-* Aktualizacje tłumaczenia i nowy język.
-* Pozycja zakładki nie jest oznajmiana w czytaniu przeglądowym.
+* Dodano przycisk służący do otwierania wybranego kanału z dialogu kanałów
+  osobistych.
 
 ## Zmiany dla wersji 3.0 ##
-* Dodano wsparcie czytania przeglądowego.
+
+* Dialogi do zarządzania plikami kanałami osobistymi został usunięty. Teraz
+  tę funkcjonalność można znaleźć w dialogu "Kanaly osobiste".
+* Wizualna prezentacja dialogów została ulepszona, aby była zgodna z
+  wyświetlanymi dialogami w NVDA.
+* Domyślny kanał osobisty jest zachowany w konfiguracji NVDA's. Aczkolwiek,
+  można ustawić poszczególne domyślne kanały osobiste w profilach
+  konfiguracyjnych.
+* Wymaga NVDA 2016.4.
 
 ## Zmiany dla wersji 2.0 ##
-* Dodane opcje zapisania i usunięcia różnych wyszukiwań dla każdego pliku.
-* Usunięto błąd, który pojawiał się gdy ścieżka zawierała znaki inne niż
-  alfabetu łacińskiego.
-* Skróty klawiszowe mogą być modyfikowane przy użyciu polecenia NVDA
-  Zdarzenia wejścia.
+
+* Pomoc dodatku jest dostępna w menedżerze dodatków.
 
 ## Zmiany dla wersji 1.0 ##
-* Wstępne wydanie.
-* Przetłumaczony na: brazylijski portugalski, farsi, fiński, francuski,
-  galicyjski, niemiecki, włoski, japoński, koreański, nepalski, portugalski,
-  hiszpański, słowacki, słoweński, tamilski.
 
+* Pierwsza wersja.
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=pm
+[1]: https://addons.nvda-project.org/files/get.php?file=rf
 
-[2]: https://addons.nvda-project.org/files/get.php?file=pm-dev
+[2]: https://addons.nvda-project.org/files/get.php?file=rf-dev
 
-[3]: https://addons.nvda-project.org/files/get.php?file=pm-o
+[3]: https://addons.nvda-project.org/files/get.php?file=rf-o
