@@ -1,76 +1,95 @@
-# Read Feeds #
+# eMule #
 
-* Auteurs: Noelia Ruiz Martínez, Mesar Hameed
-* Download [stable version][2]
-* Download [development version][1]
+*	Auteurs: Noelia, Chris, Alberto.
+*	NVDA compatibility: 2019.3 or later.
+*	download [stabiele versie][1]
+*	download [ontwikkelversie][3]
+*	download [version compatible with NVDA 2017.3][4]
 
-This addon provides a straightforward way to read feeds in Atom or RSS
-formats using NVDA.  The feeds will not be refreshed automatically.  Below
-when we mention feeds, we mean both RSS and ATOM feeds.
+This add-on helps to improve accessibility of eMule with nVDA.  It also
+provides additional keyboard commands for moving in different windows and
+gives Useful information about eMule.
 
-## Installation or Update: ##
+It's based on the eMuleNVDASupport add-on, developed by the same author. You
+should uninstall that old add-on to use this one, since both have common
+keystrokes and features.
 
-If you used a previous version of this addon, and there is an RSS or
-personalFeeds folder in your personal NVDA configuration folder, when
-installing version 6.0 or later, a dialog will ask if you want to upgrade or
-install.  Choose update to preserve your saved feeds and to continue using
-them in the new installed version of readFeeds.
+Getest op [eMule][2] 0.50a.
 
-## Commando's: ##
+## Sneltoetsen: ##
 
-### Read Feeds menu ###
+*	control+shift+h: Verplaatst de focus en de muis naar de belangrijkste
+  taakbalk.
+*	control+shift+t: Leest het huidige scherm.
+*	control+shift+n: Verplaatst de focus naar het Naamveld in het Zoekvenster.
+*	control+shift+p: In het Zoekscherm, verplaatst focus en muis naar de lijst
+  met zoekopties, of opties voor het invoerveld.
+*	control+shift+b: Verplaatst de focus naar de lijst in het huidige
+  venster. Bijvoorbeeld: 
+*	control+shift+o: Verplaatst de focus naar alleen-lezen invoervelden in het
+  huidige venster. Bijvoorbeeld: via IRC ontvangen berichten, beschikbare
+  servers, etc.
+*	control+NVDA+f: If the caret is located in a read only edit box, opens a
+  find dialog to use the commands for searching text available in NVDA.
+*	control+shift+l: Verplaatst het navigator object en de muis naar de
+  hoofdingen van de huidige lijst.
+*	control+shift+q: Leest het eerste object in de statusbalk; geeft
+  informatie over recente activiteit.
+*	control+shift+w: Leest het tweede object van de statusbalk; bevat
+  informatie over bestanden en gebruikers op de huidige server.
+*	control+shift+e: Leest het derde object van de statusbalk; nuttig om de
+  UpLoad-/DownLoadsnelheid te kennen.
+*	control+shift+r: Leest het vierde object van de statusbalk; meld over
+  verbinding met eD2K en Kad netwerk.
 
-You can access the Read Feeds submenu from the nvda menu, NVDA+N, where the
-following menu options are available:
+## Kolommen beheren. ##
 
-- Article list...  Presents the article list from your current feed. Select
-the article you want to read and press OK button to open the corresponding
-page in your browser.  - Temporary feed address... control + NVDA + shift +
-enter: Opens a dialog for typing a new URL to select another feed. The
-current URL will be shown in this dialog.  - Load feed address from
-file... NVDA+control+enter: Opens a dialog to select a feed from a saved
-file containing a feed URL.  - Save current feed address to
-file... NVDA+shift+enter: opens a dialog for selecting the file where
-current feed URL will be saved.  If you save to the special file
-addressFile.txt, this particular feed will be used as your default feed.  -
-Refresh current feed: control+shift+NVDA+8: Refresh selected feed. The feeds
-will not be updated automatically when Read Feeds addon is started.  -
-Backup feeds folder...  opens a dialog to choose a folder where you can save
-the personalFeeds directory of your feeds. By default the selected folder is
-the NVDA's configuration directory, which will create the personalFeeds
-directory.  - Restore feeds...  Opens a dialog to select a folder which
-replaces your feeds in the personalFeeds folder. Make sure you load a folder
-containing feeds URLs.
+Als u zich in een lijst bevindt, kunt u de cursor bewegen tussen de rijen en
+kolommen met alt+control+pijltjestoetsen. In deze Add-on zijn ook de
+volgende sneltoetsen beschikbaar:
 
-Note: If you want to delete a previously saved feed URL, just remove the
-corresponding file.
+*	nvda+control+1-0: Leest de eerste 10 kolommen.
+*	nvda+shift+1-0: Leest kolommen 11 tot 20.
+*	nvda+shift+C: Kopieer de inhoud van de laatstgelezen kolom naar het
+  klembord.
 
-### Toetscommando's: ###
+## Changes for 4.0 ##
+*	Requires NVDA 2019.3 or later.
 
-- Ctrl+Shift+NVDA+Space: Announces current article's URL. Pressing twice
-will open the web page.  - Ctrl+Shift+NVDA+8: Refreshes the selected feed
-and announces its most recent title.  - Ctrl+Shift+NVDA+I: Announces current
-feed title. Pressing twice will copy the title and related link to
-clipboard.  - Ctrl+Shift+NVDA+U: Announces previous feed title.  -
-Ctrl+Shift+NVDA+O: Announces next feed title.
+## Changes for 3.0 ##
+*	 To search text in the readonly edit boxes,  the find dialog  can be used,
+   such as nvda+control+f to activate the find dialog.
 
-## Meldingen: ##
+## Veranderingen in 2.0 ##
+*	 Add-on help is beschikbaar via Add-ons beheren.
 
-- When the title or URL have been copied.  - When unable to connect/refresh
-a feed, or the URL does not correspond to a valid feed.  - NVDA will display
-an error message if it was not possible to backup the personalFeeds folder.
-- The title of the article list dialog displays the selected feed name and
-number of items available.
+## Veranderingen voor 1.2 ##
+*	 Bij het navigeren naar de IRC-berichten wordt de geselecteerde tekst
+   correct gemeld.
+*	 De sneltoets die gebruikt werd voor het navigeren naar de
+   zoekresultatenlijst wordt nu gebruikt om te navigeren naar iedere
+   beschikbare lijst in het huidige venster.
+*	 Het gebruikte commando voor het weergeven van de IRC-berichten is
+   algemeen gemaakt om te navigeren naar ieder alleen-lezen invoerveld, wat
+   het mogelijk maakt om verbindingsinformatie in het servervenster te
+   bekijken.
+*	 Bij het verplaatsen van de muis of de focus naar de werkbalk werd dit in
+   sommige gevallen twee keer gemeld. Dit is opgelost.
 
-## Changes for 2.0 ##
-*	 Add-on help is available from the Add-ons Manager.
+## Veranderingen voor 1.1 ##
+*	 Probleem opgelost in eMule item onder NVDA's help menu, als de naam van
+   de gebruikersconfiguratiemap niet-Latijnse karakters bevat.
+*	 Snelkoppelingen kunnen nu gewijzigd worden via het dialoogvenster
+   Invoerhandelingen koppelen van NVDA.
 
-## Veranderingen voor 1.0 ##
+## Veranderingen in 1.0 ##
 *	 Eerste versie.
+
 
 [[!tag dev stable]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=rf-dev
+[1]: https://addons.nvda-project.org/files/get.php?file=em
 
-[2]: http://addons.nvda-project.org/files/get.php?file=rf
+[2]: https://www.emule-project.net
 
+[3]: https://addons.nvda-project.org/files/get.php?file=em-dev

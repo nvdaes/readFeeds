@@ -5,11 +5,11 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: readFeeds 1.0-dev\n"
+"Project-Id-Version: eMule 1.0-dev\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
-"POT-Creation-Date: 2013-11-16 13:26+0100\n"
-"PO-Revision-Date: 2019-05-23 22:01+0100\n"
-"Last-Translator: \n"
+"POT-Creation-Date: 2013-08-04 11:33+0200\n"
+"PO-Revision-Date: 2018-10-30 07:45+0100\n"
+"Last-Translator: jožef gregorc <jozko.gregorc@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
@@ -17,328 +17,113 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.7\n"
 
-#. Translators: the label of a message box dialog.
-#, fuzzy
-msgid ""
-"Your configuration folder for NVDA contains files that seem to be derived "
-"from a previous version of this add-on.\n"
-"\t\t\tDo you want to update it?"
+#. Translators: Message presented in input help mode.
+msgid "Reads the specified column for the current list item."
 msgstr ""
-"Vaša NVDA konfiguracijska mapa vsebuje datoteke, za katere izgleda, da so "
-"del prejšnje različice tega dodatka. Jih želite posodobiti?"
+"Prebere ustrezen stolpec, ki pripada trenutno izbranemu elementu na seznamu."
 
-#. Translators: the title of a message box dialog.
-msgid "Install or update add-on"
-msgstr "Namesti ali posodobi dodatek"
-
-#. Translators: message presented when feeds cannot be reported.
-msgid ""
-"Unable to refresh feed. Check your Internet conectivity or that the "
-"specified feed address is correct."
-msgstr ""
-"Ni mogoče osvežiti vira. Preverite vašo internetno povezavo ali pravilnost "
-"naslova vira, ki ste ga zapisali."
-
-#. Translators: Message presented when feeds have been copied.
-msgid "Feeds copied"
-msgstr "Viri preslikani"
-
-#. Translators: label of error dialog shown when cannot copy feeds folder.
-msgid "Folder not copied"
-msgstr "Mapa ni preslikana"
-
-#. Translators: title of error dialog shown when cannot copy feeds folder.
-msgid "Copy Error"
-msgstr "Napaka Preslikave"
-
-#. Translators: Message presented when feeds have been restored.
-msgid "Feeds restored"
-msgstr "Viri obnovljeni"
-
-#. Translators: Title of a dialog.
-#, python-brace-format
-msgid "Feeds: {defaultFeed} ({configProfile})"
-msgstr "Viri: {defaultFeed} ({configProfile})"
-
-#. Translators: Label of a dialog (message translated in NVDA's core in different contexts).
-msgid "&Filter by:"
-msgstr "&Preseji med"
-
-#. Translators: The label of a button to open the list of articles of a feed.
-msgid "List of &articles..."
-msgstr "Seznam &člankov..."
-
-#. Translators: The label of a button to open a feed.
-msgid "&Open feed"
-msgstr "&Odpri vir"
-
-#. Translators: The label of a button to open a feed as HTML.
-#, fuzzy
-msgid "Open feed as &HTML"
-msgstr "&Odpri vir"
-
-#. Translators: The label of a button to copy the feed URL.
-#, fuzzy
-msgid "Cop&y feed address"
-msgstr "Preslikava virov"
-
-#. Translators: The label of a button to add a new feed.
-msgid "&New..."
-msgstr "&Nov..."
-
-#. Translators: The label of a button to rename a feed.
-msgid "&Rename..."
-msgstr "&Preimenuj..."
-
-#. Translators: The label of a button to delete a feed.
-msgid "&Delete..."
-msgstr "&Izbriši..."
-
-#. Translators: The label of a button to set a feed as default.
-msgid "S&et default"
-msgstr "&Nastavitev za privzetega"
-
-#. Translators: The label of a button to open a folder containing a backup of feeds.
-msgid "Open &folder containing a backup of feeds"
-msgstr "Odpri &mapo, ki vsebuje varnostno kopijo virov"
-
-#. Translators: The label of a button to open the settings dialog for readFeeds.
-#, fuzzy
-msgid "&Preferences..."
-msgstr "&Obnovi vire..."
-
-#. Translators: Message presented when a feed cannot be added.
+#. Translators: Message presented when the current column of the list item is copied to clipboard.
 #, python-format
-msgid "Cannot add feed: %s"
-msgstr ""
-
-#. Translators: error message.
-#, fuzzy
-msgid "Error"
-msgstr "Napaka Preslikave"
-
-#. Translators: the label of a message box dialog.
-#, fuzzy, python-brace-format
-msgid ""
-"Do you want to copy feed address to the clipboard\r\n"
-"\r\n"
-"{feedAddress}?"
-msgstr ""
-"%s\r\n"
-"\r\n"
-"Želite preslikati naslov članka in povezavo nanj v odložišče?"
-
-#. Translators: the title of a message box dialog.
-#, fuzzy
-msgid "Copy feed address"
-msgstr "Preslikava virov"
-
-#. Translators: Label of a dialog.
-msgid "Address of a new feed:"
-msgstr "Naslov novega vira:"
-
-#. Translators: The title of a dialog to create a new feed.
-msgid "New feed"
-msgstr "Nov vir"
-
-#. Translators: The confirmation prompt displayed when the user requests to delete a feed.
-msgid "Are you sure you want to delete this feed? This cannot be undone."
-msgstr ""
-"Ste prepričani, da želite izbrisati ta vir? Ta operacija je nepovratna."
-
-#. Translators: The label of a field to enter a new name for a feed.
-msgid "New name:"
-msgstr "Novo ime:"
-
-#. Translators: The title of a dialog to rename a feed.
-msgid "Rename feed"
-msgstr "Preimenuje vir"
-
-#. Translators: The label of the articles list in the articles dialog.
-msgid "List of articles"
-msgstr "Seznam člankov"
-
-#. Translators: The label of a button to open the selected article of a feed.
-msgid "Open &web page of selected article."
-msgstr "Članek odpri v &spletu."
-
-#. Translators: The label of a button to show information of a feed article.
-msgid "&About article..."
-msgstr "&O članku..."
-
-#. Translators: the label of a message box dialog.
-#, fuzzy, python-format
-msgid "%sDo you want to copy article title and link to the clipboard?"
-msgstr ""
-"%s\r\n"
-"\r\n"
-"Želite preslikati naslov članka in povezavo nanj v odložišče?"
-
-#. Translators: the title of a message box dialog.
-msgid "Article information"
-msgstr "Informacija o članku"
-
-#. Translators: The title of the Copy dialog.
-msgid "Copy feeds"
-msgstr "Preslikava virov"
-
-#. Translators: An informational message displayed in the Copy dialog.
-msgid "Select a folder to save a backup of your current feeds"
-msgstr ""
-"Izberite mapo, kamor želite shraniti varnostno kopijo vaših trenutnih virov."
-
-#. Translators: The label of a grouping containing controls to select the destination directory in the Copy dialog.
-msgid "directory for backup:"
-msgstr "imenik za varnostno kopijo:"
-
-#. Translators: The title of the dialog presented when browsing for the destination directory when copying feeds.
-msgid "Select directory to copy"
-msgstr "Izbira imenika za preslikavo"
-
-#. Translators: The title of the Restore dialog.
-msgid "Restore feeds"
-msgstr "Obnovi vire"
-
-#. Translators: An informational message displayed in the Restore dialog.
-msgid "Select a folder to restore a backup of your previous copied feeds"
-msgstr ""
-"Izberite mapo, kamor se bodo obnovili viri iz prej ustvarjene varnostne "
-"kopije."
-
-#. Translators: The label of a grouping containing controls to select the destination directory in the Restore dialog.
-msgid "directory containing backup:"
-msgstr "imenik, ki vsebuje varnostno kopijo"
-
-#. Translators: The title of the dialog presented when browsing for the destination directory when restoring feeds.
-msgid "Select directory to restore"
-msgstr "Izbira mape za obnovitev"
-
-#. Translators: label of a dialog.
-msgid "&Search edit box after feeds list"
-msgstr ""
-
-#. Translators: Presented when the current article does not have an associated title.
-msgid "Unable to locate article title."
-msgstr "Ni mogoče locirati naslova članka."
-
-#. Translators: Presented when the current article does not have an associated link.
-msgid "Unable to locate article link."
-msgstr "Ni mogoče locirati povezave članka.a"
-
-#. Translators: Label of a checkbox to choose if date should be presented for each feed.
-msgid "Show date"
-msgstr ""
-
-#. Translators: Label for a checkbox to show buttons for copying to clipboard.
-msgid "Show buttons to copy"
-msgstr ""
-
-#. Translators: Label for a button to copy to clipboard.
-msgid "Copy"
-msgstr ""
-
-#. Translators: the name of a submenu.
-msgid "&Read Feeds"
-msgstr "&Bralnik virov"
-
-#. Translators: the name of a menu item.
-msgid "&Feeds..."
-msgstr "&Viri..."
-
-#. Translators: the name of a menu item.
-msgid "&Copy feeds folder..."
-msgstr "&Preslikaj mapo z viri..."
-
-#. Translators: the name of a menu item.
-msgid "R&estore feeds..."
-msgstr "&Obnovi vire..."
-
-#. Translators: message presented in input mode.
-#, fuzzy
-msgid "Activates the Feeds dialog of Read Feeds."
-msgstr "Sproži pogovorno okno virov za %s."
-
-#. Translators: message presented in input mode.
-#, fuzzy
-msgid "Activates the Copy dialog of Read Feeds."
-msgstr "Sproži pogovorno okno preslikave za %s."
-
-#. Translators: message presented in input mode.
-#, fuzzy
-msgid "Activates the Restore dialog of Read Feeds."
-msgstr "Sproži pogovorno okno obnovitve za %s."
-
-#. Translators: message presented in input mode.
-#, python-format
-msgid "Shows the %s settings."
-msgstr ""
-
-#. Translators: message presented in input mode.
-msgid "Refreshes the current feed and announces the most recent article title."
-msgstr "Osveži trenuten vir in naznani naslov najnovejšega članka."
-
-#. Translators: message presented in input mode.
-msgid ""
-"Announces the title of the current article. Pressed two times, copies title "
-"and related link to the clipboard."
-msgstr ""
-"Naznani naslov trenutnega članka. Če pritisnete dvakrat, v odložišče "
-"preslika ta naslov in ustrezno povezavo."
-
-#. Translators: message presented when the information about an article of a feed is copied to the clipboard.
-#, python-format
-msgid "Copied to clipboard %s"
+msgid "%s copied to clipboard"
 msgstr "%s preslikano v odložišče"
 
-#. Translators: message presented in input mode.
-msgid "Announces the title of the next article."
-msgstr "Naznani naslov naslednjega članka."
-
-#. Translators: message presented in input mode.
-msgid "Announces the title of the previous article."
-msgstr "Naznani naslov predhodnega članka."
-
-#. Translators: message presented in input mode.
-msgid "Announces article link, when pressed two times, opens related web page."
+#. Translators: Message presented in input help mode.
+msgid "Copies the last read column of the selected list item to clipboard."
 msgstr ""
-"Naznani povezavo na članek, če pritisnete dvakrat, se odpre ustrezna spletna "
-"stran."
+"Preslika besedilo zadnjega prebranega stolpca izbranega elementa na seznamu"
 
-#. Translators: message presented in input mode.
-msgid "Copies title and related link of the current article to the clipboard."
-msgstr "Preslika naslov in pripadajočo povezavo trenutnega članka v odložišče."
+#. Translators: Message presented in input help mode
+msgid "Moves the system focus and mouse to the main Tool Bar."
+msgstr "Premakne sistemsko žarišče in miško v glavno Orodno Vrstico."
+
+#. Translators: Message presented in input help mode.
+#. For instance: reads the search window, Statistics, IRC, etc.
+msgid "Reports the current window."
+msgstr "Prebira trenutno okno."
+
+#. Translators: Message presented in input help mode.
+msgid "Moves the system focus to the Name field of the Search window."
+msgstr "Premakne sistemsko žarišče v polje Ime okna za iskanje"
+
+#. Translators: Message presented in input help mode.
+msgid ""
+"Moves the system focus and mouse to the search parameters list or Edit field "
+"for each option, in the Search window."
+msgstr ""
+"Premakne sistemsko žarišče in miško na seznam parametrov iskanja ali v polje "
+"urejanja za vsako možnost v oknu iskanja."
+
+#. Translators: Message presented in input help mode.
+msgid ""
+"Moves the system focus to the first list in the current window. For example "
+"the results list in the Search window, downloads in Transfer, etc."
+msgstr ""
+"Premakne sistemsko žarišče na prvi seznam v trenutnem oknu. To je lahko "
+"seznam zadetkov v oknu iskanja, seznam prenosov k sebi v oknu prenašanja itd."
+
+#. Translators: Message presented in input help mode.
+msgid ""
+"Moves the system focus to read-only edit boxes in the current window. For "
+"example the IRC received messages."
+msgstr ""
+"Premakne sistemsko žarišče na polja samo za branje. To so na primer prejeta "
+"sporočila preko IRC."
+
+#. Translators: Message presented in input help mode.
+msgid "Moves the navigator object and mouse to the current list headers."
+msgstr "Premakne predmet krmarjenja in miško na glave trenutnega seznama."
+
+#. Translators: Message presented in input help mode.
+msgid "Reports first object of the Status Bar."
+msgstr "Sporoča stanje prvega predmeta v Vrstici Stanja."
+
+#. Translators: Message presented in input help mode.
+msgid "Reports second object of the Status Bar."
+msgstr "Sporoča stanje drugega predmeta v Vrstici Stanja"
+
+#. Translators: Message presented in input help mode.
+msgid "Reports third object of the Status Bar."
+msgstr "Sporoča stanje tretjega predmeta v Vrstici Stanja."
+
+#. Translators: Message presented in input help mode.
+msgid "Reports fourth object of the Status Bar."
+msgstr "Sporoča stanje četrtega predmeta v Vrstici Stanja."
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
-msgid "Read Feeds"
-msgstr "Bralnik Virov"
+msgid "eMule"
+msgstr "eMule"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
-msgid "Add-on for using NVDA as a feed reader."
-msgstr "Dodatek, ki spremeni NVDA tudi v bralnik virov"
+msgid ""
+"Improves eMule's accessibility with NVDA.\n"
+"eMule is a P2P program to search and share files.\n"
+"You can get more information about eMule at\n"
+"http://www.emule-project.net"
+msgstr ""
+"Izboljšuje dostopnost eMule za uporabnike NVDA.\n"
+"eMule je P2P program za iskanje in deljenje datotek.\n"
+"Več informacij o eMule lahko dobite na\n"
+"http://www.emule-project.net"
 
-#~ msgid ""
-#~ "You have installed the ReadFeeds add-on, probably an old and incompatible "
-#~ "version with this one. Do you want to uninstall the old version?"
-#~ msgstr ""
-#~ "Čeprav imate nameščen dodatek ReadFeeds, je ta zastarel in ni združljiv s "
-#~ "to različico. Želite odstraniti staro različico?"
+#~ msgid "text \"%s\" not found"
+#~ msgstr "besedilo \"%s\" se ni našlo"
 
-#~ msgid "Uninstall incompatible add-on"
-#~ msgstr "Odstrani nezdružljiv dodatek"
+#~ msgid "Find Error"
+#~ msgstr "Napaka med Iskanjem"
 
-#~ msgid "Feeds"
-#~ msgstr "Viri"
+#~ msgid "Search for:"
+#~ msgstr "Išči:"
 
-#~ msgid "Manage feeds."
-#~ msgstr "Upravljanje z viri"
+#~ msgid "eMule search"
+#~ msgstr "iskanje eMule"
 
-#~ msgid "View and manage feeds"
-#~ msgstr "Preglej in upravljaj z viri"
+#~ msgid "Opens the find dialog when in read only edit boxes."
+#~ msgstr "Odpre pogovorno okno Najdi, ko ste v poljih samo za branje."
 
-#~ msgid "Backup of feeds"
-#~ msgstr "Varnostna kopija virov"
+#~ msgid "Find next occurence."
+#~ msgstr "Najdi naslednji rezultat"
 
-#~ msgid "Restore previously saved feeds"
-#~ msgstr "Obnovi prej shranjene vire"
+#~ msgid "Find previous occurrence."
+#~ msgstr "Najdi prejšnji rezultat"

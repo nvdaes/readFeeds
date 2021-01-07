@@ -1,210 +1,95 @@
-# RSS-Feeds lesen #
+# eMule #
 
-* Autoren: Noelia Ruiz Martínez, Mesar Hameed
-* NVDA-Kompatibilität: 2019.3 oder neuer
-* [Stabile Version herunterladen][1]
-* [Entwicklerversion herunterladen][2]
+*	Authoren: Noelia, Chris, Alberto.
+*	NVDA-Kompatibilität: 2019.3 oder höher.
+*	[Stabile Version herunterladen][1]
+*	[Entwicklerversion herunterladen][3]
+*	[kompatible Version für NVDA 2017.3][4] herunterladen
 
+Diese Erweiterung verbessert die Zugänglichkeit von Emule mit NVDA.  Des
+weiteren stellt die Erweiterung außerdem Tastenkombinationen zum Navigieren
+zu verschiedenen Fenstern von Emule sowie weitere Informationen zur
+Verfügung.
 
-Diese Erweiterung bietet eine einfache Möglichkeit, RSS-Feeds in den
-Formaten Atom oder RSS mit NVDA zu lesen. Die Feeds werden nicht automatisch
-aktualisiert. Wenn wir weiter unten  von Feeds sprechen, dann meinen wir
-sowohl RSS- als auch  ATOM-Feeds.
+Diese Erweiterung basiert auf EmuleNVDASupport des selben Autors. Sie
+sollten die alte Erweiterung deinstallieren, bevor Sie diese Erweiterung
+verwenden, da beide die gleichen Tastenkombinationen und Funktionen bieten.
 
-## Installation oder Update ##
+Getestet mit [eMule][2] 0.50a.
 
-Wenn Sie eine frühere Version dieser Erweiterung verwendet haben und in
-Ihrem persönlichen NVDA-Konfigurationsordner ein RSS- oder
-personalFeeds-Ordner vorhanden ist, wird bei der Installation der aktuellen
-Version ein Dialogfeld angezeigt. In diesem Dialog werden Sie gefragt, ob
-Sie eine Aktualisierung oder eine Installation durchführen möchten.  Wählen
-Sie aktualisieren, um Ihre gespeicherten Feeds zu behalten und sie in der
-neu installierten Version von RSS-Feed-Reader weiter zu verwenden.
+## Tastenbefehle: ##
 
-## Befehle ##
+*	Strg+Umschaltt+H: Verschiebt den Fokus und die Maus auf die
+  Hauptsymbolleiste.
+*	Strg+Umschalt+T: Liest das aktuelle Fenster aus.
+*	Strg+Umschalt+N: Verschiebt den Fokus in das Feld "Name" im Suchfenster.
+*	Strg+Umschalt+P: Bewegt den Fokus im Suchfenster in die Liste der
+  Suchparameter.
+*	Strg+Umschalt+B: Bewegt den Fokus in die Liste im aktuellen Fenster. Zum
+  Beispiel verwendbar im Suchfenster, Downloads in Übertragungsfenster, etc.
+*	Strg+Umschalt+O: Bewegt den Fokus zum schreibgeschützten Feld, im
+  aktuellen Fenster. Zum Beispiel die empfangenen Nachrichten im IRC,
+  verfügbare Server, etc.
+*	Strg+NVDA+F: Wenn sich der Systemcursor in einem schreibgeschützten
+  Eingabefeld befindet, wird ein Suchfeld geöffnet.
+*	Strg+Umschalt+L: Bewegt den Navigator und die Maus zur Überschrift der
+  aktuellen Liste.
+*	Strg+Umschalt+Q: Zeigt das erste Element in der Statuszeile (die letzten
+  Aktivitäten) an.
+*	Strg+Umschalt+W: Zeigt das zweite Element auf der Statuszeile an (Dateien
+  und Nutzer auf dem aktuellen Server).
+*	Strg+Umschalt+E: Zeigt das dritte Element der Statuszeile an (die
+  Datenübertragungsraten).
+*	Strg+Umschalt+R: Zeigt das vierte Element der Statuszeile an
+  (Informationen zu Verbindungen mit ed2k- und Kademia-Netzwerken).
 
-### Feed-Reader-Menü ###
+## Spalten verwalten. ##
 
-Sie können auf das Untermenü RSS-Feed-Reader aus dem NVDA-Menü, Untermenü
-Extras zugreifen. Es stehen folgende Menüoptionen zur Verfügung:
+Wenn sich der Fokus in einer Liste befindet, können Sie sich mit
+Strg+Alt+Pfeiltasten zwischen den Zeilen und Spalten bewegen. Folgende
+Befehle sind außerdem verfügbar:
 
-#### RSS-Feeds ####
-
-Öffnet einen Dialog mit den folgenden Steuerelementen:
-
-* Filtern nach: Ein Eingabefeld, um zuvor gespeicherte Feeds zu durchsuchen.
-* Eine Liste der gespeicherten RSS-Feeds, die beim Öffnen des Dialogfelds
-  hervorgehoben werden.
-* Liste der Artikel: Öffnet einen Dialog, der die Artikelliste aus Ihrem
-  aktuellen Feed anzeigt. Wählen Sie den Artikel, den Sie lesen möchten, und
-  drücken Sie die Eingabetaste oder die Schaltfläche Webseite des
-  ausgewählten Artikels öffnen, um die entsprechende Seite in Ihrem Browser
-  zu öffnen. Klicken Sie auf die Schaltfläche Info-Artikel, um einen Dialog
-  mit Titel und Link des ausgewählten Artikels zu öffnen; von diesem Dialog
-  aus können Sie diese Informationen in die Zwischenablage kopieren.
-* Feed öffnen: Öffnet den ausgewählten Feed in der Standardanwendung.
-* RSS-Feed als HTML öffnen: Öffnet den ausgewählten RSS-Feed im
-  Standard-Webbrowser. Sie können Veröffentlichungsdaten und Schaltflächen
-  ein- oder ausblenden, um Informationen zu Artikeln in die Zwischenablage
-  zu kopieren.
-* Adresse des RSS-Feed kopieren: Öffnet ein Dialogfeld, in dem bestätigt
-  wird, ob die Feed-Adresse in die Zwischenablage kopiert werden soll.
-* Neu: Öffnet einen Dialog mit einem Eingabefeld zur Eingabe der Adresse
-  eines neuen RSS-Feeds. Wenn die Adresse gültig ist und der Feed
-  gespeichert werden kann, erscheint sein Name, basierend auf dem
-  Feed-Titel, am Ende der Liste der RSS-Feeds.
-* Umbenennen: Öffnet einen Dialog mit einem Eingabefeld zum Umbenennen des
-  ausgewählten Feeds.
-* Löschen: Öffnet einen Dialog zum Löschen des ausgewählten Feeds.
-* Als standard festlegen: Legt den ausgewählten RSS-Feed als Standard fest,
-  so dass auf seine Artikel mit den Tastenkürzel von NVDA zugegriffen werden
-  kann.
-* Backup Ordner öffnen: Öffnet einen Ordner, in welchem Sicherungsdateien
-  der RSS Feeds enthalten sein können. In diesem Ordner können die Feeds
-  gelöscht werden, welche bei einer Aktualisierung der Erweiterung nicht
-  importiert werden sollen.
-* Einstellungen: Öffnet das Dialogfeld mit den Einstellungen der
-  erweiterung, der auch im NVDA-Menü "Einstellungen", "Einstellungen" und
-  "RSS-Feeds lesen" verfügbar ist.
-* Schließen: Schließt den Dialog.
-
-##### Hinweise #####
-
-* Wenn ein Feed namens tempFeed erstellt wird, benennen Sie ihn bitte
-  um. Andernfalls könnte er ersetzt werden, wenn erneut ein Ordner mit
-  diesem Namen erstellt wird.
-* Der als Standard eingestellte Feed kann nicht entfernt werden. Der
-  AddressFile-Feed wird als Standard verwendet, wenn die Konfiguration
-  zurückgesetzt wird. Daher kann dieser Ordner nicht gelöscht werden.
-* Das Bearbeitungsfeld Filtern nach kann nach der Schaltfläche Artikel
-  öffnen im NVDA-Menü, Einstellungen, Einstellungen, Feeds lesen oder durch
-  Klicken auf die Schaltfläche Einstellungen im Dialogfeld Feeds platziert
-  werden.
-
-#### Ordner der RSS-Feeds kopieren ####
-
-Öffnet einen Dialog, in dem Sie einen Ordner auswählen können, um Ihre
-persönlichen RSS Feed Artikel zu speichern. Standardmäßig ist der
-ausgewählte Ordner das Konfigurationsverzeichnis von NVDA und der Ordner
-heißt personalFeeds.
-
-#### RSS-Feeds wiederherstellen ####
-
-Öffnet einen Dialog um einen Ordner zu wählen, der ihren Ordner mit
-persönlichen FEEDS ersetzt. Stellen Sie sicher, dass Sie einen Ordner
-wählen, der URLs von RSS Feeds enthält.
-
-### Tastaturbefehle ###
-
-* STRG+Umschalt+NVDA+Leertaste: Sagt die aktuelle Adresse des Artikels
-  an. Zweimaliges Drücken öffnet die Webseite des Artikels.
-* STRG+Umschalt+NVDA+8: Der ausgewählte RSS-Feed wird neu geladen und der
-  aktuellste Titel wird angesagt.
-* Strg+Umschalt+NVDA+I: Sagt den aktuellen Feed-Titel und -Link an. Durch
-  zweimaliges Drücken wird der Titel und der zugehörige Link in die
-  Zwischenablage kopiert.
-* STRG+Umschalt+NVDA+U: Sagt den Titel des vorherigen RSS-Feeds an.
-* STRG+Umschalt+NVDA+O: Sagt den Titel des nächsten RSS-Feeds an.
-
-## Benachrichtigungen ##
-
-* Wenn der Titel oder die URL kopiert wurden.
-* Wenn die Verbindung / das Neuladen eines RSS-Feeds fehlgeschlagen ist,
-  oder wenn die URL nicht mit einem gültigen Feed übereinstimmt.
-* NVDA zeigt eine Fehlermeldung an, wenn der Ordner "personalFeeds" nicht
-  gespeichert oder wiederhergestellt sowie wenn kein neuer Feed erstellt
-  werden konnte.
-* Im Titel des Dialogs für die Artikellisten werden der Name des
-  ausgewählten Feeds und die Anzahl der verfügbaren Artikel angezeigt.
-
-## Änderungen in 10.0 ##
-
-* Es wurde eine Schaltfläche hinzugefügt, um den ausgewählten RSS-Feed als
-  HTML im Standard-Webbrowser zu öffnen.
-* Wenn kein neuer RSS-Feed erstellt werden konnte, wird dies in einem
-  Fehlerdialog angezeigt.
-* Verbesserte Reihenfolge und Präsentation einiger Artikel.
-* Weitere Feeds werden möglicherweise unterstützt.
-* Wenn das Dialogfeld "Feeds" geöffnet wird, wird die Liste der Feeds
-  anstelle des Bearbeitungsfelds "Suche" hervorgehoben.
-* Sie können auswählen, ob das Suchfeld für die Suche hinter der Liste der
-  Feeds platziert werden soll. Dies ist nützlich, um die Liste auch dann zu
-  fokussieren, wenn Sie aus einem anderen Fenster wechseln, ohne das
-  Dialogfeld "Feeds" zu schließen.
-* Es wurde eine Schaltfläche hinzugefügt, um die Adresse des RSS-Feed aus
-  dem Dialogfeld der Feeds in die Zwischenablage zu kopieren.
-
-## Änderungen für 9.0 ##
-
-* Erfordert NVDA 2019.3 oder höher.
-
-## Änderungen in 8.0 ##
-
-* Bei der Aktualisierung dieser Erweiterung werden die in der vorherigen
-  Version gespeicherten Feeds automatisch in die neue Version kopiert, es
-  sei denn, Sie möchten ausdrücklich, dass Feeds aus dem
-  Hauptkonfigurationsordner von NVDA importiert werden.
-* Wenn Sie den Dialog zum Kopieren von Feeds verwenden und der ausgewählte
-  Ordner nicht "personalFeeds" heißt, wird ein Unterordner mit diesem Namen
-  erstellt, um das Löschen von Verzeichnissen mit wichtigen Daten wie
-  Dokumente oder Downloads zu verhindern.
-
-## Änderungen bis 7.0 ##
-
-* Der RSS Feeds Dialog wird mit einen Schalter erweitert, um einen
-  Backup-Ordner zu öffnen, der die Sicherungsdateien der Feeds enthalten
-  kann.
-* Wenn die Eingabe in der Filterfunktion keine Ergebnisse liefert, werden
-  die Liste der Feeds und andere Dialogelemente nicht mehr angezeigt. Somit
-  meldet NVDA nicht mehr "unbekannt" in der leeren Liste.
-* Wenn die Liste der Artikel nicht angezeigt werden kann, beispielsweise
-  wegen Fehlern beim Rss Feed, wird NVDA einen Fehler auslösen. Dadurch
-  können Sie den RSS Feed Dialog nutzen, ohne NVDA neu starten zu müssen.
-
-## Änderungen bis 6.0 ##
-
-* Wenn der Standardfeed aktualisiert wurde und er aufgrund von
-  Serverproblemen nicht mehr funktioniert, werden die vorherigen Artikel
-  nicht gelöscht und können mit den entsprechenden Tastenkombinationen
-  gelesen werden.
-* Fehler behoben: Der Standardfeed kann noch zweimal aktualisiert werden.
-
-## Änderungen für 5.0 ##
-
-* Der Dialog der Artikelliste wurde erweitert.
-* Kompatibel mit NVDA 2018.3 oder neuer (erforderlich).
-* Bei Bedarf können Sie die [letzte Version][3], die mit NVDA 2017.3
-  kompatibel ist herunterladen.
+*	NVDA+Strg+1-0: Liest die ersten 10 Spalten.
+*	NVDA+Umschalt+1-0: Liest die Spalten 11 bis 20.
+*	NVDA+Umschalt+C: Kopiert die Inhalte der zuletzt gesprochenen Spalte in
+  die Zwischenablage.
 
 ## Änderungen in 4.0 ##
-
-* Schaltfläche zum Öffnen des ausgewählten Feeds über den Feed-Dialog
-  hinzugefügt.
+*	Erfordert NVDA 2019.3 oder höher.
 
 ## Änderungen in 3.0 ##
-
-* Die Dialoge zur Verwaltung von RSS-Feed-Dateien wurden entfernt. Jetzt ist
-  ihre Funktionalität im RSS-Feeds-Dialog enthalten.
-* Die visuelle Darstellung der Dialoge wurde verbessert und entspricht dem
-  Erscheinungsbild der Dialoge in NVDA.
-* Der Standard-Feed wird in der NVDA-Konfiguration gespeichert. Daher ist es
-  möglich, verschiedene Standard-Feeds in Konfigurationsprofilen
-  einzustellen.
-* NVDA 2016.4 oder höher ist erforderlich.
+*	 Um Text in den schreibgeschützten Bearbeitungsfeldern zu suchen, kann das
+   Suchdialogfeld verwendet werden, z. B. nvda+control+f, um das
+   Suchdialogfeld zu aktivieren.
 
 ## Änderungen in 2.0 ##
+*	 Die Hilfe zur Erweiterung ist über die Erweiterungsverwaltung verfügbar.
 
-* Hilfe zur Erweiterung ist über den Dialog "Erweiterungen verwalten"
-  verfügbar.
+## Änderungen in 1.2 ##
+*	 Wenn Sie sich zu den IRC-Nachrichten bewegen, wird ausgewählter Text
+   vorgelesen.
+*	 Mit der Tastenkombination können Sie mittlerweile anstatt nur die
+   Suchergebnisse auch sämtliche Listen im aktuellen Fenster ansteuern.
+*	 Der Befehl wurde zuvor generell zum Fokussieren der IRC-Nachrichten
+   verwendet. Mittlerweile können Sie jetzt auch damit im Fenster der
+   Verbindungen zu den Servern auslesen.
+*	 Beim Bewegen der Maus und dem Fokus zur Werkzeugleiste wurde unter
+   Umständen die Aktion doppelt angesagt. Dies ist nun behoben worden.
+
+## Änderungen in 1.1 ##
+*	 Fehler im Eintrag Emule im NVDA-Hilfemenü behoben, wenn der Namen des
+   Benutzerverzeichnises nicht-lateinische Zeichen enthiellt.
+*	 Tastenkombinationen können nun mittels des Dialogs Eingaben neu
+   zugewiesen werden.
 
 ## Änderungen in 1.0 ##
+*	 Ehrstveröffentlichung.
 
-* Ehrstveröffentlichung.
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=rf
+[1]: https://addons.nvda-project.org/files/get.php?file=em
 
-[2]: https://addons.nvda-project.org/files/get.php?file=rf-dev
+[2]: https://www.emule-project.net
 
-[3]: https://addons.nvda-project.org/files/get.php?file=rf-o
+[3]: https://addons.nvda-project.org/files/get.php?file=em-dev

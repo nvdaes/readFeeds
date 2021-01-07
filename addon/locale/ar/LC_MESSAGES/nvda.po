@@ -5,323 +5,123 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: readFeeds 1.0-dev\n"
+"Project-Id-Version: eMule 1.0-dev\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
-"POT-Creation-Date: 2013-11-16 13:26+0100\n"
-"PO-Revision-Date: 2018-12-22 16:46+0200\n"
-"Last-Translator: wafiqtaher <wafiqtaher@gmail.com>\n"
-"Language-Team: arabic <wafiqtaher@gmail.com fatmamehanna@gmail.com>\n"
+"POT-Creation-Date: 2013-08-04 11:33+0200\n"
+"PO-Revision-Date: 2019-09-04 17:02+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.6.11\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
-"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
 
-#. Translators: the label of a message box dialog.
-#, fuzzy
-msgid ""
-"Your configuration folder for NVDA contains files that seem to be derived "
-"from a previous version of this add-on.\n"
-"\t\t\tDo you want to update it?"
-msgstr ""
-"مجلد إعدادات NVDA لديك يحتوي على ملفات يبدو أنها مشتقة من إصدار سابق من هذه "
-"الإضافة. هل ترغب في التحديث؟"
+#. Translators: Message presented in input help mode.
+msgid "Reads the specified column for the current list item."
+msgstr "قراءة العمود المحدد الخاص بعنصر القائمة الحالي."
 
-#. Translators: the title of a message box dialog.
-msgid "Install or update add-on"
-msgstr "تثبيت أو تحديث الإضافة"
-
-#. Translators: message presented when feeds cannot be reported.
-msgid ""
-"Unable to refresh feed. Check your Internet conectivity or that the "
-"specified feed address is correct."
-msgstr "تعذر تنشيط التلقيم. تأكد من الاتصال بالإنترنت أو من صحة عنوان التلقيم."
-
-#. Translators: Message presented when feeds have been copied.
-msgid "Feeds copied"
-msgstr "تم نسخ التلقيمات"
-
-#. Translators: label of error dialog shown when cannot copy feeds folder.
-msgid "Folder not copied"
-msgstr "لم يتم نسخ المجلد"
-
-#. Translators: title of error dialog shown when cannot copy feeds folder.
-msgid "Copy Error"
-msgstr "خلل في النسخ "
-
-#. Translators: Message presented when feeds have been restored.
-msgid "Feeds restored"
-msgstr "تم استرجاع التلقيمات"
-
-#. Translators: Title of a dialog.
-#, python-brace-format
-msgid "Feeds: {defaultFeed} ({configProfile})"
-msgstr "الخلاصات: {defaultFeed} ({configProfile})"
-
-#. Translators: Label of a dialog (message translated in NVDA's core in different contexts).
-msgid "&Filter by:"
-msgstr "ت&صفية حسب:"
-
-#. Translators: The label of a button to open the list of articles of a feed.
-msgid "List of &articles..."
-msgstr "قائمة ال&مقالات..."
-
-#. Translators: The label of a button to open a feed.
-msgid "&Open feed"
-msgstr "&فتح المقال"
-
-#. Translators: The label of a button to open a feed as HTML.
-#, fuzzy
-msgid "Open feed as &HTML"
-msgstr "&فتح المقال"
-
-#. Translators: The label of a button to copy the feed URL.
-#, fuzzy
-msgid "Cop&y feed address"
-msgstr "نسخ التلقيمات"
-
-#. Translators: The label of a button to add a new feed.
-msgid "&New..."
-msgstr "&جديد..."
-
-#. Translators: The label of a button to rename a feed.
-msgid "&Rename..."
-msgstr "إعادة &تسمية..."
-
-#. Translators: The label of a button to delete a feed.
-msgid "&Delete..."
-msgstr "&حذف..."
-
-#. Translators: The label of a button to set a feed as default.
-msgid "S&et default"
-msgstr "إست&عادة الافتراضي"
-
-#. Translators: The label of a button to open a folder containing a backup of feeds.
-#, fuzzy
-msgid "Open &folder containing a backup of feeds"
-msgstr "حدد مجلد لحفظ نسخة احطياطية من تلقيماتك الحالية"
-
-#. Translators: The label of a button to open the settings dialog for readFeeds.
-#, fuzzy
-msgid "&Preferences..."
-msgstr "ا&سترجاع التلقيمات..."
-
-#. Translators: Message presented when a feed cannot be added.
+#. Translators: Message presented when the current column of the list item is copied to clipboard.
 #, python-format
-msgid "Cannot add feed: %s"
-msgstr ""
+msgid "%s copied to clipboard"
+msgstr "تم نسخ %s إلى الحافظة"
 
-#. Translators: error message.
-#, fuzzy
-msgid "Error"
-msgstr "خلل في النسخ "
+#. Translators: Message presented in input help mode.
+msgid "Copies the last read column of the selected list item to clipboard."
+msgstr "نسخ آخر عمود مقروء بعنصر القائمة المحدد إلى الحافظة. "
 
-#. Translators: the label of a message box dialog.
-#, fuzzy, python-brace-format
+#. Translators: Message presented in input help mode
+msgid "Moves the system focus and mouse to the main Tool Bar."
+msgstr "تحريك مؤشر الفأرة ومؤشر النظام تجاه شريط الأدوات الرئيسي. "
+
+#. Translators: Message presented in input help mode.
+#. For instance: reads the search window, Statistics, IRC, etc.
+msgid "Reports the current window."
+msgstr "الإعلام عن النافذة الحالية"
+
+#. Translators: Message presented in input help mode.
+msgid "Moves the system focus to the Name field of the Search window."
+msgstr "تحريك مؤشر النظام إلى حقل الاسم بنافذة البحث."
+
+#. Translators: Message presented in input help mode.
 msgid ""
-"Do you want to copy feed address to the clipboard\r\n"
-"\r\n"
-"{feedAddress}?"
+"Moves the system focus and mouse to the search parameters list or Edit field "
+"for each option, in the Search window."
 msgstr ""
-"%s\r\n"
-" \r\n"
-" هل تريد نسخ عنوان المقال و الرابط إلى الحافظة?"
+"تحريك مؤشر الفأرة ومؤشر النظام تجاه قائمة معطيات البحث أو حقول التحرير لكل "
+"خيار في نافذة البحث."
 
-#. Translators: the title of a message box dialog.
-#, fuzzy
-msgid "Copy feed address"
-msgstr "نسخ التلقيمات"
-
-#. Translators: Label of a dialog.
-msgid "Address of a new feed:"
-msgstr "عنوان التلقيم الجديد: "
-
-#. Translators: The title of a dialog to create a new feed.
-msgid "New feed"
-msgstr "تلقيم جديد"
-
-#. Translators: The confirmation prompt displayed when the user requests to delete a feed.
-msgid "Are you sure you want to delete this feed? This cannot be undone."
-msgstr "هل أنت متأكد من أنك تريد حذف التلقيم؟ لا يمكنك التراجع."
-
-#. Translators: The label of a field to enter a new name for a feed.
-msgid "New name:"
-msgstr "الاسم الجديد: "
-
-#. Translators: The title of a dialog to rename a feed.
-msgid "Rename feed"
-msgstr "إعادة تسمية التلقيم"
-
-#. Translators: The label of the articles list in the articles dialog.
-msgid "List of articles"
-msgstr "قائمة من المقالات"
-
-#. Translators: The label of a button to open the selected article of a feed.
-msgid "Open &web page of selected article."
-msgstr "ا&فتح صفحة المقال المحدد"
-
-#. Translators: The label of a button to show information of a feed article.
-msgid "&About article..."
-msgstr "&حول..."
-
-#. Translators: the label of a message box dialog.
-#, fuzzy, python-format
-msgid "%sDo you want to copy article title and link to the clipboard?"
-msgstr ""
-"%s\r\n"
-" \r\n"
-" هل تريد نسخ عنوان المقال و الرابط إلى الحافظة?"
-
-#. Translators: the title of a message box dialog.
-msgid "Article information"
-msgstr "معلومات المادة"
-
-#. Translators: The title of the Copy dialog.
-msgid "Copy feeds"
-msgstr "نسخ التلقيمات"
-
-#. Translators: An informational message displayed in the Copy dialog.
-msgid "Select a folder to save a backup of your current feeds"
-msgstr "حدد مجلد لحفظ نسخة احطياطية من تلقيماتك الحالية"
-
-#. Translators: The label of a grouping containing controls to select the destination directory in the Copy dialog.
-msgid "directory for backup:"
-msgstr "مجلد لأخذ نسخة احطياطية: "
-
-#. Translators: The title of the dialog presented when browsing for the destination directory when copying feeds.
-msgid "Select directory to copy"
-msgstr "حدد مجلد للنسخ"
-
-#. Translators: The title of the Restore dialog.
-msgid "Restore feeds"
-msgstr "استرجاع التلقيمات"
-
-#. Translators: An informational message displayed in the Restore dialog.
-msgid "Select a folder to restore a backup of your previous copied feeds"
-msgstr "اختر مجلد لاسترجاع تلقيماتك الشخصية"
-
-#. Translators: The label of a grouping containing controls to select the destination directory in the Restore dialog.
-msgid "directory containing backup:"
-msgstr "المجلد الذي يحتوي على التلقيمات: "
-
-#. Translators: The title of the dialog presented when browsing for the destination directory when restoring feeds.
-msgid "Select directory to restore"
-msgstr "حدد مجلد للاسترجاع"
-
-#. Translators: label of a dialog.
-msgid "&Search edit box after feeds list"
-msgstr ""
-
-#. Translators: Presented when the current article does not have an associated title.
-msgid "Unable to locate article title."
-msgstr "تعذر تحديد عنوان المقال"
-
-#. Translators: Presented when the current article does not have an associated link.
-msgid "Unable to locate article link."
-msgstr "تعذر تحديد رابط المقال"
-
-#. Translators: Label of a checkbox to choose if date should be presented for each feed.
-msgid "Show date"
-msgstr ""
-
-#. Translators: Label for a checkbox to show buttons for copying to clipboard.
-msgid "Show buttons to copy"
-msgstr ""
-
-#. Translators: Label for a button to copy to clipboard.
-msgid "Copy"
-msgstr ""
-
-#. Translators: the name of a submenu.
-msgid "&Read Feeds"
-msgstr "&قراءة الخلاصات"
-
-#. Translators: the name of a menu item.
-msgid "&Feeds..."
-msgstr "ال&تلقيمات..."
-
-#. Translators: the name of a menu item.
-msgid "&Copy feeds folder..."
-msgstr "&نسخ مجلد التلقيمات..."
-
-#. Translators: the name of a menu item.
-msgid "R&estore feeds..."
-msgstr "ا&سترجاع التلقيمات..."
-
-#. Translators: message presented in input mode.
-#, fuzzy
-msgid "Activates the Feeds dialog of Read Feeds."
-msgstr "تنشيط محاورة التلقيمات من %s"
-
-#. Translators: message presented in input mode.
-#, fuzzy
-msgid "Activates the Copy dialog of Read Feeds."
-msgstr "تنشيط محاورة النسخ من %s"
-
-#. Translators: message presented in input mode.
-#, fuzzy
-msgid "Activates the Restore dialog of Read Feeds."
-msgstr "تنشيط محاورة الاسترجاع من %s"
-
-#. Translators: message presented in input mode.
-#, python-format
-msgid "Shows the %s settings."
-msgstr ""
-
-#. Translators: message presented in input mode.
-msgid "Refreshes the current feed and announces the most recent article title."
-msgstr "تنشيط التلقيم الحالي ويعلن عن عنوان أحدث مقال."
-
-#. Translators: message presented in input mode.
+#. Translators: Message presented in input help mode.
 msgid ""
-"Announces the title of the current article. Pressed two times, copies title "
-"and related link to the clipboard."
+"Moves the system focus to the first list in the current window. For example "
+"the results list in the Search window, downloads in Transfer, etc."
 msgstr ""
-"الإعلان عن عنوان المقال الحالي, بالضغط عليه مرتين, يقوم بنسخ العنوان ورابط "
-"الصفحة الموجود بها المقال للحافظة."
+"تحريك مؤشر النظام تجاه القائمة الأولى بالنافذة الحالية مثل قائمة النتائج في "
+"نافذة البحث، أو التنزيلات أو النقل إلخ. "
 
-#. Translators: message presented when the information about an article of a feed is copied to the clipboard.
-#, python-format
-msgid "Copied to clipboard %s"
-msgstr "تم نسخ %s للحافظة"
-
-#. Translators: message presented in input mode.
-msgid "Announces the title of the next article."
-msgstr "الإعلان عن عنوان المقال التالي"
-
-#. Translators: message presented in input mode.
-msgid "Announces the title of the previous article."
-msgstr "الإعلان عن عنوان المقال السابق"
-
-#. Translators: message presented in input mode.
-msgid "Announces article link, when pressed two times, opens related web page."
+#. Translators: Message presented in input help mode.
+msgid ""
+"Moves the system focus to read-only edit boxes in the current window. For "
+"example the IRC received messages."
 msgstr ""
-"الإعلان عن رابط المقال, بالضغط عليه مرتين, يقوم بفتح صفحة الوب الموجود بها "
-"المقال."
+"تحريك مؤشر النظام تجاه صناديق التحرير للقراءة فقط في النافذة الحالية مثل "
+"الرسائل المستلمة في بروتوكول IRC للدردشة عبر الإنترنت. "
 
-#. Translators: message presented in input mode.
-msgid "Copies title and related link of the current article to the clipboard."
-msgstr "نسخ عنوان ورابط المقال الحالي للحافظة."
+#. Translators: Message presented in input help mode.
+msgid "Moves the navigator object and mouse to the current list headers."
+msgstr "تحريك مؤشر NVDA ومؤشر الفأرة تجاه رأس القائمة الحالية. "
+
+#. Translators: Message presented in input help mode.
+msgid "Reports first object of the Status Bar."
+msgstr "الإعلام عن الكائن الأول في شريط الحالة."
+
+#. Translators: Message presented in input help mode.
+msgid "Reports second object of the Status Bar."
+msgstr "الإعلام عن الكائن الثاني في شريط الحالة."
+
+#. Translators: Message presented in input help mode.
+msgid "Reports third object of the Status Bar."
+msgstr "الإعلام عن الكائن الثالث في شريط الحالة."
+
+#. Translators: Message presented in input help mode.
+msgid "Reports fourth object of the Status Bar."
+msgstr "الإعلام عن الكائن الرابع في شريط الحالة."
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
-msgid "Read Feeds"
-msgstr "قراءة الخلاصات"
+msgid "eMule"
+msgstr "eMule"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
-msgid "Add-on for using NVDA as a feed reader."
-msgstr "إضافة برمجية تمكن من استخدام NVDA كقارئ للتلقيمات"
+msgid ""
+"Improves eMule's accessibility with NVDA.\n"
+"eMule is a P2P program to search and share files.\n"
+"You can get more information about eMule at\n"
+"http://www.emule-project.net"
+msgstr ""
+"تحسين إمكانيات سهولة الوصول ببرنامج eMule مع NVDA.\n"
+"eMule هو برنامج لاقتران حاسوب بحاسوب من أجل البحث ومشاركة الملفات.\n"
+"وللمزيد من المعلومات يمكن زيارة.\n"
+"https://www.emule-project.net"
 
-#~ msgid ""
-#~ "You have installed the ReadFeeds add-on, probably an old and incompatible "
-#~ "version with this one. Do you want to uninstall the old version?"
-#~ msgstr ""
-#~ "لقد قمت بتثبيت الإضافة, من المحتمل وجود إصدار قديم وغير متوافق مع الإضافة "
-#~ "الجديدة. هل ترغب بإزالة الإصدار القديم؟"
+#~ msgid "text \"%s\" not found"
+#~ msgstr "تعذر العثور على النص \"%s\""
 
-#~ msgid "Uninstall incompatible add-on"
-#~ msgstr "إزالة إضافة غير متوافقة"
+#~ msgid "Find Error"
+#~ msgstr "يوجد خطأ"
+
+#~ msgid "Search for:"
+#~ msgstr "البحث عن"
+
+#~ msgid "eMule search"
+#~ msgstr "بحث eMule"
+
+#~ msgid "Opens the find dialog when in read only edit boxes."
+#~ msgstr "فتح محاورة  البحث في حالة صناديق التحرير المقروءة فقط. "
+
+#~ msgid "Find next occurence."
+#~ msgstr "الوصول إلى الظهور التالي للنص الذي قمت بالبحث عنه مسبقا. "
+
+#~ msgid "Find previous occurrence."
+#~ msgstr "الوصول إلى الظهور السابق  للنص الذي قمت بالبحث عنه مسبقا."

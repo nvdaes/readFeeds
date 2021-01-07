@@ -1,197 +1,97 @@
-# Leitor de RSS #
+# eMule #
 
-* Autores: Noelia Ruiz Martínez, Mesar Hameed
-* Compatibilidade com o NVDA: 2019.3 e posteriores
-* Baixar [versão estável][1]
-* Baixar [versão de desenvolvimento][2]
+*	Autores: Noelia, Chris, Alberto.
+*	NVDA compatibility: 2019.3 or later.
+*	baixar [versão estável] [1]
+*	baixar [versão de desenvolvimento] [3]
+*	download [version compatible with NVDA 2017.3][4]
 
+This add-on helps to improve accessibility of eMule with nVDA.  It also
+provides additional keyboard commands for moving in different windows and
+gives Useful information about eMule.
 
-Este extra fornece uma maneira directa de ler feeds em formatos Atom ou RSS
-usando o NVDA. Os feeds não serão actualizados automaticamente. quando
-falamos de feeds, queremos dizer feeds RSS e ATOM.
+It's based on the eMuleNVDASupport add-on, developed by the same author. You
+should uninstall that old add-on to use this one, since both have common
+keystrokes and features.
 
-## Installation or Update ##
+Testado no [eMule][2] 0.50a.
 
-Se usou uma versão anterior deste addon e existe uma pasta RSS ou
-pessoalFeeds na sua pasta pessoal de configuração do NVDA, ao instalar a
-versão actual, uma caixa de diálogo perguntará se deseja actualizar ou
-instalar. Escolha a actualização para preservar os seus feeds guardados e
-continuar a usá-los na nova versão instalada do readFeeds.
+## Comandos: ##
 
-## Commands ##
+*	control+shift+h: move o foco e o rato para a barra de ferramentas
+  principal.
+*	control+shift+t: lê a janela actual.
+*	control+shift+n: move o foco para o campo Nome na janela Localizar.
+*	control+shift+p: na janela Pesquisar, move o foco e o rato para a lista de
+  parâmetros de pesquisa ou edita as opções de campo.
+*	control+shift+b: move o foco para a lista na janela atual. Por exemplo,
+  utilizável na janela de pesquisa, downloads na janela de transferência,
+  etc.
+*	control+shift+o: move o foco para caixas de edição somente leitura na
+  janela actual. Por exemplo, o IRC recebeu mensagens, Servidores
+  disponíveis, etc.
+*	control+NVDA+f: se o cursor estiver localizado numa caixa de edição
+  somente leitura, abre uma caixa de diálogo de pesquisa para usar os
+  comandos para pesquisar texto disponível no NVDA.
+*	control+shift+l: move o objecto do navegador e o rato para os cabeçalhos
+  da lista actual.
+*	control+shift+q: lê o primeiro objecto na barra de status; fornece
+  informações sobre actividades recentes.
+*	control+shift+w: lê o segundo objecto da barra de status; contém
+  informações sobre ficheiros e utilizadores no servidor actual.
+*	control+shift+e: lê o terceiro objecto da barra de status; útil para
+  conhecer a velocidade de UpLoad / DownLoad.
+*	control+shift+r: lê o quarto objecto da barra de status; relatórios sobre
+  a conexão da rede eD2K e Kad.
 
-### Menu do leitor de RSS: ###
+## Gerir colunas: ##
 
-Pode aceder ao submenu leitor de RSS no menu do nvda, submenu Ferramentas,
-onde estão disponíveis as seguintes opções de menu:
+Quando numa lista, pode mover o cursor entre as linhas e colunas usando alt
++ control + Setas. Neste extra, os seguintes comandos de teclas também estão
+disponíveis:
 
-#### Feeds ####
-
-Abre um diálogo com os seguintes controlos:
-
-* Filtrar por: Uma caixa de edição para procurar feeds guardados
-  anteriormente.
-* A list of the saved feeds, focused when the dialog is opened.
-* Lista de artigos: abre uma caixa de diálogo que apresenta a lista de
-  artigos do seu feed actual. Seleccione o artigo que deseja ler e pressione
-  Enter ou o botão Abrir página da web do artigo seleccionado para abrir a
-  página correspondente no seu navegador. Pressione o botão Sobre o artigo
-  para abrir uma caixa de diálogo que mostra o título e o link do artigo
-  seleccionado; nesta caixa de diálogo, poderá copiar essa informação para a
-  área de transferência.
-* Abrir RSS: abre o feed seleccionado na aplicação padrão.
-* Open feed as HTML: Opens the selected feed in the default web browser. You
-  will be able to show or hide publication dates and buttons to copy
-  information about articles to clipboard.
-* Copy feed address: Opens a dialog to confirm if you want to copy the feed
-  address to clipboard.
-* Novo: abre uma caixa de diálogo com uma caixa de edição para inserir o
-  endereço de um novo feed. Se o endereço for válido e o feed puder ser
-  guardado, o seu nome, com base no título do feed, aparecerá na parte
-  inferior da lista de RSS.
-* Renomear: Abre uma caixa de diálogo com uma caixa de edição para renomear
-  o feed seleccionado.
-* Apagar: abre uma caixa de diálogo para excluir o feed seleccionado, após a
-  confirmação.
-* Definir por defeito: define o feed seleccionado como padrão, para que os
-  seus artigos possam ser acedidos ​​com os comandos do NVDA.
-* Abrir pasta que contenha um backup de feeds: Abre uma pasta que pode
-  conter um backup de feeds. Isto pode ser útil para explorar e excluir
-  feeds que não devam ser importados quando o extra é actualizado.
-* Preferences: Opens the settings dialog for readFeeds, also available in
-  NVDA's menu, Preferences, settings, readFeeds category.
-* Fechar: fecha o diálogo de RSS;
-
-##### Notas: #####
-
-* Se um feed chamado tempFeed for criado, mude-lhe o nome, pois esse
-  ficheiro pode ser substituído quando necessário para criar um feed cujo
-  nome já existe.
-* O feed definido por defeito não pode ser removido. O ficheiro de endereço
-  do feed será usado como padrão quando a configuração for reiniciada,
-  portanto não pode ser excluído.
-* The Filter by edit box can be placed after the Open article button from
-  NVDA's menu, Preferences, Settings, Read feeds category, or pressing the
-  Preferences button of the Feeds dialog.
-
-#### Copy feeds folder ####
-
-Abre uma caixa de diálogo para escolher uma pasta onde pode guardar o seu
-directório pessoal de RSS . Por padrão, a pasta seleccionada é o diretório
-de configuração do NVDA, que criará o diretório de feeds pessoais.
-
-#### Restore feeds ####
-
-Abre uma caixa de diálogo para seleccionar uma pasta que substitui os seus
-feeds na pasta personalFeeds. Certifique-se de carregar uma pasta contendo
-URLs de feeds.
-
-### Keyboard commands ###
-
-* Ctrl+Shift+NVDA+Espaço: anuncia o URL do artigo atual. Ao pressionar duas
-  vezes, a página da Web será aberta.
-* Ctrl+Shift+NVDA+8: Actualiza o feed seleccionado e anuncia o seu título
-  mais recente.
-* Ctrl+Shift+NVDA+I: anuncia o título e o link do feed actual. Pressionando
-  duas vezes, copiará o título e o link relacionado para a área de
+*	Control+nvda+1-0: lê as 10 primeiras colunas.
+*	nvda+shift+1-0: lê as colunas de 11 a 20.
+*	nvda+shift+C: Copia o conteúdo da última coluna lida para a área de
   transferência.
-* Ctrl+Shift+NVDA+U: anuncia o título do feed anterior.
-* Ctrl+Shift+NVDA+O: anuncia o título do próximo feed.
 
-## Notifications ##
+## Changes for 4.0 ##
+*	Requires NVDA 2019.3 or later.
 
-* Quando o título ou o URL foram copiados.
-* Quando não é possível conectar / actualizar um feed, ou o URL não
-  corresponde a um feed válido.
-* NVDA will display an error message if it was not possible to backup or
-  restore the personalFeeds folder, and if a new feed cannot be created.
-* O título da caixa de diálogo da lista de artigos mostra o nome do feed
-  selecionado e o número de itens disponíveis.
+## Alterações para 3.0 ##
+*	 To search text in the readonly edit boxes,  the find dialog  can be used,
+   such as nvda+control+f to activate the find dialog.
 
-## Changes for 10.0 ##
+## Mudanças para 2.0 ##
+*	 A ajuda adicional está disponível no Gestor de extras.
 
-* Added a button to open the selected feed as HTML in the default web
-  browser.
-* If a new feed cannot be created, this will be notified in an error dialog.
-* Improved order and presentation of some articles.
-* More feeds may be supported.
-* When the feeds dialog is opened, the list of feeds will be focused instead
-  of the search edit box.
-* You can choose if the search edit box is placed after the list of feeds,
-  useful to focus the list even when switching from another window without
-  closing the Feeds dialog.
-* Added a button to copy the feed address to clipboard from the feeds
-  dialog.
+## Alterações para 1.2 ##
+*	 Ao mudar para as mensagens do IRC, o texto seleccionado é lido
+   corretamente.
+*	 O comando de tecla usado para mover para a lista de resultados da
+   Pesquisa foi generalizado para poder mover o foco para qualquer lista
+   disponível na janela actual.
+*	 O comando usado para focar as mensagens do IRC foi generalizado para
+   mover para qualquer caixa de edição somente leitura, possibilitando a
+   revisão de informações de conexão na janela de Servidores.
+*	 Ao mover o rato e focar a barra de ferramentas, em alguns casos,  era
+   anunciado duas vezes. esse aspecto foi corrigido.
 
-## Alterações para 9.0: ##
+## Alterações para 1.1 ##
+*	 Foi corrigido um bug no item do eMule no menu de ajuda do NVDA, quando o
+   nome da pasta de configuração do utilizador contém caracteres não
+   latinos.
+*	 Os atalhos agora podem ser reatribuídos usando a caixa de diálogo de
+   entrada de comandos do NVDA.
 
-* Requer NVDA 2019.3 ou posterior.
+## Alterações para 1.0 ##
+*	 Versão inicial.
 
-## Alterações para 8.0: ##
-
-* Quando o extra é actualizado, os feeds guardados na versão anterior do
-  extra serão automaticamente copiados para a nova versão, a menos que
-  prefira que os feeds sejam guardados na pasta de configuração principal do
-  NVDA.
-* Ao usar o diálogo para copiar feeds, se a pasta escolhida não tiver o nome
-  personalFeeds, uma subpasta com este nome será criada para evitar a
-  exclusão de directórios que contenham dados importantes, tais como
-  documentos ou downloads.
-
-## Alterações para 7.0: ##
-
-* A caixa de diálogo Feeds inclui um botão para abrir uma pasta que pode
-  conter um backup de feeds.
-* Ao usar a caixa de edição para filtrar os feeds, se não for encontrado
-  qualquer resultado, a lista de feeds e outros controlos será desactivada,
-  para que o NVDA não diga "desconhecido", na lista vazia.
-* Se o diálogo de lista de artigos não puder ser mostrado, por exemplo,
-  devido a erros no feed, o NVDA irá gerar um erro, para que o diálogo de
-  feeds possa ser usado sem reiniciar o NVDA.
-
-## Alterações para 6.0: ##
-
-* Quando o feed padrão é actualizado e para de funcionar devido a problemas
-  do servidor, os artigos anteriores não são excluídos e podem ser lidos,
-  pelo uso das teclas correspondentes.
-* Corrigida regressão: o feed padrão pode ser atualizado duas vezes,
-  novamente.
-
-## Alterações para 5.0: ##
-
-* A caixa de diálogo da lista de artigos foi melhorada.
-* Compatível com o NVDA 2018.3 ou posterior (requerido).
-* Se necessário, pode fazer o download da [última versão compatível com o
-  NVDA 2017.3] [3].
-
-## Alterações para 4.0: ##
-
-* Adicionado um botão para abrir o feed seleccionado a partir da  caixa de
-  diálogo de feeds.
-
-## Alterações para 3.0: ##
-
-* As caixas de diálogo para gerir ficheiros de feeds foram removidas. Agora,
-  a sua funcionalidade está incluída no diálogo Feeds.
-* A apresentação visual dos diálogos foi aprimorada, assemelhando-se à
-  aparência dos diálogos mostrados no NVDA.
-* O feed definido por defeito é guardado na configuração do NVDA. Portanto,
-  é possível definir diferentes feeds padrão nos diferentes perfis de
-  configuração.
-* Requer NVDA 2016.4.
-
-## Alterações para 2.0: ##
-
-* A ajuda do extra está disponível a partir do gestor de extras.
-
-## Alterações para 1.0: ##
-
-* Versão inicial.
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=rf
+[1]: https://addons.nvda-project.org/files/get.php?file=em
 
-[2]: https://addons.nvda-project.org/files/get.php?file=rf-dev
+[2]: https://www.emule-project.net
 
-[3]: https://addons.nvda-project.org/files/get.php?file=rf-o
+[3]: https://addons.nvda-project.org/files/get.php?file=em-dev

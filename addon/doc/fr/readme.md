@@ -1,200 +1,101 @@
-# Read Feeds #
+# eMule #
 
-* Auteurs : Noelia Ruiz Martínez, Mesar Hameed
-* NVDA compatibility: 2019.3 or later
-* Télécharger [version stable][1]
-* Télécharger [version de développement][2]
+*	Autheurs : Noelia, Chris, Alberto.
+*	NVDA compatibility: 2019.3 or later.
+*	Télécharger [version stable][1]
+*	Télécharger  [version de développement][3]
+*	download [version compatible with NVDA 2017.3][4]
 
+This add-on helps to improve accessibility of eMule with nVDA.  It also
+provides additional keyboard commands for moving in different windows and
+gives Useful information about eMule.
 
-Cette extension fournit un moyen simple de lire les flux aux formats Atom ou
-RSS à l'aide de NVDA. Les flux ne sont pas actualisés automatiquement.
-Ci-dessous lorsque nous mentionnons flux, nous voulons dire que les deux
-signifient flux RSS et ATOM.
+It's based on the eMuleNVDASupport add-on, developed by the same author. You
+should uninstall that old add-on to use this one, since both have common
+keystrokes and features.
 
-## Installation or Update ##
+Testé avec [eMule][2] 0.50a.
 
-Si vous utilisiez une version antérieure de cette extension, il y a un
-dossier RSS ou personalFeeds dans votre dossier de configuration personnel
-de NVDA, lorsque vous installez la version actuelle, une boîte de dialogue
-vous demandera si vous souhaitez mettre à jour ou installer.  Choisissez
-mise à jour pour préserver vos flux enregistrés et pour continuer à les
-utiliser dans la nouvelle version installée de readFeeds.
+## Touches de raccourcis : ##
 
-## Commands ##
+*	control+maj+h : amène la souris et le focus sur la barre d'outils
+  principale.
+*	control+maj+t : Lit la fenêtre en cours.
+*	control+maj+n : Déplace le focus sur le champ Nom de la fenêtre
+  Rechercher.
+*	control+maj+p : Dans la fenêtre de recherche, déplace le focus et la
+  souris à la liste des paramètres de recherche, ou modifie les options des
+  champs.
+*	control+maj+b : Déplace le focus à la liste des résultats dans la fenêtre
+  de recherche. Utilisable par exemple dans la fenêtre de recherche, les
+  Transferts de téléchargements, etc.
+*	Ctrl + Maj + o : Déplace le focus aux zones d'édition en lecture seule
+  dans la fenêtre courante. Par exemple, les messages IRC reçus, Serveurs
+  disponibles, etc.
+*	contrôle + NVDA + f : Si le curseur est situé dans une zone d'édition en
+  lecture seule, ouvre un dialogue de Recherche afin d'utiliser les
+  commandes pour la recherche de texte disponible dans NVDA.
+*	Ctrl + Maj + L : Déplace l'objet de navigation et la souris aux en-têtes
+  de la liste actuelle.
+*	Ctrl + Maj + Q : Lit le premier objet dans la barre d'état, fournit des
+  informations sur l'activité récente.
+*	Ctrl + Maj + W : Lit le second objet de la barre d'état, contient des
+  informations sur les fichiers et les utilisateurs sur le serveur actuel.
+*	Ctrl + Maj + E: Lit le troisième objet de la barre d'état; utile pour
+  connaître la vitesse d'Envoi / Téléchargement.
+*	Ctrl + Maj + r: Affiche Le quatrième objet de la barre d'état, les
+  rapports sur la connexion de réseau eD2K et Kad.
 
-### Menu Read Feeds ###
+## Gestion des colonnes. ##
 
-Vous pouvez accéder au sous-menu Read Feeds depuis le menu NVDA, sous-menu
-Outils, où les suivantes  options du menu sont disponibles :
+Lorsque vous êtes dans une liste, vous pouvez déplacer le curseur entre les
+lignes et les colonnes en utilisant Alt + Ctrl + Flèches. Dans ce module les
+touches de raccourci suivantes sont également disponibles :
 
-#### Feeds ####
+*	NVDA + control +1-0 : Lit les 10 premières colonnes.
+*	NVDA + maj +1-0 : Lit colonnes 11 à 20.
+*	NVDA + Maj + C : Copie le contenu de la dernière colonne lue dans le
+  presse-papiers.
 
-Ouvre une boîte de dialogue avec les contrôles suivants :
-
-* Filtrer par : Une zone d'édition pour rechercher des flux précédemment
-  enregistrés.
-* A list of the saved feeds, focused when the dialog is opened.
-* Liste des articles : Ouvre une boîte de dialogue qui présente la liste des
-  articles de vvos flux actuel. Sélectionnez l'article que vous souhaitez
-  lire et appuyer sur Entrée ou Ouvrir la page Web du bouton de l'article
-  sélectionné pour ouvrir la page correspondante dans votre
-  navigateur. Appuyez sur le bouton À propos de l'article pour ouvrir une
-  boîte de dialogue affichant le titre et le lien de l’article sélectionné ;
-  dans cette boîte de dialogue, vous serez en mesure de copier ces
-  informations dans le presse-papiers.
-* Ouvrir le flux : Ouvre le flux sélectionné dans l'application par défaut.
-* Open feed as HTML: Opens the selected feed in the default web browser. You
-  will be able to show or hide publication dates and buttons to copy
-  information about articles to clipboard.
-* Copy feed address: Opens a dialog to confirm if you want to copy the feed
-  address to clipboard.
-* Nouveau : Ouvre une boîte de dialogue avec une zone d'édition pour entrer
-  l'adresse d'un nouveau flux. Si l'adresse est valide et que le flux peut
-  être enregistré, son nom, basé sur le titre du flux, apparaît au bas de la
-  liste des flux.
-* Renommer : Ouvre une boîte de dialogue avec une zone d'édition pour
-  renommer le flux sélectionné.
-* Supprimer : Ouvre une boîte de dialogue pour supprimer le flux sélectionné
-  après confirmation.
-* Définir par défaut : Définit le flux sélectionné comme valeur par défaut,
-  afin que ses articles soient accessibles avec les gestes de NVDA.
-* Open folder containing a backup of feeds: Opens a folder which may contain
-  a backup of feeds. This can be useful to explore and delete feeds which
-  shouldn't be imported when the add-on is updated.
-* Preferences: Opens the settings dialog for readFeeds, also available in
-  NVDA's menu, Preferences, settings, readFeeds category.
-* Fermer : Ferme la boîte de dialogue Flux.
-
-##### Notes #####
-
-* Si un flux nommé tempFeed est créé, renommez-le, car ce fichier pourrait
-  être remplacé si nécessaire pour créer un flux dont le nom existe déjà.
-* Le flux défini par défaut ne peut pas être supprimé. Le flux addressFile
-  sera utilisé comme valeur par défaut lors de la réinitialisation de la
-  configuration, donc il ne peut pas être supprimé.
-* The Filter by edit box can be placed after the Open article button from
-  NVDA's menu, Preferences, Settings, Read feeds category, or pressing the
-  Preferences button of the Feeds dialog.
-
-#### Copy feeds folder ####
-
-Ouvre une boîte de dialogue pour choisir un dossier dans lequel vous pouvez
-enregistrer le dossier personalFeeds de vos flux. Par défaut, le dossier
-sélectionné est dans la configuration de NVDA, qui créera le répertoire
-personalFeeds.
-
-#### Restore feeds ####
-
-Ouvre une boîte de dialogue pour sélectionner un dossier qui remplace vos
-flux dans le dossier personalFeeds. Assurez-vous de charger un dossier
-contenant des URL de flux.
-
-### Keyboard commands ###
-
-* Ctrl+Maj+NVDA+Espace : Annonce l'URL de l'article actuel. En appuyant deux
-  fois ouvrira la page web.
-* Ctrl+Maj+NVDA+8 : Actualise le flux sélectionné et annonce son plus récent
-  titre.
-* Ctrl+Maj+NVDA+I : Annonce le titre et le lien du flux actuel. En appuyant
-  deux fois copie le titre et le lien associée dans le presse-papiers.
-* Ctrl+Maj+NVDA+U : Annonce le titre du flux précédent.
-* Ctrl+Maj+NVDA+O : Annonce le titre du flux suivant.
-
-## Notifications ##
-
-* Lorsque le titre ou l'URL ont été copiés.
-* Lorsqu'il est Impossible de se connecter/actualiser un flux, ou l'URL ne
-  correspond pas à un flux valide.
-* NVDA will display an error message if it was not possible to backup or
-  restore the personalFeeds folder, and if a new feed cannot be created.
-* La boîte de dialogue affiche Le titre de la Liste de l'article le nom de
-  flux sélectionné et le nombre d'éléments disponibles.
-
-## Changes for 10.0 ##
-
-* Added a button to open the selected feed as HTML in the default web
-  browser.
-* If a new feed cannot be created, this will be notified in an error dialog.
-* Improved order and presentation of some articles.
-* More feeds may be supported.
-* When the feeds dialog is opened, the list of feeds will be focused instead
-  of the search edit box.
-* You can choose if the search edit box is placed after the list of feeds,
-  useful to focus the list even when switching from another window without
-  closing the Feeds dialog.
-* Added a button to copy the feed address to clipboard from the feeds
-  dialog.
-
-## Changes for 9.0 ##
-
-* Requires NVDA 2019.3 or later.
-
-## Changes for 8.0 ##
-
-* When the add-on is updated, feeds saved in the previous version of the
-  add-on will be automatically copied to the new version, unless you prefer
-  to import feeds saved in the main configuration folder of NVDA.
-* When using the dialog to copy feeds, if the chosen folder is not named
-  personalFeeds, a subfolder with this name will be created to prevent the
-  deletion of directories containing important data, such as Documents or
-  Downloads.
-
-## Changes for 7.0 ##
-
-* The Feeds dialog includes a button to open a folder which may contain a
-  backup of feeds.
-* When using the edit box to filter feeds, if no results are found, the list
-  of feeds and other controls are disabled, so that NVDA doesn't report
-  "unknown" in the empty list.
-* If the list of articles dialog can't be shown, for example due to errors
-  in the feed, NVDA will raise an error, so that the feeds dialog can be
-  used without restarting NVDA.
-
-## Changements pour la version 6.0 ##
-
-* Lorsque le flux par défaut a été mis à jour et qu'il cesse de fonctionner
-  en raison de problèmes de serveur, les articles précédents ne sont pas
-  supprimés et peuvent être lus à l'aide des frappes correspondantes.
-* Correction de la régression : Le flux par défaut peut être mis à jour deux
-  fois.
-
-## Changements pour la version 5.0 ##
-
-* La boîte de dialogue Liste des articles a été améliorée.
-* Compatible avec NVDA 2018.3 ou version ultérieure (requis).
-* Si nécessaire, vous pouvez télécharger la [dernière version compatible
-  avec NVDA 2017.3][3].
-
-## Changements pour la version 4.0 ##
-
-* Ajout d'un bouton pour ouvrir le flux sélectionné dans la boîte de
-  dialogue Flux.
+## Changes for 4.0 ##
+*	Requires NVDA 2019.3 or later.
 
 ## Changements pour la version 3.0 ##
-
-* Les boîtes de dialogue pour gérer les fichiers de flux ont été
-  supprimées. Maintenant, leur fonctionnalité est incluse dans la boîte de
-  dialogue Flux.
-* La présentation visuelle des dialogues a été améliorée, en respectant
-  l'apparence des dialogues présentés dans NVDA.
-* Le flux par défaut est sauvegardé dans la configuration NVDA. Par
-  conséquent, il est possible de définir des flux différents par défaut dans
-  les profils de configuration.
-* Nécessite NVDA 2016.4.
+*	 To search text in the readonly edit boxes,  the find dialog  can be used,
+   such as nvda+control+f to activate the find dialog.
 
 ## Changements pour la version 2.0 ##
+*	 L'aide de l'extension est disponible à partir du Gestionnaire
+   d'Extensions.
 
-* L'aide de l'extension est disponible à partir du Gestionnaire
-  d'extensions.
+## Changements pour la version 1.2 ##
+*	 Lors du déplacement aux messages IRC, le texte sélectionné est indiqué
+   correctement.
+*	 La combinaison de touches utilisée pour le déplacement à la liste de
+   résultats de recherche a été généralisée pour pouvoir déplacer le focus à
+   toutes les listes disponibles dans la fenêtre courante.
+*	 La commande utilisée pour mettre en focus les messages IRC a été
+   généralisée pour se déplacer sur toutes les zones d'édition en lecture
+   seule, ce qui permet de consulter les informations de connexion dans la
+   fenêtre des serveurs.
+*	 lors du déplacement de la souris et le focus à la barre d'outils, dans
+   certains cas, il a été annoncé deux fois. Ce problème a été corrigé.
+
+## Changements pour la version 1.1 ##
+*	 Correction d'un bug dans l'élément eMule sous le menu d'aide de NVDA,
+   lorsque le nom du dossier configuration utilisateur contient des
+   caractères non latins.
+*	 Les raccourcis peuvent maintenant être réaffectés à l'aide du dialogue
+   gestes de commande NVDA.
 
 ## Changements pour la version 1.0 ##
+*	 Première version.
 
-* Première version.
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=rf
+[1]: https://addons.nvda-project.org/files/get.php?file=em
 
-[2]: https://addons.nvda-project.org/files/get.php?file=rf-dev
+[2]: https://www.emule-project.net
 
-[3]: https://addons.nvda-project.org/files/get.php?file=rf-o
+[3]: https://addons.nvda-project.org/files/get.php?file=em-dev

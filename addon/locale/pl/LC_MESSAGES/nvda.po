@@ -5,11 +5,11 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: readFeeds 1.0-dev\n"
+"Project-Id-Version: eMule 1.2-dev\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
-"POT-Creation-Date: 2013-11-16 13:26+0100\n"
-"PO-Revision-Date: 2019-07-06 22:16+0100\n"
-"Last-Translator: Zvonimir Stanečić <zvonimirek222@webczatnet.pl>\n"
+"POT-Creation-Date: 2014-02-01 17:16+0100\n"
+"PO-Revision-Date: 2018-11-15 22:32+0100\n"
+"Last-Translator: Grzegorz Zlotowicz <grzezlo@wp.pl>\n"
 "Language-Team: Polish <killer@tyflonet.com>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
@@ -17,326 +17,113 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.6.10\n"
 
-#. Translators: the label of a message box dialog.
-#, fuzzy
-msgid ""
-"Your configuration folder for NVDA contains files that seem to be derived "
-"from a previous version of this add-on.\n"
-"\t\t\tDo you want to update it?"
-msgstr ""
-"Twój folder konfiguracyjny NVDA zawiera pliki, które wydają się pochodzić z "
-"poprzedniej wersji tego dodatku. Czy chcesz je zaktualizować?"
+#. Translators: Message presented in input help mode.
+msgid "Reads the specified column for the current list item."
+msgstr "Odczytuje określoną kolumnę dla aktualnego elementu listy."
 
-#. Translators: the title of a message box dialog.
-msgid "Install or update add-on"
-msgstr "Zainstaluj lub aktualizuj dodatek"
-
-#. Translators: message presented when feeds cannot be reported.
-msgid ""
-"Unable to refresh feed. Check your Internet conectivity or that the "
-"specified feed address is correct."
-msgstr ""
-"Nie można odświeżyć kanału. Sprawdź połączenie internetowe i poprawność "
-"podanego adresu kanału."
-
-#. Translators: Message presented when feeds have been copied.
-msgid "Feeds copied"
-msgstr "Osobiste kanały skopiowany pomyślnie"
-
-#. Translators: label of error dialog shown when cannot copy feeds folder.
-msgid "Folder not copied"
-msgstr "Katalog nie został skopiowany"
-
-#. Translators: title of error dialog shown when cannot copy feeds folder.
-msgid "Copy Error"
-msgstr "Błąd Kopii"
-
-#. Translators: Message presented when feeds have been restored.
-msgid "Feeds restored"
-msgstr "Kanały osobiste zostały przywrócone pomyślnie"
-
-#. Translators: Title of a dialog.
-#, python-brace-format
-msgid "Feeds: {defaultFeed} ({configProfile})"
-msgstr "Kanały osobiste: {defaultFeed} ({configProfile})"
-
-#. Translators: Label of a dialog (message translated in NVDA's core in different contexts).
-msgid "&Filter by:"
-msgstr "&filtruj według"
-
-#. Translators: The label of a button to open the list of articles of a feed.
-msgid "List of &articles..."
-msgstr "Lista &Artykułów..."
-
-#. Translators: The label of a button to open a feed.
-msgid "&Open feed"
-msgstr "&otwórz kanal"
-
-#. Translators: The label of a button to open a feed as HTML.
-#, fuzzy
-msgid "Open feed as &HTML"
-msgstr "&otwórz kanal"
-
-#. Translators: The label of a button to copy the feed URL.
-#, fuzzy
-msgid "Cop&y feed address"
-msgstr "Kopiuj kanały osobiste"
-
-#. Translators: The label of a button to add a new feed.
-msgid "&New..."
-msgstr "&Nowy..."
-
-#. Translators: The label of a button to rename a feed.
-msgid "&Rename..."
-msgstr "&Zmień nazwę..."
-
-#. Translators: The label of a button to delete a feed.
-msgid "&Delete..."
-msgstr "&Usuń..."
-
-#. Translators: The label of a button to set a feed as default.
-msgid "S&et default"
-msgstr "U&staw domyślnie"
-
-#. Translators: The label of a button to open a folder containing a backup of feeds.
-msgid "Open &folder containing a backup of feeds"
-msgstr "otwórz &folder zawierający kopię twoich osobistych kanałów"
-
-#. Translators: The label of a button to open the settings dialog for readFeeds.
-#, fuzzy
-msgid "&Preferences..."
-msgstr "P&rzywróć folder osobistych kanałów..."
-
-#. Translators: Message presented when a feed cannot be added.
+#. Translators: Message presented when the current column of the list item is copied to clipboard.
 #, python-format
-msgid "Cannot add feed: %s"
+msgid "%s copied to clipboard"
+msgstr "%s skopiowane do schowka"
+
+#. Translators: Message presented in input help mode.
+msgid "Copies the last read column of the selected list item to clipboard."
 msgstr ""
+"Kopiuje do schowka ostatnio odczytaną kolumnę zaznaczonego elementu listy."
 
-#. Translators: error message.
-#, fuzzy
-msgid "Error"
-msgstr "Błąd Kopii"
+#. Translators: Message presented in input help mode
+msgid "Moves the system focus and mouse to the main Tool Bar."
+msgstr "Przenosi punkt uwagi i kursor myszy do głównego paska narzędzi."
 
-#. Translators: the label of a message box dialog.
-#, fuzzy, python-brace-format
+#. Translators: Message presented in input help mode.
+#. For instance: reads the search window, Statistics, IRC, etc.
+msgid "Reports the current window."
+msgstr "Odczytuje aktualne okno."
+
+#. Translators: Message presented in input help mode.
+msgid "Moves the system focus to the Name field of the Search window."
+msgstr "Przenosi punkt uwagi do pola nazwy w oknie wyszukiwania."
+
+#. Translators: Message presented in input help mode.
 msgid ""
-"Do you want to copy feed address to the clipboard\r\n"
-"\r\n"
-"{feedAddress}?"
+"Moves the system focus and mouse to the search parameters list or Edit field "
+"for each option, in the Search window."
 msgstr ""
-"%s\r\n"
-"\r\n"
-"Czy chcesz skopiować tytuł i link artykułu do schowka?"
+"Przenosi punkt uwagi i kursor myszy do listy parametrów wyszukiwania lub "
+"pola edycji dla każdej opcji w oknie wyszukiwania."
 
-#. Translators: the title of a message box dialog.
-#, fuzzy
-msgid "Copy feed address"
-msgstr "Kopiuj kanały osobiste"
-
-#. Translators: Label of a dialog.
-msgid "Address of a new feed:"
-msgstr "Adres nowego kanału osobistego:"
-
-#. Translators: The title of a dialog to create a new feed.
-msgid "New feed"
-msgstr "Nowy kanał osobisty"
-
-#. Translators: The confirmation prompt displayed when the user requests to delete a feed.
-msgid "Are you sure you want to delete this feed? This cannot be undone."
-msgstr ""
-"Czy jesteś pewien, że chcesz usunąć ten kanał osobisty? Ta akcja jest "
-"nieodwracalna."
-
-#. Translators: The label of a field to enter a new name for a feed.
-msgid "New name:"
-msgstr "Nowa nazwa:"
-
-#. Translators: The title of a dialog to rename a feed.
-msgid "Rename feed"
-msgstr "Zmień nazwę kanału osobistego"
-
-#. Translators: The label of the articles list in the articles dialog.
-msgid "List of articles"
-msgstr "Lista artykułów"
-
-#. Translators: The label of a button to open the selected article of a feed.
-msgid "Open &web page of selected article."
-msgstr "Otwórz stronę internetową &wybranego artykułu."
-
-#. Translators: The label of a button to show information of a feed article.
-msgid "&About article..."
-msgstr "&O artykule..."
-
-#. Translators: the label of a message box dialog.
-#, fuzzy, python-format
-msgid "%sDo you want to copy article title and link to the clipboard?"
-msgstr ""
-"%s\r\n"
-"\r\n"
-"Czy chcesz skopiować tytuł i link artykułu do schowka?"
-
-#. Translators: the title of a message box dialog.
-msgid "Article information"
-msgstr "Informacje o artykulę"
-
-#. Translators: The title of the Copy dialog.
-msgid "Copy feeds"
-msgstr "Kopiuj kanały osobiste"
-
-#. Translators: An informational message displayed in the Copy dialog.
-msgid "Select a folder to save a backup of your current feeds"
-msgstr "Wybierz katalog do zapisywania kopii swoich kanałów osobistych"
-
-#. Translators: The label of a grouping containing controls to select the destination directory in the Copy dialog.
-msgid "directory for backup:"
-msgstr "Katalog dla kopii zapasowej:"
-
-#. Translators: The title of the dialog presented when browsing for the destination directory when copying feeds.
-msgid "Select directory to copy"
-msgstr "Wybierz katalog do skopiowania"
-
-#. Translators: The title of the Restore dialog.
-msgid "Restore feeds"
-msgstr "P&rzywróć kanały osobiste..."
-
-#. Translators: An informational message displayed in the Restore dialog.
-msgid "Select a folder to restore a backup of your previous copied feeds"
-msgstr ""
-"Wybierz folder w którym ma być przywrócona twoja kopia kanałów osobistych"
-
-#. Translators: The label of a grouping containing controls to select the destination directory in the Restore dialog.
-msgid "directory containing backup:"
-msgstr "Katalog zawierający kopie zapasową:"
-
-#. Translators: The title of the dialog presented when browsing for the destination directory when restoring feeds.
-msgid "Select directory to restore"
-msgstr "Wybierz katalog, do którego chcesz przywrócić swoje kanały osobiste"
-
-#. Translators: label of a dialog.
-msgid "&Search edit box after feeds list"
-msgstr ""
-
-#. Translators: Presented when the current article does not have an associated title.
-msgid "Unable to locate article title."
-msgstr "Nie można znaleźć tytułu artykułu."
-
-#. Translators: Presented when the current article does not have an associated link.
-msgid "Unable to locate article link."
-msgstr "Nie można znaleźć linku do artykułu."
-
-#. Translators: Label of a checkbox to choose if date should be presented for each feed.
-msgid "Show date"
-msgstr ""
-
-#. Translators: Label for a checkbox to show buttons for copying to clipboard.
-msgid "Show buttons to copy"
-msgstr ""
-
-#. Translators: Label for a button to copy to clipboard.
-msgid "Copy"
-msgstr ""
-
-#. Translators: the name of a submenu.
-msgid "&Read Feeds"
-msgstr "&Czytaj kanały"
-
-#. Translators: the name of a menu item.
-msgid "&Feeds..."
-msgstr "&Kanały osobiste..."
-
-#. Translators: the name of a menu item.
-msgid "&Copy feeds folder..."
-msgstr "&Kopiuj folder osobistych kanałów..."
-
-#. Translators: the name of a menu item.
-msgid "R&estore feeds..."
-msgstr "P&rzywróć folder osobistych kanałów..."
-
-#. Translators: message presented in input mode.
-#, fuzzy
-msgid "Activates the Feeds dialog of Read Feeds."
-msgstr "Aktywuje dialog kanałów osobistych %s."
-
-#. Translators: message presented in input mode.
-#, fuzzy
-msgid "Activates the Copy dialog of Read Feeds."
-msgstr "Aktywuje dialog kopiowania %s."
-
-#. Translators: message presented in input mode.
-#, fuzzy
-msgid "Activates the Restore dialog of Read Feeds."
-msgstr "Aktywuje dialog przywracania %s."
-
-#. Translators: message presented in input mode.
-#, python-format
-msgid "Shows the %s settings."
-msgstr ""
-
-#. Translators: message presented in input mode.
-msgid "Refreshes the current feed and announces the most recent article title."
-msgstr "Odświeża aktualny kanał i oznajmia tytuł najnowszego artykułu."
-
-#. Translators: message presented in input mode.
+#. Translators: Message presented in input help mode.
 msgid ""
-"Announces the title of the current article. Pressed two times, copies title "
-"and related link to the clipboard."
+"Moves the system focus to the first list in the current window. For example "
+"the results list in the Search window, downloads in Transfer, etc."
 msgstr ""
-"Oznajmia tytuł aktualnego artykułu. Dwukrotne naciśnięcie kopiuje tytuł i "
-"link do schowka."
+"Przenosi punkt uwagi do pierwszej listy w aktualnym oknie, np. do listy "
+"wyników w oknie wyszukiwania, pobierania w oknie transfer itd."
 
-#. Translators: message presented when the information about an article of a feed is copied to the clipboard.
-#, python-format
-msgid "Copied to clipboard %s"
-msgstr "Skopiowano do schowka %s"
-
-#. Translators: message presented in input mode.
-msgid "Announces the title of the next article."
-msgstr "Oznajmia tytuł następnego artykułu."
-
-#. Translators: message presented in input mode.
-msgid "Announces the title of the previous article."
-msgstr "Oznajmia tytuł poprzedniego artykułu."
-
-#. Translators: message presented in input mode.
-msgid "Announces article link, when pressed two times, opens related web page."
+#. Translators: Message presented in input help mode.
+msgid ""
+"Moves the system focus to read-only edit boxes in the current window. For "
+"example the IRC received messages."
 msgstr ""
-"Oznajmia link do artykułu, dwukrotne naciśnięcie otwiera stronę internetową."
+"Przenosi punkt uwagi do  pól edycji tylko do odczytu w aktualnym oknie, np. "
+"otrzymane wiadomości IRC."
 
-#. Translators: message presented in input mode.
-msgid "Copies title and related link of the current article to the clipboard."
-msgstr "Kopiuje nagłówek i odnoszący się link danego artykułu do schowka."
+#. Translators: Message presented in input help mode.
+msgid "Moves the navigator object and mouse to the current list headers."
+msgstr ""
+"Przenosi obiekt nawigatora i kursor myszy do nagłówków aktualnej listy."
+
+#. Translators: Message presented in input help mode.
+msgid "Reports first object of the Status Bar."
+msgstr "Odczytuje pierwszy obiekt paska statusu."
+
+#. Translators: Message presented in input help mode.
+msgid "Reports second object of the Status Bar."
+msgstr "Odczytuje drugi obiekt paska statusu."
+
+#. Translators: Message presented in input help mode.
+msgid "Reports third object of the Status Bar."
+msgstr "Odczytuje trzeci obiekt paska statusu."
+
+#. Translators: Message presented in input help mode.
+msgid "Reports fourth object of the Status Bar."
+msgstr "Odczytuje czwarty obiekt paska statusu."
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
-msgid "Read Feeds"
-msgstr "Czytaj wiadomości / Read Feeds"
+msgid "eMule"
+msgstr "eMule"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
-msgid "Add-on for using NVDA as a feed reader."
-msgstr "Dodatek pozwalający używać NVDA jako czytnika kanałów z wiadomościami."
+msgid ""
+"Improves eMule's accessibility with NVDA.\n"
+"eMule is a P2P program to search and share files.\n"
+"You can get more information about eMule at\n"
+"http://www.emule-project.net"
+msgstr ""
+"Poprawia dostępność eMule dla NVDA.\n"
+"eMule to program P2P umożliwiający wyszukiwanie i dzielenie się plikami.\n"
+"Więcej informacji o eMule można znaleźć na\n"
+"https://www.emule-project.net"
 
-#~ msgid ""
-#~ "You have installed the ReadFeeds add-on, probably an old and incompatible "
-#~ "version with this one. Do you want to uninstall the old version?"
-#~ msgstr ""
-#~ "Zainstalowałeś dodatek ReadFeeds prawdopodobnie w starej wersji, "
-#~ "niekompatybilnej z obecną. Czy chcesz odinstalować starą wersję?"
+#~ msgid "text \"%s\" not found"
+#~ msgstr "Nie znaleziono tekstu \"%s\""
 
-#~ msgid "Uninstall incompatible add-on"
-#~ msgstr "Odinstaluj niekompatybilny dodatek"
+#~ msgid "Find Error"
+#~ msgstr "Błąd wyszukiwania"
 
-#~ msgid "Feeds"
-#~ msgstr "Kanały osobiste"
+#~ msgid "Search for:"
+#~ msgstr "Szukaj:"
 
-#~ msgid "Manage feeds."
-#~ msgstr "Zarządzaj kanałami."
+#~ msgid "eMule search"
+#~ msgstr "Wyszukiwarka eMule "
 
-#~ msgid "View and manage feeds"
-#~ msgstr "Przegląd i zarządzanie kanałami"
+#~ msgid "Opens the find dialog when in read only edit boxes."
+#~ msgstr "Otwiera okno wyszukiwania w polach edycji tylko do odczytu."
 
-#~ msgid "Backup of feeds"
-#~ msgstr "Kopia zapasowa kanałów osobistych"
+#~ msgid "Find next occurence."
+#~ msgstr "Znajdź następne."
 
-#~ msgid "Restore previously saved feeds"
-#~ msgstr "Przywraca poprzednio zapisane kanały"
+#~ msgid "Find previous occurrence."
+#~ msgstr "Znajdź poprzednie."

@@ -1,197 +1,94 @@
-# Read Feeds #
+# eMule #
 
-* Autori: Noelia Ruiz Martínez, Mesar Hameed
-* NVDA compatibility: 2019.3 or later
-* Descărcați [versiunea stabilă][1]
-* Descărcați [versiunea în dezvoltare][2]
+*	Autori: Noelia, Chris, Alberto.
+*	NVDA compatibility: 2019.3 or later.
+*	Descărcați [versiunea stabilă][1]
+*	Descărcați [versiunea în dezvoltare][3]
+*	download [version compatible with NVDA 2017.3][4]
 
+This add-on helps to improve accessibility of eMule with nVDA.  It also
+provides additional keyboard commands for moving in different windows and
+gives Useful information about eMule.
 
-Acest supliment oferă o modalitate simplă de a citi feed-uri în format Atom
-sau RSS folosind NVDA. Feed-urile nu vor fi actualizate în mod
-automat. Atunci când menționăm feed-uri, ne referim atât la fluxuri RSS cât
-și la cele Atom.
+It's based on the eMuleNVDASupport add-on, developed by the same author. You
+should uninstall that old add-on to use this one, since both have common
+keystrokes and features.
 
-## Installation or Update ##
+Testat pe [eMule][2] 0.50a.
 
-Dacă ați utilizat o versiune anterioară a acestui add-on și există un dosar
-RSS sau un dosar de feed-uri personale în dosarul dumneavoastră de
-configurare al NVDA, când se instalează versiunea 6.0 sau mai nou, un dialog
-vă va întreba dacă vreți să upgradați sau instalați. Alegeți actualizare
-pentru a păstra feed-urile salvate și pentru a continua să le folosiți în
-noua versiune instalată a cititorului de feed-uri.
+## Comenzi de taste: ##
 
-## Commands ##
+*	control+shift+h: Mută focalizarea și mausul la bara principală de unelte.
+*	control+shift+t: Citește fereastra curentă.
+*	control+shift+n: Mută focalizarea la câmpul Nume în fereastra de căutare.
+*	control+shift+p: În fereastra de căutare, mută focalizarea și mausul la
+  lista parametrilor de căutare sau la opțiunile câmpului de editare.
+*	control+shift+b: Mutați focalizarea la lista din fereastra curentă. De
+  exemplu, este utilizabil în fereastra de căutare, fereastra descărcărilor
+  în transfer, etc.
+*	control+shift+o: Mutați focalizarea pentru a citi doar casete de editare
+  în fereastra curentă. De exemplu, Mesaje IRC primite, servere disponibile
+  etc.
+*	control+NVDA+f: Dacă caret-ul este localizat într-o casetă de editare doar
+  citire, deschide un dialog găsit pentru a utiliza comenzile pentru
+  căutarea de text disponibilă în NVDA.
+*	control+shift+l: Mută obiectul navigator și mausul la antetele din lista
+  curentă.
+*	control+shift+q: Citește primul obiect în bara de stare; furnizează
+  informații despre activitatea recentă.
+*	control+shift+w: Citește al doilea obiect al barei de stare; conține
+  informații despre fișiere și utilizatori pe serverul curent.
+*	control+shift+e: Citește al treilea obiect al barei de stare; util pentru
+  a ști viteza de încărcare/descărcare.
+*	Control + Shift + R: Citește Al patrulea obiect al barei de stare;
+  rapoarte privind conectarea rețelei ed2k și Kad.
 
-### Meniul Read Feeds  ###
+## Gestionare coloane ##
 
-Puteți accesa submeniul Read Feeds din meniul NVDA, NVDA+N, unde sunt
-disponibile următoarele opțiuni:
+Când vă aflați într-o listă, puteți muta caret-ul între rânduri și coloane
+folosind alt+control+ săgeți.  În acest add-on, următoarele comenzi de taste
+sunt de asemenea disponibile:
 
-#### Feeds ####
+*	nvda+control+1-0: Citește primele 10 coloane.
+*	nvda+shift+1-0: Citește coloanele de la 11 până la 20.
+*	nvda+shift+C: Copiază conținutul ultimei coloane citite pe planșetă.
 
-Deschide un dialog cu următoarele controale:
+## Changes for 4.0 ##
+*	Requires NVDA 2019.3 or later.
 
-* Filtrează după: O casetă de editare pentru căutarea fluxurilor salvate
-  anterior.
-* A list of the saved feeds, focused when the dialog is opened.
-* Lista articolelor: Deschide un dialog care  prezintă lista articolelor de
-  la fluxul curent. Selectați articolul pe care vreți să îl citiți și
-  apăsați Enter sau butonul „Deschide pagina web a articolului selectat”
-  pentru a deschide pagina corespunzătoare în navigatorul web. Apăsați
-  butonul „Despre articol” pentru a deschide un dialog care arată titlul și
-  link-ul articolului selectat; din acest dialog, veți putea să copiați
-  aceste informații pe planșetă.
-* Deschide flux: Deschide fluxul selectat in aplicația standard
-  corespunzătoare.
-* Open feed as HTML: Opens the selected feed in the default web browser. You
-  will be able to show or hide publication dates and buttons to copy
-  information about articles to clipboard.
-* Copy feed address: Opens a dialog to confirm if you want to copy the feed
-  address to clipboard.
-* Nou: Deschide un dialog cu o casetă de editare pentru introducerea adresei
-  unui nou flux. Dacă adresa este validă și fluxul poate fi salvat, numele
-  său bazat pe titlul acestuia va apărea la sfârșitul listei de fluxuri.
-* Redenumire: Deschide un dialog cu o casetă de editare pentru redenumirea
-  fluxului selectat.
-* Ștergere: Deschide un dialog pentru ștergerea fluxului selectat după
-  confirmare.
-* Setare ca implicit: Setează fluxul selectat ca implicit, așa că articolele
-  sale pot fi accesate cu gesturile NVDA-ului.
-* Open folder containing a backup of feeds: Opens a folder which may contain
-  a backup of feeds. This can be useful to explore and delete feeds which
-  shouldn't be imported when the add-on is updated.
-* Preferences: Opens the settings dialog for readFeeds, also available in
-  NVDA's menu, Preferences, settings, readFeeds category.
-* Închidere: Închide dialogul fluxurilor.
+## Modificări aduse în versiunea 3.0 ##
+*	 To search text in the readonly edit boxes,  the find dialog  can be used,
+   such as nvda+control+f to activate the find dialog.
 
-##### Note #####
+## Modificări aduse în versiunea 2.0 ##
+*	 Ghidul add-on-ului este disponibil în managerul de add-on-uri.
 
-* Dacă se creează un flux numit tempFeed, vă rugăm să-l redenumiți, deoarece
-  acest fișier ar putea fi înlocuit atunci când este necesar pentru a crea
-  un flux al cărui nume deja există.
-* Fluxul setat ca implicit nu poate fi șters. Fluxul addressFile va fi
-  utilizat ca implicit atunci când configurația este resetată, deci nu poate
-  fi șters.
-* The Filter by edit box can be placed after the Open article button from
-  NVDA's menu, Preferences, Settings, Read feeds category, or pressing the
-  Preferences button of the Feeds dialog.
+## Modificări aduse în versiunea 1.2 ##
+*	 Atunci când se deplasează la mesajele IRC, textul selectat este raportat
+   în mod corespunzător.
+*	 Combinațiile de taste utilizate pentru deplasarea la lista rezultatelor
+   de căutare a fost generalizată să fie capabilă pentru deplasarea
+   focalizării la orice listă disponibilă în fereastra curentă.
+*	 Comanda folosită la focalizarea mesajelor IRC a fost generalizată pentru
+   deplasarea la orice casetă de editare doar citire, ceea ce face posibilă
+   revizuirea informațiilor de conectare în fereastra serverelor.
+*	 Când deplasați mausul și focalizarea la bara principală de unelte, în
+   unele cazuri era anunțat de două ori. Această eroare a fost reparată.
 
-#### Copy feeds folder ####
+## Modificări aduse în versiunea 1.1 ##
+*	 A fost reparată o eroare în elementul eMule din NVDA, meniul ajutor, când
+   numele folderului user config conține caractere nelatine.
+*	 Comenzile rapide pot fi reatribuite folosind dialogul gesturilor de
+   intrare NVDA.
 
-Deschide un dialog pentru a alege un dosar unde să puteți salva dosarul
-personalFeeds al fluxurilor dumneavoastră. În mod implicit, folderul
-selectat este cel al configurației NVDA, care va crea dosarul personalFeeds.
+## Modificări aduse în versiunea 1.0 ##
+*	 Versiunea inițială.
 
-#### Restore feeds ####
-
-Deschide un dialog pentru selectarea unui dosar care înlocuiește fluxurile
-dumneavoastră în dosarul personalFeeds. Asigurați-vă că încărcați un dosar
-ce conține URL-urile fluxurilor.
-
-### Keyboard commands ###
-
-* Ctrl+Shift+NVDA+Spațiu: Anunță URL-ul articolului curent. Apăsarea de două
-  ori va deschide pagina web.
-* Ctrl+Shift+NVDA+8: Reîmprospătează fluxul selectat și anunță cel mai
-  recent titlu al său.
-* Ctrl+Shift+NVDA+I: Anunță titlul fluxului curent și link-ul
-  acestuia. Apăsarea de două ori va copia titlul și link-ul relatat pe
-  planșetă.
-* Ctrl+Shift+NVDA+U: Anunță titlul fluxului precedent.
-* Ctrl+Shift+NVDA+O: Anunță titlul fluxului succedent.
-
-## Notifications ##
-
-* Când titlul sau URL-ul a fost copiat.
-* Atunci când nu se poate conecta/reîmprospăta un flux, sau URL-ul nu
-  corespunde unui flux valid.
-* NVDA will display an error message if it was not possible to backup or
-  restore the personalFeeds folder, and if a new feed cannot be created.
-* Dialogul titlului listei articolelor afișează numele fluxului selectat și
-  numărul elementelor disponibile.
-
-## Changes for 10.0 ##
-
-* Added a button to open the selected feed as HTML in the default web
-  browser.
-* If a new feed cannot be created, this will be notified in an error dialog.
-* Improved order and presentation of some articles.
-* More feeds may be supported.
-* When the feeds dialog is opened, the list of feeds will be focused instead
-  of the search edit box.
-* You can choose if the search edit box is placed after the list of feeds,
-  useful to focus the list even when switching from another window without
-  closing the Feeds dialog.
-* Added a button to copy the feed address to clipboard from the feeds
-  dialog.
-
-## Changes for 9.0 ##
-
-* Requires NVDA 2019.3 or later.
-
-## Changes for 8.0 ##
-
-* When the add-on is updated, feeds saved in the previous version of the
-  add-on will be automatically copied to the new version, unless you prefer
-  to import feeds saved in the main configuration folder of NVDA.
-* When using the dialog to copy feeds, if the chosen folder is not named
-  personalFeeds, a subfolder with this name will be created to prevent the
-  deletion of directories containing important data, such as Documents or
-  Downloads.
-
-## Changes for 7.0 ##
-
-* The Feeds dialog includes a button to open a folder which may contain a
-  backup of feeds.
-* When using the edit box to filter feeds, if no results are found, the list
-  of feeds and other controls are disabled, so that NVDA doesn't report
-  "unknown" in the empty list.
-* If the list of articles dialog can't be shown, for example due to errors
-  in the feed, NVDA will raise an error, so that the feeds dialog can be
-  used without restarting NVDA.
-
-## Modificări în 6.0 ##
-
-* Când fluxul implicit a fost actualizat și nu se nu mai funcționează
-  datorită problemelor de server, articolele precedente nu sunt șterse și
-  pot fi citite cu combinații de taste corespondente.
-* rezolvare: fluxul implicit poate fi actualizat de două ori.
-
-## Modificări în 5.0 ##
-
-* A fost îmbunătățit dialogul listei articolelor.
-* Compatibil cu NVDA 2018.3 sau mai nou (necesar).
-* Dacă e musai, puteți descărca [ultima versiune compatibilă cu NVDA
-  2017.3][3].
-
-## Modificări în 4.0 ##
-
-* S-a adaugat un buton pentru deschiderea fluxului selectat din dialogul
-  pentru alegerea fluxurilor.
-
-## Modificări în 3.0 ##
-
-* Dialogul pentru administrarea fișierelor fluxurilor a fost eliminat. În
-  prezent, funcționalitatea lui este inclusă în dialogul fluxurilor.
-* Prezentarea vizuală a dialogurilor a fost îmbunătățită, aderând la
-  aspectul dialogurilor afișate în NVDA.
-* Fluxul implicit este salvat în configurația NVDA. Prin urmare, este
-  posibilă setarea fluxurilor implicite diferite în configurarea
-  profilurilor.
-* Necesită NVDA 2016.4.
-
-## Modificări în 2.0 ##
-
-* Ghidul suplimentului este disponibil în managerul de add-on-uri.
-
-## Modificări în 1.0 ##
-
-* Versiunea inițială.
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=rf
+[1]: https://addons.nvda-project.org/files/get.php?file=em
 
-[2]: https://addons.nvda-project.org/files/get.php?file=rf-dev
+[2]: https://www.emule-project.net
 
-[3]: https://addons.nvda-project.org/files/get.php?file=rf-o
+[3]: https://addons.nvda-project.org/files/get.php?file=em-dev

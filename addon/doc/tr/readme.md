@@ -1,75 +1,88 @@
-# RSS Akışlarını Oku #
+# eMule #
 
-* Yazarlar: Noelia Ruiz Martínez, Mesar Hameed
-* İndir [kararlı sürüm][2]
-* İndir [geliştirme sürümü][1]
+*	Yazarlar: Noelia, Chris, Alberto.
+*	NVDA compatibility: 2019.3 or later.
+*	İndir [kararlı versiyon][1]
+*	İndir [geliştirme sürümü][3]
+*	download [version compatible with NVDA 2017.3][4]
 
-Bu eklenti NVDA kullanarak Atom veya RSS formatında beslemeleri okumak için
-basit bir yol sunar. Beslemeler otomatik olarak yenilenmez. Aşağıda besleme
-derken hem RSS hem de ATOM beslemelerini kastediyoruz.
+This add-on helps to improve accessibility of eMule with nVDA.  It also
+provides additional keyboard commands for moving in different windows and
+gives Useful information about eMule.
 
-## Kurulum veya Güncelleme: ##
+It's based on the eMuleNVDASupport add-on, developed by the same author. You
+should uninstall that old add-on to use this one, since both have common
+keystrokes and features.
 
-Bu eklentinin önceki bir sürümünü kullanıyorsanız ve kişisel NVDA
-konfigürasyon klasöründe bir RSS veya personalFeeds adlı klasör varsa,
-eklentinin 6.0 sürümünden itibaren güncellemek mi yoksa kurmak mı
-istediğiniz sorulacaktır. Önceki RSS akışlarınızı kullanmaya devam etmek
-istiyorsanız Güncelle seçeneğiyle devam edin.
+[EMule] [2] 0.50a test edilmiştir.
 
-## Komutlar: ##
+## Tuş komutları: ##
 
-### RSS Okuma menüsü ###
+*	control+shift+h: odak ve fareyi Ana araç çubuğuna  taşır.
+*	kontrol + shift + t: Geçerli pencereyi okur.
+*	kontrol + shift + n: Bul penceresinde odağı Ad alanınna taşır.
+*	kontrol + shift + p: Arama penceresinde, odağı ve fareyi arama
+  parametreleri listesine  veya alan düzenleme seçeneklerine taşır.
+*	control+shift+b: Move the focus to the list in the current window. For
+  example usable in the Search window, downloads in Transfer window, etc.
+*	control+shift+o: Move the focus to read-only edit boxes in the current
+  window. For example the IRC received messages, available Servers, etc.
+*	control+NVDA+f: If the caret is located in a read only edit box, opens a
+  find dialog to use the commands for searching text available in NVDA.
+*	kontrol + shift + l: Fare ve nesne sunucusunu Mevcut listenin başlıkları
+  üzerine taşır.
+*	kontrol + shift + q: durum çubuğunda ilk nesneyi okur; son etkinlik
+  hakkında bilgi verir.
+*	kontrol + shift + w: geçerli sunucu üzerinde dosya ve kullanıcılar
+  hakkında bilgi içeren durum çubuğunun ikinci nesnesini okur.
+*	kontrol + shift + e: yükleme ve indirme hızıyla ilgili bilgi veren durum
+  çubuğunun üçüncü nesnesini okur.
+*	kontrol + shift + r: eD2K ve Kad ağ bağlantı raporlarıyla ilgili durum
+  çubuğunun dördüncü nesnesini okur.
 
-RSS Okuma alt menüsüne NVDA+N ile açılan nvda menüsünden ulaşabilir,  bu
-menüde aşağıdaki menü seçeneklerini bulabilirsiniz:
+## Sütunların yönetimi. ##
 
-- Article list...  Presents the article list from your current feed. Select
-the article you want to read and press OK button to open the corresponding
-page in your browser.  - Temporary feed address... control + NVDA + shift +
-enter: Opens a dialog for typing a new URL to select another feed. The
-current URL will be shown in this dialog.  - Load feed address from
-file... NVDA+control+enter: Opens a dialog to select a feed from a saved
-file containing a feed URL.  - Save current feed address to
-file... NVDA+shift+enter: opens a dialog for selecting the file where
-current feed URL will be saved.  If you save to the special file
-addressFile.txt, this particular feed will be used as your default feed.  -
-Refresh current feed: control+shift+NVDA+8: Refresh selected feed. The feeds
-will not be updated automatically when Read Feeds addon is started.  -
-Backup feeds folder...  opens a dialog to choose a folder where you can save
-the personalFeeds directory of your feeds. By default the selected folder is
-the NVDA's configuration directory, which will create the personalFeeds
-directory.  - Restore feeds...  Opens a dialog to select a folder which
-replaces your feeds in the personalFeeds folder. Make sure you load a folder
-containing feeds URLs.
+Bir liste içindeyken, alt + kontrol + yön tuşlarıyla satır ve sütunlar
+arasında dolaşabilirsiniz. Eklenti aşağıdaki tuş komutlarını da sağlar:
 
-Note: If you want to delete a previously saved feed URL, just remove the
-corresponding file.
+*	NVDA + kontrol 1-0: ilk 10 sütunu okur.
+*	NVDA + shift 1-0: 11-20 sütunları okur.
+*	NVDA + shift + C: son okunan sütunun içeriğini panoya kopyalar .
 
-### Klavye komutları: ###
+## Changes for 4.0 ##
+*	Requires NVDA 2019.3 or later.
 
-- Ctrl+Shift+NVDA+Aralık: Mevcut haberin adresini seslendirir. İki kez
-basılırsa haberle ilgili web sayfası açılır.  - Ctrl+Shift+NVDA+8: Seçilen
-akış güncellenir ve en son girilen haber başlığı okunur.  -
-Ctrl+Shift+NVDA+I: Geçerli haber başlığını okur. İki kez basılırsa başlık ve
-adres panoya kopyalanır.  - Ctrl+Shift+NVDA+U: Önceki haber başlığını okur.
-- Ctrl+Shift+NVDA+O: Sonraki haber başlığını okur.
-
-## Bildirimler: ##
-
-- Başlık ya da adres kopyalandığında.  - Akışa bağlanalamıyor ya da
-güncellenemiyorsa ve geçerli bir adres değilse.  - Nvda, kişisel akış
-klasörü yedeklenemediğinde hata verir.  - Haber listesi iletişim kutusunun
-başlığında geçerli akışın adı ve geçerli haber sayısı bulunur.
+## Changes for 3.0 ##
+*	 To search text in the readonly edit boxes,  the find dialog  can be used,
+   such as nvda+control+f to activate the find dialog.
 
 ## Changes for 2.0 ##
 *	 Add-on help is available from the Add-ons Manager.
 
+## 1.2 için Değişiklikler ##
+*	 IRC mesajları arasında dolaşılırken, seçilen metin düzgün bildiriliyor.
+*	 The keystroke used for moving to the Search results list has been
+   generalized to be able to move focus to any available list in the current
+   window.
+*	 The command used to focus the IRC messages has been generalized to move
+   to any read-only edit box, making it possible to review connection
+   information in the Servers window.
+*	 When moving mouse and focus to the toolbar, in some cases it was
+   announced twice. This has been fixed.
+
+## 1.1 Değişiklikler ##
+*	 NVDA yardım menüsü altındaki EMule ögesiyle ilgili sorun giderildi.
+*	 Kısayollar şimdi NVDA girdi hareketleri iletişim kutusu kullanılarak
+   yeniden atanabilir.
+
 ## 1.0 Değişiklikler ##
-*	 İlk sürüm.
+*	 İlk versiyon.
+
 
 [[!tag dev stable]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=rf-dev
+[1]: https://addons.nvda-project.org/files/get.php?file=em
 
-[2]: http://addons.nvda-project.org/files/get.php?file=rf
+[2]: https://www.emule-project.net
 
+[3]: https://addons.nvda-project.org/files/get.php?file=em-dev

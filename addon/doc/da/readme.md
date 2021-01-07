@@ -1,191 +1,94 @@
-# Læs feeds #
+# eMule #
 
-* Forfattere: Noelia Ruiz Martínez, Mesar Hameed
-* NVDA compatibility: 2019.3 or later
-* Download [stabil version][1]
-* download [udviklingsversion][2]
+*	Forfattere: Noelia, Chris, Alberto.
+*	NVDA-kompatibilitet: 2019.3 eller nyere
+*	download [stabil version][1]
+*	download [udviklingsversion][3]
+*	download [version kompatibel med NVDA 2017.3][4]
 
+Dette tilføjelsesprogram hjælper med at forbedre tilgængeligheden til eMule
+med NVDA. Det igver også ekstra tastaturkommandoer til at flytte rundt i
+forskellige vinduer, samt giver nyttig information om eMule.
 
-Dette tilføjelsesprogram giver en nem og ligetil måde at læse nyheader i
-atom- eller RSS-format med NVDA. Feeds vil ikke blive opdateret
-automatisk. Når vi nedenfor nævner feeds, mener vi både RSS- og atom-feeds.
+Programmet er baseret på tilføjelsesprogrammet eMuleNVDASupport, som er
+udviklet af samme forfatter. Du skal afinstallere det gamle
+tilføjelsesprogram for at kunne bruge denne version, da de har kommandoer og
+funktioner til fælles.
 
-## Installation or Update ##
+Testet på [eMule][2] 0.50a.
 
-Hvis du har brugt en tidligere version af dette tilføjelsesprogram, og hvis
-der er en mappe med navnet RSS eller personalFeeds i mappen med dine
-personlige NVDA-indstillinger, vil der, når du installerer den aktuelle
-version fremkomme en dialog, som spørger, om du vil opgradere eller
-installere. Vælg opdater for at bevare dine gemte feeds og fortsætte med at
-bruge dem i den nyinstallerede version af Læs Feeds.
+## Tastaturkommandoer ##
 
-## Commands ##
+*	Control+Shift+h: Flytter fokus og mus til hovedværktøjslinjen.
+*	Control+Shift+t: Læser det aktuelle vindue.
+*	Control+Shift+n: Flytter fokus til navnefeltet i søgevinduet.
+*	Control+Shift+p: I søgevinduet: Flytter fokus og mus til listen over
+  søgeparametre ellerredigering af feltindstillinger.
+*	Control+Shift+b: Flyt fokus til listen i det aktuelle vindue, brugbart
+  f.eks. i søgevinduet eller til downloads i overførselsvinduet.
+*	Control+Shift+o: Flyt fokus til skrivebeskyttede editfelter i det aktuelle
+  vindue, f.eks. "IRC received messages", "available Servers" osv.
+*	Control+NVDA+f: Åbner en søgedialog, hvis markøren er placeret i et
+  skrivebeskyttet editfelt.
+*	Control+Shift+l: Flytter navigatorobjektet og musen til overskrifterne på
+  den aktuelle liste.
+*	Control+Shift+q: Læser første objekt på statuslinjen; Giver information om
+  seneste aktivitet.
+*	Control+Shift+w: Læser det andet objekt på statuslinjen; Indeholder
+  oplysning om filer og brugere på den aktuelle server.
+*	Control+Shift+e: Læser tredje objekt på statuslinjen;
+  Upload/download-hastighed.
+*	Control+Shift+r: Læser fjerde objekt på statuslinjen: Annoncerer
+  oplysninger om forbindelse til eD2K- og Kad-netværk.
 
-### Menuen Læs feeds ###
+## Styring af kolonner. ##
 
-Du kan få adgang til undermenuen Læs Feeds fra NVDA-menuen værktøjer, hvor
-de følgende menupunkter er tilgængelige:
+I en liste kan du flytte markøren rundt i rækker og kolonner med
+Alt+Control+piletaster. I dette tilføjelsesprogram kan du også bruge
+følgende tastaturkommandoer:
 
-#### Feeds ####
+*	NVDA+Control+1-0: Læser de første 10 kolonner.
+*	NVDA+Shift+1-0: Læser kolonne 11-20.
+*	NVDA+Shift+c: Kopierer indholdet i den sidst læste kolonne til
+  udklipsholderen.
 
-Åbner en dialogboks med følgende kontrolelementer:
-
-* Filtrér efter: Et redigeringsfelt til at søge i tidligere gemte feeds.
-* A list of the saved feeds, focused when the dialog is opened.
-* Liste over artikler: Åbner en dialog, der viser en liste over artikler fra
-  dit nuværende feed. Vælg den artikel, du vil læse, og tryk på Enter eller
-  Åbn webside for den valgte artikel for at åbne den tilsvarende side i din
-  browser. Tryk på knappen "Om artiklen" for at åbne en dialog med titel og
-  link for den valgte artikel; Fra denne dialog kan du kopiere denne
-  information til udklipsholderen.
-* Åbn feed: Åbner det valgte feed i standardprogrammet.
-* Open feed as HTML: Opens the selected feed in the default web browser. You
-  will be able to show or hide publication dates and buttons to copy
-  information about articles to clipboard.
-* Copy feed address: Opens a dialog to confirm if you want to copy the feed
-  address to clipboard.
-* Ny: Åbner en dialogboks med et redigeringsfelt til at indtaste adressen på
-  et nyt feed. Hvis adressen er gyldig og feedet kan gemmes, vises dets
-  navn, baseret på feedets titel nederst på listen over feeds.
-* Omdøb: Åbner en dialogboks med et redigeringsfelt til at omdøbe det valgte
-  feed.
-* Slet: Åbner en dialogboks for at slette det valgte feed efter bekræftelse.
-* Indstil som standard: Indstiller det valgte feed som standard, så dets
-  artikler kan tilgås med NVDAs inputbevægelser.
-* Åbn mappen med sikkerhedskopierne for dine feeds: Åbner en mappe, der
-  indeholder sikkerhedskopier af dine feeds. Dette kan være nyttigt, hvis du
-  evt. vil slette feeds der ikke skal importeres, når tilføjelsen opdateres.
-* Preferences: Opens the settings dialog for readFeeds, also available in
-  NVDA's menu, Preferences, settings, readFeeds category.
-* Luk: Lukker dialogen Nyhedskanaler.
-
-##### Bemærkninger #####
-
-* Hvis et feed ved navn tempFeed er oprettet, skal du omdøbe dette feed,
-  eftersom denne fil kunne erstattes, når det er nødvendigt at oprette et
-  feed med et navn der allerede eksisterer.
-* Det feed der er angivet som standard kan ikke fjernes. AddressFile-feedet
-  vil blive brugt som standard, når konfigurationen er nulstillet. Den kan
-  ikke fjernes.
-* The Filter by edit box can be placed after the Open article button from
-  NVDA's menu, Preferences, Settings, Read feeds category, or pressing the
-  Preferences button of the Feeds dialog.
-
-#### Copy feeds folder ####
-
-Åbner en dialogboks for at vælge en mappe, hvor du kan gemme mappen
-personalFeeds der indeholder dine feeds. Den valgte mappe er som standard
-NVDAs konfigurationsmappe. Tilføjelsespakken vil oprette mappen
-personalFeeds.
-
-#### Restore feeds ####
-
-Åbner en dialogboks for at vælge en mappe, som erstatter dine feeds i mappen
-personalFeeds. Sørg for, at du indlæser en mappe der indeholder URL-adresser
-på feeds.
-
-### Keyboard commands ###
-
-* CTRL+Skift+NVDA+Mellemrum: Annoncerer URL på den aktuelle artikel. Ved at
-  trykke to gange åbnes adressen i din browser.
-* CTRL+NVDA+Skift+8: Opdaterer det valgte feed og oplyser den seneste titel.
-* CTRL+Skift+NVDA+I: Annoncerer den aktuelle titel på det valgte feed. Ved
-  to tryk kopieres titlen og det tilsvarende link til udklipsholderen.
-* CTRL+Skift+NVDA+U: Annoncerer titel på det forrige feed.
-* CTRL+Skift+NVDA+O: Annoncerer titel på det næste feed.
-
-## Notifications ##
-
-* Når titlen eller URL-adressen er blevet kopieret.
-* Når det ikke er muligt at forbinde/opdatere et feed, eller den angivne URL
-  ikke svarer til et gyldigt feed.
-* NVDA will display an error message if it was not possible to backup or
-  restore the personalFeeds folder, and if a new feed cannot be created.
-* Titlen på dialogen der viser listen over artikler viser navnet på det
-  aktuelle feed, samt antallet af artikler til rådighed.
-
-## Changes for 10.0 ##
-
-* Added a button to open the selected feed as HTML in the default web
-  browser.
-* If a new feed cannot be created, this will be notified in an error dialog.
-* Improved order and presentation of some articles.
-* More feeds may be supported.
-* When the feeds dialog is opened, the list of feeds will be focused instead
-  of the search edit box.
-* You can choose if the search edit box is placed after the list of feeds,
-  useful to focus the list even when switching from another window without
-  closing the Feeds dialog.
-* Added a button to copy the feed address to clipboard from the feeds
-  dialog.
-
-## Changes for 9.0 ##
-
-* Requires NVDA 2019.3 or later.
-
-## Ændringer i 8.0 ##
-
-* Når tilføjelsesprogrammet opdateres, bliver feeds, der er gemt i den
-  tidligere version af tilføjelsesprogrammet automatisk kopieret til den nye
-  version, medmindre du foretrækker at importere feeds, der er gemt i den
-  primære konfigurations mappe i NVDA.
-* Når du bruger dialogen til at kopiere feeds, hvis den valgte mappe ikke er
-  navngivet personalFeeds, vil en undermappe med dette navn blive oprettet
-  for at forhindre sletning af mapper, der indeholder vigtige data, såsom
-  dokumenter eller overførsler.
-
-## Ændringer i7.0 ##
-
-* Dialogboksen "Feeds" indeholder en knap for at åbne en mappe, der
-  indeholder en sikkerhedskopi af feeds.
-* Når du bruger redigeringsboksen til at filtrere feeds, og hvis der ikke
-  findes nogen resultater, er listen over feeds og andre kontroller
-  deaktiveret, så NVDA ikke rapporterer "ukendt" i den tomme liste.
-* Hvis dialogen "Liste over artikler" ikke kan vises, for eksempel på grund
-  af fejl med feedet, vil NVDA fejle, så dialogen kan bruges uden at
-  genstarte NVDA.
-
-## Ændringer i 6.0 ##
-
-* Når standardfeedet er opdateret, og det ophører med at fungere på grund af
-  serverproblemer, fjernes de tidligere artikler ikke og kan læses med de
-  tilsvarende tastetryk.
-* Rettede regression: Standardfeedet kan opdateres to gange igen.
-
-## Ændringer i 5.0 ##
-
-* Dialogen med listen over artikler er blevet forbedret.
-* Kompatibel med NVDA 2018.3 eller nyere (påkrævet).
-* Hvis nødvendigt, kan du hente [den sidste version kompatibel med NVDA
-  2017.3][3].
-
-## Ændringer i4.0  ##
-
-* Tilføjet en knap for at åbne det valgte feed fra dialogen "Feeds".
+## Ændringer i4.0 ##
+*	Kræver NVDA 2019.3 eller nyere.
 
 ## Ændringer i 3.0 ##
-
-* Dialoger til at administrere filer til feeds er blevet fjernet. Nu er
-  deres funktionalitet medtaget i dialogen "Feeds".
-* Dialogens visuelle præsentation er blevet forbedret og overholder
-  udseendet af de dialoger, der vises i NVDA.
-* Standardfeed er gemt i NVDA-konfigurationen. Derfor er det muligt at
-  indstille forskellige standardfeeds i konfigurationsprofilerne.
-* Kræver NVDA 2016.4.
+*	 For at søge efter tekst i skrivebeskyttede redigeringsbokse, kan vi nu
+   bruge dialogboksen og kommandoer tilgængelige i NVDA.
 
 ## Ændringer i 2.0 ##
+*	 Hjælp til tilføjelsesprogrammet er til rådighed fra styring af
+   tilføjelsesprogrammer.
 
-* Hjælp til tilføjelsesprogrammet er til rådighed fra styring af
-  tilføjelsesprogrammer.
+## Ændringer i 1.2 ##
+*	 Når man flytter til IRC-meddelelserne, bliver den valgte tekst annonceret
+   rigtigt.
+*	 Det tastetryk, som bruges til at gå til listen over søgeresultater, er
+   blevet generaliseret, så man kan flytte til en hvilken som helst liste i
+   det aktuelle vindue.
+*	 Den kommando, som bruges til at bringe fokus til irc-meddelelserne, er
+   blevet generaliseret til at gå til et hvilket som helst skrivebeskyttet
+   editfelt. På den måde kan man læse forbindelsesoplysningerne i
+   servervinduet.
+*	 Når man flytter mus og fokus til værktøjslinjen, blev denne i nogle
+   tilfælde annonceret to gange. Dette er blevet løst.
+
+## Ændringer i 1.1 ##
+*	 Rettet fejl i emnet eMule under NVDAs hjælpemenu, når navnet på mappen
+   med NVDAs brugerkonfigurationer indeholder ikke-latinske tegn.
+*	 Genvejstaster kan nu ændres i NVDAs dialog til inputbevægelser.
 
 ## Ændringer i 1.0 ##
+*	 Første version.
 
-* Første version.
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=rf
+[1]: https://addons.nvda-project.org/files/get.php?file=em
 
-[2]: https://addons.nvda-project.org/files/get.php?file=rf-dev
+[2]: https://www.emule-project.net
 
-[3]: https://addons.nvda-project.org/files/get.php?file=rf-o
+[3]: https://addons.nvda-project.org/files/get.php?file=em-dev

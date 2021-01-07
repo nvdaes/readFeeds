@@ -1,81 +1,95 @@
-# Hírcsatorna-olvasó #
+# eMule #
 
-* Készítők: Noelia Ruiz Martínez, Mesar Hameed
-* Letöltés [stabil verzió][2]
-* Letöltés [Fejlesztői verzió][1]
+*	Készítők: Noelia, Chris, Alberto.
+*	NVDA compatibility: 2019.3 or later.
+*	Letöltés [stabil verzió][1]
+*	Letöltés [fejlesztői verzió][3]
+*	download [version compatible with NVDA 2017.3][4]
 
-Ez a kiegészítő lehetővé teszi, hogy az NVDA használatával közvetlenül is
-lehessen Atom és RSS hírcsatornákat olvasni. A hírcsatornák nem frissülnek
-automatikusan. Az alábbiakban a hírcsatorna megnevezés egyaránt utal az Atom
-és RSS hírcsatornákra is.
+This add-on helps to improve accessibility of eMule with nVDA.  It also
+provides additional keyboard commands for moving in different windows and
+gives Useful information about eMule.
 
-## Telepítés vagy frissítés: ##
+It's based on the eMuleNVDASupport add-on, developed by the same author. You
+should uninstall that old add-on to use this one, since both have common
+keystrokes and features.
 
-Amennyiben a kiegészítő egy korábbi verzióját használta, és már van a
-személyes NVDA konfigurációs mappájában egy RSS vagy personalFeeds mappa, a
-6.0 vagy későbbi verziók telepítése során a program meg fogja kérdezni, hogy
-frissíteni vagy telepíteni szeretné-e a kiegészítőt. Válassza a frissítés
-lehetőséget, amennyiben szeretné a korábban használt hírcsatornáit a
-legújabb verzióban is változatlanul használni.
+Tesztelve az [eMule][2] 0.50a programmal.
 
-## Parancsok: ##
+## Billentyűparancsok: ##
 
-### Hírcsatorna-olvasó menü ###
+*	control+shift+h: az egérkurzort és a fókuszt a fő eszköztárhoz helyezi.
+*	control+shift+t: felolvassa az aktuális ablakot.
+*	control+shift+n: a fókuszt a keresőablak Név mezőjére helyezi.
+*	control+shift+p: a fókuszt a keresőablak paraméterlistájához, vagy a
+  szerkesztőmező beállításaihoz helyezi.
+*	control+shift+b: a fókuszt az aktuális ablakban elérhető listára
+  helyezi. Ez hasznos a keresési ablakban, a letöltéseknél az átvitel
+  ablakban, stb.
+*	control+shift+o: A fókuszt az aktuális ablakban elérhető csak olvasható
+  szerkesztőmezőre helyezi. Például IRC fogadott üzenetek, elérhető
+  szerverek, stb.
+*	control+NVDA+f: Ha a kurzor egy csak olvasható szerkesztőmezőn áll,
+  megnyit egy keresőablakot.
+*	control+shift+l: A navigátor- és az egérkurzort az aktuális lista
+  fejlécéhez helyezi.
+*	control+shift+q: felolvassa az első elemet az állapotsoron, mely a
+  legutóbbi tevékenységről tájékoztat.
+*	control+shift+w: felolvassa a második elemet az állapotsoron, mely a
+  jelenlegi kiszolgáló fájlokkal és felhasználókkal kapcsolatos információit
+  tartalmazza.
+*	control+shift+e: felolvassa a harmadik elemet az állapotsoron, mely a le-
+  és feltöltési sebességet tartalmazza.
+*	control+shift+r: felolvassa a negyedik elemet az állapotsoron, mely az
+  eD2K és Kad hálózatok kapcsolódási állapotát tartalmazza.
 
-A Hírcsatorna-olvasó almenü elérhető az NVDA menüjéből (NVDA+N), ahol az
-alábbi menüpontokat érheti el: 
+## Oszlopok kezelése. ##
 
-- Cikkek Listája: a kiválasztott hírcsatorna cikkeit tartalmazza. Válassza
-ki az olvasni kívánt cikket, majd az Igen gomb lenyomásával a cikkhez
-tartozó weboldal megnyílik a böngészőben.  - Átmeneti hírcsatorna
-címek... control + NVDA + shift + enter: Megnyit egy párbeszédablakot új
-hírcsatorna URL megadásához, az aktuális cím látszik a szerkesztőmezőben.  -
-Hírcsatorna betöltése fájlból... NVDA+control+enter: Megnyit egy
-párbeszédablakot a hírcsatorna URL címét tartalmazó fájl megnyitásához.  -
-Az Aktuális hírcsatorna címének mentése fájlba... NVDA+shift+enter: Megnyit
-egypárbeszédablakot, ahol kiválasztható az a fájl, ahová az aktuális
-hírcsatorna címét menteni lehet. Az addressFile.txt speciális fájlba
-elmentett URL az alapértelmezett hírcsatorna.  - Az aktuális hírcsatorna
-frissítése control+shift+NVDA+8: Frissíti az aktuális hírcsatornát. A
-hírcsatornák nem frissülnek automatikusan a readFeeds bővítmény futásakor.
-- Személyes hírcsatornák mappájának elmentése... Megnyit egy
-párbeszédablakot, ahol megadható a personalFeeds mappa mentési
-helye. Alapértelmezés szerint az NVDA konfigurációs mappájában jön létre egy
-personalFeeds mappa.  - Saját hírcsatornák visszaállítása... Megnyit egy
-párbeszédablakot, ahol kiválasztható az a mappa, amiből felülírásra kerül a
-personalFeeds könyvtár tartalma. Győződjön meg róla, hogy a kiválasztott
-mappa hírcsatornák URL-címét tartalmazza!
+Egy oszlopokat tartalmazó listában általában az alt+control+nyíl billentyűk
+használhatóak sor és oszlop navigációhoz. Ebben a kiegészítőben a következő
+parancsok is elérhetőek:
 
-Megjegyzés: Elmentett hírcsatorna URL törléséhez törölni kell a hozzá
-tartozó fájlt.
+*	nvda+control+1-0: felolvassa az első 10 oszlopot.
+*	nvda+shift+1-0: Felolvassa a 11-től 20-ig található oszlopokat.
+*	nvda+shift+C: az utoljára felolvasott oszlop tartalmát a vágólapra
+  másolja.
 
-### Billentyűparancsok: ###
+## Changes for 4.0 ##
+*	Requires NVDA 2019.3 or later.
 
-- Ctrl+Shift+NVDA+Space: Az aktuális cikk URL-címének bemondása. Kétszeri
-lenyomásra megnyitja a weboldalt.  - Ctrl+Shift+NVDA+8: Frissíti az aktuális
-hírcsatornát, és bemondja a legfrissebb cikk címét.  - Ctrl+Shift+NVDA+I:
-Bemondja az aktuális hírcsatorna nevét. Kétszeri megnyomásra a vágólapra
-másolja a nevét, és a hozzá tartozó URL-t.  - Ctrl+Shift+NVDA+U: Bemondja az
-előző hírcsatorna nevét.  - Ctrl+Shift+NVDA+O: Bemondja a következő
-hírcsatorna nevét.
+## A 3.0 verzió változásai ##
+*	 To search text in the readonly edit boxes,  the find dialog  can be used,
+   such as nvda+control+f to activate the find dialog.
 
-## Figyelmeztetések: ##
+## Az 2.0 verzió változásai ##
+*	 A kiegészítő súgója elérhető a Bővitménykezelő párbeszédablakából is.
 
-- Amikor a cím vagy az URL másolásra kerül.  - Amikor nem lehet kapcsolódni,
-vagy frissíteni a hírcsatornát, vagy épp az URL nem tartozik egy létező
-hírcsatornához.  - Az NVDA hibaüzenetet jelenít meg, ha nem sikerült
-elmenteni a personalFeeds mappát.  - A cikkek listája megjeleníti a
-kiválasztott hírcsatorna nevét és az elérhető elemek számát.
+## Az 1.2 verzió változásai ##
+*	 Amikor az IRC üzeneteken navigálunk, a kijelölt szöveg felolvasásra
+   kerül.
+*	 A billentyűparancs, amely eddig a fókuszt csak a keresési találatok
+   listájára helyezte, most már bármilyen, az aktuális ablakban elérhető
+   listára át tudja helyezni azt.
+*	 A parancs, ami eddig csak az IRC üzenetekre helyezte át a fókuszt,
+   immáron bármely más csak olvasható szerkesztőmezőre is át tudja helyezni
+   azt, ezáltal lehetővé vált a kapcsolódási információk áttekintése a
+   szerverek ablakában.
+*	 Amikor az egér és a fókusz az eszköztárra került, némely esetben az
+   információ kétszer került kimondásra. A hiba kijavításra került.
 
-## A 2.0 verzió változásai: ##
-*	 A kiegészítő súgója elérhető a bővítmények kezelése párbeszédablakról is.
+## Az 1.1 verzió változásai ##
+*	 Javítva az Emule elem a súgó menüben, hiba történt ha a felhasználói
+   konfigurációs fájl nem latin karaktereket tartalmazott.
+*	 A billentyűparancsok átállíthatóak a beviteli parancsok párbeszédablakán.
 
-## Az 1.0 verzió változásai: ##
-*	 Kezdeti verzió
+## Az 1.0 verzió változásai ##
+*	 Az első kiadás.
+
 
 [[!tag dev stable]]
 
-[1]: http://addons.nvda-project.org/files/get.php?file=rf-dev
+[1]: https://addons.nvda-project.org/files/get.php?file=em
 
-[2]: http://addons.nvda-project.org/files/get.php?file=rf
+[2]: https://www.emule-project.net
 
+[3]: https://addons.nvda-project.org/files/get.php?file=em-dev

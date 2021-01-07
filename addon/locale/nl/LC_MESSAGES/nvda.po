@@ -1,98 +1,95 @@
-# Brazilian Portuguese translation of eMule add-on.
-# Copyright (C) 2013-2020 NVDA Contributors.
-# This file is distributed under the same license as the NVDA package.
-# Cleverson Casarin Uliana <clever97@gmail.com>, 2013-2014, 2016-2017.
-# Tiago Melo Casal <tcasal@intervox.nce.ufrj.br>, 2018, 2020.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: eMule add-on\n"
-"Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
+"Project-Id-Version: eMule 1.0-dev\n"
+"Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2013-08-04 11:33+0200\n"
-"PO-Revision-Date: 2020-03-04 20:40-0300\n"
-"Last-Translator: Tiago Melo Casal <tcasal@intervox.nce.ufrj.br>\n"
-"Language-Team: NVDA Brazilian Portuguese translation team (Equipe de "
-"tradução do NVDA para Português Brasileiro) <clever97@gmail.com>\n"
-"Language: pt_BR\n"
+"PO-Revision-Date: 2016-02-26 02:20-0800\n"
+"Last-Translator: Leonard de Ruijter <mail@leonardder.nl>\n"
+"Language-Team: NVDA Nederlandstalig vertaalteam <nvda-nl@googlegroups.com>\n"
+"Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 1.6.11\n"
+"X-Generator: Poedit 1.5.5\n"
 
 #. Translators: Message presented in input help mode.
 msgid "Reads the specified column for the current list item."
-msgstr "Lê a coluna especificada para o item de lista atual."
+msgstr "Leest de aangegeven kolom voor het huidige lijstitem."
 
 #. Translators: Message presented when the current column of the list item is copied to clipboard.
 #, python-format
 msgid "%s copied to clipboard"
-msgstr "%s copiado para área de transferência"
+msgstr "%s naar het klembord gekopieerd"
 
 #. Translators: Message presented in input help mode.
 msgid "Copies the last read column of the selected list item to clipboard."
 msgstr ""
-"Copia a última coluna lida do item de lista selecionado para a área de "
-"transferência."
+"Kopieert de laatstgelezen kolom van het geselecteerde lijstitem naar het "
+"klembord."
 
 #. Translators: Message presented in input help mode
 msgid "Moves the system focus and mouse to the main Tool Bar."
-msgstr ""
-"Move o foco do sistema e o mouse para a barra de ferramentas principal."
+msgstr "Verplaatst de systeemfocus en de muis naar de hoofdwerkbalk."
 
 #. Translators: Message presented in input help mode.
 #. For instance: reads the search window, Statistics, IRC, etc.
 msgid "Reports the current window."
-msgstr "Lê a janela atual."
+msgstr "Meldt het huidige venster."
 
 #. Translators: Message presented in input help mode.
 msgid "Moves the system focus to the Name field of the Search window."
-msgstr "Move o foco do sistema para o campo nome da janela pesquisar."
+msgstr "Verplaatst de focus naar het Naamveld in het Zoekvenster."
 
 #. Translators: Message presented in input help mode.
 msgid ""
 "Moves the system focus and mouse to the search parameters list or Edit field "
 "for each option, in the Search window."
 msgstr ""
-"Move o foco do sistema e o mouse para a lista de parâmetros de pesquisa ou o "
-"campo de edição de cada opção, na janela pesquisar."
+"Verplaatst de systeemfocus en de muis naar de lijst met zoekparameters of "
+"het invoerveld voor iedere optie, in het zoekvenster."
 
 #. Translators: Message presented in input help mode.
 msgid ""
 "Moves the system focus to the first list in the current window. For example "
 "the results list in the Search window, downloads in Transfer, etc."
 msgstr ""
-"Move o foco do sistema para a primeira lista na janela atual. Por exemplo a "
-"lista de resultados na janela pesquisar, baixados nas transferências, etc."
+"Verplaatst de systeemfocus naar de eerste lijst in het huidige scherm. B.v. "
+"de resultatenlijst in het zoekscherm, downloads in Transfer, etc."
 
 #. Translators: Message presented in input help mode.
 msgid ""
 "Moves the system focus to read-only edit boxes in the current window. For "
 "example the IRC received messages."
 msgstr ""
-"Move o foco do sistema pelos campos de edição somente leitura da janela "
-"atual, por exemplo as mensagens recebidas por IRC."
+"Verplaatst de systeemfocus naar alleen-lezen invoervelden in het huidige "
+"scherm. B.v. de via IRC ontvangen berichten."
 
 #. Translators: Message presented in input help mode.
 msgid "Moves the navigator object and mouse to the current list headers."
 msgstr ""
-"Move o objeto de navegação e o mouse para os cabeçalhos da lista atual."
+"Verplaatst het navigatorobject en de muis naar de kopteksten van de huidige "
+"lijst."
 
 #. Translators: Message presented in input help mode.
 msgid "Reports first object of the Status Bar."
-msgstr "Lê o primeiro objeto da barra de status."
+msgstr "Meldt het eerste object van de Statusbalk."
 
 #. Translators: Message presented in input help mode.
 msgid "Reports second object of the Status Bar."
-msgstr "Lê o segundo objeto da barra de status."
+msgstr "Meldt het tweede object van de Statusbalk."
 
 #. Translators: Message presented in input help mode.
 msgid "Reports third object of the Status Bar."
-msgstr "Lê o terceiro objeto da barra de status."
+msgstr "Meldt het derde object van de Statusbalk."
 
 #. Translators: Message presented in input help mode.
 msgid "Reports fourth object of the Status Bar."
-msgstr "Lê o quarto objeto da barra de status."
+msgstr "Meldt het vierde object van de Statusbalk."
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
@@ -101,34 +98,35 @@ msgstr "eMule"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+#, fuzzy
 msgid ""
 "Improves eMule's accessibility with NVDA.\n"
 "eMule is a P2P program to search and share files.\n"
 "You can get more information about eMule at\n"
 "http://www.emule-project.net"
 msgstr ""
-"Melhora a acessibilidade do eMule com o NVDA.\n"
-"O eMule é um programa P2P para buscar e compartilhar arquivos.\n"
-"Pode obter mais informações sobre o eMule em\n"
-"http://www.emule-project.net"
+"Verbetert de toegankelijkheid van eMule met NVDA.\n"
+"eMule is een P2P programma om bestanden te zoeken en te delen.\n"
+"U vindt meer informatie over eMule op\n"
+"https://www.emule-project.net"
 
 #~ msgid "text \"%s\" not found"
-#~ msgstr "texto \"%s\" não achado"
+#~ msgstr "tekst \"%s\" niet gevonden"
 
 #~ msgid "Find Error"
-#~ msgstr "Erro de busca"
+#~ msgstr "Zoekfout"
 
 #~ msgid "Search for:"
-#~ msgstr "Pesquisar por:"
+#~ msgstr "Zoeken naar:"
 
 #~ msgid "eMule search"
-#~ msgstr "Pesquisa do eMule"
+#~ msgstr "Zoeken met eMule"
 
 #~ msgid "Opens the find dialog when in read only edit boxes."
-#~ msgstr "Abre o diálogo procurar quando em caixas de edição somente leitura."
+#~ msgstr "Opent het dialoogvenster zoeken vanuit Alleen-lezen invoervelden."
 
 #~ msgid "Find next occurence."
-#~ msgstr "Procura próxima ocorrência."
+#~ msgstr "Zoek volgende voorkomen."
 
 #~ msgid "Find previous occurrence."
-#~ msgstr "Procura ocorrência anterior."
+#~ msgstr "Zoek vorige voorkomen."

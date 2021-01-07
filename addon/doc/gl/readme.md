@@ -1,198 +1,95 @@
-# Read Feeds #
+# eMule #
 
-* Autores: Noelia Ruiz Martínez, Mesar Hameed
-* Compatibilidade con NVDA: 2019.3 ou posterior
-* Descargar [versión estable][1]
-* Descargar [versión de desenvolvemento][2]
+*	Autores: Noelia, Chris, Alberto.
+*	Compatibilidade con NVDA: 2019.3 ou posterior
+*	descarga [versión estable][1]
+*	descargar [versión de desenvolvemento][3]
+*	Descargar [versión compatible con NVDA 2017.3][4]
 
+Este complemento axuda a mellorar a accesivilidade do eMule co nVDA.  Tamén
+proporciona ordes de teclado adicionais para moverte en diferentes ventás e
+dar información util do eMule.
 
-Este complemento proporciona unha maneira sinxela de ler fontes en formatos
-de RSS ou Atom utilizando NVDA.  Os feeds non se actualizarán
-automáticamente.  No futuro cando mencionemos feeds, referirémonos ós feeds
-RSS e ATOM.
+baséase no complemento eMuleNVDASupport, desenvolvido polo mesmo
+autor. Debes desinstalar o vello complemento para usar este, xa que ambos
+teñen as pulsacións de teclado e as características comúns.
 
-## Instalación ou actualización ##
+Probado no [eMule][2] 0.50a.
 
-Se utilizaches unha versión anterior deste complemento, e hai un cartafol
-personalFeeds ou RSS na carpeta personal de configuración do NVDA, ó se
-instalar a versión 6.0 ou posterior, un cadro de diálogo preguntarache se
-desexas actualizar ou instalar.  Selecciona Actualizar para conservar os
-teus feeds gardados e continuar utilizándoos na nova versión instalada de
-readFeeds.
+## Ordes de Teclado: ##
 
-## Ordes ##
+*	control+shift+h: Move o foco e o rato cara a barra de ferramentas
+  principal.
+*	control+shift+t: Le a ventá actual.
+*	control+shift+n: Move o foco cara o campo de nome na ventá procurar.
+*	control+shift+p: Na ventá de procurar, move o foco e o rato cara a lista
+  de parámetros de procuras, ou opcións do campo de edición.
+*	control+shift+b: Move o foco para a lista na ventá actual. Por exemplo
+  utilizable na ventá Buscar, descargas na ventá de transferencia, etc.
+*	control+shift+o: Move o foco para caixas  de só lectura no diálogo
+  actual. Por exemplo, as mensaxes recibidas no IRC , servidores
+  dispoñibles, etc.
+*	control+NVDA+f: se o cursor está localizado nunha Caixa de edición de só
+  lectura, abre un diálogo de busca para usar as ordes para procurar texto
+  disponibles no NVDA.
+*	control+shift+l: Move o navegador de obxectos e o rato cara as cabeceiras
+  da lista actual.
+*	control+shift+q: Le o primeiro obxecto na barra de estado; proporciona
+  información acerca da actividade recente.
+*	control+shift+w: Le o segundo obxecto da barra de estado; contén
+  información acerca de ficheiros e usuarios no servidor actual.
+*	control+shift+e: Le o terceiro obxecto da barra de estado; util para saber
+  a velocidade de subida e de baixada.
+*	control+shift+r: Le o carto obxecto da barra de estado; informa sobre a
+  conexión das redes Kad e eD2K.
 
-### Menú Read Feeds ###
+## Administrando columnas. ##
 
-Podes acceder ó submenú Read Feeds dende o menú NVDA, submenú Ferramentas,
-onde están dispoñibles as seguintes opcións:
+Cando estás dentro dunha lista, podes mover o cursor entre as filas e as
+columnas usando alt+control+Flechas.  Neste complemento tamén están
+dispoñibles as seguintes ordes de teclado:
 
-#### Fontes ####
-
-Abre un diálogo cos seguintes controis:
-
-* Filtrar por: unha Caixa de edición para procurar feeds gardados
-  anteriormente.
-* Unha lista das fontes gardadas, enfocada ao abrirse o diálogo.
-* Listaxe de artigos: abre un diálogo que amosa a listaxe de artigos do teu
-  feed actual. Seleciona o artigo que desexes ler e preme Intro ou o botón
-  Abrir páxina web do artigo selecionado para abrir a páxina correspondente
-  no teu navegador. Preme o botón Acerca do artigo para abrir un diálogo que
-  amose o título e a liga do artigo selecionado; dende este diálogo, poderás
-  copiar esta información ao portapapeis.
-* Abrir feed: abre o feed selecionado na aplicación predeterminada.
-* Abrir fonte como HTML: Abre a fonte seleccionada no navegador web por
-  defecto. Poderás ocultar datas de publicación e botóns para copiar
-  información sobre os artigos ao portapapeis.
-* Copiar enderezo da fonte: Abre un diálogo para confirmar se queres copiar
-  o enderezo da fonte ó portapapeis.
-* Novo: abre un diálogo cunha Caixa de edición para introducir o enderezo
-  dun feed novo. Se o enderezo é válido e o feed pode gardarse, o seu nome,
-  baseado no título do feed, aparecerá ao fondo da listaxe dos feeds.
-* Renomear: abre un diálogo cunha Caixa de edición para renomear o feed
-  selecionado.
-* Borrar: abre un diálogo para borrar o feed selecionado despois dunha
-  confirmación.
-* Configurar predeterminado: configura o feed selecionado coma o
-  predeterminado, así que o seu artigo pode acederse cos xestos do NVDA.
-* Abrir cartafol que contén unha copia de seguridade das fontes: Abre un
-  cartafol que podería conter unha copia de seguridade das fontes. Isto
-  podería ser útil para explorar e eliminar fontes que non deberían
-  importarse cando o complemento se actualice.
-* Preferencias: Abre o diálogo de opcións para ReadFeeds, tamén dispoñible
-  no menú NVDA, Preferencias, Opcións, categoría ReadFeeds.
-* Pechar: pecha o diálogo Feeds.
-
-##### Notas #####
-
-* - Se se crea un feed chamado tempFeed, por favor renoméao, xa que este
-  fichero podería reemplazarse cando sexa necesario crear un feed cun nome
-  que xa exista.
-* O feed configurado como o predeterminado pode borrarse. O feed addressFile
-  usarase coma o predeterminado cando a configuración se reinicie, así non
-  pode borrarse.
-* A caixa de edición filtrar por pódese poñer despois do botón Abrir artigo
-  dende o menú NVDA, Preferencias, Opcións, categoría Read Feeds, ou
-  premendo o botón Preferencias do diálogo de fontes.
-
-#### Copiar cartafol de feeds ####
-
-Abre un diálogo para escoller un catafol onde podes gardar o directorio
-personalFeeds dos teus feeds. Por defecto a carpeta selecionada é o
-directorio de configuración do NVDA, o que creará o directorio
-personalFeeds.
-
-#### Restaurar feeds ####
-
-Abre un diálogo para seleccionar un cartafol que reemplaza os teus feeds no
-cartafol personalFeeds. Asegúrate de cargar un cartafol contendo URLs de
-feeds.
-
-### Ordes de teclado ###
-
-* Ctrl+Shift+NVDA+Espazo: anuncia a URL actual dos artigos. Premendo dúas
-  veces abrirá a páxina web.
-* Ctrl+Shift+NVDA+8: refresca o feed selecionado e anuncia o seu título máis
-  recente.
-* Ctrl+Shift+NVDA+I: anuncia o título e a liga do feed actual. Premendo dúas
-  veces copiará o título e a liga relacionada ao portapapeis.
-* Ctrl+Shift+NVDA+U: anuncia o título do feed anterior.
-* Ctrl+Shift+NVDA+O: anuncia o título do feed seguinte.
-
-## Notificacións ##
-
-* Cando o título ou a URL se copiaran.
-* Cando non se pode conectar/refrescar un feed, ou a URL non se corresponde
-  cun feed válido.
-* NVDA amosará unha mensaxe de erro se non foi posible respaldar ou
-  restaurar o cartafol personalFeeds, e se non se pode crear unha nova
-  fonte.
-* O título do diálogo da listaxe de artigos amopsa o nome do feed
-  selecionado e o número de elementos dispoñibles.
-
-## Cambios para 10.0 ##
-
-* Engadido un botón para abrir o feed selecionado como HTML no navegador web
-  predeterminado.
-* Se non se pode crear unha nova fonte, notificarase nun diálogo de erro.
-* Mellorada a orde e a presentación dalgúns artigos.
-* Poderíanse soportar máis fontes.
-* Cando se abre o diálogo de fontes, enfocarase a lista de fontes no canto
-  da caixa de edición de busca.
-* Podes escoller se a caixa de edición de busca se sitúa despois da lista de
-  fontes, útil para enfocar a lista aínda despois de moverse dende outra
-  xanela sen pechar o diálogo de fontes.
-* Engadido un botón para copiar o enderezo da fonte ao portapapeis dende o
-  diálogo de fontes.
-
-## Cambios para 9.0 ##
-
-* Require NVDA 2019.3 ou posterior.
-
-## Cambios para 8.0 ##
-
-* Cando o complemento se actualice, os feeds gardados na versión anterior do
-  complemento copiaranse automaticamente á nova versión, a menos que
-  prefiras importar os feeds gardados no cartafol principal de configuración
-  de NVDA.
-* Ao utilizar o diálogo para copiar feeds, se o cartafol escollido non se
-  chama personalFeeds, crearase un subcartafol con ese nome para previr a
-  eliminación de directorios que conteñan datos importantes, como Documentos
-  ou Descargas.
-
-## Cambios para 7.0 ##
-
-* O diálogo Fontes contén un botón para abrir un cartafol que podería conter
-  unha copia de seguridade das fontes.
-* Ao usar a caixa de edición para filtrar fontes, se non se atopan
-  resultados, amosaranse a lista de feeds e outros controis, de tal modo que
-  NVDA non anuncie "Descoñecido" na lista baleira.
-* Se o diálogo lista de artículos non se pode amosar, debido a erros no
-  feed, por exemplo, NVDA disparará un erro, de modo que o diálogo de fontes
-  se poida usar sen reiniciar NVDA.
-
-## Cambios para 6.0 ##
-
-* Cando se refresca o feed por omisión e deixa de funcionar por problemas no
-  servidor, os artigos anteriores non se borran e poden lerse coas ordes
-  correspondentes.
-* Solucionada regresión: O feed por defecto pódese actualizar dúas veces
-  novamente.
-
-## Cambios para 5.0 ##
-
-* Mellorouse o diálogo listaxe de artigos.
-* Compatible co NVDA 2018.3 ou posterior (requerido).
-* Se fora necesario, podes descargar a [última versión compatible co NVDA
-  2017.3][3].
+*	nvda+control+1-0: Le as primeiras 10 columnas.
+*	nvda+shift+1-0: Le as columnas 11 a 20.
+*	nvda+shift+C: Copia o contido da última columna lida ó portapapeis.
 
 ## Cambios para 4.0 ##
-
-* Engadido un botón para abrir o feed selecionado dende o diálogo Feeds.
+*	Require NVDA 2019.3 ou posterior.
 
 ## Cambios para 3.0 ##
-
-* Elimináronse os diálogos para xestionar os ficheiros de feeds. Agora a súa
-  funcionalidade inclúese no diálogo Feeds.
-* Mellorouse a presentación visual dos diálogos, adheríndose á apariencia
-  dos diálogos amosada no NVDA.
-* O feed predeterminado gárdase na configuración do NVDA. Polo tanto, é
-  posible configurar diferentes feeds predeterminados nos perfís de
-  configuración.
-* Requírese do NVDA 2016.4.
+*	 Para procurar texto en caixas de edición de só lectura, pódese utilizar o
+   diálogo buscar, como nvda+control+f para activar o diálogo buscar.
 
 ## Cambios para 2.0 ##
+*	 A axuda do complemento está dispoñible no Administrador de Complementos.
 
-* A axuda está dispoñible no Administrador de Complementos.
+## Cambios para 1.2 ##
+*	 Cando se cambia para as mensaxes de IRC, o texto seleccionado indícase
+   correctamente.
+*	 A combinación de teclas usada para pasar á lista de resultados de busca
+   foi xeneralizada para poder mover o foco para calquera lista dispoñible
+   na ventá actual.
+*	 A orde usada para concentrar as mensaxes de IRC foi xeneralizada para
+   desprazarse a calquera caixa de edición de só lectura, o que fai posible
+   revisar a información de conexión no diálogo de servidores.
+*	 Ó mover o rato e o foco a barra de tarefas, nalgúns casos anunciábase
+   dúas veces. Esto foi correxido.
+
+## Cambios para 1.1 ##
+*	 Correxido un erro no elemento eMule no menú de axuda do NVDA, cando o
+   nome do cartafol da configuración de usuario contén caracteres non
+   latinos.
+*	 Os atallos agora poden se reasignar utilizando o diálogo de xestos de
+   entrada do NVDA.
 
 ## Cambios para 1.0 ##
+*	 Versión inicial.
 
-* Versión inicial.
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=rf
+[1]: https://addons.nvda-project.org/files/get.php?file=em
 
-[2]: https://addons.nvda-project.org/files/get.php?file=rf-dev
+[2]: https://www.emule-project.net
 
-[3]: https://addons.nvda-project.org/files/get.php?file=rf-o
+[3]: https://addons.nvda-project.org/files/get.php?file=em-dev
