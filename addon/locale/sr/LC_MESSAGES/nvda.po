@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: readFeeds 2.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2014-12-19 18:00+1000\n"
-"PO-Revision-Date: 2019-04-22 19:51+0100\n"
+"PO-Revision-Date: 2021-02-05 15:50+0100\n"
 "Last-Translator: Nikola Jović <wwenikola123@gmail.com>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language-Team: Serbian <wwenikola123@gmail.com>\n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,14 +18,14 @@ msgstr ""
 "X-Generator: Poedit 1.6.10\n"
 
 #. Translators: the label of a message box dialog.
-#, fuzzy
 msgid ""
 "Your configuration folder for NVDA contains files that seem to be derived "
 "from a previous version of this add-on.\n"
 "\t\t\tDo you want to update it?"
 msgstr ""
 "Vaš NVDA folder sa podešavanjima sadrži datoteke iz starije verzije ovog "
-"dodatka. Da li želite da ga ažurirate?"
+"dodatka.\n"
+"\t\t\tDa li želite da ga ažurirate?"
 
 #. Translators: the title of a message box dialog.
 msgid "Install or update add-on"
@@ -73,14 +73,12 @@ msgid "&Open feed"
 msgstr "&Otvori izvod"
 
 #. Translators: The label of a button to open a feed as HTML.
-#, fuzzy
 msgid "Open feed as &HTML"
-msgstr "&Otvori izvod"
+msgstr "Otvori izvod kao &HTML"
 
 #. Translators: The label of a button to copy the feed URL.
-#, fuzzy
 msgid "Cop&y feed address"
-msgstr "Kopiraj izvode"
+msgstr "&Kopiraj adresu izvoda"
 
 #. Translators: The label of a button to add a new feed.
 msgid "&New..."
@@ -103,35 +101,32 @@ msgid "Open &folder containing a backup of feeds"
 msgstr "Otvori &folder sa rezervnim kopijama izvoda"
 
 #. Translators: The label of a button to open the settings dialog for readFeeds.
-#, fuzzy
 msgid "&Preferences..."
-msgstr "&Vrati izvode..."
+msgstr "&Podešavanja..."
 
 #. Translators: Message presented when a feed cannot be added.
 #, python-format
 msgid "Cannot add feed: %s"
-msgstr ""
+msgstr "Nemoguće dodati izvod: %s"
 
 #. Translators: error message.
-#, fuzzy
 msgid "Error"
-msgstr "Greška pri kopiranju"
+msgstr "Greška"
 
 #. Translators: the label of a message box dialog.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid ""
 "Do you want to copy feed address to the clipboard\r\n"
 "\r\n"
 "{feedAddress}?"
 msgstr ""
-"%s\r\n"
+"Da li želite da kopirate adresu izvoda u privremenu memoriju\r\n"
 "\r\n"
-"Da li želite da kopirate naslov članka i link u privremenu memoriju?"
+"{feedAddress}?"
 
 #. Translators: the title of a message box dialog.
-#, fuzzy
 msgid "Copy feed address"
-msgstr "Kopiraj izvode"
+msgstr "Kopiraj adresu izvoda"
 
 #. Translators: Label of a dialog.
 msgid "Address of a new feed:"
@@ -168,12 +163,10 @@ msgid "&About article..."
 msgstr "&O članku..."
 
 #. Translators: the label of a message box dialog.
-#, fuzzy, python-format
+#, python-format
 msgid "%sDo you want to copy article title and link to the clipboard?"
 msgstr ""
-"%s\r\n"
-"\r\n"
-"Da li želite da kopirate naslov članka i link u privremenu memoriju?"
+"%s Da li želite da kopirate naslov članka i link u privremenu memoriju?"
 
 #. Translators: the title of a message box dialog.
 msgid "Article information"
@@ -218,7 +211,7 @@ msgstr "Izaberite folder za vraćanje"
 
 #. Translators: label of a dialog.
 msgid "&Search edit box after feeds list"
-msgstr ""
+msgstr "&Polje za unos pretrage nakon liste izvoda"
 
 #. Translators: Presented when the current article does not have an associated title.
 msgid "Unable to locate article title."
@@ -230,15 +223,15 @@ msgstr "Nemoguće pronaći link članka"
 
 #. Translators: Label of a checkbox to choose if date should be presented for each feed.
 msgid "Show date"
-msgstr ""
+msgstr "Prikaži datum"
 
 #. Translators: Label for a checkbox to show buttons for copying to clipboard.
 msgid "Show buttons to copy"
-msgstr ""
+msgstr "Prikaži tastere za kopiranje"
 
 #. Translators: Label for a button to copy to clipboard.
 msgid "Copy"
-msgstr ""
+msgstr "Kopiraj"
 
 #. Translators: the name of a submenu.
 msgid "&Read Feeds"
@@ -257,24 +250,21 @@ msgid "R&estore feeds..."
 msgstr "&Vrati izvode..."
 
 #. Translators: message presented in input mode.
-#, fuzzy
 msgid "Activates the Feeds dialog of Read Feeds."
-msgstr "Aktivira dijalog izvoda %s."
+msgstr "Aktivira dijalog izvoda čitača izvoda."
 
 #. Translators: message presented in input mode.
-#, fuzzy
 msgid "Activates the Copy dialog of Read Feeds."
-msgstr "Aktivira dijalog za kopiranje %s."
+msgstr "Aktivira dijalog za kopiranje čitača izvoda."
 
 #. Translators: message presented in input mode.
-#, fuzzy
 msgid "Activates the Restore dialog of Read Feeds."
-msgstr "Aktivira dijalog za vraćanje %s."
+msgstr "Aktivira dijalog za vraćanje čitača izvoda."
 
 #. Translators: message presented in input mode.
 #, python-format
 msgid "Shows the %s settings."
-msgstr ""
+msgstr "Prikazuje podešavanja za%s."
 
 #. Translators: message presented in input mode.
 msgid "Refreshes the current feed and announces the most recent article title."
