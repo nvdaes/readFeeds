@@ -6,26 +6,26 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: readFeeds 1.0-dev\n"
-"Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
+"Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2013-11-23 12:28+0100\n"
-"PO-Revision-Date: 2019-10-13 15:09+0200\n"
+"PO-Revision-Date: 2021-05-13 10:49+0200\n"
 "Last-Translator: Nicolai Svendsen <chojiro1990@gmail.com>\n"
 "Language-Team: Dansk NVDA <dansk@nvda.dk>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Poedit 2.4.3\n"
 
 #. Translators: the label of a message box dialog.
-#, fuzzy
 msgid ""
 "Your configuration folder for NVDA contains files that seem to be derived "
 "from a previous version of this add-on.\n"
 "\t\t\tDo you want to update it?"
 msgstr ""
 "Din konfigurationsmappe til NVDA indeholder filer, som ser ud til at stamme "
-"fra dette tilføjelsesprogram. Vil du opdatere den?"
+"fra dette tilføjelsesprogram.\n"
+"\t\t\tVil du opdatere den?"
 
 #. Translators: the title of a message box dialog.
 msgid "Install or update add-on"
@@ -73,14 +73,12 @@ msgid "&Open feed"
 msgstr "&Åbn feed"
 
 #. Translators: The label of a button to open a feed as HTML.
-#, fuzzy
 msgid "Open feed as &HTML"
-msgstr "&Åbn feed"
+msgstr "Åbn feed som &HTML"
 
 #. Translators: The label of a button to copy the feed URL.
-#, fuzzy
 msgid "Cop&y feed address"
-msgstr "Kopier feeds"
+msgstr "&Kopier feedadresse"
 
 #. Translators: The label of a button to add a new feed.
 msgid "&New..."
@@ -103,35 +101,32 @@ msgid "Open &folder containing a backup of feeds"
 msgstr "Åbn &mappen med sikkerhedskopierne for dine feeds"
 
 #. Translators: The label of a button to open the settings dialog for readFeeds.
-#, fuzzy
 msgid "&Preferences..."
-msgstr "G&endan feeds..."
+msgstr "&Indstillinger"
 
 #. Translators: Message presented when a feed cannot be added.
 #, python-format
 msgid "Cannot add feed: %s"
-msgstr ""
+msgstr "Kan ikke tilføje feed: %s"
 
 #. Translators: error message.
-#, fuzzy
 msgid "Error"
-msgstr "Kopieringsfejl"
+msgstr "Fejl"
 
 #. Translators: the label of a message box dialog.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid ""
 "Do you want to copy feed address to the clipboard\r\n"
 "\r\n"
 "{feedAddress}?"
 msgstr ""
-"%s\n"
+"Ønsker du at kopiere adressen på feedet til udklipsholderen\n"
 "\n"
-"Ønsker du at kopiere artiklens titel og link til udklipsholderen?"
+"{feedAddress}?"
 
 #. Translators: the title of a message box dialog.
-#, fuzzy
 msgid "Copy feed address"
-msgstr "Kopier feeds"
+msgstr "Kopiér feedadresse"
 
 #. Translators: Label of a dialog.
 msgid "Address of a new feed:"
@@ -167,12 +162,9 @@ msgid "&About article..."
 msgstr "&Om artikel..."
 
 #. Translators: the label of a message box dialog.
-#, fuzzy, python-format
+#, python-format
 msgid "%sDo you want to copy article title and link to the clipboard?"
-msgstr ""
-"%s\n"
-"\n"
-"Ønsker du at kopiere artiklens titel og link til udklipsholderen?"
+msgstr "%sØnsker du at kopiere artiklens titel og link til udklipsholderen?"
 
 #. Translators: the title of a message box dialog.
 msgid "Article information"
@@ -212,7 +204,7 @@ msgstr "Vælg mappe til gendannelse"
 
 #. Translators: label of a dialog.
 msgid "&Search edit box after feeds list"
-msgstr ""
+msgstr "&Søg redigeringsfelt efter feeds-listen"
 
 #. Translators: Presented when the current article does not have an associated title.
 msgid "Unable to locate article title."
@@ -224,15 +216,15 @@ msgstr "Kan ikke finde link til artikel."
 
 #. Translators: Label of a checkbox to choose if date should be presented for each feed.
 msgid "Show date"
-msgstr ""
+msgstr "Vis dato"
 
 #. Translators: Label for a checkbox to show buttons for copying to clipboard.
 msgid "Show buttons to copy"
-msgstr ""
+msgstr "Vis knapper, der skal kopieres"
 
 #. Translators: Label for a button to copy to clipboard.
 msgid "Copy"
-msgstr ""
+msgstr "Kopier"
 
 #. Translators: the name of a submenu.
 msgid "&Read Feeds"
@@ -244,31 +236,28 @@ msgstr "&Feeds..."
 
 #. Translators: the name of a menu item.
 msgid "&Copy feeds folder..."
-msgstr "Mappe til &kopiering af feeds..."
+msgstr "&Kopier mappen med feeds..."
 
 #. Translators: the name of a menu item.
 msgid "R&estore feeds..."
 msgstr "G&endan feeds..."
 
 #. Translators: message presented in input mode.
-#, fuzzy
 msgid "Activates the Feeds dialog of Read Feeds."
-msgstr "Aktiverer dialogen til feeds i %s."
+msgstr "Aktiverer dialogboksen Feeds i Læs Feeds."
 
 #. Translators: message presented in input mode.
-#, fuzzy
 msgid "Activates the Copy dialog of Read Feeds."
-msgstr "Aktiverer dialogen til kopiering i %s."
+msgstr "Aktiverer dialogen til kopiering for tilføjelsen Læs Feeds"
 
 #. Translators: message presented in input mode.
-#, fuzzy
 msgid "Activates the Restore dialog of Read Feeds."
-msgstr "Aktiverer dialogen til gendannelse i %s."
+msgstr "Aktiverer dialogboksen Gendan iLæs feeds."
 
 #. Translators: message presented in input mode.
 #, python-format
 msgid "Shows the %s settings."
-msgstr ""
+msgstr "Viser indstillingerne for %s"
 
 #. Translators: message presented in input mode.
 msgid "Refreshes the current feed and announces the most recent article title."
@@ -314,7 +303,7 @@ msgstr "Læs Feeds"
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Add-on for using NVDA as a feed reader."
-msgstr "Tilføjelsesprogram til at bruge NVDA som nyhedslæser."
+msgstr "Tilføjelsesprogram til at bruge NVDA som feedlæser."
 
 #~ msgid ""
 #~ "You have installed the ReadFeeds add-on, probably an old and incompatible "

@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: readFeeds 2.2\n"
-"Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
+"Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2015-01-30 18:00+1000\n"
 "PO-Revision-Date: 2020-12-27 23:07+0200\n"
 "Last-Translator: Volodymyr Pyrih <vp88.mobile@gmail.com>\n"
