@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Read feeds 4.0\n"
-"Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
+"Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2020-10-12 15:31+0300\n"
 "PO-Revision-Date: 2020-12-26 16:22+0300\n"
 "Last-Translator: Çağrı Doğan <cagrid@hotmail.com>\n"
