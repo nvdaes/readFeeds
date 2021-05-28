@@ -8,24 +8,24 @@ msgstr ""
 "Project-Id-Version: readFeeds 1.0-dev\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2013-11-16 13:26+0100\n"
-"PO-Revision-Date: 2019-07-06 22:16+0100\n"
+"PO-Revision-Date: 2021-05-22 20:59+0200\n"
 "Last-Translator: Zvonimir Stanečić <zvonimirek222@webczatnet.pl>\n"
 "Language-Team: Polish <killer@tyflonet.com>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.10\n"
+"X-Generator: Poedit 2.4.3\n"
 
 #. Translators: the label of a message box dialog.
-#, fuzzy
 msgid ""
 "Your configuration folder for NVDA contains files that seem to be derived "
 "from a previous version of this add-on.\n"
 "\t\t\tDo you want to update it?"
 msgstr ""
-"Twój folder konfiguracyjny NVDA zawiera pliki, które wydają się pochodzić z "
-"poprzedniej wersji tego dodatku. Czy chcesz je zaktualizować?"
+"Państwa folder konfiguracji NVDA zawiera pliki które wydają się pochodzić z "
+"poprzedniej wersji tego dodatku.\n"
+"\t\t\tCzy chcesz go zaktualizować?"
 
 #. Translators: the title of a message box dialog.
 msgid "Install or update add-on"
@@ -73,14 +73,12 @@ msgid "&Open feed"
 msgstr "&otwórz kanal"
 
 #. Translators: The label of a button to open a feed as HTML.
-#, fuzzy
 msgid "Open feed as &HTML"
-msgstr "&otwórz kanal"
+msgstr "Otwórz kanał jako &HTML"
 
 #. Translators: The label of a button to copy the feed URL.
-#, fuzzy
 msgid "Cop&y feed address"
-msgstr "Kopiuj kanały osobiste"
+msgstr "&Kopiuj adres kanału"
 
 #. Translators: The label of a button to add a new feed.
 msgid "&New..."
@@ -103,35 +101,32 @@ msgid "Open &folder containing a backup of feeds"
 msgstr "otwórz &folder zawierający kopię twoich osobistych kanałów"
 
 #. Translators: The label of a button to open the settings dialog for readFeeds.
-#, fuzzy
 msgid "&Preferences..."
-msgstr "P&rzywróć folder osobistych kanałów..."
+msgstr "&Ustawienia..."
 
 #. Translators: Message presented when a feed cannot be added.
 #, python-format
 msgid "Cannot add feed: %s"
-msgstr ""
+msgstr "Nie można dodać feedu: %s"
 
 #. Translators: error message.
-#, fuzzy
 msgid "Error"
-msgstr "Błąd Kopii"
+msgstr "błąd"
 
 #. Translators: the label of a message box dialog.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid ""
 "Do you want to copy feed address to the clipboard\r\n"
 "\r\n"
 "{feedAddress}?"
 msgstr ""
-"%s\r\n"
+"Czy chcesz skopiować adres kanału informacyjnego do schowka\r\n"
 "\r\n"
-"Czy chcesz skopiować tytuł i link artykułu do schowka?"
+"{feedAddress}?"
 
 #. Translators: the title of a message box dialog.
-#, fuzzy
 msgid "Copy feed address"
-msgstr "Kopiuj kanały osobiste"
+msgstr "Kopiowanie adresu kanału informacyjnego"
 
 #. Translators: Label of a dialog.
 msgid "Address of a new feed:"
@@ -168,12 +163,9 @@ msgid "&About article..."
 msgstr "&O artykule..."
 
 #. Translators: the label of a message box dialog.
-#, fuzzy, python-format
+#, python-format
 msgid "%sDo you want to copy article title and link to the clipboard?"
-msgstr ""
-"%s\r\n"
-"\r\n"
-"Czy chcesz skopiować tytuł i link artykułu do schowka?"
+msgstr "%s Czy chcesz skopiować tytuł artykułu i odnośnik do niego do schowka?"
 
 #. Translators: the title of a message box dialog.
 msgid "Article information"
@@ -214,7 +206,7 @@ msgstr "Wybierz katalog, do którego chcesz przywrócić swoje kanały osobiste"
 
 #. Translators: label of a dialog.
 msgid "&Search edit box after feeds list"
-msgstr ""
+msgstr "&Pole wyszukiwania po liście feedów"
 
 #. Translators: Presented when the current article does not have an associated title.
 msgid "Unable to locate article title."
@@ -226,15 +218,15 @@ msgstr "Nie można znaleźć linku do artykułu."
 
 #. Translators: Label of a checkbox to choose if date should be presented for each feed.
 msgid "Show date"
-msgstr ""
+msgstr "Pokaż datę"
 
 #. Translators: Label for a checkbox to show buttons for copying to clipboard.
 msgid "Show buttons to copy"
-msgstr ""
+msgstr "Pokaż przyciski do kopiowania"
 
 #. Translators: Label for a button to copy to clipboard.
 msgid "Copy"
-msgstr ""
+msgstr "Kopiuj"
 
 #. Translators: the name of a submenu.
 msgid "&Read Feeds"
@@ -253,24 +245,21 @@ msgid "R&estore feeds..."
 msgstr "P&rzywróć folder osobistych kanałów..."
 
 #. Translators: message presented in input mode.
-#, fuzzy
 msgid "Activates the Feeds dialog of Read Feeds."
-msgstr "Aktywuje dialog kanałów osobistych %s."
+msgstr "Aktywuje okno dialogowe dodatku Read Feeds."
 
 #. Translators: message presented in input mode.
-#, fuzzy
 msgid "Activates the Copy dialog of Read Feeds."
-msgstr "Aktywuje dialog kopiowania %s."
+msgstr "Aktywuje dialog kopiowania dodatku Read Feeds."
 
 #. Translators: message presented in input mode.
-#, fuzzy
 msgid "Activates the Restore dialog of Read Feeds."
-msgstr "Aktywuje dialog przywracania %s."
+msgstr "Aktywuje okno dialogowe Przywracania dodatku REad feeds."
 
 #. Translators: message presented in input mode.
 #, python-format
 msgid "Shows the %s settings."
-msgstr ""
+msgstr "Pokazuje ustawienia %s."
 
 #. Translators: message presented in input mode.
 msgid "Refreshes the current feed and announces the most recent article title."
