@@ -68,6 +68,10 @@ Opens a dialog to select a folder which replaces your feeds in the personalFeeds
 * NVDA will display an error message if it was not possible to backup or restore the personalFeeds folder, and if a new feed cannot be created.
 * The title of the articles list dialog displays the selected feed name and number of items available.
 
+## Changes for 11.0
+
+* Compatible with NVDA 2021.1
+
 ## Changes for 10.0 ##
 
 * Added a button to open the selected feed as HTML in the default web browser.
