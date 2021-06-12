@@ -28,22 +28,29 @@ def onInstall():
 		validFiles = glob.glob(path + "\\*.txt")
 		if len(pathFiles) != len(validFiles):
 			return
-		if gui.messageBox(
+	if gui.messageBox(
+		_(
 			# Translators: the label of a message box dialog.
-			_("""Your configuration folder for NVDA contains files that seem to be derived from a previous version of this add-on.
-			Do you want to update it?"""),
-			# Translators: the title of a message box dialog.
-			_("Install or update add-on"),
-			wx.YES | wx.NO | wx.ICON_WARNING) == wx.YES:
-				for file in validFiles:
-					try:
-						shutil.copy(file, FEEDS_PATH)
-					except IOError:
-						pass
-				return
-	previousFeedsPath = os.path.join(CONFIG_PATH, "addons", "readFeeds", "globalPlugins", "readFeeds", "personalFeeds")
+			"""Your configuration folder for NVDA contains files that seem to be derived
+			from a previous version of this add-on.
+			Do you want to update it?"""
+		),
+		# Translators: the title of a message box dialog.
+		_("Install or update add-on"),
+		wx.YES | wx.NO | wx.ICON_WARNING
+	) == wx.YES:
+		for file in validFiles:
+			try:
+				shutil.copy(file, FEEDS_PATH)
+			except IOError:
+				pass
+		return
+	previousFeedsPath = os.path.join(
+		CONFIG_PATH, "addons", "readFeeds",
+		"globalPlugins", "readFeeds", "personalFeeds"
+	)
 	if os.path.isdir(previousFeedsPath):
-		validFiles = glob.glob(previousFeedsPath+"\\*.txt")
+		validFiles = glob.glob(previousFeedsPath + "\\*.txt")
 		for file in validFiles:
 			try:
 				shutil.copy(file, FEEDS_PATH)
