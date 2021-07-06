@@ -20,9 +20,9 @@ msgstr ""
 #. Translators: the label of a message box dialog.
 #, fuzzy
 msgid ""
-"Your configuration folder for NVDA contains files that seem to be derived "
-"from a previous version of this add-on.\n"
-"\t\t\tDo you want to update it?"
+"Your configuration folder for NVDA contains files that seem to be derived\n"
+"\t\t\t\tfrom a previous version of this add-on.\n"
+"\t\t\t\tDo you want to update it?"
 msgstr ""
 "V priečinku s používateľskými dátami NVDA sa našli súbory zo staršej verzie "
 "tohto doplnku. Chcete ich aktualizovať?"
@@ -56,8 +56,8 @@ msgid "Feeds restored"
 msgstr "Informačné kanály obnovené"
 
 #. Translators: Title of a dialog.
-#, python-brace-format
-msgid "Feeds: {defaultFeed} ({configProfile})"
+#, fuzzy
+msgid "Feeds: {addressFile} ({getActiveProfile()})"
 msgstr "Informačné kanály: {defaultFeed} ({configProfile})"
 
 #. Translators: Label of a dialog (message translated in NVDA's core in different contexts).
@@ -186,11 +186,13 @@ msgid "Select a folder to save a backup of your current feeds"
 msgstr ""
 "Zvoľte priečinok na uloženie zálohy vašich aktuálnych informačných kanálov"
 
-#. Translators: The label of a grouping containing controls to select the destination directory in the Copy dialog.
+#. Translators: The label of a grouping containing controls to select the destination directory
+#. in the Copy dialog.
 msgid "directory for backup:"
 msgstr "Adresár zálohy:"
 
-#. Translators: The title of the dialog presented when browsing for the destination directory when copying feeds.
+#. Translators: The title of the dialog presented
+#. when browsing for the destination directory when copying feeds.
 msgid "Select directory to copy"
 msgstr "Zvoľte adresár, do ktorého chcete kopírovať"
 
@@ -202,11 +204,13 @@ msgstr "Obnoviť informačné kanály"
 msgid "Select a folder to restore a backup of your previous copied feeds"
 msgstr "Zvoľte priečinok na obnovenie zálohy informačných kanálov"
 
-#. Translators: The label of a grouping containing controls to select the destination directory in the Restore dialog.
+#. Translators: The label of a grouping containing controls to select the destination directory
+#. in the Restore dialog.
 msgid "directory containing backup:"
 msgstr "Adresár so zálohou:"
 
-#. Translators: The title of the dialog presented when browsing for the destination directory when restoring feeds.
+#. Translators: The title of the dialog presented when browsing for the destination directory
+#. when restoring feeds.
 msgid "Select directory to restore"
 msgstr "Vyberte adresár na obnovenie"
 
@@ -282,7 +286,8 @@ msgstr ""
 "Oznámy názov aktuálneho článku. Stlačené dvakrát rýchlo za sebou skopíruje "
 "názov článku a jeho odkaz do schránky."
 
-#. Translators: message presented when the information about an article of a feed is copied to the clipboard.
+#. Translators: message presented when the information about an article of a feed
+#. is copied to the clipboard.
 #, python-format
 msgid "Copied to clipboard %s"
 msgstr "%s skopírované do schránky"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: readFeeds 1.1-dev\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2014-04-11 18:00+0100\n"
-"PO-Revision-Date: 2020-12-25 15:54+0330\n"
+"PO-Revision-Date: 2021-07-04 14:52+0330\n"
 "Last-Translator: Mohammadreza Rashad <mohammadreza5712@gmail.com>\n"
 "Language-Team: NVDA Translation Team <nvda-translations@groups.io>\n"
 "Language: fa\n"
@@ -19,13 +19,13 @@ msgstr ""
 
 #. Translators: the label of a message box dialog.
 msgid ""
-"Your configuration folder for NVDA contains files that seem to be derived "
-"from a previous version of this add-on.\n"
-"\t\t\tDo you want to update it?"
+"Your configuration folder for NVDA contains files that seem to be derived\n"
+"\t\t\t\tfrom a previous version of this add-on.\n"
+"\t\t\t\tDo you want to update it?"
 msgstr ""
-"پوشه‌ی پیکربندیِ افزونه‌ی شما حاوی فایل‌هاییست که به نظر میرسد از نسخه‌ای قدیمی "
-"به جا مانده است.\n"
-"\t\t\tمیخواهید آن را به‌روز کنید؟"
+"پوشه‌ی پیکربندیِ شما حاویِ فایل‌هاییست که\n"
+"\t\t\t\tبه نظر میرسد از نسخه‌ای قدیمی از این افزونه به جا مانده است.\t\t\t"
+"\tمیخواهید آن را به‌روز کنید؟"
 
 #. Translators: the title of a message box dialog.
 msgid "Install or update add-on"
@@ -56,9 +56,8 @@ msgid "Feeds restored"
 msgstr "خوراک‌ها بازگردانده شدند"
 
 #. Translators: Title of a dialog.
-#, python-brace-format
-msgid "Feeds: {defaultFeed} ({configProfile})"
-msgstr "خوراک‌ها: {defaultFeed} ({configProfile})"
+msgid "Feeds: {addressFile} ({getActiveProfile()})"
+msgstr "خوراک‌ها: {addressFile} ({getActiveProfile()})"
 
 #. Translators: Label of a dialog (message translated in NVDA's core in different contexts).
 msgid "&Filter by:"
@@ -178,11 +177,13 @@ msgstr "کپی کردنِ خوراک‌ها"
 msgid "Select a folder to save a backup of your current feeds"
 msgstr "پوشه‌ای را برای ذخیره‌ی نسخه‌ی پشتیبان از خوراک‌های جاری انتخاب کنید"
 
-#. Translators: The label of a grouping containing controls to select the destination directory in the Copy dialog.
+#. Translators: The label of a grouping containing controls to select the destination directory
+#. in the Copy dialog.
 msgid "directory for backup:"
 msgstr "پوشه‌ای برای پشتیبانگیری:"
 
-#. Translators: The title of the dialog presented when browsing for the destination directory when copying feeds.
+#. Translators: The title of the dialog presented
+#. when browsing for the destination directory when copying feeds.
 msgid "Select directory to copy"
 msgstr "پوشه‌ای را برای کپی کردنِ خوراک‌ها در آن انتخاب کنید"
 
@@ -196,11 +197,13 @@ msgstr ""
 "پوشه‌ای را برای برگرداندنِ یک نسخه‌ی پشتیبان از خوراک‌های از پیش کپی‌شده‌ی‌تان "
 "انتخاب کنید"
 
-#. Translators: The label of a grouping containing controls to select the destination directory in the Restore dialog.
+#. Translators: The label of a grouping containing controls to select the destination directory
+#. in the Restore dialog.
 msgid "directory containing backup:"
 msgstr "پوشه‌ی حاویِ پشتیبان:"
 
-#. Translators: The title of the dialog presented when browsing for the destination directory when restoring feeds.
+#. Translators: The title of the dialog presented when browsing for the destination directory
+#. when restoring feeds.
 msgid "Select directory to restore"
 msgstr "پوشه‌ای را برای بازگرداندن انتخاب کنید"
 
@@ -273,7 +276,8 @@ msgstr ""
 "عنوانِ مقاله‌ی جاری را میخوانَد. وقتی دو بار فشرده شود، عنوان و لینک مربوط به "
 "آن را در کلیپ‌برد کپی میکند."
 
-#. Translators: message presented when the information about an article of a feed is copied to the clipboard.
+#. Translators: message presented when the information about an article of a feed
+#. is copied to the clipboard.
 #, python-format
 msgid "Copied to clipboard %s"
 msgstr "در کلیپ‌برد کپی شد: %s"

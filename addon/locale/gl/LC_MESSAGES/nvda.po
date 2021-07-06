@@ -19,10 +19,11 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Translators: the label of a message box dialog.
+#, fuzzy
 msgid ""
-"Your configuration folder for NVDA contains files that seem to be derived "
-"from a previous version of this add-on.\n"
-"\t\t\tDo you want to update it?"
+"Your configuration folder for NVDA contains files that seem to be derived\n"
+"\t\t\t\tfrom a previous version of this add-on.\n"
+"\t\t\t\tDo you want to update it?"
 msgstr ""
 "A carpeta de configuración do NVDA contén ficheiros que parecen derivar "
 "dunha versión anterior de este complemento.\n"
@@ -57,8 +58,8 @@ msgid "Feeds restored"
 msgstr "Feeds restaurados"
 
 #. Translators: Title of a dialog.
-#, python-brace-format
-msgid "Feeds: {defaultFeed} ({configProfile})"
+#, fuzzy
+msgid "Feeds: {addressFile} ({getActiveProfile()})"
 msgstr "Feeds: {defaultFeed} ({configProfile})"
 
 #. Translators: Label of a dialog (message translated in NVDA's core in different contexts).
@@ -179,11 +180,13 @@ msgid "Select a folder to save a backup of your current feeds"
 msgstr ""
 "Seleciona un cartafol para gardar unha copia de seguridade dos feeds actuais"
 
-#. Translators: The label of a grouping containing controls to select the destination directory in the Copy dialog.
+#. Translators: The label of a grouping containing controls to select the destination directory
+#. in the Copy dialog.
 msgid "directory for backup:"
 msgstr "directorio para copia de seguridade:"
 
-#. Translators: The title of the dialog presented when browsing for the destination directory when copying feeds.
+#. Translators: The title of the dialog presented
+#. when browsing for the destination directory when copying feeds.
 msgid "Select directory to copy"
 msgstr "Selecionar directorio a copiar"
 
@@ -197,11 +200,13 @@ msgstr ""
 "Seleciona un cartafol para restaurar unha copia de seguridade do teu feed "
 "copiado con anterioridade"
 
-#. Translators: The label of a grouping containing controls to select the destination directory in the Restore dialog.
+#. Translators: The label of a grouping containing controls to select the destination directory
+#. in the Restore dialog.
 msgid "directory containing backup:"
 msgstr "directorio que contén copias de seguridade:"
 
-#. Translators: The title of the dialog presented when browsing for the destination directory when restoring feeds.
+#. Translators: The title of the dialog presented when browsing for the destination directory
+#. when restoring feeds.
 msgid "Select directory to restore"
 msgstr "Selecionar directorio a restaurar"
 
@@ -274,7 +279,8 @@ msgstr ""
 "Anuncia o título do artigo actual. Premedo dúas veces, copia o título e a "
 "liga relacionada ó portapapeis."
 
-#. Translators: message presented when the information about an article of a feed is copied to the clipboard.
+#. Translators: message presented when the information about an article of a feed
+#. is copied to the clipboard.
 #, python-format
 msgid "Copied to clipboard %s"
 msgstr "%s copiado ó portapapeis"

@@ -20,9 +20,9 @@ msgstr ""
 #. Translators: the label of a message box dialog.
 #, fuzzy
 msgid ""
-"Your configuration folder for NVDA contains files that seem to be derived "
-"from a previous version of this add-on.\n"
-"\t\t\tDo you want to update it?"
+"Your configuration folder for NVDA contains files that seem to be derived\n"
+"\t\t\t\tfrom a previous version of this add-on.\n"
+"\t\t\t\tDo you want to update it?"
 msgstr ""
 "Dosarul de configurație pentru NVDA conține fișiere care par a fi derivate "
 "dintr-o versiune anterioară a acestui add-on. Doriți să actualizați dosarul?"
@@ -56,8 +56,8 @@ msgid "Feeds restored"
 msgstr "Fluxuri restaurate"
 
 #. Translators: Title of a dialog.
-#, python-brace-format
-msgid "Feeds: {defaultFeed} ({configProfile})"
+#, fuzzy
+msgid "Feeds: {addressFile} ({getActiveProfile()})"
 msgstr "Fluxuri: {defaultFeed} ({configProfile})"
 
 #. Translators: Label of a dialog (message translated in NVDA's core in different contexts).
@@ -184,11 +184,13 @@ msgstr ""
 "\n"
 "tEle vor fi copiate de la %s"
 
-#. Translators: The label of a grouping containing controls to select the destination directory in the Copy dialog.
+#. Translators: The label of a grouping containing controls to select the destination directory
+#. in the Copy dialog.
 msgid "directory for backup:"
 msgstr "Dosar pentru copia de siguranță:"
 
-#. Translators: The title of the dialog presented when browsing for the destination directory when copying feeds.
+#. Translators: The title of the dialog presented
+#. when browsing for the destination directory when copying feeds.
 msgid "Select directory to copy"
 msgstr "Selectați dosarul pentru copiere"
 
@@ -204,11 +206,13 @@ msgstr ""
 "\n"
 "tEle vor fi copiate la %s"
 
-#. Translators: The label of a grouping containing controls to select the destination directory in the Restore dialog.
+#. Translators: The label of a grouping containing controls to select the destination directory
+#. in the Restore dialog.
 msgid "directory containing backup:"
 msgstr "Dosarul care conține copia de siguranță:"
 
-#. Translators: The title of the dialog presented when browsing for the destination directory when restoring feeds.
+#. Translators: The title of the dialog presented when browsing for the destination directory
+#. when restoring feeds.
 msgid "Select directory to restore"
 msgstr "Selectați dosarul pentru restaurare"
 
@@ -282,7 +286,8 @@ msgstr ""
 "Anunță titlul articolului curent. Apăsat de două ori, copiază titlul și "
 "legătura respectivă în planșetă."
 
-#. Translators: message presented when the information about an article of a feed is copied to the clipboard.
+#. Translators: message presented when the information about an article of a feed
+#. is copied to the clipboard.
 #, python-format
 msgid "Copied to clipboard %s"
 msgstr "%s copiat în planșetă"
