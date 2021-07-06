@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: readFeeds\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2013-11-16 13:26+0100\n"
-"PO-Revision-Date: 2020-12-25 16:10+0200\n"
+"PO-Revision-Date: 2021-07-04 18:11+0200\n"
 "Last-Translator: Jani Kinnunen <jani.kinnunen@wippies.fi>\n"
 "Language-Team: Finnish <jani.kinnunen@wippies.fi>\n"
 "Language: fi\n"
@@ -20,9 +20,9 @@ msgstr ""
 
 #. Translators: the label of a message box dialog.
 msgid ""
-"Your configuration folder for NVDA contains files that seem to be derived "
-"from a previous version of this add-on.\n"
-"\t\t\tDo you want to update it?"
+"Your configuration folder for NVDA contains files that seem to be derived\n"
+"\t\t\t\tfrom a previous version of this add-on.\n"
+"\t\t\t\tDo you want to update it?"
 msgstr ""
 "NVDA:n asetuskansiossa on tiedostoja, jotka ovat peräisin tämän lisäosan "
 "aiemmasta versiosta.\n"
@@ -57,9 +57,8 @@ msgid "Feeds restored"
 msgstr "Syötteet palautettu"
 
 #. Translators: Title of a dialog.
-#, python-brace-format
-msgid "Feeds: {defaultFeed} ({configProfile})"
-msgstr "Syötteet: {defaultFeed} ({configProfile})"
+msgid "Feeds: {addressFile} ({getActiveProfile()})"
+msgstr "Syötteet: {addressFile} ({getActiveProfile()})"
 
 #. Translators: Label of a dialog (message translated in NVDA's core in different contexts).
 msgid "&Filter by:"
@@ -178,11 +177,13 @@ msgstr "Kopioi syötteet"
 msgid "Select a folder to save a backup of your current feeds"
 msgstr "Valitse kansio, johon nykyisten syötteidesi varmuuskopio tallennetaan."
 
-#. Translators: The label of a grouping containing controls to select the destination directory in the Copy dialog.
+#. Translators: The label of a grouping containing controls to select the destination directory
+#. in the Copy dialog.
 msgid "directory for backup:"
 msgstr "Varmuuskopion kansio:"
 
-#. Translators: The title of the dialog presented when browsing for the destination directory when copying feeds.
+#. Translators: The title of the dialog presented
+#. when browsing for the destination directory when copying feeds.
 msgid "Select directory to copy"
 msgstr "Valitse kopioitava kansio"
 
@@ -195,11 +196,13 @@ msgid "Select a folder to restore a backup of your previous copied feeds"
 msgstr ""
 "Valitse kansio, josta aiemmin kopioimasi syötteiden varmuuskopio palautetaan."
 
-#. Translators: The label of a grouping containing controls to select the destination directory in the Restore dialog.
+#. Translators: The label of a grouping containing controls to select the destination directory
+#. in the Restore dialog.
 msgid "directory containing backup:"
 msgstr "Varmuuskopion sisältävä kansio:"
 
-#. Translators: The title of the dialog presented when browsing for the destination directory when restoring feeds.
+#. Translators: The title of the dialog presented when browsing for the destination directory
+#. when restoring feeds.
 msgid "Select directory to restore"
 msgstr "Valitse palautettava kansio"
 
@@ -272,7 +275,8 @@ msgstr ""
 "Lukee nykyisen artikkelin otsikon. Kahdesti painettaessa otsikko ja "
 "artikkelin linkki kopioidaan leikepöydälle."
 
-#. Translators: message presented when the information about an article of a feed is copied to the clipboard.
+#. Translators: message presented when the information about an article of a feed
+#. is copied to the clipboard.
 #, python-format
 msgid "Copied to clipboard %s"
 msgstr "%s kopioitu leikepöydälle"

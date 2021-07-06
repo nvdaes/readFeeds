@@ -18,10 +18,11 @@ msgstr ""
 "X-Generator: Poedit 1.5.7\n"
 
 #. Translators: the label of a message box dialog.
+#, fuzzy
 msgid ""
-"Your configuration folder for NVDA contains files that seem to be derived "
-"from a previous version of this add-on.\n"
-"\t\t\tDo you want to update it?"
+"Your configuration folder for NVDA contains files that seem to be derived\n"
+"\t\t\t\tfrom a previous version of this add-on.\n"
+"\t\t\t\tDo you want to update it?"
 msgstr ""
 "Vaša NVDA konfiguracijska mapa vsebuje datoteke, za katere izgleda, da so "
 "del prejšnje različice tega dodatka.\n"
@@ -56,7 +57,8 @@ msgid "Feeds restored"
 msgstr "Viri obnovljeni"
 
 #. Translators: Title of a dialog.
-msgid "Feeds: {defaultFeed} ({configProfile})"
+#, fuzzy
+msgid "Feeds: {addressFile} ({getActiveProfile()})"
 msgstr "Viri: {defaultFeed} ({configProfile})"
 
 #. Translators: Label of a dialog (message translated in NVDA's core in different contexts).
@@ -113,6 +115,7 @@ msgid "Error"
 msgstr "Napaka"
 
 #. Translators: the label of a message box dialog.
+#, python-brace-format
 msgid ""
 "Do you want to copy feed address to the clipboard\r\n"
 "\r\n"
@@ -177,11 +180,13 @@ msgid "Select a folder to save a backup of your current feeds"
 msgstr ""
 "Izberite mapo, kamor želite shraniti varnostno kopijo vaših trenutnih virov."
 
-#. Translators: The label of a grouping containing controls to select the destination directory in the Copy dialog.
+#. Translators: The label of a grouping containing controls to select the destination directory
+#. in the Copy dialog.
 msgid "directory for backup:"
 msgstr "imenik za varnostno kopijo:"
 
-#. Translators: The title of the dialog presented when browsing for the destination directory when copying feeds.
+#. Translators: The title of the dialog presented
+#. when browsing for the destination directory when copying feeds.
 msgid "Select directory to copy"
 msgstr "Izbira imenika za preslikavo"
 
@@ -195,11 +200,13 @@ msgstr ""
 "Izberite mapo, kamor se bodo obnovili viri iz prej ustvarjene varnostne "
 "kopije."
 
-#. Translators: The label of a grouping containing controls to select the destination directory in the Restore dialog.
+#. Translators: The label of a grouping containing controls to select the destination directory
+#. in the Restore dialog.
 msgid "directory containing backup:"
 msgstr "imenik, ki vsebuje varnostno kopijo"
 
-#. Translators: The title of the dialog presented when browsing for the destination directory when restoring feeds.
+#. Translators: The title of the dialog presented when browsing for the destination directory
+#. when restoring feeds.
 msgid "Select directory to restore"
 msgstr "Izbira mape za obnovitev"
 
@@ -272,7 +279,8 @@ msgstr ""
 "Naznani naslov trenutnega članka. Če pritisnete dvakrat, v odložišče "
 "preslika ta naslov in ustrezno povezavo."
 
-#. Translators: message presented when the information about an article of a feed is copied to the clipboard.
+#. Translators: message presented when the information about an article of a feed
+#. is copied to the clipboard.
 #, python-format
 msgid "Copied to clipboard %s"
 msgstr "%s preslikano v odložišče"
