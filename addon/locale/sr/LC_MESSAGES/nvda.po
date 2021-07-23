@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: readFeeds 2.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2014-12-19 18:00+1000\n"
-"PO-Revision-Date: 2021-02-05 15:50+0100\n"
+"PO-Revision-Date: 2021-07-22 17:11+0100\n"
 "Last-Translator: Nikola Jović <wwenikola123@gmail.com>\n"
 "Language-Team: Serbian <wwenikola123@gmail.com>\n"
 "Language: sr\n"
@@ -18,15 +18,14 @@ msgstr ""
 "X-Generator: Poedit 1.6.10\n"
 
 #. Translators: the label of a message box dialog.
-#, fuzzy
 msgid ""
 "Your configuration folder for NVDA contains files that seem to be derived\n"
 "\t\t\t\tfrom a previous version of this add-on.\n"
 "\t\t\t\tDo you want to update it?"
 msgstr ""
-"Vaš NVDA folder sa podešavanjima sadrži datoteke iz starije verzije ovog "
-"dodatka.\n"
-"\t\t\tDa li želite da ga ažurirate?"
+"Vaš folder sa NVDA podešavanjima sadrži datoteke koje su iz \n"
+"\t\t\t\tprethodne verzije ovog dodatka.\n"
+"\t\t\t\tDa li želite da ih ažurirate?"
 
 #. Translators: the title of a message box dialog.
 msgid "Install or update add-on"
@@ -57,9 +56,8 @@ msgid "Feeds restored"
 msgstr "Izvodi vraćeni"
 
 #. Translators: Title of a dialog.
-#, fuzzy
 msgid "Feeds: {addressFile} ({getActiveProfile()})"
-msgstr "Izvodi: {defaultFeed} ({configProfile})"
+msgstr "Izvodi: {addressFile} ({getActiveProfile()})"
 
 #. Translators: Label of a dialog (message translated in NVDA's core in different contexts).
 msgid "&Filter by:"
