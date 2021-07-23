@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: ReadFeeds 3.0-dev\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
 "POT-Creation-Date: 2015-07-24 10:22+0200\n"
-"PO-Revision-Date: 2021-06-24 17:39+0100\n"
+"PO-Revision-Date: 2021-07-19 09:40+0100\n"
 "Last-Translator: Chris <llajta2012@gmail.com>\n"
 "Language-Team: Italian <simone.dalmaso@gmail.com>\n"
 "Language: it_IT\n"
@@ -18,15 +18,14 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 
 #. Translators: the label of a message box dialog.
-#, fuzzy
 msgid ""
 "Your configuration folder for NVDA contains files that seem to be derived\n"
 "\t\t\t\tfrom a previous version of this add-on.\n"
 "\t\t\t\tDo you want to update it?"
 msgstr ""
-"Nella cartella di configurazione di NVDA sono presenti alcuni file "
-"provenienti da una precedente versione di ReadFeeds.\n"
-"\t\t\tVuoi aggiornare?"
+"Nella cartella di configurazione di NVDA sono presenti\n"
+"\t\t\t\t alcuni file provenienti da una precedente versione di ReadFeeds.\n"
+"\t\t\t\tVuoi aggiornare?"
 
 #. Translators: the title of a message box dialog.
 msgid "Install or update add-on"
