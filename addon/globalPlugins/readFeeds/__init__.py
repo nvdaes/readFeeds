@@ -133,7 +133,7 @@ class FeedsDialog(wx.Dialog):
 		addressFile = config.conf["readFeeds"]["addressFile"]
 		super(FeedsDialog, self).__init__(
 			# Translators: Title of a dialog.
-			parent, title=_(f"Feeds: {addressFile} ({getActiveProfile()})")
+			parent, title=_("Feeds: {file} ({profile})".format(file=addressFile, profile=getActiveProfile()))
 		)
 
 		mainSizer = wx.BoxSizer(wx.VERTICAL)
