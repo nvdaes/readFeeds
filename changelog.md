@@ -1,5 +1,3 @@
-## Changes for 11.0 ##
-
-* Compatible with NVDA 2021.1.
+## Changes for 11.1 ##
 * Updated translations.
 
