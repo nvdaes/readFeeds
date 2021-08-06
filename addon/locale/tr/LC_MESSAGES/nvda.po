@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Read feeds 4.0\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2020-10-12 15:31+0300\n"
-"PO-Revision-Date: 2020-12-26 16:22+0300\n"
+"PO-Revision-Date: 2021-07-30 15:22+0300\n"
 "Last-Translator: Çağrı Doğan <cagrid@hotmail.com>\n"
 "Language-Team: cagrid@hotmail.com\n"
 "Language: tr\n"
@@ -13,18 +13,18 @@ msgstr ""
 "X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
 "X-Poedit-Basepath: ../../../globalPlugins/readFeeds\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 2.4.2\n"
+"X-Generator: Poedit 3.0\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #. Translators: the label of a message box dialog.
-#, fuzzy
 msgid ""
 "Your configuration folder for NVDA contains files that seem to be derived\n"
 "\t\t\t\tfrom a previous version of this add-on.\n"
 "\t\t\t\tDo you want to update it?"
 msgstr ""
-"NVDA için yapılandırma klasörünüz, bu eklentinin önceki bir sürümünden "
-"türetilmiş gibi görünen dosyalar içeriyor. Güncellemek ister misiniz?"
+"NVDA için yapılandırma klasörünüz, bu eklentinin önceki bir sürümünden\n"
+"\t\t\t\ttüretilmiş gibi görünen dosyalar içeriyor.\n"
+"\t\t\t\tGüncellemek istiyor musunuz?"
 
 #. Translators: the title of a message box dialog.
 msgid "Install or update add-on"
@@ -54,9 +54,9 @@ msgid "Feeds restored"
 msgstr "Kaynaklar geri yüklendi"
 
 #. Translators: Title of a dialog.
-#, fuzzy
-msgid "Feeds: {addressFile} ({getActiveProfile()})"
-msgstr "Haber Akışları: {defaultFeed} ({configProfile})"
+#, fuzzy, python-brace-format
+msgid "Feeds: {file} ({profile})"
+msgstr "Akışlar: {addressFile} ({getActiveProfile()})"
 
 #. Translators: Label of a dialog (message translated in NVDA's core in different contexts).
 msgid "&Filter by:"

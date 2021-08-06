@@ -1,7 +1,7 @@
 # Read Feeds #
 
 * Auteurs : Noelia Ruiz Martínez, Mesar Hameed
-* NVDA compatibility: 2019.3 or later
+* Compatibilité NVDA : 2019.3 ou ultérieure
 * Télécharger [version stable][1]
 * Télécharger [version de développement][2]
 
@@ -11,7 +11,7 @@ RSS à l'aide de NVDA. Les flux ne sont pas actualisés automatiquement.
 Ci-dessous lorsque nous mentionnons flux, nous voulons dire que les deux
 signifient flux RSS et ATOM.
 
-## Installation or Update ##
+## Installation ou Mise à jour ##
 
 Si vous utilisiez une version antérieure de cette extension, il y a un
 dossier RSS ou personalFeeds dans votre dossier de configuration personnel
@@ -20,22 +20,23 @@ vous demandera si vous souhaitez mettre à jour ou installer.  Choisissez
 mise à jour pour préserver vos flux enregistrés et pour continuer à les
 utiliser dans la nouvelle version installée de readFeeds.
 
-## Commands ##
+## Commandes ##
 
 ### Menu Read Feeds ###
 
 Vous pouvez accéder au sous-menu Read Feeds depuis le menu NVDA, sous-menu
-Outils, où les suivantes  options du menu sont disponibles :
+Outils, où les options suivantes du menu sont disponibles :
 
-#### Feeds ####
+#### Flux ####
 
 Ouvre une boîte de dialogue avec les contrôles suivants :
 
 * Filtrer par : Une zone d'édition pour rechercher des flux précédemment
   enregistrés.
-* A list of the saved feeds, focused when the dialog is opened.
+* Une liste des flux enregistrés, a le focus lorsque la boîte de dialogue
+  est ouverte.
 * Liste des articles : Ouvre une boîte de dialogue qui présente la liste des
-  articles de vvos flux actuel. Sélectionnez l'article que vous souhaitez
+  articles de vos flux actuel. Sélectionnez l'article que vous souhaitez
   lire et appuyer sur Entrée ou Ouvrir la page Web du bouton de l'article
   sélectionné pour ouvrir la page correspondante dans votre
   navigateur. Appuyez sur le bouton À propos de l'article pour ouvrir une
@@ -43,11 +44,12 @@ Ouvre une boîte de dialogue avec les contrôles suivants :
   dans cette boîte de dialogue, vous serez en mesure de copier ces
   informations dans le presse-papiers.
 * Ouvrir le flux : Ouvre le flux sélectionné dans l'application par défaut.
-* Open feed as HTML: Opens the selected feed in the default web browser. You
-  will be able to show or hide publication dates and buttons to copy
-  information about articles to clipboard.
-* Copy feed address: Opens a dialog to confirm if you want to copy the feed
-  address to clipboard.
+* Ouvrir le flux au format HTML : ouvre le flux sélectionné dans le
+  navigateur Web par défaut. Vous pourrez afficher ou masquer les dates de
+  publication et les boutons pour copier les informations sur les articles
+  dans le presse-papiers.
+* Copier l'adresse du flux : ouvre une boîte de dialogue pour confirmer si
+  vous souhaitez copier l'adresse du flux dans le presse-papiers.
 * Nouveau : Ouvre une boîte de dialogue avec une zone d'édition pour entrer
   l'adresse d'un nouveau flux. Si l'adresse est valide et que le flux peut
   être enregistré, son nom, basé sur le titre du flux, apparaît au bas de la
@@ -58,11 +60,13 @@ Ouvre une boîte de dialogue avec les contrôles suivants :
   après confirmation.
 * Définir par défaut : Définit le flux sélectionné comme valeur par défaut,
   afin que ses articles soient accessibles avec les gestes de NVDA.
-* Open folder containing a backup of feeds: Opens a folder which may contain
-  a backup of feeds. This can be useful to explore and delete feeds which
-  shouldn't be imported when the add-on is updated.
-* Preferences: Opens the settings dialog for readFeeds, also available in
-  NVDA's menu, Preferences, settings, readFeeds category.
+* Ouvrir le dossier contenant une sauvegarde des flux : Ouvre un dossier
+  pouvant contenir une sauvegarde des flux. Cela peut être utile pour
+  explorer et supprimer des flux qui ne doivent pas être importés lors de la
+  mise à jour de l'extension.
+* Préférences : Ouvre la boîte de dialogue des paramètres pour readFeeds,
+  également disponible dans le menu de NVDA, Préférences, paramètres,
+  catégorie readFeeds.
 * Fermer : Ferme la boîte de dialogue Flux.
 
 ##### Notes #####
@@ -72,24 +76,25 @@ Ouvre une boîte de dialogue avec les contrôles suivants :
 * Le flux défini par défaut ne peut pas être supprimé. Le flux addressFile
   sera utilisé comme valeur par défaut lors de la réinitialisation de la
   configuration, donc il ne peut pas être supprimé.
-* The Filter by edit box can be placed after the Open article button from
-  NVDA's menu, Preferences, Settings, Read feeds category, or pressing the
-  Preferences button of the Feeds dialog.
+* Le champ d'édition Filtrer par peut être placée après le bouton Ouvrir
+  l'article dans le menu de NVDA, Préférences, Paramètres, Catégorie Lire
+  les flux, ou en appuyant sur le bouton Préférences de la boîte de dialogue
+  Flux.
 
-#### Copy feeds folder ####
+#### Copier le dossier des flux ####
 
 Ouvre une boîte de dialogue pour choisir un dossier dans lequel vous pouvez
 enregistrer le dossier personalFeeds de vos flux. Par défaut, le dossier
 sélectionné est dans la configuration de NVDA, qui créera le répertoire
 personalFeeds.
 
-#### Restore feeds ####
+#### Restaurer les flux ####
 
 Ouvre une boîte de dialogue pour sélectionner un dossier qui remplace vos
 flux dans le dossier personalFeeds. Assurez-vous de charger un dossier
 contenant des URL de flux.
 
-### Keyboard commands ###
+### Commandes clavier ###
 
 * Ctrl+Maj+NVDA+Espace : Annonce l'URL de l'article actuel. En appuyant deux
   fois ouvrira la page web.
@@ -105,50 +110,54 @@ contenant des URL de flux.
 * Lorsque le titre ou l'URL ont été copiés.
 * Lorsqu'il est Impossible de se connecter/actualiser un flux, ou l'URL ne
   correspond pas à un flux valide.
-* NVDA will display an error message if it was not possible to backup or
-  restore the personalFeeds folder, and if a new feed cannot be created.
+* NVDA affichera un message d'erreur s'il n'a pas été possible de
+  sauvegarder ou de restaurer le dossier personalFeeds, et si un nouveau
+  flux ne peut pas être créé.
 * La boîte de dialogue affiche Le titre de la Liste de l'article le nom de
   flux sélectionné et le nombre d'éléments disponibles.
 
-## Changes for 10.0 ##
+## Changements pour la version 10.0 ##
 
-* Added a button to open the selected feed as HTML in the default web
-  browser.
-* If a new feed cannot be created, this will be notified in an error dialog.
-* Improved order and presentation of some articles.
-* More feeds may be supported.
-* When the feeds dialog is opened, the list of feeds will be focused instead
-  of the search edit box.
-* You can choose if the search edit box is placed after the list of feeds,
-  useful to focus the list even when switching from another window without
-  closing the Feeds dialog.
-* Added a button to copy the feed address to clipboard from the feeds
-  dialog.
+* Ajout d'un bouton pour ouvrir le flux sélectionné au format HTML dans le
+  navigateur Web par défaut.
+* Si un nouveau flux ne peut pas être créé, cela sera notifié par un
+  dialogue d'erreur.
+* Amélioration de l'ordre et de la présentation de certains articles.
+* Davantage de flux peuvent être pris en charge.
+* Lorsque la boîte de dialogue des flux est ouverte, la liste des flux aura
+  le focus au lieu de la zone d'édition de recherche.
+* Vous pouvez choisir si la zone d'édition de recherche est placée après la
+  liste des flux, utile pour mettre en focus la liste même lorsque vous
+  basculez d'une autre fenêtre sans fermer la boîte de dialogue Flux.
+* Ajout d'un bouton pour copier l'adresse du flux dans le presse-papiers à
+  partir de la boîte de dialogue des flux.
 
-## Changes for 9.0 ##
+## Changements pour la version 9.0 ##
 
-* Requires NVDA 2019.3 or later.
+* Nécessite NVDA 2019.3 ou ultérieure.
 
-## Changes for 8.0 ##
+## Changements pour la version 8.0 ##
 
-* When the add-on is updated, feeds saved in the previous version of the
-  add-on will be automatically copied to the new version, unless you prefer
-  to import feeds saved in the main configuration folder of NVDA.
-* When using the dialog to copy feeds, if the chosen folder is not named
-  personalFeeds, a subfolder with this name will be created to prevent the
-  deletion of directories containing important data, such as Documents or
-  Downloads.
+* Lorsque l'extension est mise à jour, les flux enregistrés dans la version
+  précédente de l'extension seront automatiquement copiés dans la nouvelle
+  version, à moins que vous ne préfériez importer les flux enregistrés dans
+  le dossier de configuration principal de NVDA.
+* Lors de l'utilisation de la boîte de dialogue pour copier des flux, si le
+  dossier choisi n'est pas nommé personalFeeds, un sous-dossier portant ce
+  nom sera créé pour empêcher la suppression des répertoires contenant des
+  données importantes, telles que Documents ou Téléchargements.
 
-## Changes for 7.0 ##
+## Changements pour la version 7.0 ##
 
-* The Feeds dialog includes a button to open a folder which may contain a
-  backup of feeds.
-* When using the edit box to filter feeds, if no results are found, the list
-  of feeds and other controls are disabled, so that NVDA doesn't report
-  "unknown" in the empty list.
-* If the list of articles dialog can't be shown, for example due to errors
-  in the feed, NVDA will raise an error, so that the feeds dialog can be
-  used without restarting NVDA.
+* La boîte de dialogue Flux comprend un bouton pour ouvrir un dossier
+  pouvant contenir une sauvegarde des flux.
+* Lorsque vous utilisez la zone d'édition pour filtrer les flux, si aucun
+  résultat n'est trouvé, la liste des flux et autres contrôles sont
+  désactivés, afin que NVDA ne signale pas "inconnu" dans la liste vide.
+* Si la boîte de dialogue de la liste des articles ne peut pas être
+  affichée, par exemple en raison d'erreurs dans le flux, NVDA générera une
+  erreur, afin que la boîte de dialogue des flux puisse être utilisée sans
+  redémarrer NVDA.
 
 ## Changements pour la version 6.0 ##
 

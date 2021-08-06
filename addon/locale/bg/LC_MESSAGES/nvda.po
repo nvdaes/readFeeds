@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: readFeeds 1.0-dev\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2013-11-16 13:26+0100\n"
-"PO-Revision-Date: 2021-06-25 22:06+0300\n"
+"PO-Revision-Date: 2021-07-30 21:43+0300\n"
 "Last-Translator: Kostadin Kolev <k_kolev1985@mail.bg>\n"
 "Language-Team: Български <>\n"
 "Language: bg\n"
@@ -59,8 +59,9 @@ msgid "Feeds restored"
 msgstr "Източниците са възстановени"
 
 #. Translators: Title of a dialog.
-msgid "Feeds: {addressFile} ({getActiveProfile()})"
-msgstr "Емисии: {addressFile} ({getActiveProfile()})"
+#, python-brace-format
+msgid "Feeds: {file} ({profile})"
+msgstr "Емисии: {file} ({profile})"
 
 #. Translators: Label of a dialog (message translated in NVDA's core in different contexts).
 msgid "&Filter by:"
