@@ -10,7 +10,7 @@ Este extra fornece uma maneira directa de ler feeds em formatos Atom ou RSS
 usando o NVDA. Os feeds não serão actualizados automaticamente. quando
 falamos de feeds, queremos dizer feeds RSS e ATOM.
 
-## Installation or Update ##
+## Instalação ou Actualização ##
 
 Se usou uma versão anterior deste addon e existe uma pasta RSS ou
 pessoalFeeds na sua pasta pessoal de configuração do NVDA, ao instalar a
@@ -18,7 +18,7 @@ versão actual, uma caixa de diálogo perguntará se deseja actualizar ou
 instalar. Escolha a actualização para preservar os seus feeds guardados e
 continuar a usá-los na nova versão instalada do readFeeds.
 
-## Commands ##
+## Comandos: ##
 
 ### Menu do leitor de RSS: ###
 
@@ -31,7 +31,7 @@ Abre um diálogo com os seguintes controlos:
 
 * Filtrar por: Uma caixa de edição para procurar feeds guardados
   anteriormente.
-* A list of the saved feeds, focused when the dialog is opened.
+* Uma lista dos feeds guardados, focalizada quando o diálogo é aberto.
 * Lista de artigos: abre uma caixa de diálogo que apresenta a lista de
   artigos do seu feed actual. Seleccione o artigo que deseja ler e pressione
   Enter ou o botão Abrir página da web do artigo seleccionado para abrir a
@@ -40,11 +40,11 @@ Abre um diálogo com os seguintes controlos:
   seleccionado; nesta caixa de diálogo, poderá copiar essa informação para a
   área de transferência.
 * Abrir RSS: abre o feed seleccionado na aplicação padrão.
-* Open feed as HTML: Opens the selected feed in the default web browser. You
-  will be able to show or hide publication dates and buttons to copy
-  information about articles to clipboard.
-* Copy feed address: Opens a dialog to confirm if you want to copy the feed
-  address to clipboard.
+* Abrir feed como HTML: Abre o feed seleccionado no navegador web
+  predefinido. Poderá mostrar ou ocultar datas de publicação e botões para
+  copiar informações sobre artigos para a área de transferência.
+* Copiar o endereço do feed: Abre um diálogo para confirmar se deseja copiar
+  o endereço do feed para a área de transferência.
 * Novo: abre uma caixa de diálogo com uma caixa de edição para inserir o
   endereço de um novo feed. Se o endereço for válido e o feed puder ser
   guardado, o seu nome, com base no título do feed, aparecerá na parte
@@ -58,8 +58,9 @@ Abre um diálogo com os seguintes controlos:
 * Abrir pasta que contenha um backup de feeds: Abre uma pasta que pode
   conter um backup de feeds. Isto pode ser útil para explorar e excluir
   feeds que não devam ser importados quando o extra é actualizado.
-* Preferences: Opens the settings dialog for readFeeds, also available in
-  NVDA's menu, Preferences, settings, readFeeds category.
+* Preferências: Abre o diálogo de definições para o readFeeds, também
+  disponível no menu do NVDA, Preferências, configurações, categoria
+  readFeeds.
 * Fechar: fecha o diálogo de RSS;
 
 ##### Notas: #####
@@ -70,23 +71,23 @@ Abre um diálogo com os seguintes controlos:
 * O feed definido por defeito não pode ser removido. O ficheiro de endereço
   do feed será usado como padrão quando a configuração for reiniciada,
   portanto não pode ser excluído.
-* The Filter by edit box can be placed after the Open article button from
-  NVDA's menu, Preferences, Settings, Read feeds category, or pressing the
-  Preferences button of the Feeds dialog.
+* A caixa de edição "Filtrar por" pode ser colocada após o botão Abrir
+  artigo do menu do NVDA, Preferências, configurações, Categoria Leitura de
+  feeds, ou pressionar o botão Preferências da caixa de diálogo Feeds.
 
-#### Copy feeds folder ####
+#### Copiar a pasta de feeds ####
 
 Abre uma caixa de diálogo para escolher uma pasta onde pode guardar o seu
 directório pessoal de RSS . Por padrão, a pasta seleccionada é o diretório
 de configuração do NVDA, que criará o diretório de feeds pessoais.
 
-#### Restore feeds ####
+#### Recuperar feeds ####
 
 Abre uma caixa de diálogo para seleccionar uma pasta que substitui os seus
 feeds na pasta personalFeeds. Certifique-se de carregar uma pasta contendo
 URLs de feeds.
 
-### Keyboard commands ###
+### Comandos de teclado: ###
 
 * Ctrl+Shift+NVDA+Espaço: anuncia o URL do artigo atual. Ao pressionar duas
   vezes, a página da Web será aberta.
@@ -98,30 +99,31 @@ URLs de feeds.
 * Ctrl+Shift+NVDA+U: anuncia o título do feed anterior.
 * Ctrl+Shift+NVDA+O: anuncia o título do próximo feed.
 
-## Notifications ##
+## Notificações ##
 
 * Quando o título ou o URL foram copiados.
 * Quando não é possível conectar / actualizar um feed, ou o URL não
   corresponde a um feed válido.
-* NVDA will display an error message if it was not possible to backup or
-  restore the personalFeeds folder, and if a new feed cannot be created.
+* O NVDA mostrará uma mensagem de erro se não foi possível fazer o backup ou
+  restaurar a pasta personalFeeds, e se não for possível criar um novo feed.
 * O título da caixa de diálogo da lista de artigos mostra o nome do feed
   selecionado e o número de itens disponíveis.
 
-## Changes for 10.0 ##
+## Alterações para 10.0 ##
 
-* Added a button to open the selected feed as HTML in the default web
-  browser.
-* If a new feed cannot be created, this will be notified in an error dialog.
-* Improved order and presentation of some articles.
-* More feeds may be supported.
-* When the feeds dialog is opened, the list of feeds will be focused instead
-  of the search edit box.
-* You can choose if the search edit box is placed after the list of feeds,
-  useful to focus the list even when switching from another window without
-  closing the Feeds dialog.
-* Added a button to copy the feed address to clipboard from the feeds
-  dialog.
+* Adicionado um botão para abrir o feed seleccionado como HTML no navegador
+  web predefinido.
+* Se não for possível criar um novo feed, isto será notificado através de um
+  diálogo de erro.
+* Melhoria da ordem e apresentação de alguns artigos.
+* Mais feeds podem ser suportados.
+* Quando o diálogo dos feeds é aberto, a lista de feeds será focalizada em
+  vez da caixa de edição da pesquisa.
+* Pode escolher se a caixa de edição da pesquisa é colocada após a lista de
+  feeds, útil para focalizar a lista mesmo quando se muda de outra janela
+  sem fechar o diálogo dos Feeds.
+* Foi adicionado um botão para copiar o endereço do feed para a área de
+  transferência a partir do diálogo de feeds.
 
 ## Alterações para 9.0: ##
 

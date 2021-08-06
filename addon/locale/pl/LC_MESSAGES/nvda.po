@@ -8,25 +8,24 @@ msgstr ""
 "Project-Id-Version: readFeeds 1.0-dev\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2013-11-16 13:26+0100\n"
-"PO-Revision-Date: 2021-05-22 20:59+0200\n"
+"PO-Revision-Date: 2021-08-03 09:04+0200\n"
 "Last-Translator: Zvonimir Stanečić <zvonimirek222@webczatnet.pl>\n"
 "Language-Team: Polish <killer@tyflonet.com>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.3\n"
+"X-Generator: Poedit 3.0\n"
 
 #. Translators: the label of a message box dialog.
-#, fuzzy
 msgid ""
 "Your configuration folder for NVDA contains files that seem to be derived\n"
 "\t\t\t\tfrom a previous version of this add-on.\n"
 "\t\t\t\tDo you want to update it?"
 msgstr ""
-"Państwa folder konfiguracji NVDA zawiera pliki które wydają się pochodzić z "
-"poprzedniej wersji tego dodatku.\n"
-"\t\t\tCzy chcesz go zaktualizować?"
+"Folder konfiguracji NVDA zawiera pliki, które wydają się być pochodną\n"
+"\t\t\t\tz poprzedniej wersji tego dodatku.\n"
+"\t\t\t\tCzy chcesz go zaktualizować?"
 
 #. Translators: the title of a message box dialog.
 msgid "Install or update add-on"
@@ -57,9 +56,9 @@ msgid "Feeds restored"
 msgstr "Kanały osobiste zostały przywrócone pomyślnie"
 
 #. Translators: Title of a dialog.
-#, fuzzy
-msgid "Feeds: {addressFile} ({getActiveProfile()})"
-msgstr "Kanały osobiste: {defaultFeed} ({configProfile})"
+#, fuzzy, python-brace-format
+msgid "Feeds: {file} ({profile})"
+msgstr "Kanały: {addressFile} ({getActiveProfile()})"
 
 #. Translators: Label of a dialog (message translated in NVDA's core in different contexts).
 msgid "&Filter by:"

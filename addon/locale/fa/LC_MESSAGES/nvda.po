@@ -56,7 +56,8 @@ msgid "Feeds restored"
 msgstr "خوراک‌ها بازگردانده شدند"
 
 #. Translators: Title of a dialog.
-msgid "Feeds: {addressFile} ({getActiveProfile()})"
+#, fuzzy, python-brace-format
+msgid "Feeds: {file} ({profile})"
 msgstr "خوراک‌ها: {addressFile} ({getActiveProfile()})"
 
 #. Translators: Label of a dialog (message translated in NVDA's core in different contexts).
