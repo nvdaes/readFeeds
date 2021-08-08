@@ -1,4 +1,2 @@
-## Changes for 11.2 ##
+## Changes for 11.3 ##
 * Updated translations.
-* Fixed translatable string (PR #19).
-
