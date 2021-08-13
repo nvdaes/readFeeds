@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: readFeeds\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2013-11-16 13:26+0100\n"
-"PO-Revision-Date: 2021-07-04 18:11+0200\n"
+"PO-Revision-Date: 2021-08-08 13:19+0200\n"
 "Last-Translator: Jani Kinnunen <jani.kinnunen@wippies.fi>\n"
 "Language-Team: Finnish <jani.kinnunen@wippies.fi>\n"
 "Language: fi\n"
@@ -57,9 +57,9 @@ msgid "Feeds restored"
 msgstr "Syötteet palautettu"
 
 #. Translators: Title of a dialog.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Feeds: {file} ({profile})"
-msgstr "Syötteet: {addressFile} ({getActiveProfile()})"
+msgstr "Syötteet: {file} ({profile})"
 
 #. Translators: Label of a dialog (message translated in NVDA's core in different contexts).
 msgid "&Filter by:"
