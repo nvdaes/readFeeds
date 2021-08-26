@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Read feeds 4.0\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2020-10-12 15:31+0300\n"
-"PO-Revision-Date: 2021-07-30 15:22+0300\n"
+"PO-Revision-Date: 2021-08-15 17:28+0300\n"
 "Last-Translator: Çağrı Doğan <cagrid@hotmail.com>\n"
 "Language-Team: cagrid@hotmail.com\n"
 "Language: tr\n"
@@ -54,9 +54,9 @@ msgid "Feeds restored"
 msgstr "Kaynaklar geri yüklendi"
 
 #. Translators: Title of a dialog.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Feeds: {file} ({profile})"
-msgstr "Akışlar: {addressFile} ({getActiveProfile()})"
+msgstr "Akışlar: {file} ({profile})"
 
 #. Translators: Label of a dialog (message translated in NVDA's core in different contexts).
 msgid "&Filter by:"
