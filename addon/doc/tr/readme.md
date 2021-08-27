@@ -91,8 +91,7 @@ yüklediğinizden emin olun.
 * Ctrl+Shift+NVDA+8: Seçili akışı yeniler ve en son başlığı duyurur.
 * Ctrl+Shift+NVDA+I: Mevcut akış başlığını ve bağlantısını duyurur. İki kez
   basmak, başlığı ve ilgili bağlantıyı panoya kopyalayacaktır.
-* Ctrl+Shift+NVDA+U: Önceki akış başlığını duyurur.Ctrl+Shift+NVDA+U:
-  Announces previous feed title.
+* Ctrl+Shift+NVDA+U: Önceki akış başlığını duyurur.
 * Ctrl+Shift+NVDA+O: Sonraki akış başlığını duyurur.
 
 ## Bildirimler ##
