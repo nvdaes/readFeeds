@@ -826,7 +826,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self.menu = gui.mainFrame.sysTrayIcon.toolsMenu
 		self.readFeedsMenu = wx.Menu()
 		# Translators: the name of a submenu.
-		self.mainItem = self.menu.AppendSubMenu(self.readFeedsMenu, _("&Read Feeds"))
+		self.mainItem = self.menu.AppendSubMenu(self.readFeedsMenu, _("Read Feeds"))
 		# Translators: the name of a menu item.
 		self.feedsListItem = self.readFeedsMenu.Append(wx.ID_ANY, _("&Feeds..."))
 		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, self.onFeeds, self.feedsListItem)
