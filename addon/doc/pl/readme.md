@@ -10,7 +10,7 @@ Ten dodatek umożliwia odczytywanie przez NVDA kanałów informacyjnych w
 formatach Atom lub RSS.  Kanały nie będą odświeżane automatycznie.  Mówiąc o
 kanałach, mamy na myśli kanały w formatach RSS i ATOM.
 
-## Installation or Update ##
+## Instalacja lub aktualizacja ##
 
 Jeśli używałeś poprzedniej wersji tego dodatku i w Twoim folderze
 konfiguracji NVDA znajdują się katalogi RSS lub personalFeeds , podczas
@@ -19,31 +19,32 @@ chcesz aktualizować, czy zainstalować.  Wybierz aktualizację, aby
 zaktualizować osobiste kanały i kontynuować ich używanie w nowo
 zainstalowanej wersji.
 
-## Commands ##
+## Polecenia ##
 
 ### Menu Czytaj kanały ###
 
 Możesz przejść do podmenu Czytaj kanały z menu NVDA (klawisz NVDA+N);
 dostępne są tam następujące opcje:
 
-#### Feeds ####
+#### Kanały ####
 
 Otwiera dialog z następującymi kontrolkami:
 
 * Filtruj Według: Pole edycyjne do wyszukiwania poprzednio zapisanych
   kanałów osobistych.
-* A list of the saved feeds, focused when the dialog is opened.
+* Lista zapisanych kanałów informacyjnych, zostanie sfokusowana po otwarciu
+  okna dialogowego.
 * Lista artykułow: Otwiera dialog wyświetlający spis artykułów z teraz
   wyświetlanego kanału osobistego. Oznacz artykuł, którego chcesz
   przeczytać, a potem naciśnij przycisk OK, aby otworzyć odnoszącą się
   stronę w przeglądarce. Z tego oka dialogowego, będzie można skopiować tę
   informację do schowka.
 * Otwórz kanał: otwiera wybrany kanał w domyślnej aplikacji.
-* Open feed as HTML: Opens the selected feed in the default web browser. You
-  will be able to show or hide publication dates and buttons to copy
-  information about articles to clipboard.
-* Copy feed address: Opens a dialog to confirm if you want to copy the feed
-  address to clipboard.
+* Otwórz kanał jako HTML: Otwiera wybrany kanał w domyślnej przeglądarce
+  internetowej. Będziesz mógł pokazywać lub ukrywać daty publikacji i
+  przyciski do kopiowania informacji o artykułach do schowka.
+* Kopiuj adres kanału: Otwiera okno dialogowe z potwierdzeniem, czy chcesz
+  skopiować adres kanału do schowka.
 * Nowy: Otwiera okno dialogowe zawierające pole edycyjne, w którym można
   wpisać adres nowego kanału osobistego. Jeżeli adres jest prawidłowy a
   kanał osobisty może być zachowany, nazwa kanału, bazowana na podstawie
@@ -54,11 +55,12 @@ Otwiera dialog z następującymi kontrolkami:
   osobistego po potwierdzeniu.
 * Ustaw jako domyślny: Ustawia kanał osobisty jako domyślny, aby można było
   się dostać do artykułów za pomocą gestów NVDA.
-* Open folder containing a backup of feeds: Opens a folder which may contain
-  a backup of feeds. This can be useful to explore and delete feeds which
-  shouldn't be imported when the add-on is updated.
-* Preferences: Opens the settings dialog for readFeeds, also available in
-  NVDA's menu, Preferences, settings, readFeeds category.
+* Otwórz folder zawierający kopię zapasową kanałów: Otwiera folder, który
+  może zawierać kopię zapasową kanałów. Może to być przydatne do
+  przeglądania i usuwania kanałów, których nie należy importować po
+  zaktualizowaniu dodatku.
+* Preferencje: Otwiera okno dialogowe ustawień dla readFeeds, dostępne
+  również w menu NVDA, opcje, ustawienia, kategoria readFeeds.
 * Zamknij: Zamyka dialog kanały osobiste.
 
 ##### Uwagi #####
@@ -69,24 +71,24 @@ Otwiera dialog z następującymi kontrolkami:
 * Kanał ustawiony jako domyślny nie może być usunięty. Kanał osobisty
   addressFile feed będzie użyty jako domyślny, kiedy konfiguracja jest
   zresetowana, i dla tego, on nie może być usunięty.
-* The Filter by edit box can be placed after the Open article button from
-  NVDA's menu, Preferences, Settings, Read feeds category, or pressing the
-  Preferences button of the Feeds dialog.
+* Pole edycji Filtruj według można umieścić za przyciskiem Otwórz artykuł z
+  menu NVDA, Preferencje, Ustawienia, Kategoria Odczyt kanałów lub
+  naciskając przycisk Preferencje w oknie dialogowym Kanały.
 
-#### Copy feeds folder ####
+#### Kopiowanie folderu kanałów informacyjnych ####
 
 Otwiera okno dialogowe, w którym można wybrać katalog gdzie można zapisać
 katalog personalFeeds directory z waszymi katalogami osobistymi. Domyślny
 katalog, to katalog konfiguracyjny NVDA, gdzie będzie stworzony katalog
 personalFeeds.
 
-#### Restore feeds ####
+#### Przywracanie plików danych ####
 
 Otwiera okno dialogowe w którym można wybrać katalog który zamienia twoje
 kanały osobiste w katalogu personalFeeds folder. Upewnij się, że wybrałeś
 katalog zawierający kanały osobiste.
 
-### Keyboard commands ###
+### Skróty klawiszowe ###
 
 * Ctrl+Szift+NVDA+Spacja: mówi adres artykułu. Jeżeli się naciśnie dwa razy,
   otwiera stronę.
@@ -98,30 +100,32 @@ katalog zawierający kanały osobiste.
 * Ctrl+Szift+NVDA+U: Wymawia poprzedni tytuł kanału osobistego.
 * Ctrl+Szift+NVDA+O: Wymawia następujący tytuł kanału osobistego.
 
-## Notifications ##
+## Powiadomienia ##
 
 * Kiedy tytuł i adres zostały skopiowane.
 * Kiedy jest niemożliwe odświeżanie/łączenie z kanałem osobistym, albo adres
   się nie zgadza z prawdziwym kanałem osobistym.
-* NVDA will display an error message if it was not possible to backup or
-  restore the personalFeeds folder, and if a new feed cannot be created.
+* NVDA wyświetli komunikat o błędzie, jeśli nie można było wykonać kopii
+  zapasowej lub przywrócić folderu personalFeeds i jeśli nie można utworzyć
+  nowego kanału informacyjnego.
 * Dialog Spisu nagłówków artykułów Wyświetla nazwę oznaczonego kanału
   osobistego i ilość dostępnych artykułów.
 
-## Changes for 10.0 ##
+## Zmiany dla wersji 10.0 ##
 
-* Added a button to open the selected feed as HTML in the default web
-  browser.
-* If a new feed cannot be created, this will be notified in an error dialog.
-* Improved order and presentation of some articles.
-* More feeds may be supported.
-* When the feeds dialog is opened, the list of feeds will be focused instead
-  of the search edit box.
-* You can choose if the search edit box is placed after the list of feeds,
-  useful to focus the list even when switching from another window without
-  closing the Feeds dialog.
-* Added a button to copy the feed address to clipboard from the feeds
-  dialog.
+* Dodano przycisk do otwierania wybranego kanału informacyjnego jako HTML w
+  domyślnej przeglądarce internetowej.
+* Jeśli nie można utworzyć nowego pliku danych, zostanie to wyświetlone w
+  oknie dialogowym błędu.
+* Poprawiono kolejność i prezentację niektórych artykułów.
+* Może być obsługiwane więcej kanałów.
+* Po otwarciu okna dialogowego kanały informacyjne zostanie wyświetlona
+  zamiast pola edycji wyszukiwania.
+* Możesz wybrać, czy pole edycji wyszukiwania ma być umieszczone po liście
+  kanałów, co jest przydatne do skupienia listy nawet podczas przełączania z
+  innego okna bez zamykania okna dialogowego Źródła.
+* Dodano przycisk do kopiowania adresu kanału do schowka z okna dialogowego
+  kanałów.
 
 ## Zmiany w wersji 9.0 ##
 
@@ -129,30 +133,30 @@ katalog zawierający kanały osobiste.
 
 ## Zmiany w wersji 8.0 ##
 
-* When the add-on is updated, feeds saved in the previous version of the
-  add-on will be automatically copied to the new version, unless you prefer
-  to import feeds saved in the main configuration folder of NVDA.
-* When using the dialog to copy feeds, if the chosen folder is not named
-  personalFeeds, a subfolder with this name will be created to prevent the
-  deletion of directories containing important data, such as Documents or
-  Downloads.
+* Po zaktualizowaniu dodatku kanały zapisane w poprzedniej wersji dodatku
+  zostaną automatycznie skopiowane do nowej wersji, chyba że wolisz
+  importować kanały zapisane w głównym folderze konfiguracyjnym NVDA.
+* Podczas korzystania z okna dialogowego do kopiowania kanałów
+  informacyjnych, jeśli wybrany folder nie ma nazwy personalFeeds, zostanie
+  utworzony podfolder o tej nazwie, aby zapobiec usunięciu katalogów
+  zawierających ważne dane, takie jak Dokumenty lub Pobrane.
 
 ## Zmiany w wersji 7.0 ##
 
-* The Feeds dialog includes a button to open a folder which may contain a
-  backup of feeds.
-* When using the edit box to filter feeds, if no results are found, the list
-  of feeds and other controls are disabled, so that NVDA doesn't report
-  "unknown" in the empty list.
-* If the list of articles dialog can't be shown, for example due to errors
-  in the feed, NVDA will raise an error, so that the feeds dialog can be
-  used without restarting NVDA.
+* Okno dialogowe Kanały zawiera przycisk do otwierania folderu, który może
+  zawierać kopię zapasową kanałów.
+* Podczas używania pola edycji do filtrowania kanałów, jeśli nie zostaną
+  znalezione żadne wyniki, lista kanałów i innych kontrolek jest wyłączona,
+  dzięki czemu NVDA nie zgłasza "nieznanego" na pustej liście.
+* Jeśli nie można wyświetlić okna dialogowego listy artykułów, na przykład z
+  powodu błędów w kanale, NVDA spowoduje wyświetlenie błędu, dzięki czemu
+  okno dialogowe kanałów może być używane bez ponownego uruchamiania NVDA.
 
 ## Zmiany w wersji 6.0 ##
 
-* When the default feed has been updated and it stops working due to server
-  issues, the previous articles aren't deleted and can be read with the
-  corresponding keystrokes.
+* Gdy domyślny kanał informacyjny został zaktualizowany i przestaje działać
+  z powodu problemów z serwerem, poprzednie artykuły nie są usuwane i można
+  je odczytać za pomocą odpowiednich naciśnięć.
 * Naprawiony błąd: Domyślny kanał może być aktualizowany znowu dwa razy.
 
 ## zmiany w wersji 5.0 ##
