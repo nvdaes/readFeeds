@@ -204,6 +204,10 @@ class FeedsDialog(wx.Dialog):
 		self.openFolderButton = buttonHelper.addButton(self, label=_("Open &folder containing a backup of feeds"))
 		self.openFolderButton.Bind(wx.EVT_BUTTON, self.onOpenFolder)
 
+		# Translators: The label of a button to import feeds from OPML.
+		self.importButton = buttonHelper.addButton(self, label=_("&Import feeds from OPML file"))
+		self.importButton.Bind(wx.EVT_BUTTON, self.onImportOpml)
+
 		# Translators: The label of a button to open the settings dialog for readFeeds.
 		self.settingsButton = buttonHelper.addButton(self, label=_("&Preferences..."))
 		self.settingsButton.Bind(wx.EVT_BUTTON, onSettings)
@@ -387,6 +391,20 @@ class FeedsDialog(wx.Dialog):
 		if not os.path.isdir(path):
 			os.makedirs(path)
 		os.startfile(path)
+
+	def onImportOpml(self, evt):
+		with wx.FileDialog(
+			# Translators: Label for a file dialog.
+			self, _("Open OPML file"),
+			# Translators: Wildcards for a file dialog
+			wildcard=_("OPML files (*.xyz)|*.opml"),
+			style=wx.FD_OPEN | wx.FD_FILE_MUST_EXIST
+		) as fileDialog:
+			if fileDialog.ShowModal() == wx.ID_CANCEL:
+				return    
+			pathname = fileDialog.GetPath()
+		opml = Opml(pathname)
+		opml.opmlToTextFiles()
 
 
 class ArticlesDialog(wx.Dialog):
@@ -744,12 +762,32 @@ class Feed(object):
 		except Exception:
 			return None
 
-	def getArticleEnclosure(self, index=None):
+	def getArticleEnclosureUrl(self, index=None):
 		if index is None:
 			index = self._index
 		try:
 			if self.getFeedType() == u'rss':
-				return self._articles[index].find(self.buildTag("enclosure", self.ns))
+				return self._articles[index].find(self.buildTag("enclosure", self.ns)).get("url")
+			return None
+		except Exception:
+			return None
+
+	def getArticleEnclosureType(self, index=None):
+		if index is None:
+			index = self._index
+		try:
+			if self.getFeedType() == u'rss':
+				return self._articles[index].find(self.buildTag("enclosure", self.ns)).get("type")
+			return None
+		except Exception:
+			return None
+
+	def getArticleEnclosureLength(self, index=None):
+		if index is None:
+			index = self._index
+		try:
+			if self.getFeedType() == u'rss':
+				return int(self._articles[index].find(self.buildTag("enclosure", self.ns)).get("length"))
 			return None
 		except Exception:
 			return None
@@ -805,13 +843,48 @@ class Feed(object):
 				raw += "<div class=\"date\" aria-hidden=\"true\">" + self.getArticleDate(index) + "</div>"
 			if self.getArticleDescription(index) is not None:
 				raw += "<div>" + self.getArticleDescription(index) + "</div>"
-			enclosure = self.getArticleEnclosure(index)
-			if enclosure:
-				raw += "<div><a href=\"" + enclosure.get("url") + "\">" + enclosure.get("type")
-				raw += enclosure.get("length") / 1024 + "kB</div>"
+			enclosure = self.getArticleEnclosureUrl(index)
+			if enclosure is not None:
+				enclosureType = self.getArticleEnclosureType(index)
+				enclosureLength = self.getArticleEnclosureLength(index)
+				raw += "<div><a href=\"" + enclosure + "\">" + enclosureType + "</a>"
+				raw += f" ({str(enclosureLength / 1024)} kB)</div>"
 		raw += "<script src=\"feed.js\"></script></body></html>"
 		with open(os.path.join(HTML_PATH, "feed.html"), "w", encoding="utf-8") as f:
 			f.write(raw)
+
+
+class Opml(object):
+
+	def __init__(self, path):
+		super(Opml, self).__init__()
+		self._path = path
+		self._document = None
+		self.validate()
+
+	def getOpmlPath(self):
+		return self._path
+
+	def validate(self):
+		path = self._path
+		try:
+			self._document = ElementTree.parse(path)
+		except Exception as e:
+			raise e
+
+	def isOpml(self):
+		if self._document is not None and self._document.getroot().tag == "opml":
+			return True
+		return False
+
+	def opmlToTextFiles(self):
+		for outline in self._document.getroot().findall("outline"):
+			title = outline.get("title")
+			url = outline.get("xmlUrl")
+			filename = api.filterFileName(title.strip())
+			pathname = os.path.join(FEEDS_PATH, filename)
+			with open(pathname, "w", encoding="utf-8") as f:
+				f.write(url)
 
 
 # Global plugin
