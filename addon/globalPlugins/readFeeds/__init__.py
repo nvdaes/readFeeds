@@ -401,7 +401,7 @@ class FeedsDialog(wx.Dialog):
 			style=wx.FD_OPEN | wx.FD_FILE_MUST_EXIST
 		) as fileDialog:
 			if fileDialog.ShowModal() == wx.ID_CANCEL:
-				return    
+				return
 			pathname = fileDialog.GetPath()
 		opml = Opml(pathname)
 		opml.opmlToTextFiles()
