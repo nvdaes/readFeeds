@@ -847,7 +847,7 @@ class Feed(object):
 			if enclosure is not None:
 				enclosureType = self.getArticleEnclosureType(index)
 				enclosureLength = self.getArticleEnclosureLength(index)
-				raw += "<div><a href=\"" + enclosure + "\">" + enclosureType + "</a>"
+				raw += "<div><a href=\"" + enclosure + "\">" + enclosureType + f"{str(index+1)}</a>"
 				raw += f" ({str(enclosureLength / 1024)} kB)</div>"
 		raw += "<script src=\"feed.js\"></script></body></html>"
 		with open(os.path.join(HTML_PATH, "feed.html"), "w", encoding="utf-8") as f:
