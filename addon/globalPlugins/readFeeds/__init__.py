@@ -397,7 +397,7 @@ class FeedsDialog(wx.Dialog):
 			# Translators: Label for a file dialog.
 			self, _("Open OPML file"),
 			# Translators: Wildcards for a file dialog
-			wildcard=_("OPML files (*.xyz)|*.opml"),
+			wildcard=_("OPML files (*.opml; *.xml)|*.opml; *.xml"),
 			style=wx.FD_OPEN | wx.FD_FILE_MUST_EXIST
 		) as fileDialog:
 			if fileDialog.ShowModal() == wx.ID_CANCEL:
@@ -405,6 +405,7 @@ class FeedsDialog(wx.Dialog):
 			pathname = fileDialog.GetPath()
 		opml = Opml(pathname)
 		opml.opmlToTextFiles()
+		#log.info("done")
 
 
 class ArticlesDialog(wx.Dialog):
@@ -878,7 +879,8 @@ class Opml(object):
 		return False
 
 	def opmlToTextFiles(self):
-		for outline in self._document.getroot().findall("outline"):
+		body = self._document.getroot().find("body")
+		for outline in body.findall("outline"):
 			title = outline.get("title")
 			url = outline.get("xmlUrl")
 			filename = api.filterFileName(title.strip())
