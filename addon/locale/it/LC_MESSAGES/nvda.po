@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: ReadFeeds 3.0-dev\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
 "POT-Creation-Date: 2015-07-24 10:22+0200\n"
-"PO-Revision-Date: 2021-08-19 11:31+0100\n"
-"Last-Translator: Simone Dal Maso <simone.dalmaso@gmail.com>\n"
+"PO-Revision-Date: 2021-10-20 15:33+0100\n"
+"Last-Translator: Chris <llajta2012@gmail.com>\n"
 "Language-Team: Italian <simone.dalmaso@gmail.com>\n"
 "Language: it_IT\n"
 "MIME-Version: 1.0\n"
@@ -13,7 +13,7 @@ msgstr ""
 "X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 1.6.10\n"
+"X-Generator: Poedit 1.6.11\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SearchPath-0: .\n"
 
@@ -56,9 +56,9 @@ msgid "Feeds restored"
 msgstr "Feed ripristinati"
 
 #. Translators: Title of a dialog.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Feeds: {file} ({profile})"
-msgstr "Feeds: {addressFile} ({getActiveProfile()})"
+msgstr "Feeds: {file} ({profile})"
 
 #. Translators: Label of a dialog (message translated in NVDA's core in different contexts).
 msgid "&Filter by:"
