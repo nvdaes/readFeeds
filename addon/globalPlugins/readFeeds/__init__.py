@@ -36,6 +36,7 @@ addonHandler.initTranslation()
 ADDON_SUMMARY = addonHandler.getCodeAddon().manifest['summary']
 ADDON_PANEL_TITLE = ADDON_SUMMARY
 FEEDS_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), "personalFeeds"))
+OPML_PATH = FEEDS_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), FEEDS_PATH, "readFeeds.opml"))
 HTML_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), "html"))
 CONFIG_PATH = globalVars.appArgs.configPath
 DEFAULT_ADDRESS_FILE = "addressFile"
@@ -131,6 +132,7 @@ class FeedsDialog(wx.Dialog):
 			return
 		FeedsDialog._instance = self
 		addressFile = config.conf["readFeeds"]["addressFile"]
+		self._opml = Opml(OPML_PATH)
 		super(FeedsDialog, self).__init__(
 			# Translators: Title of a dialog.
 			parent, title=_("Feeds: {file} ({profile})".format(file=addressFile, profile=getActiveProfile()))
@@ -147,7 +149,7 @@ class FeedsDialog(wx.Dialog):
 		feedsListGroupContents = wx.BoxSizer(wx.HORIZONTAL)
 		changeFeedsSizer = wx.BoxSizer(wx.VERTICAL)
 
-		self.choices = [os.path.splitext(filename)[0] for filename in os.listdir(FEEDS_PATH)]
+		self.choices = [outline.get("title") for outline in self._opml._document.getroot().iter("outline")]
 		self.feedsList = wx.ListBox(
 			self, choices=self.choices
 		)
@@ -245,11 +247,8 @@ class FeedsDialog(wx.Dialog):
 				wx.OK | wx.ICON_ERROR
 			)
 			raise e
-		feedName = api.filterFileName(feed.getFeedName()).strip()
-		if os.path.isfile(os.path.join(FEEDS_PATH, "%s.txt" % feedName)):
-			feedName = "tempFeed"
-		with open(os.path.join(FEEDS_PATH, "%s.txt" % feedName), "w", encoding="utf-8") as f:
-			f.write(address)
+		feedName = feed.getFeedName().strip()
+		self._opml.addFeed(feedName, address)
 		return feedName
 
 	def onSearchEditTextChange(self, evt):
@@ -293,8 +292,7 @@ class FeedsDialog(wx.Dialog):
 		)
 
 	def onArticles(self, evt):
-		with open(os.path.join(FEEDS_PATH, "%s.txt" % self.stringSel), "r", encoding="utf-8") as f:
-			address = f.read()
+		address = self._opml._document.getroot().findall("./body/outline")[self.sel].get("xmlUrl")
 		self.feed = Feed(address)
 		self.Disable()
 		try:
@@ -304,20 +302,17 @@ class FeedsDialog(wx.Dialog):
 			raise e
 
 	def onOpen(self, evt):
-		with open(os.path.join(FEEDS_PATH, "%s.txt" % self.stringSel), "r", encoding="utf-8") as f:
-			address = f.read()
+		address = self._opml._document.getroot().findall("./body/outline")[self.sel].get("xmlUrl")
 		os.startfile(address)
 
 	def onOpenHtml(self, evt):
-		with open(os.path.join(FEEDS_PATH, "%s.txt" % self.stringSel), "r", encoding="utf-8") as f:
-			address = f.read()
+		address = self._opml._document.getroot().findall("./body/outline")[self.sel].get("xmlUrl")
 		self.feed = Feed(address)
 		self.feed.buildHtml()
 		os.startfile(os.path.join(HTML_PATH, "feed.html"))
 
 	def onCopy(self, evt):
-		with open(os.path.join(FEEDS_PATH, "%s.txt" % self.stringSel), "r", encoding="utf-8") as f:
-			address = f.read()
+		address = self._opml._document.getroot().findall("./body/outline")[self.sel].get("xmlUrl")
 		if gui.messageBox(
 			# Translators: the label of a message box dialog.
 			_("Do you want to copy feed address to the clipboard\r\n\r\n{feedAddress}?".format(feedAddress=address)),
@@ -352,7 +347,9 @@ class FeedsDialog(wx.Dialog):
 		) == wx.NO:
 			self.feedsList.SetFocus()
 			return
-		os.remove(os.path.join(FEEDS_PATH, "%s.txt" % self.stringSel))
+		element = self._opml._document.getroot().findall("./body/outline")[self.sel]
+		self._opml._document.getroot().find("body").remove(element)
+		self._opml._document.write(OPML_PATH)
 		self.feedsList.Delete(self.sel)
 		self.feedsList.Selection = 0
 		self.onFeedsListChoice(None)
@@ -373,13 +370,11 @@ class FeedsDialog(wx.Dialog):
 			if d.ShowModal() == wx.ID_CANCEL or not d.Value:
 				self.feedsList.SetFocus()
 				return
-			curName = "%s.txt" % self.stringSel
-			newName = "%s.txt" % api.filterFileName(d.Value)
-		os.rename(
-			os.path.join(FEEDS_PATH, curName),
-			os.path.join(FEEDS_PATH, newName)
-		)
-		self.feedsList.SetString(self.sel, os.path.splitext(newName)[0])
+			newName = d.Value
+			element = self._opml._document.getroot().findall(".body/outline")[self.sel]
+			element.set("title", newName)
+			self._opml._document.write(OPML_PATH)
+		self.feedsList.SetString(self.sel, newName)
 		self.feedsList.SetFocus()
 
 	def onClose(self, evt):
@@ -397,15 +392,24 @@ class FeedsDialog(wx.Dialog):
 			# Translators: Label for a file dialog.
 			self, _("Open OPML file"),
 			# Translators: Wildcards for a file dialog
-			wildcard=_("OPML files (*.opml; *.xml)|*.opml; *.xml"),
+			wildcard=_("OPML files (*.opml)|*.opml"),
 			style=wx.FD_OPEN | wx.FD_FILE_MUST_EXIST
 		) as fileDialog:
 			if fileDialog.ShowModal() == wx.ID_CANCEL:
 				return
 			pathname = fileDialog.GetPath()
 		opml = Opml(pathname)
-		opml.opmlToTextFiles()
-		#log.info("done")
+		feeds = opml._document.getroot().findall("./body/outline")
+		body = self._opml._document.getroot().find("body")
+		for feed in feeds:
+			body.append(feed)
+		outlines = sorted(body.findall("outline"), key=lambda el: el.get("title"))
+		for outline in outlines:
+			body.remove(outline)
+			body.append(outline)
+		self._opml._document.write(OPML_PATH)
+		self.feedsList.SetFocus()
+
 
 
 class ArticlesDialog(wx.Dialog):
@@ -879,8 +883,7 @@ class Opml(object):
 		return False
 
 	def opmlToTextFiles(self):
-		body = self._document.getroot().find("body")
-		for outline in body.findall("outline"):
+		for outline in self._document.getroot().iter("outline"):
 			title = outline.get("title")
 			url = outline.get("xmlUrl")
 			filename = api.filterFileName(title.strip())
@@ -888,6 +891,19 @@ class Opml(object):
 			with open(pathname, "w", encoding="utf-8") as f:
 				f.write(url)
 
+	def addFeed(self, title, url):
+		element = ElementTree.Element("outline")
+		element.set("title", title)
+		element.text = title
+		element.set("xmlUrl", url)
+		body = self._document.getroot().find("body")
+		body.append(element)
+		outlines = sorted(body.findall("outline"), key=lambda el: el.get("title"))
+		for outline in outlines:
+			body.remove(outline)
+			body.append(outline)
+
+		self._document.write(self._path)
 
 # Global plugin
 

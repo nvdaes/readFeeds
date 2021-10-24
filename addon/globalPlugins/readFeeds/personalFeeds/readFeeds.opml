@@ -1,0 +1,23 @@
+<opml version="2.0">
+  <head>
+    <title>readFeeds</title>
+  </head>
+  <body>
+    <outline text="Astronomy Picture of the Day" title="Astronomy Picture of the Day" xmlUrl="http://www.jwz.org/cheesegrater/RSS/apod.rss" />
+<outline title="Benvenuto sul sito web della comunit&#224; componenti aggiuntivi di NVDA" xmlUrl="http://addons.nvda-project.org/index.it.rss" /><outline text="NVDA" title="NVDA" xmlUrl="https://nvda.groups.io/g/nvda/rss" />
+<outline text="NVDA" title="NVDA" xmlUrl="https://nvda.groups.io/g/nvda/rss" />
+<outline text="Olli's blog" title="Olli's blog" xmlUrl="http://my.opera.com/olli/xml/atom/blog/" />
+<outline text="Olli's blog" title="Olli's blog" xmlUrl="http://my.opera.com/olli/xml/atom/blog/" />
+<outline text="Science in Action" title="Science in Action" xmlUrl="https://podcasts.files.bbci.co.uk/p002vsnb.rss" />
+<outline text="Science in Action" title="Science in Action" xmlUrl="https://podcasts.files.bbci.co.uk/p002vsnb.rss" />
+<outline text="UserJS" title="UserJS" xmlUrl="http://userjs.org/subscribe/news" />
+<outline text="UserJS" title="UserJS" xmlUrl="http://userjs.org/subscribe/news" />
+<outline text="W3C-news" title="W3C-news" xmlUrl="http://www.w3.org/News/atom.xml" />
+<outline text="W3C-news" title="W3C-news" xmlUrl="http://www.w3.org/News/atom.xml" />
+<outline text="addons NVDA-project IT RSS" title="addons NVDA-project IT RSS" xmlUrl="http://addons.nvda-project.org/index.it.rss" />
+<outline text="addons NVDA-project IT RSS" title="addons NVDA-project IT RSS" xmlUrl="http://addons.nvda-project.org/index.it.rss" />
+<outline text="addressFile" title="addressFile" xmlUrl="http://www.gutenberg.org/cache/epub/feeds/today.rss" />
+<outline text="addressFile" title="addressFile" xmlUrl="http://www.gutenberg.org/cache/epub/feeds/today.rss" />
+<outline title="maria" xmlUrl="http://www.gutenberg.org/cache/epub/feeds/today.rss" />
+  </body>
+</opml>
