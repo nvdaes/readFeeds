@@ -1,7 +1,7 @@
 # -*- coding: UTF-8 -*-
 
 # Read feeds: A simple plugin for reading feeds with NVDA
-# Copyright (C) 2012-2020 Noelia Ruiz Martínez, Mesar Hameed
+# Copyright (C) 2012-2021 Noelia Ruiz Martínez, Mesar Hameed
 # Released under GPL 2
 
 import os
@@ -36,7 +36,7 @@ addonHandler.initTranslation()
 ADDON_SUMMARY = addonHandler.getCodeAddon().manifest['summary']
 ADDON_PANEL_TITLE = ADDON_SUMMARY
 FEEDS_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), "personalFeeds"))
-OPML_PATH = FEEDS_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), FEEDS_PATH, "readFeeds.opml"))
+OPML_PATH = os.path.join(FEEDS_PATH, "readFeeds.opml")
 HTML_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), "html"))
 CONFIG_PATH = globalVars.appArgs.configPath
 DEFAULT_ADDRESS_FILE = "addressFile"
@@ -409,7 +409,6 @@ class FeedsDialog(wx.Dialog):
 			body.append(outline)
 		self._opml._document.write(OPML_PATH)
 		self.feedsList.SetFocus()
-
 
 
 class ArticlesDialog(wx.Dialog):
@@ -904,6 +903,7 @@ class Opml(object):
 			body.append(outline)
 
 		self._document.write(self._path)
+
 
 # Global plugin
 
