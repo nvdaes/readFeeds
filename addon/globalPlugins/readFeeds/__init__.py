@@ -351,7 +351,6 @@ class FeedsDialog(wx.Dialog):
 		self._opml._document.getroot().find("body").remove(element)
 		self._opml._document.write(OPML_PATH)
 		self.feedsList.Delete(self.sel)
-		self.feedsList.Selection = 0
 		self.onFeedsListChoice(None)
 		self.feedsList.SetFocus()
 
@@ -408,6 +407,10 @@ class FeedsDialog(wx.Dialog):
 			body.remove(outline)
 			body.append(outline)
 		self._opml._document.write(OPML_PATH)
+		self.feedsList.Clear()
+		for outline in outlines:
+			self.feedsList.Append(outline.get("title"))
+		self.feedsList.Selection = 0
 		self.feedsList.SetFocus()
 
 
