@@ -6,6 +6,7 @@
 
 import os
 import shutil
+import glob
 import addonHandler
 import globalPluginHandler
 import globalVars
@@ -372,6 +373,7 @@ class FeedsDialog(wx.Dialog):
 			newName = d.Value
 			element = self._opml._document.getroot().findall(".body/outline")[self.sel]
 			element.set("title", newName)
+			element.set("text", newName)
 			self._opml._document.write(OPML_PATH)
 		self.feedsList.SetString(self.sel, newName)
 		self.feedsList.SetFocus()
@@ -884,19 +886,18 @@ class Opml(object):
 			return True
 		return False
 
-	def opmlToTextFiles(self):
+	def opmlToTextFiles(self, pth):
 		for outline in self._document.getroot().iter("outline"):
 			title = outline.get("title")
 			url = outline.get("xmlUrl")
 			filename = api.filterFileName(title.strip())
-			pathname = os.path.join(FEEDS_PATH, filename)
-			with open(pathname, "w", encoding="utf-8") as f:
+			with open(path, "w", encoding="utf-8") as f:
 				f.write(url)
 
 	def addFeed(self, title, url):
 		element = ElementTree.Element("outline")
 		element.set("title", title)
-		element.text = title
+		element.set("text", title)
 		element.set("xmlUrl", url)
 		body = self._document.getroot().find("body")
 		body.append(element)
@@ -904,7 +905,6 @@ class Opml(object):
 		for outline in outlines:
 			body.remove(outline)
 			body.append(outline)
-
 		self._document.write(self._path)
 
 
@@ -932,6 +932,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, self.onRestore, self.restoreItem)
 
 		self.feed = None
+		self.importTextFiles()
 
 	def terminate(self):
 		try:
@@ -939,6 +940,24 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			NVDASettingsDialog.categoryClasses.remove(AddonSettingsPanel)
 		except Exception:
 			pass
+
+	def importTextFiles(self):
+		path = FEEDS_PATH
+		textFiles = glob.glob(path + "\\*.txt")
+		if len(textFiles) == 0:
+			return
+		opml = Opml(OPML_PATH)
+		body = opml._document.getroot().find("body")
+		for filename in textFiles:
+			with open(filename, "r", encoding="utf-8") as f:
+				url = f.read()
+			element = ElementTree.Element("outline")
+			element.set("title", os.path.splitext(os.path.basename(filename))[0])
+			element.set("text", os.path.splitext(os.path.basename(filename))[0])
+			element.set("xmlUrl", url)
+			body.append(element)
+			os.remove(filename)
+		opml._document.write(OPML_PATH)
 
 	def onFeeds(self, evt):
 		gui.mainFrame.prePopup()
