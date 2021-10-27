@@ -886,14 +886,6 @@ class Opml(object):
 			return True
 		return False
 
-	def opmlToTextFiles(self, pth):
-		for outline in self._document.getroot().iter("outline"):
-			title = outline.get("title")
-			url = outline.get("xmlUrl")
-			filename = api.filterFileName(title.strip())
-			with open(path, "w", encoding="utf-8") as f:
-				f.write(url)
-
 	def addFeed(self, title, url):
 		element = ElementTree.Element("outline")
 		element.set("title", title)
