@@ -36,6 +36,8 @@ Opens a dialog with the following controls:
 * Delete: Opens a dialog to delete the selected feed after confirmation.
 * Set default: Sets the selected feed as the default, so that its articles can be accessed with NVDA's gestures.
 * Open folder containing a backup of feeds: Opens a folder which may contain a backup of feeds. This can be useful to explore and delete feeds which shouldn't be imported when the add-on is updated.
+* Import feeds from OPML file: Opens a dialog to add new feeds from an OPML file.
+* Save feeds to OPML file: Opens a dialog to save the feeds available from the Feeds dialog in an OPML file.
 * Preferences: Opens the settings dialog for readFeeds, also available in NVDA's menu, Preferences, settings, readFeeds category.
 * Close: Closes the Feeds dialog.
 
@@ -67,6 +69,14 @@ Opens a dialog to select a folder which replaces your feeds in the personalFeeds
 * When unable to connect/refresh a feed, or the URL does not correspond to a valid feed.
 * NVDA will display an error message if it was not possible to backup or restore the personalFeeds folder, and if a new feed cannot be created.
 * The title of the articles list dialog displays the selected feed name and number of items available.
+
+## Changes for 13.0
+
+* Feeds are managed from OPML files.
+* Due to changes in the feeds management system, there are changes in the configuration file where the default feed is set. Please, use the Feeds dialog if you want to set it again.
+* Your old text files used in previous versions will be automatically imported into the new OPML format when the add-on is started.
+
+
 
 ## Changes for 12.0
 
