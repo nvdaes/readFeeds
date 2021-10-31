@@ -1,11 +1,12 @@
 # -*- coding: UTF-8 -*-
 
 # Read feeds: A simple plugin for reading feeds with NVDA
-# Copyright (C) 2012-2020 Noelia Ruiz Martínez, Mesar Hameed
+# Copyright (C) 2012-2021 Noelia Ruiz Martínez, Mesar Hameed
 # Released under GPL 2
 
 import os
 import shutil
+import glob
 import addonHandler
 import globalPluginHandler
 import globalVars
@@ -36,9 +37,9 @@ addonHandler.initTranslation()
 ADDON_SUMMARY = addonHandler.getCodeAddon().manifest['summary']
 ADDON_PANEL_TITLE = ADDON_SUMMARY
 FEEDS_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), "personalFeeds"))
+OPML_PATH = os.path.join(FEEDS_PATH, "readFeeds.opml")
 HTML_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), "html"))
 CONFIG_PATH = globalVars.appArgs.configPath
-DEFAULT_ADDRESS_FILE = "addressFile"
 CAN_NOT_REPORT = _(
 	# Translators: message presented when feeds cannot be reported.
 	"Unable to refresh feed. Check your Internet conectivity or that the specified feed address is correct."
@@ -48,10 +49,34 @@ TAG_REGEXP = re.compile('<.*?>')
 # Configuration
 
 confspec = {
-	"addressFile": "string(default=addressFile)",
+	"defaultUrl": "string(default=http://www.gutenberg.org/cache/epub/feeds/today.rss)",
 	"filterAfterList": "boolean(default=False)",
 }
 config.conf.spec["readFeeds"] = confspec
+
+
+def createOpmlPath():
+	if not os.path.isdir(FEEDS_PATH):
+		os.makedirs(FEEDS_PATH)
+	if not os.path.isfile(OPML_PATH):
+		tree = ElementTree.ElementTree()
+		opml = ElementTree.Element("opml")
+		opml.set("version", "2.0")
+		head = ElementTree.Element("head")
+		title = ElementTree.Element("title")
+		title.text = ADDON_SUMMARY
+		head.append(title)
+		opml.append(head)
+		body = ElementTree.Element("body")
+		outline = ElementTree.Element("outline")
+		outline.set("title", "Project Gutenberg")
+		outline.set("text", "Project Gutenberg")
+		outline.set("type", "rss")
+		outline.set("xmlUrl", "http://www.gutenberg.org/cache/epub/feeds/today.rss")
+		body.append(outline)
+		opml.append(body)
+		tree._setroot(opml)
+		tree.write(OPML_PATH)
 
 
 def onSettings(evt):
@@ -130,10 +155,10 @@ class FeedsDialog(wx.Dialog):
 		if FeedsDialog._instance is not None:
 			return
 		FeedsDialog._instance = self
-		addressFile = config.conf["readFeeds"]["addressFile"]
+		self._opml = Opml(OPML_PATH)
 		super(FeedsDialog, self).__init__(
 			# Translators: Title of a dialog.
-			parent, title=_("Feeds: {file} ({profile})".format(file=addressFile, profile=getActiveProfile()))
+			parent, title=_("Feeds: {}".format(getActiveProfile()))
 		)
 
 		mainSizer = wx.BoxSizer(wx.VERTICAL)
@@ -147,7 +172,7 @@ class FeedsDialog(wx.Dialog):
 		feedsListGroupContents = wx.BoxSizer(wx.HORIZONTAL)
 		changeFeedsSizer = wx.BoxSizer(wx.VERTICAL)
 
-		self.choices = [os.path.splitext(filename)[0] for filename in os.listdir(FEEDS_PATH)]
+		self.choices = [outline.get("title") for outline in self._opml._document.getroot().iter("outline")]
 		self.feedsList = wx.ListBox(
 			self, choices=self.choices
 		)
@@ -201,12 +226,16 @@ class FeedsDialog(wx.Dialog):
 		self.defaultButton.Bind(wx.EVT_BUTTON, self.onDefault)
 
 		# Translators: The label of a button to open a folder containing a backup of feeds.
-		self.openFolderButton = buttonHelper.addButton(self, label=_("Open &folder containing a backup of feeds"))
+		self.openFolderButton = buttonHelper.addButton(self, label=_("Open fo&lder containing a backup of feeds"))
 		self.openFolderButton.Bind(wx.EVT_BUTTON, self.onOpenFolder)
 
 		# Translators: The label of a button to import feeds from OPML.
-		self.importButton = buttonHelper.addButton(self, label=_("&Import feeds from OPML file"))
+		self.importButton = buttonHelper.addButton(self, label=_("&Import feeds from OPML file..."))
 		self.importButton.Bind(wx.EVT_BUTTON, self.onImportOpml)
+
+	# Translators: The label of a button to save feeds to OPML file.
+		self.saveButton = buttonHelper.addButton(self, label=_("&Save feeds to OPML file..."))
+		self.saveButton.Bind(wx.EVT_BUTTON, self.onSaveOpml)
 
 		# Translators: The label of a button to open the settings dialog for readFeeds.
 		self.settingsButton = buttonHelper.addButton(self, label=_("&Preferences..."))
@@ -245,11 +274,8 @@ class FeedsDialog(wx.Dialog):
 				wx.OK | wx.ICON_ERROR
 			)
 			raise e
-		feedName = api.filterFileName(feed.getFeedName()).strip()
-		if os.path.isfile(os.path.join(FEEDS_PATH, "%s.txt" % feedName)):
-			feedName = "tempFeed"
-		with open(os.path.join(FEEDS_PATH, "%s.txt" % feedName), "w", encoding="utf-8") as f:
-			f.write(address)
+		feedName = feed.getFeedName().strip()
+		self._opml.addFeed(feedName, address)
 		return feedName
 
 	def onSearchEditTextChange(self, evt):
@@ -280,21 +306,12 @@ class FeedsDialog(wx.Dialog):
 		self.articlesButton.Enabled = self.sel >= 0
 		self.openButton.Enabled = self.sel >= 0
 		self.openHtmlButton.Enabled = self.sel >= 0
-		self.deleteButton.Enabled = (
-			self.sel >= 0 and self.stringSel != DEFAULT_ADDRESS_FILE
-			and config.conf["readFeeds"]["addressFile"] != self.stringSel
-		)
-		self.renameButton.Enabled = (
-			self.sel >= 0 and self.stringSel != DEFAULT_ADDRESS_FILE
-			and config.conf["readFeeds"]["addressFile"] != self.stringSel
-		)
-		self.defaultButton.Enabled = (
-			self.sel >= 0 and self.stringSel != config.conf["readFeeds"]["addressFile"]
-		)
+		self.renameButton.Enabled = self.sel >= 0
+		self.deleteButton.Enabled = (self.sel >= 0 and self.feedsList.Count > 1)
+		self.defaultButton.Enabled = self.sel >= 0
 
 	def onArticles(self, evt):
-		with open(os.path.join(FEEDS_PATH, "%s.txt" % self.stringSel), "r", encoding="utf-8") as f:
-			address = f.read()
+		address = self._opml._document.getroot().findall("./body/outline")[self.sel].get("xmlUrl")
 		self.feed = Feed(address)
 		self.Disable()
 		try:
@@ -304,20 +321,17 @@ class FeedsDialog(wx.Dialog):
 			raise e
 
 	def onOpen(self, evt):
-		with open(os.path.join(FEEDS_PATH, "%s.txt" % self.stringSel), "r", encoding="utf-8") as f:
-			address = f.read()
+		address = self._opml._document.getroot().findall("./body/outline")[self.sel].get("xmlUrl")
 		os.startfile(address)
 
 	def onOpenHtml(self, evt):
-		with open(os.path.join(FEEDS_PATH, "%s.txt" % self.stringSel), "r", encoding="utf-8") as f:
-			address = f.read()
+		address = self._opml._document.getroot().findall("./body/outline")[self.sel].get("xmlUrl")
 		self.feed = Feed(address)
 		self.feed.buildHtml()
 		os.startfile(os.path.join(HTML_PATH, "feed.html"))
 
 	def onCopy(self, evt):
-		with open(os.path.join(FEEDS_PATH, "%s.txt" % self.stringSel), "r", encoding="utf-8") as f:
-			address = f.read()
+		address = self._opml._document.getroot().findall("./body/outline")[self.sel].get("xmlUrl")
 		if gui.messageBox(
 			# Translators: the label of a message box dialog.
 			_("Do you want to copy feed address to the clipboard\r\n\r\n{feedAddress}?".format(feedAddress=address)),
@@ -352,14 +366,17 @@ class FeedsDialog(wx.Dialog):
 		) == wx.NO:
 			self.feedsList.SetFocus()
 			return
-		os.remove(os.path.join(FEEDS_PATH, "%s.txt" % self.stringSel))
+		element = self._opml._document.getroot().findall("./body/outline")[self.sel]
+		self._opml._document.getroot().find("body").remove(element)
+		self._opml._document.write(OPML_PATH)
 		self.feedsList.Delete(self.sel)
 		self.feedsList.Selection = 0
 		self.onFeedsListChoice(None)
 		self.feedsList.SetFocus()
 
 	def onDefault(self, evt):
-		config.conf["readFeeds"]["addressFile"] = self.stringSel
+		url = self._opml._document.getroot().findall(".body/outline")[self.sel].get("xmlUrl")
+		config.conf["readFeeds"]["defaultUrl"] = url
 		self.onFeedsListChoice(None)
 		self.feedsList.SetFocus()
 
@@ -373,13 +390,12 @@ class FeedsDialog(wx.Dialog):
 			if d.ShowModal() == wx.ID_CANCEL or not d.Value:
 				self.feedsList.SetFocus()
 				return
-			curName = "%s.txt" % self.stringSel
-			newName = "%s.txt" % api.filterFileName(d.Value)
-		os.rename(
-			os.path.join(FEEDS_PATH, curName),
-			os.path.join(FEEDS_PATH, newName)
-		)
-		self.feedsList.SetString(self.sel, os.path.splitext(newName)[0])
+			newName = d.Value
+			element = self._opml._document.getroot().findall(".body/outline")[self.sel]
+			element.set("title", newName)
+			element.set("text", newName)
+			self._opml._document.write(OPML_PATH)
+		self.feedsList.SetString(self.sel, newName)
 		self.feedsList.SetFocus()
 
 	def onClose(self, evt):
@@ -397,14 +413,37 @@ class FeedsDialog(wx.Dialog):
 			# Translators: Label for a file dialog.
 			self, _("Open OPML file"),
 			# Translators: Wildcards for a file dialog
-			wildcard=_("OPML files (*.xyz)|*.opml"),
+			wildcard=_("OPML files (*.opml)|*.opml"),
 			style=wx.FD_OPEN | wx.FD_FILE_MUST_EXIST
 		) as fileDialog:
 			if fileDialog.ShowModal() == wx.ID_CANCEL:
 				return
 			pathname = fileDialog.GetPath()
 		opml = Opml(pathname)
-		opml.opmlToTextFiles()
+		feeds = opml._document.getroot().findall("./body/outline")
+		body = self._opml._document.getroot().find("body")
+		for feed in feeds:
+			body.append(feed)
+		outlines = sorted(body.findall("outline"), key=lambda el: el.get("title"))
+		for outline in outlines:
+			body.remove(outline)
+			body.append(outline)
+		self._opml._document.write(OPML_PATH)
+		self.feedsList.Clear()
+		for outline in outlines:
+			self.feedsList.Append(outline.get("title"))
+		self.feedsList.Selection = 0
+		self.onFeedsListChoice(None)
+		self.feedsList.SetFocus()
+
+	def onSaveOpml(self, evt):
+		filename = wx.FileSelector(
+			# Translators: Label of a button on the Feeds dialog.
+			_("Save As"), default_filename="readfeeds.opml", flags=wx.FD_SAVE | wx.FD_OVERWRITE_PROMPT, parent=self
+		)
+		if filename:
+			self._opml._document.write(filename)
+		self.feedsList.SetFocus()
 
 
 class ArticlesDialog(wx.Dialog):
@@ -877,14 +916,19 @@ class Opml(object):
 			return True
 		return False
 
-	def opmlToTextFiles(self):
-		for outline in self._document.getroot().findall("outline"):
-			title = outline.get("title")
-			url = outline.get("xmlUrl")
-			filename = api.filterFileName(title.strip())
-			pathname = os.path.join(FEEDS_PATH, filename)
-			with open(pathname, "w", encoding="utf-8") as f:
-				f.write(url)
+	def addFeed(self, title, url):
+		element = ElementTree.Element("outline")
+		element.set("title", title)
+		element.set("text", title)
+		element.set("xmlUrl", url)
+		element.set("type", "rss")
+		body = self._document.getroot().find("body")
+		body.append(element)
+		outlines = sorted(body.findall("outline"), key=lambda el: el.get("title"))
+		for outline in outlines:
+			body.remove(outline)
+			body.append(outline)
+		self._document.write(self._path)
 
 
 # Global plugin
@@ -911,6 +955,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, self.onRestore, self.restoreItem)
 
 		self.feed = None
+		createOpmlPath()
+		self.importTextFiles()
 
 	def terminate(self):
 		try:
@@ -918,6 +964,24 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			NVDASettingsDialog.categoryClasses.remove(AddonSettingsPanel)
 		except Exception:
 			pass
+
+	def importTextFiles(self):
+		path = FEEDS_PATH
+		textFiles = glob.glob(path + "\\*.txt")
+		if len(textFiles) == 0:
+			return
+		opml = Opml(OPML_PATH)
+		body = opml._document.getroot().find("body")
+		for filename in textFiles:
+			with open(filename, "r", encoding="utf-8") as f:
+				url = f.read()
+			element = ElementTree.Element("outline")
+			element.set("title", os.path.splitext(os.path.basename(filename))[0])
+			element.set("text", os.path.splitext(os.path.basename(filename))[0])
+			element.set("xmlUrl", url)
+			body.append(element)
+			os.remove(filename)
+		opml._document.write(OPML_PATH)
 
 	def onFeeds(self, evt):
 		gui.mainFrame.prePopup()
@@ -967,9 +1031,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		wx.CallAfter(onSettings, None)
 
 	def getFirstArticle(self):
-		addressFile = "%s.txt" % config.conf["readFeeds"]["addressFile"]
-		with open(os.path.join(FEEDS_PATH, addressFile), "r", encoding="utf-8") as f:
-			address = f.read()
+		address = config.conf["readFeeds"]["defaultUrl"]
 		if self.feed and self.feed.getFeedUrl() == address:
 			curFeed = self.feed
 		else:
