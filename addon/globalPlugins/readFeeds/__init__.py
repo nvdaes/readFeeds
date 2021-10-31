@@ -40,7 +40,6 @@ FEEDS_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), "personalFe
 OPML_PATH = os.path.join(FEEDS_PATH, "readFeeds.opml")
 HTML_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), "html"))
 CONFIG_PATH = globalVars.appArgs.configPath
-DEFAULT_ADDRESS_FILE = "addressFile"
 CAN_NOT_REPORT = _(
 	# Translators: message presented when feeds cannot be reported.
 	"Unable to refresh feed. Check your Internet conectivity or that the specified feed address is correct."
@@ -50,10 +49,34 @@ TAG_REGEXP = re.compile('<.*?>')
 # Configuration
 
 confspec = {
-	"addressFile": "string(default=addressFile)",
+	"defaultUrl": "string(default=http://www.gutenberg.org/cache/epub/feeds/today.rss)",
 	"filterAfterList": "boolean(default=False)",
 }
 config.conf.spec["readFeeds"] = confspec
+
+
+def createOpmlPath():
+	if not os.path.isdir(FEEDS_PATH):
+		os.makedirs(FEEDS_PATH)
+	if not os.path.isfile(OPML_PATH):
+		tree = ElementTree.ElementTree()
+		opml = ElementTree.Element("opml")
+		opml.set("version", "2.0")
+		head = ElementTree.Element("head")
+		title = ElementTree.Element("title")
+		title.text = ADDON_SUMMARY
+		head.append(title)
+		opml.append(head)
+		body = ElementTree.Element("body")
+		outline = ElementTree.Element("outline")
+		outline.set("title", "Project Gutenberg")
+		outline.set("text", "Project Gutenberg")
+		outline.set("type", "rss")
+		outline.set("xmlUrl", "http://www.gutenberg.org/cache/epub/feeds/today.rss")
+		body.append(outline)
+		opml.append(body)
+		tree._setroot(opml)
+		tree.write(OPML_PATH)
 
 
 def onSettings(evt):
@@ -132,11 +155,10 @@ class FeedsDialog(wx.Dialog):
 		if FeedsDialog._instance is not None:
 			return
 		FeedsDialog._instance = self
-		addressFile = config.conf["readFeeds"]["addressFile"]
 		self._opml = Opml(OPML_PATH)
 		super(FeedsDialog, self).__init__(
 			# Translators: Title of a dialog.
-			parent, title=_("Feeds: {file} ({profile})".format(file=addressFile, profile=getActiveProfile()))
+			parent, title=_("Feeds: {}".format(getActiveProfile()))
 		)
 
 		mainSizer = wx.BoxSizer(wx.VERTICAL)
@@ -204,12 +226,16 @@ class FeedsDialog(wx.Dialog):
 		self.defaultButton.Bind(wx.EVT_BUTTON, self.onDefault)
 
 		# Translators: The label of a button to open a folder containing a backup of feeds.
-		self.openFolderButton = buttonHelper.addButton(self, label=_("Open &folder containing a backup of feeds"))
+		self.openFolderButton = buttonHelper.addButton(self, label=_("Open fo&lder containing a backup of feeds"))
 		self.openFolderButton.Bind(wx.EVT_BUTTON, self.onOpenFolder)
 
 		# Translators: The label of a button to import feeds from OPML.
-		self.importButton = buttonHelper.addButton(self, label=_("&Import feeds from OPML file"))
+		self.importButton = buttonHelper.addButton(self, label=_("&Import feeds from OPML file..."))
 		self.importButton.Bind(wx.EVT_BUTTON, self.onImportOpml)
+
+	# Translators: The label of a button to save feeds to OPML file.
+		self.saveButton = buttonHelper.addButton(self, label=_("&Save feeds to OPML file..."))
+		self.saveButton.Bind(wx.EVT_BUTTON, self.onSaveOpml)
 
 		# Translators: The label of a button to open the settings dialog for readFeeds.
 		self.settingsButton = buttonHelper.addButton(self, label=_("&Preferences..."))
@@ -280,17 +306,9 @@ class FeedsDialog(wx.Dialog):
 		self.articlesButton.Enabled = self.sel >= 0
 		self.openButton.Enabled = self.sel >= 0
 		self.openHtmlButton.Enabled = self.sel >= 0
-		self.deleteButton.Enabled = (
-			self.sel >= 0 and self.stringSel != DEFAULT_ADDRESS_FILE
-			and config.conf["readFeeds"]["addressFile"] != self.stringSel
-		)
-		self.renameButton.Enabled = (
-			self.sel >= 0 and self.stringSel != DEFAULT_ADDRESS_FILE
-			and config.conf["readFeeds"]["addressFile"] != self.stringSel
-		)
-		self.defaultButton.Enabled = (
-			self.sel >= 0 and self.stringSel != config.conf["readFeeds"]["addressFile"]
-		)
+		self.renameButton.Enabled = self.sel >= 0
+		self.deleteButton.Enabled = (self.sel >= 0 and self.feedsList.Count > 1)
+		self.defaultButton.Enabled = self.sel >= 0
 
 	def onArticles(self, evt):
 		address = self._opml._document.getroot().findall("./body/outline")[self.sel].get("xmlUrl")
@@ -352,11 +370,13 @@ class FeedsDialog(wx.Dialog):
 		self._opml._document.getroot().find("body").remove(element)
 		self._opml._document.write(OPML_PATH)
 		self.feedsList.Delete(self.sel)
+		self.feedsList.Selection = 0
 		self.onFeedsListChoice(None)
 		self.feedsList.SetFocus()
 
 	def onDefault(self, evt):
-		config.conf["readFeeds"]["addressFile"] = self.stringSel
+		url = self._opml._document.getroot().findall(".body/outline")[self.sel].get("xmlUrl")
+		config.conf["readFeeds"]["defaultUrl"] = url
 		self.onFeedsListChoice(None)
 		self.feedsList.SetFocus()
 
@@ -413,6 +433,16 @@ class FeedsDialog(wx.Dialog):
 		for outline in outlines:
 			self.feedsList.Append(outline.get("title"))
 		self.feedsList.Selection = 0
+		self.onFeedsListChoice(None)
+		self.feedsList.SetFocus()
+
+	def onSaveOpml(self, evt):
+		filename = wx.FileSelector(
+			# Translators: Label of a button on the Feeds dialog.
+			_("Save As"), default_filename="readfeeds.opml", flags=wx.FD_SAVE | wx.FD_OVERWRITE_PROMPT, parent=self
+		)
+		if filename:
+			self._opml._document.write(filename)
 		self.feedsList.SetFocus()
 
 
@@ -891,6 +921,7 @@ class Opml(object):
 		element.set("title", title)
 		element.set("text", title)
 		element.set("xmlUrl", url)
+		element.set("type", "rss")
 		body = self._document.getroot().find("body")
 		body.append(element)
 		outlines = sorted(body.findall("outline"), key=lambda el: el.get("title"))
@@ -924,6 +955,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, self.onRestore, self.restoreItem)
 
 		self.feed = None
+		createOpmlPath()
 		self.importTextFiles()
 
 	def terminate(self):
@@ -999,9 +1031,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		wx.CallAfter(onSettings, None)
 
 	def getFirstArticle(self):
-		addressFile = "%s.txt" % config.conf["readFeeds"]["addressFile"]
-		with open(os.path.join(FEEDS_PATH, addressFile), "r", encoding="utf-8") as f:
-			address = f.read()
+		address = config.conf["readFeeds"]["defaultUrl"]
 		if self.feed and self.feed.getFeedUrl() == address:
 			curFeed = self.feed
 		else:
