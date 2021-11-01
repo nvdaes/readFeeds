@@ -57,26 +57,32 @@ config.conf.spec["readFeeds"] = confspec
 
 def createOpmlPath():
 	if not os.path.isdir(FEEDS_PATH):
-		os.makedirs(FEEDS_PATH)
+		try:
+			os.makedirs(FEEDS_PATH)
+		except Exception:
+			pass
 	if not os.path.isfile(OPML_PATH):
-		tree = ElementTree.ElementTree()
-		opml = ElementTree.Element("opml")
-		opml.set("version", "2.0")
-		head = ElementTree.Element("head")
-		title = ElementTree.Element("title")
-		title.text = ADDON_SUMMARY
-		head.append(title)
-		opml.append(head)
-		body = ElementTree.Element("body")
-		outline = ElementTree.Element("outline")
-		outline.set("title", "Project Gutenberg")
-		outline.set("text", "Project Gutenberg")
-		outline.set("type", "rss")
-		outline.set("xmlUrl", "http://www.gutenberg.org/cache/epub/feeds/today.rss")
-		body.append(outline)
-		opml.append(body)
-		tree._setroot(opml)
-		tree.write(OPML_PATH)
+		try:
+			tree = ElementTree.ElementTree()
+			opml = ElementTree.Element("opml")
+			opml.set("version", "2.0")
+			head = ElementTree.Element("head")
+			title = ElementTree.Element("title")
+			title.text = ADDON_SUMMARY
+			head.append(title)
+			opml.append(head)
+			body = ElementTree.Element("body")
+			outline = ElementTree.Element("outline")
+			outline.set("title", "Project Gutenberg")
+			outline.set("text", "Project Gutenberg")
+			outline.set("type", "rss")
+			outline.set("xmlUrl", "http://www.gutenberg.org/cache/epub/feeds/today.rss")
+			body.append(outline)
+			opml.append(body)
+			tree._setroot(opml)
+			tree.write(OPML_PATH)
+		except Exception as e:
+			raise e
 
 
 def onSettings(evt):
