@@ -400,7 +400,12 @@ class FeedsDialog(wx.Dialog):
 			element = self._opml._document.getroot().findall(".body/outline")[self.sel]
 			element.set("title", newName)
 			element.set("text", newName)
-			self._opml._document.write(OPML_PATH)
+		body = self._opml._document.getroot().find("body")
+		outlines = sorted(body.findall("outline"), key=lambda el: el.get("title"))
+		for outline in outlines:
+			body.remove(outline)
+			body.append(outline)
+		self._opml._document.write(OPML_PATH)
 		self.feedsList.SetString(self.sel, newName)
 		self.feedsList.SetFocus()
 
