@@ -728,19 +728,20 @@ class Feed(object):
 			headers = {'User-Agent': userAgent}
 			req = urllib.request.Request(self._url, None, headers)
 			response = urllib.request.urlopen(req)
+		xmlstring = response.read().decode("utf-8").strip()
 		try:
-			self._document = ElementTree.parse(response)
+			self._document = ElementTree.fromstring(xmlstring)
 		except Exception as e:
 			raise e
-		tag = self._document.getroot().tag
+		tag = self._document.tag
 		self.ns = "%s}" % tag.split("}", 1)[0] if "}" in tag else None
 		# Check if we are dealing with an rss or atom feed.
 		if tag.endswith("rss"):
-			self._main = self._document.getroot().find(self.buildTag("channel", self.ns))
+			self._main = self._document.find(self.buildTag("channel", self.ns))
 			self._articles = self._main.findall(self.buildTag("item", self.ns))
 			self._feedType = "rss"
 		elif tag.endswith("feed"):
-			self._main = self._document.getroot()
+			self._main = self._document
 			self._articles = self._main.findall(self.buildTag("entry", self.ns))
 			self._feedType = "atom"
 		else:
