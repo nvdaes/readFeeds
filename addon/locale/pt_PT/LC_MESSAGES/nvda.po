@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: readFeeds 1.0-dev\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2013-11-16 13:26+0100\n"
-"PO-Revision-Date: 2021-10-30 22:37+0100\n"
+"PO-Revision-Date: 2021-11-18 23:20+0000\n"
 "Last-Translator: Ângelo Abrantes <ampa4374@gmail.com>\n"
 "Language-Team: Equipa portuguesa de tradução do NVDA "
 "<angelomiguelabrantes@sapo.pt>\n"
@@ -102,7 +102,7 @@ msgstr "&Definir por padrão"
 
 #. Translators: The label of a button to open a folder containing a backup of feeds.
 msgid "Open &folder containing a backup of feeds"
-msgstr "Abrir uma pasta que &contém um backup dos seus RSS actuais."
+msgstr "Abrir uma pasta que &contém um backup dos seus RSS actuais"
 
 #. Translators: The label of a button to open the settings dialog for readFeeds.
 msgid "&Preferences..."
@@ -154,7 +154,7 @@ msgstr "Renomear o RSS"
 
 #. Translators: The label of the articles list in the articles dialog.
 msgid "List of articles"
-msgstr "Lista de artigos.."
+msgstr "Lista de artigos"
 
 #. Translators: The label of a button to open the selected article of a feed.
 msgid "Open &web page of selected article."
