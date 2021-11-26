@@ -116,6 +116,15 @@ contenant des URL de flux.
 * La boîte de dialogue affiche Le titre de la Liste de l'article le nom de
   flux sélectionné et le nombre d'éléments disponibles.
 
+## Changes for 12.0
+
+* Fixed a bug which made shortcuts for items of NVDA's tools menu don't work
+  as expected.
+
+## Changes for 11.0
+
+* Compatible with NVDA 2021.1
+
 ## Changements pour la version 10.0 ##
 
 * Ajout d'un bouton pour ouvrir le flux sélectionné au format HTML dans le

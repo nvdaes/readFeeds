@@ -107,6 +107,15 @@ på feeds.
 * Titlen på dialogen der viser listen over artikler viser navnet på det
   aktuelle feed, samt antallet af artikler til rådighed.
 
+## Changes for 12.0
+
+* Fixed a bug which made shortcuts for items of NVDA's tools menu don't work
+  as expected.
+
+## Changes for 11.0
+
+* Compatible with NVDA 2021.1
+
 ## Ændringer for 10.0 ##
 
 * Tilføjet en knap for at åbne det valgte feed som HTML i

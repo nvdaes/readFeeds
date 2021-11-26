@@ -111,6 +111,15 @@ katalog zawierający kanały osobiste.
 * Dialog Spisu nagłówków artykułów Wyświetla nazwę oznaczonego kanału
   osobistego i ilość dostępnych artykułów.
 
+## Changes for 12.0
+
+* Fixed a bug which made shortcuts for items of NVDA's tools menu don't work
+  as expected.
+
+## Changes for 11.0
+
+* Compatible with NVDA 2021.1
+
 ## Zmiany dla wersji 10.0 ##
 
 * Dodano przycisk do otwierania wybranego kanału informacyjnego jako HTML w
