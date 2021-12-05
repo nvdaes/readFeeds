@@ -178,11 +178,11 @@ class FeedsDialog(wx.Dialog):
 		feedsListGroupContents = wx.BoxSizer(wx.HORIZONTAL)
 		changeFeedsSizer = wx.BoxSizer(wx.VERTICAL)
 
-		body = self._opml._document.getroot().find("body")
-		outlines = sorted(body.findall("outline"), key=lambda el: el.get("title"))
+		self.body = self._opml._document.getroot().find("body")
+		outlines = sorted(self.body.findall("outline"), key=lambda el: el.get("title"))
 		for outline in outlines:
-			body.remove(outline)
-			body.append(outline)
+			self.body.remove(outline)
+			self.body.append(outline)
 		self._opml._document.write(OPML_PATH)
 		self.choices = [outline.get("title") for outline in self._opml._document.getroot().iter("outline")]
 		self.filteredItems = []
@@ -329,7 +329,7 @@ class FeedsDialog(wx.Dialog):
 		self.defaultButton.Enabled = self.sel >= 0
 
 	def onArticles(self, evt):
-		address = self._opml._document.getroot().findall("./body/outline")[self.filteredItems[self.sel]].get("xmlUrl")
+		address = self.body.findall("outline")[self.filteredItems[self.sel]].get("xmlUrl")
 		self.feed = Feed(address)
 		self.Disable()
 		try:
@@ -339,17 +339,17 @@ class FeedsDialog(wx.Dialog):
 			raise e
 
 	def onOpen(self, evt):
-		address = self._opml._document.getroot().findall("./body/outline")[self.filteredItems[self.sel]].get("xmlUrl")
+		address = self.body.findall("outline")[self.filteredItems[self.sel]].get("xmlUrl")
 		os.startfile(address)
 
 	def onOpenHtml(self, evt):
-		address = self._opml._document.getroot().findall("./body/outline")[self.filteredItems[self.sel]].get("xmlUrl")
+		address = self.body.findall("outline")[self.filteredItems[self.sel]].get("xmlUrl")
 		self.feed = Feed(address)
 		self.feed.buildHtml()
 		os.startfile(os.path.join(HTML_PATH, "feed.html"))
 
 	def onCopy(self, evt):
-		address = self._opml._document.getroot().findall("./body/outline")[self.filteredItems[self.sel]].get("xmlUrl")
+		address = self.body.findall("outline")[self.filteredItems[self.sel]].get("xmlUrl")
 		if gui.messageBox(
 			# Translators: the label of a message box dialog.
 			_("Do you want to copy feed address to the clipboard\r\n\r\n{feedAddress}?".format(feedAddress=address)),
@@ -373,9 +373,9 @@ class FeedsDialog(wx.Dialog):
 		name = self.createFeed(d.Value)
 		self.feedsList.Append(name)
 		self.choices.append(name)
-		newItem = self.filteredItems[-1] +1
+		newItem = self.filteredItems[-1] + 1
 		self.filteredItems.append(newItem)
-		self.feedsList.Selection = self.feedsList.Count -1
+		self.feedsList.Selection = self.feedsList.Count - 1
 		self.onFeedsListChoice(None)
 		self.feedsList.SetFocus()
 
@@ -389,9 +389,8 @@ class FeedsDialog(wx.Dialog):
 		) == wx.NO:
 			self.feedsList.SetFocus()
 			return
-		body = self._opml._document.getroot().find("body")
-		outline = self._opml._document.getroot().findall("./body/outline")[self.filteredItems[self.sel]]
-		body.remove(outline)
+		outline = self.body.findall("outline")[self.filteredItems[self.sel]]
+		self.body.remove(outline)
 		self._opml._document.write(OPML_PATH)
 		del self.choices[self.filteredItems[self.sel]]
 		self.filteredItems = []
@@ -402,12 +401,10 @@ class FeedsDialog(wx.Dialog):
 			self.filteredItems.append(n)
 		self.feedsList.Selection = 0
 		self.onFeedsListChoice(None)
-		from logHandler import log
-		log.info(f"selection: {self.sel}, string: {self.stringSel}, item: {self.filteredItems[self.sel]}")
 		self.feedsList.SetFocus()
 
 	def onDefault(self, evt):
-		url = self._opml._document.getroot().findall(".body/outline")[self.filteredItems[self.sel]].get("xmlUrl")
+		url = self.body.findall("outline")[self.filteredItems[self.sel]].get("xmlUrl")
 		config.conf["readFeeds"]["defaultUrl"] = url
 		self.onFeedsListChoice(None)
 		self.feedsList.SetFocus()
@@ -423,7 +420,7 @@ class FeedsDialog(wx.Dialog):
 				self.feedsList.SetFocus()
 				return
 			newName = d.Value
-			outline = self._opml._document.getroot().findall(".body/outline")[self.filteredItems[self.sel]]
+			outline = self.body.findall("outline")[self.filteredItems[self.sel]]
 			outline.set("title", newName)
 			outline.set("text", newName)
 		self._opml._document.write(OPML_PATH)
@@ -455,14 +452,13 @@ class FeedsDialog(wx.Dialog):
 			pathname = fileDialog.GetPath()
 		opml = Opml(pathname)
 		feeds = opml._document.getroot().findall("./body/outline")
-		body = self._opml._document.getroot().find("body")
 		for feed in feeds:
-			body.append(feed)
+			self.body.append(feed)
 		self._opml._document.write(OPML_PATH)
 		self.feedsList.Clear()
 		self.choices = []
 		self.filteredItems = []
-		outlines = body.findall("outline")
+		outlines = self.body.findall("outline")
 		for outline in outlines:
 			self.feedsList.Append(outline.get("title"))
 			self.choices.append(outline.get("title"))
