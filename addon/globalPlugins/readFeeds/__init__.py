@@ -178,7 +178,16 @@ class FeedsDialog(wx.Dialog):
 		feedsListGroupContents = wx.BoxSizer(wx.HORIZONTAL)
 		changeFeedsSizer = wx.BoxSizer(wx.VERTICAL)
 
+		self.body = self._opml._document.getroot().find("body")
+		outlines = sorted(self.body.findall("outline"), key=lambda el: el.get("title"))
+		for outline in outlines:
+			self.body.remove(outline)
+			self.body.append(outline)
+		self._opml._document.write(OPML_PATH)
 		self.choices = [outline.get("title") for outline in self._opml._document.getroot().iter("outline")]
+		self.filteredItems = []
+		for n in range(len(self.choices)):
+			self.filteredItems.append(n)
 		self.feedsList = wx.ListBox(
 			self, choices=self.choices
 		)
@@ -286,29 +295,32 @@ class FeedsDialog(wx.Dialog):
 
 	def onSearchEditTextChange(self, evt):
 		self.feedsList.Clear()
+		self.filteredItems = []
 		# Based on the filter of the Input gestures dialog of NVDA's core.
 		filter = self.searchTextEdit.Value
 		if filter:
 			filter = re.escape(filter)
 			filterReg = re.compile(r"(?=.*?" + r")(?=.*?".join(filter.split(r"\ ")) + r")", re.U | re.IGNORECASE)
-		for choice in self.choices:
+		for index, choice in enumerate(self.choices):
 			if filter and not filterReg.match(choice):
 				continue
+			self.filteredItems.append(index)
 			self.feedsList.Append(choice)
-		try:
+		if len(self.filteredItems) >= 1:
 			self.feedsList.Selection = 0
 			self.onFeedsListChoice(None)
-		except Exception:
+		else:
 			for control in (
 				self.feedsList, self.articlesButton, self.openButton,
-				self.renameButton, self.deleteButton, self.defaultButton
+				self.renameButton, self.deleteButton, self.defaultButton,
+				self.copyButton, self.openButton, self.openHtmlButton
 			):
-				control.disable
+				control.Enabled = False
 
 	def onFeedsListChoice(self, evt):
 		self.feedsList.Enable()
 		self.sel = self.feedsList.Selection
-		self.stringSel = self.feedsList.StringSelection
+		self.stringSel = self.feedsList.GetString(self.sel)
 		self.articlesButton.Enabled = self.sel >= 0
 		self.openButton.Enabled = self.sel >= 0
 		self.openHtmlButton.Enabled = self.sel >= 0
@@ -317,7 +329,7 @@ class FeedsDialog(wx.Dialog):
 		self.defaultButton.Enabled = self.sel >= 0
 
 	def onArticles(self, evt):
-		address = self._opml._document.getroot().findall("./body/outline")[self.sel].get("xmlUrl")
+		address = self.body.findall("outline")[self.filteredItems[self.sel]].get("xmlUrl")
 		self.feed = Feed(address)
 		self.Disable()
 		try:
@@ -327,17 +339,17 @@ class FeedsDialog(wx.Dialog):
 			raise e
 
 	def onOpen(self, evt):
-		address = self._opml._document.getroot().findall("./body/outline")[self.sel].get("xmlUrl")
+		address = self.body.findall("outline")[self.filteredItems[self.sel]].get("xmlUrl")
 		os.startfile(address)
 
 	def onOpenHtml(self, evt):
-		address = self._opml._document.getroot().findall("./body/outline")[self.sel].get("xmlUrl")
+		address = self.body.findall("outline")[self.filteredItems[self.sel]].get("xmlUrl")
 		self.feed = Feed(address)
 		self.feed.buildHtml()
 		os.startfile(os.path.join(HTML_PATH, "feed.html"))
 
 	def onCopy(self, evt):
-		address = self._opml._document.getroot().findall("./body/outline")[self.sel].get("xmlUrl")
+		address = self.body.findall("outline")[self.filteredItems[self.sel]].get("xmlUrl")
 		if gui.messageBox(
 			# Translators: the label of a message box dialog.
 			_("Do you want to copy feed address to the clipboard\r\n\r\n{feedAddress}?".format(feedAddress=address)),
@@ -358,9 +370,14 @@ class FeedsDialog(wx.Dialog):
 			if d.ShowModal() == wx.ID_CANCEL:
 				self.feedsList.SetFocus()
 				return
-			name = self.createFeed(d.Value)
-			self.feedsList.Append(name)
-			self.feedsList.SetFocus()
+		name = self.createFeed(d.Value)
+		self.feedsList.Append(name)
+		self.choices.append(name)
+		newItem = self.filteredItems[-1] + 1
+		self.filteredItems.append(newItem)
+		self.feedsList.Selection = self.feedsList.Count - 1
+		self.onFeedsListChoice(None)
+		self.feedsList.SetFocus()
 
 	def onDelete(self, evt):
 		if gui.messageBox(
@@ -372,16 +389,22 @@ class FeedsDialog(wx.Dialog):
 		) == wx.NO:
 			self.feedsList.SetFocus()
 			return
-		element = self._opml._document.getroot().findall("./body/outline")[self.sel]
-		self._opml._document.getroot().find("body").remove(element)
+		outline = self.body.findall("outline")[self.filteredItems[self.sel]]
+		self.body.remove(outline)
 		self._opml._document.write(OPML_PATH)
-		self.feedsList.Delete(self.sel)
+		del self.choices[self.filteredItems[self.sel]]
+		self.filteredItems = []
+		self.feedsList.Clear()
+		for choice in self.choices:
+			self.feedsList.Append(choice)
+		for n in range(len(self.choices)):
+			self.filteredItems.append(n)
 		self.feedsList.Selection = 0
 		self.onFeedsListChoice(None)
 		self.feedsList.SetFocus()
 
 	def onDefault(self, evt):
-		url = self._opml._document.getroot().findall(".body/outline")[self.sel].get("xmlUrl")
+		url = self.body.findall("outline")[self.filteredItems[self.sel]].get("xmlUrl")
 		config.conf["readFeeds"]["defaultUrl"] = url
 		self.onFeedsListChoice(None)
 		self.feedsList.SetFocus()
@@ -397,16 +420,13 @@ class FeedsDialog(wx.Dialog):
 				self.feedsList.SetFocus()
 				return
 			newName = d.Value
-			element = self._opml._document.getroot().findall(".body/outline")[self.sel]
-			element.set("title", newName)
-			element.set("text", newName)
-		body = self._opml._document.getroot().find("body")
-		outlines = sorted(body.findall("outline"), key=lambda el: el.get("title"))
-		for outline in outlines:
-			body.remove(outline)
-			body.append(outline)
+			outline = self.body.findall("outline")[self.filteredItems[self.sel]]
+			outline.set("title", newName)
+			outline.set("text", newName)
 		self._opml._document.write(OPML_PATH)
 		self.feedsList.SetString(self.sel, newName)
+		self.choices[self.filteredItems[self.sel]] = newName
+		self.onFeedsListChoice(None)
 		self.feedsList.SetFocus()
 
 	def onClose(self, evt):
@@ -432,17 +452,18 @@ class FeedsDialog(wx.Dialog):
 			pathname = fileDialog.GetPath()
 		opml = Opml(pathname)
 		feeds = opml._document.getroot().findall("./body/outline")
-		body = self._opml._document.getroot().find("body")
 		for feed in feeds:
-			body.append(feed)
-		outlines = sorted(body.findall("outline"), key=lambda el: el.get("title"))
-		for outline in outlines:
-			body.remove(outline)
-			body.append(outline)
+			self.body.append(feed)
 		self._opml._document.write(OPML_PATH)
 		self.feedsList.Clear()
+		self.choices = []
+		self.filteredItems = []
+		outlines = self.body.findall("outline")
 		for outline in outlines:
 			self.feedsList.Append(outline.get("title"))
+			self.choices.append(outline.get("title"))
+		for n in range(len(self.choices)):
+			self.filteredItems.append(n)
 		self.feedsList.Selection = 0
 		self.onFeedsListChoice(None)
 		self.feedsList.SetFocus()
@@ -936,10 +957,6 @@ class Opml(object):
 		element.set("type", "rss")
 		body = self._document.getroot().find("body")
 		body.append(element)
-		outlines = sorted(body.findall("outline"), key=lambda el: el.get("title"))
-		for outline in outlines:
-			body.remove(outline)
-			body.append(outline)
 		self._document.write(self._path)
 
 
