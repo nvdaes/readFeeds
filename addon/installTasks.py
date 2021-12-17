@@ -9,8 +9,6 @@ import globalVars
 import os
 import shutil
 import glob
-import gui
-import wx
 
 ADDON_DIR = os.path.abspath(os.path.dirname(__file__))
 FEEDS_PATH = os.path.join(ADDON_DIR, "globalPlugins", "readFeeds", "personalFeeds")
@@ -20,18 +18,17 @@ addonHandler.initTranslation()
 
 
 def onInstall():
-	addonPath = [os.path.join(CONFIG_PATH, "RSS"), os.path.join(CONFIG_PATH, "personalFeeds")]
 	previousFeedsPath = os.path.join(
-			CONFIG_PATH, "addons", "readFeeds",
-			"globalPlugins", "readFeeds", "personalFeeds"
-		)
-		if os.path.isdir(previousFeedsPath):
-			validFiles = glob.glob(previousFeedsPath + "\\*.txt")
-			validFiles.append(os.path.join(previousFeedsPath, "readFeeds.opml"))
-			if not os.path.isdir(FEEDS_PATH):
-				os.makedirs(FEEDS_PATH)
-			for file in validFiles:
-				try:
-					shutil.copy(file, FEEDS_PATH)
-				except IOError:
-					pass
+		CONFIG_PATH, "addons", "readFeeds",
+		"globalPlugins", "readFeeds", "personalFeeds"
+	)
+	if os.path.isdir(previousFeedsPath):
+		validFiles = glob.glob(previousFeedsPath + "\\*.txt")
+		validFiles.append(os.path.join(previousFeedsPath, "readFeeds.opml"))
+		if not os.path.isdir(FEEDS_PATH):
+			os.makedirs(FEEDS_PATH)
+		for file in validFiles:
+			try:
+				shutil.copy(file, FEEDS_PATH)
+			except IOError:
+				pass
