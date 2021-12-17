@@ -9,21 +9,13 @@ This addon provides a straightforward way to read feeds in Atom or RSS formats u
 The feeds will not be refreshed automatically.
 Below when we mention feeds, we mean both RSS and ATOM feeds.
 
-## Installation or Update ##
-
-If you used a previous version of this addon, and there is an RSS or personalFeeds folder in your personal NVDA configuration folder,
-when installing the current version, a dialog will ask if you want to upgrade or install.
-Choose update to preserve your saved feeds and to continue using them in the new installed version of readFeeds.
-
 ## Commands ##
 
-### Read Feeds menu ###
+### Read Feeds dialog ###
 
-You can access the Read Feeds submenu from the nvda menu, Tools submenu, where the following menu options are available:
+You can access the Read Feeds dialog from the nvda menu, Tools submenu, Feeds item.
 
-#### Feeds ####
-
-Opens a dialog with the following controls:
+It contains the following controls:
 
 * Filter by: An edit box to search previously saved feeds.
 * A list of the saved feeds, focused when the dialog is opened.
@@ -35,25 +27,14 @@ Opens a dialog with the following controls:
 * Rename: Opens a dialog with an edit box to rename the selected feed.
 * Delete: Opens a dialog to delete the selected feed after confirmation.
 * Set default: Sets the selected feed as the default, so that its articles can be accessed with NVDA's gestures.
-* Open folder containing a backup of feeds: Opens a folder which may contain a backup of feeds. This can be useful to explore and delete feeds which shouldn't be imported when the add-on is updated.
 * Import feeds from OPML file: Opens a dialog to add new feeds from an OPML file.
 * Save feeds to OPML file: Opens a dialog to save the feeds available from the Feeds dialog in an OPML file.
 * Preferences: Opens the settings dialog for readFeeds, also available in NVDA's menu, Preferences, settings, readFeeds category.
 * Close: Closes the Feeds dialog.
 
-##### Notes #####
+### Notes #####
 
-* If a feed named tempFeed is created, please rename it, as this file could be replaced when needed to create a feed whose name already exists.
-* The feed set as the default can't be removed. The addressFile feed will be use as the default when the configuration is reset, so it can't be deleted.
 * The Filter by edit box can be placed after the Open article button from NVDA's menu, Preferences, Settings, Read feeds category, or pressing the Preferences button of the Feeds dialog.
-
-#### Copy feeds folder ####
-
-Opens a dialog to choose a folder where you can save the personalFeeds directory of your feeds. By default the selected folder is the NVDA's configuration directory, which will create the personalFeeds directory.
-
-#### Restore feeds ####
-
-Opens a dialog to select a folder which replaces your feeds in the personalFeeds folder. Make sure you load a folder containing feeds URLs.
 
 ### Keyboard commands ###
 
@@ -67,7 +48,7 @@ Opens a dialog to select a folder which replaces your feeds in the personalFeeds
 
 * When the title or URL have been copied.
 * When unable to connect/refresh a feed, or the URL does not correspond to a valid feed.
-* NVDA will display an error message if it was not possible to backup or restore the personalFeeds folder, and if a new feed cannot be created.
+* NVDA will display an error message if a new feed cannot be created.
 * The title of the articles list dialog displays the selected feed name and number of items available.
 
 ## Changes for 13.0
@@ -75,9 +56,8 @@ Opens a dialog to select a folder which replaces your feeds in the personalFeeds
 * Feeds are managed from OPML files.
 * Due to changes in the feeds management system, there are changes in the configuration file where the default feed is set. Please, use the Feeds dialog if you want to set it again.
 * Your old text files used in previous versions will be automatically imported into the new OPML format when the add-on is started.
+* The copy and restore feeds feature has been replaced with the ability to import from and save to OPML files.
 * Non well-formed feeds can be processed before being added to make them compatible with the add-on.
-
-
 
 ## Changes for 12.0
 

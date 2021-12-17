@@ -240,10 +240,6 @@ class FeedsDialog(wx.Dialog):
 		self.defaultButton = buttonHelper.addButton(self, label=_("S&et default"))
 		self.defaultButton.Bind(wx.EVT_BUTTON, self.onDefault)
 
-		# Translators: The label of a button to open a folder containing a backup of feeds.
-		self.openFolderButton = buttonHelper.addButton(self, label=_("Open fo&lder containing a backup of feeds"))
-		self.openFolderButton.Bind(wx.EVT_BUTTON, self.onOpenFolder)
-
 		# Translators: The label of a button to import feeds from OPML.
 		self.importButton = buttonHelper.addButton(self, label=_("&Import feeds from OPML file..."))
 		self.importButton.Bind(wx.EVT_BUTTON, self.onImportOpml)
@@ -433,12 +429,6 @@ class FeedsDialog(wx.Dialog):
 		self.Destroy()
 		FeedsDialog._instance = None
 
-	def onOpenFolder(self, evt):
-		path = os.path.join(CONFIG_PATH, "personalFeeds")
-		if not os.path.isdir(path):
-			os.makedirs(path)
-		os.startfile(path)
-
 	def onImportOpml(self, evt):
 		with wx.FileDialog(
 			# Translators: Label for a file dialog.
@@ -542,162 +532,6 @@ class ArticlesDialog(wx.Dialog):
 	def onClose(self, evt):
 		self.Parent.Enable()
 		self.Parent.feedsList.SetFocus()
-		self.Destroy()
-
-
-class CopyDialog(wx.Dialog):
-
-	def __init__(self, parent):
-		# Translators: The title of the Copy dialog.
-		super(CopyDialog, self).__init__(parent, title=_("Copy feeds"))
-
-		mainSizer = wx.BoxSizer(wx.VERTICAL)
-		sHelper = gui.guiHelper.BoxSizerHelper(self, orientation=wx.VERTICAL)
-
-		# Translators: An informational message displayed in the Copy dialog.
-		dialogCaption = _("Select a folder to save a backup of your current feeds")
-		sHelper.addItem(wx.StaticText(self, label=dialogCaption))
-
-		# Translators: The label of a grouping containing controls to select the destination directory
-		# in the Copy dialog.
-		directoryGroupText = _("directory for backup:")
-		groupHelper = sHelper.addItem(
-			gui.guiHelper.BoxSizerHelper(
-				self, sizer=wx.StaticBoxSizer(wx.StaticBox(self, label=directoryGroupText), wx.VERTICAL)
-			)
-		)
-		# Message translated in NVDA core.
-		browseText = translate("Browse...")
-		# Translators: The title of the dialog presented
-		# when browsing for the destination directory when copying feeds.
-		dirDialogTitle = _("Select directory to copy")
-		directoryEntryControl = groupHelper.addItem(
-			gui.guiHelper.PathSelectionHelper(self, browseText, dirDialogTitle)
-		)
-		self.copyDirectoryEdit = directoryEntryControl.pathControl
-		self.copyDirectoryEdit.Value = os.path.join(CONFIG_PATH, "personalFeeds")
-		bHelper = sHelper.addDialogDismissButtons(gui.guiHelper.ButtonHelper(wx.HORIZONTAL))
-		# Message translated in NVDA core.
-		continueButton = bHelper.addButton(self, label=translate("&Continue"), id=wx.ID_OK)
-		continueButton.SetDefault()
-		continueButton.Bind(wx.EVT_BUTTON, self.onCopy)
-		bHelper.addButton(self, id=wx.ID_CANCEL)
-		mainSizer.Add(sHelper.sizer, border=gui.guiHelper.BORDER_FOR_DIALOGS, flag=wx.ALL)
-		self.Sizer = mainSizer
-		mainSizer.Fit(self)
-		self.CentreOnScreen()
-
-	def onCopy(self, evt):
-		if not self.copyDirectoryEdit.Value:
-			# Message translated in NVDA core.
-			gui.messageBox(
-				translate("Please specify a directory."),
-				# Message translated in NVDA core.
-				translate("Error"),
-				wx.OK | wx.ICON_ERROR)
-			return
-		drv = os.path.splitdrive(self.copyDirectoryEdit.Value)[0]
-		if drv and not os.path.isdir(drv):
-			gui.messageBox(
-				# Message translated in NVDA core.
-				translate("Invalid drive %s") % drv,
-				# Message translated in NVDA core.
-				translate("Error"),
-				wx.OK | wx.ICON_ERROR
-			)
-			return
-		self.Hide()
-		doCopy(self.copyDirectoryEdit.Value)
-		self.Destroy()
-
-	def onCancel(self, evt):
-		self.Destroy()
-
-
-class PathSelectionWithoutNewDir(gui.guiHelper.PathSelectionHelper):
-
-	def __init__(self, parent, buttonText, browseForDirectoryTitle):
-		super(PathSelectionWithoutNewDir, self).__init__(parent, buttonText, browseForDirectoryTitle)
-
-	def onBrowseForDirectory(self, evt):
-		startPath = self.getDefaultBrowseForDirectoryPath()
-		with wx.DirDialog(
-			self._parent, self._browseForDirectoryTitle, defaultPath=startPath,
-			style=wx.DD_DIR_MUST_EXIST | wx.DD_DEFAULT_STYLE
-		) as d:
-			if d.ShowModal() == wx.ID_OK:
-				self._textCtrl.Value = d.Path
-
-
-class RestoreDialog(wx.Dialog):
-
-	def __init__(self, parent):
-		# Translators: The title of the Restore dialog.
-		super(RestoreDialog, self).__init__(parent, title=_("Restore feeds"))
-
-		mainSizer = wx.BoxSizer(wx.VERTICAL)
-		sHelper = gui.guiHelper.BoxSizerHelper(self, orientation=wx.VERTICAL)
-
-		# Translators: An informational message displayed in the Restore dialog.
-		dialogCaption = _("Select a folder to restore a backup of your previous copied feeds")
-		sHelper.addItem(wx.StaticText(self, label=dialogCaption))
-
-		# Translators: The label of a grouping containing controls to select the destination directory
-		# in the Restore dialog.
-		directoryGroupText = _("directory containing backup:")
-		groupHelper = sHelper.addItem(
-			gui.guiHelper.BoxSizerHelper(
-				self, sizer=wx.StaticBoxSizer(wx.StaticBox(
-					self, label=directoryGroupText), wx.VERTICAL
-				)
-			)
-		)
-		# Message translated in NVDA core.
-		browseText = translate("Browse...")
-		# Translators: The title of the dialog presented when browsing for the destination directory
-		# when restoring feeds.
-		dirDialogTitle = _("Select directory to restore")
-		directoryEntryControl = groupHelper.addItem(PathSelectionWithoutNewDir(self, browseText, dirDialogTitle))
-		self.restoreDirectoryEdit = directoryEntryControl.pathControl
-		backupDirectory = os.path.join(CONFIG_PATH, "personalFeeds")
-		if os.path.isdir(backupDirectory):
-			self.restoreDirectoryEdit.Value = backupDirectory
-		bHelper = sHelper.addDialogDismissButtons(gui.guiHelper.ButtonHelper(wx.HORIZONTAL))
-		# Message translated in NVDA core.
-		continueButton = bHelper.addButton(self, label=translate("&Continue"), id=wx.ID_OK)
-		continueButton.SetDefault()
-		continueButton.Bind(wx.EVT_BUTTON, self.onRestore)
-		bHelper.addButton(self, id=wx.ID_CANCEL)
-		mainSizer.Add(sHelper.sizer, border=gui.guiHelper.BORDER_FOR_DIALOGS, flag=wx.ALL)
-		self.Sizer = mainSizer
-		mainSizer.Fit(self)
-		self.CentreOnScreen()
-
-	def onRestore(self, evt):
-		if not self.restoreDirectoryEdit.Value:
-			gui.messageBox(
-				# Message translated in NVDA core.
-				translate("Please specify a directory."),
-				# Message translated in NVDA core.
-				translate("Error"),
-				wx.OK | wx.ICON_ERROR
-			)
-			return
-		drv = os.path.splitdrive(self.restoreDirectoryEdit.Value)[0]
-		if drv and not os.path.isdir(drv):
-			gui.messageBox(
-				# Message translated in NVDA core.
-				translate("Invalid drive %s") % drv,
-				# Message translated in NVDA core.
-				translate("Error"),
-				wx.OK | wx.ICON_ERROR
-			)
-			return
-		self.Hide()
-		doRestore(self.restoreDirectoryEdit.Value)
-		self.Destroy()
-
-	def onCancel(self, evt):
 		self.Destroy()
 
 
@@ -969,19 +803,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def __init__(self):
 		super(GlobalPlugin, self).__init__()
 		NVDASettingsDialog.categoryClasses.append(AddonSettingsPanel)
-		self.menu = gui.mainFrame.sysTrayIcon.toolsMenu
-		self.readFeedsMenu = wx.Menu()
-		# Translators: the name of a submenu.
-		self.mainItem = self.menu.AppendSubMenu(self.readFeedsMenu, _("Read Feeds"))
+		self.toolsMenu = gui.mainFrame.sysTrayIcon.toolsMenu
 		# Translators: the name of a menu item.
-		self.feedsListItem = self.readFeedsMenu.Append(wx.ID_ANY, _("&Feeds..."))
+		self.feedsListItem = self.toolsMenu.Append(wx.ID_ANY, _("&Feeds..."))
 		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, self.onFeeds, self.feedsListItem)
-		# Translators: the name of a menu item.
-		self.copyItem = self.readFeedsMenu.Append(wx.ID_ANY, _("&Copy feeds folder..."))
-		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, self.onCopy, self.copyItem)
-		# Translators: the name of a menu item.
-		self.restoreItem = self.readFeedsMenu.Append(wx.ID_ANY, _("R&estore feeds..."))
-		gui.mainFrame.sysTrayIcon.Bind(wx.EVT_MENU, self.onRestore, self.restoreItem)
 
 		self.feed = None
 		createOpmlPath()
@@ -989,7 +814,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def terminate(self):
 		try:
-			self.menu.Remove(self.mainItem)
+			self.menu.Remove(self.feedsListItem)
 			NVDASettingsDialog.categoryClasses.remove(AddonSettingsPanel)
 		except Exception:
 			pass
@@ -1024,32 +849,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	)
 	def script_activateFeedsDialog(self, gesture):
 		wx.CallAfter(self.onFeeds, None)
-
-	def onCopy(self, evt):
-		gui.mainFrame.prePopup()
-		d = CopyDialog(gui.mainFrame)
-		d.Show()
-		gui.mainFrame.postPopup()
-
-	@script(
-		# Translators: message presented in input mode.
-		description=_("Activates the Copy dialog of Read Feeds.")
-	)
-	def script_activateCopyDialog(self, gesture):
-		wx.CallAfter(self.onCopy, None)
-
-	def onRestore(self, evt):
-		gui.mainFrame.prePopup()
-		d = RestoreDialog(gui.mainFrame)
-		d.Show()
-		gui.mainFrame.postPopup()
-
-	@script(
-		# Translators: message presented in input mode.
-		description=_("Activates the Restore dialog of Read Feeds.")
-	)
-	def script_activateRestoreDialog(self, gesture):
-		wx.CallAfter(self.onRestore, None)
 
 	@script(
 		# Translators: message presented in input mode.

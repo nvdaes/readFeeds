@@ -15,44 +15,19 @@ import wx
 ADDON_DIR = os.path.abspath(os.path.dirname(__file__))
 FEEDS_PATH = os.path.join(ADDON_DIR, "globalPlugins", "readFeeds", "personalFeeds")
 CONFIG_PATH = globalVars.appArgs.configPath
+OPML_PATH = os.path.join(FEEDS_PATH, "readFeeds.opml")
 
 addonHandler.initTranslation()
 
 
 def onInstall():
-	addonPath = [os.path.join(CONFIG_PATH, "RSS"), os.path.join(CONFIG_PATH, "personalFeeds")]
-	shouldOfferRestoreBackup = False
-	for path in addonPath:
-		if not os.path.isdir(path):
-			continue
-		pathFiles = os.listdir(path)
-		validFiles = glob.glob(path + "\\*.txt")
-		if len(pathFiles) != len(validFiles):
-			continue
-		shouldOfferRestoreBackup = True
-	if shouldOfferRestoreBackup:
-		if gui.messageBox(
-			_(
-				# Translators: the label of a message box dialog.
-				"""Your configuration folder for NVDA contains files that seem to be derived
-				from a previous version of this add-on.
-				Do you want to update it?"""
-			),
-			# Translators: the title of a message box dialog.
-			_("Install or update add-on"),
-			wx.YES | wx.NO | wx.ICON_WARNING) == wx.YES:
-			for file in validFiles:
-				try:
-					shutil.copy(file, FEEDS_PATH)
-				except IOError:
-					pass
-	else:
 		previousFeedsPath = os.path.join(
 			CONFIG_PATH, "addons", "readFeeds",
 			"globalPlugins", "readFeeds", "personalFeeds"
 		)
 		if os.path.isdir(previousFeedsPath):
 			validFiles = glob.glob(previousFeedsPath + "\\*.txt")
+			validFiles.append(OPML_PATH)
 			for file in validFiles:
 				try:
 					shutil.copy(file, FEEDS_PATH)
