@@ -51,6 +51,7 @@ TAG_REGEXP = re.compile('<.*?>')
 confspec = {
 	"defaultUrl": "string(default=http://www.gutenberg.org/cache/epub/feeds/today.rss)",
 	"filterAfterList": "boolean(default=False)",
+	"showArticlesTimestamp": "boolean(default=False)",
 }
 config.conf.spec["readFeeds"] = confspec
 
@@ -485,6 +486,10 @@ class ArticlesDialog(wx.Dialog):
 			TAG_REGEXP, '',
 			parent.feed.getArticleTitle(index)) for index in range(parent.feed.getNumberOfArticles()
 		)]
+		if config.conf["readFeeds"]["showArticlesTimestamp"]:
+			for index, choice in enumerate(articlesChoices):
+				date = parent.feed.getArticleDate(index).split(" +")[0]
+				articlesChoices[index] = f"{choice} - {date}"
 		self.articlesList = sHelper.addLabeledControl(articlesText, wx.ListBox, choices=articlesChoices)
 		self.articlesList.Selection = 0
 		self.articlesList.Bind(wx.EVT_CHOICE, self.onArticlesListChoice)
@@ -546,8 +551,13 @@ class AddonSettingsPanel(SettingsPanel):
 		self.filterAfterList = sHelper.addItem(wx.CheckBox(self, label=_("&Search edit box after feeds list")))
 		self.filterAfterList.SetValue(config.conf["readFeeds"]["filterAfterList"])
 
+		# Translators: label of a dialog.
+		self.showArticlesTimestamp = sHelper.addItem(wx.CheckBox(self, label=_("&Show articles timestamp")))
+		self.showArticlesTimestamp.SetValue(config.conf["readFeeds"]["showArticlesTimestamp"])
+
 	def onSave(self):
 		config.conf["readFeeds"]["filterAfterList"] = self.filterAfterList.GetValue()
+		config.conf["readFeeds"]["showArticlesTimestamp"] = self.showArticlesTimestamp.GetValue()
 
 
 # Feed object
@@ -708,7 +718,7 @@ class Feed(object):
 				date = self._articles[index].find(self.buildTag("updated", self.ns)).text
 			return date
 		except Exception:
-			return None
+			return ""
 
 	def next(self):
 		self._index += 1
