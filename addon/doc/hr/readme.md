@@ -110,6 +110,15 @@ adrese feedova.
 * Naslov dijaloškog okvira popisa članaka prikazuje odabrani naziv feeda i
   broj dostupnih stavki.
 
+## Changes for 12.0
+
+* Fixed a bug which made shortcuts for items of NVDA's tools menu don't work
+  as expected.
+
+## Changes for 11.0
+
+* Compatible with NVDA 2021.1
+
 ## Promjene u verziji 10.0 ##
 
 * Dodan je gumb za otvaranje odabranog feeda kao HTML u standardnom web

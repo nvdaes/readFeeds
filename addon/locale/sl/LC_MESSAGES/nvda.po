@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: readFeeds 1.0-dev\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2013-11-16 13:26+0100\n"
-"PO-Revision-Date: 2021-01-15 15:28+0100\n"
-"Last-Translator: \n"
+"PO-Revision-Date: 2021-12-13 18:53+0100\n"
+"Last-Translator: Jožef Gregorc <jozko.gregorc@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
@@ -18,15 +18,14 @@ msgstr ""
 "X-Generator: Poedit 1.5.7\n"
 
 #. Translators: the label of a message box dialog.
-#, fuzzy
 msgid ""
 "Your configuration folder for NVDA contains files that seem to be derived\n"
 "\t\t\t\tfrom a previous version of this add-on.\n"
 "\t\t\t\tDo you want to update it?"
 msgstr ""
-"Vaša NVDA konfiguracijska mapa vsebuje datoteke, za katere izgleda, da so "
-"del prejšnje različice tega dodatka.\n"
-"\t\t\tJih želite posodobiti?"
+"Vaša NVDA konfiguracijska mapa vsebuje datoteke, za katere izgleda,\n"
+"\t\t\t\tda so del prejšnje različice tega dodatka.\n"
+"\t\t\t\tJih želite posodobiti?"
 
 #. Translators: the title of a message box dialog.
 msgid "Install or update add-on"
@@ -57,9 +56,9 @@ msgid "Feeds restored"
 msgstr "Viri obnovljeni"
 
 #. Translators: Title of a dialog.
-#, fuzzy
-msgid "Feeds: {addressFile} ({getActiveProfile()})"
-msgstr "Viri: {defaultFeed} ({configProfile})"
+#, fuzzy, python-brace-format
+msgid "Feeds: {file} ({profile})"
+msgstr "Viri: {addressFile} ({getActiveProfile()})"
 
 #. Translators: Label of a dialog (message translated in NVDA's core in different contexts).
 msgid "&Filter by:"
@@ -235,8 +234,10 @@ msgid "Copy"
 msgstr "Preslikava"
 
 #. Translators: the name of a submenu.
-msgid "&Read Feeds"
-msgstr "&Bralnik virov"
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on to be shown on installation and add-on information.
+msgid "Read Feeds"
+msgstr "Bralnik Virov"
 
 #. Translators: the name of a menu item.
 msgid "&Feeds..."
@@ -303,15 +304,13 @@ msgstr ""
 msgid "Copies title and related link of the current article to the clipboard."
 msgstr "Preslika naslov in pripadajočo povezavo trenutnega članka v odložišče."
 
-#. Add-on summary, usually the user visible name of the addon.
-#. Translators: Summary for this add-on to be shown on installation and add-on information.
-msgid "Read Feeds"
-msgstr "Bralnik Virov"
-
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Add-on for using NVDA as a feed reader."
 msgstr "Dodatek, ki spremeni NVDA tudi v bralnik virov"
+
+#~ msgid "&Read Feeds"
+#~ msgstr "&Bralnik virov"
 
 #~ msgid ""
 #~ "You have installed the ReadFeeds add-on, probably an old and incompatible "

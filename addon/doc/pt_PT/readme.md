@@ -109,6 +109,15 @@ URLs de feeds.
 * O título da caixa de diálogo da lista de artigos mostra o nome do feed
   selecionado e o número de itens disponíveis.
 
+## Changes for 12.0
+
+* Fixed a bug which made shortcuts for items of NVDA's tools menu don't work
+  as expected.
+
+## Changes for 11.0
+
+* Compatible with NVDA 2021.1
+
 ## Alterações para 10.0 ##
 
 * Adicionado um botão para abrir o feed seleccionado como HTML no navegador

@@ -117,6 +117,16 @@ wählen, der URLs von RSS Feeds enthält.
 * Im Titel des Dialogs für die Artikellisten werden der Name des
   ausgewählten Feeds und die Anzahl der verfügbaren Artikel angezeigt.
 
+## Änderungen in 12.0
+
+* Es wurde ein Fehler behoben, der dazu führte, dass Verknüpfungen für
+  Elemente im NVDA-Menüs unter "Werkzeuge" nicht wie erwartet
+  funktionierten.
+
+## Änderungen in 11.0
+
+* Kompatibel mit NVDA 2021.1
+
 ## Änderungen in 10.0 ##
 
 * Es wurde eine Schaltfläche hinzugefügt, um den ausgewählten RSS-Feed als

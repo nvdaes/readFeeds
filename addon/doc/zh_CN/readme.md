@@ -65,6 +65,15 @@
 * 如果无法备份或恢复personalFeeds文件夹，以及无法创建新的feed，NVDA将显示一条错误信息。
 * “文章列表”对话框的标题显示所选的源名称和可用项目数。
 
+## Changes for 12.0
+
+* Fixed a bug which made shortcuts for items of NVDA's tools menu don't work
+  as expected.
+
+## Changes for 11.0
+
+* Compatible with NVDA 2021.1
+
 ## 版本10.0更新日志 ##
 
 * 增加了一个按钮，在默认的网页浏览器中以HTML形式打开选定的feed。

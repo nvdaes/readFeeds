@@ -104,6 +104,15 @@ yüklediğinizden emin olun.
 * Makale listesi iletişim kutusunun başlığı, seçilen akış adını ve mevcut
   öğelerin sayısını gösterir.
 
+## 12.0 için Değişiklikler
+
+* NVDA'nın araçlar menüsündeki öğeler için kısayolların beklendiği gibi
+  çalışmamasına neden olan bir hata düzeltildi.
+
+## 11.0 için değişiklikler
+
+* NVDA 2021.1 ile uyumlu
+
 ## 10.0 için Değişiklikler ##
 
 * Varsayılan web tarayıcısında seçilen akışı HTML olarak açmak için bir

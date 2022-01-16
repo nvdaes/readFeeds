@@ -113,6 +113,15 @@ l'URL dei feed.
 * Nel titolo della finestra elenco articoli viene indicato il nome del feed
   selezionato ed il numero di elementi disponibili.
 
+## Changes for 12.0
+
+* Fixed a bug which made shortcuts for items of NVDA's tools menu don't work
+  as expected.
+
+## Changes for 11.0
+
+* Compatible with NVDA 2021.1
+
 ## Novità nella versione 10.0 ##
 
 * Aggiunto un pulsante per aprire il feed selezionato come HTML nel browser

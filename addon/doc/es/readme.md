@@ -112,6 +112,15 @@ feeds.
 * El título del diálogo de lista de artículos muestra el nombre del feed
   seleccionado y el número de elementos disponibles.
 
+## Cambios para 12.0
+
+* Corregido un problema que hacía que los atajos del menú Herramientas de
+  NVDA no funcionaran como se esperaba.
+
+## Cambios para 11.0
+
+* Compatible con NVDA 2021.1
+
 ## Cambios para 10.0 ##
 
 * Añadido un botón para abrir el feed seleccionado como HTML en el navegador

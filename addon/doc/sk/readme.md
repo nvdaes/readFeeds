@@ -105,6 +105,15 @@ ste zvolili priečinok s RSS adresami.
 * Názov dialógového okna so zoznamom článkov obsahuje vybratý názov
   informačného kanála a počet dostupných položiek.
 
+## Changes for 12.0
+
+* Fixed a bug which made shortcuts for items of NVDA's tools menu don't work
+  as expected.
+
+## Changes for 11.0
+
+* Compatible with NVDA 2021.1
+
 ## Changes for 10.0 ##
 
 * Added a button to open the selected feed as HTML in the default web
