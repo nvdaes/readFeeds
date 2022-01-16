@@ -35,6 +35,8 @@ It contains the following controls:
 ### Notes #####
 
 * The Filter by edit box can be placed after the Open article button from NVDA's menu, Preferences, Settings, Read feeds category, or pressing the Preferences button of the Feeds dialog.
+* This dialog has an option to show article dates on the List of articles dialog.
+
 
 ### Keyboard commands ###
 
@@ -58,6 +60,7 @@ It contains the following controls:
 * Your old text files used in previous versions will be automatically imported into the new OPML format when the add-on is started.
 * The copy and restore feeds feature has been replaced with the ability to import from and save to OPML files.
 * Non well-formed feeds can be processed before being added to make them compatible with the add-on.
+* In the Read Feeds settings panel, a new option allows to show article dates on the List of articles dialog.
 
 ## Changes for 12.0
 
