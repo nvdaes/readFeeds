@@ -18,20 +18,6 @@ msgstr ""
 "X-Generator: Poedit 1.6.11\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#. Translators: the label of a message box dialog.
-msgid ""
-"Your configuration folder for NVDA contains files that seem to be derived\n"
-"\t\t\t\tfrom a previous version of this add-on.\n"
-"\t\t\t\tDo you want to update it?"
-msgstr ""
-"NVDA:n asetuskansiossa on tiedostoja, jotka ovat peräisin tämän lisäosan "
-"aiemmasta versiosta.\n"
-"\t\t\tHaluatko päivittää ne?"
-
-#. Translators: the title of a message box dialog.
-msgid "Install or update add-on"
-msgstr "Lisäosan asennus tai päivitys"
-
 #. Translators: message presented when feeds cannot be reported.
 msgid ""
 "Unable to refresh feed. Check your Internet conectivity or that the "
@@ -57,9 +43,9 @@ msgid "Feeds restored"
 msgstr "Syötteet palautettu"
 
 #. Translators: Title of a dialog.
-#, python-brace-format
-msgid "Feeds: {file} ({profile})"
-msgstr "Syötteet: {file} ({profile})"
+#, fuzzy
+msgid "Feeds: {}"
+msgstr "Syötteet"
 
 #. Translators: Label of a dialog (message translated in NVDA's core in different contexts).
 msgid "&Filter by:"
@@ -97,9 +83,14 @@ msgstr "&Poista..."
 msgid "S&et default"
 msgstr "A&seta oletukseksi"
 
-#. Translators: The label of a button to open a folder containing a backup of feeds.
-msgid "Open &folder containing a backup of feeds"
-msgstr "Avaa s&yötteiden varmuuskopiokansio"
+#. Translators: The label of a button to import feeds from OPML.
+#, fuzzy
+msgid "&Import feeds from OPML file..."
+msgstr "&Kopioi syötteiden kansio..."
+
+#. Translators: The label of a button to save feeds to OPML file.
+msgid "&Save feeds to OPML file..."
+msgstr ""
 
 #. Translators: The label of a button to open the settings dialog for readFeeds.
 msgid "&Preferences..."
@@ -149,6 +140,18 @@ msgstr "Uusi nimi:"
 msgid "Rename feed"
 msgstr "Nimeä syöte uudelleen"
 
+#. Translators: Label for a file dialog.
+msgid "Open OPML file"
+msgstr ""
+
+#. Translators: Wildcards for a file dialog
+msgid "OPML files (*.opml)|*.opml"
+msgstr ""
+
+#. Translators: Label of a button on the Feeds dialog.
+msgid "Save As"
+msgstr ""
+
 #. Translators: The label of the articles list in the articles dialog.
 msgid "List of articles"
 msgstr "Artikkeliluettelo"
@@ -170,46 +173,13 @@ msgstr "%sHaluatko kopioida artikkelin otsikon ja linkin leikepöydälle?"
 msgid "Article information"
 msgstr "Artikkelin tiedot"
 
-#. Translators: The title of the Copy dialog.
-msgid "Copy feeds"
-msgstr "Kopioi syötteet"
-
-#. Translators: An informational message displayed in the Copy dialog.
-msgid "Select a folder to save a backup of your current feeds"
-msgstr "Valitse kansio, johon nykyisten syötteidesi varmuuskopio tallennetaan."
-
-#. Translators: The label of a grouping containing controls to select the destination directory
-#. in the Copy dialog.
-msgid "directory for backup:"
-msgstr "Varmuuskopion kansio:"
-
-#. Translators: The title of the dialog presented
-#. when browsing for the destination directory when copying feeds.
-msgid "Select directory to copy"
-msgstr "Valitse kopioitava kansio"
-
-#. Translators: The title of the Restore dialog.
-msgid "Restore feeds"
-msgstr "Palauta syötteet"
-
-#. Translators: An informational message displayed in the Restore dialog.
-msgid "Select a folder to restore a backup of your previous copied feeds"
-msgstr ""
-"Valitse kansio, josta aiemmin kopioimasi syötteiden varmuuskopio palautetaan."
-
-#. Translators: The label of a grouping containing controls to select the destination directory
-#. in the Restore dialog.
-msgid "directory containing backup:"
-msgstr "Varmuuskopion sisältävä kansio:"
-
-#. Translators: The title of the dialog presented when browsing for the destination directory
-#. when restoring feeds.
-msgid "Select directory to restore"
-msgstr "Valitse palautettava kansio"
-
 #. Translators: label of a dialog.
 msgid "&Search edit box after feeds list"
 msgstr "&Hakukenttä syöteluettelon jälkeen"
+
+#. Translators: label of a dialog.
+msgid "&Show articles Date"
+msgstr ""
 
 #. Translators: Presented when the current article does not have an associated title.
 msgid "Unable to locate article title."
@@ -231,33 +201,13 @@ msgstr "Näytä kopiointipainikkeet"
 msgid "Copy"
 msgstr "Kopioi"
 
-#. Translators: the name of a submenu.
-msgid "&Read Feeds"
-msgstr "&Lue syötteet"
-
 #. Translators: the name of a menu item.
 msgid "&Feeds..."
 msgstr "&Syötteet..."
 
-#. Translators: the name of a menu item.
-msgid "&Copy feeds folder..."
-msgstr "&Kopioi syötteiden kansio..."
-
-#. Translators: the name of a menu item.
-msgid "R&estore feeds..."
-msgstr "P&alauta syötteet..."
-
 #. Translators: message presented in input mode.
 msgid "Activates the Feeds dialog of Read Feeds."
 msgstr "Avaa Lue syötteet -lisäosan  Syötteet-valintaikkunan."
-
-#. Translators: message presented in input mode.
-msgid "Activates the Copy dialog of Read Feeds."
-msgstr "Avaa Lue syötteet -lisäosan Kopioi-valintaikkunan."
-
-#. Translators: message presented in input mode.
-msgid "Activates the Restore dialog of Read Feeds."
-msgstr "Avaa Lue syötteet -lisäosan Palauta-valintaikkunan."
 
 #. Translators: message presented in input mode.
 #, python-format
@@ -310,6 +260,64 @@ msgid "Add-on for using NVDA as a feed reader."
 msgstr "Lisäosa, jolla NVDA:ta voidaan käyttää syötteenlukijana."
 
 #~ msgid ""
+#~ "Your configuration folder for NVDA contains files that seem to be "
+#~ "derived\n"
+#~ "\t\t\t\tfrom a previous version of this add-on.\n"
+#~ "\t\t\t\tDo you want to update it?"
+#~ msgstr ""
+#~ "NVDA:n asetuskansiossa on tiedostoja, jotka ovat peräisin tämän lisäosan "
+#~ "aiemmasta versiosta.\n"
+#~ "\t\t\tHaluatko päivittää ne?"
+
+#~ msgid "Install or update add-on"
+#~ msgstr "Lisäosan asennus tai päivitys"
+
+#~ msgid "Feeds: {file} ({profile})"
+#~ msgstr "Syötteet: {file} ({profile})"
+
+#~ msgid "Open &folder containing a backup of feeds"
+#~ msgstr "Avaa s&yötteiden varmuuskopiokansio"
+
+#~ msgid "Copy feeds"
+#~ msgstr "Kopioi syötteet"
+
+#~ msgid "Select a folder to save a backup of your current feeds"
+#~ msgstr ""
+#~ "Valitse kansio, johon nykyisten syötteidesi varmuuskopio tallennetaan."
+
+#~ msgid "directory for backup:"
+#~ msgstr "Varmuuskopion kansio:"
+
+#~ msgid "Select directory to copy"
+#~ msgstr "Valitse kopioitava kansio"
+
+#~ msgid "Restore feeds"
+#~ msgstr "Palauta syötteet"
+
+#~ msgid "Select a folder to restore a backup of your previous copied feeds"
+#~ msgstr ""
+#~ "Valitse kansio, josta aiemmin kopioimasi syötteiden varmuuskopio "
+#~ "palautetaan."
+
+#~ msgid "directory containing backup:"
+#~ msgstr "Varmuuskopion sisältävä kansio:"
+
+#~ msgid "Select directory to restore"
+#~ msgstr "Valitse palautettava kansio"
+
+#~ msgid "&Read Feeds"
+#~ msgstr "&Lue syötteet"
+
+#~ msgid "R&estore feeds..."
+#~ msgstr "P&alauta syötteet..."
+
+#~ msgid "Activates the Copy dialog of Read Feeds."
+#~ msgstr "Avaa Lue syötteet -lisäosan Kopioi-valintaikkunan."
+
+#~ msgid "Activates the Restore dialog of Read Feeds."
+#~ msgstr "Avaa Lue syötteet -lisäosan Palauta-valintaikkunan."
+
+#~ msgid ""
 #~ "You have installed the ReadFeeds add-on, probably an old and incompatible "
 #~ "version with this one. Do you want to uninstall the old version?"
 #~ msgstr ""
@@ -318,9 +326,6 @@ msgstr "Lisäosa, jolla NVDA:ta voidaan käyttää syötteenlukijana."
 
 #~ msgid "Uninstall incompatible add-on"
 #~ msgstr "Poista yhteensopimaton lisäosa"
-
-#~ msgid "Feeds"
-#~ msgstr "Syötteet"
 
 #~ msgid "Manage feeds."
 #~ msgstr "Hallinnoi syötteitä."

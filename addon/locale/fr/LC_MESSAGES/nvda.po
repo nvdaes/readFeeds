@@ -18,21 +18,6 @@ msgstr ""
 "X-Generator: Poedit 2.0.6\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
-#. Translators: the label of a message box dialog.
-msgid ""
-"Your configuration folder for NVDA contains files that seem to be derived\n"
-"\t\t\t\tfrom a previous version of this add-on.\n"
-"\t\t\t\tDo you want to update it?"
-msgstr ""
-"Votre dossier de configuration de NVDA contient des fichiers qui semblent "
-"provenir\n"
-"\t\t\t\td'une version antérieure de cette extension.\n"
-"\t\t\t\tVoulez-vous les mettre à jour ?"
-
-#. Translators: the title of a message box dialog.
-msgid "Install or update add-on"
-msgstr "Installer ou mettre à jour l'extension"
-
 #. Translators: message presented when feeds cannot be reported.
 msgid ""
 "Unable to refresh feed. Check your Internet conectivity or that the "
@@ -58,9 +43,8 @@ msgid "Feeds restored"
 msgstr "Flux restaurés"
 
 #. Translators: Title of a dialog.
-#, python-brace-format
-msgid "Feeds: {file} ({profile})"
-msgstr "Flux : {file} ({profile})"
+msgid "Feeds: {}"
+msgstr ""
 
 #. Translators: Label of a dialog (message translated in NVDA's core in different contexts).
 msgid "&Filter by:"
@@ -98,9 +82,14 @@ msgstr "&Supprimer..."
 msgid "S&et default"
 msgstr "Définir par d&éfaut"
 
-#. Translators: The label of a button to open a folder containing a backup of feeds.
-msgid "Open &folder containing a backup of feeds"
-msgstr "Ouvrir le &dossier contenant une sauvegarde des flux"
+#. Translators: The label of a button to import feeds from OPML.
+#, fuzzy
+msgid "&Import feeds from OPML file..."
+msgstr "&Copier le dossier des flux..."
+
+#. Translators: The label of a button to save feeds to OPML file.
+msgid "&Save feeds to OPML file..."
+msgstr ""
 
 #. Translators: The label of a button to open the settings dialog for readFeeds.
 msgid "&Preferences..."
@@ -151,6 +140,18 @@ msgstr "Nouveau nom:"
 msgid "Rename feed"
 msgstr "Renommer le flux"
 
+#. Translators: Label for a file dialog.
+msgid "Open OPML file"
+msgstr ""
+
+#. Translators: Wildcards for a file dialog
+msgid "OPML files (*.opml)|*.opml"
+msgstr ""
+
+#. Translators: Label of a button on the Feeds dialog.
+msgid "Save As"
+msgstr ""
+
 #. Translators: The label of the articles list in the articles dialog.
 msgid "List of articles"
 msgstr "Liste des articles"
@@ -175,48 +176,13 @@ msgstr ""
 msgid "Article information"
 msgstr "Informations de l'article"
 
-#. Translators: The title of the Copy dialog.
-msgid "Copy feeds"
-msgstr "Copier les flux"
-
-#. Translators: An informational message displayed in the Copy dialog.
-msgid "Select a folder to save a backup of your current feeds"
-msgstr ""
-"Sélectionnez le dossier afin d'enregistrer une sauvegarde de vos flux actuels"
-
-#. Translators: The label of a grouping containing controls to select the destination directory
-#. in the Copy dialog.
-msgid "directory for backup:"
-msgstr "dossier de sauvegarde:"
-
-#. Translators: The title of the dialog presented
-#. when browsing for the destination directory when copying feeds.
-msgid "Select directory to copy"
-msgstr "Sélectionnez le dossier à copier"
-
-#. Translators: The title of the Restore dialog.
-msgid "Restore feeds"
-msgstr "Restaurer les flux"
-
-#. Translators: An informational message displayed in the Restore dialog.
-msgid "Select a folder to restore a backup of your previous copied feeds"
-msgstr ""
-"Sélectionnez le dossier afin de restaurer une sauvegarde de vos précédents "
-"flux copiées"
-
-#. Translators: The label of a grouping containing controls to select the destination directory
-#. in the Restore dialog.
-msgid "directory containing backup:"
-msgstr "dossier contenant la sauvegarde:"
-
-#. Translators: The title of the dialog presented when browsing for the destination directory
-#. when restoring feeds.
-msgid "Select directory to restore"
-msgstr "Sélectionnez le dossier à restaurer"
-
 #. Translators: label of a dialog.
 msgid "&Search edit box after feeds list"
 msgstr "&Zone de recherche après la liste des flux"
+
+#. Translators: label of a dialog.
+msgid "&Show articles Date"
+msgstr ""
 
 #. Translators: Presented when the current article does not have an associated title.
 msgid "Unable to locate article title."
@@ -238,33 +204,13 @@ msgstr "Montrer les boutons pour copier"
 msgid "Copy"
 msgstr "Copier"
 
-#. Translators: the name of a submenu.
-msgid "&Read Feeds"
-msgstr "&Read Feeds"
-
 #. Translators: the name of a menu item.
 msgid "&Feeds..."
 msgstr "&Flux..."
 
-#. Translators: the name of a menu item.
-msgid "&Copy feeds folder..."
-msgstr "&Copier le dossier des flux..."
-
-#. Translators: the name of a menu item.
-msgid "R&estore feeds..."
-msgstr "R&estaurer les flux..."
-
 #. Translators: message presented in input mode.
 msgid "Activates the Feeds dialog of Read Feeds."
 msgstr "Active le dialogue Flux de Read Feeds."
-
-#. Translators: message presented in input mode.
-msgid "Activates the Copy dialog of Read Feeds."
-msgstr "Active le dialogue Copier de Read Feeds."
-
-#. Translators: message presented in input mode.
-msgid "Activates the Restore dialog of Read Feeds."
-msgstr "Active le dialogue Restaurer de Read Feeds."
 
 #. Translators: message presented in input mode.
 #, python-format
@@ -320,3 +266,63 @@ msgstr "Read Feeds"
 msgid "Add-on for using NVDA as a feed reader."
 msgstr ""
 "Module complémentaire  pour utiliser NVDA comme un lecteur de flux RSS."
+
+#~ msgid ""
+#~ "Your configuration folder for NVDA contains files that seem to be "
+#~ "derived\n"
+#~ "\t\t\t\tfrom a previous version of this add-on.\n"
+#~ "\t\t\t\tDo you want to update it?"
+#~ msgstr ""
+#~ "Votre dossier de configuration de NVDA contient des fichiers qui semblent "
+#~ "provenir\n"
+#~ "\t\t\t\td'une version antérieure de cette extension.\n"
+#~ "\t\t\t\tVoulez-vous les mettre à jour ?"
+
+#~ msgid "Install or update add-on"
+#~ msgstr "Installer ou mettre à jour l'extension"
+
+#~ msgid "Feeds: {file} ({profile})"
+#~ msgstr "Flux : {file} ({profile})"
+
+#~ msgid "Open &folder containing a backup of feeds"
+#~ msgstr "Ouvrir le &dossier contenant une sauvegarde des flux"
+
+#~ msgid "Copy feeds"
+#~ msgstr "Copier les flux"
+
+#~ msgid "Select a folder to save a backup of your current feeds"
+#~ msgstr ""
+#~ "Sélectionnez le dossier afin d'enregistrer une sauvegarde de vos flux "
+#~ "actuels"
+
+#~ msgid "directory for backup:"
+#~ msgstr "dossier de sauvegarde:"
+
+#~ msgid "Select directory to copy"
+#~ msgstr "Sélectionnez le dossier à copier"
+
+#~ msgid "Restore feeds"
+#~ msgstr "Restaurer les flux"
+
+#~ msgid "Select a folder to restore a backup of your previous copied feeds"
+#~ msgstr ""
+#~ "Sélectionnez le dossier afin de restaurer une sauvegarde de vos "
+#~ "précédents flux copiées"
+
+#~ msgid "directory containing backup:"
+#~ msgstr "dossier contenant la sauvegarde:"
+
+#~ msgid "Select directory to restore"
+#~ msgstr "Sélectionnez le dossier à restaurer"
+
+#~ msgid "&Read Feeds"
+#~ msgstr "&Read Feeds"
+
+#~ msgid "R&estore feeds..."
+#~ msgstr "R&estaurer les flux..."
+
+#~ msgid "Activates the Copy dialog of Read Feeds."
+#~ msgstr "Active le dialogue Copier de Read Feeds."
+
+#~ msgid "Activates the Restore dialog of Read Feeds."
+#~ msgstr "Active le dialogue Restaurer de Read Feeds."

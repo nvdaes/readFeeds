@@ -19,21 +19,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "X-Generator: Poedit 3.0\n"
 
-#. Translators: the label of a message box dialog.
-msgid ""
-"Your configuration folder for NVDA contains files that seem to be derived\n"
-"\t\t\t\tfrom a previous version of this add-on.\n"
-"\t\t\t\tDo you want to update it?"
-msgstr ""
-"Вашата папка с потребителските настройки за NVDA съдържа файлове, които "
-"изглежда принадлежат\n"
-"\t\t\t\tна предишна версия на тази добавка.\n"
-"\t\t\t\tЖелаете ли да ги обновите?"
-
-#. Translators: the title of a message box dialog.
-msgid "Install or update add-on"
-msgstr "Инсталиране или обновяване на добавката"
-
 #. Translators: message presented when feeds cannot be reported.
 msgid ""
 "Unable to refresh feed. Check your Internet conectivity or that the "
@@ -59,9 +44,9 @@ msgid "Feeds restored"
 msgstr "Източниците са възстановени"
 
 #. Translators: Title of a dialog.
-#, python-brace-format
-msgid "Feeds: {file} ({profile})"
-msgstr "Емисии: {file} ({profile})"
+#, fuzzy
+msgid "Feeds: {}"
+msgstr "Източници"
 
 #. Translators: Label of a dialog (message translated in NVDA's core in different contexts).
 msgid "&Filter by:"
@@ -99,9 +84,14 @@ msgstr "&Изтрий..."
 msgid "S&et default"
 msgstr "&Задай по подразбиране"
 
-#. Translators: The label of a button to open a folder containing a backup of feeds.
-msgid "Open &folder containing a backup of feeds"
-msgstr "Отвори &папката с резервното копие на емисиите"
+#. Translators: The label of a button to import feeds from OPML.
+#, fuzzy
+msgid "&Import feeds from OPML file..."
+msgstr "&Копирай папката с източниците..."
+
+#. Translators: The label of a button to save feeds to OPML file.
+msgid "&Save feeds to OPML file..."
+msgstr ""
 
 #. Translators: The label of a button to open the settings dialog for readFeeds.
 msgid "&Preferences..."
@@ -153,6 +143,18 @@ msgstr "Ново име:"
 msgid "Rename feed"
 msgstr "Преименуване на източник"
 
+#. Translators: Label for a file dialog.
+msgid "Open OPML file"
+msgstr ""
+
+#. Translators: Wildcards for a file dialog
+msgid "OPML files (*.opml)|*.opml"
+msgstr ""
+
+#. Translators: Label of a button on the Feeds dialog.
+msgid "Save As"
+msgstr ""
+
 #. Translators: The label of the articles list in the articles dialog.
 msgid "List of articles"
 msgstr "Списък на статиите"
@@ -176,47 +178,13 @@ msgstr ""
 msgid "Article information"
 msgstr "Информация за статията"
 
-#. Translators: The title of the Copy dialog.
-msgid "Copy feeds"
-msgstr "Копиране на източници"
-
-#. Translators: An informational message displayed in the Copy dialog.
-msgid "Select a folder to save a backup of your current feeds"
-msgstr "Изберете папка за записване на архивно копие на вашите текущи емисии"
-
-#. Translators: The label of a grouping containing controls to select the destination directory
-#. in the Copy dialog.
-msgid "directory for backup:"
-msgstr "Директория за резервното копие:"
-
-#. Translators: The title of the dialog presented
-#. when browsing for the destination directory when copying feeds.
-msgid "Select directory to copy"
-msgstr "Избор на папка за копирането"
-
-#. Translators: The title of the Restore dialog.
-msgid "Restore feeds"
-msgstr "Възстановяване на източници"
-
-#. Translators: An informational message displayed in the Restore dialog.
-msgid "Select a folder to restore a backup of your previous copied feeds"
-msgstr ""
-"Изберете папка, от която да възстановите архивно копие на вашите предишно "
-"копирани емисии"
-
-#. Translators: The label of a grouping containing controls to select the destination directory
-#. in the Restore dialog.
-msgid "directory containing backup:"
-msgstr "Директория, съдържаща архивно копие:"
-
-#. Translators: The title of the dialog presented when browsing for the destination directory
-#. when restoring feeds.
-msgid "Select directory to restore"
-msgstr "Избор на папка за възстановяване"
-
 #. Translators: label of a dialog.
 msgid "&Search edit box after feeds list"
 msgstr "Полето за &търсене след списъка с емисиите"
+
+#. Translators: label of a dialog.
+msgid "&Show articles Date"
+msgstr ""
 
 #. Translators: Presented when the current article does not have an associated title.
 msgid "Unable to locate article title."
@@ -238,34 +206,13 @@ msgstr "Показвай бутоните за копиране"
 msgid "Copy"
 msgstr "Копирай"
 
-#. Translators: the name of a submenu.
-msgid "&Read Feeds"
-msgstr "Четене на &източници"
-
 #. Translators: the name of a menu item.
 msgid "&Feeds..."
 msgstr "&Източници..."
 
-#. Translators: the name of a menu item.
-msgid "&Copy feeds folder..."
-msgstr "&Копирай папката с източниците..."
-
-#. Translators: the name of a menu item.
-msgid "R&estore feeds..."
-msgstr "&Възстанови източници..."
-
 #. Translators: message presented in input mode.
 msgid "Activates the Feeds dialog of Read Feeds."
 msgstr "Задейства диалоговия прозорец с емисиите на \"Четене на емисии\"."
-
-#. Translators: message presented in input mode.
-msgid "Activates the Copy dialog of Read Feeds."
-msgstr "Задейства диалоговия прозорец за копиране на \"Четене на емисии\"."
-
-#. Translators: message presented in input mode.
-msgid "Activates the Restore dialog of Read Feeds."
-msgstr ""
-"Задейства диалоговия прозорец за възстановяване на \"Четене на емисии\"."
 
 #. Translators: message presented in input mode.
 #, python-format
@@ -319,6 +266,66 @@ msgid "Add-on for using NVDA as a feed reader."
 msgstr "Добавка за използване на NVDA като четец на новинарски източници."
 
 #~ msgid ""
+#~ "Your configuration folder for NVDA contains files that seem to be "
+#~ "derived\n"
+#~ "\t\t\t\tfrom a previous version of this add-on.\n"
+#~ "\t\t\t\tDo you want to update it?"
+#~ msgstr ""
+#~ "Вашата папка с потребителските настройки за NVDA съдържа файлове, които "
+#~ "изглежда принадлежат\n"
+#~ "\t\t\t\tна предишна версия на тази добавка.\n"
+#~ "\t\t\t\tЖелаете ли да ги обновите?"
+
+#~ msgid "Install or update add-on"
+#~ msgstr "Инсталиране или обновяване на добавката"
+
+#~ msgid "Feeds: {file} ({profile})"
+#~ msgstr "Емисии: {file} ({profile})"
+
+#~ msgid "Open &folder containing a backup of feeds"
+#~ msgstr "Отвори &папката с резервното копие на емисиите"
+
+#~ msgid "Copy feeds"
+#~ msgstr "Копиране на източници"
+
+#~ msgid "Select a folder to save a backup of your current feeds"
+#~ msgstr ""
+#~ "Изберете папка за записване на архивно копие на вашите текущи емисии"
+
+#~ msgid "directory for backup:"
+#~ msgstr "Директория за резервното копие:"
+
+#~ msgid "Select directory to copy"
+#~ msgstr "Избор на папка за копирането"
+
+#~ msgid "Restore feeds"
+#~ msgstr "Възстановяване на източници"
+
+#~ msgid "Select a folder to restore a backup of your previous copied feeds"
+#~ msgstr ""
+#~ "Изберете папка, от която да възстановите архивно копие на вашите предишно "
+#~ "копирани емисии"
+
+#~ msgid "directory containing backup:"
+#~ msgstr "Директория, съдържаща архивно копие:"
+
+#~ msgid "Select directory to restore"
+#~ msgstr "Избор на папка за възстановяване"
+
+#~ msgid "&Read Feeds"
+#~ msgstr "Четене на &източници"
+
+#~ msgid "R&estore feeds..."
+#~ msgstr "&Възстанови източници..."
+
+#~ msgid "Activates the Copy dialog of Read Feeds."
+#~ msgstr "Задейства диалоговия прозорец за копиране на \"Четене на емисии\"."
+
+#~ msgid "Activates the Restore dialog of Read Feeds."
+#~ msgstr ""
+#~ "Задейства диалоговия прозорец за възстановяване на \"Четене на емисии\"."
+
+#~ msgid ""
 #~ "You have installed the ReadFeeds add-on, probably an old and incompatible "
 #~ "version with this one. Do you want to uninstall the old version?"
 #~ msgstr ""
@@ -327,9 +334,6 @@ msgstr "Добавка за използване на NVDA като четец �
 
 #~ msgid "Uninstall incompatible add-on"
 #~ msgstr "Деинсталиране на несъвместима добавка"
-
-#~ msgid "Feeds"
-#~ msgstr "Източници"
 
 #~ msgid "Manage feeds."
 #~ msgstr "Управление на източниците."
