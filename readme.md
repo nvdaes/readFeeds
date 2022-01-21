@@ -35,7 +35,7 @@ It contains the following controls:
 ### Notes #####
 
 * The Filter by edit box can be placed after the Open article button from NVDA's menu, Preferences, Settings, Read feeds category, or pressing the Preferences button of the Feeds dialog.
-* This dialog has an option to show article dates on the List of articles dialog.
+* This panel has an option to show article dates on the List of articles dialog.
 
 
 ### Keyboard commands ###
