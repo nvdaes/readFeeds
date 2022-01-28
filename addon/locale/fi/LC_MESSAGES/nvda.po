@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: readFeeds\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2013-11-16 13:26+0100\n"
-"PO-Revision-Date: 2021-08-08 13:19+0200\n"
-"Last-Translator: Jani Kinnunen <jani.kinnunen@wippies.fi>\n"
+"PO-Revision-Date: 2022-01-24 14:40+0200\n"
+"Last-Translator: Jani Kinnunen <janikinnunen340@gmail.com>\n"
 "Language-Team: Finnish <jani.kinnunen@wippies.fi>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
@@ -43,9 +43,8 @@ msgid "Feeds restored"
 msgstr "Syötteet palautettu"
 
 #. Translators: Title of a dialog.
-#, fuzzy
 msgid "Feeds: {}"
-msgstr "Syötteet"
+msgstr "Syötteet: {}"
 
 #. Translators: Label of a dialog (message translated in NVDA's core in different contexts).
 msgid "&Filter by:"
@@ -84,13 +83,12 @@ msgid "S&et default"
 msgstr "A&seta oletukseksi"
 
 #. Translators: The label of a button to import feeds from OPML.
-#, fuzzy
 msgid "&Import feeds from OPML file..."
-msgstr "&Kopioi syötteiden kansio..."
+msgstr "&Tuo syötteet OPML-tiedostosta..."
 
 #. Translators: The label of a button to save feeds to OPML file.
 msgid "&Save feeds to OPML file..."
-msgstr ""
+msgstr "&Tallenna syötteet OPML-tiedostoon..."
 
 #. Translators: The label of a button to open the settings dialog for readFeeds.
 msgid "&Preferences..."
@@ -142,15 +140,15 @@ msgstr "Nimeä syöte uudelleen"
 
 #. Translators: Label for a file dialog.
 msgid "Open OPML file"
-msgstr ""
+msgstr "Avaa OPML-tiedosto"
 
 #. Translators: Wildcards for a file dialog
 msgid "OPML files (*.opml)|*.opml"
-msgstr ""
+msgstr "OPML-tiedostot (*.opml)|*.opml"
 
 #. Translators: Label of a button on the Feeds dialog.
 msgid "Save As"
-msgstr ""
+msgstr "Tallenna nimellä"
 
 #. Translators: The label of the articles list in the articles dialog.
 msgid "List of articles"
@@ -179,7 +177,7 @@ msgstr "&Hakukenttä syöteluettelon jälkeen"
 
 #. Translators: label of a dialog.
 msgid "&Show articles Date"
-msgstr ""
+msgstr "&Näytä artikkelin päivämäärä"
 
 #. Translators: Presented when the current article does not have an associated title.
 msgid "Unable to locate article title."

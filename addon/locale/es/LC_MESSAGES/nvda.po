@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: readFeeds 1.0-dev\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2013-11-16 13:26+0100\n"
-"PO-Revision-Date: 2021-08-06 20:10+0200\n"
+"PO-Revision-Date: 2022-01-22 20:02+0100\n"
 "Last-Translator: José Manuel Delicado <jmdaweb@hotmail.com>\n"
 "Language-Team: spanish NVDA add-ons translation team <oprisniki@gmail.com>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #. Translators: message presented when feeds cannot be reported.
 msgid ""
@@ -42,9 +42,8 @@ msgid "Feeds restored"
 msgstr "Feeds restaurados"
 
 #. Translators: Title of a dialog.
-#, fuzzy
 msgid "Feeds: {}"
-msgstr "Feeds"
+msgstr "Feeds: {}"
 
 #. Translators: Label of a dialog (message translated in NVDA's core in different contexts).
 msgid "&Filter by:"
@@ -83,13 +82,12 @@ msgid "S&et default"
 msgstr "&Configurar como predeterminado"
 
 #. Translators: The label of a button to import feeds from OPML.
-#, fuzzy
 msgid "&Import feeds from OPML file..."
-msgstr "&Copiar carpeta de feeds..."
+msgstr "&Importar feeds desde archivo OPML..."
 
 #. Translators: The label of a button to save feeds to OPML file.
 msgid "&Save feeds to OPML file..."
-msgstr ""
+msgstr "&Guardar feeds en archivo OPML..."
 
 #. Translators: The label of a button to open the settings dialog for readFeeds.
 msgid "&Preferences..."
@@ -141,15 +139,15 @@ msgstr "Renombrar feed"
 
 #. Translators: Label for a file dialog.
 msgid "Open OPML file"
-msgstr ""
+msgstr "Abrir archivo OPML"
 
 #. Translators: Wildcards for a file dialog
 msgid "OPML files (*.opml)|*.opml"
-msgstr ""
+msgstr "Archivos OPML (*.opml)|*.opml"
 
 #. Translators: Label of a button on the Feeds dialog.
 msgid "Save As"
-msgstr ""
+msgstr "Guardar como"
 
 #. Translators: The label of the articles list in the articles dialog.
 msgid "List of articles"
@@ -178,7 +176,7 @@ msgstr "Cuadro de edición de &búsqueda después de la lista de feeds"
 
 #. Translators: label of a dialog.
 msgid "&Show articles Date"
-msgstr ""
+msgstr "Mostrar &fecha de los artículos"
 
 #. Translators: Presented when the current article does not have an associated title.
 msgid "Unable to locate article title."
@@ -260,85 +258,3 @@ msgstr "Read Feeds"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Add-on for using NVDA as a feed reader."
 msgstr "Complemento para el uso de NVDA como un lector de feeds."
-
-#~ msgid ""
-#~ "Your configuration folder for NVDA contains files that seem to be "
-#~ "derived\n"
-#~ "\t\t\t\tfrom a previous version of this add-on.\n"
-#~ "\t\t\t\tDo you want to update it?"
-#~ msgstr ""
-#~ "Tu carpeta de configuración de NVDA contiene ficheros que parecen "
-#~ "derivar\n"
-#~ "\t\t\t\tde una versión anterior de este complemento.\n"
-#~ "\t\t\t\t¿Quieres actualizarla?"
-
-#~ msgid "Install or update add-on"
-#~ msgstr "Instalar o actualizar complemento"
-
-#~ msgid "Feeds: {file} ({profile})"
-#~ msgstr "Feeds: {file} ({profile})"
-
-#~ msgid "Open &folder containing a backup of feeds"
-#~ msgstr "Abrir &carpeta que contiene una copia de seguridad de las fuentes"
-
-#~ msgid "Copy feeds"
-#~ msgstr "Copiar feeds"
-
-#~ msgid "Select a folder to save a backup of your current feeds"
-#~ msgstr ""
-#~ "Selecciona una carpeta para guardar una copia de respaldo de tus feeds "
-#~ "actuales"
-
-#~ msgid "directory for backup:"
-#~ msgstr "directorio para la copia de respaldo:"
-
-#~ msgid "Select directory to copy"
-#~ msgstr "Seleccionar directorio para copiar"
-
-#~ msgid "Restore feeds"
-#~ msgstr "Restaurar feeds"
-
-#~ msgid "Select a folder to restore a backup of your previous copied feeds"
-#~ msgstr ""
-#~ "Selecciona una carpeta para restaurar una copia de respaldo de tus feeds "
-#~ "copiados anteriormente"
-
-#~ msgid "directory containing backup:"
-#~ msgstr "directorio que contiene copias de respaldo:"
-
-#~ msgid "Select directory to restore"
-#~ msgstr "Seleccionar directorio para restaurar"
-
-#~ msgid "&Read Feeds"
-#~ msgstr "&Read Feeds"
-
-#~ msgid "R&estore feeds..."
-#~ msgstr "R&estaurar feeds..."
-
-#~ msgid "Activates the Copy dialog of Read Feeds."
-#~ msgstr "Activa el diálogo Copiar de Read Feeds."
-
-#~ msgid "Activates the Restore dialog of Read Feeds."
-#~ msgstr "Activa el diálogo Restaurar de Read Feeds."
-
-#~ msgid ""
-#~ "You have installed the ReadFeeds add-on, probably an old and incompatible "
-#~ "version with this one. Do you want to uninstall the old version?"
-#~ msgstr ""
-#~ "Has instalado el complemento ReadFeeds, probablemente una versión antigua "
-#~ "e incompatible con éste. ¿Quieres desinstalar la versión anterior?"
-
-#~ msgid "Uninstall incompatible add-on"
-#~ msgstr "Desinstalando complemento incompatible"
-
-#~ msgid "Manage feeds."
-#~ msgstr "Gestionar feeds."
-
-#~ msgid "View and manage feeds"
-#~ msgstr "Ver y gestionar feeds"
-
-#~ msgid "Backup of feeds"
-#~ msgstr "Copia de respaldo de feeds"
-
-#~ msgid "Restore previously saved feeds"
-#~ msgstr "Restaura los feeds previamente guardados"
