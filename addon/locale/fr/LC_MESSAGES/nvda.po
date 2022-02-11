@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: readFeeds 5.0\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2013-12-06 18:00+0100\n"
-"PO-Revision-Date: 2021-11-30 10:56+0100\n"
+"PO-Revision-Date: 2022-02-08 10:44+0100\n"
 "Last-Translator: Cyrille Bougot <cyrille.bougot2@laposte.net>\n"
 "Language-Team: Rémy Ruiz <remyruiz@gmail.com>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 3.0\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
 #. Translators: message presented when feeds cannot be reported.
@@ -44,7 +44,7 @@ msgstr "Flux restaurés"
 
 #. Translators: Title of a dialog.
 msgid "Feeds: {}"
-msgstr ""
+msgstr "Flux : {}"
 
 #. Translators: Label of a dialog (message translated in NVDA's core in different contexts).
 msgid "&Filter by:"
@@ -83,13 +83,12 @@ msgid "S&et default"
 msgstr "Définir par d&éfaut"
 
 #. Translators: The label of a button to import feeds from OPML.
-#, fuzzy
 msgid "&Import feeds from OPML file..."
-msgstr "&Copier le dossier des flux..."
+msgstr "&Importer les flux depuis un fichier OPML..."
 
 #. Translators: The label of a button to save feeds to OPML file.
 msgid "&Save feeds to OPML file..."
-msgstr ""
+msgstr "&Enregistrer les flux dans un fichier OPML..."
 
 #. Translators: The label of a button to open the settings dialog for readFeeds.
 msgid "&Preferences..."
@@ -130,7 +129,8 @@ msgstr "Nouveau flux"
 #. Translators: The confirmation prompt displayed when the user requests to delete a feed.
 msgid "Are you sure you want to delete this feed? This cannot be undone."
 msgstr ""
-"Êtes-vous sûr de vouloir supprimer ce flux ? Ça ne peut pas être annulé."
+"Êtes-vous sûr de vouloir supprimer ce flux ? Cette action ne peut pas être "
+"annulé."
 
 #. Translators: The label of a field to enter a new name for a feed.
 msgid "New name:"
@@ -142,15 +142,15 @@ msgstr "Renommer le flux"
 
 #. Translators: Label for a file dialog.
 msgid "Open OPML file"
-msgstr ""
+msgstr "Ouvrir un fichier OPML"
 
 #. Translators: Wildcards for a file dialog
 msgid "OPML files (*.opml)|*.opml"
-msgstr ""
+msgstr "Fichiers OPML (*.opml)|*.opml"
 
 #. Translators: Label of a button on the Feeds dialog.
 msgid "Save As"
-msgstr ""
+msgstr "Enregistrer sous"
 
 #. Translators: The label of the articles list in the articles dialog.
 msgid "List of articles"
@@ -182,7 +182,7 @@ msgstr "&Zone de recherche après la liste des flux"
 
 #. Translators: label of a dialog.
 msgid "&Show articles Date"
-msgstr ""
+msgstr "&Afficher la date des articles"
 
 #. Translators: Presented when the current article does not have an associated title.
 msgid "Unable to locate article title."
