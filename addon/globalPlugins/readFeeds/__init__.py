@@ -824,7 +824,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def terminate(self):
 		try:
-			self.menu.Remove(self.feedsListItem)
+			self.toolsMenu .Remove(self.feedsListItem)
+		except Exception:
+			pass
+		try:
 			NVDASettingsDialog.categoryClasses.remove(AddonSettingsPanel)
 		except Exception:
 			pass
