@@ -811,6 +811,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	scriptCategory = ADDON_SUMMARY
 
 	def __init__(self):
+		if globalVars.appArgs.secure:
+			return
 		super(GlobalPlugin, self).__init__()
 		NVDASettingsDialog.categoryClasses.append(AddonSettingsPanel)
 		self.toolsMenu = gui.mainFrame.sysTrayIcon.toolsMenu
