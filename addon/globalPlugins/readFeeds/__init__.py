@@ -1,7 +1,7 @@
 # -*- coding: UTF-8 -*-
 
 # Read feeds: A simple plugin for reading feeds with NVDA
-# Copyright (C) 2012-2021 Noelia Ruiz Martínez, Mesar Hameed
+# Copyright (C) 2012-2022 Noelia Ruiz Martínez, Mesar Hameed
 # Released under GPL 2
 
 import os
@@ -54,6 +54,12 @@ confspec = {
 	"showArticlesDate": "boolean(default=False)",
 }
 config.conf.spec["readFeeds"] = confspec
+
+
+def disableInSecureMode(decoratedCls):
+	if globalVars.appArgs.secure:
+		return globalPluginHandler.GlobalPlugin
+	return decoratedCls
 
 
 def createOpmlPath():
@@ -806,6 +812,7 @@ class Opml(object):
 
 # Global plugin
 
+@disableInSecureMode
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	scriptCategory = ADDON_SUMMARY
@@ -824,7 +831,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def terminate(self):
 		try:
-			self.menu.Remove(self.feedsListItem)
+			self.toolsMenu .Remove(self.feedsListItem)
+		except Exception:
+			pass
+		try:
 			NVDASettingsDialog.categoryClasses.remove(AddonSettingsPanel)
 		except Exception:
 			pass

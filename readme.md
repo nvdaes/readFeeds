@@ -35,7 +35,7 @@ It contains the following controls:
 ### Notes #####
 
 * The Filter by edit box can be placed after the Open article button from NVDA's menu, Preferences, Settings, Read feeds category, or pressing the Preferences button of the Feeds dialog.
-* This dialog has an option to show article dates on the List of articles dialog.
+* This panel has an option to show article dates on the List of articles dialog.
 
 
 ### Keyboard commands ###
@@ -55,6 +55,7 @@ It contains the following controls:
 
 ## Changes for 13.0
 
+* The add-on cannot be used on secure screens.
 * Feeds are managed from OPML files.
 * Due to changes in the feeds management system, there are changes in the configuration file where the default feed is set. Please, use the Feeds dialog if you want to set it again.
 * Your old text files used in previous versions will be automatically imported into the new OPML format when the add-on is started.
@@ -130,3 +131,4 @@ It contains the following controls:
 [2]: https://addons.nvda-project.org/files/get.php?file=rf-dev
 
 [3]: https://addons.nvda-project.org/files/get.php?file=rf-o
+
