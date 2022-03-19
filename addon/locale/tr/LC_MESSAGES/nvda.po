@@ -16,20 +16,6 @@ msgstr ""
 "X-Generator: Poedit 3.0\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#. Translators: the label of a message box dialog.
-msgid ""
-"Your configuration folder for NVDA contains files that seem to be derived\n"
-"\t\t\t\tfrom a previous version of this add-on.\n"
-"\t\t\t\tDo you want to update it?"
-msgstr ""
-"NVDA için yapılandırma klasörünüz, bu eklentinin önceki bir sürümünden\n"
-"\t\t\t\ttüretilmiş gibi görünen dosyalar içeriyor.\n"
-"\t\t\t\tGüncellemek istiyor musunuz?"
-
-#. Translators: the title of a message box dialog.
-msgid "Install or update add-on"
-msgstr "Eklentiyi yükleyin veya güncelleyin"
-
 #. Translators: message presented when feeds cannot be reported.
 msgid ""
 "Unable to refresh feed. Check your Internet conectivity or that the "
@@ -54,9 +40,8 @@ msgid "Feeds restored"
 msgstr "Kaynaklar geri yüklendi"
 
 #. Translators: Title of a dialog.
-#, python-brace-format
-msgid "Feeds: {file} ({profile})"
-msgstr "Akışlar: {file} ({profile})"
+msgid "Feeds: {}"
+msgstr ""
 
 #. Translators: Label of a dialog (message translated in NVDA's core in different contexts).
 msgid "&Filter by:"
@@ -94,9 +79,14 @@ msgstr "&Sil..."
 msgid "S&et default"
 msgstr "Var&sayılan olarak ayarla"
 
-#. Translators: The label of a button to open a folder containing a backup of feeds.
-msgid "Open &folder containing a backup of feeds"
-msgstr "Akışların &yedeğini içeren klasörü açın"
+#. Translators: The label of a button to import feeds from OPML.
+#, fuzzy
+msgid "&Import feeds from OPML file..."
+msgstr "Besleme dizinini yede&kle..."
+
+#. Translators: The label of a button to save feeds to OPML file.
+msgid "&Save feeds to OPML file..."
+msgstr ""
 
 #. Translators: The label of a button to open the settings dialog for readFeeds.
 msgid "&Preferences..."
@@ -146,6 +136,18 @@ msgstr "Yeni ad:"
 msgid "Rename feed"
 msgstr "Akış adını değiştir"
 
+#. Translators: Label for a file dialog.
+msgid "Open OPML file"
+msgstr ""
+
+#. Translators: Wildcards for a file dialog
+msgid "OPML files (*.opml)|*.opml"
+msgstr ""
+
+#. Translators: Label of a button on the Feeds dialog.
+msgid "Save As"
+msgstr ""
+
 #. Translators: The label of the articles list in the articles dialog.
 msgid "List of articles"
 msgstr "Haber &listesi"
@@ -167,45 +169,13 @@ msgstr "%sMakale başlığı ve adresini panoya kopyalamak istiyor musunuz?"
 msgid "Article information"
 msgstr "haber bilgisi"
 
-#. Translators: The title of the Copy dialog.
-msgid "Copy feeds"
-msgstr "Akışları kopyala"
-
-#. Translators: An informational message displayed in the Copy dialog.
-msgid "Select a folder to save a backup of your current feeds"
-msgstr "Mevcut kaynakları yedeklemek için bir klasör seçin"
-
-#. Translators: The label of a grouping containing controls to select the destination directory
-#. in the Copy dialog.
-msgid "directory for backup:"
-msgstr "Yedekleme için klasör:"
-
-#. Translators: The title of the dialog presented
-#. when browsing for the destination directory when copying feeds.
-msgid "Select directory to copy"
-msgstr "Kopyalanacak klasörü seçin"
-
-#. Translators: The title of the Restore dialog.
-msgid "Restore feeds"
-msgstr "Akışları geri yükle"
-
-#. Translators: An informational message displayed in the Restore dialog.
-msgid "Select a folder to restore a backup of your previous copied feeds"
-msgstr "Daha önce yedeklediğiniz kaynakları geri yüklemek için klasör seçin"
-
-#. Translators: The label of a grouping containing controls to select the destination directory
-#. in the Restore dialog.
-msgid "directory containing backup:"
-msgstr "Yedeğin bulunduğu klasör:"
-
-#. Translators: The title of the dialog presented when browsing for the destination directory
-#. when restoring feeds.
-msgid "Select directory to restore"
-msgstr "Geri yüklemek için klasör seçin"
-
 #. Translators: label of a dialog.
 msgid "&Search edit box after feeds list"
 msgstr "&Filtreleme kriteri akış listesi sonrasında"
+
+#. Translators: label of a dialog.
+msgid "&Show articles Date"
+msgstr ""
 
 #. Translators: Presented when the current article does not have an associated title.
 msgid "Unable to locate article title."
@@ -227,33 +197,13 @@ msgstr "Kopyalama düğmelerini göster"
 msgid "Copy"
 msgstr "Kopyala"
 
-#. Translators: the name of a submenu.
-msgid "&Read Feeds"
-msgstr "R&SS Akışlarını Oku"
-
 #. Translators: the name of a menu item.
 msgid "&Feeds..."
 msgstr "Akış &listesi..."
 
-#. Translators: the name of a menu item.
-msgid "&Copy feeds folder..."
-msgstr "Besleme dizinini yede&kle..."
-
-#. Translators: the name of a menu item.
-msgid "R&estore feeds..."
-msgstr "Akışları ge&ri yükle..."
-
 #. Translators: message presented in input mode.
 msgid "Activates the Feeds dialog of Read Feeds."
 msgstr "Akış listesini açar."
-
-#. Translators: message presented in input mode.
-msgid "Activates the Copy dialog of Read Feeds."
-msgstr "Akışları oku'nun kopyalama iletişim kutusunu açar."
-
-#. Translators: message presented in input mode.
-msgid "Activates the Restore dialog of Read Feeds."
-msgstr "Akışları Oku'nun geri yükleme iletişim kutusunu açar."
 
 #. Translators: message presented in input mode.
 #, python-format
@@ -305,6 +255,61 @@ msgstr "Akışları Oku"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Add-on for using NVDA as a feed reader."
 msgstr "NVDA'yı bir yayın okuyucu olarak kullanmak için eklenti."
+
+#~ msgid ""
+#~ "Your configuration folder for NVDA contains files that seem to be "
+#~ "derived\n"
+#~ "\t\t\t\tfrom a previous version of this add-on.\n"
+#~ "\t\t\t\tDo you want to update it?"
+#~ msgstr ""
+#~ "NVDA için yapılandırma klasörünüz, bu eklentinin önceki bir sürümünden\n"
+#~ "\t\t\t\ttüretilmiş gibi görünen dosyalar içeriyor.\n"
+#~ "\t\t\t\tGüncellemek istiyor musunuz?"
+
+#~ msgid "Install or update add-on"
+#~ msgstr "Eklentiyi yükleyin veya güncelleyin"
+
+#~ msgid "Feeds: {file} ({profile})"
+#~ msgstr "Akışlar: {file} ({profile})"
+
+#~ msgid "Open &folder containing a backup of feeds"
+#~ msgstr "Akışların &yedeğini içeren klasörü açın"
+
+#~ msgid "Copy feeds"
+#~ msgstr "Akışları kopyala"
+
+#~ msgid "Select a folder to save a backup of your current feeds"
+#~ msgstr "Mevcut kaynakları yedeklemek için bir klasör seçin"
+
+#~ msgid "directory for backup:"
+#~ msgstr "Yedekleme için klasör:"
+
+#~ msgid "Select directory to copy"
+#~ msgstr "Kopyalanacak klasörü seçin"
+
+#~ msgid "Restore feeds"
+#~ msgstr "Akışları geri yükle"
+
+#~ msgid "Select a folder to restore a backup of your previous copied feeds"
+#~ msgstr "Daha önce yedeklediğiniz kaynakları geri yüklemek için klasör seçin"
+
+#~ msgid "directory containing backup:"
+#~ msgstr "Yedeğin bulunduğu klasör:"
+
+#~ msgid "Select directory to restore"
+#~ msgstr "Geri yüklemek için klasör seçin"
+
+#~ msgid "&Read Feeds"
+#~ msgstr "R&SS Akışlarını Oku"
+
+#~ msgid "R&estore feeds..."
+#~ msgstr "Akışları ge&ri yükle..."
+
+#~ msgid "Activates the Copy dialog of Read Feeds."
+#~ msgstr "Akışları oku'nun kopyalama iletişim kutusunu açar."
+
+#~ msgid "Activates the Restore dialog of Read Feeds."
+#~ msgstr "Akışları Oku'nun geri yükleme iletişim kutusunu açar."
 
 #~ msgid ""
 #~ "You have installed the ReadFeeds add-on, probably an old and incompatible "

@@ -107,6 +107,15 @@ vain syötteiden URL-osoitteita sisältävän kansion.
 * Valitun syötteen nimi ja saatavilla olevien artikkeleiden määrä näytetään
   Artikkeliluettelo-valintaikkunan otsikossa.
 
+## Muutokset versiossa 12.0
+
+* Korjattu bugi, joka sai NVDA:n Työkalut-valikon kohteiden pikanäppäimet
+  toimimaan odottamattomasti.
+
+## Muutokset versiossa 11.0
+
+* Yhteensopiva NVDA 2021.1:n kanssa
+
 ## Muutokset versiossa 10.0 ##
 
 * Lisätty painike valitun syötteen avaamiseen HTML-muodossa
