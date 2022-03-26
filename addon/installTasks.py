@@ -4,11 +4,12 @@
 # Copyright (C) 2013-2021 Noelia Ruiz Martínez, other contributors
 # Released under GPL2
 
-import addonHandler
-import globalVars
 import os
 import shutil
 import glob
+
+import addonHandler
+import globalVars
 
 ADDON_DIR = os.path.abspath(os.path.dirname(__file__))
 FEEDS_PATH = os.path.join(ADDON_DIR, "globalPlugins", "readFeeds", "personalFeeds")
