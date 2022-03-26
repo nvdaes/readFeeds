@@ -7,28 +7,30 @@
 import os
 import shutil
 import glob
+import re
+import urllib.request
+import time
+import datetime
+import locale
+import wx
+
 import addonHandler
 import globalPluginHandler
+import languageHandler
 import globalVars
 import config
-import urllib.request
 import scriptHandler
 from scriptHandler import script
 import api
 import gui
 from gui import SettingsPanel, NVDASettingsDialog, guiHelper
 import core
-import wx
 import ui
 from globalCommands import SCRCAT_CONFIG
 from logHandler import log
-import re
+
 from .skipTranslation import translate
 from .xml.etree import ElementTree
-import languageHandler
-import time
-import datetime
-import locale
 
 addonHandler.initTranslation()
 
