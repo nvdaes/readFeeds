@@ -65,14 +65,13 @@
 * 如果无法备份或恢复personalFeeds文件夹，以及无法创建新的feed，NVDA将显示一条错误信息。
 * “文章列表”对话框的标题显示所选的源名称和可用项目数。
 
-## Changes for 12.0
+## 版本12.0
 
-* Fixed a bug which made shortcuts for items of NVDA's tools menu don't work
-  as expected.
+* 修复了导致 NVDA 工具菜单项的快捷方式无法按预期工作的错误。
 
-## Changes for 11.0
+## 版本11.0
 
-* Compatible with NVDA 2021.1
+* 兼容 NVDA 2021.1
 
 ## 版本10.0更新日志 ##
 
