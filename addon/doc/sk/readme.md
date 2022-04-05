@@ -5,30 +5,18 @@
 * Stiahnuť [stabilnú verzia][1]
 * Stiahnúť [Vývojovú verziu ][2]
 
-
 Poskytuje jednoduchý spôsob čítania kanálov vo formátoch Atom alebo RSS
 pomocou NVDA. Kanály sa neobnovia automaticky. Nižšie, keď spomíname
 informačné kanály, máme na mysli informačné kanály RSS aj ATOM.
 
-## Installation or Update ##
-
-Ak ste používali predchádzajúcu verziu tohto doplnku a v priečinku s
-nastaveniami NVDA sa nachádza priečinok RSS alebo personalFeeds, pri
-inštalácii aktuálnej verzie sa zobrazí dialógové okno s otázkou, či chcete
-aktualizovať alebo nainštalovať. Vyberte aktualizáciu, aby ste zachovali
-uložené kanály a pokračovali v ich používaní v novej nainštalovanej verzii
-doplnku.
-
 ## Commands ##
 
-### Menu RSS čítačky ###
+### Read Feeds dialog ###
 
-Menu RSS čítačky je dostupné z menu NVDA > nástroje a obsahuje tieto
-možnosti:
+You can access the Read Feeds dialog from the nvda menu, Tools submenu,
+Feeds item.
 
-#### Feeds ####
-
-Otvorí dialógové okno s nasledujúcimi možnosťami:
+It contains the following controls:
 
 * Filter: Editačné pole na vyhľadávanie uložených kanálov.
 * A list of the saved feeds, focused when the dialog is opened.
@@ -52,36 +40,22 @@ Otvorí dialógové okno s nasledujúcimi možnosťami:
 * Odstrániť: Umožní odstrániť vybratý informačný kanál.
 * Nastaviť predvolené: Nastaví vybraný informačný kanál ako predvolený, aby
   k jeho článkom bolo možné pristupovať pomocou klávesových skratiek.
-* Otvoriť priečinok so zálohou zdrojov: Otvorí priečinok, ktorý môže
-  obsahovať zálohu zdrojov. To môže byť užitočné pri skúmaní a odstraňovaní
-  informačných kanálov, ktoré by sa po aktualizácii doplnku nemali
-  importovať.
+* Import feeds from OPML file: Opens a dialog to add new feeds from an OPML
+  file.
+* Save feeds to OPML file: Opens a dialog to save the feeds available from
+  the Feeds dialog in an OPML file.
 * Preferences: Opens the settings dialog for readFeeds, also available in
   NVDA's menu, Preferences, settings, readFeeds category.
 * Zatvoriť: Zatvorí dialógové okno informačné kanály.
 
-##### Poznámky #####
+### Notes #####
 
-* Ak sa vytvorí informačný kanál s názvom tempFeed, premenujte ho a prideľte
-  mu zmysluplný názov. V opačnom prípade môže byť tento kanál prepísaný pri
-  pridaní nasledujúceho kanála.
-* Zdroj nastavený ako predvolený nie je možné odstrániť. Informačný kanál
-  AddressFile sa použije ako predvolený pri resetovaní konfigurácie, takže
-  ho nemožno odstrániť.
 * The Filter by edit box can be placed after the Open article button from
   NVDA's menu, Preferences, Settings, Read feeds category, or pressing the
   Preferences button of the Feeds dialog.
+* This panel has an option to show article dates on the List of articles
+  dialog.
 
-#### Copy feeds folder ####
-
-Otvorí dialógové okno pre výber priečinka, do ktorého si môžete uložiť vaše
-informačné kanály. V predvolenom nastavení je vybratý priečinok s
-nastaveniami NVDA. Kanály sa vždy ukladajú do adresára personalfeeds.
-
-#### Restore feeds ####
-
-Umožní nahradiť aktuálne informačné kanály súbormi so zálohy. Ustite sa, že
-ste zvolili priečinok s RSS adresami.
 
 ### Keyboard commands ###
 
@@ -100,10 +74,25 @@ ste zvolili priečinok s RSS adresami.
 * Po skopírovaní názvu alebo adresy URL do schránky.
 * Ak sa nedá pripojiť/obnoviť informačný kanál alebo webová adresa
   nezodpovedá platnému informačnému kanálu.
-* NVDA will display an error message if it was not possible to backup or
-  restore the personalFeeds folder, and if a new feed cannot be created.
+* NVDA will display an error message if a new feed cannot be created.
 * Názov dialógového okna so zoznamom článkov obsahuje vybratý názov
   informačného kanála a počet dostupných položiek.
+
+## Changes for 13.0
+
+* The add-on cannot be used on secure screens.
+* Feeds are managed from OPML files.
+* Due to changes in the feeds management system, there are changes in the
+  configuration file where the default feed is set. Please, use the Feeds
+  dialog if you want to set it again.
+* Your old text files used in previous versions will be automatically
+  imported into the new OPML format when the add-on is started.
+* The copy and restore feeds feature has been replaced with the ability to
+  import from and save to OPML files.
+* Non well-formed feeds can be processed before being added to make them
+  compatible with the add-on.
+* In the Read Feeds settings panel, a new option allows to show article
+  dates on the List of articles dialog.
 
 ## Changes for 12.0
 
@@ -194,3 +183,4 @@ ste zvolili priečinok s RSS adresami.
 [2]: https://addons.nvda-project.org/files/get.php?file=rf-dev
 
 [3]: https://addons.nvda-project.org/files/get.php?file=rf-o
+

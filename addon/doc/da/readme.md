@@ -5,30 +5,18 @@
 * Download [stabil version][1]
 * Download [udviklingsversion][2]
 
-
 Dette tilføjelsesprogram giver en nem og ligetil måde at læse nyheader i
 atom- eller RSS-format med NVDA. Feeds vil ikke blive opdateret
 automatisk. Når vi nedenfor nævner feeds, mener vi både RSS- og atom-feeds.
 
-## Installation eller opdatering ##
-
-Hvis du har brugt en tidligere version af dette tilføjelsesprogram, og hvis
-der er en mappe med navnet RSS eller personalFeeds i mappen med dine
-personlige NVDA-indstillinger, vil der, når du installerer den aktuelle
-version fremkomme en dialog, som spørger, om du vil opgradere eller
-installere. Vælg opdater for at bevare dine gemte feeds og fortsætte med at
-bruge dem i den nyinstallerede version af Læs Feeds.
-
 ## Kommandoer ##
 
-### Menuen Læs feeds ###
+### Read Feeds dialog ###
 
-Du kan få adgang til undermenuen Læs Feeds fra NVDA-menuen værktøjer, hvor
-de følgende menupunkter er tilgængelige:
+You can access the Read Feeds dialog from the nvda menu, Tools submenu,
+Feeds item.
 
-#### Feeds ####
-
-Åbner en dialogboks med følgende kontrolelementer:
+It contains the following controls:
 
 * Filtrér efter: Et redigeringsfelt til at søge i tidligere gemte feeds.
 * En liste over de gemte feeds, der automatisk får fokus, når dialogen
@@ -53,38 +41,23 @@ de følgende menupunkter er tilgængelige:
 * Slet: Åbner en dialogboks for at slette det valgte feed efter bekræftelse.
 * Indstil som standard: Indstiller det valgte feed som standard, så dets
   artikler kan tilgås med NVDAs inputbevægelser.
-* Åbn mappen med sikkerhedskopierne for dine feeds: Åbner en mappe, der
-  indeholder sikkerhedskopier af dine feeds. Dette kan være nyttigt, hvis du
-  evt. vil slette feeds der ikke skal importeres, når tilføjelsen opdateres.
+* Import feeds from OPML file: Opens a dialog to add new feeds from an OPML
+  file.
+* Save feeds to OPML file: Opens a dialog to save the feeds available from
+  the Feeds dialog in an OPML file.
 * Indstillinger: Åbner indstillingerne for tilføjelsen. Indstillingerne kan
   også findes i NVDA-menuen>Opsætning>Indstillinger og ved at vælge
   kategorien "Læs Feeds".
 * Luk: Lukker dialogen Nyhedskanaler.
 
-##### Bemærkninger #####
+### Notes #####
 
-* Hvis et feed ved navn tempFeed er oprettet, skal du omdøbe dette feed,
-  eftersom denne fil kunne erstattes, når det er nødvendigt at oprette et
-  feed med et navn der allerede eksisterer.
-* Det feed der er angivet som standard kan ikke fjernes. AddressFile-feedet
-  vil blive brugt som standard, når konfigurationen er nulstillet. Den kan
-  ikke fjernes.
 * Filtrer efter redigeringsfelt kan placeres efter knappen Åbn artikel fra
   NVDA's menu, Indstillinger, Indstillinger, Læs feeds-kategori eller ved at
   trykke på knappen Indstillinger i dialogboksen Feeds.
+* This panel has an option to show article dates on the List of articles
+  dialog.
 
-#### Kopier mappen med feeds ####
-
-Åbner en dialogboks for at vælge en mappe, hvor du kan gemme mappen
-personalFeeds der indeholder dine feeds. Den valgte mappe er som standard
-NVDAs konfigurationsmappe. Tilføjelsespakken vil oprette mappen
-personalFeeds.
-
-#### Gendan feeds ####
-
-Åbner en dialogboks for at vælge en mappe, som erstatter dine feeds i mappen
-personalFeeds. Sørg for, at du indlæser en mappe der indeholder URL-adresser
-på feeds.
 
 ### Tastaturkommandoer ###
 
@@ -101,11 +74,25 @@ på feeds.
 * Når titlen eller URL-adressen er blevet kopieret.
 * Når det ikke er muligt at forbinde/opdatere et feed, eller den angivne URL
   ikke svarer til et gyldigt feed.
-* NVDA vil vise en fejlmeddelelse, hvis det ikke var muligt at
-  sikkerhedskopiere eller gendanne mappen personalFeeds, og hvis et nyt feed
-  ikke kunne oprettes.
+* NVDA will display an error message if a new feed cannot be created.
 * Titlen på dialogen der viser listen over artikler viser navnet på det
   aktuelle feed, samt antallet af artikler til rådighed.
+
+## Changes for 13.0
+
+* The add-on cannot be used on secure screens.
+* Feeds are managed from OPML files.
+* Due to changes in the feeds management system, there are changes in the
+  configuration file where the default feed is set. Please, use the Feeds
+  dialog if you want to set it again.
+* Your old text files used in previous versions will be automatically
+  imported into the new OPML format when the add-on is started.
+* The copy and restore feeds feature has been replaced with the ability to
+  import from and save to OPML files.
+* Non well-formed feeds can be processed before being added to make them
+  compatible with the add-on.
+* In the Read Feeds settings panel, a new option allows to show article
+  dates on the List of articles dialog.
 
 ## Changes for 12.0
 
@@ -200,3 +187,4 @@ på feeds.
 [2]: https://addons.nvda-project.org/files/get.php?file=rf-dev
 
 [3]: https://addons.nvda-project.org/files/get.php?file=rf-o
+
