@@ -11,12 +11,12 @@ syötteet tarkoittavat sekä Atom- että RSS-syötteitä.
 
 ## Komennot ##
 
-### Read Feeds dialog ###
+### Lue syötteet -valintaikkuna ###
 
-You can access the Read Feeds dialog from the nvda menu, Tools submenu,
-Feeds item.
+Pääset Lue syötteet -valintaikkunaann Syötteet-kohdasta, joka löytyy
+NVDA-valikon Työkalut-alavalikosta.
 
-It contains the following controls:
+Se sisältää seuraavat säätimet:
 
 * Suodata: Muokkauskenttä aiemmin tallennettujen syötteiden etsimiseen.
 * Tallennettujen syötteiden luettelo, aktiivisena kun valintaikkuna avataan.
@@ -42,21 +42,22 @@ It contains the following controls:
   valitun syötteen.
 * Aseta oletukseksi: Asettaa valitun syötteen oletukseksi, jotta sen
   artikkeleihin pääsee NVDA:n syötekomennoilla.
-* Import feeds from OPML file: Opens a dialog to add new feeds from an OPML
-  file.
-* Save feeds to OPML file: Opens a dialog to save the feeds available from
-  the Feeds dialog in an OPML file.
+* Tuo syötteet OPML-tiedostosta: Avaa valintaikkunan uusien syötteiden
+  lisäämiseen OPML-tiedostosta.
+* Tallenna syötteet OPML-tiedostoon: Avaa valintaikkunan
+  Syötteet-valintaikkunassa käytettävissä olevien syötteiden tallentamiseen
+  OPML-tiedostoon.
 * Asetukset: Avaa Lue syötteet -lisäosan asetusvalintaikkunan. Löytyy myös
   NVDA-valikosta kohdasta Asetukset / Asetukset / Lue syötteet -kategoria.
 * Sulje: Sulkee Syötteet-valintaikkunan.
 
-### Notes #####
+### Huomautuksia #####
 
 * Suodata-muokkauskenttä voidaan sijoittaa Avaa artikkeli -painikkeen
   jälkeen NVDA-valikosta kohdasta Asetukset / Asetukset Lue syötteet
   -kategoria tai painamalla Syötteet-valintaikkunan Asetukset-painiketta.
-* This panel has an option to show article dates on the List of articles
-  dialog.
+* Tässä paneelissa on vaihtoehto artikkelien päivämäärien näyttämiseen
+  Artikkeliluettelo-valintaikkunassa.
 
 
 ### Näppäinkomennot ###
@@ -75,25 +76,25 @@ It contains the following controls:
 * Kun otsikko tai URL-osoite on kopioitu.
 * Kun yhdistäminen/syötteen päivittäminen ei onnistu, tai annetussa
   URL-osoitteessa ei ole kelvollista syötettä.
-* NVDA will display an error message if a new feed cannot be created.
+* NVDA näyttää virheilmoituksen, jos uutta syötettä ei voi luoda.
 * Valitun syötteen nimi ja saatavilla olevien artikkeleiden määrä näytetään
   Artikkeliluettelo-valintaikkunan otsikossa.
 
-## Changes for 13.0
+## Muutokset versiossa 13.0
 
-* The add-on cannot be used on secure screens.
-* Feeds are managed from OPML files.
-* Due to changes in the feeds management system, there are changes in the
-  configuration file where the default feed is set. Please, use the Feeds
-  dialog if you want to set it again.
-* Your old text files used in previous versions will be automatically
-  imported into the new OPML format when the add-on is started.
-* The copy and restore feeds feature has been replaced with the ability to
-  import from and save to OPML files.
-* Non well-formed feeds can be processed before being added to make them
-  compatible with the add-on.
-* In the Read Feeds settings panel, a new option allows to show article
-  dates on the List of articles dialog.
+* Lisäosaa ei voi käyttää suojatuissa ruuduissa.
+* Syötteitä hallitaan OPML-tiedostoista.
+* Syötteidenhallintajärjestelmään tehtyjen muutosten takia asetustiedosto,
+  jossa oletussyöte määritetään, on muuttunut. Käytä
+  Syötteet-valintaikkunaa, mikäli haluat määrittää sen uudelleen.
+* Aiemmissa versioissa käyttämäsi vanhat tekstitiedostot tuodaan
+  automaattisesti uuteen OPML-muotoon, kun lisäosa käynnistetään.
+* Syötteiden kopiointi- ja palautusominaisuudet on korvattu OPML-tiedostojen
+  tuonti- ja tallennusmahdollisuudella.
+* Virheelliset syötteet voidaan käsitellä ennen lisäämistä, jotta ne ovat
+  yhteensopivia lisäosan kanssa.
+* Lue syötteet -asetuspaneelin uusi vaihtoehto mahdollistaa artikkelien
+  päivämäärien näyttämisen Artikkeliluettelo-valintaikkunassa.
 
 ## Muutokset versiossa 12.0
 

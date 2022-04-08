@@ -12,12 +12,12 @@ ATOM.
 
 ## Órdenes ##
 
-### Read Feeds dialog ###
+### El diálogo de Read Feeds ###
 
-You can access the Read Feeds dialog from the nvda menu, Tools submenu,
-Feeds item.
+Puedes acceder al diálogo de Read Feeds desde el menú NVDA, submenú
+Herramientas, elemento Read Feeds.
 
-It contains the following controls:
+Contiene los siguientes controles:
 
 * Filtrar por: un cuadro de edición para buscar feeds guardados con
   anterioridad.
@@ -46,21 +46,21 @@ It contains the following controls:
   una confirmación.
 * Configurar predeterminado: configura el feed seleccionado como el
   predeterminado, así que su artículo puede accederse con gestos de NVDA.
-* Import feeds from OPML file: Opens a dialog to add new feeds from an OPML
-  file.
-* Save feeds to OPML file: Opens a dialog to save the feeds available from
-  the Feeds dialog in an OPML file.
+* Importar feeds desde archivo OPML: abre un diálogo para añadir nuevos
+  feeds desde un archivo OPML.
+* Guardar feeds en archivo OPML: abre un diálogo para guardar los feeds
+  disponibles en el diálogo de feeds en un archivo OPML.
 * Preferencias: abre el diálogo de opciones de Read Feeds, también
   disponible en el menú NVDA, Preferencias, Opciones, categoría Read Feeds.
 * Cerrar: cierra el diálogo Feeds.
 
-### Notes #####
+### Notas
 
 * El cuadro de edición Filtrar por se puede situar tras el botón Abrir
   artículo desde el menú NVDA, Preferencias, Opciones, categoría Read Feeds,
   o pulsando el botón Preferencias en el diálogo de feeds.
-* This panel has an option to show article dates on the List of articles
-  dialog.
+* Este panel tiene una opción para mostrar la fecha de los artículos en el
+  diálogo de lista de artículos.
 
 
 ### Órdenes de teclado ###
@@ -79,25 +79,28 @@ It contains the following controls:
 * Cuando el título o la URL se haya copiado.
 * Cuando no se pueda conectar/refrescar un feed, o la URL no se corresponda
   con un feed válido.
-* NVDA will display an error message if a new feed cannot be created.
+* NVDA mostrará un mensaje de error si no fue posible respaldar o restaurar
+  la carpeta personalFeeds o si no se puede NVDA mostrará un mensaje de
+  error si no se puede crear un nuevo feed.
 * El título del diálogo de lista de artículos muestra el nombre del feed
   seleccionado y el número de elementos disponibles.
 
-## Changes for 13.0
+## Cambios para 13.0
 
-* The add-on cannot be used on secure screens.
-* Feeds are managed from OPML files.
-* Due to changes in the feeds management system, there are changes in the
-  configuration file where the default feed is set. Please, use the Feeds
-  dialog if you want to set it again.
-* Your old text files used in previous versions will be automatically
-  imported into the new OPML format when the add-on is started.
-* The copy and restore feeds feature has been replaced with the ability to
-  import from and save to OPML files.
-* Non well-formed feeds can be processed before being added to make them
-  compatible with the add-on.
-* In the Read Feeds settings panel, a new option allows to show article
-  dates on the List of articles dialog.
+* El complemento no se puede usar en pantallas seguras.
+* Los feeds se gestionan desde archivos OPML.
+* A causa de los cambios en el sistema de gestión de feeds, hay cambios en
+  el archivo de configuración donde se configura el feed predeterminado. Usa
+  el diálogo de feeds si quieres volver a configurarlo.
+* Tus antiguos ficheros de texto usados en versiones anteriores se
+  importarán automáticamente en formato OPML cuando se inicie el
+  complemento.
+* La función de copiar y restaurar feeds se ha reemplazado con la capacidad
+  de importar y guardar en archivos OPML.
+* Los feeds mal formados pueden procesarse antes de añadirlos para que sean
+  compatibles con el complemento.
+* En el panel de opciones de Read Feeds, una nueva opción permite mostrar la
+  fecha de los artículos en el diálogo de lista de artículos.
 
 ## Cambios para 12.0
 

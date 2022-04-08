@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: readFeeds 2.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2014-12-19 18:00+1000\n"
-"PO-Revision-Date: 2021-08-07 15:13+0100\n"
+"PO-Revision-Date: 2022-04-08 19:43+0100\n"
 "Last-Translator: Nikola Jović <wwenikola123@gmail.com>\n"
 "Language-Team: Serbian <wwenikola123@gmail.com>\n"
 "Language: sr\n"
@@ -42,9 +42,8 @@ msgid "Feeds restored"
 msgstr "Izvodi vraćeni"
 
 #. Translators: Title of a dialog.
-#, fuzzy
 msgid "Feeds: {}"
-msgstr "Izvodi"
+msgstr "Izvodi: {}"
 
 #. Translators: Label of a dialog (message translated in NVDA's core in different contexts).
 msgid "&Filter by:"
@@ -83,13 +82,12 @@ msgid "S&et default"
 msgstr "&Podesi kao podrazumevani"
 
 #. Translators: The label of a button to import feeds from OPML.
-#, fuzzy
 msgid "&Import feeds from OPML file..."
-msgstr "&Kopiraj folder sa izvodima..."
+msgstr "&Uvezi izvode iz OPML datoteke..."
 
 #. Translators: The label of a button to save feeds to OPML file.
 msgid "&Save feeds to OPML file..."
-msgstr ""
+msgstr "&Sačuvaj izvode u OPML datoteci..."
 
 #. Translators: The label of a button to open the settings dialog for readFeeds.
 msgid "&Preferences..."
@@ -143,15 +141,15 @@ msgstr "Preimenuj izvod"
 
 #. Translators: Label for a file dialog.
 msgid "Open OPML file"
-msgstr ""
+msgstr "Otvori OPML datoteku"
 
 #. Translators: Wildcards for a file dialog
 msgid "OPML files (*.opml)|*.opml"
-msgstr ""
+msgstr "OPML datoteke (*.opml)|*.opml"
 
 #. Translators: Label of a button on the Feeds dialog.
 msgid "Save As"
-msgstr ""
+msgstr "Sačuvaj kao"
 
 #. Translators: The label of the articles list in the articles dialog.
 msgid "List of articles"
@@ -181,7 +179,7 @@ msgstr "&Polje za unos pretrage nakon liste izvoda"
 
 #. Translators: label of a dialog.
 msgid "&Show articles Date"
-msgstr ""
+msgstr "&Prikaži datume članaka"
 
 #. Translators: Presented when the current article does not have an associated title.
 msgid "Unable to locate article title."
