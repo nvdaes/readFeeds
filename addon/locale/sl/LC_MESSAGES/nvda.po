@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: readFeeds 1.0-dev\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2013-11-16 13:26+0100\n"
-"PO-Revision-Date: 2021-12-13 18:53+0100\n"
+"PO-Revision-Date: 2022-04-11 13:17+0100\n"
 "Last-Translator: Jožef Gregorc <jozko.gregorc@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: sl\n"
@@ -42,9 +42,8 @@ msgid "Feeds restored"
 msgstr "Viri obnovljeni"
 
 #. Translators: Title of a dialog.
-#, fuzzy
 msgid "Feeds: {}"
-msgstr "Viri"
+msgstr "Viri: {}"
 
 #. Translators: Label of a dialog (message translated in NVDA's core in different contexts).
 msgid "&Filter by:"
@@ -83,13 +82,12 @@ msgid "S&et default"
 msgstr "&Nastavitev za privzetega"
 
 #. Translators: The label of a button to import feeds from OPML.
-#, fuzzy
 msgid "&Import feeds from OPML file..."
-msgstr "&Preslikaj mapo z viri..."
+msgstr "&Uvozi vire iz datoteke OPML..."
 
 #. Translators: The label of a button to save feeds to OPML file.
 msgid "&Save feeds to OPML file..."
-msgstr ""
+msgstr "&Shrani vire v datoteko OPML..."
 
 #. Translators: The label of a button to open the settings dialog for readFeeds.
 msgid "&Preferences..."
@@ -105,7 +103,6 @@ msgid "Error"
 msgstr "Napaka"
 
 #. Translators: the label of a message box dialog.
-#, python-brace-format
 msgid ""
 "Do you want to copy feed address to the clipboard\r\n"
 "\r\n"
@@ -142,15 +139,15 @@ msgstr "Preimenuje vir"
 
 #. Translators: Label for a file dialog.
 msgid "Open OPML file"
-msgstr ""
+msgstr "Odpri datoteko OPML"
 
 #. Translators: Wildcards for a file dialog
 msgid "OPML files (*.opml)|*.opml"
-msgstr ""
+msgstr "Datoteke OPML (*.opml)|*.opml"
 
 #. Translators: Label of a button on the Feeds dialog.
 msgid "Save As"
-msgstr ""
+msgstr "Shrani Kot"
 
 #. Translators: The label of the articles list in the articles dialog.
 msgid "List of articles"
@@ -179,7 +176,7 @@ msgstr "&išči polje za urejanje po seznamu virov"
 
 #. Translators: label of a dialog.
 msgid "&Show articles Date"
-msgstr ""
+msgstr "&Pokaži datum članka"
 
 #. Translators: Presented when the current article does not have an associated title.
 msgid "Unable to locate article title."

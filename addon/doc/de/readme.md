@@ -12,12 +12,12 @@ sowohl RSS- als auch  ATOM-Feeds.
 
 ## Befehle ##
 
-### Read Feeds dialog ###
+### Dialogfeld von Read Feeds ###
 
-You can access the Read Feeds dialog from the nvda menu, Tools submenu,
-Feeds item.
+Sie können das Dialogfeld von Read Feedsüber das NVDA-Menü, und dort
+Werkzeuge und dann Feeds aufrufen.
 
-It contains the following controls:
+Sie enthält die folgenden Steuerelemente:
 
 * Filtern nach: Ein Eingabefeld, um zuvor gespeicherte Feeds zu durchsuchen.
 * Eine Liste der gespeicherten RSS-Feeds, die beim Öffnen des Dialogfelds
@@ -46,23 +46,23 @@ It contains the following controls:
 * Als standard festlegen: Legt den ausgewählten RSS-Feed als Standard fest,
   so dass auf seine Artikel mit den Tastenkürzel von NVDA zugegriffen werden
   kann.
-* Import feeds from OPML file: Opens a dialog to add new feeds from an OPML
-  file.
-* Save feeds to OPML file: Opens a dialog to save the feeds available from
-  the Feeds dialog in an OPML file.
+* RSS-Feeds aus OPML-Datei importieren: Öffnet einen Dialogfeld zum
+  Hinzufügen neuer RSS-Feeds aus einer OPML-Datei.
+* RSS-Feeds in OPML-Datei speichern: Öffnet ein Dialogfeld zum Speichern der
+  im Dialogfeld für die RSS-Feeds verfügbaren Feeds in einer OPML-Datei.
 * Einstellungen: Öffnet das Dialogfeld mit den Einstellungen der
   erweiterung, der auch im NVDA-Menü "Einstellungen", "Einstellungen" und
   "RSS-Feeds lesen" verfügbar ist.
 * Schließen: Schließt den Dialog.
 
-### Notes #####
+### Hinweise #####
 
 * Das Bearbeitungsfeld Filtern nach kann nach der Schaltfläche Artikel
   öffnen im NVDA-Menü, Einstellungen, Einstellungen, Feeds lesen oder durch
   Klicken auf die Schaltfläche Einstellungen im Dialogfeld Feeds platziert
   werden.
-* This panel has an option to show article dates on the List of articles
-  dialog.
+* Dieses Panel verfügt über eine Option zur Anzeige von Artikeldaten im
+  Dialogfeld für die Liste der Artikel.
 
 
 ### Tastaturbefehle ###
@@ -82,25 +82,28 @@ It contains the following controls:
 * Wenn der Titel oder die URL kopiert wurden.
 * Wenn die Verbindung / das Neuladen eines RSS-Feeds fehlgeschlagen ist,
   oder wenn die URL nicht mit einem gültigen Feed übereinstimmt.
-* NVDA will display an error message if a new feed cannot be created.
+* NVDA zeigt eine Fehlermeldung an, wenn ein neuer Feed nicht erstellt
+  werden konnte.
 * Im Titel des Dialogs für die Artikellisten werden der Name des
   ausgewählten Feeds und die Anzahl der verfügbaren Artikel angezeigt.
 
-## Changes for 13.0
+## Änderungen in 13.0
 
-* The add-on cannot be used on secure screens.
-* Feeds are managed from OPML files.
-* Due to changes in the feeds management system, there are changes in the
-  configuration file where the default feed is set. Please, use the Feeds
-  dialog if you want to set it again.
-* Your old text files used in previous versions will be automatically
-  imported into the new OPML format when the add-on is started.
-* The copy and restore feeds feature has been replaced with the ability to
-  import from and save to OPML files.
-* Non well-formed feeds can be processed before being added to make them
-  compatible with the add-on.
-* In the Read Feeds settings panel, a new option allows to show article
-  dates on the List of articles dialog.
+* Diese Erweiterung ist nicht länger verwendbar mehr im geschützten Modus.
+* RSS-Feeds werden über OPML-Dateien verwaltet.
+* Auf Grund von Änderungen in der Verwaltung der RSS-Feeds gibt es
+  Änderungen in der Konfigurationsdatei, in der der Standard-Feed
+  eingestellt ist. Bitte verwenden Sie den Dialogfeld für die RSS-Feeds,
+  wenn Sie es wieder einstellen möchten.
+* Die noch im alten Format gespeicherten Textdateien, werden automatisch in
+  das neue OPML-Format umgewandelt, sobald die neue Version der Erweiterung
+  zum ersten Mal gestartet wird.
+* Die Funktion zum Kopieren und Wiederherstellen von RSS-Feeds wurde durch
+  die neuen Dateien im OPML-Format ersetzt.
+* Inkompatible RSS-Feeds können vor dem Hinzufügen verarbeitet werden, um
+  sie mit der Erweiterung kompatibel zu machen.
+* Im Einstellungsfenster für Read Feeds gibt es eine neue Option, mit der
+  das Datum des Artikels in der Liste der Artikel angezeigt werden kann.
 
 ## Änderungen in 12.0
 
