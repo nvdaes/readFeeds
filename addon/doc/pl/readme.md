@@ -5,30 +5,18 @@
 * Pobierz [Wersja stabilna][1]
 * Pobierz [Wersja rozwojowa][2]
 
-
 Ten dodatek umożliwia odczytywanie przez NVDA kanałów informacyjnych w
 formatach Atom lub RSS.  Kanały nie będą odświeżane automatycznie.  Mówiąc o
 kanałach, mamy na myśli kanały w formatach RSS i ATOM.
 
-## Instalacja lub aktualizacja ##
-
-Jeśli używałeś poprzedniej wersji tego dodatku i w Twoim folderze
-konfiguracji NVDA znajdują się katalogi RSS lub personalFeeds , podczas
-instalacji wersji 6.0 lub nowszej, pojawi się okno dialogowe z pytaniem, czy
-chcesz aktualizować, czy zainstalować.  Wybierz aktualizację, aby
-zaktualizować osobiste kanały i kontynuować ich używanie w nowo
-zainstalowanej wersji.
-
 ## Polecenia ##
 
-### Menu Czytaj kanały ###
+### Read Feeds dialog ###
 
-Możesz przejść do podmenu Czytaj kanały z menu NVDA (klawisz NVDA+N);
-dostępne są tam następujące opcje:
+You can access the Read Feeds dialog from the nvda menu, Tools submenu,
+Feeds item.
 
-#### Kanały ####
-
-Otwiera dialog z następującymi kontrolkami:
+It contains the following controls:
 
 * Filtruj Według: Pole edycyjne do wyszukiwania poprzednio zapisanych
   kanałów osobistych.
@@ -55,38 +43,22 @@ Otwiera dialog z następującymi kontrolkami:
   osobistego po potwierdzeniu.
 * Ustaw jako domyślny: Ustawia kanał osobisty jako domyślny, aby można było
   się dostać do artykułów za pomocą gestów NVDA.
-* Otwórz folder zawierający kopię zapasową kanałów: Otwiera folder, który
-  może zawierać kopię zapasową kanałów. Może to być przydatne do
-  przeglądania i usuwania kanałów, których nie należy importować po
-  zaktualizowaniu dodatku.
+* Import feeds from OPML file: Opens a dialog to add new feeds from an OPML
+  file.
+* Save feeds to OPML file: Opens a dialog to save the feeds available from
+  the Feeds dialog in an OPML file.
 * Preferencje: Otwiera okno dialogowe ustawień dla readFeeds, dostępne
   również w menu NVDA, opcje, ustawienia, kategoria readFeeds.
 * Zamknij: Zamyka dialog kanały osobiste.
 
-##### Uwagi #####
+### Notes #####
 
-* Jeżeli jest stworzony kanał osobisty pod nazwą tempFeed, zmień mu nazwę,
-  dla tego że ten plik może być zamieniony kiedy to jest potrzebne dla
-  kanału, który już istnieje.
-* Kanał ustawiony jako domyślny nie może być usunięty. Kanał osobisty
-  addressFile feed będzie użyty jako domyślny, kiedy konfiguracja jest
-  zresetowana, i dla tego, on nie może być usunięty.
 * Pole edycji Filtruj według można umieścić za przyciskiem Otwórz artykuł z
   menu NVDA, Preferencje, Ustawienia, Kategoria Odczyt kanałów lub
   naciskając przycisk Preferencje w oknie dialogowym Kanały.
+* This panel has an option to show article dates on the List of articles
+  dialog.
 
-#### Kopiowanie folderu kanałów informacyjnych ####
-
-Otwiera okno dialogowe, w którym można wybrać katalog gdzie można zapisać
-katalog personalFeeds directory z waszymi katalogami osobistymi. Domyślny
-katalog, to katalog konfiguracyjny NVDA, gdzie będzie stworzony katalog
-personalFeeds.
-
-#### Przywracanie plików danych ####
-
-Otwiera okno dialogowe w którym można wybrać katalog który zamienia twoje
-kanały osobiste w katalogu personalFeeds folder. Upewnij się, że wybrałeś
-katalog zawierający kanały osobiste.
 
 ### Skróty klawiszowe ###
 
@@ -105,11 +77,25 @@ katalog zawierający kanały osobiste.
 * Kiedy tytuł i adres zostały skopiowane.
 * Kiedy jest niemożliwe odświeżanie/łączenie z kanałem osobistym, albo adres
   się nie zgadza z prawdziwym kanałem osobistym.
-* NVDA wyświetli komunikat o błędzie, jeśli nie można było wykonać kopii
-  zapasowej lub przywrócić folderu personalFeeds i jeśli nie można utworzyć
-  nowego kanału informacyjnego.
+* NVDA will display an error message if a new feed cannot be created.
 * Dialog Spisu nagłówków artykułów Wyświetla nazwę oznaczonego kanału
   osobistego i ilość dostępnych artykułów.
+
+## Changes for 13.0
+
+* The add-on cannot be used on secure screens.
+* Feeds are managed from OPML files.
+* Due to changes in the feeds management system, there are changes in the
+  configuration file where the default feed is set. Please, use the Feeds
+  dialog if you want to set it again.
+* Your old text files used in previous versions will be automatically
+  imported into the new OPML format when the add-on is started.
+* The copy and restore feeds feature has been replaced with the ability to
+  import from and save to OPML files.
+* Non well-formed feeds can be processed before being added to make them
+  compatible with the add-on.
+* In the Read Feeds settings panel, a new option allows to show article
+  dates on the List of articles dialog.
 
 ## Changes for 12.0
 
@@ -206,3 +192,4 @@ katalog zawierający kanały osobiste.
 [2]: https://addons.nvda-project.org/files/get.php?file=rf-dev
 
 [3]: https://addons.nvda-project.org/files/get.php?file=rf-o
+

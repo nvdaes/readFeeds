@@ -5,31 +5,19 @@
 * Télécharger [version stable][1]
 * Télécharger [version de développement][2]
 
-
 Cette extension fournit un moyen simple de lire les flux aux formats Atom ou
 RSS à l'aide de NVDA. Les flux ne sont pas actualisés automatiquement.
 Ci-dessous lorsque nous mentionnons flux, nous voulons dire que les deux
 signifient flux RSS et ATOM.
 
-## Installation ou Mise à jour ##
-
-Si vous utilisiez une version antérieure de cette extension, il y a un
-dossier RSS ou personalFeeds dans votre dossier de configuration personnel
-de NVDA, lorsque vous installez la version actuelle, une boîte de dialogue
-vous demandera si vous souhaitez mettre à jour ou installer.  Choisissez
-mise à jour pour préserver vos flux enregistrés et pour continuer à les
-utiliser dans la nouvelle version installée de readFeeds.
-
 ## Commandes ##
 
-### Menu Read Feeds ###
+### Read Feeds dialog ###
 
-Vous pouvez accéder au sous-menu Read Feeds depuis le menu NVDA, sous-menu
-Outils, où les options suivantes du menu sont disponibles :
+You can access the Read Feeds dialog from the nvda menu, Tools submenu,
+Feeds item.
 
-#### Flux ####
-
-Ouvre une boîte de dialogue avec les contrôles suivants :
+It contains the following controls:
 
 * Filtrer par : Une zone d'édition pour rechercher des flux précédemment
   enregistrés.
@@ -60,39 +48,24 @@ Ouvre une boîte de dialogue avec les contrôles suivants :
   après confirmation.
 * Définir par défaut : Définit le flux sélectionné comme valeur par défaut,
   afin que ses articles soient accessibles avec les gestes de NVDA.
-* Ouvrir le dossier contenant une sauvegarde des flux : Ouvre un dossier
-  pouvant contenir une sauvegarde des flux. Cela peut être utile pour
-  explorer et supprimer des flux qui ne doivent pas être importés lors de la
-  mise à jour de l'extension.
+* Import feeds from OPML file: Opens a dialog to add new feeds from an OPML
+  file.
+* Save feeds to OPML file: Opens a dialog to save the feeds available from
+  the Feeds dialog in an OPML file.
 * Préférences : Ouvre la boîte de dialogue des paramètres pour readFeeds,
   également disponible dans le menu de NVDA, Préférences, paramètres,
   catégorie readFeeds.
 * Fermer : Ferme la boîte de dialogue Flux.
 
-##### Notes #####
+### Notes #####
 
-* Si un flux nommé tempFeed est créé, renommez-le, car ce fichier pourrait
-  être remplacé si nécessaire pour créer un flux dont le nom existe déjà.
-* Le flux défini par défaut ne peut pas être supprimé. Le flux addressFile
-  sera utilisé comme valeur par défaut lors de la réinitialisation de la
-  configuration, donc il ne peut pas être supprimé.
 * Le champ d'édition Filtrer par peut être placée après le bouton Ouvrir
   l'article dans le menu de NVDA, Préférences, Paramètres, Catégorie Lire
   les flux, ou en appuyant sur le bouton Préférences de la boîte de dialogue
   Flux.
+* This panel has an option to show article dates on the List of articles
+  dialog.
 
-#### Copier le dossier des flux ####
-
-Ouvre une boîte de dialogue pour choisir un dossier dans lequel vous pouvez
-enregistrer le dossier personalFeeds de vos flux. Par défaut, le dossier
-sélectionné est dans la configuration de NVDA, qui créera le répertoire
-personalFeeds.
-
-#### Restaurer les flux ####
-
-Ouvre une boîte de dialogue pour sélectionner un dossier qui remplace vos
-flux dans le dossier personalFeeds. Assurez-vous de charger un dossier
-contenant des URL de flux.
 
 ### Commandes clavier ###
 
@@ -110,11 +83,25 @@ contenant des URL de flux.
 * Lorsque le titre ou l'URL ont été copiés.
 * Lorsqu'il est Impossible de se connecter/actualiser un flux, ou l'URL ne
   correspond pas à un flux valide.
-* NVDA affichera un message d'erreur s'il n'a pas été possible de
-  sauvegarder ou de restaurer le dossier personalFeeds, et si un nouveau
-  flux ne peut pas être créé.
+* NVDA will display an error message if a new feed cannot be created.
 * La boîte de dialogue affiche Le titre de la Liste de l'article le nom de
   flux sélectionné et le nombre d'éléments disponibles.
+
+## Changes for 13.0
+
+* The add-on cannot be used on secure screens.
+* Feeds are managed from OPML files.
+* Due to changes in the feeds management system, there are changes in the
+  configuration file where the default feed is set. Please, use the Feeds
+  dialog if you want to set it again.
+* Your old text files used in previous versions will be automatically
+  imported into the new OPML format when the add-on is started.
+* The copy and restore feeds feature has been replaced with the ability to
+  import from and save to OPML files.
+* Non well-formed feeds can be processed before being added to make them
+  compatible with the add-on.
+* In the Read Feeds settings panel, a new option allows to show article
+  dates on the List of articles dialog.
 
 ## Changements pour la version 12.0
 
@@ -216,3 +203,4 @@ contenant des URL de flux.
 [2]: https://addons.nvda-project.org/files/get.php?file=rf-dev
 
 [3]: https://addons.nvda-project.org/files/get.php?file=rf-o
+

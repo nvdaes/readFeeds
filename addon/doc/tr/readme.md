@@ -5,30 +5,18 @@
 * [Kararlı sürümü][1] indir
 * [geliştirme sürümü][2]nü indir
 
-
 Bu eklenti NVDA kullanarak Atom veya RSS formatında beslemeleri okumak için
 basit bir yol sunar. Beslemeler otomatik olarak yenilenmez. Aşağıda besleme
 derken hem RSS hem de ATOM beslemelerini kastediyoruz.
 
-## Kurulum veya Güncelleme ##
-
-Bu eklentinin önceki bir sürümünü kullanıyorsanız ve kişisel NVDA
-konfigürasyon klasöründe bir RSS veya personalFeeds adlı klasör varsa,
-eklentiyi güncellemek mi yoksa kurmak mı istediğiniz sorulacaktır. Önceki
-RSS akışlarınızı kullanmaya devam etmek istiyorsanız Güncelle seçeneğiyle
-devam edin.
-
 ## Komutlar ##
 
-### RSS Okuma menüsü ###
+### Read Feeds dialog ###
 
-RSS akışlarını Oku menüsüne NVDA+N ile açılan nvda menüsü altındaki araçlar
-alt menüsünden ulaşabilir,  bu menüde aşağıdaki menüde seçeneklerini
-bulabilirsiniz:
+You can access the Read Feeds dialog from the nvda menu, Tools submenu,
+Feeds item.
 
-#### Akışlar ####
-
-Aşağıdaki kontrolleri içeren bir iletişim kutusu açar:
+It contains the following controls:
 
 * Filtreleme kriteri: Önceden kaydedilmiş beslemeleri aramak için bir
   düzenleme kutusu.
@@ -53,36 +41,22 @@ Aşağıdaki kontrolleri içeren bir iletişim kutusu açar:
 * Sil: Onaydan sonra seçilen akışın silinmesi için bir iletişim kutusu açar.
 * Varsayılan olarak ayarla: Seçilen beslemeyi varsayılan olarak ayarlar,
   böylece makalelerine ilgili NVDA girdi hareketleriyle erişilebilir.
-* Akışların yedeğini içeren klasörü aç: Akışların yedeğini içerebilecek bir
-  klasör açar. Bu, eklenti güncellendiğinde içe aktarılmaması gereken
-  yayınları keşfetmek ve silmek için yararlı olabilir.
+* Import feeds from OPML file: Opens a dialog to add new feeds from an OPML
+  file.
+* Save feeds to OPML file: Opens a dialog to save the feeds available from
+  the Feeds dialog in an OPML file.
 * Tercihler: NVDA menüsünde Tercihler, ayarlar, Akışları oku kategorisinde
   de bulunan akışları oku için ayarlar diyalog penceresini açar.
 * Kapat: Akışlar iletişim kutusunu kapatır.
 
-##### Notlar #####
+### Notes #####
 
-* tempFeed adlı bir yayın oluşturulursa, adı zaten mevcut olan bir yayın
-  oluşturmak için gerektiğinde bu dosya değiştirilebileceğinden lütfen
-  yeniden adlandırın.
-* Varsayılan olarak ayarlanan akış kaldırılamaz. Adres dosyasındaki akış
-  adresi, yapılandırma sıfırlandığında varsayılan olarak kullanılacaktır, bu
-  nedenle silinemez.
 * Filtreye göre düzenleme kutusu NVDA menüsünden Tercihler, Ayarlar,
   Akışları oku kategorisinden veya akışlar iletişim kutusundaki Tercihler
   düğmesine basarak Makaleyi aç düğmesinden sonra yerleştirilebilir.
+* This panel has an option to show article dates on the List of articles
+  dialog.
 
-#### Akışlar klasörünü kopyala ####
-
-Akışlarınızı personalFeeds dizinini kaydedebileceğiniz bir klasör seçmek
-için bir iletişim kutusu açar. Varsayılan olarak, seçilen klasör,
-personalFeeds dizinini oluşturacak olan NVDA'nın yapılandırma dizinidir.
-
-#### Akışları geri yükle ####
-
-PersonalFeeds klasöründeki akışlarınızın yerini alacak bir klasör seçmek
-için bir iletişim kutusu açar. Yayın URL'lerini içeren bir klasör
-yüklediğinizden emin olun.
 
 ### Klavye komutları ###
 
@@ -99,10 +73,25 @@ yüklediğinizden emin olun.
 * Başlık veya URL kopyalandığında.
 * Bir akışa bağlanılamadığında/yenileme yapılamadığında veya URL, geçerli
   bir akışa karşılık gelmediğinde.
-* PersonalFeeds klasörünü yedeklemek veya geri yüklemek mümkün değilse ve
-  yeni bir akış oluşturulamıyorsa NVDA bir hata mesajı görüntüler.
+* NVDA will display an error message if a new feed cannot be created.
 * Makale listesi iletişim kutusunun başlığı, seçilen akış adını ve mevcut
   öğelerin sayısını gösterir.
+
+## Changes for 13.0
+
+* The add-on cannot be used on secure screens.
+* Feeds are managed from OPML files.
+* Due to changes in the feeds management system, there are changes in the
+  configuration file where the default feed is set. Please, use the Feeds
+  dialog if you want to set it again.
+* Your old text files used in previous versions will be automatically
+  imported into the new OPML format when the add-on is started.
+* The copy and restore feeds feature has been replaced with the ability to
+  import from and save to OPML files.
+* Non well-formed feeds can be processed before being added to make them
+  compatible with the add-on.
+* In the Read Feeds settings panel, a new option allows to show article
+  dates on the List of articles dialog.
 
 ## 12.0 için Değişiklikler
 
@@ -198,3 +187,4 @@ yüklediğinizden emin olun.
 [2]: https://addons.nvda-project.org/files/get.php?file=rf-dev
 
 [3]: https://addons.nvda-project.org/files/get.php?file=rf-o
+

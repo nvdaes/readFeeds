@@ -5,31 +5,19 @@
 * Завантажити [стабільну версію][1]
 * Завантажити [версію в розробці][2]
 
-
 Цей додаток забезпечує простий спосіб читати стрічки новин у форматах Atom
 або RSS, використовуючи NVDA.  Стрічки новин не оновлюються
 автоматично. Надалі під стрічками новин маються на увазі як RSS, так і ATOM
 формати.
 
-## Встановлення або оновлення ##
-
-Якщо ви використовували попередню версію цього додатка і в папці
-користувацької конфігурації NVDA міститься папка RSS або personalFeeds, при
-встановленні поточної версії з'явиться діалог, у якому вас запитають, що ви
-бажаєте зробити: оновити чи встановити.  Виберіть оновити, щоб зберегти ваші
-збережені стрічки новин і продовжувати використовувати їх в новій
-встановленій версії readFeeds.
-
 ## Команди ##
 
-### Меню читача новинних стрічок ###
+### Read Feeds dialog ###
 
-Ви можете отримати доступ до підменю читача новинних стрічок із меню NVDA,
-підменю «Інструменти», де доступні такі пункти меню:
+You can access the Read Feeds dialog from the nvda menu, Tools submenu,
+Feeds item.
 
-#### Новинні стрічки ####
-
-Відкриває діалог з такими елементами керування:
+It contains the following controls:
 
 * Фільтрувати за: поле редагування для пошуку раніше збережених стрічок
   новин.
@@ -56,36 +44,22 @@
 * Видалити: відкриває діалог підтвердження видалення вибраної стрічки новин.
 * Встановити як основну: встановлює вибрану стрічку новин як основну, і її
   статті можуть бути доступні за допомогою жестів NVDA.
-* Відкрити папку резервної копії новинних стрічок: відкриває папку, яка може
-  містити резервну копію новинних стрічок. це може бути корисно для пошуку
-  та видалення новинних стрічок, які не варто переносити при оновленні
-  додатка.
+* Import feeds from OPML file: Opens a dialog to add new feeds from an OPML
+  file.
+* Save feeds to OPML file: Opens a dialog to save the feeds available from
+  the Feeds dialog in an OPML file.
 * Параметри: відкриває діалог налаштувань readFeeds, також доступно в меню
   NVDA, налаштування, параметри, категорія readFeeds.
 * Закрити: закриває діалог новинних стрічок.
 
-##### Примітки #####
+### Notes #####
 
-* Якщо створено стрічку новин з іменем tempFeed, будь ласка, перейменуйте
-  її, оскільки цей файл може бути замінений, якщо буде потрібно створити
-  стрічку новин з іменем, яке вже існує.
-* Основну стрічку новин видалити не можна. Вона використовується для
-  скидання налаштувань у файлі addressFile, тому її не можна видалити.
 * Поле редагування «Фільтрувати за» можна розмістити після кнопки «Відкрити
   статтю» з меню NVDA, параметри, налаштування, категорія читання новинних
   стрічок, або натиснувши кнопку налаштування діалогу стрічки новин.
+* This panel has an option to show article dates on the List of articles
+  dialog.
 
-#### Скопіювати папку новинних стрічок ####
-
-Відкриває діалог для вибору місця збереження папки personalFeeds з вашими
-новинними стрічками. Початково вибрано каталог конфігурації NVDA, в якому
-можна створити каталог personalFeeds.
-
-#### Відновлення стрічок новин ####
-
-Відкриває діалог для вибору папки, якою замінюються ваші стрічки новин у
-папці personalFeeds. Впевніться, що ви завантажуєте папку, яка містить
-адреси новинних стрічок.
 
 ### Клавіатурні команди ###
 
@@ -103,11 +77,25 @@
 * Коли назва або URL було скопіювано.
 * Коли не не вдається підключитися або оновити стрічку новин, або адреса не
   відповідає дійсній стрічці новин.
-* NVDA відобразить повідомлення про помилку, якщо не вдалося створити
-  резервну копію або відновити папку personalFeeds, а також якщо не вдається
-  створити нову стрічку новин.
+* NVDA will display an error message if a new feed cannot be created.
 * Діалог з назвою списку статей відображає ім’я вибраної стрічки новин з
   кількістю доступних елементів.
+
+## Changes for 13.0
+
+* The add-on cannot be used on secure screens.
+* Feeds are managed from OPML files.
+* Due to changes in the feeds management system, there are changes in the
+  configuration file where the default feed is set. Please, use the Feeds
+  dialog if you want to set it again.
+* Your old text files used in previous versions will be automatically
+  imported into the new OPML format when the add-on is started.
+* The copy and restore feeds feature has been replaced with the ability to
+  import from and save to OPML files.
+* Non well-formed feeds can be processed before being added to make them
+  compatible with the add-on.
+* In the Read Feeds settings panel, a new option allows to show article
+  dates on the List of articles dialog.
 
 ## Зміни у версії 12.0
 
@@ -201,3 +189,4 @@
 [2]: https://addons.nvda-project.org/files/get.php?file=rf-dev
 
 [3]: https://addons.nvda-project.org/files/get.php?file=rf-o
+

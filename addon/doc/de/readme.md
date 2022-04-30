@@ -5,32 +5,19 @@
 * [Stabile Version herunterladen][1]
 * [Entwicklerversion herunterladen][2]
 
-
 Diese Erweiterung bietet eine einfache Möglichkeit, RSS-Feeds in den
 Formaten Atom oder RSS mit NVDA zu lesen. Die Feeds werden nicht automatisch
 aktualisiert. Wenn wir weiter unten  von Feeds sprechen, dann meinen wir
 sowohl RSS- als auch  ATOM-Feeds.
 
-## Installation oder Update ##
-
-Wenn Sie eine frühere Version dieser Erweiterung verwendet haben und in
-Ihrem persönlichen NVDA-Konfigurationsordner ein RSS- oder
-personalFeeds-Ordner vorhanden ist, wird bei der Installation der aktuellen
-Version ein Dialogfeld angezeigt. In diesem Dialog werden Sie gefragt, ob
-Sie eine Aktualisierung oder eine Installation durchführen möchten.  Wählen
-Sie aktualisieren, um Ihre gespeicherten Feeds zu behalten und sie in der
-neu installierten Version von RSS-Feed-Reader weiter zu verwenden.
-
 ## Befehle ##
 
-### Feed-Reader-Menü ###
+### Dialogfeld von Read Feeds ###
 
-Sie können auf das Untermenü RSS-Feed-Reader aus dem NVDA-Menü, Untermenü
-Extras zugreifen. Es stehen folgende Menüoptionen zur Verfügung:
+Sie können das Dialogfeld von Read Feedsüber das NVDA-Menü, und dort
+Werkzeuge und dann Feeds aufrufen.
 
-#### RSS-Feeds ####
-
-Öffnet einen Dialog mit den folgenden Steuerelementen:
+Sie enthält die folgenden Steuerelemente:
 
 * Filtern nach: Ein Eingabefeld, um zuvor gespeicherte Feeds zu durchsuchen.
 * Eine Liste der gespeicherten RSS-Feeds, die beim Öffnen des Dialogfelds
@@ -59,40 +46,24 @@ Extras zugreifen. Es stehen folgende Menüoptionen zur Verfügung:
 * Als standard festlegen: Legt den ausgewählten RSS-Feed als Standard fest,
   so dass auf seine Artikel mit den Tastenkürzel von NVDA zugegriffen werden
   kann.
-* Backup Ordner öffnen: Öffnet einen Ordner, in welchem Sicherungsdateien
-  der RSS Feeds enthalten sein können. In diesem Ordner können die Feeds
-  gelöscht werden, welche bei einer Aktualisierung der Erweiterung nicht
-  importiert werden sollen.
+* RSS-Feeds aus OPML-Datei importieren: Öffnet einen Dialogfeld zum
+  Hinzufügen neuer RSS-Feeds aus einer OPML-Datei.
+* RSS-Feeds in OPML-Datei speichern: Öffnet ein Dialogfeld zum Speichern der
+  im Dialogfeld für die RSS-Feeds verfügbaren Feeds in einer OPML-Datei.
 * Einstellungen: Öffnet das Dialogfeld mit den Einstellungen der
   erweiterung, der auch im NVDA-Menü "Einstellungen", "Einstellungen" und
   "RSS-Feeds lesen" verfügbar ist.
 * Schließen: Schließt den Dialog.
 
-##### Hinweise #####
+### Hinweise #####
 
-* Wenn ein Feed namens tempFeed erstellt wird, benennen Sie ihn bitte
-  um. Andernfalls könnte er ersetzt werden, wenn erneut ein Ordner mit
-  diesem Namen erstellt wird.
-* Der als Standard eingestellte Feed kann nicht entfernt werden. Der
-  AddressFile-Feed wird als Standard verwendet, wenn die Konfiguration
-  zurückgesetzt wird. Daher kann dieser Ordner nicht gelöscht werden.
 * Das Bearbeitungsfeld Filtern nach kann nach der Schaltfläche Artikel
   öffnen im NVDA-Menü, Einstellungen, Einstellungen, Feeds lesen oder durch
   Klicken auf die Schaltfläche Einstellungen im Dialogfeld Feeds platziert
   werden.
+* Dieses Panel verfügt über eine Option zur Anzeige von Artikeldaten im
+  Dialogfeld für die Liste der Artikel.
 
-#### Ordner der RSS-Feeds kopieren ####
-
-Öffnet einen Dialog, in dem Sie einen Ordner auswählen können, um Ihre
-persönlichen RSS Feed Artikel zu speichern. Standardmäßig ist der
-ausgewählte Ordner das Konfigurationsverzeichnis von NVDA und der Ordner
-heißt personalFeeds.
-
-#### RSS-Feeds wiederherstellen ####
-
-Öffnet einen Dialog um einen Ordner zu wählen, der ihren Ordner mit
-persönlichen FEEDS ersetzt. Stellen Sie sicher, dass Sie einen Ordner
-wählen, der URLs von RSS Feeds enthält.
 
 ### Tastaturbefehle ###
 
@@ -111,11 +82,28 @@ wählen, der URLs von RSS Feeds enthält.
 * Wenn der Titel oder die URL kopiert wurden.
 * Wenn die Verbindung / das Neuladen eines RSS-Feeds fehlgeschlagen ist,
   oder wenn die URL nicht mit einem gültigen Feed übereinstimmt.
-* NVDA zeigt eine Fehlermeldung an, wenn der Ordner "personalFeeds" nicht
-  gespeichert oder wiederhergestellt sowie wenn kein neuer Feed erstellt
+* NVDA zeigt eine Fehlermeldung an, wenn ein neuer Feed nicht erstellt
   werden konnte.
 * Im Titel des Dialogs für die Artikellisten werden der Name des
   ausgewählten Feeds und die Anzahl der verfügbaren Artikel angezeigt.
+
+## Änderungen in 13.0
+
+* Diese Erweiterung ist nicht länger verwendbar mehr im geschützten Modus.
+* RSS-Feeds werden über OPML-Dateien verwaltet.
+* Auf Grund von Änderungen in der Verwaltung der RSS-Feeds gibt es
+  Änderungen in der Konfigurationsdatei, in der der Standard-Feed
+  eingestellt ist. Bitte verwenden Sie den Dialogfeld für die RSS-Feeds,
+  wenn Sie es wieder einstellen möchten.
+* Die noch im alten Format gespeicherten Textdateien, werden automatisch in
+  das neue OPML-Format umgewandelt, sobald die neue Version der Erweiterung
+  zum ersten Mal gestartet wird.
+* Die Funktion zum Kopieren und Wiederherstellen von RSS-Feeds wurde durch
+  die neuen Dateien im OPML-Format ersetzt.
+* Inkompatible RSS-Feeds können vor dem Hinzufügen verarbeitet werden, um
+  sie mit der Erweiterung kompatibel zu machen.
+* Im Einstellungsfenster für Read Feeds gibt es eine neue Option, mit der
+  das Datum des Artikels in der Liste der Artikel angezeigt werden kann.
 
 ## Änderungen in 12.0
 
@@ -218,3 +206,4 @@ wählen, der URLs von RSS Feeds enthält.
 [2]: https://addons.nvda-project.org/files/get.php?file=rf-dev
 
 [3]: https://addons.nvda-project.org/files/get.php?file=rf-o
+
