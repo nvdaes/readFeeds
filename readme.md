@@ -2,8 +2,8 @@
 
 * Authors: Noelia Ruiz Martínez, Mesar Hameed
 * NVDA compatibility: 2019.3 or later
-* Download [stable version][1]
-* Download [development version][2]
+* Download [stable version][1] (compatible with NVDA 2019.3 and beyond)
+* Download [development version][2] (compatible with NVDA 2019.3 and beyond)
 
 This addon provides a straightforward way to read feeds in Atom or RSS formats using NVDA.
 The feeds will not be refreshed automatically.
