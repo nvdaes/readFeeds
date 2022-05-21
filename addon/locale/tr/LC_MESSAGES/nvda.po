@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Read feeds 4.0\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2020-10-12 15:31+0300\n"
-"PO-Revision-Date: 2021-08-15 17:28+0300\n"
+"PO-Revision-Date: 2022-05-17 23:34+0300\n"
 "Last-Translator: Çağrı Doğan <cagrid@hotmail.com>\n"
 "Language-Team: cagrid@hotmail.com\n"
 "Language: tr\n"
@@ -13,7 +13,7 @@ msgstr ""
 "X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
 "X-Poedit-Basepath: ../../../globalPlugins/readFeeds\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 3.0.1\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #. Translators: message presented when feeds cannot be reported.
@@ -37,11 +37,11 @@ msgstr "Kopya Hatası"
 
 #. Translators: Message presented when feeds have been restored.
 msgid "Feeds restored"
-msgstr "Kaynaklar geri yüklendi"
+msgstr "Akışlar geri yüklendi"
 
 #. Translators: Title of a dialog.
 msgid "Feeds: {}"
-msgstr ""
+msgstr "Akışlar: {}"
 
 #. Translators: Label of a dialog (message translated in NVDA's core in different contexts).
 msgid "&Filter by:"
@@ -77,16 +77,15 @@ msgstr "&Sil..."
 
 #. Translators: The label of a button to set a feed as default.
 msgid "S&et default"
-msgstr "Var&sayılan olarak ayarla"
+msgstr "&Varsayılan olarak ayarla"
 
 #. Translators: The label of a button to import feeds from OPML.
-#, fuzzy
 msgid "&Import feeds from OPML file..."
-msgstr "Besleme dizinini yede&kle..."
+msgstr "OPML dosyasından beslemeleri &içe aktar..."
 
 #. Translators: The label of a button to save feeds to OPML file.
 msgid "&Save feeds to OPML file..."
-msgstr ""
+msgstr "Akışları &OPML dosyasına kaydet..."
 
 #. Translators: The label of a button to open the settings dialog for readFeeds.
 msgid "&Preferences..."
@@ -138,15 +137,15 @@ msgstr "Akış adını değiştir"
 
 #. Translators: Label for a file dialog.
 msgid "Open OPML file"
-msgstr ""
+msgstr "OPML dosyasını aç"
 
 #. Translators: Wildcards for a file dialog
 msgid "OPML files (*.opml)|*.opml"
-msgstr ""
+msgstr "OPML dosyaları (*.opml)|*.opml"
 
 #. Translators: Label of a button on the Feeds dialog.
 msgid "Save As"
-msgstr ""
+msgstr "Farklı kaydet"
 
 #. Translators: The label of the articles list in the articles dialog.
 msgid "List of articles"
@@ -175,7 +174,7 @@ msgstr "&Filtreleme kriteri akış listesi sonrasında"
 
 #. Translators: label of a dialog.
 msgid "&Show articles Date"
-msgstr ""
+msgstr "Haber giriş &zamanını göster"
 
 #. Translators: Presented when the current article does not have an associated title.
 msgid "Unable to locate article title."

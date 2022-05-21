@@ -11,12 +11,12 @@ derken hem RSS hem de ATOM beslemelerini kastediyoruz.
 
 ## Komutlar ##
 
-### Read Feeds dialog ###
+### Akışları Oku iletişim kutusu ###
 
-You can access the Read Feeds dialog from the nvda menu, Tools submenu,
-Feeds item.
+Akışları Oku iletişim kutusuna nvda menüsü, Araçlar alt menüsü, akış listesi
+öğesinden erişebilirsiniz.
 
-It contains the following controls:
+Aşağıdaki kontrolleri içerir:
 
 * Filtreleme kriteri: Önceden kaydedilmiş beslemeleri aramak için bir
   düzenleme kutusu.
@@ -41,21 +41,21 @@ It contains the following controls:
 * Sil: Onaydan sonra seçilen akışın silinmesi için bir iletişim kutusu açar.
 * Varsayılan olarak ayarla: Seçilen beslemeyi varsayılan olarak ayarlar,
   böylece makalelerine ilgili NVDA girdi hareketleriyle erişilebilir.
-* Import feeds from OPML file: Opens a dialog to add new feeds from an OPML
-  file.
-* Save feeds to OPML file: Opens a dialog to save the feeds available from
-  the Feeds dialog in an OPML file.
+* OPML dosyasından akışları içe aktar: Bir OPML dosyasından yeni akışlar
+  eklemek için bir iletişim kutusu açar.
+* Akışları OPML dosyasına kaydet: Akışlar iletişim kutusunda bulunan
+  beslemeleri bir OPML dosyasına kaydetmek için bir iletişim kutusu açar.
 * Tercihler: NVDA menüsünde Tercihler, ayarlar, Akışları oku kategorisinde
   de bulunan akışları oku için ayarlar diyalog penceresini açar.
 * Kapat: Akışlar iletişim kutusunu kapatır.
 
-### Notes #####
+### Notlar #####
 
 * Filtreye göre düzenleme kutusu NVDA menüsünden Tercihler, Ayarlar,
   Akışları oku kategorisinden veya akışlar iletişim kutusundaki Tercihler
   düğmesine basarak Makaleyi aç düğmesinden sonra yerleştirilebilir.
-* This panel has an option to show article dates on the List of articles
-  dialog.
+* Bu panel, Makalelerin listesi iletişim kutusunda makale tarihlerini
+  gösterme seçeneğine sahiptir.
 
 
 ### Klavye komutları ###
@@ -73,25 +73,25 @@ It contains the following controls:
 * Başlık veya URL kopyalandığında.
 * Bir akışa bağlanılamadığında/yenileme yapılamadığında veya URL, geçerli
   bir akışa karşılık gelmediğinde.
-* NVDA will display an error message if a new feed cannot be created.
+* Yeni bir akış oluşturulamıyorsa NVDA bir hata mesajı görüntüler.
 * Makale listesi iletişim kutusunun başlığı, seçilen akış adını ve mevcut
   öğelerin sayısını gösterir.
 
-## Changes for 13.0
+## 13.0 için  Değişiklikler
 
-* The add-on cannot be used on secure screens.
-* Feeds are managed from OPML files.
-* Due to changes in the feeds management system, there are changes in the
-  configuration file where the default feed is set. Please, use the Feeds
-  dialog if you want to set it again.
-* Your old text files used in previous versions will be automatically
-  imported into the new OPML format when the add-on is started.
-* The copy and restore feeds feature has been replaced with the ability to
-  import from and save to OPML files.
-* Non well-formed feeds can be processed before being added to make them
-  compatible with the add-on.
-* In the Read Feeds settings panel, a new option allows to show article
-  dates on the List of articles dialog.
+* Eklenti, güvenli ekranlarda kullanılamaz.
+* Yayınlar, OPML dosyalarından yönetilir.
+* Akış yönetim sistemindeki değişiklikler nedeniyle, varsayılan akışın
+  ayarlandığı yapılandırma dosyasında değişiklikler vardır. Tekrar ayarlamak
+  istiyorsanız lütfen akışlar iletişim kutusunu kullanın.
+* Önceki sürümlerde kullanılan eski metin dosyalarınız, eklenti
+  başlatıldığında otomatik olarak yeni OPML biçimine aktarılacaktır.
+* Akışları kopyala ve geri yükle özelliği, OPML dosyalarından içe aktarma ve
+  kaydetme özelliğiyle değiştirildi.
+* İyi biçimlendirilmemiş akış adresleri  , eklentiyle uyumlu hale
+  getirilmeleri için eklenmeden önce işlenebilir.
+* Akışları oku ayarları panelinde yeni bir seçenek, makale tarihlerinin
+  Makale listesi iletişim kutusunda gösterilmesine olanak tanır.
 
 ## 12.0 için Değişiklikler
 
