@@ -1,9 +1,8 @@
 # Čitaj feedove (Read Feeds) #
 
 * Autori: Noelia Ruiz Martínez, Mesar Hameed
-* NVDA kompatibilnost: 2019.3 i novija
-* Preuzmi [stabilnu verziju][1]
-* Preuzmi [razvojnu verziju][2]
+* Download [stable version][1] (compatible with NVDA 2019.3 and beyond)
+* Download [development version][2] (compatible with NVDA 2019.3 and beyond)
 
 Ovaj dodatak pruža najbolji način za čitanje feedova u Atom ili RSS formatu
 koristeći NVDA. Feedovi se neće automatski aktualizirati. U daljnjem tekstu,

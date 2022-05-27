@@ -1,9 +1,8 @@
 # Read Feeds (Читач новинних стрічок) #
 
 * Автори: Noelia Ruiz Martínez, Mesar Hameed
-* Сумісність з NVDA: 2019.3 та новіші
-* Завантажити [стабільну версію][1]
-* Завантажити [версію в розробці][2]
+* Download [stable version][1] (compatible with NVDA 2019.3 and beyond)
+* Download [development version][2] (compatible with NVDA 2019.3 and beyond)
 
 Цей додаток забезпечує простий спосіб читати стрічки новин у форматах Atom
 або RSS, використовуючи NVDA.  Стрічки новин не оновлюються

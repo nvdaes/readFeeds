@@ -1,9 +1,8 @@
 # Leitor de Feeds (Read Feeds) #
 
 * Autores: Noelia Ruiz Martínez, Mesar Hameed
-* Compatibilidade com NVDA: 2019.3 ou posterior
-* Baixe a [versão estável][1]
-* Baixe a [versão em desenvolvimento][2]
+* Download [stable version][1] (compatible with NVDA 2019.3 and beyond)
+* Download [development version][2] (compatible with NVDA 2019.3 and beyond)
 
 Este complemento fornece uma maneira direta de ler feeds —
 alimentadores/canais/fluxos/fontes — em formato Atom ou RSS usando o

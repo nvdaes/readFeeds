@@ -1,9 +1,8 @@
 # RSS Akışlarını Oku #
 
 * Yazarlar: Noelia Ruiz Martínez, Mesar Hameed
-* NVDA uyumluluğu: 2019.3 veya üstü
-* [Kararlı sürümü][1] indir
-* [geliştirme sürümü][2]nü indir
+* Download [stable version][1] (compatible with NVDA 2019.3 and beyond)
+* Download [development version][2] (compatible with NVDA 2019.3 and beyond)
 
 Bu eklenti NVDA kullanarak Atom veya RSS formatında beslemeleri okumak için
 basit bir yol sunar. Beslemeler otomatik olarak yenilenmez. Aşağıda besleme
