@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: readFeeds 2.2\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2015-01-30 18:00+1000\n"
-"PO-Revision-Date: 2020-12-27 23:07+0200\n"
+"PO-Revision-Date: 2022-05-22 11:41+0300\n"
 "Last-Translator: Volodymyr Pyrih <vp88.mobile@gmail.com>\n"
 "Language-Team: \n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.2\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #. Translators: message presented when feeds cannot be reported.
 msgid ""
@@ -42,9 +42,8 @@ msgid "Feeds restored"
 msgstr "Канали відновлено"
 
 #. Translators: Title of a dialog.
-#, fuzzy
 msgid "Feeds: {}"
-msgstr "Канали новин"
+msgstr "Стрічки: {}"
 
 #. Translators: Label of a dialog (message translated in NVDA's core in different contexts).
 msgid "&Filter by:"
@@ -83,13 +82,12 @@ msgid "S&et default"
 msgstr "В&становити за замовчуванням"
 
 #. Translators: The label of a button to import feeds from OPML.
-#, fuzzy
 msgid "&Import feeds from OPML file..."
-msgstr "&Копіювати папку каналів новин."
+msgstr "&Імпортувати стрічки з файла OPML..."
 
 #. Translators: The label of a button to save feeds to OPML file.
 msgid "&Save feeds to OPML file..."
-msgstr ""
+msgstr "&Зберегти стрічки у файл OPML..."
 
 #. Translators: The label of a button to open the settings dialog for readFeeds.
 msgid "&Preferences..."
@@ -142,15 +140,15 @@ msgstr "Перейменувати канал"
 
 #. Translators: Label for a file dialog.
 msgid "Open OPML file"
-msgstr ""
+msgstr "Відкрити файл OPML"
 
 #. Translators: Wildcards for a file dialog
 msgid "OPML files (*.opml)|*.opml"
-msgstr ""
+msgstr "Файли OPML  (*.opml)|*.opml"
 
 #. Translators: Label of a button on the Feeds dialog.
 msgid "Save As"
-msgstr ""
+msgstr "Зберегти як"
 
 #. Translators: The label of the articles list in the articles dialog.
 msgid "List of articles"
@@ -179,7 +177,7 @@ msgstr "&Розмістити поле пошуку після списку з �
 
 #. Translators: label of a dialog.
 msgid "&Show articles Date"
-msgstr ""
+msgstr "&Показувати дату статті"
 
 #. Translators: Presented when the current article does not have an associated title.
 msgid "Unable to locate article title."

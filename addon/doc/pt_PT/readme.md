@@ -1,9 +1,8 @@
 # Leitor de RSS #
 
 * Autores: Noelia Ruiz Martínez, Mesar Hameed
-* Compatibilidade com o NVDA: 2019.3 e posteriores
-* Baixar [versão estável][1]
-* Baixar [versão de desenvolvimento][2]
+* Download [stable version][1] (compatible with NVDA 2019.3 and beyond)
+* Download [development version][2] (compatible with NVDA 2019.3 and beyond)
 
 Este extra fornece uma maneira directa de ler feeds em formatos Atom ou RSS
 usando o NVDA. Os feeds não serão actualizados automaticamente. quando

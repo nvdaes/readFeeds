@@ -1,9 +1,9 @@
 # Read Feeds #
 
 * Autores: Noelia Ruiz Martínez, Mesar Hameed
-* Compatibilidad con NVDA: 2019.3 o posterior
-* Descargar [versión estable][1]
-* Descargar [versión de desarrollo][2]
+* Descargar [versión estable][1] (compatible desde NVDA 2019.3 en adelante)
+* Descargar [versión de desarrollo][2] (compatible desde NVDA 2019.3 en
+  adelante)
 
 Este complemento proporciona una manera fácil de leer fuentes en formatos de
 RSS o Atom utilizando NVDA.  Los feeds no se actualizarán automáticamente.

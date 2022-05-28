@@ -1,9 +1,8 @@
 # RSS-Feeds lesen #
 
 * Autoren: Noelia Ruiz Martínez, Mesar Hameed
-* NVDA-Kompatibilität: 2019.3 oder neuer
-* [Stabile Version herunterladen][1]
-* [Entwicklerversion herunterladen][2]
+* Download [stable version][1] (compatible with NVDA 2019.3 and beyond)
+* Download [development version][2] (compatible with NVDA 2019.3 and beyond)
 
 Diese Erweiterung bietet eine einfache Möglichkeit, RSS-Feeds in den
 Formaten Atom oder RSS mit NVDA zu lesen. Die Feeds werden nicht automatisch
