@@ -874,7 +874,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	@script(
 		# Translators: message presented in input mode.
-		description=_("Shows the %s settings." % ADDON_SUMMARY),
+		description=_("Shows the %s settings.") % ADDON_SUMMARY,
 		category=SCRCAT_CONFIG
 	)
 	def script_settings(self, gesture):
