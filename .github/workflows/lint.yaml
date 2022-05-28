@@ -2,14 +2,23 @@ name: Lint
 
 on:
   push:
-    branches:
-      - main
   pull_request:
-    branches:
-      - main
 
 jobs:
 
   lint:
-    uses: nvdaes/nvdaAddonWorkflows/.github/workflows/lint.yaml@main
-    
+
+    runs-on: windows-latest
+
+    steps:
+
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Set up Python 3.7
+      uses: actions/setup-python@v3
+      with:
+        python-version: 3.7
+    - name: Install dependencies
+      run: pip install -r requirements.txt
+    - name: Lint
+      run: flake8 addon/globalPlugins/readFeeds/__init__.py
