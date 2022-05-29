@@ -606,7 +606,7 @@ class Feed(object):
 			headers = {'User-Agent': userAgent}
 			req = urllib.request.Request(self._url, None, headers)
 			response = urllib.request.urlopen(req)
-		xmlstring = response.read().decode("utf-8").strip()
+		xmlstring = response.read().strip()
 		try:
 			self._document = ElementTree.fromstring(xmlstring)
 		except Exception as e:
