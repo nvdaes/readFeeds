@@ -52,6 +52,10 @@ It contains the following controls:
 * NVDA will display an error message if a new feed cannot be created.
 * The title of the articles list dialog displays the selected feed name and number of items available.
 
+## Changes for 14.0
+
+* Fixed a bug that made impossible to add some feeds.
+
 ## Changes for 13.0
 
 * The add-on cannot be used on secure screens.
