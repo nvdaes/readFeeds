@@ -30,7 +30,6 @@ from globalCommands import SCRCAT_CONFIG
 from logHandler import log
 
 from .skipTranslation import translate
-from .xml.etree import ElementTree
 
 addonHandler.initTranslation()
 
@@ -72,6 +71,7 @@ def createOpmlPath():
 			pass
 	if not os.path.isfile(OPML_PATH):
 		try:
+			from .xml.etree import ElementTree
 			tree = ElementTree.ElementTree()
 			opml = ElementTree.Element("opml")
 			opml.set("version", "2.0")
@@ -606,8 +606,9 @@ class Feed(object):
 			headers = {'User-Agent': userAgent}
 			req = urllib.request.Request(self._url, None, headers)
 			response = urllib.request.urlopen(req)
-		xmlstring = response.read().strip()
+		xmlstring = response.read().decode("utf-8").strip()
 		try:
+			from .xml.etree import ElementTree
 			self._document = ElementTree.fromstring(xmlstring)
 		except Exception as e:
 			raise e
@@ -792,6 +793,7 @@ class Opml(object):
 	def validate(self):
 		path = self._path
 		try:
+			from .xml.etree import ElementTree
 			self._document = ElementTree.parse(path)
 		except Exception as e:
 			raise e
@@ -802,6 +804,7 @@ class Opml(object):
 		return False
 
 	def addFeed(self, title, url):
+		from .xml.etree import ElementTree
 		element = ElementTree.Element("outline")
 		element.set("title", title)
 		element.set("text", title)
@@ -842,6 +845,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			pass
 
 	def importTextFiles(self):
+		from .xml.etree import ElementTree
 		path = FEEDS_PATH
 		textFiles = glob.glob(path + "\\*.txt")
 		if len(textFiles) == 0:
@@ -874,7 +878,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	@script(
 		# Translators: message presented in input mode.
-		description=_("Shows the %s settings.") % ADDON_SUMMARY,
+		description=_("Shows the %s settings." % ADDON_SUMMARY),
 		category=SCRCAT_CONFIG
 	)
 	def script_settings(self, gesture):
