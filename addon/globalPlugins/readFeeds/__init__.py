@@ -173,7 +173,7 @@ class FeedsDialog(wx.Dialog):
 		self._opml = Opml(OPML_PATH)
 		super(FeedsDialog, self).__init__(
 			# Translators: Title of a dialog.
-			parent, title=_("Feeds: {}".format(getActiveProfile()))
+			parent, title=_("Feeds: {}").format(getActiveProfile())
 		)
 
 		mainSizer = wx.BoxSizer(wx.VERTICAL)
