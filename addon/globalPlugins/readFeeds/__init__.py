@@ -173,7 +173,7 @@ class FeedsDialog(wx.Dialog):
 		self._opml = Opml(OPML_PATH)
 		super(FeedsDialog, self).__init__(
 			# Translators: Title of a dialog.
-			parent, title=_("Feeds: {}".format(getActiveProfile()))
+			parent, title=_("Feeds: {}").format(getActiveProfile())
 		)
 
 		mainSizer = wx.BoxSizer(wx.VERTICAL)
@@ -606,7 +606,7 @@ class Feed(object):
 			headers = {'User-Agent': userAgent}
 			req = urllib.request.Request(self._url, None, headers)
 			response = urllib.request.urlopen(req)
-		xmlstring = response.read().decode("utf-8").strip()
+		xmlstring = response.read().strip()
 		try:
 			self._document = ElementTree.fromstring(xmlstring)
 		except Exception as e:

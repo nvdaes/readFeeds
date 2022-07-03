@@ -1,8 +1,8 @@
 # Read Feeds #
 
 * Autorzy: Noelia Ruiz Martínez, Mesar Hameed
-* Download [stable version][1] (compatible with NVDA 2019.3 and beyond)
-* Download [development version][2] (compatible with NVDA 2019.3 and beyond)
+* Pobierz [stabilna wersja][1] (kompatybilna z NVDA 2019.3 i nowszymi)
+* Pobierz [wersja rozwojowa][2] (kompatybilna z NVDA 2019.3 i nowszymi)
 
 Ten dodatek umożliwia odczytywanie przez NVDA kanałów informacyjnych w
 formatach Atom lub RSS.  Kanały nie będą odświeżane automatycznie.  Mówiąc o
@@ -10,12 +10,12 @@ kanałach, mamy na myśli kanały w formatach RSS i ATOM.
 
 ## Polecenia ##
 
-### Read Feeds dialog ###
+### Okno dialogowe Czytanie kanałów informacyjnych ###
 
-You can access the Read Feeds dialog from the nvda menu, Tools submenu,
-Feeds item.
+Dostęp do okna dialogowego Odczyt kanałów można uzyskać z menu nvda, podmenu
+Narzędzia, elementu Kanały.
 
-It contains the following controls:
+Zawiera następujące kontrolki:
 
 * Filtruj Według: Pole edycyjne do wyszukiwania poprzednio zapisanych
   kanałów osobistych.
@@ -42,21 +42,21 @@ It contains the following controls:
   osobistego po potwierdzeniu.
 * Ustaw jako domyślny: Ustawia kanał osobisty jako domyślny, aby można było
   się dostać do artykułów za pomocą gestów NVDA.
-* Import feeds from OPML file: Opens a dialog to add new feeds from an OPML
-  file.
-* Save feeds to OPML file: Opens a dialog to save the feeds available from
-  the Feeds dialog in an OPML file.
+* Importowanie plików danych z pliku OPML: Otwiera okno dialogowe
+  umożliwiające dodanie nowych źródeł danych z pliku OPML.
+* Zapisz źródła danych w pliku OPML: Otwiera okno dialogowe, aby zapisać
+  źródła dostępne w oknie dialogowym Źródła danych w pliku OPML.
 * Preferencje: Otwiera okno dialogowe ustawień dla readFeeds, dostępne
   również w menu NVDA, opcje, ustawienia, kategoria readFeeds.
 * Zamknij: Zamyka dialog kanały osobiste.
 
-### Notes #####
+### Brak notatek
 
 * Pole edycji Filtruj według można umieścić za przyciskiem Otwórz artykuł z
   menu NVDA, Preferencje, Ustawienia, Kategoria Odczyt kanałów lub
   naciskając przycisk Preferencje w oknie dialogowym Kanały.
-* This panel has an option to show article dates on the List of articles
-  dialog.
+* Ten panel ma opcję wyświetlania dat artykułów w oknie dialogowym Lista
+  artykułów.
 
 
 ### Skróty klawiszowe ###
@@ -76,34 +76,36 @@ It contains the following controls:
 * Kiedy tytuł i adres zostały skopiowane.
 * Kiedy jest niemożliwe odświeżanie/łączenie z kanałem osobistym, albo adres
   się nie zgadza z prawdziwym kanałem osobistym.
-* NVDA will display an error message if a new feed cannot be created.
+* NVDA wyświetli komunikat o błędzie, jeśli nie można utworzyć nowego
+  kanału.
 * Dialog Spisu nagłówków artykułów Wyświetla nazwę oznaczonego kanału
   osobistego i ilość dostępnych artykułów.
 
-## Changes for 13.0
+## Zmiany dla wersji 13.0
 
-* The add-on cannot be used on secure screens.
-* Feeds are managed from OPML files.
-* Due to changes in the feeds management system, there are changes in the
-  configuration file where the default feed is set. Please, use the Feeds
-  dialog if you want to set it again.
-* Your old text files used in previous versions will be automatically
-  imported into the new OPML format when the add-on is started.
-* The copy and restore feeds feature has been replaced with the ability to
-  import from and save to OPML files.
-* Non well-formed feeds can be processed before being added to make them
-  compatible with the add-on.
-* In the Read Feeds settings panel, a new option allows to show article
-  dates on the List of articles dialog.
+* Dodatek nie może być używany na bezpiecznych ekranach.
+* Kanały informacyjne są zarządzane z plików OPML.
+* Ze względu na zmiany w systemie zarządzania plikami danych, w którym
+  ustawiono domyślny plik danych, występują zmiany w pliku
+  konfiguracyjnym. Użyj okna dialogowego Kanały, jeśli chcesz ustawić je
+  ponownie.
+* Stare pliki tekstowe używane w poprzednich wersjach zostaną automatycznie
+  zaimportowane do nowego formatu OPML po uruchomieniu dodatku.
+* Funkcja kopiowania i przywracania kanałów danych została zastąpiona
+  możliwością importowania i zapisywania w plikach OPML.
+* Niezbyt dobrze uformowane kanały mogą być przetwarzane przed dodaniem, aby
+  były zgodne z dodatkiem.
+* W panelu ustawień Odczyt kanałów nowa opcja umożliwia wyświetlanie dat
+  artykułów w oknie dialogowym Lista artykułów.
 
-## Changes for 12.0
+## Zmiany dla wersji 12.0
 
-* Fixed a bug which made shortcuts for items of NVDA's tools menu don't work
-  as expected.
+* Naprawiono błąd, który powodował, że skróty do elementów menu narzędzi
+  NVDA nie działały zgodnie z oczekiwaniami.
 
-## Changes for 11.0
+## Zmiany dla wersji 11.0
 
-* Compatible with NVDA 2021.1
+* Kompatybilny z NVDA 2021.1
 
 ## Zmiany dla wersji 10.0 ##
 
@@ -153,7 +155,7 @@ It contains the following controls:
   je odczytać za pomocą odpowiednich naciśnięć.
 * Naprawiony błąd: Domyślny kanał może być aktualizowany znowu dwa razy.
 
-## zmiany w wersji 5.0 ##
+## Zmiany dla wersji 5.0 ##
 
 * Ulepszone okno dialogowe artykułów.
 * Zgodny z NVDA 2018.3 lub nowszą (wymagane).

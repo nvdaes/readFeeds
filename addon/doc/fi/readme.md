@@ -40,7 +40,7 @@ Se sisältää seuraavat säätimet:
 * Poista: Avaa vahvistuksen pyytävän valintaikkunan, jossa voit poistaa
   valitun syötteen.
 * Aseta oletukseksi: Asettaa valitun syötteen oletukseksi, jotta sen
-  artikkeleihin pääsee NVDA:n syötekomennoilla.
+  artikkeleihin pääsee NVDA:n näppäinkomennoilla.
 * Tuo syötteet OPML-tiedostosta: Avaa valintaikkunan uusien syötteiden
   lisäämiseen OPML-tiedostosta.
 * Tallenna syötteet OPML-tiedostoon: Avaa valintaikkunan

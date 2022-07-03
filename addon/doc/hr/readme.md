@@ -1,8 +1,8 @@
 # Čitaj feedove (Read Feeds) #
 
 * Autori: Noelia Ruiz Martínez, Mesar Hameed
-* Download [stable version][1] (compatible with NVDA 2019.3 and beyond)
-* Download [development version][2] (compatible with NVDA 2019.3 and beyond)
+* Preuzmi [stabilnu verziju][1] (kompatibilna s NVDA 2019.3 i novijom)
+* Preuzmi [razvojnu verziju][2] (kompatibilna s NVDA 2019.3 i novijom)
 
 Ovaj dodatak pruža najbolji način za čitanje feedova u Atom ili RSS formatu
 koristeći NVDA. Feedovi se neće automatski aktualizirati. U daljnjem tekstu,
@@ -10,12 +10,12 @@ kad govorimo o feedovima, podrazumijevamo RSS i ATOM feedove.
 
 ## Naredbe ##
 
-### Read Feeds dialog ###
+### Dijaloški okvir „Čitaj feedove” ###
 
-You can access the Read Feeds dialog from the nvda menu, Tools submenu,
-Feeds item.
+Dijaloški okvir „Čitaj feedove” se nalazi u NVDA izborniku, u podizborniku
+„Alati”, stavka „Feedovi”.
 
-It contains the following controls:
+Sadrži sljedeće kontrole:
 
 * Filtriraj prema: Uređivačko polje za pretraživanje prethodno spremljenih
   feedova.
@@ -41,22 +41,22 @@ It contains the following controls:
   potvrđivanja.
 * Postavi kao zadani: Postavlja odabrani sažetak kao zadani, tako da se tim
   člancima može pristupiti koristeći NVDA geste.
-* Import feeds from OPML file: Opens a dialog to add new feeds from an OPML
-  file.
-* Save feeds to OPML file: Opens a dialog to save the feeds available from
-  the Feeds dialog in an OPML file.
+* Uvezi feedove iz OPML datoteke: Otvara dijaloški okvir za dodavanje novih
+  sažetaka iz OPML datoteke.
+* Spremi feedove u OPML datoteku: Otvara dijaloški okvir za spremanje
+  sažetaka dostupnih iz dijaloškog okvira „Feedovi” u OPML datoteci.
 * Postavke: otvara dijaloški okvir postavki za „Čitaj feedove”, također
   dostupan u NVDA izborniku, Postavke, postavke, kategorija readFeeds.
 * Zatvori: Zatvara dijaloški okvir „Feedovi”.
 
-### Notes #####
+### Bilješke #####
 
 * Polje za uređivanje „Filtriraj prema”, može se smjestiti nakon gumba
   „Otvori članak” u NVDA izborniku, „Postavke”, „Postavke”, kategorija
   „Čitaj feedove” ili pritisni gumb „Postavke” u dijaloškom okviru
   „Feedovi”.
-* This panel has an option to show article dates on the List of articles
-  dialog.
+* Ova ploča ima opciju za prikaz datuma članaka u dijaloškom okviru popisa
+  članaka.
 
 
 ### Tipkovnički prečaci ###
@@ -76,34 +76,34 @@ It contains the following controls:
 * Kad su naslov ili URL adresa kopirani.
 * Kad povezivanje ili aktualiziranje feeda nije moguće ili kad URL adresa ne
   odgovara ispravnom feedu.
-* NVDA will display an error message if a new feed cannot be created.
+* NVDA će prikazati poruku greške ako nije moguće stvoriti nov feed.
 * Naslov dijaloškog okvira popisa članaka prikazuje odabrani naziv feeda i
   broj dostupnih stavki.
 
-## Changes for 13.0
+## Promjene u verziji 13.0
 
-* The add-on cannot be used on secure screens.
-* Feeds are managed from OPML files.
-* Due to changes in the feeds management system, there are changes in the
-  configuration file where the default feed is set. Please, use the Feeds
-  dialog if you want to set it again.
-* Your old text files used in previous versions will be automatically
-  imported into the new OPML format when the add-on is started.
-* The copy and restore feeds feature has been replaced with the ability to
-  import from and save to OPML files.
-* Non well-formed feeds can be processed before being added to make them
-  compatible with the add-on.
-* In the Read Feeds settings panel, a new option allows to show article
-  dates on the List of articles dialog.
+* Dodatak se ne može koristiti u sigurnim ekranima.
+* Feedovima se upravlja iz OPML datoteka.
+* Zbog promjena u sustavu upravljanja feedovima dolazi do promjena u
+  konfiguracijskoj datoteci u kojoj je postavljen zadani feed. Koristi
+  dijaloški okvir „Feedovi” ako ga želiš ponovo postaviti.
+* Tvoje stare tekstualne datoteke korištene u prethodnim verzijama
+  automatski će se uvesti u novi OPML format kad se dodatak pokrene.
+* Funkcija kopiranja i vraćanja feedova zamijenjena je s mogućnošću uvoza iz
+  i spremanja u OPML datoteke.
+* Loše formatirani feedovi mogu se obraditi prije dodavanja kako bi bili
+  kompatibilni s dodatkom.
+* Na ploči postavki „Čitaj feedove”, nova opcija omogućuje prikaz datuma
+  članaka u dijaloškom okviru popisa članaka.
 
-## Changes for 12.0
+## Promjene u verziji 12.0
 
-* Fixed a bug which made shortcuts for items of NVDA's tools menu don't work
-  as expected.
+* Ispravljena je greška zbog koje prečaci za stavke izbornika NVDA alata ne
+  rade na očekivan način.
 
-## Changes for 11.0
+## Promjene u verziji 11.0
 
-* Compatible with NVDA 2021.1
+* Kompatibilno s NVDA 2021.1.
 
 ## Promjene u verziji 10.0 ##
 
@@ -113,7 +113,7 @@ It contains the following controls:
   okviru grešaka.
 * Poboljšan je redoslijed i prezentacija nekih članaka.
 * Moguće je podržati više feedova.
-* Kad se otvori dijaloški okvir feedova, umjesto polja za uređivanje
+* Kad se otvori dijaloški okvir „Feedovi”, umjesto polja za uređivanje
   pretraživanja, fokusirat će se popis feedova.
 * Možeš odabrati, hoće li se polje za uređivanje pretraživanja nalaziti
   nakon popisa feedova. To je korisno za fokusiranje popisa čak i kad se
@@ -138,14 +138,14 @@ It contains the following controls:
 
 ## Promjene u verziji 7.0 ##
 
-* Dijalog „Feedovi” sadrži gumb za otvaranje mape koja može sadržati
+* Dijaloški okvir „Feedovi” sadrži gumb za otvaranje mape koja može sadržati
   sigurnosnu kopiju feedova.
 * Kad se koristi okvir za uređivanje za filtriranje feedova, ako nema
   rezultata, popis feedova i ostale kontrole su deaktivirane. Na taj način
   NVDA ne javlja „nepoznato” u praznom popisu.
 * Ako se dijalog s popisom članaka ne može prikazati, primjerice zbog
-  grešaka u feedu, NVDA će javiti grešku, tako da se dijaloški okvir s
-  feedovima može koristiti bez ponovnog pokretanja NVDA čitača.
+  grešaka u feedu, NVDA će javiti grešku, tako da se dijaloški okvir
+  „Feedovi” može koristiti bez ponovnog pokretanja NVDA čitača.
 
 ## Promjene u verziji 6.0 ##
 
