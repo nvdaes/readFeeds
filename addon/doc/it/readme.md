@@ -82,6 +82,10 @@ It contains the following controls:
 * Nel titolo della finestra elenco articoli viene indicato il nome del feed
   selezionato ed il numero di elementi disponibili.
 
+## Changes for 14.0
+
+* Fixed a bug that made impossible to add some feeds.
+
 ## Changes for 13.0
 
 * The add-on cannot be used on secure screens.
@@ -194,4 +198,3 @@ It contains the following controls:
 [2]: https://addons.nvda-project.org/files/get.php?file=rf-dev
 
 [3]: https://addons.nvda-project.org/files/get.php?file=rf-o
-

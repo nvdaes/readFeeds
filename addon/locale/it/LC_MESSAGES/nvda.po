@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: ReadFeeds 3.0-dev\n"
 "Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
 "POT-Creation-Date: 2015-07-24 10:22+0200\n"
-"PO-Revision-Date: 2021-10-20 15:33+0100\n"
+"PO-Revision-Date: 2022-07-22 11:13+0100\n"
 "Last-Translator: Chris <llajta2012@gmail.com>\n"
 "Language-Team: Italian <simone.dalmaso@gmail.com>\n"
 "Language: it_IT\n"
@@ -42,9 +42,8 @@ msgid "Feeds restored"
 msgstr "Feed ripristinati"
 
 #. Translators: Title of a dialog.
-#, fuzzy
 msgid "Feeds: {}"
-msgstr "Feed"
+msgstr "Feeds: {}"
 
 #. Translators: Label of a dialog (message translated in NVDA's core in different contexts).
 msgid "&Filter by:"
@@ -83,13 +82,12 @@ msgid "S&et default"
 msgstr "&Imposta predefinito"
 
 #. Translators: The label of a button to import feeds from OPML.
-#, fuzzy
 msgid "&Import feeds from OPML file..."
-msgstr "&Copia cartella feed..."
+msgstr "&Importa feeds dal file OPML..."
 
 #. Translators: The label of a button to save feeds to OPML file.
 msgid "&Save feeds to OPML file..."
-msgstr ""
+msgstr "&Salva feed su file OPML..."
 
 #. Translators: The label of a button to open the settings dialog for readFeeds.
 msgid "&Preferences..."
@@ -98,7 +96,7 @@ msgstr "&Preferenze..."
 #. Translators: Message presented when a feed cannot be added.
 #, python-format
 msgid "Cannot add feed: %s"
-msgstr "Impossibile aggiugnere il feed: %s"
+msgstr "Impossibile aggiungere il feed: %s"
 
 #. Translators: error message.
 msgid "Error"
@@ -111,8 +109,8 @@ msgid ""
 "\r\n"
 "{feedAddress}?"
 msgstr ""
-"Vuoi copiare l'indirizzo del feed negli appunti\n"
-"\n"
+"Vuoi copiare l'indirizzo del feed negli appunti\r\n"
+"\r\n"
 "{feedAddress}?"
 
 #. Translators: the title of a message box dialog.
@@ -142,15 +140,15 @@ msgstr "Rinomina feed"
 
 #. Translators: Label for a file dialog.
 msgid "Open OPML file"
-msgstr ""
+msgstr "Apri file OPML"
 
 #. Translators: Wildcards for a file dialog
 msgid "OPML files (*.opml)|*.opml"
-msgstr ""
+msgstr "File OPML (*.opml)|*.opml"
 
 #. Translators: Label of a button on the Feeds dialog.
 msgid "Save As"
-msgstr ""
+msgstr "Salva come"
 
 #. Translators: The label of the articles list in the articles dialog.
 msgid "List of articles"
@@ -167,10 +165,7 @@ msgstr "&Informazioni articolo..."
 #. Translators: the label of a message box dialog.
 #, python-format
 msgid "%sDo you want to copy article title and link to the clipboard?"
-msgstr ""
-"%s\n"
-"\n"
-"Vuoi copiare titolo e link dell'articolo negli appunti?"
+msgstr "%s Vuoi copiare titolo e link dell'articolo negli appunti?"
 
 #. Translators: the title of a message box dialog.
 msgid "Article information"
@@ -182,7 +177,7 @@ msgstr "Campo editazione di ri&cerca dopo l'elenco dei feed"
 
 #. Translators: label of a dialog.
 msgid "&Show articles Date"
-msgstr ""
+msgstr "&visualizza la data degli articoli"
 
 #. Translators: Presented when the current article does not have an associated title.
 msgid "Unable to locate article title."

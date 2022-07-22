@@ -85,6 +85,10 @@ Contiene los siguientes controles:
 * El título del diálogo de lista de artículos muestra el nombre del feed
   seleccionado y el número de elementos disponibles.
 
+## Cambios para 14.0
+
+* Corregido un fallo que hacía imposible añadir algunos feeds.
+
 ## Cambios para 13.0
 
 * El complemento no se puede usar en pantallas seguras.
@@ -198,4 +202,3 @@ Contiene los siguientes controles:
 [2]: https://addons.nvda-project.org/files/get.php?file=rf-dev
 
 [3]: https://addons.nvda-project.org/files/get.php?file=rf-o
-

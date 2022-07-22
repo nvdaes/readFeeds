@@ -81,6 +81,10 @@ Zawiera następujące kontrolki:
 * Dialog Spisu nagłówków artykułów Wyświetla nazwę oznaczonego kanału
   osobistego i ilość dostępnych artykułów.
 
+## Changes for 14.0
+
+* Fixed a bug that made impossible to add some feeds.
+
 ## Zmiany dla wersji 13.0
 
 * Dodatek nie może być używany na bezpiecznych ekranach.
@@ -193,4 +197,3 @@ Zawiera następujące kontrolki:
 [2]: https://addons.nvda-project.org/files/get.php?file=rf-dev
 
 [3]: https://addons.nvda-project.org/files/get.php?file=rf-o
-
