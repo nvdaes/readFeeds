@@ -76,6 +76,10 @@ Aşağıdaki kontrolleri içerir:
 * Makale listesi iletişim kutusunun başlığı, seçilen akış adını ve mevcut
   öğelerin sayısını gösterir.
 
+## Changes for 14.0
+
+* Fixed a bug that made impossible to add some feeds.
+
 ## 13.0 için  Değişiklikler
 
 * Eklenti, güvenli ekranlarda kullanılamaz.
@@ -186,4 +190,3 @@ Aşağıdaki kontrolleri içerir:
 [2]: https://addons.nvda-project.org/files/get.php?file=rf-dev
 
 [3]: https://addons.nvda-project.org/files/get.php?file=rf-o
-

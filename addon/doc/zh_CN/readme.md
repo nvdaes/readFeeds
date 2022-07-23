@@ -54,6 +54,10 @@ It contains the following controls:
 * NVDA will display an error message if a new feed cannot be created.
 * “文章列表”对话框的标题显示所选的源名称和可用项目数。
 
+## Changes for 14.0
+
+* Fixed a bug that made impossible to add some feeds.
+
 ## Changes for 13.0
 
 * The add-on cannot be used on secure screens.
@@ -140,4 +144,3 @@ It contains the following controls:
 [2]: https://addons.nvda-project.org/files/get.php?file=rf-dev
 
 [3]: https://addons.nvda-project.org/files/get.php?file=rf-o
-

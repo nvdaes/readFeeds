@@ -79,6 +79,10 @@ Se sisältää seuraavat säätimet:
 * Valitun syötteen nimi ja saatavilla olevien artikkeleiden määrä näytetään
   Artikkeliluettelo-valintaikkunan otsikossa.
 
+## Muutokset versiossa 14.0
+
+* Korjattu bugi, joka teki mahdottomaksi joidenkin syötteiden lisäämisen.
+
 ## Muutokset versiossa 13.0
 
 * Lisäosaa ei voi käyttää suojatuissa ruuduissa.
@@ -189,4 +193,3 @@ Se sisältää seuraavat säätimet:
 [2]: https://addons.nvda-project.org/files/get.php?file=rf-dev
 
 [3]: https://addons.nvda-project.org/files/get.php?file=rf-o
-

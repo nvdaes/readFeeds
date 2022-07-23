@@ -1,8 +1,8 @@
 # Read Feeds (Читач новинних стрічок) #
 
 * Автори: Noelia Ruiz Martínez, Mesar Hameed
-* Download [stable version][1] (compatible with NVDA 2019.3 and beyond)
-* Download [development version][2] (compatible with NVDA 2019.3 and beyond)
+* Завантажити [стабільну версію][1] (сумісну з NVDA 2019.3 і новішими)
+* Завантажити [версію в розробці][2] (сумісну з NVDA 2019.3 і новішими)
 
 Цей додаток забезпечує простий спосіб читати стрічки новин у форматах Atom
 або RSS, використовуючи NVDA.  Стрічки новин не оновлюються
@@ -11,12 +11,12 @@
 
 ## Команди ##
 
-### Read Feeds dialog ###
+### Діалог читача новинних стрічок ###
 
-You can access the Read Feeds dialog from the nvda menu, Tools submenu,
-Feeds item.
+Ви можете отримати доступ до діалогу читача новинних стрічок із меню NVDA,
+підменю «Інструменти», елемент «Стрічки».
 
-It contains the following controls:
+Він містить такі елементи керування:
 
 * Фільтрувати за: поле редагування для пошуку раніше збережених стрічок
   новин.
@@ -43,21 +43,21 @@ It contains the following controls:
 * Видалити: відкриває діалог підтвердження видалення вибраної стрічки новин.
 * Встановити як основну: встановлює вибрану стрічку новин як основну, і її
   статті можуть бути доступні за допомогою жестів NVDA.
-* Import feeds from OPML file: Opens a dialog to add new feeds from an OPML
-  file.
-* Save feeds to OPML file: Opens a dialog to save the feeds available from
-  the Feeds dialog in an OPML file.
+* Імпортувати стрічки із файлу OPML: відкриває діалог для додавання нових
+  стрічок із файлу OPML.
+* Зберегти стрічки у файл OPML: відкриває вікно для збереження стрічок,
+  доступних у діалозі стрічок, у файл OPML.
 * Параметри: відкриває діалог налаштувань readFeeds, також доступно в меню
   NVDA, налаштування, параметри, категорія readFeeds.
 * Закрити: закриває діалог новинних стрічок.
 
-### Notes #####
+### Примітки #####
 
 * Поле редагування «Фільтрувати за» можна розмістити після кнопки «Відкрити
   статтю» з меню NVDA, параметри, налаштування, категорія читання новинних
   стрічок, або натиснувши кнопку налаштування діалогу стрічки новин.
-* This panel has an option to show article dates on the List of articles
-  dialog.
+* Ця панель містить параметр для показу дат статей у діалозі «Список
+  статей».
 
 
 ### Клавіатурні команди ###
@@ -76,25 +76,31 @@ It contains the following controls:
 * Коли назва або URL було скопіювано.
 * Коли не не вдається підключитися або оновити стрічку новин, або адреса не
   відповідає дійсній стрічці новин.
-* NVDA will display an error message if a new feed cannot be created.
+* NVDA покаже повідомлення про помилку, якщо не вдасться створити нову
+  стрічку.
 * Діалог з назвою списку статей відображає ім’я вибраної стрічки новин з
   кількістю доступних елементів.
 
-## Changes for 13.0
+## Зміни у версії 14.0
 
-* The add-on cannot be used on secure screens.
-* Feeds are managed from OPML files.
-* Due to changes in the feeds management system, there are changes in the
-  configuration file where the default feed is set. Please, use the Feeds
-  dialog if you want to set it again.
-* Your old text files used in previous versions will be automatically
-  imported into the new OPML format when the add-on is started.
-* The copy and restore feeds feature has been replaced with the ability to
-  import from and save to OPML files.
-* Non well-formed feeds can be processed before being added to make them
-  compatible with the add-on.
-* In the Read Feeds settings panel, a new option allows to show article
-  dates on the List of articles dialog.
+* Виправлено помилку, яка унеможливлювала додавання деяких стрічок.
+
+## Зміни у версії 13.0
+
+* Додаток не можна використовувати на захищених екранах.
+* Стрічки тепер керуються з файлів OPML.
+* Через зміни в системі керування стрічками є зміни у файлі конфігурації, де
+  встановлено основну стрічку. Будь ласка, скористайтеся діалогом стрічок,
+  якщо ви хочете встановити її знову.
+* Ваші старі текстові файли, які використовувалися в попередніх версіях,
+  будуть автоматично імпортовані в новий формат OPML під час запуску
+  додатка.
+* Функцію копіювання та відновлення стрічок було замінено можливістю імпорту
+  з файлів OPML і збереження в них.
+* Неправильно сформовані стрічки можна обробити перед додаванням, щоб
+  зробити їх сумісними з додатком.
+* На панелі налаштувань «Читати стрічки» з’явився новий параметр, який
+  дозволяє відображати дати статей у діалозі «Список статей».
 
 ## Зміни у версії 12.0
 
@@ -188,4 +194,3 @@ It contains the following controls:
 [2]: https://addons.nvda-project.org/files/get.php?file=rf-dev
 
 [3]: https://addons.nvda-project.org/files/get.php?file=rf-o
-

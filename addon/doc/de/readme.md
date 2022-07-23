@@ -87,6 +87,10 @@ Sie enthält die folgenden Steuerelemente:
 * Im Titel des Dialogs für die Artikellisten werden der Name des
   ausgewählten Feeds und die Anzahl der verfügbaren Artikel angezeigt.
 
+## Changes for 14.0
+
+* Fixed a bug that made impossible to add some feeds.
+
 ## Änderungen in 13.0
 
 * Diese Erweiterung ist nicht länger verwendbar mehr im geschützten Modus.
@@ -206,4 +210,3 @@ Sie enthält die folgenden Steuerelemente:
 [2]: https://addons.nvda-project.org/files/get.php?file=rf-dev
 
 [3]: https://addons.nvda-project.org/files/get.php?file=rf-o
-

@@ -80,6 +80,10 @@ Sadrži sljedeće kontrole:
 * Naslov dijaloškog okvira popisa članaka prikazuje odabrani naziv feeda i
   broj dostupnih stavki.
 
+## Changes for 14.0
+
+* Fixed a bug that made impossible to add some feeds.
+
 ## Promjene u verziji 13.0
 
 * Dodatak se ne može koristiti u sigurnim ekranima.
@@ -190,4 +194,3 @@ Sadrži sljedeće kontrole:
 [2]: https://addons.nvda-project.org/files/get.php?file=rf-dev
 
 [3]: https://addons.nvda-project.org/files/get.php?file=rf-o
-
