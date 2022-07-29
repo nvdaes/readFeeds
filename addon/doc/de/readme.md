@@ -87,9 +87,10 @@ Sie enthält die folgenden Steuerelemente:
 * Im Titel des Dialogs für die Artikellisten werden der Name des
   ausgewählten Feeds und die Anzahl der verfügbaren Artikel angezeigt.
 
-## Changes for 14.0
+## Änderungen in 14.0
 
-* Fixed a bug that made impossible to add some feeds.
+* Es wurde ein Fehler behoben, der das Hinzufügen einiger Feeds unmöglich
+  machte.
 
 ## Änderungen in 13.0
 
