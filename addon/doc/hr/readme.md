@@ -80,9 +80,9 @@ Sadrži sljedeće kontrole:
 * Naslov dijaloškog okvira popisa članaka prikazuje odabrani naziv feeda i
   broj dostupnih stavki.
 
-## Changes for 14.0
+## Promjene u verziji 14.0
 
-* Fixed a bug that made impossible to add some feeds.
+* Ispravljena je greška koja je onemogućavala dodavanje nekih feedova.
 
 ## Promjene u verziji 13.0
 
