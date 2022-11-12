@@ -1,8 +1,8 @@
 # Læs feeds #
 
 * Forfattere: Noelia Ruiz Martínez, Mesar Hameed
-* Download [stable version][1] (compatible with NVDA 2019.3 and beyond)
-* Download [development version][2] (compatible with NVDA 2019.3 and beyond)
+* Download [stabil version][1] (kompatibel med NVDA 2019.3 og nyere)
+* Download [udviklingsversion][2] (kompatibel med NVDA 2019.3 og nyere)
 
 Dette tilføjelsesprogram giver en nem og ligetil måde at læse nyheader i
 atom- eller RSS-format med NVDA. Feeds vil ikke blive opdateret
@@ -10,10 +10,9 @@ automatisk. Når vi nedenfor nævner feeds, mener vi både RSS- og atom-feeds.
 
 ## Kommandoer ##
 
-### Read Feeds dialog ###
+### Dialogboksen Læs feeds ###
 
-You can access the Read Feeds dialog from the nvda menu, Tools submenu,
-Feeds item.
+Du kan få adgang til undermenuen Læs Feeds fra NVDA-menuen værktøjer.
 
 It contains the following controls:
 
@@ -40,22 +39,22 @@ It contains the following controls:
 * Slet: Åbner en dialogboks for at slette det valgte feed efter bekræftelse.
 * Indstil som standard: Indstiller det valgte feed som standard, så dets
   artikler kan tilgås med NVDAs inputbevægelser.
-* Import feeds from OPML file: Opens a dialog to add new feeds from an OPML
-  file.
-* Save feeds to OPML file: Opens a dialog to save the feeds available from
-  the Feeds dialog in an OPML file.
+* Importér feeds fra OPML-fil: Åbner en dialogboks, så du kan tilføje nye
+  feeds fra en OPML-fil.
+* Gem feeds til OPML-fil: Åbner en dialog for at gemme de tilgængelige feeds
+  fra feeds-dialogen i en OPML-fil.
 * Indstillinger: Åbner indstillingerne for tilføjelsen. Indstillingerne kan
   også findes i NVDA-menuen>Opsætning>Indstillinger og ved at vælge
   kategorien "Læs Feeds".
 * Luk: Lukker dialogen Nyhedskanaler.
 
-### Notes #####
+### Bemærkninger #####
 
 * Filtrer efter redigeringsfelt kan placeres efter knappen Åbn artikel fra
   NVDA's menu, Indstillinger, Indstillinger, Læs feeds-kategori eller ved at
   trykke på knappen Indstillinger i dialogboksen Feeds.
-* This panel has an option to show article dates on the List of articles
-  dialog.
+* Dette panel har en mulighed for at vise artikeldatoer i dialogboksen Liste
+  over artikler.
 
 
 ### Tastaturkommandoer ###
@@ -73,38 +72,38 @@ It contains the following controls:
 * Når titlen eller URL-adressen er blevet kopieret.
 * Når det ikke er muligt at forbinde/opdatere et feed, eller den angivne URL
   ikke svarer til et gyldigt feed.
-* NVDA will display an error message if a new feed cannot be created.
+* NVDA vil vise en fejlmeddelelse, hvis et nyt feed ikke kan oprettes.
 * Titlen på dialogen der viser listen over artikler viser navnet på det
   aktuelle feed, samt antallet af artikler til rådighed.
 
-## Changes for 14.0
+## Ændringer for 14.0
 
-* Fixed a bug that made impossible to add some feeds.
+* Rettede en fejl, der gjorde det umuligt at tilføje nogle feeds.
 
-## Changes for 13.0
+## Ændringer i 13,0
 
-* The add-on cannot be used on secure screens.
-* Feeds are managed from OPML files.
-* Due to changes in the feeds management system, there are changes in the
-  configuration file where the default feed is set. Please, use the Feeds
-  dialog if you want to set it again.
-* Your old text files used in previous versions will be automatically
-  imported into the new OPML format when the add-on is started.
-* The copy and restore feeds feature has been replaced with the ability to
-  import from and save to OPML files.
-* Non well-formed feeds can be processed before being added to make them
-  compatible with the add-on.
-* In the Read Feeds settings panel, a new option allows to show article
-  dates on the List of articles dialog.
+* Tilføjelsen kan ikke bruges på sikre skærme.
+* Feeds administreres fra OPML-filer.
+* På grund af ændringer i feeds-styringssystemet er der ændringer i
+  konfigurationsfilen, hvor standardfeedet er indstillet. Brug venligst
+  feed-dialogen, hvis du vil indstille den igen.
+* Dine gamle tekstfiler, der blev brugt i tidligere versioner, importeres
+  automatisk til det nye OPML-format, når tilføjelsen startes.
+* Funktionen til kopiering og gendannelse af feeds er blevet erstattet med
+  muligheden for at importere fra og gemme til OPML-filer.
+* Ikke velformede feeds kan behandles, før de tilføjes, for at gøre dem
+  kompatible med tilføjelsen.
+* I indstillingspanelet Læs feeds giver en ny mulighed mulighed for at vise
+  artikeldatoer i dialogboksen Liste over artikler.
 
-## Changes for 12.0
+## Ændringer for 12.0
 
-* Fixed a bug which made shortcuts for items of NVDA's tools menu don't work
-  as expected.
+* Rettede en fejl, der gjorde, at genveje til elementer i NVDA's
+  værktøjsmenu ikke fungerede som forventet.
 
-## Changes for 11.0
+## Ændringer for 11.0
 
-* Compatible with NVDA 2021.1
+* Kompatibel med NVDA 2021.1.
 
 ## Ændringer for 10.0 ##
 
