@@ -1,8 +1,9 @@
 # Read Feeds #
 
 * Autores: Noelia Ruiz Martínez, Mesar Hameed
-* Download [stable version][1] (compatible with NVDA 2019.3 and beyond)
-* Download [development version][2] (compatible with NVDA 2019.3 and beyond)
+* [descargar versión estable][1] (compatible con NVDA 2019.3 en diante)
+* Descargar [versión de desenvolvemento][2] (compatible con NVDA 2019.3 en
+  diante)
 
 Este complemento proporciona unha maneira sinxela de ler fontes en formatos
 de RSS ou Atom utilizando NVDA.  Os feeds non se actualizarán
@@ -11,12 +12,12 @@ RSS e ATOM.
 
 ## Ordes ##
 
-### Read Feeds dialog ###
+### Diálogo Read Feeds ###
 
-You can access the Read Feeds dialog from the nvda menu, Tools submenu,
-Feeds item.
+Podes acceder ó diálogo Read Feeds dende o menú nvda, submenú Ferramentas,
+elemento Feeds.
 
-It contains the following controls:
+Contén os seguintes controis:
 
 * Filtrar por: unha Caixa de edición para procurar feeds gardados
   anteriormente.
@@ -42,21 +43,21 @@ It contains the following controls:
   confirmación.
 * Configurar predeterminado: configura o feed selecionado coma o
   predeterminado, así que o seu artigo pode acederse cos xestos do NVDA.
-* Import feeds from OPML file: Opens a dialog to add new feeds from an OPML
-  file.
-* Save feeds to OPML file: Opens a dialog to save the feeds available from
-  the Feeds dialog in an OPML file.
+* Importar fontes dende arquivo OPML: Abre un diálogo para engadir novas
+  fontes dende un arquivo OPML.
+* Gardar fontes en arquivo OPML: Abre un diálogo para gardar as fontes
+  dispoñibles dende o diálogo de fontes nun arquivo OPML.
 * Preferencias: Abre o diálogo de opcións para ReadFeeds, tamén dispoñible
   no menú NVDA, Preferencias, Opcións, categoría ReadFeeds.
 * Pechar: pecha o diálogo Feeds.
 
-### Notes #####
+### Notas #####
 
 * A caixa de edición filtrar por pódese poñer despois do botón Abrir artigo
   dende o menú NVDA, Preferencias, Opcións, categoría Read Feeds, ou
   premendo o botón Preferencias do diálogo de fontes.
-* This panel has an option to show article dates on the List of articles
-  dialog.
+* Este panel ten unha opción para amosar as datas dos artigos no diálogo de
+  lista de artigos.
 
 
 ### Ordes de teclado ###
@@ -75,29 +76,30 @@ It contains the following controls:
 * Cando o título ou a URL se copiaran.
 * Cando non se pode conectar/refrescar un feed, ou a URL non se corresponde
   cun feed válido.
-* NVDA will display an error message if a new feed cannot be created.
+* NVDA amosará unha mensaxe de erro se non se pode crear unha nova fonte.
 * O título do diálogo da listaxe de artigos amopsa o nome do feed
   selecionado e o número de elementos dispoñibles.
 
-## Changes for 14.0
+## Cambios para 14.0
 
-* Fixed a bug that made impossible to add some feeds.
+* Arranxado un erro que facía imposible engadir certas fontes.
 
-## Changes for 13.0
+## Cambios para 13.0
 
-* The add-on cannot be used on secure screens.
-* Feeds are managed from OPML files.
-* Due to changes in the feeds management system, there are changes in the
-  configuration file where the default feed is set. Please, use the Feeds
-  dialog if you want to set it again.
-* Your old text files used in previous versions will be automatically
-  imported into the new OPML format when the add-on is started.
-* The copy and restore feeds feature has been replaced with the ability to
-  import from and save to OPML files.
-* Non well-formed feeds can be processed before being added to make them
-  compatible with the add-on.
-* In the Read Feeds settings panel, a new option allows to show article
-  dates on the List of articles dialog.
+* O complemento non se pode utilizar en pantallas seguras.
+* As fontes xestiónanse mediante arquivos OPML.
+* Por mor de cambios no sistema de xestión de fontes, hai cambios no arquivo
+  de configuración onde se establece a fonte por defecto. Por favor, utiliza
+  o diálogo Fontes se desexas configurala de novo.
+* Os teus antigos arquivos de texto utilizados en versións anteriores
+  importaranse automaticamente no novo formato OPML cando se inicie o
+  complemento.
+* A característica de copiar e restaurar fontes reemprazouse pola
+  posibilidade de importar dende e gardar en arquivos OPML.
+* Pódense procesar fontes malformadas antes de engadirse para facelas
+  compatibles co complemento.
+* No panel de opcións de Read Feeds, unha nova opción permite amosar as
+  datas dos artigos no diálogo de Lista de artigos.
 
 ## Cambios para 12.0
 
