@@ -189,7 +189,7 @@
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=rf
+[1]: https://addons.nvda-project.org/files/get.php?file=readFeeds
 
 [2]: https://addons.nvda-project.org/files/get.php?file=rf-dev
 
