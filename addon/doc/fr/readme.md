@@ -2,7 +2,6 @@
 
 * Auteurs : Noelia Ruiz Martínez, Mesar Hameed
 * Download [stable version][1] (compatible with NVDA 2019.3 and beyond)
-* Download [development version][2] (compatible with NVDA 2019.3 and beyond)
 
 Cette extension fournit un moyen simple de lire les flux aux formats Atom ou
 RSS à l'aide de NVDA. Les flux ne sont pas actualisés automatiquement.
@@ -202,7 +201,5 @@ It contains the following controls:
 [[!tag dev stable]]
 
 [1]: https://addons.nvda-project.org/files/get.php?file=readFeeds
-
-[2]: https://addons.nvda-project.org/files/get.php?file=rf-dev
 
 [3]: https://addons.nvda-project.org/files/get.php?file=rf-o

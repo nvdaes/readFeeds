@@ -2,8 +2,6 @@
 
 * Autores: Noelia Ruiz Martínez, Mesar Hameed
 * [descargar versión estable][1] (compatible con NVDA 2019.3 en diante)
-* Descargar [versión de desenvolvemento][2] (compatible con NVDA 2019.3 en
-  diante)
 
 Este complemento proporciona unha maneira sinxela de ler fontes en formatos
 de RSS ou Atom utilizando NVDA.  Os feeds non se actualizarán
@@ -192,7 +190,5 @@ Contén os seguintes controis:
 [[!tag dev stable]]
 
 [1]: https://addons.nvda-project.org/files/get.php?file=readFeeds
-
-[2]: https://addons.nvda-project.org/files/get.php?file=rf-dev
 
 [3]: https://addons.nvda-project.org/files/get.php?file=rf-o

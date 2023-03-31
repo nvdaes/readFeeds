@@ -2,7 +2,6 @@
 
 * Автори: Noelia Ruiz Martínez, Mesar Hameed
 * Завантажити [стабільну версію][1] (сумісну з NVDA 2019.3 і новішими)
-* Завантажити [версію в розробці][2] (сумісну з NVDA 2019.3 і новішими)
 
 Цей додаток забезпечує простий спосіб читати стрічки новин у форматах Atom
 або RSS, використовуючи NVDA.  Стрічки новин не оновлюються
@@ -190,7 +189,5 @@
 [[!tag dev stable]]
 
 [1]: https://addons.nvda-project.org/files/get.php?file=readFeeds
-
-[2]: https://addons.nvda-project.org/files/get.php?file=rf-dev
 
 [3]: https://addons.nvda-project.org/files/get.php?file=rf-o

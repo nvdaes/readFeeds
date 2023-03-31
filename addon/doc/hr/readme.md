@@ -2,7 +2,6 @@
 
 * Autori: Noelia Ruiz Martínez, Mesar Hameed
 * Preuzmi [stabilnu verziju][1] (kompatibilna s NVDA 2019.3 i novijom)
-* Preuzmi [razvojnu verziju][2] (kompatibilna s NVDA 2019.3 i novijom)
 
 Ovaj dodatak pruža najbolji način za čitanje feedova u Atom ili RSS formatu
 koristeći NVDA. Feedovi se neće automatski aktualizirati. U daljnjem tekstu,
@@ -190,7 +189,5 @@ Sadrži sljedeće kontrole:
 [[!tag dev stable]]
 
 [1]: https://addons.nvda-project.org/files/get.php?file=readFeeds
-
-[2]: https://addons.nvda-project.org/files/get.php?file=rf-dev
 
 [3]: https://addons.nvda-project.org/files/get.php?file=rf-o
