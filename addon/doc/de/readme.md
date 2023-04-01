@@ -2,8 +2,6 @@
 
 * Autoren: Noelia Ruiz Martínez, Mesar Hameed
 * [Stabile Version herunterladen][1] (kompatibel mit NVDA 2019.3 und neuer)
-* [Entwicklerversion herunterladen][2] (kompatibel mit NVDA 2019.3 und
-  neuer)
 
 Diese Erweiterung bietet eine einfache Möglichkeit, RSS-Feeds in den
 Formaten Atom oder RSS mit NVDA zu lesen. Die Feeds werden nicht automatisch
@@ -207,7 +205,5 @@ Sie enthält die folgenden Steuerelemente:
 [[!tag dev stable]]
 
 [1]: https://addons.nvda-project.org/files/get.php?file=readFeeds
-
-[2]: https://addons.nvda-project.org/files/get.php?file=rf-dev
 
 [3]: https://addons.nvda-project.org/files/get.php?file=rf-o

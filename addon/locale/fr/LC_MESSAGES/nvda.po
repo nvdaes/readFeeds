@@ -265,7 +265,7 @@ msgstr "Read Feeds"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Add-on for using NVDA as a feed reader."
 msgstr ""
-"Module complémentaire  pour utiliser NVDA comme un lecteur de flux RSS."
+"Extension pour utiliser NVDA comme un lecteur de flux RSS."
 
 #~ msgid ""
 #~ "Your configuration folder for NVDA contains files that seem to be "
