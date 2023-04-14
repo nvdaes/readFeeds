@@ -80,9 +80,9 @@ Zawiera następujące kontrolki:
 * Dialog Spisu nagłówków artykułów Wyświetla nazwę oznaczonego kanału
   osobistego i ilość dostępnych artykułów.
 
-## Changes for 14.0
+## Zmiany w wersji 14.0
 
-* Fixed a bug that made impossible to add some feeds.
+* Naprawiono błąd, który uniemożliwiał dodanie niektórych kanałów.
 
 ## Zmiany dla wersji 13.0
 
