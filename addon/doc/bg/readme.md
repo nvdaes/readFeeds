@@ -202,6 +202,6 @@ RSS формат с NVDA.  Източниците няма да бъдат оп�
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=readFeeds
+[1]: https://www.nvaccess.org/addonStore/legacy?file=readFeeds
 
-[3]: https://addons.nvda-project.org/files/get.php?file=rf-o
+[3]: https://www.nvaccess.org/addonStore/legacy?file=rf-o
