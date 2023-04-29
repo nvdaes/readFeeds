@@ -1,7 +1,7 @@
 # Read Feeds #
 
 * Auteurs : Noelia Ruiz Martínez, Mesar Hameed
-* Download [stable version][1] (compatible with NVDA 2019.3 and beyond)
+* Télécharger [version stable][1] (compatible avec NVDA 2019.3 et au-delà)
 
 Cette extension fournit un moyen simple de lire les flux aux formats Atom ou
 RSS à l'aide de NVDA. Les flux ne sont pas actualisés automatiquement.
@@ -10,12 +10,12 @@ signifient flux RSS et ATOM.
 
 ## Commandes ##
 
-### Read Feeds dialog ###
+### Dialogue Read Feeds ###
 
-You can access the Read Feeds dialog from the nvda menu, Tools submenu,
-Feeds item.
+Vous pouvez accéder au dialogue Read Feeds depuis le menu NVDA, sous-menu
+Outils, élément Flux.
 
-It contains the following controls:
+Il contient les contrôles suivants :
 
 * Filtrer par : Une zone d'édition pour rechercher des flux précédemment
   enregistrés.
@@ -46,10 +46,11 @@ It contains the following controls:
   après confirmation.
 * Définir par défaut : Définit le flux sélectionné comme valeur par défaut,
   afin que ses articles soient accessibles avec les gestes de NVDA.
-* Import feeds from OPML file: Opens a dialog to add new feeds from an OPML
-  file.
-* Save feeds to OPML file: Opens a dialog to save the feeds available from
-  the Feeds dialog in an OPML file.
+* Importer les flux depuis un fichier OPML : ouvre une boîte de dialogue
+  pour ajouter de nouveaux flux à partir d'un fichier OPML.
+* Enregistrer les flux dans un fichier OPML : ouvre une boîte de dialogue
+  pour enregistrer les flux disponibles à partir de la boîte de dialogue
+  Flux  dans un fichier OPML.
 * Préférences : Ouvre la boîte de dialogue des paramètres pour readFeeds,
   également disponible dans le menu de NVDA, Préférences, paramètres,
   catégorie readFeeds.
@@ -61,8 +62,8 @@ It contains the following controls:
   l'article dans le menu de NVDA, Préférences, Paramètres, Catégorie Lire
   les flux, ou en appuyant sur le bouton Préférences de la boîte de dialogue
   Flux.
-* This panel has an option to show article dates on the List of articles
-  dialog.
+* Ce panneau a une option pour afficher les dates des articles dans le
+  dialogue Liste des articles.
 
 
 ### Commandes clavier ###
@@ -81,29 +82,32 @@ It contains the following controls:
 * Lorsque le titre ou l'URL ont été copiés.
 * Lorsqu'il est Impossible de se connecter/actualiser un flux, ou l'URL ne
   correspond pas à un flux valide.
-* NVDA will display an error message if a new feed cannot be created.
+* NVDA affichera un message d'erreur si un nouveau flux ne peut pas être
+  créé.
 * La boîte de dialogue affiche Le titre de la Liste de l'article le nom de
   flux sélectionné et le nombre d'éléments disponibles.
 
-## Changes for 14.0
+## Changements pour la version 14.0
 
-* Fixed a bug that made impossible to add some feeds.
+* Correction d'un bug qui rendait impossible d'ajouter des flux.
 
-## Changes for 13.0
+## Changements pour la version 13.0
 
-* The add-on cannot be used on secure screens.
-* Feeds are managed from OPML files.
-* Due to changes in the feeds management system, there are changes in the
-  configuration file where the default feed is set. Please, use the Feeds
-  dialog if you want to set it again.
-* Your old text files used in previous versions will be automatically
-  imported into the new OPML format when the add-on is started.
-* The copy and restore feeds feature has been replaced with the ability to
-  import from and save to OPML files.
-* Non well-formed feeds can be processed before being added to make them
-  compatible with the add-on.
-* In the Read Feeds settings panel, a new option allows to show article
-  dates on the List of articles dialog.
+* L'extension ne peut pas être utilisée sur des écrans sécurisés.
+* Les flux sont gérés à partir des fichiers OPML.
+* En raison des modifications du système de gestion des flux, il y a des
+  modifications dans le fichier de configuration où le flux par défaut est
+  défini. S'il vous plaît, utilisez la boîte de dialogue Flux si vous
+  souhaitez le définir à nouveau.
+* Vos anciens fichiers texte utilisés dans les versions précédentes seront
+  automatiquement importés dans le nouveau format OPML au démarrage de
+  l'extension.
+* La fonction copier et restaurer les flux a été remplacée par la
+  possibilité d'importer et d'enregistrer dans les fichiers OPML.
+* Les flux non formés peuvent être traités avant d'être ajoutés pour les
+  rendre compatibles avec l'extension.
+* Dans le panneau des paramètres Read Feeds, une nouvelle option permet
+  d'afficher les dates de l'article dans le dialogue Liste des articles.
 
 ## Changements pour la version 12.0
 
