@@ -602,7 +602,7 @@ class Feed(object):
 		try:
 			response = urllib.request.urlopen(self._url)
 		except Exception:
-			userAgent = "UniversalFeedParser/3.3 +http://feedparser.org/"
+			userAgent = "UniversalFeedParser/5.0.1 +http://feedparser.org/"
 			headers = {'User-Agent': userAgent}
 			req = urllib.request.Request(self._url, None, headers)
 			response = urllib.request.urlopen(req)
