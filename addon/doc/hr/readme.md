@@ -2,6 +2,7 @@
 
 * Autori: Noelia Ruiz Martínez, Mesar Hameed
 * Preuzmi [stabilnu verziju][1] (kompatibilna s NVDA 2019.3 i novijom)
+* Download [beta version][2] (compatible with NVDA 2019.3 and beyond)
 
 Ovaj dodatak pruža najbolji način za čitanje feedova u Atom ili RSS formatu
 koristeći NVDA. Feedovi se neće automatski aktualizirati. U daljnjem tekstu,
@@ -189,5 +190,7 @@ Sadrži sljedeće kontrole:
 [[!tag dev stable]]
 
 [1]: https://www.nvaccess.org/addonStore/legacy?file=readFeeds
+
+[2]: https://www.nvaccess.org/addonStore/legacy?file=readFeeds-beta
 
 [3]: https://www.nvaccess.org/addonStore/legacy?file=rf-o

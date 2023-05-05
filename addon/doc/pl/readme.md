@@ -2,6 +2,7 @@
 
 * Autorzy: Noelia Ruiz Martínez, Mesar Hameed
 * Pobierz [stabilna wersja][1] (kompatybilna z NVDA 2019.3 i nowszymi)
+* Download [beta version][2] (compatible with NVDA 2019.3 and beyond)
 
 Ten dodatek umożliwia odczytywanie przez NVDA kanałów informacyjnych w
 formatach Atom lub RSS.  Kanały nie będą odświeżane automatycznie.  Mówiąc o
@@ -192,5 +193,7 @@ Zawiera następujące kontrolki:
 [[!tag dev stable]]
 
 [1]: https://www.nvaccess.org/addonStore/legacy?file=readFeeds
+
+[2]: https://www.nvaccess.org/addonStore/legacy?file=readFeeds-beta
 
 [3]: https://www.nvaccess.org/addonStore/legacy?file=rf-o
