@@ -2,7 +2,7 @@
 
 * Authors: Noelia Ruiz Martínez, Mesar Hameed
 * Download [stable version][1] (compatible with NVDA 2019.3 and beyond)
-* Download [development version][2] (compatible with NVDA 2019.3 and beyond)
+* Download [beta version][2] (compatible with NVDA 2019.3 and beyond)
 
 This addon provides a straightforward way to read feeds in Atom or RSS formats using NVDA.
 The feeds will not be refreshed automatically.
@@ -51,6 +51,10 @@ It contains the following controls:
 * When unable to connect/refresh a feed, or the URL does not correspond to a valid feed.
 * NVDA will display an error message if a new feed cannot be created.
 * The title of the articles list dialog displays the selected feed name and number of items available.
+
+## Changes for 20.0
+
+* universalFeedParser is updated to 5.0.1, adding support for more feeds.
 
 ## Changes for 15.0
 
@@ -133,9 +137,8 @@ It contains the following controls:
 
 * Initial version.
 
-[1]: https://addons.nvda-project.org/files/get.php?file=rf
+[1]: https://www.nvaccess.org/addonStore/legacy?file=readFeeds
 
-[2]: https://addons.nvda-project.org/files/get.php?file=rf-dev
+[2]: https://www.nvaccess.org/addonStore/legacy?file=readFeeds-beta
 
-[3]: https://addons.nvda-project.org/files/get.php?file=rf-o
-
+[3]: https://www.nvaccess.org/addonStore/legacy?file=rf-o
