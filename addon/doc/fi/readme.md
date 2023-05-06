@@ -2,6 +2,7 @@
 
 * Tekijät: Noelia Ruiz Martínez, Mesar Hameed
 * Lataa [vakaa versio][1] (yhteensopiva NVDA 2022.1:n ja uudempien kanssa)
+* Download [beta version][2] (compatible with NVDA 2019.3 and beyond)
 
 Tämä lisäosa tarjoaa suoraviivaisen tavan lukea Atom -tai RSS-syötteitä
 NVDA:ta käyttäen.  Syötteitä ei päivitetä automaattisesti.  Alla mainitut
@@ -188,5 +189,7 @@ Se sisältää seuraavat säätimet:
 [[!tag dev stable]]
 
 [1]: https://www.nvaccess.org/addonStore/legacy?file=readFeeds
+
+[2]: https://www.nvaccess.org/addonStore/legacy?file=readFeeds-beta
 
 [3]: https://www.nvaccess.org/addonStore/legacy?file=rf-o

@@ -3,6 +3,7 @@
 * Автори: Noelia Ruiz Martínez, Mesar Hameed
 * Изтегляне на [стабилна версия][1] (съвместима с NVDA 2019.3 и по-нови
   версии)
+* Download [beta version][2] (compatible with NVDA 2019.3 and beyond)
 
 Тази добавка предоставя бърз и лесен начин за четене от източници в Atom или
 RSS формат с NVDA.  Източниците няма да бъдат опреснявани автоматично.
@@ -203,5 +204,7 @@ RSS формат с NVDA.  Източниците няма да бъдат оп�
 [[!tag dev stable]]
 
 [1]: https://www.nvaccess.org/addonStore/legacy?file=readFeeds
+
+[2]: https://www.nvaccess.org/addonStore/legacy?file=readFeeds-beta
 
 [3]: https://www.nvaccess.org/addonStore/legacy?file=rf-o

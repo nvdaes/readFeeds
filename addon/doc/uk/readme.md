@@ -2,6 +2,7 @@
 
 * Автори: Noelia Ruiz Martínez, Mesar Hameed
 * Завантажити [стабільну версію][1] (сумісну з NVDA 2019.3 і новішими)
+* Download [beta version][2] (compatible with NVDA 2019.3 and beyond)
 
 Цей додаток забезпечує простий спосіб читати стрічки новин у форматах Atom
 або RSS, використовуючи NVDA.  Стрічки новин не оновлюються
@@ -189,5 +190,7 @@
 [[!tag dev stable]]
 
 [1]: https://www.nvaccess.org/addonStore/legacy?file=readFeeds
+
+[2]: https://www.nvaccess.org/addonStore/legacy?file=readFeeds-beta
 
 [3]: https://www.nvaccess.org/addonStore/legacy?file=rf-o

@@ -2,6 +2,7 @@
 
 * Autores: Noelia Ruiz Martínez, Mesar Hameed
 * Download [stable version][1] (compatible with NVDA 2019.3 and beyond)
+* Download [beta version][2] (compatible with NVDA 2019.3 and beyond)
 
 Este complemento fornece uma maneira direta de ler feeds —
 alimentadores/canais/fluxos/fontes — em formato Atom ou RSS usando o
@@ -189,5 +190,7 @@ It contains the following controls:
 [[!tag dev stable]]
 
 [1]: https://www.nvaccess.org/addonStore/legacy?file=readFeeds
+
+[2]: https://www.nvaccess.org/addonStore/legacy?file=readFeeds-beta
 
 [3]: https://www.nvaccess.org/addonStore/legacy?file=rf-o
