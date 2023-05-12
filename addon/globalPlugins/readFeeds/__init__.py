@@ -500,10 +500,6 @@ class ArticlesDialog(wx.Dialog):
 				TAG_REGEXP, '',
 				articleTitle
 			))
-		#articlesChoices = [re.sub(
-			#TAG_REGEXP, '',
-			#"hola") for index in range(parent.feed.getNumberOfArticles()
-		#)]
 		if config.conf["readFeeds"]["showArticlesDate"]:
 			for index, choice in enumerate(articlesChoices):
 				date = parent.feed.getArticleDate(index).split(" +")[0]
