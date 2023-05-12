@@ -490,10 +490,20 @@ class ArticlesDialog(wx.Dialog):
 
 		# Translators: The label of the articles list in the articles dialog.
 		articlesText = _("List of articles")
-		articlesChoices = [re.sub(
-			TAG_REGEXP, '',
-			parent.feed.getArticleTitle(index)) for index in range(parent.feed.getNumberOfArticles()
-		)]
+		articlesChoices = []
+		for index in range(parent.feed.getNumberOfArticles()):
+			articleTitle = parent.feed.getArticleTitle(index)
+			if not articleTitle:
+				# Translators: Presented when the current article does not have an associated title.
+				articleTitle = _("Unable to locate article title.")
+			articlesChoices.append(re.sub(
+				TAG_REGEXP, '',
+				articleTitle
+			))
+		#articlesChoices = [re.sub(
+			#TAG_REGEXP, '',
+			#"hola") for index in range(parent.feed.getNumberOfArticles()
+		#)]
 		if config.conf["readFeeds"]["showArticlesDate"]:
 			for index, choice in enumerate(articlesChoices):
 				date = parent.feed.getArticleDate(index).split(" +")[0]
@@ -758,8 +768,12 @@ class Feed(object):
 		raw += label
 		raw += "<input id=\"copy\" accesskey=\"8\" type=\"checkbox\" onclick=\"setCopyPresentation()\"></label></p>"
 		for index in range(self.getNumberOfArticles()):
+			articleTitle = self.getArticleTitle(index)
+			if not articleTitle:
+				# Translators: Presented when the current article does not have an associated title.
+				articleTitle = _("Unable to locate article title.")
 			raw += "<div class=\"heading\"><h2><a href=\""
-			raw += self.getArticleLink(index) + "\">" + self.getArticleTitle(index) + "</a></h2>"
+			raw += self.getArticleLink(index) + "\">" + articleTitle + "</a></h2>"
 			# Translators: Label for a button to copy to clipboard.
 			label = _("Copy") + " " + str(index + 1)
 			raw += "<button aria-hidden=\"true\" aria-pressed=\"false\">" + label + "</button></div>"
