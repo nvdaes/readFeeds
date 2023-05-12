@@ -79,6 +79,10 @@ It contains the following controls:
 * O título do diálogo Lista de artigos mostra o nome do feed selecionado e o
   número de itens disponíveis.
 
+## Changes for 20.0
+
+* universalFeedParser is updated to 5.0.1, adding support for more feeds.
+
 ## Changes for 14.0
 
 * Fixed a bug that made impossible to add some feeds.

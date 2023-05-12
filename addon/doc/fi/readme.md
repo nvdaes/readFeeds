@@ -79,6 +79,10 @@ Se sisältää seuraavat säätimet:
 * Valitun syötteen nimi ja saatavilla olevien artikkeleiden määrä näytetään
   Artikkeliluettelo-valintaikkunan otsikossa.
 
+## Changes for 20.0
+
+* universalFeedParser is updated to 5.0.1, adding support for more feeds.
+
 ## Muutokset versiossa 14.0
 
 * Korjattu bugi, joka teki mahdottomaksi joidenkin syötteiden lisäämisen.

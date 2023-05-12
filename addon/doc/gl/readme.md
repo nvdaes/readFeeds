@@ -79,6 +79,10 @@ Contén os seguintes controis:
 * O título do diálogo da listaxe de artigos amopsa o nome do feed
   selecionado e o número de elementos dispoñibles.
 
+## Changes for 20.0
+
+* universalFeedParser is updated to 5.0.1, adding support for more feeds.
+
 ## Cambios para 14.0
 
 * Arranxado un erro que facía imposible engadir certas fontes.

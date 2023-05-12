@@ -81,6 +81,10 @@ Zawiera następujące kontrolki:
 * Dialog Spisu nagłówków artykułów Wyświetla nazwę oznaczonego kanału
   osobistego i ilość dostępnych artykułów.
 
+## Changes for 20.0
+
+* universalFeedParser is updated to 5.0.1, adding support for more feeds.
+
 ## Zmiany w wersji 14.0
 
 * Naprawiono błąd, który uniemożliwiał dodanie niektórych kanałów.

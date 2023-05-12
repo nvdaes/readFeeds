@@ -2,7 +2,7 @@
 
 * Autores: Noelia Ruiz Martínez, Mesar Hameed
 * Descargar [versión estable][1] (compatible desde NVDA 2019.3 en adelante)
-* Download [beta version][2] (compatible with NVDA 2019.3 and beyond)
+* Descargar [versión beta][2] (compatible desde NVDA 2019.3 en adelante)
 
 Este complemento proporciona una manera fácil de leer fuentes en formatos de
 RSS o Atom utilizando NVDA.  Los feeds no se actualizarán automáticamente.
@@ -83,6 +83,11 @@ Contiene los siguientes controles:
   error si no se puede crear un nuevo feed.
 * El título del diálogo de lista de artículos muestra el nombre del feed
   seleccionado y el número de elementos disponibles.
+
+## Cambios para 20.0
+
+* se actualiza universalFeedParser a la versión 5.0.1, añadiendo soporte
+  para más fuentes.
 
 ## Cambios para 14.0
 

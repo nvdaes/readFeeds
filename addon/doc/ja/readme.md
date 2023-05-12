@@ -55,6 +55,10 @@ Read Feedsダイアログにnvdaメニュー、ツールサブメニュー、Fee
 * NVDAは、新しいフィードを作成出来ない時、エラーメッセージを表示します。
 * 記事リストダイアログのタイトルは、選択されたフィードの名前と、利用可能な項目の数を表示します。
 
+## Changes for 20.0
+
+* universalFeedParser is updated to 5.0.1, adding support for more feeds.
+
 ## 14.0の変更点
 
 * 一部のフィードが追加出来ないバグを修正しました。

@@ -77,6 +77,10 @@ It contains the following controls:
 * Názov dialógového okna so zoznamom článkov obsahuje vybratý názov
   informačného kanála a počet dostupných položiek.
 
+## Changes for 20.0
+
+* universalFeedParser is updated to 5.0.1, adding support for more feeds.
+
 ## Changes for 14.0
 
 * Fixed a bug that made impossible to add some feeds.

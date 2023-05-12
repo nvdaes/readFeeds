@@ -80,6 +80,10 @@ Sadrži sljedeće kontrole:
 * Naslov dijaloškog okvira popisa članaka prikazuje odabrani naziv feeda i
   broj dostupnih stavki.
 
+## Changes for 20.0
+
+* universalFeedParser is updated to 5.0.1, adding support for more feeds.
+
 ## Promjene u verziji 14.0
 
 * Ispravljena je greška koja je onemogućavala dodavanje nekih feedova.

@@ -2,7 +2,7 @@
 
 * Auteurs : Noelia Ruiz Martínez, Mesar Hameed
 * Télécharger [version stable][1] (compatible avec NVDA 2019.3 et au-delà)
-* Download [beta version][2] (compatible with NVDA 2019.3 and beyond)
+* Télécharger [version béta][2] (compatible avec NVDA 2019.3 et au-delà)
 
 Cette extension fournit un moyen simple de lire les flux aux formats Atom ou
 RSS à l'aide de NVDA. Les flux ne sont pas actualisés automatiquement.
@@ -87,6 +87,11 @@ Il contient les contrôles suivants :
   créé.
 * La boîte de dialogue affiche Le titre de la Liste de l'article le nom de
   flux sélectionné et le nombre d'éléments disponibles.
+
+## Changements pour la version 20.0
+
+* universalFeedParser est mis à jour vers la 5.0.1, ajoutant la prise en
+  charge de plus de flux.
 
 ## Changements pour la version 14.0
 
