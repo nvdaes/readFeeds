@@ -86,6 +86,10 @@ Sie enthält die folgenden Steuerelemente:
 * Im Titel des Dialogs für die Artikellisten werden der Name des
   ausgewählten Feeds und die Anzahl der verfügbaren Artikel angezeigt.
 
+## Changes for 20.0
+
+* universalFeedParser is updated to 5.0.1, adding support for more feeds.
+
 ## Änderungen in 14.0
 
 * Es wurde ein Fehler behoben, der das Hinzufügen einiger Feeds unmöglich

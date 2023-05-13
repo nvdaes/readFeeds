@@ -82,6 +82,10 @@ It contains the following controls:
 * Dialogul titlului listei articolelor afișează numele fluxului selectat și
   numărul elementelor disponibile.
 
+## Changes for 20.0
+
+* universalFeedParser is updated to 5.0.1, adding support for more feeds.
+
 ## Changes for 14.0
 
 * Fixed a bug that made impossible to add some feeds.
