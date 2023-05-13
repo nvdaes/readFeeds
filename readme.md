@@ -52,6 +52,10 @@ It contains the following controls:
 * NVDA will display an error message if a new feed cannot be created.
 * The title of the articles list dialog displays the selected feed name and number of items available.
 
+## Changes for 21.0
+
+* Feeds with untitled articles can be presented in the Articles dialog, and opened as HTML.
+
 ## Changes for 20.0
 
 * universalFeedParser is updated to 5.0.1, adding support for more feeds.
