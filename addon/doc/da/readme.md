@@ -76,6 +76,11 @@ It contains the following controls:
 * Titlen på dialogen der viser listen over artikler viser navnet på det
   aktuelle feed, samt antallet af artikler til rådighed.
 
+## Changes for 21.0
+
+* Feeds with untitled articles can be presented in the Articles dialog, and
+  opened as HTML.
+
 ## Changes for 20.0
 
 * universalFeedParser is updated to 5.0.1, adding support for more feeds.

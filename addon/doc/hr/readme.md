@@ -2,7 +2,7 @@
 
 * Autori: Noelia Ruiz Martínez, Mesar Hameed
 * Preuzmi [stabilnu verziju][1] (kompatibilna s NVDA 2019.3 i novijom)
-* Download [beta version][2] (compatible with NVDA 2019.3 and beyond)
+* Preuzmi [beta verziju][2] (kompatibilna s NVDA 2019.3 i novijom)
 
 Ovaj dodatak pruža najbolji način za čitanje feedova u Atom ili RSS formatu
 koristeći NVDA. Feedovi se neće automatski aktualizirati. U daljnjem tekstu,
@@ -80,9 +80,15 @@ Sadrži sljedeće kontrole:
 * Naslov dijaloškog okvira popisa članaka prikazuje odabrani naziv feeda i
   broj dostupnih stavki.
 
-## Changes for 20.0
+## Promjene u verziji 21.0
 
-* universalFeedParser is updated to 5.0.1, adding support for more feeds.
+* Feedovi s člancima bez naslova mogu se prikazati u dijaloškom okviru
+  Članci i otvoriti kao HTML.
+
+## Promjene u verziji 20.0
+
+* universalFeedParser je aktualiziran na 5.0.1, dodajući podršku za više
+  feedova.
 
 ## Promjene u verziji 14.0
 
@@ -111,7 +117,7 @@ Sadrži sljedeće kontrole:
 
 ## Promjene u verziji 11.0
 
-* Kompatibilno s NVDA 2021.1.
+* Kompatibilno s NVDA 2021.1
 
 ## Promjene u verziji 10.0 ##
 

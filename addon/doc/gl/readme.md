@@ -79,6 +79,11 @@ Contén os seguintes controis:
 * O título do diálogo da listaxe de artigos amopsa o nome do feed
   selecionado e o número de elementos dispoñibles.
 
+## Changes for 21.0
+
+* Feeds with untitled articles can be presented in the Articles dialog, and
+  opened as HTML.
+
 ## Changes for 20.0
 
 * universalFeedParser is updated to 5.0.1, adding support for more feeds.
@@ -194,7 +199,7 @@ Contén os seguintes controis:
 
 [[!tag dev stable]]
 
-[1]: https://www.nvaccess.org/addonStore/legacy?file=readFeeds
+[1]: https://addons.nvda-project.org/files/get.php?file=readFeeds
 
 [2]: https://www.nvaccess.org/addonStore/legacy?file=readFeeds-beta
 

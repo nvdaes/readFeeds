@@ -88,6 +88,11 @@ Il contient les contrôles suivants :
 * La boîte de dialogue affiche Le titre de la Liste de l'article le nom de
   flux sélectionné et le nombre d'éléments disponibles.
 
+## Changements pour la version 21.0
+
+* Les flux avec des articles sans titre peuvent être présentés dans la boîte
+  de dialogue des articles et ouverts en HTML.
+
 ## Changements pour la version 20.0
 
 * universalFeedParser est mis à jour vers la 5.0.1, ajoutant la prise en

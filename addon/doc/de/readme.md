@@ -2,7 +2,7 @@
 
 * Autoren: Noelia Ruiz Martínez, Mesar Hameed
 * [Stabile Version herunterladen][1] (kompatibel mit NVDA 2019.3 und neuer)
-* Download [beta version][2] (compatible with NVDA 2019.3 and beyond)
+* [Beta-Version herunterladen][2] (kompatibel mit NVDA 2019.3 und neuer)
 
 Diese Erweiterung bietet eine einfache Möglichkeit, RSS-Feeds in den
 Formaten Atom oder RSS mit NVDA zu lesen. Die Feeds werden nicht automatisch
@@ -11,7 +11,7 @@ sowohl RSS- als auch  ATOM-Feeds.
 
 ## Befehle ##
 
-### Dialogfeld von Read Feeds ###
+### Dialogfeld für RSS-Feeds lesen ###
 
 Sie können das Dialogfeld von Read Feedsüber das NVDA-Menü, und dort
 Werkzeuge und dann Feeds aufrufen.
@@ -86,9 +86,15 @@ Sie enthält die folgenden Steuerelemente:
 * Im Titel des Dialogs für die Artikellisten werden der Name des
   ausgewählten Feeds und die Anzahl der verfügbaren Artikel angezeigt.
 
-## Changes for 20.0
+## Änderungen in 21.0
 
-* universalFeedParser is updated to 5.0.1, adding support for more feeds.
+* RSS-Feeds mit unbetitelten Artikeln können im Dialogfeld der Artikel
+  angezeigt und als HTML geöffnet werden.
+
+## Änderungen in 20.0
+
+* Der Universal Feed Parser wurde auf 5.0.1 aktualisiert und unterstützt nun
+  mehr RSS-Feeds.
 
 ## Änderungen in 14.0
 

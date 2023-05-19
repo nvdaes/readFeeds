@@ -81,6 +81,11 @@
 * Діалог з назвою списку статей відображає ім’я вибраної стрічки новин з
   кількістю доступних елементів.
 
+## Changes for 21.0
+
+* Feeds with untitled articles can be presented in the Articles dialog, and
+  opened as HTML.
+
 ## Changes for 20.0
 
 * universalFeedParser is updated to 5.0.1, adding support for more feeds.

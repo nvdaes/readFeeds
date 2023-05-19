@@ -84,6 +84,11 @@ Contiene los siguientes controles:
 * El título del diálogo de lista de artículos muestra el nombre del feed
   seleccionado y el número de elementos disponibles.
 
+## Cambios para 21.0
+
+* Las fuentes con artículos sin título se pueden presentar en el diálogo de
+  artículos, y abrirse como HTML.
+
 ## Cambios para 20.0
 
 * se actualiza universalFeedParser a la versión 5.0.1, añadiendo soporte
