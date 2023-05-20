@@ -2,7 +2,7 @@
 
 * Tekijät: Noelia Ruiz Martínez, Mesar Hameed
 * Lataa [vakaa versio][1] (yhteensopiva NVDA 2022.1:n ja uudempien kanssa)
-* Download [beta version][2] (compatible with NVDA 2019.3 and beyond)
+* Lataa [beetaversio][2] (yhteensopiva NVDA 2019.3:n ja uudempien kanssa)
 
 Tämä lisäosa tarjoaa suoraviivaisen tavan lukea Atom -tai RSS-syötteitä
 NVDA:ta käyttäen.  Syötteitä ei päivitetä automaattisesti.  Alla mainitut
@@ -79,9 +79,15 @@ Se sisältää seuraavat säätimet:
 * Valitun syötteen nimi ja saatavilla olevien artikkeleiden määrä näytetään
   Artikkeliluettelo-valintaikkunan otsikossa.
 
-## Changes for 20.0
+## Muutokset versiossa 2.0
 
-* universalFeedParser is updated to 5.0.1, adding support for more feeds.
+* Nimettömiä artikkeleita sisältävät syötteet voidaan näyttää
+  Artikkelit-valintaikkunassa ja avata HTML-muodossa.
+
+## Muutokset versiossa 20.0
+
+* universalFeedParser-moduuli on päivitetty versioksi 5.0.1, joka lisää tuen
+  useammille syötteille.
 
 ## Muutokset versiossa 14.0
 

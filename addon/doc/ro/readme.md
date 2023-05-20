@@ -82,6 +82,11 @@ It contains the following controls:
 * Dialogul titlului listei articolelor afișează numele fluxului selectat și
   numărul elementelor disponibile.
 
+## Changes for 21.0
+
+* Feeds with untitled articles can be presented in the Articles dialog, and
+  opened as HTML.
+
 ## Changes for 20.0
 
 * universalFeedParser is updated to 5.0.1, adding support for more feeds.
