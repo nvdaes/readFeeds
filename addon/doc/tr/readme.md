@@ -1,8 +1,8 @@
-# RSS Akışlarını Oku #
+# Akışları Oku #
 
 * Yazarlar: Noelia Ruiz Martínez, Mesar Hameed
-* Download [stable version][1] (compatible with NVDA 2019.3 and beyond)
-* Download [beta version][2] (compatible with NVDA 2019.3 and beyond)
+* [Kararlı sürümü indir[1] (NVDA 2019.3 ve sonrası sürümlerle uyumlu)
+* [Beta sürümü indir][2] (NVDA 2019.3 ve sonrası sürümlerle uyumlu)
 
 Bu eklenti NVDA kullanarak Atom veya RSS formatında beslemeleri okumak için
 basit bir yol sunar. Beslemeler otomatik olarak yenilenmez. Aşağıda besleme
@@ -76,20 +76,21 @@ Aşağıdaki kontrolleri içerir:
 * Makale listesi iletişim kutusunun başlığı, seçilen akış adını ve mevcut
   öğelerin sayısını gösterir.
 
-## Changes for 21.0
+## 21.0 İçin değişiklikler
 
-* Feeds with untitled articles can be presented in the Articles dialog, and
-  opened as HTML.
+* Başlıksız makaleler içeren akışlar, Makaleler iletişim kutusunda
+  sunulabilir ve HTML olarak açılabilir.
 
-## Changes for 20.0
+## 20.0 İçin değişiklikler
 
-* universalFeedParser is updated to 5.0.1, adding support for more feeds.
+* universalFeedParser, 5.0.1'e güncellendi ve daha fazla akış için destek
+  eklendi.
 
-## Changes for 14.0
+## 14.0İçin değişiklikler
 
-* Fixed a bug that made impossible to add some feeds.
+* Bazı yayınların eklenmesini imkansız kılan bir hata düzeltildi.
 
-## 13.0 için  Değişiklikler
+## 13.0 İçin  değişiklikler
 
 * Eklenti, güvenli ekranlarda kullanılamaz.
 * Yayınlar, OPML dosyalarından yönetilir.
@@ -105,16 +106,16 @@ Aşağıdaki kontrolleri içerir:
 * Akışları oku ayarları panelinde yeni bir seçenek, makale tarihlerinin
   Makale listesi iletişim kutusunda gösterilmesine olanak tanır.
 
-## 12.0 için Değişiklikler
+## 12.0 İçin değişiklikler
 
 * NVDA'nın araçlar menüsündeki öğeler için kısayolların beklendiği gibi
   çalışmamasına neden olan bir hata düzeltildi.
 
-## 11.0 için değişiklikler
+## 11.0 İçin değişiklikler
 
 * NVDA 2021.1 ile uyumlu
 
-## 10.0 için Değişiklikler ##
+## 10.0 İçin değişiklikler ##
 
 * Varsayılan web tarayıcısında seçilen akışı HTML olarak açmak için bir
   düğme eklendi.
@@ -131,11 +132,11 @@ Aşağıdaki kontrolleri içerir:
 * Akış iletişim kutusundan akış adresini panoya kopyalamak için bir düğme
   eklendi.
 
-## 9.0 için Değişiklikler ##
+## 9.0 İçin değişiklikler ##
 
 * NVDA 2019.3 veya sonraki bir sürümünü gerektirir.
 
-## 8.0 için Değişiklikler ##
+## 8.0 İçin değişiklikler ##
 
 * Eklenti güncellendiğinde, NVDA'nın ana yapılandırma klasörüne kaydedilen
   beslemeleri içe aktarmayı tercih etmediğiniz sürece, eklentinin önceki
@@ -146,7 +147,7 @@ Aşağıdaki kontrolleri içerir:
   içeren dizinlerin silinmesini önlemek için bu ada sahip bir alt klasör
   oluşturulacaktır.
 
-## 7.0 için Değişiklikler ##
+## 7.0 İçin değişiklikler ##
 
 * Akışlar iletişim kutusu, akışların yedeğini içerebilecek bir klasörü açmak
   için bir düğme içerir.
@@ -157,24 +158,24 @@ Aşağıdaki kontrolleri içerir:
   gösterilemiyorsa, NVDA bir hata oluşturur, böylece beslemeler iletişim
   kutusu NVDA'yı yeniden başlatmadan kullanılabilir.
 
-## 6.0 için Değişiklikler ##
+## 6.0 İçin değişiklikler ##
 
 * Varsayılan besleme güncellendiğinde ve sunucu sorunları nedeniyle
   çalışmayı durdurduğunda, önceki makaleler silinmez ve ilgili tuşlarla
   okunabilir.
 * Gerileme düzeltmesi: Varsayılan besleme iki kez tekrar güncellenebilir.
 
-## 5.0 için Değişiklikler ##
+## 5.0 İçin değişiklikler ##
 
 * Makaleler listesi iletişim kutusu geliştirildi.
 * NVDA 2018.3 veya üstü ile uyumlu (gerekli).
 * Gerekirse [NVDA 2017.3 ile uyumlu son sürüm][3]ü indirebilirsiniz.
 
-## 4.0 için Değişiklikler ##
+## 4.0 İçin değişiklikler ##
 
 * Akışlar iletişim kutusundan seçilen akışı açmak için bir düğme eklendi.
 
-## 3.0 için Değişiklikler ##
+## 3.0 İçin değişiklikler ##
 
 * Akış dosyalarını yönetmek için kullanılan iletişim kutuları
   kaldırıldı. Artık işlevleri akışlar iletişim kutusuna dahil edildi.
@@ -188,7 +189,7 @@ Aşağıdaki kontrolleri içerir:
 
 * Eklenti yardımına, Eklenti Yöneticisi'nden ulaşılabilir.
 
-## 1.0 Değişiklikler ##
+## 1.0 İçin değişiklikler ##
 
 * İlk sürüm.
 
