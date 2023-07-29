@@ -95,7 +95,7 @@ def createOpmlPath():
 
 
 def onSettings(evt):
-	gui.mainFrame._popupSettingsDialog(NVDASettingsDialog, AddonSettingsPanel)
+	gui.mainFrame.popupSettingsDialog(NVDASettingsDialog, AddonSettingsPanel)
 
 # Dialogs
 
