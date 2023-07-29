@@ -11,5 +11,8 @@ on:
 jobs:
 
   lint:
-    uses: nvdaes/nvdaAddonWorkflows/.github/workflows/lint.yaml@main
+    steps:
+    
+    - name: Lint
+      run: flake8 addon/globalPlugins/readFeeds/__init__.py
     
