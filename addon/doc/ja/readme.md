@@ -1,8 +1,6 @@
 # Read Feeds #
 
 * 作者: Noelia Ruiz Martínez, Mesar Hameed
-* ダウンロード [安定版][1] (NVDA 2019.3以降に互換)
-* Download [beta version][2] (compatible with NVDA 2019.3 and beyond)
 
 このアドオンはNVDAを使用してATOMやRSSの形式のフィードを簡単に読むためのものです。フィードは自動的に更新されることはありません。以下でフィードとはRSSとATOMの両方を形式を含んでいます。
 
@@ -142,9 +140,5 @@ Read Feedsダイアログにnvdaメニュー、ツールサブメニュー、Fee
 * 最初のバージョン。
 
 [[!tag dev stable]]
-
-[1]: https://www.nvaccess.org/addonStore/legacy?file=readFeeds
-
-[2]: https://www.nvaccess.org/addonStore/legacy?file=readFeeds-beta
 
 [3]: https://www.nvaccess.org/addonStore/legacy?file=rf-o

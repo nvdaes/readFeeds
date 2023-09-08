@@ -1,8 +1,6 @@
 # Akışları Oku #
 
 * Yazarlar: Noelia Ruiz Martínez, Mesar Hameed
-* [Kararlı sürümü indir[1] (NVDA 2019.3 ve sonrası sürümlerle uyumlu)
-* [Beta sürümü indir][2] (NVDA 2019.3 ve sonrası sürümlerle uyumlu)
 
 Bu eklenti NVDA kullanarak Atom veya RSS formatında beslemeleri okumak için
 basit bir yol sunar. Beslemeler otomatik olarak yenilenmez. Aşağıda besleme
@@ -194,9 +192,5 @@ Aşağıdaki kontrolleri içerir:
 * İlk sürüm.
 
 [[!tag dev stable]]
-
-[1]: https://www.nvaccess.org/addonStore/legacy?file=readFeeds
-
-[2]: https://www.nvaccess.org/addonStore/legacy?file=readFeeds-beta
 
 [3]: https://www.nvaccess.org/addonStore/legacy?file=rf-o
