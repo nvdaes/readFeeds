@@ -1,8 +1,6 @@
 # Read Feeds-NVDA-RSS阅读插件 #
 
 * 作者: Noelia Ruiz Martínez, Mesar Hameed
-* Download [stable version][1] (compatible with NVDA 2019.3 and beyond)
-* Download [beta version][2] (compatible with NVDA 2019.3 and beyond)
 
 此插件提供了一种使用NVDA以Atom或RSS格式读取订阅源的简单方法。 Feed不会自动刷新。下面我们提到feed时，我们指的是RSS和ATOM提要。
 
@@ -147,9 +145,5 @@ It contains the following controls:
 * 发布初始版本。
 
 [[!tag dev stable]]
-
-[1]: https://www.nvaccess.org/addonStore/legacy?file=readFeeds
-
-[2]: https://www.nvaccess.org/addonStore/legacy?file=readFeeds-beta
 
 [3]: https://www.nvaccess.org/addonStore/legacy?file=rf-o

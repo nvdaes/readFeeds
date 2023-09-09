@@ -1,8 +1,6 @@
 # Læs feeds #
 
 * Forfattere: Noelia Ruiz Martínez, Mesar Hameed
-* Download [stabil version][1] (kompatibel med NVDA 2019.3 og nyere)
-* Download [beta version][2] (compatible with NVDA 2019.3 and beyond)
 
 Dette tilføjelsesprogram giver en nem og ligetil måde at læse nyheader i
 atom- eller RSS-format med NVDA. Feeds vil ikke blive opdateret
@@ -192,9 +190,5 @@ It contains the following controls:
 * Første version.
 
 [[!tag dev stable]]
-
-[1]: https://www.nvaccess.org/addonStore/legacy?file=readFeeds
-
-[2]: https://www.nvaccess.org/addonStore/legacy?file=readFeeds-beta
 
 [3]: https://www.nvaccess.org/addonStore/legacy?file=rf-o

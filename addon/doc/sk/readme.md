@@ -1,8 +1,6 @@
 # RSS Čítačka #
 
 * Autori: Noelia Ruiz Martínez, Mesar Hameed
-* Download [stable version][1] (compatible with NVDA 2019.3 and beyond)
-* Download [beta version][2] (compatible with NVDA 2019.3 and beyond)
 
 Poskytuje jednoduchý spôsob čítania kanálov vo formátoch Atom alebo RSS
 pomocou NVDA. Kanály sa neobnovia automaticky. Nižšie, keď spomíname
@@ -189,9 +187,5 @@ It contains the following controls:
 * Prvé vydanie.
 
 [[!tag dev stable]]
-
-[1]: https://www.nvaccess.org/addonStore/legacy?file=readFeeds
-
-[2]: https://www.nvaccess.org/addonStore/legacy?file=readFeeds-beta
 
 [3]: https://www.nvaccess.org/addonStore/legacy?file=rf-o
