@@ -23,7 +23,8 @@ import scriptHandler
 from scriptHandler import script
 import api
 import gui
-from gui import SettingsPanel, NVDASettingsDialog, guiHelper
+from gui import guiHelper
+from gui.settingsDialogs import SettingsPanel, NVDASettingsDialog
 import core
 import ui
 from globalCommands import SCRCAT_CONFIG
