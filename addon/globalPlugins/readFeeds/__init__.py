@@ -203,7 +203,7 @@ class FeedsDialog(wx.Dialog):
 		)
 		self.feedsList.Selection = 0
 		self.feedsList.Bind(wx.EVT_LISTBOX, self.onFeedsListChoice)
-		changeFeedsSizer.Add(self.feedsList, proportion=1.0)
+		changeFeedsSizer.Add(self.feedsList, proportion=1)
 		changeFeedsSizer.AddSpacer(guiHelper.SPACE_BETWEEN_BUTTONS_VERTICAL)
 
 		# Translators: The label of a button to open the list of articles of a feed.
