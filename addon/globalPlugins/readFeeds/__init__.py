@@ -172,7 +172,7 @@ class FeedsDialog(wx.Dialog):
 			return
 		FeedsDialog._instance = self
 		self._opml = Opml(OPML_PATH)
-		super(FeedsDialog, self).__init__(
+		super().__init__(
 			# Translators: Title of a dialog.
 			parent, title=_("Feeds: {}").format(getActiveProfile())
 		)
@@ -482,7 +482,7 @@ class ArticlesDialog(wx.Dialog):
 
 	def __init__(self, parent):
 		# Translators: The title of the articles dialog.
-		super(ArticlesDialog, self).__init__(parent, title="{feedTitle} ({feedNumber})".format(
+		super().__init__(parent, title="{feedTitle} ({feedNumber})".format(
 			feedTitle=parent.stringSel, feedNumber=parent.feed.getNumberOfArticles()
 		))
 
@@ -529,7 +529,6 @@ class ArticlesDialog(wx.Dialog):
 		mainSizer.Add(buttonHelper.sizer)
 		mainSizer.Add(sHelper.sizer, border=guiHelper.BORDER_FOR_DIALOGS, flag=wx.ALL)
 		mainSizer.Fit(self)
-		self.Sizer = mainSizer
 		self.CentreOnScreen()
 
 	def onArticlesListChoice(self, evt):
