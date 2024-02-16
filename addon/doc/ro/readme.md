@@ -1,6 +1,6 @@
 # Read Feeds #
 
-* Autori: Noelia Ruiz Martínez, Mesar Hameed
+* Authors: Noelia Ruiz Martínez, Mesar Hameed
 
 Acest supliment oferă o modalitate simplă de a citi feed-uri în format Atom
 sau RSS folosind NVDA. Feed-urile nu vor fi actualizate în mod

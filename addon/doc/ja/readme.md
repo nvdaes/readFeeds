@@ -1,6 +1,6 @@
 # Read Feeds #
 
-* 作者: Noelia Ruiz Martínez, Mesar Hameed
+* Authors: Noelia Ruiz Martínez, Mesar Hameed
 
 このアドオンはNVDAを使用してATOMやRSSの形式のフィードを簡単に読むためのものです。フィードは自動的に更新されることはありません。以下でフィードとはRSSとATOMの両方を形式を含んでいます。
 

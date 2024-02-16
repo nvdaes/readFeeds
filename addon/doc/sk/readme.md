@@ -1,6 +1,6 @@
 # RSS Čítačka #
 
-* Autori: Noelia Ruiz Martínez, Mesar Hameed
+* Authors: Noelia Ruiz Martínez, Mesar Hameed
 
 Poskytuje jednoduchý spôsob čítania kanálov vo formátoch Atom alebo RSS
 pomocou NVDA. Kanály sa neobnovia automaticky. Nižšie, keď spomíname

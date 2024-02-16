@@ -1,6 +1,6 @@
 # RSS-Feeds lesen #
 
-* Autoren: Noelia Ruiz Martínez, Mesar Hameed
+* Authors: Noelia Ruiz Martínez, Mesar Hameed
 
 Diese Erweiterung bietet eine einfache Möglichkeit, RSS-Feeds in den
 Formaten Atom oder RSS mit NVDA zu lesen. Die Feeds werden nicht automatisch
