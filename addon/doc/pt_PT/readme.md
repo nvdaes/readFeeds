@@ -1,6 +1,6 @@
 # Leitor de RSS #
 
-* Autores: Noelia Ruiz Martínez, Mesar Hameed
+* Authors: Noelia Ruiz Martínez, Mesar Hameed
 
 Este extra fornece uma maneira directa de ler feeds em formatos Atom ou RSS
 usando o NVDA. Os feeds não serão actualizados automaticamente. quando

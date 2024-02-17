@@ -1,6 +1,6 @@
 # Четене на емисии (Read Feeds) #
 
-* Автори: Noelia Ruiz Martínez, Mesar Hameed
+* Authors: Noelia Ruiz Martínez, Mesar Hameed
 
 Тази добавка предоставя бърз и лесен начин за четене от източници в Atom или
 RSS формат с NVDA.  Източниците няма да бъдат опреснявани автоматично.
