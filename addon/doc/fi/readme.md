@@ -1,6 +1,6 @@
 # Lue syötteet #
 
-* Authors: Noelia Ruiz Martínez, Mesar Hameed
+* Tekijät: Noelia Ruiz Martínez ja Mesar Hameed
 
 Tämä lisäosa tarjoaa suoraviivaisen tavan lukea Atom -tai RSS-syötteitä
 NVDA:ta käyttäen.  Syötteitä ei päivitetä automaattisesti.  Alla mainitut
