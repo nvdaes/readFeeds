@@ -678,7 +678,7 @@ class Feed(object):
 			index = self._index
 		description = None
 		try:
-			if self.getFeedUrl().startswith("https://www.google.com") and "/alerts/" in self.getFeedUrl():
+			if self.getFeedUrl().startswith("https://www.google.com/") and "/alerts/" in self.getFeedUrl():
 				description = self._articles[index].find(self.buildTag("content", self.ns)).text
 			if description is not None:
 				return description
