@@ -23,7 +23,8 @@ import scriptHandler
 from scriptHandler import script
 import api
 import gui
-from gui import SettingsPanel, NVDASettingsDialog, guiHelper
+from gui import guiHelper
+from gui.settingsDialogs import SettingsPanel, NVDASettingsDialog
 import core
 import ui
 from globalCommands import SCRCAT_CONFIG
@@ -171,7 +172,7 @@ class FeedsDialog(wx.Dialog):
 			return
 		FeedsDialog._instance = self
 		self._opml = Opml(OPML_PATH)
-		super(FeedsDialog, self).__init__(
+		super().__init__(
 			# Translators: Title of a dialog.
 			parent, title=_("Feeds: {}").format(getActiveProfile())
 		)
@@ -202,7 +203,7 @@ class FeedsDialog(wx.Dialog):
 		)
 		self.feedsList.Selection = 0
 		self.feedsList.Bind(wx.EVT_LISTBOX, self.onFeedsListChoice)
-		changeFeedsSizer.Add(self.feedsList, proportion=1.0)
+		changeFeedsSizer.Add(self.feedsList, proportion=1)
 		changeFeedsSizer.AddSpacer(guiHelper.SPACE_BETWEEN_BUTTONS_VERTICAL)
 
 		# Translators: The label of a button to open the list of articles of a feed.
@@ -481,7 +482,7 @@ class ArticlesDialog(wx.Dialog):
 
 	def __init__(self, parent):
 		# Translators: The title of the articles dialog.
-		super(ArticlesDialog, self).__init__(parent, title="{feedTitle} ({feedNumber})".format(
+		super().__init__(parent, title="{feedTitle} ({feedNumber})".format(
 			feedTitle=parent.stringSel, feedNumber=parent.feed.getNumberOfArticles()
 		))
 
@@ -528,7 +529,6 @@ class ArticlesDialog(wx.Dialog):
 		mainSizer.Add(buttonHelper.sizer)
 		mainSizer.Add(sHelper.sizer, border=guiHelper.BORDER_FOR_DIALOGS, flag=wx.ALL)
 		mainSizer.Fit(self)
-		self.Sizer = mainSizer
 		self.CentreOnScreen()
 
 	def onArticlesListChoice(self, evt):
@@ -678,7 +678,7 @@ class Feed(object):
 			index = self._index
 		description = None
 		try:
-			if self.getFeedUrl().startswith("https://www.google.com") and "/alerts/" in self.getFeedUrl():
+			if self.getFeedUrl().startswith("https://www.google.com/") and "/alerts/" in self.getFeedUrl():
 				description = self._articles[index].find(self.buildTag("content", self.ns)).text
 			if description is not None:
 				return description
