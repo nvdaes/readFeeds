@@ -1,6 +1,6 @@
 # Read Feeds (Читач новинних стрічок) #
 
-* Автори: Noelia Ruiz Martínez, Mesar Hameed
+* Authors: Noelia Ruiz Martínez, Mesar Hameed
 
 Цей додаток забезпечує простий спосіб читати стрічки новин у форматах Atom
 або RSS, використовуючи NVDA.  Стрічки новин не оновлюються

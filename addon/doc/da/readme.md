@@ -1,6 +1,6 @@
 # Læs feeds #
 
-* Forfattere: Noelia Ruiz Martínez, Mesar Hameed
+* Authors: Noelia Ruiz Martínez, Mesar Hameed
 
 Dette tilføjelsesprogram giver en nem og ligetil måde at læse nyheader i
 atom- eller RSS-format med NVDA. Feeds vil ikke blive opdateret
