@@ -1,35 +1,20 @@
 # Read Feeds #
 
 * Авторы: Noelia Ruiz Martínez, Mesar Hameed
-* NVDA compatibility: 2019.3 or later
-* Загрузить [стабильную версию][1]
-* Загрузить [разрабатываемую версию][2]
-
 
 Это дополнение обеспечивает простой способ читать новости формата Atom или
 RSS, используя NVDA.  Новостные ленты не будут обновляться автоматически.
 Ниже, когда мы упоминаем новостные ленты, мы имеем в виду как RSS, так и
 ATOM каналы.
 
-## Installation or Update ##
+## Команды ##
 
-Если вы использовали предыдущую версию этого дополнения, и есть папка RSS
-или personalFeeds в пользовательской папке конфигурации NVDA, при установке
-текущей версии, появится диалог с запросом  обновления или
-установки. Выберите обновление, чтобы сохранить ваши сохраненные ленты
-новостей и продолжать использовать их в новой установленной версии
-readFeeds.
+### Read Feeds dialog ###
 
-## Commands ##
+You can access the Read Feeds dialog from the nvda menu, Tools submenu,
+Feeds item.
 
-### Меню Чтение Новостей ###
-
-Вы можете получить доступ к подменю чтение новостей из меню NVDA, Сервис,
-где доступны следующие пункты меню:
-
-#### Feeds ####
-
-Открывает диалог со следующими элементами управления:
+It contains the following controls:
 
 * Фильтр по: поле редактирования для поиска ранее сохраненных новостных
   лент.
@@ -57,35 +42,22 @@ readFeeds.
   подтверждения.
 * Установить по умолчанию: устанавливает выбранную новостную ленту по
   умолчанию, и её статьи могут быть доступны с помощью жестов NVDA.
-* Open folder containing a backup of feeds: Opens a folder which may contain
-  a backup of feeds. This can be useful to explore and delete feeds which
-  shouldn't be imported when the add-on is updated.
+* Import feeds from OPML file: Opens a dialog to add new feeds from an OPML
+  file.
+* Save feeds to OPML file: Opens a dialog to save the feeds available from
+  the Feeds dialog in an OPML file.
 * Preferences: Opens the settings dialog for readFeeds, also available in
   NVDA's menu, Preferences, settings, readFeeds category.
 * Закрыть: закрывает диалог новостных лент.
 
-##### Примечания #####
+### Примечания #####
 
-* Если создан канал с именем tempFeed, пожалуйста, переименуйте его, так как
-  этот файл может быть заменён, когда потребуется создать канал с  уже
-  существующим именем.
-* Новостная лента по умолчанию не может быть удалена. Она используется для
-  сброса настроек в файле addressFile, и поэтому не может быть удалена.
 * The Filter by edit box can be placed after the Open article button from
   NVDA's menu, Preferences, Settings, Read feeds category, or pressing the
   Preferences button of the Feeds dialog.
+* This panel has an option to show article dates on the List of articles
+  dialog.
 
-#### Copy feeds folder ####
-
-Открывает диалог для выбора папки, куда можно сохранить каталог
-personalFeeds. По умолчанию выбран каталог конфигурации nvda, в котором
-возможно создать каталог personalFeeds.
-
-#### Restore feeds ####
-
-Открывает диалог для выбора папки, из которой заменяются ваши новостные
-ленты в папке personalFeeds. Убедитесь, что вы загружаете папку, содержащую
-URL-адреса новостных лент.
 
 ### Keyboard commands ###
 
@@ -99,26 +71,54 @@ URL-адреса новостных лент.
 * Ctrl+Shift+NVDA+U: Объявляет название предыдущей новостной ленты.
 * Ctrl+Shift+NVDA+O: Объявляет название следующей новостной ленты.
 
-## Notifications ##
+## Оповещения ##
 
 * Когда название или URL были скопированы.
 * Когда не удается подключить/обновить ленту, или URL-адрес не соответствует
   допустимой новостной ленте.
-* NVDA will display an error message if it was not possible to backup or
-  restore the personalFeeds folder, and if a new feed cannot be created.
+* NVDA will display an error message if a new feed cannot be created.
 * Диалог с названием списка статей отображает имя выбранной новостной ленты
   с количеством доступных элементов.
 
-## Changes for 12.0
+## Изменения для 21.0
+
+* Feeds with untitled articles can be presented in the Articles dialog, and
+  opened as HTML.
+
+## Изменения для 20.0
+
+* universalFeedParser is updated to 5.0.1, adding support for more feeds.
+
+## Изменения для 14.0
+
+* Fixed a bug that made impossible to add some feeds.
+
+## Изменения для 13.0
+
+* The add-on cannot be used on secure screens.
+* Feeds are managed from OPML files.
+* Due to changes in the feeds management system, there are changes in the
+  configuration file where the default feed is set. Please, use the Feeds
+  dialog if you want to set it again.
+* Your old text files used in previous versions will be automatically
+  imported into the new OPML format when the add-on is started.
+* The copy and restore feeds feature has been replaced with the ability to
+  import from and save to OPML files.
+* Non well-formed feeds can be processed before being added to make them
+  compatible with the add-on.
+* In the Read Feeds settings panel, a new option allows to show article
+  dates on the List of articles dialog.
+
+## Изменения для 12.0
 
 * Fixed a bug which made shortcuts for items of NVDA's tools menu don't work
   as expected.
 
-## Changes for 11.0
+## Изменения для 11.0
 
 * Compatible with NVDA 2021.1
 
-## Changes for 10.0 ##
+## Изменения для 10.0 ##
 
 * Added a button to open the selected feed as HTML in the default web
   browser.
@@ -133,11 +133,11 @@ URL-адреса новостных лент.
 * Added a button to copy the feed address to clipboard from the feeds
   dialog.
 
-## Changes for 9.0 ##
+## Изменения для 9.0 ##
 
-* Requires NVDA 2019.3 or later.
+* Требуется NVDA 2019.3 или позже.
 
-## Changes for 8.0 ##
+## Изменения для 8.0 ##
 
 * When the add-on is updated, feeds saved in the previous version of the
   add-on will be automatically copied to the new version, unless you prefer
@@ -147,7 +147,7 @@ URL-адреса новостных лент.
   deletion of directories containing important data, such as Documents or
   Downloads.
 
-## Changes for 7.0 ##
+## Изменения для 7.0 ##
 
 * The Feeds dialog includes a button to open a folder which may contain a
   backup of feeds.
@@ -158,14 +158,14 @@ URL-адреса новостных лент.
   in the feed, NVDA will raise an error, so that the feeds dialog can be
   used without restarting NVDA.
 
-## Changes for 6.0 ##
+## Изменения для 6.0 ##
 
 * When the default feed has been updated and it stops working due to server
   issues, the previous articles aren't deleted and can be read with the
   corresponding keystrokes.
 * Fix regression: The default feed can be updated twice again.
 
-## Changes for 5.0 ##
+## Изменения для 5.0 ##
 
 * The articles list dialog has been enhanced.
 * Compatible with NVDA 2018.3 or later (required).
@@ -197,8 +197,4 @@ URL-адреса новостных лент.
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=rf
-
-[2]: https://addons.nvda-project.org/files/get.php?file=rf-dev
-
-[3]: https://addons.nvda-project.org/files/get.php?file=rf-o
+[3]: https://www.nvaccess.org/addonStore/legacy?file=rf-o
