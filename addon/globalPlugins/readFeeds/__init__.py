@@ -4,7 +4,7 @@
 # Copyright (C) 2012-2022 Noelia Ruiz Martínez, Mesar Hameed
 # Released under GPL 2
 
-imports os
+import os
 import shutil
 import glob
 import re
