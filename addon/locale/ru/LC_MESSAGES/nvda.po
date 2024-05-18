@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: readFeeds 1.0-dev\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2013-11-16 13:26+0100\n"
-"PO-Revision-Date: 2021-08-07 13:17+0200\n"
-"Last-Translator: zvonimir stanecic <zvonimirek222@yandex.com>\n"
+"PO-Revision-Date: 2024-05-11 22:52+0300\n"
+"Last-Translator: Ruslan Kolodyazhni <rupelodn@gmail.com>\n"
 "Language-Team: Translators\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #. Translators: message presented when feeds cannot be reported.
 msgid ""
@@ -42,9 +42,8 @@ msgid "Feeds restored"
 msgstr "Новостные ленты восстановлены"
 
 #. Translators: Title of a dialog.
-#, fuzzy
 msgid "Feeds: {}"
-msgstr "Новостные ленты"
+msgstr "Новостные ленты:"
 
 #. Translators: Label of a dialog (message translated in NVDA's core in different contexts).
 msgid "&Filter by:"
@@ -60,11 +59,11 @@ msgstr "&Открыть новостную ленту"
 
 #. Translators: The label of a button to open a feed as HTML.
 msgid "Open feed as &HTML"
-msgstr "Открыть канал как &HTML"
+msgstr "Открыть новостную ленту как &HTML"
 
 #. Translators: The label of a button to copy the feed URL.
 msgid "Cop&y feed address"
-msgstr "&Копировать адрес канала"
+msgstr "&Копировать адрес ленты"
 
 #. Translators: The label of a button to add a new feed.
 msgid "&New..."
@@ -83,22 +82,21 @@ msgid "S&et default"
 msgstr "&Установить по умолчанию"
 
 #. Translators: The label of a button to import feeds from OPML.
-#, fuzzy
 msgid "&Import feeds from OPML file..."
-msgstr "&Копировать Папку новостных лент..."
+msgstr "&Импортировать новостные ленты из файла OPML..."
 
 #. Translators: The label of a button to save feeds to OPML file.
 msgid "&Save feeds to OPML file..."
-msgstr ""
+msgstr "&Сохранить новостные ленты в файл OPML..."
 
 #. Translators: The label of a button to open the settings dialog for readFeeds.
 msgid "&Preferences..."
-msgstr "«Предпочтения..."
+msgstr "&Настройки..."
 
 #. Translators: Message presented when a feed cannot be added.
 #, python-format
 msgid "Cannot add feed: %s"
-msgstr "Не удается добавить фид: %s"
+msgstr "Не удаётся добавить ленту: %s"
 
 #. Translators: error message.
 msgid "Error"
@@ -117,7 +115,7 @@ msgstr ""
 
 #. Translators: the title of a message box dialog.
 msgid "Copy feed address"
-msgstr "Скопировать адрес веб-канала"
+msgstr "Скопировать адрес ленты"
 
 #. Translators: Label of a dialog.
 msgid "Address of a new feed:"
@@ -143,15 +141,15 @@ msgstr "Переименовать новостную ленту"
 
 #. Translators: Label for a file dialog.
 msgid "Open OPML file"
-msgstr ""
+msgstr "Открыть файл OPML"
 
 #. Translators: Wildcards for a file dialog
 msgid "OPML files (*.opml)|*.opml"
-msgstr ""
+msgstr "Файлы OPML (*.opml)|*.opml"
 
 #. Translators: Label of a button on the Feeds dialog.
 msgid "Save As"
-msgstr ""
+msgstr "Сохранить Как"
 
 #. Translators: The label of the articles list in the articles dialog.
 msgid "List of articles"
@@ -180,7 +178,7 @@ msgstr "&Поиск в поле редактирования после спис
 
 #. Translators: label of a dialog.
 msgid "&Show articles Date"
-msgstr ""
+msgstr "&Показывать даты публикаций статей"
 
 #. Translators: Presented when the current article does not have an associated title.
 msgid "Unable to locate article title."
