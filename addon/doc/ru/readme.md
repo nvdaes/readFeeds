@@ -9,12 +9,12 @@ ATOM каналы.
 
 ## Команды ##
 
-### Read Feeds dialog ###
+### Диалог Чтение Новостей ###
 
 You can access the Read Feeds dialog from the nvda menu, Tools submenu,
 Feeds item.
 
-It contains the following controls:
+Он содержит следующие элементы управления:
 
 * Фильтр по: поле редактирования для поиска ранее сохраненных новостных
   лент.
@@ -59,7 +59,7 @@ It contains the following controls:
   dialog.
 
 
-### Keyboard commands ###
+### Клавишные команды ###
 
 * Ctrl+Shift+NVDA+Пробел: Объявляет URL текущей статьи. Двойное нажатие
   откроет веб-страницу.
@@ -76,7 +76,7 @@ It contains the following controls:
 * Когда название или URL были скопированы.
 * Когда не удается подключить/обновить ленту, или URL-адрес не соответствует
   допустимой новостной ленте.
-* NVDA will display an error message if a new feed cannot be created.
+* NVDA отобразит сообщение об ошибке, если новый канал не может быть создан.
 * Диалог с названием списка статей отображает имя выбранной новостной ленты
   с количеством доступных элементов.
 
@@ -87,15 +87,17 @@ It contains the following controls:
 
 ## Изменения для 20.0
 
-* universalFeedParser is updated to 5.0.1, adding support for more feeds.
+* universalFeedParser обновлен до версии 5.0.1, добавлена поддержка большего
+  количества каналов.
 
 ## Изменения для 14.0
 
-* Fixed a bug that made impossible to add some feeds.
+* Исправлена ошибка, из-за которой было невозможно добавлять некоторые
+  каналы.
 
 ## Изменения для 13.0
 
-* The add-on cannot be used on secure screens.
+* Дополнение нельзя использовать на защищённых экранах.
 * Feeds are managed from OPML files.
 * Due to changes in the feeds management system, there are changes in the
   configuration file where the default feed is set. Please, use the Feeds
@@ -111,27 +113,27 @@ It contains the following controls:
 
 ## Изменения для 12.0
 
-* Fixed a bug which made shortcuts for items of NVDA's tools menu don't work
-  as expected.
+* Исправлена ошибка, из-за которой ярлыки для элементов меню сервисов NVDA
+  работали не так, как ожидалось.
 
 ## Изменения для 11.0
 
-* Compatible with NVDA 2021.1
+* Совместимость с NVDA 2021.1
 
 ## Изменения для 10.0 ##
 
-* Added a button to open the selected feed as HTML in the default web
-  browser.
+* Добавлена кнопка для открытия выбранной ленты в формате HTML в
+  веб-браузере по умолчанию.
 * If a new feed cannot be created, this will be notified in an error dialog.
-* Improved order and presentation of some articles.
+* Улучшен порядок и представление некоторых статей.
 * More feeds may be supported.
 * When the feeds dialog is opened, the list of feeds will be focused instead
   of the search edit box.
 * You can choose if the search edit box is placed after the list of feeds,
   useful to focus the list even when switching from another window without
   closing the Feeds dialog.
-* Added a button to copy the feed address to clipboard from the feeds
-  dialog.
+* Добавлена кнопка для копирования адреса канала в буфер обмена из
+  диалогового окна "Каналы".
 
 ## Изменения для 9.0 ##
 
@@ -167,10 +169,10 @@ It contains the following controls:
 
 ## Изменения для 5.0 ##
 
-* The articles list dialog has been enhanced.
-* Compatible with NVDA 2018.3 or later (required).
-* If needed, you can download the [last version compatible with NVDA
-  2017.3][3].
+* Улучшен диалог со списком статей.
+* Совместимо с NVDA 2018.3 или позднее (обязательно).
+* При необходимости вы можете загрузить [последнюю версию, совместимую с
+  NVDA 2017.3][3].
 
 ## Изменения для 4.0 ##
 
