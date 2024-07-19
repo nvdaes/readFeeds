@@ -11,27 +11,28 @@ ATOM каналы.
 
 ### Диалог Чтение Новостей ###
 
-You can access the Read Feeds dialog from the nvda menu, Tools submenu,
-Feeds item.
+Вы можете получить доступ к диалогу чтения новостных лент из меню nvda,
+подменю сервиса, пункта новостных лент.
 
 Он содержит следующие элементы управления:
 
 * Фильтр по: поле редактирования для поиска ранее сохраненных новостных
   лент.
-* A list of the saved feeds, focused when the dialog is opened.
-* List of articles: Opens a dialog which presents the articles list from
-  your current feed. Select the article you want to read and press Enter or
-  Open web page of selected article button to open the corresponding page in
-  your browser. Press About article button to open a dialog showing title
-  and link of the selected article; from this dialog, you'll be able to copy
-  this info to the clipboard.
+* В фокусе будет список сохраненных каналов, отображаемый при открытии
+  диалога.
+* Список статей: Открывает диалог, в котором представлен список статей из
+  вашей текущей ленты. Выберите статью, которую вы хотите прочитать, и
+  нажмите Enter или кнопку Открыть веб-страницу выбранной статьи, чтобы
+  открыть соответствующую страницу в вашем браузере. Нажмите кнопку "О
+  статье", чтобы открыть диалог с названием и ссылкой на выбранную статью;
+  из этого диалога вы сможете скопировать эту информацию в буфер обмена.
 * Открыть новостную ленту: Открывает выбранную новостную ленту в приложении
   по умолчанию.
-* Open feed as HTML: Opens the selected feed in the default web browser. You
-  will be able to show or hide publication dates and buttons to copy
-  information about articles to clipboard.
-* Copy feed address: Opens a dialog to confirm if you want to copy the feed
-  address to clipboard.
+* Открыть новостную ленту как HTML: открывает выбранную ленту в веб-браузере
+  по умолчанию. Вы сможете отображать или скрывать даты публикации и кнопки
+  для копирования информации о статьях в буфер обмена.
+* Копировать адрес ленты: Открывает диалог для подтверждения того, хотите ли
+  вы скопировать адрес ленты в буфер обмена.
 * Новый: открывает диалог с полем редактирования, где можно ввести адрес
   новой ленты. Если адрес действителен и новостная лента может быть
   сохранена, её имя появится в низу списка новостных лент, исходя из
@@ -42,21 +43,21 @@ Feeds item.
   подтверждения.
 * Установить по умолчанию: устанавливает выбранную новостную ленту по
   умолчанию, и её статьи могут быть доступны с помощью жестов NVDA.
-* Import feeds from OPML file: Opens a dialog to add new feeds from an OPML
-  file.
-* Save feeds to OPML file: Opens a dialog to save the feeds available from
-  the Feeds dialog in an OPML file.
-* Preferences: Opens the settings dialog for readFeeds, also available in
-  NVDA's menu, Preferences, settings, readFeeds category.
+* Импорт новостных лент из файла OPML: Открывает диалог для добавления новых
+  лент из файла OPML.
+* Сохранить новостные ленты в файл OPML: Открывает диалог для сохранения
+  лент, доступных в диалоге новостных лент, в файл OPML.
+* Настройки: Открывает диалог настроек для readFeeds, также доступное в меню
+  NVDA, настройках, категории readFeeds.
 * Закрыть: закрывает диалог новостных лент.
 
 ### Примечания #####
 
-* The Filter by edit box can be placed after the Open article button from
-  NVDA's menu, Preferences, Settings, Read feeds category, or pressing the
-  Preferences button of the Feeds dialog.
-* This panel has an option to show article dates on the List of articles
-  dialog.
+* Поле редактирования "Фильтр по" можно установить после кнопки "Открыть
+  статью" в меню NVDA, "Параметры", "Настройки", "Категория "Read Feeds" или
+  нажав кнопку "Настройки" в диалоге "Новостные ленты".
+* На этой панели есть возможность отображать даты статей в диалоге "Список
+  статей".
 
 
 ### Клавишные команды ###
@@ -82,8 +83,8 @@ Feeds item.
 
 ## Изменения для 21.0
 
-* Feeds with untitled articles can be presented in the Articles dialog, and
-  opened as HTML.
+* Ленты со статьями без названия могут быть представлены в диалоге "Статьи"
+  и открыты в формате HTML.
 
 ## Изменения для 20.0
 
@@ -98,18 +99,19 @@ Feeds item.
 ## Изменения для 13.0
 
 * Дополнение нельзя использовать на защищённых экранах.
-* Feeds are managed from OPML files.
-* Due to changes in the feeds management system, there are changes in the
-  configuration file where the default feed is set. Please, use the Feeds
-  dialog if you want to set it again.
-* Your old text files used in previous versions will be automatically
-  imported into the new OPML format when the add-on is started.
-* The copy and restore feeds feature has been replaced with the ability to
-  import from and save to OPML files.
-* Non well-formed feeds can be processed before being added to make them
-  compatible with the add-on.
-* In the Read Feeds settings panel, a new option allows to show article
-  dates on the List of articles dialog.
+* Новостные ленты управляются из файлов OPML.
+* В связи с изменениями в системе управления лентами, в конфигурационный
+  файл, в котором установлен канал по умолчанию, внесены
+  изменения. Пожалуйста, воспользуйтесь диалогом "Новостные ленты", если вы
+  хотите настроить его снова.
+* Ваши старые текстовые файлы, использовавшиеся в предыдущих версиях, будут
+  автоматически импортированы в новый формат OPML при запуске дополнения.
+* Функция копирования и восстановления каналов была заменена возможностью
+  импорта из файлов OPML и сохранения в них.
+* Некондиционные ленты можно обработать перед добавлением, чтобы сделать их
+  совместимыми с дополнением.
+* На панели настроек "Каналы чтения" появилась новая опция, позволяющая
+  отображать даты статей в диалоге "Список статей".
 
 ## Изменения для 12.0
 
@@ -124,14 +126,15 @@ Feeds item.
 
 * Добавлена кнопка для открытия выбранной ленты в формате HTML в
   веб-браузере по умолчанию.
-* If a new feed cannot be created, this will be notified in an error dialog.
+* Если новая новостная лента не может быть создана, об этом будет сообщено в
+  диалоге с сообщением об ошибке.
 * Улучшен порядок и представление некоторых статей.
-* More feeds may be supported.
-* When the feeds dialog is opened, the list of feeds will be focused instead
-  of the search edit box.
-* You can choose if the search edit box is placed after the list of feeds,
-  useful to focus the list even when switching from another window without
-  closing the Feeds dialog.
+* Возможно, будут поддерживаться дополнительные новостные ленты.
+* Когда откроется диалог "Новостные ленты", в центре внимания будет список
+  лент, а не поле редактирования поиска.
+* Вы можете выбрать, размещать ли поле редактирования поиска после списка
+  каналов, что полезно для фокусировки на списке даже при переключении из
+  другого окна, не закрывая диалог новостных лент.
 * Добавлена кнопка для копирования адреса канала в буфер обмена из
   диалогового окна "Каналы".
 
@@ -141,31 +144,33 @@ Feeds item.
 
 ## Изменения для 8.0 ##
 
-* When the add-on is updated, feeds saved in the previous version of the
-  add-on will be automatically copied to the new version, unless you prefer
-  to import feeds saved in the main configuration folder of NVDA.
-* When using the dialog to copy feeds, if the chosen folder is not named
-  personalFeeds, a subfolder with this name will be created to prevent the
-  deletion of directories containing important data, such as Documents or
-  Downloads.
+* При обновлении дополнения каналы, сохранённые в предыдущей версии
+  дополнения, будут автоматически скопированы в новую версию, если только вы
+  не предпочитаете импортировать каналы, сохранённые в главной папке
+  конфигурации NVDA.
+* При использовании диалога для копирования новостных каналов, если
+  выбранная папка не имеет имени personalFeeds, будет создана подпапка с
+  таким именем, чтобы предотвратить удаление каталогов, содержащих важные
+  данные, такие как документы или загрузки.
 
 ## Изменения для 7.0 ##
 
-* The Feeds dialog includes a button to open a folder which may contain a
-  backup of feeds.
-* When using the edit box to filter feeds, if no results are found, the list
-  of feeds and other controls are disabled, so that NVDA doesn't report
-  "unknown" in the empty list.
-* If the list of articles dialog can't be shown, for example due to errors
-  in the feed, NVDA will raise an error, so that the feeds dialog can be
-  used without restarting NVDA.
+* В диалоге "Новостные ленты" есть кнопка для открытия папки, которая может
+  содержать резервную копию каналов.
+* При использовании поля редактирования для фильтрации каналов, если
+  результаты не найдены, список каналов и другие элементы управления
+  отключаются, чтобы NVDA не сообщала "неизвестно" в пустом списке.
+* Если диалог списка статей не может быть отображён, например, из-за ошибок
+  в ленте, NVDA выдаст сообщение об ошибке, так что диалог лент можно будет
+  использовать без перезапуска NVDA.
 
 ## Изменения для 6.0 ##
 
-* When the default feed has been updated and it stops working due to server
-  issues, the previous articles aren't deleted and can be read with the
-  corresponding keystrokes.
-* Fix regression: The default feed can be updated twice again.
+* Когда лента новостей по умолчанию обновляется и перестает работать из-за
+  проблем с сервером, предыдущие статьи не удаляются и могут быть прочитаны
+  с помощью соответствующих нажатий клавиш.
+* Исправлена регрессия: лента данных по умолчанию может быть обновлена еще
+  дважды.
 
 ## Изменения для 5.0 ##
 
