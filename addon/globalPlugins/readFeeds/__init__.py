@@ -9,6 +9,7 @@ import shutil
 import glob
 import re
 import urllib.request
+from urllib.parse import urlparse
 import time
 import datetime
 import locale
@@ -58,6 +59,11 @@ confspec = {
 }
 config.conf.spec["readFeeds"] = confspec
 
+# User agents
+
+userAgents = {
+	"www.cbc.ca": "Bloglines/3.1 (http://www.bloglines.com)",
+}
 
 def disableInSecureMode(decoratedCls):
 	if globalVars.appArgs.secure:
@@ -605,13 +611,15 @@ class Feed(object):
 			return 0
 
 	def refresh(self):
+		parsedURL = urlparse(self._url)
+		userAgentFallback = "UniversalFeedParser/5.0.1 +http://feedparser.org/"
+		userAgent = userAgents.get(parsedURL.netloc, userAgentFallback)
+		headers = {'User-Agent': userAgent}
+		req = urllib.request.Request(self._url, None, headers)
 		try:
-			response = urllib.request.urlopen(self._url)
-		except Exception:
-			userAgent = "UniversalFeedParser/5.0.1 +http://feedparser.org/"
-			headers = {'User-Agent': userAgent}
-			req = urllib.request.Request(self._url, None, headers)
 			response = urllib.request.urlopen(req)
+		except Exception:
+			response = urllib.request.urlopen(self._url)
 		xmlstring = response.read().strip()
 		try:
 			self._document = ElementTree.fromstring(xmlstring)
