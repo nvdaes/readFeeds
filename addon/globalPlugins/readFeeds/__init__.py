@@ -65,6 +65,7 @@ userAgents = {
 	"www.cbc.ca": "Bloglines/3.1 (http://www.bloglines.com)",
 }
 
+
 def disableInSecureMode(decoratedCls):
 	if globalVars.appArgs.secure:
 		return globalPluginHandler.GlobalPlugin
