@@ -77,6 +77,10 @@ Contén os seguintes controis:
 * O título do diálogo da listaxe de artigos amopsa o nome do feed
   selecionado e o número de elementos dispoñibles.
 
+## Changes for 34.0.0
+
+* Added support for rss.cbc.ca feeds.
+
 ## Changes for 21.0
 
 * Feeds with untitled articles can be presented in the Articles dialog, and

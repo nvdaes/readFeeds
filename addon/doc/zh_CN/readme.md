@@ -52,6 +52,10 @@ It contains the following controls:
 * NVDA will display an error message if a new feed cannot be created.
 * “文章列表”对话框的标题显示所选的源名称和可用项目数。
 
+## Changes for 34.0.0
+
+* Added support for rss.cbc.ca feeds.
+
 ## Changes for 21.0
 
 * Feeds with untitled articles can be presented in the Articles dialog, and

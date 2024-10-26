@@ -75,6 +75,10 @@ It contains the following controls:
 * Názov dialógového okna so zoznamom článkov obsahuje vybratý názov
   informačného kanála a počet dostupných položiek.
 
+## Changes for 34.0.0
+
+* Added support for rss.cbc.ca feeds.
+
 ## Changes for 21.0
 
 * Feeds with untitled articles can be presented in the Articles dialog, and

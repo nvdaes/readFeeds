@@ -84,6 +84,10 @@ Sie enthält die folgenden Steuerelemente:
 * Im Titel des Dialogs für die Artikellisten werden der Name des
   ausgewählten Feeds und die Anzahl der verfügbaren Artikel angezeigt.
 
+## Changes for 34.0.0
+
+* Added support for rss.cbc.ca feeds.
+
 ## Änderungen in 21.0
 
 * RSS-Feeds mit unbetitelten Artikeln können im Dialogfeld der Artikel

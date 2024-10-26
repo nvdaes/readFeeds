@@ -78,6 +78,10 @@ Sadrži sljedeće kontrole:
 * Naslov dijaloškog okvira popisa članaka prikazuje odabrani naziv feeda i
   broj dostupnih stavki.
 
+## Changes for 34.0.0
+
+* Added support for rss.cbc.ca feeds.
+
 ## Promjene u verziji 21.0
 
 * Feedovi s člancima bez naslova mogu se prikazati u dijaloškom okviru

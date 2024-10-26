@@ -80,6 +80,10 @@ It contains the following controls:
 * O título da caixa de diálogo da lista de artigos mostra o nome do feed
   selecionado e o número de itens disponíveis.
 
+## Changes for 34.0.0
+
+* Added support for rss.cbc.ca feeds.
+
 ## Changes for 21.0
 
 * Feeds with untitled articles can be presented in the Articles dialog, and

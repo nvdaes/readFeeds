@@ -74,6 +74,10 @@ Aşağıdaki kontrolleri içerir:
 * Makale listesi iletişim kutusunun başlığı, seçilen akış adını ve mevcut
   öğelerin sayısını gösterir.
 
+## 34.0.0 İçin değişiklikler
+
+* Rss.cbc.ca akışları için destek eklendi.
+
 ## 21.0 İçin değişiklikler
 
 * Başlıksız makaleler içeren akışlar, Makaleler iletişim kutusunda

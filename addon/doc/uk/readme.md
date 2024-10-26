@@ -79,6 +79,10 @@
 * Діалог з назвою списку статей відображає ім’я вибраної стрічки новин з
   кількістю доступних елементів.
 
+## Changes for 34.0.0
+
+* Added support for rss.cbc.ca feeds.
+
 ## Changes for 21.0
 
 * Feeds with untitled articles can be presented in the Articles dialog, and

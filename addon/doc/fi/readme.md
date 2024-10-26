@@ -77,6 +77,10 @@ Se sisältää seuraavat säätimet:
 * Valitun syötteen nimi ja saatavilla olevien artikkeleiden määrä näytetään
   Artikkeliluettelo-valintaikkunan otsikossa.
 
+## Changes for 34.0.0
+
+* Added support for rss.cbc.ca feeds.
+
 ## Muutokset versiossa 2.0
 
 * Nimettömiä artikkeleita sisältävät syötteet voidaan näyttää

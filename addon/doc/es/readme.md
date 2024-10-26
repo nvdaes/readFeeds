@@ -82,6 +82,10 @@ Contiene los siguientes controles:
 * El título del diálogo de lista de artículos muestra el nombre del feed
   seleccionado y el número de elementos disponibles.
 
+## Changes for 34.0.0
+
+* Added support for rss.cbc.ca feeds.
+
 ## Cambios para 21.0
 
 * Las fuentes con artículos sin título se pueden presentar en el diálogo de
