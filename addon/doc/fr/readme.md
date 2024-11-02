@@ -86,9 +86,9 @@ Il contient les contrôles suivants :
 * La boîte de dialogue affiche Le titre de la Liste de l'article le nom de
   flux sélectionné et le nombre d'éléments disponibles.
 
-## Changes for 34.0.0
+## Changements pour la version 34.0.0
 
-* Added support for rss.cbc.ca feeds.
+* Ajout de la prise en charge des flux rss.cbc.ca.
 
 ## Changements pour la version 21.0
 
