@@ -122,7 +122,6 @@ It contains the following controls:
 
 * The articles list dialog has been enhanced.
 * Compatible with NVDA 2018.3 or later (required).
-* If needed, you can download the [last version compatible with NVDA 2017.3][3].
 
 ## Changes for 4.0 ##
 
@@ -144,4 +143,3 @@ It contains the following controls:
 * Initial version.
 
 
-[3]: https://www.nvaccess.org/addonStore/legacy?file=rf-o
