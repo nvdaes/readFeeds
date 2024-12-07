@@ -186,8 +186,6 @@ Il contient les contrôles suivants :
 
 * La boîte de dialogue Liste des articles a été améliorée.
 * Compatible avec NVDA 2018.3 ou version ultérieure (requis).
-* Si nécessaire, vous pouvez télécharger la [dernière version compatible
-  avec NVDA 2017.3][3].
 
 ## Changements pour la version 4.0 ##
 
@@ -217,4 +215,3 @@ Il contient les contrôles suivants :
 
 [[!tag dev stable]]
 
-[3]: https://www.nvaccess.org/addonStore/legacy?file=rf-o

@@ -174,8 +174,6 @@ Sadrži sljedeće kontrole:
 
 * Poboljšan je dijaloški okvir popisa članaka.
 * Kompatibilno s NVDA 2018.3 i novijim verzijama (obavezno).
-* Ako treba, moguće je preuzeti [zadnju verziju kompatibilnu s NVDA
-  2017.3][3].
 
 ## Promjene u verziji 4.0 ##
 
@@ -201,4 +199,3 @@ Sadrži sljedeće kontrole:
 
 [[!tag dev stable]]
 
-[3]: https://www.nvaccess.org/addonStore/legacy?file=rf-o

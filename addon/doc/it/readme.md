@@ -178,8 +178,6 @@ Contiene  i seguenti controlli:
 
 * Migliorata la finestra per l'elenco articoli.
 * Compatibile con NVDA 2018.3 o versioni successive (richiesto).
-* Se è necessario, è possibile scaricare l'ultima versione [compatibile con
-  NVDA 2017.3][3].
 
 ## Novità nella versione 4.0 ##
 
@@ -207,4 +205,3 @@ Contiene  i seguenti controlli:
 
 [[!tag dev stable]]
 
-[3]: https://www.nvaccess.org/addonStore/legacy?file=rf-o

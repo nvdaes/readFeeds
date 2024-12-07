@@ -173,8 +173,6 @@ It contains the following controls:
 
 * A fost îmbunătățit dialogul listei articolelor.
 * Compatibil cu NVDA 2018.3 sau mai nou (necesar).
-* Dacă e musai, puteți descărca [ultima versiune compatibilă cu NVDA
-  2017.3][3].
 
 ## Modificări în 4.0 ##
 
@@ -202,4 +200,3 @@ It contains the following controls:
 
 [[!tag dev stable]]
 
-[3]: https://www.nvaccess.org/addonStore/legacy?file=rf-o

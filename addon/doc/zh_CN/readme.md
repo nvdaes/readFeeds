@@ -127,7 +127,6 @@ It contains the following controls:
 
 * 文章列表对话框已得到增强。
 * 兼容NVDA 2018.3或更高版本（必需）。
-* 如果需要，您可以下载[与NVDA 2017.3兼容的最新版本] [3]。
 
 ## 版本4.0 ##
 
@@ -150,4 +149,3 @@ It contains the following controls:
 
 [[!tag dev stable]]
 
-[3]: https://www.nvaccess.org/addonStore/legacy?file=rf-o

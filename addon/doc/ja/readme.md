@@ -122,7 +122,6 @@ Read Feedsダイアログにnvdaメニュー、ツールサブメニュー、Fee
 
 * 記事リストダイアログが拡張されました。
 * NVDA 2018.3以降に互換(必要)
-* 必要があれば、ダウンロード可能です。[NVDA 2017.3に互換の最後のバージョン][3].
 
 ## 4.0の変更点 ##
 
@@ -145,4 +144,3 @@ Read Feedsダイアログにnvdaメニュー、ツールサブメニュー、Fee
 
 [[!tag dev stable]]
 
-[3]: https://www.nvaccess.org/addonStore/legacy?file=rf-o

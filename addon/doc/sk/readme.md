@@ -165,8 +165,6 @@ It contains the following controls:
 
 * Vylepšené okno so zoznamom článkov.
 * Vyžaduje sa NVDA od verzie 2018.3.
-* V prípade potreby si môžete stiahnuť [poslednú verziu kompatibilnú s NVDA
-  2017.3] [3].
 
 ## Zmeny vo verzii 4.0 ##
 
@@ -192,4 +190,3 @@ It contains the following controls:
 
 [[!tag dev stable]]
 
-[3]: https://www.nvaccess.org/addonStore/legacy?file=rf-o

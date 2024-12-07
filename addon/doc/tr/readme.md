@@ -171,7 +171,6 @@ Aşağıdaki kontrolleri içerir:
 
 * Makaleler listesi iletişim kutusu geliştirildi.
 * NVDA 2018.3 veya üstü ile uyumlu (gerekli).
-* Gerekirse [NVDA 2017.3 ile uyumlu son sürüm][3]ü indirebilirsiniz.
 
 ## 4.0 İçin değişiklikler ##
 
@@ -197,4 +196,3 @@ Aşağıdaki kontrolleri içerir:
 
 [[!tag dev stable]]
 
-[3]: https://www.nvaccess.org/addonStore/legacy?file=rf-o

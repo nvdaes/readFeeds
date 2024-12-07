@@ -187,8 +187,6 @@ Sie enthält die folgenden Steuerelemente:
 
 * Der Dialog der Artikelliste wurde erweitert.
 * Kompatibel mit NVDA 2018.3 oder neuer (erforderlich).
-* Bei Bedarf können Sie die [letzte Version][3], die mit NVDA 2017.3
-  kompatibel ist herunterladen.
 
 ## Änderungen in 4.0 ##
 
@@ -217,4 +215,3 @@ Sie enthält die folgenden Steuerelemente:
 
 [[!tag dev stable]]
 
-[3]: https://www.nvaccess.org/addonStore/legacy?file=rf-o

@@ -173,8 +173,6 @@ Contén os seguintes controis:
 
 * Mellorouse o diálogo listaxe de artigos.
 * Compatible co NVDA 2018.3 ou posterior (requerido).
-* Se fora necesario, podes descargar a [última versión compatible co NVDA
-  2017.3][3].
 
 ## Cambios para 4.0 ##
 
@@ -201,4 +199,3 @@ Contén os seguintes controis:
 
 [[!tag dev stable]]
 
-[3]: https://www.nvaccess.org/addonStore/legacy?file=rf-o

@@ -167,8 +167,6 @@ It contains the following controls:
 
 * Dialogen med listen over artikler er blevet forbedret.
 * Kompatibel med NVDA 2018.3 eller nyere (påkrævet).
-* Hvis nødvendigt, kan du hente [den sidste version kompatibel med NVDA
-  2017.3][3].
 
 ## Ændringer i4.0  ##
 
@@ -195,4 +193,3 @@ It contains the following controls:
 
 [[!tag dev stable]]
 
-[3]: https://www.nvaccess.org/addonStore/legacy?file=rf-o

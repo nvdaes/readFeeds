@@ -173,8 +173,6 @@ Se sisältää seuraavat säätimet:
 
 * Artikkeliluettelovalintaikkunaa on paranneltu.
 * Yhteensopiva NVDA 2018.3:n tai uudemman kanssa (vaaditaan).
-* Viimeisen NVDA 2017.3:n kanssa yhteensopivan version voi ladata
-  [tästä. ][3]
 
 ## Muutokset versiossa 4.0 ##
 
@@ -200,4 +198,3 @@ Se sisältää seuraavat säätimet:
 
 [[!tag dev stable]]
 
-[3]: https://www.nvaccess.org/addonStore/legacy?file=rf-o

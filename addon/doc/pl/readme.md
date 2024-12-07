@@ -174,8 +174,6 @@ Zawiera następujące kontrolki:
 
 * Ulepszone okno dialogowe artykułów.
 * Zgodny z NVDA 2018.3 lub nowszą (wymagane).
-* Jeżeli to potrzebne, można pobrać [ostatnią wersję zgodną z NVDA
-  2017.3][3].
 
 ## Zmiany w wersji 4.0 ##
 
@@ -203,4 +201,3 @@ Zawiera następujące kontrolki:
 
 [[!tag dev stable]]
 
-[3]: https://www.nvaccess.org/addonStore/legacy?file=rf-o
