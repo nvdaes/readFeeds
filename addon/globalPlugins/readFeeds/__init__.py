@@ -558,6 +558,7 @@ class ArticlesDialog(wx.Dialog):
 			_("Article information"),
 			wx.YES | wx.NO | wx.CANCEL | wx.ICON_QUESTION
 		) == wx.YES:
+			articleInfo = f"{title}\n{address}\n"
 			api.copyToClip(articleInfo)
 
 	def onClose(self, evt):
