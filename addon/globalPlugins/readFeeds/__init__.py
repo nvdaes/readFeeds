@@ -546,7 +546,7 @@ class ArticlesDialog(wx.Dialog):
 		os.startfile(self.Parent.feed.getArticleLink(self.articlesList.Selection))
 
 	def onArticlesListInfo(self, evt):
-		title=self.articlesList.StringSelection
+		title = self.articlesList.StringSelection
 		address = self.Parent.feed.getArticleLink(self.articlesList.Selection)
 		if gui.messageBox(
 			_(
