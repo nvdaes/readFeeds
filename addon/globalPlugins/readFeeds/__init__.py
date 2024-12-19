@@ -365,8 +365,11 @@ class FeedsDialog(wx.Dialog):
 	def onCopy(self, evt):
 		address = self.body.findall("outline")[self.filteredItems[self.sel]].get("xmlUrl")
 		if gui.messageBox(
-			# Translators: the label of a message box dialog.
-			_("Do you want to copy feed address to the clipboard\r\n\r\n{feedAddress}?".format(feedAddress=address)),
+			_(
+				# Translators: the label of a message box dialog.
+				"Do you want to copy feed address to the clipboard?"
+				"\n{}"
+			).format({address}),
 			# Translators: the title of a message box dialog.
 			_("Copy feed address"),
 			wx.YES | wx.NO | wx.CANCEL | wx.ICON_QUESTION
@@ -543,17 +546,19 @@ class ArticlesDialog(wx.Dialog):
 		os.startfile(self.Parent.feed.getArticleLink(self.articlesList.Selection))
 
 	def onArticlesListInfo(self, evt):
-		articleInfo = "{title}\r\n\r\n{address}".format(
-			title=self.articlesList.StringSelection,
-			address=self.Parent.feed.getArticleLink(self.articlesList.Selection)
-		)
+		title = self.articlesList.StringSelection
+		address = self.Parent.feed.getArticleLink(self.articlesList.Selection)
 		if gui.messageBox(
-			# Translators: the label of a message box dialog.
-			_("%sDo you want to copy article title and link to the clipboard?" % (articleInfo + "\r\n\r\n")),
+			_(
+				# Translators: the label of a message box dialog.
+				"{}\n{}\n"
+				"Do you want to copy article title and link to the clipboard?"
+			).format(title, address),
 			# Translators: the title of a message box dialog.
 			_("Article information"),
 			wx.YES | wx.NO | wx.CANCEL | wx.ICON_QUESTION
 		) == wx.YES:
+			articleInfo = f"{title}\n{address}\n"
 			api.copyToClip(articleInfo)
 
 	def onClose(self, evt):
