@@ -103,11 +103,10 @@ msgid "Error"
 msgstr "Fejl"
 
 #. Translators: the label of a message box dialog.
-#, python-brace-format
+#, fuzzy
 msgid ""
-"Do you want to copy feed address to the clipboard\r\n"
-"\r\n"
-"{feedAddress}?"
+"Do you want to copy feed address to the clipboard?\n"
+"{}"
 msgstr ""
 "Ønsker du at kopiere adressen på feedet til udklipsholderen\n"
 "\n"
@@ -154,6 +153,10 @@ msgstr "Gem Som"
 msgid "List of articles"
 msgstr "Liste over artikler"
 
+#. Translators: Presented when the current article does not have an associated title.
+msgid "Unable to locate article title."
+msgstr "Kan ikke finde artiklens titel."
+
 #. Translators: The label of a button to open the selected article of a feed.
 msgid "Open &web page of selected article."
 msgstr "Åbn &webside for den valgte artikel."
@@ -163,8 +166,11 @@ msgid "&About article..."
 msgstr "&Om artikel..."
 
 #. Translators: the label of a message box dialog.
-#, python-format
-msgid "%sDo you want to copy article title and link to the clipboard?"
+#, fuzzy
+msgid ""
+"{}\n"
+"{}\n"
+"Do you want to copy article title and link to the clipboard?"
 msgstr "%sØnsker du at kopiere artiklens titel og link til udklipsholderen?"
 
 #. Translators: the title of a message box dialog.
@@ -178,10 +184,6 @@ msgstr "&Søg redigeringsfelt efter feeds-listen"
 #. Translators: label of a dialog.
 msgid "&Show articles Date"
 msgstr "&Vis dato for artikler"
-
-#. Translators: Presented when the current article does not have an associated title.
-msgid "Unable to locate article title."
-msgstr "Kan ikke finde artiklens titel."
 
 #. Translators: Presented when the current article does not have an associated link.
 msgid "Unable to locate article link."

@@ -105,11 +105,10 @@ msgid "Error"
 msgstr "Eroare"
 
 #. Translators: the label of a message box dialog.
-#, python-brace-format
+#, fuzzy
 msgid ""
-"Do you want to copy feed address to the clipboard\r\n"
-"\r\n"
-"{feedAddress}?"
+"Do you want to copy feed address to the clipboard?\n"
+"{}"
 msgstr ""
 "Doriți să copiați adresa fluxului pe planșetă\n"
 "\n"
@@ -157,6 +156,10 @@ msgstr ""
 msgid "List of articles"
 msgstr "Lista &articolelor.."
 
+#. Translators: Presented when the current article does not have an associated title.
+msgid "Unable to locate article title."
+msgstr "Localizarea titlului de articol nereușită."
+
 #. Translators: The label of a button to open the selected article of a feed.
 msgid "Open &web page of selected article."
 msgstr "Deschide pagina web a articolului selectat."
@@ -166,8 +169,11 @@ msgid "&About article..."
 msgstr "&Despre articol..."
 
 #. Translators: the label of a message box dialog.
-#, python-format
-msgid "%sDo you want to copy article title and link to the clipboard?"
+#, fuzzy
+msgid ""
+"{}\n"
+"{}\n"
+"Do you want to copy article title and link to the clipboard?"
 msgstr ""
 "Doriți să copiați titlul articolului %s și link-ul acestuia pe planșetă?"
 
@@ -182,10 +188,6 @@ msgstr "&Caseta de căutare după lista de fluxuri"
 #. Translators: label of a dialog.
 msgid "&Show articles Date"
 msgstr ""
-
-#. Translators: Presented when the current article does not have an associated title.
-msgid "Unable to locate article title."
-msgstr "Localizarea titlului de articol nereușită."
 
 #. Translators: Presented when the current article does not have an associated link.
 msgid "Unable to locate article link."

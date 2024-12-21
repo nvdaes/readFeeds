@@ -105,11 +105,10 @@ msgid "Error"
 msgstr "خطا"
 
 #. Translators: the label of a message box dialog.
-#, python-brace-format
+#, fuzzy
 msgid ""
-"Do you want to copy feed address to the clipboard\r\n"
-"\r\n"
-"{feedAddress}?"
+"Do you want to copy feed address to the clipboard?\n"
+"{}"
 msgstr ""
 "آیا میخواهید نشانیِ خوراک را در کلیپ‌برد کپی کنید\r\n"
 "\r\n"
@@ -156,6 +155,10 @@ msgstr ""
 msgid "List of articles"
 msgstr "فهرستِ مقاله‌ها"
 
+#. Translators: Presented when the current article does not have an associated title.
+msgid "Unable to locate article title."
+msgstr "نمیتوانم عنوانِ مقاله را پیدا کنم."
+
 #. Translators: The label of a button to open the selected article of a feed.
 msgid "Open &web page of selected article."
 msgstr "باز کردنِ صفحه‌ی &وبِ مقاله‌ی انتخاب‌شده"
@@ -165,8 +168,11 @@ msgid "&About article..."
 msgstr "&درباره‌ی مقاله..."
 
 #. Translators: the label of a message box dialog.
-#, python-format
-msgid "%sDo you want to copy article title and link to the clipboard?"
+#, fuzzy
+msgid ""
+"{}\n"
+"{}\n"
+"Do you want to copy article title and link to the clipboard?"
 msgstr "%s میخواهید عنوان و لینکِ مقاله را در کلیپ‌برد کپی کنید؟"
 
 #. Translators: the title of a message box dialog.
@@ -180,10 +186,6 @@ msgstr "کادرِ ویرایشیِ &جستجو بعد از فهرستِ خور�
 #. Translators: label of a dialog.
 msgid "&Show articles Date"
 msgstr ""
-
-#. Translators: Presented when the current article does not have an associated title.
-msgid "Unable to locate article title."
-msgstr "نمیتوانم عنوانِ مقاله را پیدا کنم."
 
 #. Translators: Presented when the current article does not have an associated link.
 msgid "Unable to locate article link."
@@ -267,8 +269,8 @@ msgstr "افزونه‌ای برای استفاده از NVDA به عنوانِ 
 #~ "\t\t\t\tDo you want to update it?"
 #~ msgstr ""
 #~ "پوشه‌ی پیکربندیِ شما حاویِ فایل‌هاییست که\n"
-#~ "\t\t\t\tبه نظر میرسد از نسخه‌ای قدیمی از این افزونه به جا مانده است.\t\t\t"
-#~ "\tمیخواهید آن را به‌روز کنید؟"
+#~ "\t\t\t\tبه نظر میرسد از نسخه‌ای قدیمی از این افزونه به جا مانده است."
+#~ "\t\t\t\tمیخواهید آن را به‌روز کنید؟"
 
 #~ msgid "Install or update add-on"
 #~ msgstr "نصب یا به‌روزرسانیِ افزونه"

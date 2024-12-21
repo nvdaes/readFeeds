@@ -104,11 +104,10 @@ msgid "Error"
 msgstr "Virhe"
 
 #. Translators: the label of a message box dialog.
-#, python-brace-format
+#, fuzzy
 msgid ""
-"Do you want to copy feed address to the clipboard\r\n"
-"\r\n"
-"{feedAddress}?"
+"Do you want to copy feed address to the clipboard?\n"
+"{}"
 msgstr ""
 "Haluatko kopioida syötteen osoitteen leikepöydälle?\r\n"
 "\r\n"
@@ -154,6 +153,10 @@ msgstr "Tallenna nimellä"
 msgid "List of articles"
 msgstr "Artikkeliluettelo"
 
+#. Translators: Presented when the current article does not have an associated title.
+msgid "Unable to locate article title."
+msgstr "Artikkelin otsikkoa ei löydy."
+
 #. Translators: The label of a button to open the selected article of a feed.
 msgid "Open &web page of selected article."
 msgstr "Avaa valitun artikkelin v&erkkosivu"
@@ -163,8 +166,11 @@ msgid "&About article..."
 msgstr "T&ietoa artikkelista..."
 
 #. Translators: the label of a message box dialog.
-#, python-format
-msgid "%sDo you want to copy article title and link to the clipboard?"
+#, fuzzy
+msgid ""
+"{}\n"
+"{}\n"
+"Do you want to copy article title and link to the clipboard?"
 msgstr "%sHaluatko kopioida artikkelin otsikon ja linkin leikepöydälle?"
 
 #. Translators: the title of a message box dialog.
@@ -178,10 +184,6 @@ msgstr "&Hakukenttä syöteluettelon jälkeen"
 #. Translators: label of a dialog.
 msgid "&Show articles Date"
 msgstr "&Näytä artikkelin päivämäärä"
-
-#. Translators: Presented when the current article does not have an associated title.
-msgid "Unable to locate article title."
-msgstr "Artikkelin otsikkoa ei löydy."
 
 #. Translators: Presented when the current article does not have an associated link.
 msgid "Unable to locate article link."

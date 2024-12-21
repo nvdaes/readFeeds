@@ -103,11 +103,10 @@ msgid "Error"
 msgstr "Greška"
 
 #. Translators: the label of a message box dialog.
-#, python-brace-format
+#, fuzzy
 msgid ""
-"Do you want to copy feed address to the clipboard\r\n"
-"\r\n"
-"{feedAddress}?"
+"Do you want to copy feed address to the clipboard?\n"
+"{}"
 msgstr ""
 "Da li želite da kopirate adresu izvoda u privremenu memoriju\r\n"
 "\r\n"
@@ -155,6 +154,10 @@ msgstr "Sačuvaj kao"
 msgid "List of articles"
 msgstr "Lista članaka"
 
+#. Translators: Presented when the current article does not have an associated title.
+msgid "Unable to locate article title."
+msgstr "Nemoguće pronaći naslov članka"
+
 #. Translators: The label of a button to open the selected article of a feed.
 msgid "Open &web page of selected article."
 msgstr "Otvori &Web stranicu izabranog članka."
@@ -164,8 +167,11 @@ msgid "&About article..."
 msgstr "&O članku..."
 
 #. Translators: the label of a message box dialog.
-#, python-format
-msgid "%sDo you want to copy article title and link to the clipboard?"
+#, fuzzy
+msgid ""
+"{}\n"
+"{}\n"
+"Do you want to copy article title and link to the clipboard?"
 msgstr ""
 "%s Da li želite da kopirate naslov članka i link u privremenu memoriju?"
 
@@ -180,10 +186,6 @@ msgstr "&Polje za unos pretrage nakon liste izvoda"
 #. Translators: label of a dialog.
 msgid "&Show articles Date"
 msgstr "&Prikaži datume članaka"
-
-#. Translators: Presented when the current article does not have an associated title.
-msgid "Unable to locate article title."
-msgstr "Nemoguće pronaći naslov članka"
 
 #. Translators: Presented when the current article does not have an associated link.
 msgid "Unable to locate article link."

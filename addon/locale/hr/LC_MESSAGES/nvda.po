@@ -17,8 +17,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.0\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
 
 #. Translators: message presented when feeds cannot be reported.
 msgid ""
@@ -106,11 +106,10 @@ msgid "Error"
 msgstr "Greška"
 
 #. Translators: the label of a message box dialog.
-#, python-brace-format
+#, fuzzy
 msgid ""
-"Do you want to copy feed address to the clipboard\r\n"
-"\r\n"
-"{feedAddress}?"
+"Do you want to copy feed address to the clipboard?\n"
+"{}"
 msgstr ""
 "Želiš li kopirati adresu feeda u međuspremnik\r\n"
 "\r\n"
@@ -156,6 +155,10 @@ msgstr "Spremi kao"
 msgid "List of articles"
 msgstr "Popis članaka"
 
+#. Translators: Presented when the current article does not have an associated title.
+msgid "Unable to locate article title."
+msgstr "Nije moguće pronaći naslov članka."
+
 #. Translators: The label of a button to open the selected article of a feed.
 msgid "Open &web page of selected article."
 msgstr "Otvori &web stranicu trenutačnog članka."
@@ -165,8 +168,11 @@ msgid "&About article..."
 msgstr "O čla&nku …"
 
 #. Translators: the label of a message box dialog.
-#, python-format
-msgid "%sDo you want to copy article title and link to the clipboard?"
+#, fuzzy
+msgid ""
+"{}\n"
+"{}\n"
+"Do you want to copy article title and link to the clipboard?"
 msgstr "%sŽeliš li kopirati naslov i poveznicu članka u međuspremnik?"
 
 #. Translators: the title of a message box dialog.
@@ -180,10 +186,6 @@ msgstr "&Pretraži okvir za uređivanje nakon popisa feedova"
 #. Translators: label of a dialog.
 msgid "&Show articles Date"
 msgstr "&Prikaži datum članka"
-
-#. Translators: Presented when the current article does not have an associated title.
-msgid "Unable to locate article title."
-msgstr "Nije moguće pronaći naslov članka."
 
 #. Translators: Presented when the current article does not have an associated link.
 msgid "Unable to locate article link."
