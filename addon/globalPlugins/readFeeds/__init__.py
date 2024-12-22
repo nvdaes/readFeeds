@@ -374,7 +374,7 @@ class FeedsDialog(wx.Dialog):
 			_("Copy feed address"),
 			wx.YES | wx.NO | wx.CANCEL | wx.ICON_QUESTION
 		) == wx.YES:
-			api.copyToClip(address)
+			core.callLater(50, api.copyToClip, address, True)
 
 	def onNew(self, evt):
 		# Translators: The label of a field to enter an address for a new feed.
@@ -559,7 +559,7 @@ class ArticlesDialog(wx.Dialog):
 			wx.YES | wx.NO | wx.CANCEL | wx.ICON_QUESTION
 		) == wx.YES:
 			articleInfo = f"{title}\n{address}\n"
-			api.copyToClip(articleInfo)
+			core.callLater(50, api.copyToClip, articleInfo, True)
 
 	def onClose(self, evt):
 		self.Parent.Enable()
@@ -943,10 +943,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			title=re.sub(TAG_REGEXP, '', self.feed.getArticleTitle()),
 			address=self.feed.getArticleLink()
 		)
-		if scriptHandler.getLastScriptRepeatCount() == 1 and api.copyToClip(articleInfo):
-			# Translators: message presented when the information about an article of a feed
-			# is copied to the clipboard.
-			ui.message(_("Copied to clipboard %s") % articleInfo)
+		if scriptHandler.getLastScriptRepeatCount() == 1:
+			api.copyToClip(articleInfo, True)
 		else:
 			ui.message(articleInfo)
 
@@ -997,7 +995,4 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			title=re.sub(TAG_REGEXP, '', self.feed.getArticleTitle()),
 			address=self.feed.getArticleLink()
 		)
-		if api.copyToClip(articleInfo):
-			# Translators: message presented when the information about an article of a feed
-			# is copied to the clipboard.
-			ui.message(_("Copied to clipboard %s") % articleInfo)
+		api.copyToClip(articleInfo, True)

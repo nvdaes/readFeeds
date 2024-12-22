@@ -50,6 +50,10 @@ It contains the following controls:
 * NVDA will display an error message if a new feed cannot be created.
 * The title of the articles list dialog displays the selected feed name and number of items available.
 
+## Changes for 39.0.0
+
+* Improved notifications when title or URL are copied.
+
 ## Changes for 34.0.0
 
 * Added support for rss.cbc.ca feeds.
