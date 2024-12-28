@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: readFeeds\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2013-11-16 13:26+0100\n"
-"PO-Revision-Date: 2022-01-24 14:40+0200\n"
+"PO-Revision-Date: 2024-12-20 22:21+0200\n"
 "Last-Translator: Jani Kinnunen <janikinnunen340@gmail.com>\n"
 "Language-Team: Finnish <jani.kinnunen@wippies.fi>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.11\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.5\n"
 
 #. Translators: message presented when feeds cannot be reported.
 msgid ""
@@ -104,14 +104,12 @@ msgid "Error"
 msgstr "Virhe"
 
 #. Translators: the label of a message box dialog.
-#, fuzzy
 msgid ""
 "Do you want to copy feed address to the clipboard?\n"
 "{}"
 msgstr ""
-"Haluatko kopioida syötteen osoitteen leikepöydälle?\r\n"
-"\r\n"
-"{feedAddress}"
+"Haluatko kopioida syötteen osoitteen leikepöydälle?\n"
+"{}"
 
 #. Translators: the title of a message box dialog.
 msgid "Copy feed address"
@@ -166,12 +164,14 @@ msgid "&About article..."
 msgstr "T&ietoa artikkelista..."
 
 #. Translators: the label of a message box dialog.
-#, fuzzy
 msgid ""
 "{}\n"
 "{}\n"
 "Do you want to copy article title and link to the clipboard?"
-msgstr "%sHaluatko kopioida artikkelin otsikon ja linkin leikepöydälle?"
+msgstr ""
+"{}\n"
+"{}\n"
+"Haluatko kopioida artikkelin otsikon ja linkin leikepöydälle?"
 
 #. Translators: the title of a message box dialog.
 msgid "Article information"

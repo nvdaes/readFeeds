@@ -1,19 +1,19 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Read feeds 4.0\n"
+"Project-Id-Version: Akışları Oku\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2020-10-12 15:31+0300\n"
-"PO-Revision-Date: 2022-05-17 23:34+0300\n"
-"Last-Translator: Çağrı Doğan <cagrid@hotmail.com>\n"
+"PO-Revision-Date: 2024-12-21 12:58+0300\n"
+"Last-Translator: Umut KORKMAZ <umutkork@gmail.com>\n"
 "Language-Team: cagrid@hotmail.com\n"
-"Language: tr\n"
+"Language: tr_TR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
 "X-Poedit-Basepath: ../../../globalPlugins/readFeeds\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.5\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #. Translators: message presented when feeds cannot be reported.
@@ -21,7 +21,7 @@ msgid ""
 "Unable to refresh feed. Check your Internet conectivity or that the "
 "specified feed address is correct."
 msgstr ""
-"Akış güncellenemedi. İnternet bağlantınızı ya da  akış adresini kontrol edin"
+"Akış güncellenemedi. İnternet bağlantınızı ya da  akış adresini kontrol edin."
 
 #. Translators: Message presented when feeds have been copied.
 msgid "Feeds copied"
@@ -101,14 +101,12 @@ msgid "Error"
 msgstr "Hata"
 
 #. Translators: the label of a message box dialog.
-#, fuzzy
 msgid ""
 "Do you want to copy feed address to the clipboard?\n"
 "{}"
 msgstr ""
-"Akış adresini panoya kopyalamak istiyor musunuz?\r\n"
-"\r\n"
-"{feedAddress}?"
+"Akış adresini panoya kopyalamak istiyor musunuz?\n"
+"{}"
 
 #. Translators: the title of a message box dialog.
 msgid "Copy feed address"
@@ -160,19 +158,18 @@ msgstr "Seçili haberle ilgili web sayfasını aç."
 
 #. Translators: The label of a button to show information of a feed article.
 msgid "&About article..."
-msgstr "Haber hakkında..."
+msgstr "&Haber hakkında..."
 
 #. Translators: the label of a message box dialog.
-#, fuzzy
 msgid ""
 "{}\n"
 "{}\n"
 "Do you want to copy article title and link to the clipboard?"
-msgstr "%sMakale başlığı ve adresini panoya kopyalamak istiyor musunuz?"
+msgstr "Makale başlığını ve bağlantısını panoya kopyalamak istiyor musunuz?"
 
 #. Translators: the title of a message box dialog.
 msgid "Article information"
-msgstr "haber bilgisi"
+msgstr "Haber bilgisi"
 
 #. Translators: label of a dialog.
 msgid "&Search edit box after feeds list"
@@ -209,11 +206,11 @@ msgstr "Akış listesini açar."
 #. Translators: message presented in input mode.
 #, python-format
 msgid "Shows the %s settings."
-msgstr "%s ayarlar iletişim kutusunu göster"
+msgstr "%s ayarlar iletişim kutusunu göster."
 
 #. Translators: message presented in input mode.
 msgid "Refreshes the current feed and announces the most recent article title."
-msgstr "Akışı günceller ve ilk haber başlığını okur"
+msgstr "Akışı günceller ve ilk haber başlığını okur."
 
 #. Translators: message presented in input mode.
 msgid ""
@@ -231,11 +228,11 @@ msgstr "%s panoya kopyalandı"
 
 #. Translators: message presented in input mode.
 msgid "Announces the title of the next article."
-msgstr "Sonraki haber başlığını okur"
+msgstr "Sonraki haber başlığını okur."
 
 #. Translators: message presented in input mode.
 msgid "Announces the title of the previous article."
-msgstr "Önceki haber başlığını okur"
+msgstr "Önceki haber başlığını okur."
 
 #. Translators: message presented in input mode.
 msgid "Announces article link, when pressed two times, opens related web page."
