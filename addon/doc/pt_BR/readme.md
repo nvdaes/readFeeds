@@ -1,6 +1,7 @@
 # Leitor de Feeds (Read Feeds) #
 
-* Autores: Noelia Ruiz Martínez, Mesar Hameed
+* Autores: Noelia Ruiz Martínez, Mesar HameedAutores: Noelia Ruiz Martínez,
+  Mesar Hameed
 
 Este complemento fornece uma maneira direta de ler feeds —
 alimentadores/canais/fluxos/fontes — em formato Atom ou RSS usando o
@@ -11,8 +12,8 @@ mencionamos feeds, queremos dizer tanto feeds RSS quanto feeds ATOM.
 
 ### Caixa de diálogo Ler feeds ###
 
-Você pode acessar o submenu do Leitor de Feeds a partir do menu do NVDA,
-submenu Ferramentas, onde estão disponíveis as opções de menu a seguir.
+Você pode acessar a caixa de diálogo Ler feeds no menu nvda, submenu
+Ferramentas, item Feeds.
 
 Ele contém os seguintes controles:
 
@@ -47,7 +48,7 @@ Ele contém os seguintes controles:
   de Feeds.
 * Fechar: Fecha o diálogo Feeds.
 
-### Notas  #####
+### Notas #####
 
 * A caixa de edição Filtrar por pode ser colocada após o botão Abrir artigo
   do menu do NVDA, Preferências, Configurações, categoria Leitor de feeds,
@@ -115,7 +116,7 @@ Ele contém os seguintes controles:
 
 ## Mudanças na 12.0
 
-* Foi corrigido um bug que fazia com que os atalhos para itens do menu de
+* Correção de um bug que fazia com que os atalhos para itens do menu de
   ferramentas do NVDA não funcionassem como esperado.
 
 ## Mudanças na 11.0
