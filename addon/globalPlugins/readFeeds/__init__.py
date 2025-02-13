@@ -317,7 +317,8 @@ class FeedsDialog(wx.Dialog):
 		if filter:
 			filter = re.escape(filter)
 			filterReg = re.compile(
-				r"(?=.*?" + r")(?=.*?".join(filter.split(r"\ ")) + r")", re.U | re.IGNORECASE
+				r"(?=.*?" + r")(?=.*?".join(filter.split(r"\ ")) + r")",
+				re.U | re.IGNORECASE,
 			)
 		for index, choice in enumerate(self.choices):
 			if filter and not filterReg.match(choice):
@@ -603,7 +604,7 @@ class AddonSettingsPanel(SettingsPanel):
 
 		self.filterAfterList = sHelper.addItem(
 			# Translators: label of a dialog.
-			wx.CheckBox(self, label=_("&Search edit box after feeds list"))
+			wx.CheckBox(self, label=_("&Search edit box after feeds list")),
 		)
 		self.filterAfterList.SetValue(config.conf["readFeeds"]["filterAfterList"])
 
@@ -639,7 +640,7 @@ class Feed(object):
 			if self.getFeedType() == "rss":
 				date = article.find(self.buildTag("pubDate", self.ns)).text
 				timestamp = time.mktime(
-					datetime.datetime.strptime(date, "%a, %d %b %Y %H:%M:%S %Z").timetuple()
+					datetime.datetime.strptime(date, "%a, %d %b %Y %H:%M:%S %Z").timetuple(),
 				)
 			elif self.getFeedType() == "atom":
 				date = article.find(self.buildTag("updated", self.ns)).text
