@@ -182,8 +182,8 @@ class FeedsDialog(wx.Dialog):
 		FeedsDialog._instance = self
 		self._opml = Opml(OPML_PATH)
 		super().__init__(
-			# Translators: Title of a dialog.
 			parent,
+			# Translators: Title of a dialog.
 			title=_("Feeds: {}").format(getActiveProfile()),
 		)
 
@@ -390,8 +390,8 @@ class FeedsDialog(wx.Dialog):
 	def onNew(self, evt):
 		# Translators: The label of a field to enter an address for a new feed.
 		with wx.TextEntryDialog(
-			# Translators: Label of a dialog.
 			self,
+			# Translators: Label of a dialog.
 			_("Address of a new feed:"),
 			# Translators: The title of a dialog to create a new feed.
 			_("New feed"),
@@ -443,8 +443,8 @@ class FeedsDialog(wx.Dialog):
 
 	def onRename(self, evt):
 		with wx.TextEntryDialog(
-			# Translators: The label of a field to enter a new name for a feed.
 			self,
+			# Translators: The label of a field to enter a new name for a feed.
 			_("New name:"),
 			# Translators: The title of a dialog to rename a feed.
 			_("Rename feed"),
@@ -469,8 +469,8 @@ class FeedsDialog(wx.Dialog):
 
 	def onImportOpml(self, evt):
 		with wx.FileDialog(
-			# Translators: Label for a file dialog.
 			self,
+			# Translators: Label for a file dialog.
 			_("Open OPML file"),
 			# Translators: Wildcards for a file dialog
 			wildcard=_("OPML files (*.opml)|*.opml"),
@@ -601,8 +601,8 @@ class AddonSettingsPanel(SettingsPanel):
 	def makeSettings(self, settingsSizer):
 		sHelper = guiHelper.BoxSizerHelper(self, sizer=settingsSizer)
 
-		# Translators: label of a dialog.
 		self.filterAfterList = sHelper.addItem(
+			# Translators: label of a dialog.
 			wx.CheckBox(self, label=_("&Search edit box after feeds list"))
 		)
 		self.filterAfterList.SetValue(config.conf["readFeeds"]["filterAfterList"])
