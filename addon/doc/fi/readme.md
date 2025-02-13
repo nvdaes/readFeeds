@@ -197,3 +197,4 @@ Se sisältää seuraavat säätimet:
 * Ensimmäinen versio.
 
 [[!tag dev stable]]
+
