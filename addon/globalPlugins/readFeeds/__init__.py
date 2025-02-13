@@ -1,7 +1,7 @@
 # -*- coding: UTF-8 -*-
 
 # Read feeds: A simple plugin for reading feeds with NVDA
-# Copyright (C) 2012-2022 Noelia Ruiz Martínez, Mesar Hameed
+# Copyright (C) 2012-2025 Noelia Ruiz Martínez, Mesar Hameed
 # Released under GPL 2
 
 import os
@@ -26,6 +26,7 @@ import api
 import gui
 from gui import guiHelper
 from gui.settingsDialogs import SettingsPanel, NVDASettingsDialog
+from gui.message import MessageDialog, ReturnCode
 import core
 import ui
 from globalCommands import SCRCAT_CONFIG
@@ -38,7 +39,7 @@ addonHandler.initTranslation()
 
 # Constants
 
-ADDON_SUMMARY = addonHandler.getCodeAddon().manifest['summary']
+ADDON_SUMMARY = addonHandler.getCodeAddon().manifest["summary"]
 ADDON_PANEL_TITLE = ADDON_SUMMARY
 FEEDS_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), "personalFeeds"))
 OPML_PATH = os.path.join(FEEDS_PATH, "readFeeds.opml")
@@ -46,9 +47,9 @@ HTML_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), "html"))
 CONFIG_PATH = globalVars.appArgs.configPath
 CAN_NOT_REPORT = _(
 	# Translators: message presented when feeds cannot be reported.
-	"Unable to refresh feed. Check your Internet conectivity or that the specified feed address is correct."
+	"Unable to refresh feed. Check your Internet conectivity or that the specified feed address is correct.",
 )
-TAG_REGEXP = re.compile('<.*?>')
+TAG_REGEXP = re.compile("<.*?>")
 
 # Configuration
 
@@ -106,6 +107,7 @@ def createOpmlPath():
 def onSettings(evt):
 	gui.mainFrame.popupSettingsDialog(NVDASettingsDialog, AddonSettingsPanel)
 
+
 # Dialogs
 
 
@@ -128,18 +130,18 @@ def doCopy(copyDirectory):
 			shutil.rmtree(copyDirectory, ignore_errors=True)
 		shutil.copytree(FEEDS_PATH, copyDirectory)
 		core.callLater(
-			100, ui.message,
+			100,
+			ui.message,
 			# Translators: Message presented when feeds have been copied.
-			_("Feeds copied")
+			_("Feeds copied"),
 		)
 	except Exception as e:
 		wx.CallAfter(
-			gui.messageBox,
+			MessageDialog.alert,
 			# Translators: label of error dialog shown when cannot copy feeds folder.
 			_("Folder not copied"),
 			# Translators: title of error dialog shown when cannot copy feeds folder.
 			_("Copy Error"),
-			wx.OK | wx.ICON_ERROR
 		)
 		raise e
 
@@ -149,24 +151,23 @@ def doRestore(restoreDirectory):
 		shutil.rmtree(FEEDS_PATH, ignore_errors=True)
 		shutil.copytree(restoreDirectory, FEEDS_PATH)
 		core.callLater(
-			100, ui.message,
+			100,
+			ui.message,
 			# Translators: Message presented when feeds have been restored.
-			_("Feeds restored")
+			_("Feeds restored"),
 		)
 	except Exception as e:
 		wx.CallAfter(
-			gui.messageBox,
+			MessageDialog.alert,
 			# Translators: label of error dialog shown when cannot copy feeds folder.
 			_("Folder not copied"),
 			# Translators: title of error dialog shown when cannot copy feeds folder.
 			_("Copy Error"),
-			wx.OK | wx.ICON_ERROR
 		)
 		raise e
 
 
 class FeedsDialog(wx.Dialog):
-
 	_instance = None
 
 	def __new__(cls, *args, **kwargs):
@@ -181,8 +182,9 @@ class FeedsDialog(wx.Dialog):
 		FeedsDialog._instance = self
 		self._opml = Opml(OPML_PATH)
 		super().__init__(
+			parent,
 			# Translators: Title of a dialog.
-			parent, title=_("Feeds: {}").format(getActiveProfile())
+			title=_("Feeds: {}").format(getActiveProfile()),
 		)
 
 		mainSizer = wx.BoxSizer(wx.VERTICAL)
@@ -207,7 +209,8 @@ class FeedsDialog(wx.Dialog):
 		for n in range(len(self.choices)):
 			self.filteredItems.append(n)
 		self.feedsList = wx.ListBox(
-			self, choices=self.choices
+			self,
+			choices=self.choices,
 		)
 		self.feedsList.Selection = 0
 		self.feedsList.Bind(wx.EVT_LISTBOX, self.onFeedsListChoice)
@@ -262,7 +265,7 @@ class FeedsDialog(wx.Dialog):
 		self.importButton = buttonHelper.addButton(self, label=_("&Import feeds from OPML file..."))
 		self.importButton.Bind(wx.EVT_BUTTON, self.onImportOpml)
 
-	# Translators: The label of a button to save feeds to OPML file.
+		# Translators: The label of a button to save feeds to OPML file.
 		self.saveButton = buttonHelper.addButton(self, label=_("&Save feeds to OPML file..."))
 		self.saveButton.Bind(wx.EVT_BUTTON, self.onSaveOpml)
 
@@ -295,12 +298,11 @@ class FeedsDialog(wx.Dialog):
 			feed = Feed(address)
 		except Exception as e:
 			wx.CallAfter(
-				gui.messageBox,
+				MessageDialog.alert,
 				# Translators: Message presented when a feed cannot be added.
-				_('Cannot add feed: %s' % e),
+				_("Cannot add feed: %s" % e),
 				# Translators: error message.
 				_("Error"),
-				wx.OK | wx.ICON_ERROR
 			)
 			raise e
 		feedName = feed.getFeedName().strip()
@@ -314,7 +316,10 @@ class FeedsDialog(wx.Dialog):
 		filter = self.searchTextEdit.Value
 		if filter:
 			filter = re.escape(filter)
-			filterReg = re.compile(r"(?=.*?" + r")(?=.*?".join(filter.split(r"\ ")) + r")", re.U | re.IGNORECASE)
+			filterReg = re.compile(
+				r"(?=.*?" + r")(?=.*?".join(filter.split(r"\ ")) + r")",
+				re.U | re.IGNORECASE,
+			)
 		for index, choice in enumerate(self.choices):
 			if filter and not filterReg.match(choice):
 				continue
@@ -325,9 +330,15 @@ class FeedsDialog(wx.Dialog):
 			self.onFeedsListChoice(None)
 		else:
 			for control in (
-				self.feedsList, self.articlesButton, self.openButton,
-				self.renameButton, self.deleteButton, self.defaultButton,
-				self.copyButton, self.openButton, self.openHtmlButton
+				self.feedsList,
+				self.articlesButton,
+				self.openButton,
+				self.renameButton,
+				self.deleteButton,
+				self.defaultButton,
+				self.copyButton,
+				self.openButton,
+				self.openHtmlButton,
 			):
 				control.Enabled = False
 
@@ -339,7 +350,7 @@ class FeedsDialog(wx.Dialog):
 		self.openButton.Enabled = self.sel >= 0
 		self.openHtmlButton.Enabled = self.sel >= 0
 		self.renameButton.Enabled = self.sel >= 0
-		self.deleteButton.Enabled = (self.sel >= 0 and self.feedsList.Count > 1)
+		self.deleteButton.Enabled = self.sel >= 0 and self.feedsList.Count > 1
 		self.defaultButton.Enabled = self.sel >= 0
 
 	def onArticles(self, evt):
@@ -364,25 +375,27 @@ class FeedsDialog(wx.Dialog):
 
 	def onCopy(self, evt):
 		address = self.body.findall("outline")[self.filteredItems[self.sel]].get("xmlUrl")
-		if gui.messageBox(
-			_(
-				# Translators: the label of a message box dialog.
-				"Do you want to copy feed address to the clipboard?"
-				"\n{}"
-			).format({address}),
-			# Translators: the title of a message box dialog.
-			_("Copy feed address"),
-			wx.YES | wx.NO | wx.CANCEL | wx.ICON_QUESTION
-		) == wx.YES:
+		if (
+			MessageDialog.ask(
+				_(
+					# Translators: the label of a message box dialog.
+					"Do you want to copy feed address to the clipboard?" "\n{}",
+				).format({address}),
+				# Translators: the title of a message box dialog.
+				_("Copy feed address"),
+			)
+			== ReturnCode.YES
+		):
 			core.callLater(50, api.copyToClip, address, True)
 
 	def onNew(self, evt):
 		# Translators: The label of a field to enter an address for a new feed.
 		with wx.TextEntryDialog(
+			self,
 			# Translators: Label of a dialog.
-			self, _("Address of a new feed:"),
+			_("Address of a new feed:"),
 			# Translators: The title of a dialog to create a new feed.
-			_("New feed")
+			_("New feed"),
 		) as d:
 			if d.ShowModal() == wx.ID_CANCEL:
 				self.feedsList.SetFocus()
@@ -397,13 +410,16 @@ class FeedsDialog(wx.Dialog):
 		self.feedsList.SetFocus()
 
 	def onDelete(self, evt):
-		if gui.messageBox(
-			# Translators: The confirmation prompt displayed when the user requests to delete a feed.
-			_("Are you sure you want to delete this feed? This cannot be undone."),
-			# Message translated in NVDA core.
-			translate("Confirm Deletion"),
-			wx.YES | wx.NO | wx.ICON_QUESTION, self
-		) == wx.NO:
+		if (
+			MessageDialog.ask(
+				# Translators: The confirmation prompt displayed when the user requests to delete a feed.
+				_("Are you sure you want to delete this feed? This cannot be undone."),
+				# Message translated in NVDA core.
+				translate("Confirm Deletion"),
+				self,
+			)
+			== ReturnCode.NO
+		):
 			self.feedsList.SetFocus()
 			return
 		outline = self.body.findall("outline")[self.filteredItems[self.sel]]
@@ -428,10 +444,12 @@ class FeedsDialog(wx.Dialog):
 
 	def onRename(self, evt):
 		with wx.TextEntryDialog(
+			self,
 			# Translators: The label of a field to enter a new name for a feed.
-			self, _("New name:"),
+			_("New name:"),
 			# Translators: The title of a dialog to rename a feed.
-			_("Rename feed"), value=self.stringSel
+			_("Rename feed"),
+			value=self.stringSel,
 		) as d:
 			if d.ShowModal() == wx.ID_CANCEL or not d.Value:
 				self.feedsList.SetFocus()
@@ -452,11 +470,12 @@ class FeedsDialog(wx.Dialog):
 
 	def onImportOpml(self, evt):
 		with wx.FileDialog(
+			self,
 			# Translators: Label for a file dialog.
-			self, _("Open OPML file"),
+			_("Open OPML file"),
 			# Translators: Wildcards for a file dialog
 			wildcard=_("OPML files (*.opml)|*.opml"),
-			style=wx.FD_OPEN | wx.FD_FILE_MUST_EXIST
+			style=wx.FD_OPEN | wx.FD_FILE_MUST_EXIST,
 		) as fileDialog:
 			if fileDialog.ShowModal() == wx.ID_CANCEL:
 				return
@@ -482,7 +501,10 @@ class FeedsDialog(wx.Dialog):
 	def onSaveOpml(self, evt):
 		filename = wx.FileSelector(
 			# Translators: Label of a button on the Feeds dialog.
-			_("Save As"), default_filename="readfeeds.opml", flags=wx.FD_SAVE | wx.FD_OVERWRITE_PROMPT, parent=self
+			_("Save As"),
+			default_filename="readfeeds.opml",
+			flags=wx.FD_SAVE | wx.FD_OVERWRITE_PROMPT,
+			parent=self,
 		)
 		if filename:
 			self._opml._document.write(filename)
@@ -490,12 +512,15 @@ class FeedsDialog(wx.Dialog):
 
 
 class ArticlesDialog(wx.Dialog):
-
 	def __init__(self, parent):
 		# Translators: The title of the articles dialog.
-		super().__init__(parent, title="{feedTitle} ({feedNumber})".format(
-			feedTitle=parent.stringSel, feedNumber=parent.feed.getNumberOfArticles()
-		))
+		super().__init__(
+			parent,
+			title="{feedTitle} ({feedNumber})".format(
+				feedTitle=parent.stringSel,
+				feedNumber=parent.feed.getNumberOfArticles(),
+			),
+		)
 
 		mainSizer = wx.BoxSizer(wx.VERTICAL)
 		sHelper = guiHelper.BoxSizerHelper(self, orientation=wx.VERTICAL)
@@ -508,10 +533,13 @@ class ArticlesDialog(wx.Dialog):
 			if not articleTitle:
 				# Translators: Presented when the current article does not have an associated title.
 				articleTitle = _("Unable to locate article title.")
-			articlesChoices.append(re.sub(
-				TAG_REGEXP, '',
-				articleTitle
-			))
+			articlesChoices.append(
+				re.sub(
+					TAG_REGEXP,
+					"",
+					articleTitle,
+				),
+			)
 		if config.conf["readFeeds"]["showArticlesDate"]:
 			for index, choice in enumerate(articlesChoices):
 				date = parent.feed.getArticleDate(index).split(" +")[0]
@@ -527,12 +555,12 @@ class ArticlesDialog(wx.Dialog):
 		self.AffirmativeId = self.articleButton.Id
 		self.articleButton.SetDefault()
 		buttonHelper.addButton(self.articleButton)
-		
+
 		# Translators: The label of a button to show information of a feed article.
 		self.infoButton = wx.Button(self, label=_("&About article..."))
 		self.infoButton.Bind(wx.EVT_BUTTON, self.onArticlesListInfo)
 		buttonHelper.addButton(self.infoButton)
-		
+
 		closeButton = sHelper.addDialogDismissButtons(wx.Button(self, wx.ID_CLOSE, label=translate("&Close")))
 		closeButton.Bind(wx.EVT_BUTTON, lambda evt: self.Close())
 		self.Bind(wx.EVT_CLOSE, self.onClose)
@@ -548,16 +576,17 @@ class ArticlesDialog(wx.Dialog):
 	def onArticlesListInfo(self, evt):
 		title = self.articlesList.StringSelection
 		address = self.Parent.feed.getArticleLink(self.articlesList.Selection)
-		if gui.messageBox(
-			_(
-				# Translators: the label of a message box dialog.
-				"{}\n{}\n"
-				"Do you want to copy article title and link to the clipboard?"
-			).format(title, address),
-			# Translators: the title of a message box dialog.
-			_("Article information"),
-			wx.YES | wx.NO | wx.CANCEL | wx.ICON_QUESTION
-		) == wx.YES:
+		if (
+			MessageDialog.ask(
+				_(
+					# Translators: the label of a message box dialog.
+					"{}\n{}\n" "Do you want to copy article title and link to the clipboard?",
+				).format(title, address),
+				# Translators: the title of a message box dialog.
+				_("Article information"),
+			)
+			== ReturnCode.YES
+		):
 			articleInfo = f"{title}\n{address}\n"
 			core.callLater(50, api.copyToClip, articleInfo, True)
 
@@ -568,14 +597,15 @@ class ArticlesDialog(wx.Dialog):
 
 
 class AddonSettingsPanel(SettingsPanel):
-
 	title = ADDON_PANEL_TITLE
 
 	def makeSettings(self, settingsSizer):
 		sHelper = guiHelper.BoxSizerHelper(self, sizer=settingsSizer)
 
-		# Translators: label of a dialog.
-		self.filterAfterList = sHelper.addItem(wx.CheckBox(self, label=_("&Search edit box after feeds list")))
+		self.filterAfterList = sHelper.addItem(
+			# Translators: label of a dialog.
+			wx.CheckBox(self, label=_("&Search edit box after feeds list")),
+		)
 		self.filterAfterList.SetValue(config.conf["readFeeds"]["filterAfterList"])
 
 		# Translators: label of a dialog.
@@ -589,8 +619,8 @@ class AddonSettingsPanel(SettingsPanel):
 
 # Feed object
 
-class Feed(object):
 
+class Feed(object):
 	def __init__(self, url):
 		super(Feed, self).__init__()
 		self._url = url
@@ -607,10 +637,12 @@ class Feed(object):
 	def getArticleTimestamp(self, article):
 		locale.setlocale(locale.LC_TIME, "en")
 		try:
-			if self.getFeedType() == u'rss':
+			if self.getFeedType() == "rss":
 				date = article.find(self.buildTag("pubDate", self.ns)).text
-				timestamp = time.mktime(datetime.datetime.strptime(date, "%a, %d %b %Y %H:%M:%S %Z").timetuple())
-			elif self.getFeedType() == 'atom':
+				timestamp = time.mktime(
+					datetime.datetime.strptime(date, "%a, %d %b %Y %H:%M:%S %Z").timetuple(),
+				)
+			elif self.getFeedType() == "atom":
 				date = article.find(self.buildTag("updated", self.ns)).text
 				timestamp = time.mktime(datetime.datetime.strptime(date, "%Y-%m-%dT%H:%M:%S%Z").timetuple())
 			return timestamp
@@ -621,7 +653,7 @@ class Feed(object):
 		parsedURL = urlparse(self._url)
 		userAgentFallback = "UniversalFeedParser/5.0.1 +http://feedparser.org/"
 		userAgent = userAgents.get(parsedURL.netloc, userAgentFallback)
-		headers = {'User-Agent': userAgent}
+		headers = {"User-Agent": userAgent}
 		req = urllib.request.Request(self._url, None, headers)
 		try:
 			response = urllib.request.urlopen(req)
@@ -680,9 +712,9 @@ class Feed(object):
 		if index is None:
 			index = self._index
 		try:
-			if self.getFeedType() == u'rss':
+			if self.getFeedType() == "rss":
 				return self._articles[index].find(self.buildTag("link", self.ns)).text
-			elif self.getFeedType() == 'atom':
+			elif self.getFeedType() == "atom":
 				return self._articles[index].find(self.buildTag("link", self.ns)).get("href")
 		except Exception:
 			# Translators: Presented when the current article does not have an associated link.
@@ -697,9 +729,9 @@ class Feed(object):
 				description = self._articles[index].find(self.buildTag("content", self.ns)).text
 			if description is not None:
 				return description
-			if self.getFeedType() == u'rss':
+			if self.getFeedType() == "rss":
 				description = self._articles[index].find(self.buildTag("description", self.ns)).text
-			elif self.getFeedType() == 'atom':
+			elif self.getFeedType() == "atom":
 				description = self._articles[index].find(self.buildTag("summary", self.ns)).text
 				if description is None:
 					description = self._articles[index].find(self.buildTag("content", self.ns)).text
@@ -711,7 +743,7 @@ class Feed(object):
 		if index is None:
 			index = self._index
 		try:
-			if self.getFeedType() == u'rss':
+			if self.getFeedType() == "rss":
 				return self._articles[index].find(self.buildTag("enclosure", self.ns)).get("url")
 			return None
 		except Exception:
@@ -721,7 +753,7 @@ class Feed(object):
 		if index is None:
 			index = self._index
 		try:
-			if self.getFeedType() == u'rss':
+			if self.getFeedType() == "rss":
 				return self._articles[index].find(self.buildTag("enclosure", self.ns)).get("type")
 			return None
 		except Exception:
@@ -731,7 +763,7 @@ class Feed(object):
 		if index is None:
 			index = self._index
 		try:
-			if self.getFeedType() == u'rss':
+			if self.getFeedType() == "rss":
 				return int(self._articles[index].find(self.buildTag("enclosure", self.ns)).get("length"))
 			return None
 		except Exception:
@@ -741,9 +773,9 @@ class Feed(object):
 		if index is None:
 			index = self._index
 		try:
-			if self.getFeedType() == u'rss':
+			if self.getFeedType() == "rss":
 				date = self._articles[index].find(self.buildTag("pubDate", self.ns)).text
-			elif self.getFeedType() == 'atom':
+			elif self.getFeedType() == "atom":
 				date = self._articles[index].find(self.buildTag("updated", self.ns)).text
 			return date
 		except Exception:
@@ -763,48 +795,47 @@ class Feed(object):
 		return len(self._articles)
 
 	def buildHtml(self):
-		raw = "<!DOCTYPE html><html lang=\"" + self.getFeedLanguage()
-		raw += "\"><head><title>" + self.getFeedName()
-		raw += "</title><meta charset=\"utf-8\" />"
+		raw = '<!DOCTYPE html><html lang="' + self.getFeedLanguage()
+		raw += '"><head><title>' + self.getFeedName()
+		raw += '</title><meta charset="utf-8" />'
 		raw += "<meta http-equiv='X-UA-Compatible' content='IE=edge'>"
-		raw += "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"></head>"
-		raw += "<body><h1><a href=\"" + self.getFeedUrl() + "\">" + self.getFeedName() + "</a></h1><p><label>"
+		raw += '<meta name="viewport" content="width=device-width, initial-scale=1.0"></head>'
+		raw += '<body><h1><a href="' + self.getFeedUrl() + '">' + self.getFeedName() + "</a></h1><p><label>"
 		# Translators: Label of a checkbox to choose if date should be presented for each feed.
 		label = _("Show date")
 		raw += label
-		raw += "<input type=\"checkbox\" id=\"showDate\" "
-		raw += "onclick=\"setDatePresentation()\" accesskey=\"0\"></label></p><p><label>"
+		raw += '<input type="checkbox" id="showDate" '
+		raw += 'onclick="setDatePresentation()" accesskey="0"></label></p><p><label>'
 		# Translators: Label for a checkbox to show buttons for copying to clipboard.
 		label = _("Show buttons to copy")
 		raw += label
-		raw += "<input id=\"copy\" accesskey=\"8\" type=\"checkbox\" onclick=\"setCopyPresentation()\"></label></p>"
+		raw += '<input id="copy" accesskey="8" type="checkbox" onclick="setCopyPresentation()"></label></p>'
 		for index in range(self.getNumberOfArticles()):
 			articleTitle = self.getArticleTitle(index)
 			if not articleTitle:
 				# Translators: Presented when the current article does not have an associated title.
 				articleTitle = _("Unable to locate article title.")
-			raw += "<div class=\"heading\"><h2><a href=\""
-			raw += self.getArticleLink(index) + "\">" + articleTitle + "</a></h2>"
+			raw += '<div class="heading"><h2><a href="'
+			raw += self.getArticleLink(index) + '">' + articleTitle + "</a></h2>"
 			# Translators: Label for a button to copy to clipboard.
 			label = _("Copy") + " " + str(index + 1)
-			raw += "<button aria-hidden=\"true\" aria-pressed=\"false\">" + label + "</button></div>"
+			raw += '<button aria-hidden="true" aria-pressed="false">' + label + "</button></div>"
 			if self.getArticleDate(index):
-				raw += "<div class=\"date\" aria-hidden=\"true\">" + self.getArticleDate(index) + "</div>"
+				raw += '<div class="date" aria-hidden="true">' + self.getArticleDate(index) + "</div>"
 			if self.getArticleDescription(index) is not None:
 				raw += "<div>" + self.getArticleDescription(index) + "</div>"
 			enclosure = self.getArticleEnclosureUrl(index)
 			if enclosure is not None:
 				enclosureType = self.getArticleEnclosureType(index)
 				enclosureLength = self.getArticleEnclosureLength(index)
-				raw += "<div><a href=\"" + enclosure + "\">" + enclosureType + f"{str(index+1)}</a>"
+				raw += '<div><a href="' + enclosure + '">' + enclosureType + f"{str(index+1)}</a>"
 				raw += f" ({str(enclosureLength / 1024)} kB)</div>"
-		raw += "<script src=\"feed.js\"></script></body></html>"
+		raw += '<script src="feed.js"></script></body></html>'
 		with open(os.path.join(HTML_PATH, "feed.html"), "w", encoding="utf-8") as f:
 			f.write(raw)
 
 
 class Opml(object):
-
 	def __init__(self, path):
 		super(Opml, self).__init__()
 		self._path = path
@@ -839,9 +870,9 @@ class Opml(object):
 
 # Global plugin
 
+
 @disableInSecureMode
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
-
 	scriptCategory = ADDON_SUMMARY
 
 	def __init__(self):
@@ -858,7 +889,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def terminate(self):
 		try:
-			self.toolsMenu .Remove(self.feedsListItem)
+			self.toolsMenu.Remove(self.feedsListItem)
 		except Exception:
 			pass
 		try:
@@ -892,7 +923,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	@script(
 		# Translators: message presented in input mode.
-		description=_("Activates the Feeds dialog of Read Feeds.")
+		description=_("Activates the Feeds dialog of Read Feeds."),
 	)
 	def script_activateFeedsDialog(self, gesture):
 		wx.CallAfter(self.onFeeds, None)
@@ -900,7 +931,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	@script(
 		# Translators: message presented in input mode.
 		description=_("Shows the %s settings.") % ADDON_SUMMARY,
-		category=SCRCAT_CONFIG
+		category=SCRCAT_CONFIG,
 	)
 	def script_settings(self, gesture):
 		wx.CallAfter(onSettings, None)
@@ -921,27 +952,27 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	@script(
 		# Translators: message presented in input mode.
 		description=_("Refreshes the current feed and announces the most recent article title."),
-		gesture="kb:control+shift+NVDA+8"
+		gesture="kb:control+shift+NVDA+8",
 	)
 	def script_readFirstArticle(self, gesture):
 		self.getFirstArticle()
 		if self.feed:
-			ui.message(re.sub(TAG_REGEXP, '', self.feed.getArticleTitle()))
+			ui.message(re.sub(TAG_REGEXP, "", self.feed.getArticleTitle()))
 
 	@script(
 		description=_(
 			# Translators: message presented in input mode.
 			"Announces the title of the current article. Pressed two times,"
-			" copies title and related link to the clipboard."
+			" copies title and related link to the clipboard.",
 		),
-		gesture="kb:control+shift+NVDA+i"
+		gesture="kb:control+shift+NVDA+i",
 	)
 	def script_readCurrentArticle(self, gesture):
 		if not self.feed:
 			self.getFirstArticle()
 		articleInfo = "{title}\r\n\r\n{address}".format(
-			title=re.sub(TAG_REGEXP, '', self.feed.getArticleTitle()),
-			address=self.feed.getArticleLink()
+			title=re.sub(TAG_REGEXP, "", self.feed.getArticleTitle()),
+			address=self.feed.getArticleLink(),
 		)
 		if scriptHandler.getLastScriptRepeatCount() == 1:
 			api.copyToClip(articleInfo, True)
@@ -951,29 +982,29 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	@script(
 		# Translators: message presented in input mode.
 		description=_("Announces the title of the next article."),
-		gesture="kb:control+shift+NVDA+o"
+		gesture="kb:control+shift+NVDA+o",
 	)
 	def script_readNextArticle(self, gesture):
 		if not self.feed:
 			self.getFirstArticle()
 		self.feed.next()
-		ui.message(re.sub(TAG_REGEXP, '', self.feed.getArticleTitle()))
+		ui.message(re.sub(TAG_REGEXP, "", self.feed.getArticleTitle()))
 
 	@script(
 		# Translators: message presented in input mode.
 		description=_("Announces the title of the previous article."),
-		gesture="kb:control+shift+NVDA+u"
+		gesture="kb:control+shift+NVDA+u",
 	)
 	def script_readPriorArticle(self, gesture):
 		if not self.feed:
 			self.getFirstArticle()
 		self.feed.previous()
-		ui.message(re.sub(TAG_REGEXP, '', self.feed.getArticleTitle()))
+		ui.message(re.sub(TAG_REGEXP, "", self.feed.getArticleTitle()))
 
 	@script(
 		# Translators: message presented in input mode.
 		description=_("Announces article link, when pressed two times, opens related web page."),
-		gesture="kb:control+shift+NVDA+space"
+		gesture="kb:control+shift+NVDA+space",
 	)
 	def script_reportLink(self, gesture):
 		if not self.feed:
@@ -986,13 +1017,13 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	@script(
 		# Translators: message presented in input mode.
-		description=_("Copies title and related link of the current article to the clipboard.")
+		description=_("Copies title and related link of the current article to the clipboard."),
 	)
 	def script_copyArticleInfo(self, gesture):
 		if not self.feed:
 			self.getFirstArticle()
 		articleInfo = "{title}\r\n\r\n{address}".format(
-			title=re.sub(TAG_REGEXP, '', self.feed.getArticleTitle()),
-			address=self.feed.getArticleLink()
+			title=re.sub(TAG_REGEXP, "", self.feed.getArticleTitle()),
+			address=self.feed.getArticleLink(),
 		)
 		api.copyToClip(articleInfo, True)

@@ -145,5 +145,3 @@ It contains the following controls:
 ## Changes for 1.0 ##
 
 * Initial version.
-
-

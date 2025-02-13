@@ -214,4 +214,3 @@ Il contient les contrôles suivants :
 * Première version.
 
 [[!tag dev stable]]
-
