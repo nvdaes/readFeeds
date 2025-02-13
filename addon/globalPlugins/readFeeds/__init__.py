@@ -1,7 +1,7 @@
 # -*- coding: UTF-8 -*-
 
 # Read feeds: A simple plugin for reading feeds with NVDA
-# Copyright (C) 2012-2022 Noelia Ruiz Martínez, Mesar Hameed
+# Copyright (C) 2012-2025 Noelia Ruiz Martínez, Mesar Hameed
 # Released under GPL 2
 
 import os
@@ -26,6 +26,7 @@ import api
 import gui
 from gui import guiHelper
 from gui.settingsDialogs import SettingsPanel, NVDASettingsDialog
+from gui.message import MessageDialog, ReturnCode
 import core
 import ui
 from globalCommands import SCRCAT_CONFIG
@@ -134,12 +135,11 @@ def doCopy(copyDirectory):
 		)
 	except Exception as e:
 		wx.CallAfter(
-			gui.messageBox,
+			MessageDialog.alert,
 			# Translators: label of error dialog shown when cannot copy feeds folder.
 			_("Folder not copied"),
 			# Translators: title of error dialog shown when cannot copy feeds folder.
 			_("Copy Error"),
-			wx.OK | wx.ICON_ERROR
 		)
 		raise e
 
@@ -155,12 +155,11 @@ def doRestore(restoreDirectory):
 		)
 	except Exception as e:
 		wx.CallAfter(
-			gui.messageBox,
+			MessageDialog.alert,
 			# Translators: label of error dialog shown when cannot copy feeds folder.
 			_("Folder not copied"),
 			# Translators: title of error dialog shown when cannot copy feeds folder.
 			_("Copy Error"),
-			wx.OK | wx.ICON_ERROR
 		)
 		raise e
 
@@ -295,12 +294,11 @@ class FeedsDialog(wx.Dialog):
 			feed = Feed(address)
 		except Exception as e:
 			wx.CallAfter(
-				gui.messageBox,
+				MessageDialog.alert,
 				# Translators: Message presented when a feed cannot be added.
 				_('Cannot add feed: %s' % e),
 				# Translators: error message.
 				_("Error"),
-				wx.OK | wx.ICON_ERROR
 			)
 			raise e
 		feedName = feed.getFeedName().strip()
@@ -364,7 +362,7 @@ class FeedsDialog(wx.Dialog):
 
 	def onCopy(self, evt):
 		address = self.body.findall("outline")[self.filteredItems[self.sel]].get("xmlUrl")
-		if gui.messageBox(
+		if MessageDialog.ask(
 			_(
 				# Translators: the label of a message box dialog.
 				"Do you want to copy feed address to the clipboard?"
@@ -372,8 +370,7 @@ class FeedsDialog(wx.Dialog):
 			).format({address}),
 			# Translators: the title of a message box dialog.
 			_("Copy feed address"),
-			wx.YES | wx.NO | wx.CANCEL | wx.ICON_QUESTION
-		) == wx.YES:
+		) == ReturnCode.YES:
 			core.callLater(50, api.copyToClip, address, True)
 
 	def onNew(self, evt):
@@ -397,13 +394,13 @@ class FeedsDialog(wx.Dialog):
 		self.feedsList.SetFocus()
 
 	def onDelete(self, evt):
-		if gui.messageBox(
+		if MessageDialog.ask(
 			# Translators: The confirmation prompt displayed when the user requests to delete a feed.
 			_("Are you sure you want to delete this feed? This cannot be undone."),
 			# Message translated in NVDA core.
 			translate("Confirm Deletion"),
-			wx.YES | wx.NO | wx.ICON_QUESTION, self
-		) == wx.NO:
+			self
+		) == ReturnCode.NO:
 			self.feedsList.SetFocus()
 			return
 		outline = self.body.findall("outline")[self.filteredItems[self.sel]]
@@ -548,7 +545,7 @@ class ArticlesDialog(wx.Dialog):
 	def onArticlesListInfo(self, evt):
 		title = self.articlesList.StringSelection
 		address = self.Parent.feed.getArticleLink(self.articlesList.Selection)
-		if gui.messageBox(
+		if MessageDialog(
 			_(
 				# Translators: the label of a message box dialog.
 				"{}\n{}\n"
@@ -556,8 +553,7 @@ class ArticlesDialog(wx.Dialog):
 			).format(title, address),
 			# Translators: the title of a message box dialog.
 			_("Article information"),
-			wx.YES | wx.NO | wx.CANCEL | wx.ICON_QUESTION
-		) == wx.YES:
+		) == ReturnCode.YES:
 			articleInfo = f"{title}\n{address}\n"
 			core.callLater(50, api.copyToClip, articleInfo, True)
 
