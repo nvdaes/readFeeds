@@ -189,4 +189,3 @@ It contains the following controls:
 * Prvé vydanie.
 
 [[!tag dev stable]]
-

@@ -20,8 +20,12 @@ addonHandler.initTranslation()
 
 def onInstall():
 	previousFeedsPath = os.path.join(
-		CONFIG_PATH, "addons", "readFeeds",
-		"globalPlugins", "readFeeds", "personalFeeds"
+		CONFIG_PATH,
+		"addons",
+		"readFeeds",
+		"globalPlugins",
+		"readFeeds",
+		"personalFeeds",
 	)
 	if os.path.isdir(previousFeedsPath):
 		validFiles = glob.glob(previousFeedsPath + "\\*.txt")

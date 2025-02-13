@@ -200,4 +200,3 @@ Zawiera następujące kontrolki:
 * Pierwsza wersja.
 
 [[!tag dev stable]]
-
