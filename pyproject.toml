@@ -21,6 +21,7 @@ exclude = [
 	".git",
 	"__pycache__",
 	"buildVars.py",
+	"addon/globalPlugins/readFeeds/xml",
 ]
 
 [tool.ruff.format]
