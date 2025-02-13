@@ -577,7 +577,7 @@ class ArticlesDialog(wx.Dialog):
 		title = self.articlesList.StringSelection
 		address = self.Parent.feed.getArticleLink(self.articlesList.Selection)
 		if (
-			MessageDialog(
+			MessageDialog.ask(
 				_(
 					# Translators: the label of a message box dialog.
 					"{}\n{}\n" "Do you want to copy article title and link to the clipboard?",
