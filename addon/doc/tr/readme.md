@@ -195,4 +195,3 @@ Aşağıdaki kontrolleri içerir:
 * İlk sürüm.
 
 [[!tag dev stable]]
-
