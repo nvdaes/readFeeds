@@ -45,13 +45,13 @@ Se sisältää seuraavat säätimet:
   Syötteet-valintaikkunassa käytettävissä olevien syötteiden tallentamiseen
   OPML-tiedostoon.
 * Asetukset: Avaa Lue syötteet -lisäosan asetusvalintaikkunan. Löytyy myös
-  NVDA-valikosta kohdasta Asetukset / Asetukset / Lue syötteet -kategoria.
+  NVDA-valikosta kohdasta Mukautukset / Asetukset / Lue syötteet -kategoria.
 * Sulje: Sulkee Syötteet-valintaikkunan.
 
 ### Huomautuksia #####
 
 * Suodata-muokkauskenttä voidaan sijoittaa Avaa artikkeli -painikkeen
-  jälkeen NVDA-valikosta kohdasta Asetukset / Asetukset Lue syötteet
+  jälkeen NVDA-valikosta kohdasta Mukautukset / Asetukset / Lue syötteet
   -kategoria tai painamalla Syötteet-valintaikkunan Asetukset-painiketta.
 * Tässä paneelissa on vaihtoehto artikkelien päivämäärien näyttämiseen
   Artikkeliluettelo-valintaikkunassa.
