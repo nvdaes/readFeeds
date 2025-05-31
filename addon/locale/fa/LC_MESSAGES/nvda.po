@@ -8,22 +8,22 @@ msgstr ""
 "Project-Id-Version: readFeeds 1.1-dev\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2014-04-11 18:00+0100\n"
-"PO-Revision-Date: 2021-08-14 01:13+0330\n"
+"PO-Revision-Date: 2025-05-29 11:01+0330\n"
 "Last-Translator: Mohammadreza Rashad <mohammadreza5712@gmail.com>\n"
 "Language-Team: NVDA Translation Team <nvda-translations@groups.io>\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.10\n"
+"X-Generator: Poedit 3.6\n"
 
 #. Translators: message presented when feeds cannot be reported.
 msgid ""
-"Unable to refresh feed. Check your Internet conectivity or that the "
-"specified feed address is correct."
+"Unable to refresh feed. Check your Internet conectivity or that the specified "
+"feed address is correct."
 msgstr ""
-"نمیتوانم خوراک را نوسازی کنم. اتصال اینترنتتان را بررسی کنید یا مطمئن شوید "
-"که نشانیِ خوراکِ موردِ نظرتان درست باشد."
+"نمیتوانم خوراک را نوسازی کنم. اتصال اینترنتتان را بررسی کنید یا مطمئن شوید که "
+"نشانیِ خوراکِ موردِ نظرتان درست باشد."
 
 #. Translators: Message presented when feeds have been copied.
 msgid "Feeds copied"
@@ -42,13 +42,12 @@ msgid "Feeds restored"
 msgstr "خوراک‌ها بازگردانده شدند"
 
 #. Translators: Title of a dialog.
-#, fuzzy
 msgid "Feeds: {}"
-msgstr "خوراک‌خوان"
+msgstr "خوراک‌خوان: {}"
 
 #. Translators: Label of a dialog (message translated in NVDA's core in different contexts).
 msgid "&Filter by:"
-msgstr "&فیلتر کردن با"
+msgstr "&فیلتر کردن با:"
 
 #. Translators: The label of a button to open the list of articles of a feed.
 msgid "List of &articles..."
@@ -68,28 +67,27 @@ msgstr "&کپیِ نشانیِ خوراک"
 
 #. Translators: The label of a button to add a new feed.
 msgid "&New..."
-msgstr "&جدید"
+msgstr "&جدید..."
 
 #. Translators: The label of a button to rename a feed.
 msgid "&Rename..."
-msgstr "&تغییرِ نام"
+msgstr "&تغییرِ نام..."
 
 #. Translators: The label of a button to delete a feed.
 msgid "&Delete..."
-msgstr "&حذف کردن"
+msgstr "&حذف کردن..."
 
 #. Translators: The label of a button to set a feed as default.
 msgid "S&et default"
 msgstr "تن&ظیم به عنوانِ پیش‌فرض"
 
 #. Translators: The label of a button to import feeds from OPML.
-#, fuzzy
 msgid "&Import feeds from OPML file..."
-msgstr "&کپیِ پوشه‌ی خوراک‌ها..."
+msgstr "&وارد کردنِ خوراک‌ها از فایل OPML..."
 
 #. Translators: The label of a button to save feeds to OPML file.
 msgid "&Save feeds to OPML file..."
-msgstr ""
+msgstr "&ذخیره‌ی خوراک‌ها در فایلِ OPML..."
 
 #. Translators: The label of a button to open the settings dialog for readFeeds.
 msgid "&Preferences..."
@@ -105,14 +103,12 @@ msgid "Error"
 msgstr "خطا"
 
 #. Translators: the label of a message box dialog.
-#, fuzzy
 msgid ""
 "Do you want to copy feed address to the clipboard?\n"
 "{}"
 msgstr ""
-"آیا میخواهید نشانیِ خوراک را در کلیپ‌برد کپی کنید\r\n"
-"\r\n"
-"{feedAddress}؟"
+"آیا میخواهید نشانیِ خوراک را در کلیپ‌برد کپی کنید؟\n"
+"{}"
 
 #. Translators: the title of a message box dialog.
 msgid "Copy feed address"
@@ -128,8 +124,7 @@ msgstr "خوراکِ جدید"
 
 #. Translators: The confirmation prompt displayed when the user requests to delete a feed.
 msgid "Are you sure you want to delete this feed? This cannot be undone."
-msgstr ""
-"آیا مطمئنید که میخواهید این خوراک را حذف کنید؟ این کار بازگشت‌پذیر نیست."
+msgstr "آیا مطمئنید که میخواهید این خوراک را حذف کنید؟ این کار بازگشت‌پذیر نیست."
 
 #. Translators: The label of a field to enter a new name for a feed.
 msgid "New name:"
@@ -141,15 +136,15 @@ msgstr "تغییرِ نامِ خوراک‌ها"
 
 #. Translators: Label for a file dialog.
 msgid "Open OPML file"
-msgstr ""
+msgstr "باز کردنِ فایلِ OPML"
 
 #. Translators: Wildcards for a file dialog
 msgid "OPML files (*.opml)|*.opml"
-msgstr ""
+msgstr "فایل‌های OPML (*.opml)|*.opml"
 
 #. Translators: Label of a button on the Feeds dialog.
 msgid "Save As"
-msgstr ""
+msgstr "ذخیره به عنوانِ"
 
 #. Translators: The label of the articles list in the articles dialog.
 msgid "List of articles"
@@ -161,19 +156,21 @@ msgstr "نمیتوانم عنوانِ مقاله را پیدا کنم."
 
 #. Translators: The label of a button to open the selected article of a feed.
 msgid "Open &web page of selected article."
-msgstr "باز کردنِ صفحه‌ی &وبِ مقاله‌ی انتخاب‌شده"
+msgstr "باز کردنِ صفحه‌ی &وبِ مقاله‌ی انتخاب‌شده."
 
 #. Translators: The label of a button to show information of a feed article.
 msgid "&About article..."
 msgstr "&درباره‌ی مقاله..."
 
 #. Translators: the label of a message box dialog.
-#, fuzzy
 msgid ""
 "{}\n"
 "{}\n"
 "Do you want to copy article title and link to the clipboard?"
-msgstr "%s میخواهید عنوان و لینکِ مقاله را در کلیپ‌برد کپی کنید؟"
+msgstr ""
+"{}\n"
+"{}\n"
+"میخواهید عنوان و لینکِ مقاله را در کلیپ‌برد کپی کنید؟"
 
 #. Translators: the title of a message box dialog.
 msgid "Article information"
@@ -185,7 +182,7 @@ msgstr "کادرِ ویرایشیِ &جستجو بعد از فهرستِ خور�
 
 #. Translators: label of a dialog.
 msgid "&Show articles Date"
-msgstr ""
+msgstr "&نمایشِ تاریخِ مقاله‌ها"
 
 #. Translators: Presented when the current article does not have an associated link.
 msgid "Unable to locate article link."
@@ -222,11 +219,11 @@ msgstr "خوراکِ جاری را نوسازی کرده و جدید‌ترین 
 
 #. Translators: message presented in input mode.
 msgid ""
-"Announces the title of the current article. Pressed two times, copies title "
-"and related link to the clipboard."
+"Announces the title of the current article. Pressed two times, copies title and "
+"related link to the clipboard."
 msgstr ""
-"عنوانِ مقاله‌ی جاری را میخوانَد. وقتی دو بار فشرده شود، عنوان و لینک مربوط به "
-"آن را در کلیپ‌برد کپی میکند."
+"عنوانِ مقاله‌ی جاری را میخوانَد. وقتی دو بار فشرده شود، عنوان و لینک مربوط به آن را "
+"در کلیپ‌برد کپی میکند."
 
 #. Translators: message presented when the information about an article of a feed
 #. is copied to the clipboard.
@@ -236,21 +233,21 @@ msgstr "در کلیپ‌برد کپی شد: %s"
 
 #. Translators: message presented in input mode.
 msgid "Announces the title of the next article."
-msgstr "عنوانِ مقاله‌ی بعدی را میخوانَد"
+msgstr "عنوانِ مقاله‌ی بعدی را میخوانَد."
 
 #. Translators: message presented in input mode.
 msgid "Announces the title of the previous article."
-msgstr "عنوانِ مقاله‌ی قبلی را میخوانَد"
+msgstr "عنوانِ مقاله‌ی قبلی را میخوانَد."
 
 #. Translators: message presented in input mode.
 msgid "Announces article link, when pressed two times, opens related web page."
 msgstr ""
-"لینکِ مقاله را میخوانَد. وقتی دو بار فشرده شود، صفحه‌ی وبِ مربوط به آن مقاله را "
-"باز میکند."
+"لینکِ مقاله را میخوانَد. وقتی دو بار فشرده شود، صفحه‌ی وبِ مربوط به آن مقاله را باز "
+"میکند."
 
 #. Translators: message presented in input mode.
 msgid "Copies title and related link of the current article to the clipboard."
-msgstr "عنوان و لینکِ مقاله‌ی جاری را در کلیپ‌برد کپی میکند"
+msgstr "عنوان و لینکِ مقاله‌ی جاری را در کلیپ‌برد کپی میکند."
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
@@ -260,11 +257,10 @@ msgstr "خوراک‌خوان"
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Add-on for using NVDA as a feed reader."
-msgstr "افزونه‌ای برای استفاده از NVDA به عنوانِ یک خوراک‌خوان"
+msgstr "افزونه‌ای برای استفاده از NVDA به عنوانِ یک خوراک‌خوان."
 
 #~ msgid ""
-#~ "Your configuration folder for NVDA contains files that seem to be "
-#~ "derived\n"
+#~ "Your configuration folder for NVDA contains files that seem to be derived\n"
 #~ "\t\t\t\tfrom a previous version of this add-on.\n"
 #~ "\t\t\t\tDo you want to update it?"
 #~ msgstr ""
@@ -298,8 +294,8 @@ msgstr "افزونه‌ای برای استفاده از NVDA به عنوانِ 
 
 #~ msgid "Select a folder to restore a backup of your previous copied feeds"
 #~ msgstr ""
-#~ "پوشه‌ای را برای برگرداندنِ یک نسخه‌ی پشتیبان از خوراک‌های از پیش کپی‌شده‌ی‌تان "
-#~ "انتخاب کنید"
+#~ "پوشه‌ای را برای برگرداندنِ یک نسخه‌ی پشتیبان از خوراک‌های از پیش کپی‌شده‌ی‌تان انتخاب "
+#~ "کنید"
 
 #~ msgid "directory containing backup:"
 #~ msgstr "پوشه‌ی حاویِ پشتیبان:"
