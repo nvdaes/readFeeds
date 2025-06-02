@@ -192,4 +192,3 @@ It contains the following controls:
 * Første version.
 
 [[!tag dev stable]]
-
