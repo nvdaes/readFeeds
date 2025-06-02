@@ -23,7 +23,7 @@ legújabb verzióban is változatlanul használni.
 ### Hírcsatorna-olvasó menü ###
 
 A Hírcsatorna-olvasó almenü elérhető az NVDA menüjéből (NVDA+N), ahol az
-alábbi menüpontokat érheti el: 
+alábbi menüpontokat érheti el:
 
 - Cikkek Listája: a kiválasztott hírcsatorna cikkeit tartalmazza. Válassza
 ki az olvasni kívánt cikket, majd az Igen gomb lenyomásával a cikkhez
@@ -78,4 +78,3 @@ kiválasztott hírcsatorna nevét és az elérhető elemek számát.
 [1]: http://addons.nvda-project.org/files/get.php?file=rf-dev
 
 [2]: http://addons.nvda-project.org/files/get.php?file=rf
-
