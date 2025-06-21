@@ -52,6 +52,10 @@ It contains the following controls:
 * NVDA will display an error message if a new feed cannot be created.
 * “文章列表”对话框的标题显示所选的源名称和可用项目数。
 
+## Changes for 39.0.0
+
+* Improved notifications when title or URL are copied.
+
 ## Changes for 34.0.0
 
 * Added support for rss.cbc.ca feeds.
@@ -64,6 +68,10 @@ It contains the following controls:
 ## Changes for 20.0
 
 * universalFeedParser is updated to 5.0.1, adding support for more feeds.
+
+## Changes for 15.0
+
+* Compatible with NVDA 2023.1.
 
 ## Changes for 14.0
 

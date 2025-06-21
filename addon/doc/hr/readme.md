@@ -78,6 +78,10 @@ Sadrži sljedeće kontrole:
 * Naslov dijaloškog okvira popisa članaka prikazuje odabrani naziv feeda i
   broj dostupnih stavki.
 
+## Changes for 39.0.0
+
+* Improved notifications when title or URL are copied.
+
 ## Changes for 34.0.0
 
 * Added support for rss.cbc.ca feeds.
@@ -91,6 +95,10 @@ Sadrži sljedeće kontrole:
 
 * universalFeedParser je aktualiziran na 5.0.1, dodajući podršku za više
   feedova.
+
+## Changes for 15.0
+
+* Compatible with NVDA 2023.1.
 
 ## Promjene u verziji 14.0
 

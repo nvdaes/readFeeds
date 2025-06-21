@@ -84,6 +84,10 @@ Sie enthält die folgenden Steuerelemente:
 * Im Titel des Dialogs für die Artikellisten werden der Name des
   ausgewählten Feeds und die Anzahl der verfügbaren Artikel angezeigt.
 
+## Changes for 39.0.0
+
+* Improved notifications when title or URL are copied.
+
 ## Changes for 34.0.0
 
 * Added support for rss.cbc.ca feeds.
@@ -97,6 +101,10 @@ Sie enthält die folgenden Steuerelemente:
 
 * Der Universal Feed Parser wurde auf 5.0.1 aktualisiert und unterstützt nun
   mehr RSS-Feeds.
+
+## Changes for 15.0
+
+* Compatible with NVDA 2023.1.
 
 ## Änderungen in 14.0
 

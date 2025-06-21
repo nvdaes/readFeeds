@@ -79,6 +79,10 @@ Ele contém os seguintes controles:
 * O título do diálogo Lista de artigos mostra o nome do feed selecionado e o
   número de itens disponíveis.
 
+## Changes for 39.0.0
+
+* Improved notifications when title or URL are copied.
+
 ## Mudanças na 34.0.0
 
 * Adicionado suporte para feeds rss.cbc.ca.
@@ -92,6 +96,10 @@ Ele contém os seguintes controles:
 
 * o universalFeedParser foi atualizado para a versão 5.0.1, adicionando
   suporte a mais feeds.
+
+## Changes for 15.0
+
+* Compatible with NVDA 2023.1.
 
 ## Mudanças na 14.0
 

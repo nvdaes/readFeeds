@@ -74,6 +74,10 @@ It contains the following controls:
 * Titlen på dialogen der viser listen over artikler viser navnet på det
   aktuelle feed, samt antallet af artikler til rådighed.
 
+## Changes for 39.0.0
+
+* Improved notifications when title or URL are copied.
+
 ## Changes for 34.0.0
 
 * Added support for rss.cbc.ca feeds.
@@ -86,6 +90,10 @@ It contains the following controls:
 ## Changes for 20.0
 
 * universalFeedParser is updated to 5.0.1, adding support for more feeds.
+
+## Changes for 15.0
+
+* Compatible with NVDA 2023.1.
 
 ## Ændringer for 14.0
 

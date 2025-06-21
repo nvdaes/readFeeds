@@ -79,6 +79,10 @@
 * Діалог з назвою списку статей відображає ім’я вибраної стрічки новин з
   кількістю доступних елементів.
 
+## Changes for 39.0.0
+
+* Improved notifications when title or URL are copied.
+
 ## Changes for 34.0.0
 
 * Added support for rss.cbc.ca feeds.
@@ -91,6 +95,10 @@
 ## Changes for 20.0
 
 * universalFeedParser is updated to 5.0.1, adding support for more feeds.
+
+## Changes for 15.0
+
+* Compatible with NVDA 2023.1.
 
 ## Зміни у версії 14.0
 

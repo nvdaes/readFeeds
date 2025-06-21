@@ -77,6 +77,10 @@ Se sisältää seuraavat säätimet:
 * Valitun syötteen nimi ja saatavilla olevien artikkeleiden määrä näytetään
   Artikkeliluettelo-valintaikkunan otsikossa.
 
+## Muutokset versiossa 39.0.0
+
+* Parannellut ilmoitukset otsikon tai URL-osoitteen kopioinnista.
+
 ## Muutokset versiossa 34.0.0
 
 * Lisätty tuki rss.cbc.ca-syötteille.
@@ -90,6 +94,10 @@ Se sisältää seuraavat säätimet:
 
 * universalFeedParser-moduuli on päivitetty versioksi 5.0.1, joka lisää tuen
   useammille syötteille.
+
+## Muutokset versiossa 15.0
+
+* Yhteensopiva NVDA 2023.1:n kanssa
 
 ## Muutokset versiossa 14.0
 

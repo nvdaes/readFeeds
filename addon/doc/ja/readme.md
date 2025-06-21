@@ -53,6 +53,10 @@ Read Feedsダイアログにnvdaメニュー、ツールサブメニュー、Fee
 * NVDAは、新しいフィードを作成出来ない時、エラーメッセージを表示します。
 * 記事リストダイアログのタイトルは、選択されたフィードの名前と、利用可能な項目の数を表示します。
 
+## Changes for 39.0.0
+
+* Improved notifications when title or URL are copied.
+
 ## Changes for 34.0.0
 
 * Added support for rss.cbc.ca feeds.
@@ -65,6 +69,10 @@ Read Feedsダイアログにnvdaメニュー、ツールサブメニュー、Fee
 ## Changes for 20.0
 
 * universalFeedParser is updated to 5.0.1, adding support for more feeds.
+
+## Changes for 15.0
+
+* Compatible with NVDA 2023.1.
 
 ## 14.0の変更点
 

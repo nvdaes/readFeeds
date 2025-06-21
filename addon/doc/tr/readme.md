@@ -74,6 +74,10 @@ Aşağıdaki kontrolleri içerir:
 * Makale listesi iletişim kutusunun başlığı, seçilen akış adını ve mevcut
   öğelerin sayısını gösterir.
 
+## 39.0.0 İçin değişiklikler
+
+* Başlık veya URL kopyalandığında geliştirilmiş bildirimler.
+
 ## 34.0.0 İçin değişiklikler
 
 * Rss.cbc.ca akışları için destek eklendi.
@@ -87,6 +91,10 @@ Aşağıdaki kontrolleri içerir:
 
 * universalFeedParser, 5.0.1'e güncellendi ve daha fazla akış için destek
   eklendi.
+
+## 15.0 İçin değişiklikler
+
+* NVDA 2023.1 ile uyumlu.
 
 ## 14.0İçin değişiklikler
 
