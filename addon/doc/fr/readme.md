@@ -86,9 +86,9 @@ Il contient les contrôles suivants :
 * La boîte de dialogue affiche Le titre de la Liste de l'article le nom de
   flux sélectionné et le nombre d'éléments disponibles.
 
-## Changes for 39.0.0
+## Changements pour la version 39.0.0
 
-* Improved notifications when title or URL are copied.
+* Amélioration des notifications lorsque le titre ou l'URL ont été copiés.
 
 ## Changements pour la version 34.0.0
 
@@ -104,9 +104,9 @@ Il contient les contrôles suivants :
 * universalFeedParser est mis à jour vers la 5.0.1, ajoutant la prise en
   charge de plus de flux.
 
-## Changes for 15.0
+## Changements pour la version 15.0
 
-* Compatible with NVDA 2023.1.
+* Compatible avec NVDA 2023.1.
 
 ## Changements pour la version 14.0
 
