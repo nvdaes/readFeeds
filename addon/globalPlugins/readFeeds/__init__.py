@@ -1,5 +1,3 @@
-# -*- coding: UTF-8 -*-
-
 # Read feeds: A simple plugin for reading feeds with NVDA
 # Copyright (C) 2012-2025 Noelia Ruiz Martínez, Mesar Hameed
 # Released under GPL 2
@@ -31,9 +29,9 @@ import core
 import ui
 from globalCommands import SCRCAT_CONFIG
 from logHandler import log
+from xml.etree import ElementTree
 
 from .skipTranslation import translate
-from .xml.etree import ElementTree
 
 addonHandler.initTranslation()
 
