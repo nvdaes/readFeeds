@@ -151,4 +151,3 @@ Read Feedsダイアログにnvdaメニュー、ツールサブメニュー、Fee
 * 最初のバージョン。
 
 [[!tag dev stable]]
-
