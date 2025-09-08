@@ -206,4 +206,3 @@ Sadrži sljedeće kontrole:
 * Prva verzija.
 
 [[!tag dev stable]]
-
