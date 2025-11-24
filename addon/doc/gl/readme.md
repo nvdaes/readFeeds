@@ -206,4 +206,3 @@ Contén os seguintes controis:
 * Versión inicial.
 
 [[!tag dev stable]]
-
