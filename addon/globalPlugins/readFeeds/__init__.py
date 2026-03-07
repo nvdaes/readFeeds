@@ -61,7 +61,7 @@ config.conf.spec["readFeeds"] = confspec
 # User agents
 
 userAgents = {
-	"www.cbc.ca": "Bloglines/3.1 (http://www.bloglines.com)",
+	"www.cbc.ca": "Mozilla/5.0",
 	"rss.cbc.ca": "Bloglines/3.1 (http://www.bloglines.com)",
 }
 
@@ -377,7 +377,7 @@ class FeedsDialog(wx.Dialog):
 			MessageDialog.ask(
 				_(
 					# Translators: the label of a message box dialog.
-					"Do you want to copy feed address to the clipboard?" "\n{}",
+					"Do you want to copy feed address to the clipboard?\n{}",
 				).format({address}),
 				# Translators: the title of a message box dialog.
 				_("Copy feed address"),
@@ -578,7 +578,7 @@ class ArticlesDialog(wx.Dialog):
 			MessageDialog.ask(
 				_(
 					# Translators: the label of a message box dialog.
-					"{}\n{}\n" "Do you want to copy article title and link to the clipboard?",
+					"{}\n{}\nDo you want to copy article title and link to the clipboard?",
 				).format(title, address),
 				# Translators: the title of a message box dialog.
 				_("Article information"),
@@ -826,7 +826,7 @@ class Feed(object):
 			if enclosure is not None:
 				enclosureType = self.getArticleEnclosureType(index)
 				enclosureLength = self.getArticleEnclosureLength(index)
-				raw += '<div><a href="' + enclosure + '">' + enclosureType + f"{str(index+1)}</a>"
+				raw += '<div><a href="' + enclosure + '">' + enclosureType + f"{str(index + 1)}</a>"
 				raw += f" ({str(enclosureLength / 1024)} kB)</div>"
 		raw += '<script src="feed.js"></script></body></html>'
 		with open(os.path.join(HTML_PATH, "feed.html"), "w", encoding="utf-8") as f:
