@@ -61,7 +61,7 @@ config.conf.spec["readFeeds"] = confspec
 # User agents
 
 userAgents = {
-	"www.cbc.ca": "Bloglines/3.1 (http://www.bloglines.com)",
+	"www.cbc.ca": "Mozilla/5.0",
 	"rss.cbc.ca": "Bloglines/3.1 (http://www.bloglines.com)",
 }
 
