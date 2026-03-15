@@ -23,7 +23,7 @@ addon_info = AddonInfo(
     # Translators: Long description to be shown for this add-on on add-on information from add-on store
     addon_description=_("""Add-on for using NVDA as a feed reader."""),
     # version
-    addon_version="44.0.0",
+    addon_version="45.0.0",
     # Author(s)
     addon_author=u"Noelia Ruiz Martínez <nrm1977@gmail.com>, Mesar Hameed <mesar.hameed@gmail.com>",
     # URL for the add-on documentation support
