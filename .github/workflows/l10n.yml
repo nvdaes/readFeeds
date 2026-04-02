@@ -17,7 +17,7 @@ jobs:
       - name: Download l10nUtil.exe from nvaccess/nvdaL10n
         run: |
           # Download the latest release asset matching the pattern from the specified repository
-          gh release download -R github.com/nvaccess/nvdaL10n -p "l10nUtil.exe" -D .
+          gh release download -R github.com/nvaccess/nvdaL10n -p "l10nUtil.exe" -D ./.github/workflows/
         env:
           GH_TOKEN: ${{ github.token }}
       - name: Export translations
