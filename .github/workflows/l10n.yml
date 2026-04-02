@@ -8,7 +8,7 @@ on:
 
 jobs:
   l10n:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     permissions:
       contents: write
     steps:
@@ -17,7 +17,7 @@ jobs:
       - name: Download l10nUtil.exe from nvaccess/nvdaL10n
         run: |
           # Download the latest release asset matching the pattern from the specified repository
-          gh release download --repo nvaccess/nvdaL10n --pattern "l10nUtil.exe"
+          gh release download --repo nvaccess/nvdaL10n -p "l10nUtil.exe"
         env:
           GH_TOKEN: ${{ github.token }}
       - name: Export translations
