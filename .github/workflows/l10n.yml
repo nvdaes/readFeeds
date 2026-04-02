@@ -1,0 +1,25 @@
+name: Localization Workflow
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: '0 1 * * 1'  # Every Monday at 1:00 AM UTC (minute hour day month weekday)
+
+jobs:
+  l10n:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+      - name: Download l10nUtil.exe from nvaccess/nvdaL10n
+        run: |
+          # Download the latest release asset matching the pattern from the specified repository
+          gh release download --repo nvaccess/nvdaL10n --pattern "l10nUtil.exe"
+        env:
+          GH_TOKEN: ${{ github.token }}
+      - name: Export translations
+        run: |
+          l10nUtil.exe exportTranslations -o ./_l10n -c addon
