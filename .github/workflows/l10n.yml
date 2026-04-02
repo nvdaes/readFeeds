@@ -6,6 +6,9 @@ on:
   schedule:
     - cron: '0 1 * * 1'  # Every Monday at 1:00 AM UTC (minute hour day month weekday)
 
+env:
+  crowdinAuthToken: ${{ secrets.CROWDIN_TOKEN }}
+  
 jobs:
   l10n:
     runs-on: windows-latest
