@@ -33,11 +33,11 @@ addon_info = AddonInfo(
     # Documentation file name
     addon_docFileName="readme.html",
     # Translators: Changelog for this add-on, to be shown on add-on information from add-on store
-    addon_changelog=None,
+    addon_changelog="* Compatible with NVDA 2026.1.",
     # Minimum NVDA version supported (e.g. "2019.3.0", minor version is optional)
-    addon_minimumNVDAVersion="2025.2",
+    addon_minimumNVDAVersion="2026.1",
     # Last NVDA version supported/tested (e.g. "2024.4.0", ideally more recent than minimum version)
-    addon_lastTestedNVDAVersion="2025.2",
+    addon_lastTestedNVDAVersion="2026.1",
     # Add-on update channel (default is None, denoting stable releases,
     # and for development releases, use "dev".)
     # Do not change unless you know what you are doing!
