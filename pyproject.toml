@@ -31,6 +31,7 @@ dependencies = [
 	"markdown-link-attr-modifier==0.2.1",
 	"mdx-gh-links==0.4",
 	"polib==1.2.0",
+	"langid==1.1.6",
 	# Lint
 	"uv==0.11.6",
 	"ruff==0.14.5",
