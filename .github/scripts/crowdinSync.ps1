@@ -4,8 +4,14 @@ write-host "Exporting translations from Crowdin..."
 New-Item -ItemType Directory -Force -Path addon/locale | Out-Null
 New-Item -ItemType Directory -Force -Path addon/doc | Out-Null
 Write-Host "Getting addon ID..."
-$addonId = python ./.github/scripts/getAddonInfo.py 2>$null
+Push-Location "$PSScriptRoot/../.."
+$addonId = & py -3 ./.github/scripts/getAddonInfo.py 2>$null
 $addonId = $addonId.Trim()
+Pop-Location
+if (-not $addonId) {
+    Write-Error "Failed to get addon ID. Ensure buildVars.py and dependencies are present."
+    exit 1
+}
 
 foreach ($dir in Get-ChildItem -Path "_addonL10n/$addonId" -Directory) {
     Write-Host "=============================="
