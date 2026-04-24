@@ -11,4 +11,5 @@ import buildVars
 
 def main():
 	addonId = buildVars.addon_info["addon_name"]
-	print(addonId)
+	# Print only the addonId so it can be captured by PowerShell
+	print(addonId, end="")
