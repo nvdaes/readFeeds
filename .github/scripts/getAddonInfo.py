@@ -1,4 +1,4 @@
-# Copyright (C) 2025 NV Access Limited, Noelia Ruiz Martínez
+# Copyright (C) 2026 NV Access Limited, Noelia Ruiz Martínez
 # This file is covered by the GNU General Public License.
 # See the file COPYING for more details.
 
@@ -11,5 +11,5 @@ import buildVars
 
 def main():
 	addonId = buildVars.addon_info["addon_name"]
-	# Print only the addonId so it can be captured by PowerShell
+	# Output only the addonId for capture by PowerShell (do not print anything else)
 	print(addonId, end="", flush=True)
