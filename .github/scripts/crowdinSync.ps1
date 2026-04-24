@@ -5,6 +5,7 @@ New-Item -ItemType Directory -Force -Path addon/locale | Out-Null
 New-Item -ItemType Directory -Force -Path addon/doc | Out-Null
 Write-Host "Getting addon ID..."
 uv run ./.github/scripts/getAddonInfo.py
+Write-Host "Script executed"
 $addonId = $env:ADDON_ID.Trim()
 if (-not $addonId) {
     Write-Error "Failed to get addon ID. Ensure buildVars.py and dependencies are present."
