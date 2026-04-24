@@ -12,4 +12,4 @@ import buildVars
 def main():
 	addonId = buildVars.addon_info["addon_name"]
 	# Output only the addonId for capture by PowerShell (do not print anything else)
-	print(addonId, end="", flush=True)
+	os.environ["ADDON_ID"] = addonId
