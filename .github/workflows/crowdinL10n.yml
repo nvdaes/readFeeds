@@ -49,5 +49,6 @@ jobs:
 
       - name: Download translations from Crowdin
         shell: pwsh
-        env: ADDON_ID="${{ steps.getAddonInfo.outputs.addonId }}"
+        env:
+          ADDON_ID: ${{ steps.getAddonInfo.outputs.addonId }}
         run: ./.github/scripts/crowdinSync.ps1
