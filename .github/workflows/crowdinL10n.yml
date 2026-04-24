@@ -36,11 +36,6 @@ jobs:
       - name: Install dependencies
         run: uv sync
 
-      - name: Get add-on info
-        id: getAddonInfo
-        shell: pwsh
-        run: uv run ./.github/scripts/setOutputs.py
-
       - name: Download l10nUtil
         run: |
           gh release download --repo nvaccess/nvdaL10n --pattern "l10nUtil.exe"
