@@ -86,12 +86,12 @@ foreach ($dir in Get-ChildItem -Path "_addonL10n/$addonId" -Directory) {
           git diff --staged --quiet
           if ($LASTEXITCODE -ne 0) {
             git commit -m "Update translations for $addonId from Crowdin"
-            git switch ${{ env.downloadTranslationsBranch }} 2>$null
+            git switch ${{ env:downloadTranslationsBranch }} 2>$null
 
             if ($LASTEXITCODE -ne 0) {
-              git switch -c ${{ env.downloadTranslationsBranch }}
+              git switch -c ${{ env:downloadTranslationsBranch }}
             }
-            git push -f --set-upstream origin ${{ env.downloadTranslationsBranch }}
+            git push -f --set-upstream origin ${{ env:downloadTranslationsBranch }}
           } else {
             Write-Host "Nothing to commit."
           }
