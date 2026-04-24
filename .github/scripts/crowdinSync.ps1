@@ -5,7 +5,7 @@ New-Item -ItemType Directory -Force -Path addon/locale | Out-Null
 New-Item -ItemType Directory -Force -Path addon/doc | Out-Null
 Write-Host "Getting addon ID..."
 # Run the Python command and capture output and errors
-$addonIdOutput = uv run ./getAddonInfo.py 2>&1
+$addonIdOutput = uv run ./.github/scripts/getAddonInfo.py 2>&1
 Write-Host "Python command output: $addonIdOutput"
 $addonId = $addonIdOutput.Trim()
 if (-not $addonId) {
