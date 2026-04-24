@@ -1,11 +1,11 @@
+#!/usr/bin/env pwsh
+$ErrorActionPreference = 'Stop'
+
 write-host "Exporting translations from Crowdin..."
 ./l10nUtil.exe exportTranslations -o _addonL10n -c addon
 
 New-Item -ItemType Directory -Force -Path addon/locale | Out-Null
 New-Item -ItemType Directory -Force -Path addon/doc | Out-Null
-Write-Host "Getting addon ID..."
-uv run ./.github/scripts/getAddonInfo.py
-Write-Host "Script executed"
 $addonId = $env:ADDON_ID.Trim()
 if (-not $addonId) {
     Write-Error "Failed to get addon ID. Ensure buildVars.py and dependencies are present."
@@ -70,9 +70,28 @@ foreach ($dir in Get-ChildItem -Path "_addonL10n/$addonId" -Directory) {
             Write-Host "Converting XLIFF → MD"
             ./l10nUtil.exe xliff2md $xliffFile $mdFile
         } else {
-            Write-Host "XLIFF not valid"
+            Write-Host "XLIFF not translated"
         }
     } else {
         Write-Host "No XLIFF file found"
     }
 } # End foreach
+
+          # COMMIT CHANGES
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add addon/locale addon/doc
+
+          git diff --staged --quiet
+          if ($LASTEXITCODE -ne 0) {
+            git commit -m "Update translations for $addonId from Crowdin"
+            git switch ${{ env.downloadTranslationsBranch }} 2>$null
+
+            if ($LASTEXITCODE -ne 0) {
+              git switch -c ${{ env.downloadTranslationsBranch }}
+            }
+            git push -f --set-upstream origin ${{ env.downloadTranslationsBranch }}
+          } else {
+            Write-Host "Nothing to commit."
+          }

@@ -3,6 +3,7 @@ name: Crowdin l10n
 on:
   workflow_dispatch:
   schedule:
+    # Every Monday at 00:00 UTC
     - cron: '0 0 * * 1'
 
 concurrency:
@@ -19,6 +20,7 @@ jobs:
     runs-on: windows-latest
     permissions:
       contents: write
+
     steps:
       - name: Checkout add-on
         uses: actions/checkout@v6
@@ -36,32 +38,16 @@ jobs:
       - name: Install dependencies
         run: uv sync
 
+      - name: Get add-on info
+        id: getAddonInfo
+        shell: pwsh
+        run: uv run ./.github/scripts/setOutputs.py
+
       - name: Download l10nUtil
         run: |
           gh release download --repo nvaccess/nvdaL10n --pattern "l10nUtil.exe"
 
       - name: Download translations from Crowdin
         shell: pwsh
-        run: |
-          ./.github/scripts/crowdinSync.ps1
-
-          # COMMIT
-          # ----------------------------
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-
-          git add addon/locale addon/doc
-
-          git diff --staged --quiet
-          if ($LASTEXITCODE -ne 0) {
-            git commit -m "Update translations for $addonId from Crowdin"
-
-            git switch ${{ env.downloadTranslationsBranch }} 2>$null
-            if ($LASTEXITCODE -ne 0) {
-              git switch -c ${{ env.downloadTranslationsBranch }}
-            }
-
-            git push -f --set-upstream origin ${{ env.downloadTranslationsBranch }}
-          } else {
-            Write-Host "Nothing to commit."
-          }
+        env: ADDON_ID=${{ steps.getAddonInfo.outputs.addonId }}
+        run: ./.github/scripts/crowdinSync.ps1
