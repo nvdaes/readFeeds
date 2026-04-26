@@ -1,0 +1,1027 @@
+<?xml version="1.0"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="en">
+<file id="readme.md" original="https://raw.githubusercontent.com/nvdaes/readFeeds/429fe91e8ffd2e5fdd6aa1d0d075e0125d9830da/readme.md">
+<skeleton>
+# $(ID:a3a4b46e-647f-4bb0-bcb5-eb3384c7612c)
+
+* $(ID:30304456-bb39-4e3d-9484-088412645cbf)
+
+$(ID:79f90bb7-63df-4cb8-a502-b1a9eb66d3c5)
+$(ID:3d6a41e8-349d-482e-82a8-aae8c3c4a009)
+$(ID:9805db6e-23b1-4b0b-9664-add585e9ffe6)
+
+## $(ID:2cf17d54-24e8-4f99-8303-fc0eef08d316)
+
+### $(ID:77f29046-bbe2-4407-a481-405a215a5fa2)
+
+$(ID:869b198d-2b16-4955-84b1-71f27354146a)
+
+$(ID:80c7dc07-f557-43a3-a06f-e109df4fe073)
+
+* $(ID:b9325425-0db3-41b9-b43b-4d63060bbb82)
+* $(ID:6ec1b270-4edc-4500-8790-5fb011373fb6)
+* $(ID:ad5788f1-c7a3-4af5-8520-6d563e5eddf4)
+* $(ID:05187b5c-e353-4730-bbc8-4b738fa5d3eb)
+* $(ID:d5817bf7-5add-4498-8075-187dbbb91d34)
+* $(ID:5d988bf8-311d-4dcc-ac94-b5ba6a74afee)
+* $(ID:c361c1cf-e622-4710-b320-5aff7391e974)
+* $(ID:9d109e13-b6ae-41f8-9e4a-a2e8be7a3ffd)
+* $(ID:b968f38d-e2b0-4fa5-860b-caa91f7fd3ff)
+* $(ID:7923448a-1b2d-4e18-8441-b96e7cac1af5)
+* $(ID:301ff607-b6d1-42b1-9597-c836f0afbdca)
+* $(ID:4191af5c-3253-4cc0-b1d9-621ee7a194b4)
+* $(ID:bd1b0a9e-5a7f-4546-8e7f-aaf8717626ad)
+* $(ID:4480cce1-0e88-42d6-bb8a-ecf833672f16)
+
+### $(ID:79e529fc-844b-4f0c-bed9-ed2402ff5594)
+
+* $(ID:cfbe4bbf-d4b6-4cc4-bdaa-74a2d8298f2d)
+* $(ID:2d4d9e9b-105e-409e-bc54-fdeaba5e7fb9)
+
+
+### $(ID:4e727d15-ddd5-4079-baf2-4a53e6d136e4)
+
+* $(ID:dda39955-d168-42eb-bcab-bfd1c6c18f95)
+* $(ID:b26e8fc6-4bad-4539-bdee-559c44167f99)
+* $(ID:2a1b167d-f7f9-4252-b615-d7ef2fbfe593)
+* $(ID:ec4489b1-da72-47f5-8797-68bd6fbf434d)
+* $(ID:7468ce71-2485-4fc2-90bb-2ee883d465f3)
+
+## $(ID:ff38ba3d-9fe6-4141-b78c-ff5057fd0d23)
+
+* $(ID:fb2847f6-d595-4a5a-9470-0ac6fff42d0c)
+* $(ID:90829248-6d72-4a7b-8d30-c42c4fe0f75c)
+* $(ID:2ca704ca-9e02-44d0-8295-fb9ae23458e9)
+* $(ID:221dc591-ff09-4c22-81bb-7a6392955a7e)
+
+## $(ID:870563a0-a5ed-45a0-9843-3a9a549ee107)
+
+* $(ID:fc519691-be96-44d3-bc83-b79df372b6e0)
+
+## $(ID:5ec9deab-ffde-4c12-a556-5f6c2fb30ebd)
+
+* $(ID:1ab4f5fe-2635-4efd-94e7-46f45d262024)
+
+## $(ID:f1e9d634-306b-4156-b908-8e36382ddc5a)
+
+* $(ID:12c0c128-9306-4313-9231-74005edf3bd6)
+
+## $(ID:8c474025-688a-4ee3-b6c4-8840d5aa710d)
+
+* $(ID:e58af697-71e4-4fc5-a6f1-05e43461894d)
+
+## $(ID:99df8376-fb1d-4a3d-a644-14f45e9e7c2b)
+
+* $(ID:4da1578b-e3b4-47fe-a011-1caebcb5f6dc)
+
+## $(ID:f26fa476-93cb-4179-b8af-bed9763d0701)
+
+* $(ID:0d718a33-cb11-4638-b3b7-21a8d63f4ab2)
+
+## $(ID:2c05cc80-395a-4000-9ae5-3d2db343393a)
+
+* $(ID:d87ba1d5-6d62-4711-8094-bcb12c256305)
+
+## $(ID:099a3997-c739-4422-9557-fae8a77fc1f2)
+
+* $(ID:17aa0c31-66e3-4a0a-b53a-d585f5305a4b)
+* $(ID:fcac0438-5d11-432e-a31e-7f953f96fa78)
+* $(ID:bc7e02c1-2d85-4524-a058-eff73d975b21)
+* $(ID:4bfeffc8-44bd-4048-9f9c-66c307dc0a45)
+* $(ID:24bfddc1-da54-409a-b475-f989b162a9eb)
+* $(ID:74263b55-0614-4e84-aabb-7bd4e454e7ae)
+* $(ID:df481952-b3cb-465b-984f-5dc1e17b23da)
+
+## $(ID:baab4bc7-aab2-409d-9f6f-51286e95198f)
+
+* $(ID:ffc8af42-26fb-44a2-8832-7e08ce6770e7)
+
+## $(ID:793e2af1-99fa-4be3-8d54-63fc84ba15a9)
+
+* $(ID:e72fa3fe-9f16-41fa-9076-c46e8be8d9d8)
+
+## $(ID:cccbf746-dfcc-44ac-981b-e8a03433d9a1)
+
+* $(ID:973dae6f-a9fb-4d5e-a132-2ed1591fd371)
+* $(ID:b9647c18-2f3c-4de2-8b85-e97acb0533c5)
+* $(ID:d13cec48-7cc4-4bfb-a454-9629ee35d43d)
+* $(ID:af818b72-fd90-42e8-9f58-c9af5f5d9ade)
+* $(ID:c9d5f0d7-1199-45ed-b6ac-e61e9bff9845)
+* $(ID:66cea0f6-589c-4ff7-afcb-e160e7586952)
+* $(ID:fcec965b-06f8-445e-87e5-609a17966739)
+
+## $(ID:a8cb6c9d-01ba-4090-bd10-575c0799e3f9)
+
+* $(ID:49c58ee9-d9fd-436a-a5d3-7688b1309ac2)
+
+## $(ID:8f44fa43-c9ad-441d-83c9-efa0e1f7b54a)
+
+* $(ID:4e51ecca-9f26-4c48-bedd-4725caac59da)
+* $(ID:b16351c3-872b-40b7-8bd9-5599b4308dee)
+
+## $(ID:09057e3f-25ca-4491-bdf8-7fee3cbe1a59)
+
+* $(ID:3bfc21bf-95cf-4e10-9f34-79a96cb83a03)
+* $(ID:f91020c6-23a9-4438-8644-52a317111585)
+* $(ID:5e817f5a-c979-481d-ab3e-b31b62212d77)
+
+## $(ID:9054a2cc-48f1-4ccc-986c-3893abba11bc)
+
+* $(ID:6ae622bd-0004-48aa-81aa-4bed6da316a6)
+* $(ID:eb061427-410b-44d0-a5a7-98834e42e646)
+
+## $(ID:b44fcdfa-8a1e-4d1c-ad0a-7e6a15553da5)
+
+* $(ID:8f6f2f00-e4af-44f1-9978-400801ce36a3)
+* $(ID:39c029af-7b05-41df-a967-1cfeca40b646)
+
+## $(ID:86768793-0a37-404e-b48a-f8d1a8541c06)
+
+* $(ID:40ec0b2a-75f7-4088-aede-593833934c2b)
+
+## $(ID:ba3a0b72-f888-4850-8e9f-02b5a8059684)
+
+* $(ID:cdb32537-8065-4ff4-8c38-1196602f0883)
+* $(ID:d700b103-7e0c-4eb6-a631-4eaa13af1f67)
+* $(ID:24cbcbb6-827f-44e3-b4db-6c3f5ce9f9fe)
+* $(ID:5ceeca42-4a10-4eb7-910e-ad917945606d)
+
+## $(ID:071bb464-725a-49f9-9920-663660b8dc4a)
+
+* $(ID:17119e17-f3a9-4f3a-96d0-68c627c9c2e4)
+
+## $(ID:d792caed-78ba-45c6-84c7-90639c9c50cc)
+
+* $(ID:4af4ae49-3f23-4f21-b429-264df37b850d)
+
+</skeleton>
+<unit id="a3a4b46e-647f-4bb0-bcb5-eb3384c7612c">
+<notes>
+<note appliesTo="source">line: 2</note>
+<note appliesTo="source">prefix: # </note>
+</notes>
+<segment>
+<source>Read Feeds #</source>
+</segment>
+</unit>
+<unit id="30304456-bb39-4e3d-9484-088412645cbf">
+<notes>
+<note appliesTo="source">line: 4</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Authors: Noelia Ruiz Martínez, Mesar Hameed</source>
+</segment>
+</unit>
+<unit id="79f90bb7-63df-4cb8-a502-b1a9eb66d3c5">
+<notes>
+<note appliesTo="source">line: 6</note>
+</notes>
+<segment>
+<source>This addon provides a straightforward way to read feeds in Atom or RSS formats using NVDA.</source>
+</segment>
+</unit>
+<unit id="3d6a41e8-349d-482e-82a8-aae8c3c4a009">
+<notes>
+<note appliesTo="source">line: 7</note>
+</notes>
+<segment>
+<source>The feeds will not be refreshed automatically.</source>
+</segment>
+</unit>
+<unit id="9805db6e-23b1-4b0b-9664-add585e9ffe6">
+<notes>
+<note appliesTo="source">line: 8</note>
+</notes>
+<segment>
+<source>Below when we mention feeds, we mean both RSS and ATOM feeds.</source>
+</segment>
+</unit>
+<unit id="2cf17d54-24e8-4f99-8303-fc0eef08d316">
+<notes>
+<note appliesTo="source">line: 10</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Commands ##</source>
+</segment>
+</unit>
+<unit id="77f29046-bbe2-4407-a481-405a215a5fa2">
+<notes>
+<note appliesTo="source">line: 12</note>
+<note appliesTo="source">prefix: ### </note>
+</notes>
+<segment>
+<source>Read Feeds dialog ###</source>
+</segment>
+</unit>
+<unit id="869b198d-2b16-4955-84b1-71f27354146a">
+<notes>
+<note appliesTo="source">line: 14</note>
+</notes>
+<segment>
+<source>You can access the Read Feeds dialog from the nvda menu, Tools submenu, Feeds item.</source>
+</segment>
+</unit>
+<unit id="80c7dc07-f557-43a3-a06f-e109df4fe073">
+<notes>
+<note appliesTo="source">line: 16</note>
+</notes>
+<segment>
+<source>It contains the following controls:</source>
+</segment>
+</unit>
+<unit id="b9325425-0db3-41b9-b43b-4d63060bbb82">
+<notes>
+<note appliesTo="source">line: 18</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Filter by: An edit box to search previously saved feeds.</source>
+</segment>
+</unit>
+<unit id="6ec1b270-4edc-4500-8790-5fb011373fb6">
+<notes>
+<note appliesTo="source">line: 19</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>A list of the saved feeds, focused when the dialog is opened.</source>
+</segment>
+</unit>
+<unit id="ad5788f1-c7a3-4af5-8520-6d563e5eddf4">
+<notes>
+<note appliesTo="source">line: 20</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>List of articles: Opens a dialog which presents the articles list from your current feed. Select the article you want to read and press Enter or Open web page of selected article button to open the corresponding page in your browser. Press About article button to open a dialog showing title and link of the selected article; from this dialog, you'll be able to copy this info to the clipboard.</source>
+</segment>
+</unit>
+<unit id="05187b5c-e353-4730-bbc8-4b738fa5d3eb">
+<notes>
+<note appliesTo="source">line: 21</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Open feed: Opens the selected feed in the default application.</source>
+</segment>
+</unit>
+<unit id="d5817bf7-5add-4498-8075-187dbbb91d34">
+<notes>
+<note appliesTo="source">line: 22</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Open feed as HTML: Opens the selected feed in the default web browser. You will be able to show or hide publication dates and buttons to copy information about articles to clipboard.</source>
+</segment>
+</unit>
+<unit id="5d988bf8-311d-4dcc-ac94-b5ba6a74afee">
+<notes>
+<note appliesTo="source">line: 23</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Copy feed address: Opens a dialog to confirm if you want to copy the feed address to clipboard.</source>
+</segment>
+</unit>
+<unit id="c361c1cf-e622-4710-b320-5aff7391e974">
+<notes>
+<note appliesTo="source">line: 24</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>New: Opens a dialog with an edit box to enter the address of a new feed. If the address is valid and the feed can be saved, its name, based on the feed title, will appear at the bottom of the feeds list.</source>
+</segment>
+</unit>
+<unit id="9d109e13-b6ae-41f8-9e4a-a2e8be7a3ffd">
+<notes>
+<note appliesTo="source">line: 25</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Rename: Opens a dialog with an edit box to rename the selected feed.</source>
+</segment>
+</unit>
+<unit id="b968f38d-e2b0-4fa5-860b-caa91f7fd3ff">
+<notes>
+<note appliesTo="source">line: 26</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Delete: Opens a dialog to delete the selected feed after confirmation.</source>
+</segment>
+</unit>
+<unit id="7923448a-1b2d-4e18-8441-b96e7cac1af5">
+<notes>
+<note appliesTo="source">line: 27</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Set default: Sets the selected feed as the default, so that its articles can be accessed with NVDA's gestures.</source>
+</segment>
+</unit>
+<unit id="301ff607-b6d1-42b1-9597-c836f0afbdca">
+<notes>
+<note appliesTo="source">line: 28</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Import feeds from OPML file: Opens a dialog to add new feeds from an OPML file.</source>
+</segment>
+</unit>
+<unit id="4191af5c-3253-4cc0-b1d9-621ee7a194b4">
+<notes>
+<note appliesTo="source">line: 29</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Save feeds to OPML file: Opens a dialog to save the feeds available from the Feeds dialog in an OPML file.</source>
+</segment>
+</unit>
+<unit id="bd1b0a9e-5a7f-4546-8e7f-aaf8717626ad">
+<notes>
+<note appliesTo="source">line: 30</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Preferences: Opens the settings dialog for readFeeds, also available in NVDA's menu, Preferences, settings, readFeeds category.</source>
+</segment>
+</unit>
+<unit id="4480cce1-0e88-42d6-bb8a-ecf833672f16">
+<notes>
+<note appliesTo="source">line: 31</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Close: Closes the Feeds dialog.</source>
+</segment>
+</unit>
+<unit id="79e529fc-844b-4f0c-bed9-ed2402ff5594">
+<notes>
+<note appliesTo="source">line: 33</note>
+<note appliesTo="source">prefix: ### </note>
+</notes>
+<segment>
+<source>Notes #####</source>
+</segment>
+</unit>
+<unit id="cfbe4bbf-d4b6-4cc4-bdaa-74a2d8298f2d">
+<notes>
+<note appliesTo="source">line: 35</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>The Filter by edit box can be placed after the Open article button from NVDA's menu, Preferences, Settings, Read feeds category, or pressing the Preferences button of the Feeds dialog.</source>
+</segment>
+</unit>
+<unit id="2d4d9e9b-105e-409e-bc54-fdeaba5e7fb9">
+<notes>
+<note appliesTo="source">line: 36</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>This panel has an option to show article dates on the List of articles dialog.</source>
+</segment>
+</unit>
+<unit id="4e727d15-ddd5-4079-baf2-4a53e6d136e4">
+<notes>
+<note appliesTo="source">line: 39</note>
+<note appliesTo="source">prefix: ### </note>
+</notes>
+<segment>
+<source>Keyboard commands ###</source>
+</segment>
+</unit>
+<unit id="dda39955-d168-42eb-bcab-bfd1c6c18f95">
+<notes>
+<note appliesTo="source">line: 41</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Ctrl+Shift+NVDA+Space: Announces current article's URL. Pressing twice will open the web page.</source>
+</segment>
+</unit>
+<unit id="b26e8fc6-4bad-4539-bdee-559c44167f99">
+<notes>
+<note appliesTo="source">line: 42</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Ctrl+Shift+NVDA+8: Refreshes the selected feed and announces its most recent title.</source>
+</segment>
+</unit>
+<unit id="2a1b167d-f7f9-4252-b615-d7ef2fbfe593">
+<notes>
+<note appliesTo="source">line: 43</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Ctrl+Shift+NVDA+I: Announces current feed title and link. Pressing twice will copy the title and related link to clipboard.</source>
+</segment>
+</unit>
+<unit id="ec4489b1-da72-47f5-8797-68bd6fbf434d">
+<notes>
+<note appliesTo="source">line: 44</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Ctrl+Shift+NVDA+U: Announces previous feed title.</source>
+</segment>
+</unit>
+<unit id="7468ce71-2485-4fc2-90bb-2ee883d465f3">
+<notes>
+<note appliesTo="source">line: 45</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Ctrl+Shift+NVDA+O: Announces next feed title.</source>
+</segment>
+</unit>
+<unit id="ff38ba3d-9fe6-4141-b78c-ff5057fd0d23">
+<notes>
+<note appliesTo="source">line: 47</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Notifications ##</source>
+</segment>
+</unit>
+<unit id="fb2847f6-d595-4a5a-9470-0ac6fff42d0c">
+<notes>
+<note appliesTo="source">line: 49</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>When the title or URL have been copied.</source>
+</segment>
+</unit>
+<unit id="90829248-6d72-4a7b-8d30-c42c4fe0f75c">
+<notes>
+<note appliesTo="source">line: 50</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>When unable to connect/refresh a feed, or the URL does not correspond to a valid feed.</source>
+</segment>
+</unit>
+<unit id="2ca704ca-9e02-44d0-8295-fb9ae23458e9">
+<notes>
+<note appliesTo="source">line: 51</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>NVDA will display an error message if a new feed cannot be created.</source>
+</segment>
+</unit>
+<unit id="221dc591-ff09-4c22-81bb-7a6392955a7e">
+<notes>
+<note appliesTo="source">line: 52</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>The title of the articles list dialog displays the selected feed name and number of items available.</source>
+</segment>
+</unit>
+<unit id="870563a0-a5ed-45a0-9843-3a9a549ee107">
+<notes>
+<note appliesTo="source">line: 54</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Changes for 44.0.0</source>
+</segment>
+</unit>
+<unit id="fc519691-be96-44d3-bc83-b79df372b6e0">
+<notes>
+<note appliesTo="source">line: 56</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Removed xml package, included in NVDA.</source>
+</segment>
+</unit>
+<unit id="5ec9deab-ffde-4c12-a556-5f6c2fb30ebd">
+<notes>
+<note appliesTo="source">line: 58</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Changes for 39.0.0</source>
+</segment>
+</unit>
+<unit id="1ab4f5fe-2635-4efd-94e7-46f45d262024">
+<notes>
+<note appliesTo="source">line: 60</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Improved notifications when title or URL are copied.</source>
+</segment>
+</unit>
+<unit id="f1e9d634-306b-4156-b908-8e36382ddc5a">
+<notes>
+<note appliesTo="source">line: 62</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Changes for 34.0.0</source>
+</segment>
+</unit>
+<unit id="12c0c128-9306-4313-9231-74005edf3bd6">
+<notes>
+<note appliesTo="source">line: 64</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Added support for rss.cbc.ca feeds.</source>
+</segment>
+</unit>
+<unit id="8c474025-688a-4ee3-b6c4-8840d5aa710d">
+<notes>
+<note appliesTo="source">line: 66</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Changes for 21.0</source>
+</segment>
+</unit>
+<unit id="e58af697-71e4-4fc5-a6f1-05e43461894d">
+<notes>
+<note appliesTo="source">line: 68</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Feeds with untitled articles can be presented in the Articles dialog, and opened as HTML.</source>
+</segment>
+</unit>
+<unit id="99df8376-fb1d-4a3d-a644-14f45e9e7c2b">
+<notes>
+<note appliesTo="source">line: 70</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Changes for 20.0</source>
+</segment>
+</unit>
+<unit id="4da1578b-e3b4-47fe-a011-1caebcb5f6dc">
+<notes>
+<note appliesTo="source">line: 72</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>universalFeedParser is updated to 5.0.1, adding support for more feeds.</source>
+</segment>
+</unit>
+<unit id="f26fa476-93cb-4179-b8af-bed9763d0701">
+<notes>
+<note appliesTo="source">line: 74</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Changes for 15.0</source>
+</segment>
+</unit>
+<unit id="0d718a33-cb11-4638-b3b7-21a8d63f4ab2">
+<notes>
+<note appliesTo="source">line: 76</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Compatible with NVDA 2023.1.</source>
+</segment>
+</unit>
+<unit id="2c05cc80-395a-4000-9ae5-3d2db343393a">
+<notes>
+<note appliesTo="source">line: 78</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Changes for 14.0</source>
+</segment>
+</unit>
+<unit id="d87ba1d5-6d62-4711-8094-bcb12c256305">
+<notes>
+<note appliesTo="source">line: 80</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Fixed a bug that made impossible to add some feeds.</source>
+</segment>
+</unit>
+<unit id="099a3997-c739-4422-9557-fae8a77fc1f2">
+<notes>
+<note appliesTo="source">line: 82</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Changes for 13.0</source>
+</segment>
+</unit>
+<unit id="17aa0c31-66e3-4a0a-b53a-d585f5305a4b">
+<notes>
+<note appliesTo="source">line: 84</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>The add-on cannot be used on secure screens.</source>
+</segment>
+</unit>
+<unit id="fcac0438-5d11-432e-a31e-7f953f96fa78">
+<notes>
+<note appliesTo="source">line: 85</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Feeds are managed from OPML files.</source>
+</segment>
+</unit>
+<unit id="bc7e02c1-2d85-4524-a058-eff73d975b21">
+<notes>
+<note appliesTo="source">line: 86</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Due to changes in the feeds management system, there are changes in the configuration file where the default feed is set. Please, use the Feeds dialog if you want to set it again.</source>
+</segment>
+</unit>
+<unit id="4bfeffc8-44bd-4048-9f9c-66c307dc0a45">
+<notes>
+<note appliesTo="source">line: 87</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Your old text files used in previous versions will be automatically imported into the new OPML format when the add-on is started.</source>
+</segment>
+</unit>
+<unit id="24bfddc1-da54-409a-b475-f989b162a9eb">
+<notes>
+<note appliesTo="source">line: 88</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>The copy and restore feeds feature has been replaced with the ability to import from and save to OPML files.</source>
+</segment>
+</unit>
+<unit id="74263b55-0614-4e84-aabb-7bd4e454e7ae">
+<notes>
+<note appliesTo="source">line: 89</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Non well-formed feeds can be processed before being added to make them compatible with the add-on.</source>
+</segment>
+</unit>
+<unit id="df481952-b3cb-465b-984f-5dc1e17b23da">
+<notes>
+<note appliesTo="source">line: 90</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>In the Read Feeds settings panel, a new option allows to show article dates on the List of articles dialog.</source>
+</segment>
+</unit>
+<unit id="baab4bc7-aab2-409d-9f6f-51286e95198f">
+<notes>
+<note appliesTo="source">line: 92</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Changes for 12.0</source>
+</segment>
+</unit>
+<unit id="ffc8af42-26fb-44a2-8832-7e08ce6770e7">
+<notes>
+<note appliesTo="source">line: 94</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Fixed a bug which made shortcuts for items of NVDA's tools menu don't work as expected.</source>
+</segment>
+</unit>
+<unit id="793e2af1-99fa-4be3-8d54-63fc84ba15a9">
+<notes>
+<note appliesTo="source">line: 96</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Changes for 11.0</source>
+</segment>
+</unit>
+<unit id="e72fa3fe-9f16-41fa-9076-c46e8be8d9d8">
+<notes>
+<note appliesTo="source">line: 98</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Compatible with NVDA 2021.1</source>
+</segment>
+</unit>
+<unit id="cccbf746-dfcc-44ac-981b-e8a03433d9a1">
+<notes>
+<note appliesTo="source">line: 100</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Changes for 10.0 ##</source>
+</segment>
+</unit>
+<unit id="973dae6f-a9fb-4d5e-a132-2ed1591fd371">
+<notes>
+<note appliesTo="source">line: 102</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Added a button to open the selected feed as HTML in the default web browser.</source>
+</segment>
+</unit>
+<unit id="b9647c18-2f3c-4de2-8b85-e97acb0533c5">
+<notes>
+<note appliesTo="source">line: 103</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>If a new feed cannot be created, this will be notified in an error dialog.</source>
+</segment>
+</unit>
+<unit id="d13cec48-7cc4-4bfb-a454-9629ee35d43d">
+<notes>
+<note appliesTo="source">line: 104</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Improved order and presentation of some articles.</source>
+</segment>
+</unit>
+<unit id="af818b72-fd90-42e8-9f58-c9af5f5d9ade">
+<notes>
+<note appliesTo="source">line: 105</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>More feeds may be supported.</source>
+</segment>
+</unit>
+<unit id="c9d5f0d7-1199-45ed-b6ac-e61e9bff9845">
+<notes>
+<note appliesTo="source">line: 106</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>When the feeds dialog is opened, the list of feeds will be focused instead of the search edit box.</source>
+</segment>
+</unit>
+<unit id="66cea0f6-589c-4ff7-afcb-e160e7586952">
+<notes>
+<note appliesTo="source">line: 107</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>You can choose if the search edit box is placed after the list of feeds, useful to focus the list even when switching from another window without closing the Feeds dialog.</source>
+</segment>
+</unit>
+<unit id="fcec965b-06f8-445e-87e5-609a17966739">
+<notes>
+<note appliesTo="source">line: 108</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Added a button to copy the feed address to clipboard from the feeds dialog.</source>
+</segment>
+</unit>
+<unit id="a8cb6c9d-01ba-4090-bd10-575c0799e3f9">
+<notes>
+<note appliesTo="source">line: 110</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Changes for 9.0 ##</source>
+</segment>
+</unit>
+<unit id="49c58ee9-d9fd-436a-a5d3-7688b1309ac2">
+<notes>
+<note appliesTo="source">line: 112</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Requires NVDA 2019.3 or later.</source>
+</segment>
+</unit>
+<unit id="8f44fa43-c9ad-441d-83c9-efa0e1f7b54a">
+<notes>
+<note appliesTo="source">line: 114</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Changes for 8.0 ##</source>
+</segment>
+</unit>
+<unit id="4e51ecca-9f26-4c48-bedd-4725caac59da">
+<notes>
+<note appliesTo="source">line: 116</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>When the add-on is updated, feeds saved in the previous version of the add-on will be automatically copied to the new version, unless you prefer to import feeds saved in the main configuration folder of NVDA.</source>
+</segment>
+</unit>
+<unit id="b16351c3-872b-40b7-8bd9-5599b4308dee">
+<notes>
+<note appliesTo="source">line: 117</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>When using the dialog to copy feeds, if the chosen folder is not named personalFeeds, a subfolder with this name will be created to prevent the deletion of directories containing important data, such as Documents or Downloads.</source>
+</segment>
+</unit>
+<unit id="09057e3f-25ca-4491-bdf8-7fee3cbe1a59">
+<notes>
+<note appliesTo="source">line: 119</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Changes for 7.0 ##</source>
+</segment>
+</unit>
+<unit id="3bfc21bf-95cf-4e10-9f34-79a96cb83a03">
+<notes>
+<note appliesTo="source">line: 121</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>The Feeds dialog includes a button to open a folder which may contain a backup of feeds.</source>
+</segment>
+</unit>
+<unit id="f91020c6-23a9-4438-8644-52a317111585">
+<notes>
+<note appliesTo="source">line: 122</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>When using the edit box to filter feeds, if no results are found, the list of feeds and other controls are disabled, so that NVDA doesn't report "unknown" in the empty list.</source>
+</segment>
+</unit>
+<unit id="5e817f5a-c979-481d-ab3e-b31b62212d77">
+<notes>
+<note appliesTo="source">line: 123</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>If the list of articles dialog can't be shown, for example due to errors in the feed, NVDA will raise an error, so that the feeds dialog can be used without restarting NVDA.</source>
+</segment>
+</unit>
+<unit id="9054a2cc-48f1-4ccc-986c-3893abba11bc">
+<notes>
+<note appliesTo="source">line: 125</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Changes for 6.0 ##</source>
+</segment>
+</unit>
+<unit id="6ae622bd-0004-48aa-81aa-4bed6da316a6">
+<notes>
+<note appliesTo="source">line: 127</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>When the default feed has been updated and it stops working due to server issues, the previous articles aren't deleted and can be read with the corresponding keystrokes.</source>
+</segment>
+</unit>
+<unit id="eb061427-410b-44d0-a5a7-98834e42e646">
+<notes>
+<note appliesTo="source">line: 128</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Fix regression: The default feed can be updated twice again.</source>
+</segment>
+</unit>
+<unit id="b44fcdfa-8a1e-4d1c-ad0a-7e6a15553da5">
+<notes>
+<note appliesTo="source">line: 130</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Changes for 5.0 ##</source>
+</segment>
+</unit>
+<unit id="8f6f2f00-e4af-44f1-9978-400801ce36a3">
+<notes>
+<note appliesTo="source">line: 132</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>The articles list dialog has been enhanced.</source>
+</segment>
+</unit>
+<unit id="39c029af-7b05-41df-a967-1cfeca40b646">
+<notes>
+<note appliesTo="source">line: 133</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Compatible with NVDA 2018.3 or later (required).</source>
+</segment>
+</unit>
+<unit id="86768793-0a37-404e-b48a-f8d1a8541c06">
+<notes>
+<note appliesTo="source">line: 135</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Changes for 4.0 ##</source>
+</segment>
+</unit>
+<unit id="40ec0b2a-75f7-4088-aede-593833934c2b">
+<notes>
+<note appliesTo="source">line: 137</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Added a button to open the selected feed from the Feeds dialog.</source>
+</segment>
+</unit>
+<unit id="ba3a0b72-f888-4850-8e9f-02b5a8059684">
+<notes>
+<note appliesTo="source">line: 139</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Changes for 3.0 ##</source>
+</segment>
+</unit>
+<unit id="cdb32537-8065-4ff4-8c38-1196602f0883">
+<notes>
+<note appliesTo="source">line: 141</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>The dialogs to manage feed files have been removed. Now their functionality is included in the Feeds dialog.</source>
+</segment>
+</unit>
+<unit id="d700b103-7e0c-4eb6-a631-4eaa13af1f67">
+<notes>
+<note appliesTo="source">line: 142</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>The visual presentation of the dialogs has been enhanced, adhering to the appearance of the dialogs shown in NVDA.</source>
+</segment>
+</unit>
+<unit id="24cbcbb6-827f-44e3-b4db-6c3f5ce9f9fe">
+<notes>
+<note appliesTo="source">line: 143</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>The default feed is saved on the NVDA's configuration. Therefore, it's possible to set different default feeds in configuration profiles.</source>
+</segment>
+</unit>
+<unit id="5ceeca42-4a10-4eb7-910e-ad917945606d">
+<notes>
+<note appliesTo="source">line: 144</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Requires NVDA 2016.4.</source>
+</segment>
+</unit>
+<unit id="071bb464-725a-49f9-9920-663660b8dc4a">
+<notes>
+<note appliesTo="source">line: 146</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Changes for 2.0 ##</source>
+</segment>
+</unit>
+<unit id="17119e17-f3a9-4f3a-96d0-68c627c9c2e4">
+<notes>
+<note appliesTo="source">line: 148</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Add-on help is available from the Add-ons Manager.</source>
+</segment>
+</unit>
+<unit id="d792caed-78ba-45c6-84c7-90639c9c50cc">
+<notes>
+<note appliesTo="source">line: 150</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Changes for 1.0 ##</source>
+</segment>
+</unit>
+<unit id="4af4ae49-3f23-4f21-b429-264df37b850d">
+<notes>
+<note appliesTo="source">line: 152</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Initial version.</source>
+</segment>
+</unit>
+</file>
+</xliff>
