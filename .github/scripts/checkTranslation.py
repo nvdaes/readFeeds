@@ -1,97 +1,93 @@
 import sys
 import os
-import xml.etree.ElementTree as ET
-import polib
-
-
-def normalize(s: str | None) -> str:
-	return " ".join((s or "").strip().lower().split())
-
+from crowdin_api import CrowdinClient
 
 # -----------------------------
-# PO CHECK
+# CROWDIN API SCORE
 # -----------------------------
 
 
-def checkPo(path: str) -> float:
-	po = polib.pofile(path)
-	translated = 0
-	total = 0
+def get_score_from_api(lang_id: str, crowdin_file_name: str) -> float:
+	"""
+	Fetches the translation progress percentage directly from Crowdin API.
+	Returns a float between 0.0 and 1.0.
+	"""
+	token = os.environ.get("crowdinAuthToken")
+	project_id_env = os.environ.get("CROWDIN_PROJECT_ID")
 
-	for entry in po:
-		if not entry.msgid.strip():
-			continue
+	# Ensure credentials are present
+	if not token or not project_id_env:
+		return 0.0
 
-		total += 1
+	client = CrowdinClient(token=token)
+	project_id = int(project_id_env)
 
-		if entry.msgstr and normalize(entry.msgstr) != normalize(entry.msgid):
-			translated += 1
+	try:
+		# 1. NORMALIZE SEARCH TERMS
+		# Extract base name (e.g., 'askOpenRouter') and extension
+		base_target = crowdin_file_name.replace("\\", "/").split("/")[-1].rsplit(".", 1)[0].lower()
+		ext_target = crowdin_file_name.split(".")[-1].lower()
 
-	return translated / total if total else 0.0
+		# Mapping: if we check a .po, we look for a .pot on Crowdin
+		search_ext = ".pot" if ext_target == "po" else f".{ext_target}"
+
+		# 2. FETCH ALL FILES TO FIND MATCHING ID
+		files = client.source_files.with_fetch_all().list_files(project_id)
+		file_id = None
+
+		for f in files["data"]:
+			path_crowdin = f["data"]["path"].lower()
+			if path_crowdin.endswith(f"{base_target}{search_ext}"):
+				file_id = f["data"]["id"]
+				break
+
+		if file_id is None:
+			return 0.0
+
+		# 3. FETCH PROGRESS FOR THE SPECIFIC FILE
+		# We use get_file_progress which is reliable for specific file IDs
+		progress = client.translation_status.get_file_progress(projectId=project_id, fileId=file_id)
+
+		for item in progress["data"]:
+			if item["data"]["languageId"].lower() == lang_id.lower():
+				# Return ratio (0.0 to 1.0)
+				return float(item["data"]["translationProgress"]) / 100
+
+	except Exception:
+		# Fallback to 0.0 in case of API or network error
+		return 0.0
+
+	return 0.0
 
 
 # -----------------------------
-# XLIFF CHECK
+# MAIN ENGINE
 # -----------------------------
-
-
-def checkXliff(path: str) -> float:
-	tree = ET.parse(path)
-	root = tree.getroot()
-	translated = 0
-	total = 0
-	source = None
-
-	for elem in root.iter():
-		if elem.tag.endswith("source"):
-			source = normalize(elem.text)
-
-		elif elem.tag.endswith("target"):
-			target = normalize(elem.text)
-
-			if source:
-				total += 1
-				if target and target != source:
-					translated += 1
-
-	return translated / total if total else 0.0
 
 
 def main():
-	if len(sys.argv) < 2:
-		print("Usage:")
-		print("  checkTranslation.py <file>")
+	"""
+	Main entry point.
+	Expects two arguments: <file_name> <language_id>
+	"""
+	if len(sys.argv) < 3:
 		sys.exit(2)
 
-	args = sys.argv[1:]
+	file_name = sys.argv[1]
+	lang = sys.argv[2]
 
-	path = args[0]
+	# All evaluations now go through the Crowdin API
+	score = get_score_from_api(lang, file_name)
 
-	if not os.path.exists(path):
-		print(f"File not found: {path}")
-		sys.exit(2)
-
-	ext = os.path.splitext(path)[1].lower()
-
-	# -------------------------
-	# PO
-	# -------------------------
-	if ext == ".po":
-		ratio = checkPo(path)
-		print(f"translation_ratio={ratio}")
-		sys.exit(0 if ratio > 0.05 else 1)
-
-	# -------------------------
-	# XLIFF
-	# -------------------------
-	elif ext in [".xliff", ".xlf"]:
-		ratio = checkXliff(path)
-		print(f"translation_ratio={ratio}")
-		sys.exit(0 if ratio > 0.05 else 1)
-
+	# Output formatting for PowerShell capture
+	print(f"translationRatio={score}")
+	if file_name.lower().endswith(".md"):
+		print(f"mdScore={score}")
 	else:
-		print(f"Unsupported file type: {ext}")
-		sys.exit(2)
+		print(f"poScore={score}")
+
+	# Exit with code 0 if score > 5%, otherwise 1
+	sys.exit(0 if score > 0.05 else 1)
 
 
 if __name__ == "__main__":
