@@ -63,7 +63,7 @@ Write-Host "Exporting translations from Crowdin..."
 New-Item -ItemType Directory -Force -Path addon/locale | Out-Null
 New-Item -ItemType Directory -Force -Path addon/doc | Out-Null
 
-$languageMappings = Get-Content".github/scripts/languageMappings.json" | ConvertFrom-Json
+$languageMappings = Get-Content -Raw ".github/scripts/languageMappings.json" | ConvertFrom-Json
 foreach ($dir in Get-ChildItem -Path "_addonL10n/$addonId" -Directory) {
 
     $langCode = $dir.Name
