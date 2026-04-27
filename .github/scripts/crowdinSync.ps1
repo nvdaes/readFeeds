@@ -63,12 +63,14 @@ Write-Host "Exporting translations from Crowdin..."
 New-Item -ItemType Directory -Force -Path addon/locale | Out-Null
 New-Item -ItemType Directory -Force -Path addon/doc | Out-Null
 
+$languageMappings = Get-Content".github/scripts/languageMappings.json" | ConvertFrom-Json
 foreach ($dir in Get-ChildItem -Path "_addonL10n/$addonId" -Directory) {
+
     $langCode = $dir.Name
-    $langShort = $langCode.Split('_')[0]
-
     if ($langCode -eq "en") { continue }
-
+    $crowdinLang = $languageMappings[$langCode]
+    if (-not $crowdinLang) { $crowdinLang = $langCode }
+    $langShort = $langCode.Split('_')[0]
     Write-Host "--- Processing: $addonId ($langCode) ---"
 
     # Temporary files from Crowdin
@@ -128,7 +130,7 @@ foreach ($dir in Get-ChildItem -Path "_addonL10n/$addonId" -Directory) {
     # 4. FALLBACK: Upload local if remote is poor
     if (-not $imported -and (Test-Path $localMd)) {
         Write-Host "Action: Remote quality too low. Uploading local MD to Crowdin..."
-        ./l10nUtil.exe uploadTranslationFile $langCode "$addonId.md" $localMd -c addon
+        ./l10nUtil.exe uploadTranslationFile $crowdinLang "$addonId.md" $localMd -c addon
     }
 }
 
