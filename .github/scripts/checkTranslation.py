@@ -32,7 +32,7 @@ def get_score_from_api(lang_id: str, crowdin_file_name: str) -> float:
 		search_ext = ".pot" if ext_target == "po" else f".{ext_target}"
 
 		# 2. FETCH ALL FILES TO FIND MATCHING ID
-		files = client.source_files.with_fetch_all().list_files(project_id)
+		files = client.source_files.with_fetch_all().list_files(project_id, filter=f"{base_target}.{search_ext}")
 		file_id = None
 
 		for f in files["data"]:
@@ -46,7 +46,7 @@ def get_score_from_api(lang_id: str, crowdin_file_name: str) -> float:
 
 		# 3. FETCH PROGRESS FOR THE SPECIFIC FILE
 		# We use get_file_progress which is reliable for specific file IDs
-		progress = client.translation_status.get_file_progress(projectId=project_id, fileId=file_id)
+		progress = client.translation_status.with_fetch_all.get_file_progress(projectId=project_id, fileId=file_id)
 
 		for item in progress["data"]:
 			if item["data"]["languageId"].lower() == lang_id.lower():

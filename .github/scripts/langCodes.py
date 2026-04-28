@@ -1,33 +1,60 @@
 import sys
 
-# Explicit mapping based on your NVDA local directory listing
-# Format: NVDA-Local-folder: "Crowdin-Code".
-
-langMappings: dict[str, str] ={
-	"af_ZA": "af",
-	"de_CH": "de-CH",
-	"es": "es-ES",
-	"es_CO": "es-CO",
-	"nb_NO": "nb",
-	"nn_NO": "nn-NO",
-	"pt_PT": "pt-PT",
-	"pt_BR": "pt-BR",
-	"sr": "sr-CS",
-	"zh_CN": "zh-CN",
-	"zh_HK": "zh-HK",
-	"zh_TW": "zh-TW"
+# Mapping between Crowdin language IDs (keys) and standard NVDA directory names (values).
+# This dictionary acts as the symmetrical counterpart to 'languageMappings.json' implemented by @nvdaes.
+# It ensures that translations exported from Crowdin are stored in the correct 
+# local paths (e.g., 'es-ES' from Crowdin goes into the 'es' folder).
+CROWDIN_TO_NVDA = {
+    # Arabic variants
+    "ar-SA": "ar_SA",
+    
+    # Spanish variants
+    "es-ES": "es",
+    "es-CO": "es_CO",
+    
+    # Portuguese variants
+    "pt-BR": "pt_BR",
+    "pt-PT": "pt_PT",
+    
+    # Chinese variants
+    "zh-CN": "zh_CN",
+    "zh-HK": "zh_HK",
+    "zh-TW": "zh_TW",
+    
+    # Other specific mappings from the NVDA ecosystem
+    "af": "af_ZA",
+    "de-CH": "de_CH",
+    "nb": "nb_NO",
+    "nn-NO": "nn_NO",
+    "sr-CS": "sr"
 }
 
-def getCrowdinCode(nvdaCode) -> str:
-	"""
-	Get the corresponding Crowdin code for a given NVDA code.
-
-param nvdaCode: The NVDA language code to be converted.
-return: The corresponding Crowdin code if found, otherwise returns the original NVDA code.
-	"""
-	return langMappings.get(nvdaCode, nvdaCode)
+def get_nvda_code(crowdin_code):
+    """
+    Returns the appropriate local directory name for a given Crowdin language ID.
+    
+    Args:
+        crowdin_code (str): The language identifier from Crowdin (e.g., 'pt-BR', 'fr').
+        
+    Returns:
+        str: The corresponding NVDA locale folder name (e.g., 'pt_BR', 'fr').
+    """
+    # 1. Direct check in our verified map (Priority)
+    if crowdin_code in CROWDIN_TO_NVDA:
+        return CROWDIN_TO_NVDA[crowdin_code]
+    
+    # 2. Automated conversion for regional variants: Crowdin "xx-YY" -> NVDA "xx_YY"
+    # This handles regional codes not explicitly defined in the map.
+    if "-" in crowdin_code:
+        return crowdin_code.replace("-", "_")
+    
+    # 3. Default: Return as is.
+    # This covers base languages that don't use regional folders in NVDA 
+    # (e.g., 'fr', 'tr', 'bg', 'fi', 'fa').
+    return crowdin_code
 
 if __name__ == "__main__":
-	if len(sys.argv) > 1:
-		# We output the result so PowerShell can capture it
-		print(getCrowdinCode(sys.argv[1]))
+    # Ensure a language code was provided as a command-line argument
+    if len(sys.argv) > 1:
+        # Standardize input and output the mapped code for PowerShell to capture
+        print(get_nvda_code(sys.argv[1]))
