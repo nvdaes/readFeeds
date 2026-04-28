@@ -60,15 +60,14 @@ New-Item -ItemType Directory -Force -Path addon/locale | Out-Null
 New-Item -ItemType Directory -Force -Path addon/doc | Out-Null
 
 foreach ($dir in Get-ChildItem -Path "_addonL10n/$addonId" -Directory) {
-    $langCode = $dir.Name # This is the Crowdin ID (e.g., ar-SA, fr, pt-BR)
+    $localLangDir = $dir.Name
     
-    if ($langCode -eq "en") { continue }
+    if ($localLangDir -eq "en") { continue }
 
-    # GET LOCAL NVDA DIRECTORY NAME VIA PYTHON MAPPING
-    # This ensures "ar-SA" maps to "ar_SA", "pt-BR" to "pt_BR", etc.
-    $localLangDir = uv run python .github/scripts/langCodes.py $langCode
+    # GET CROWDIN LANGUAGE CODE
+    $langCode = uv run python .github/scripts/langCodes.py $localLangDir
     
-    Write-Host "--- Processing Language: $langCode (Mapped to local folder: $localLangDir) ---"
+    Write-Host "--- Processing Language: $localLangDir (Mapped to $langCode) ---"
 
     # Remote paths (files exported from Crowdin)
     $remoteMd = Join-Path $dir.FullName "$addonId.md"
