@@ -63,21 +63,21 @@ New-Item -ItemType Directory -Force -Path addon/doc | Out-Null
 $languageMappings = Get-Content -Raw ".github/scripts/languageMappings.json" | ConvertFrom-Json
 
 foreach ($dir in Get-ChildItem -Path "_addonL10n/$addonId" -Directory) {
-    $langCode = $dir.Name 
-    
+    $langCode = $dir.Name
+
     if ($langCode -eq "en") { continue }
 
     # --- Identify codes
     $crowdinLang = $null
-    
+
     # Use the ."variable" syntax to correctly read the PSCustomObject from JSON
     if ($languageMappings.PSObject.Properties.Name -contains $langCode) {
         $crowdinLang = $languageMappings."$langCode"
     }
 
     # Fallback: If no mapping is found, replace underscores with dashes for Crowdin compatibility
-    if (-not $crowdinLang) { 
-        $crowdinLang = $langCode.Replace('_', '-') 
+    if (-not $crowdinLang) {
+        $crowdinLang = $langCode.Replace('_', '-')
     }
 
     # The $langCode (folder name from Crowdin) represents the local repository language code.

@@ -11,7 +11,7 @@ from crowdin_api import CrowdinClient
 def findFileId(client: CrowdinClient, projectId: int, baseTarget: str, searchExt: str) -> int | None:
 	"""
 	Iterates through all project files (using pagination) to find the ID of the source file matching the target name and extension.
-	
+
 	:param client: The Crowdin API client instance.
 	:param projectId: The ID of the Crowdin project.
 	:param base_target: The base name of the file (e.g., 'myAddon).
@@ -49,7 +49,7 @@ def getScoreFromApi(fileNameToSearch: str, langId: str) -> float:
 	"""
 	Retrieves the translation progress score for a specific language and file.
 	Handles pagination for both file listing and language status.
-	
+
 	:param fileNameToSearch: The local path or name of the file to check.
 	:param langId: The language code (e.g., 'fr' or 'pt_BR').
 	:return: The translation ratio between 0.0 and 1.0.
@@ -131,10 +131,10 @@ def main():
 	print(f"translationRatio={score}")
 
 	# Identify extension to provide a specific score label.
-	ext = input_file.lower().split('.')[-1]
-	if ext == 'md':
+	ext = input_file.lower().split(".")[-1]
+	if ext == "md":
 		print(f"mdScore={score}")
-	elif ext == 'xliff':
+	elif ext == "xliff":
 		print(f"xliffScore={score}")
 	else:
 		# Default to poScore for .po and other localization files.
@@ -142,6 +142,7 @@ def main():
 
 	# Exit with success (0) if there is at least 50% translated content.
 	sys.exit(0 if score > 0.5 else 1)
+
 
 if __name__ == "__main__":
 	main()
