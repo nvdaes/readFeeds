@@ -85,7 +85,7 @@ def get_score_from_api(file_name_to_search: str, lang_id: str) -> float:
 				# Also handles underscore to dash conversion for Crowdin compatibility
 				if lang_api.lower().startswith(lang_id.lower().replace('_', '-')):
 					progress = float(item['data']['translationProgress'])
-					return progress / 100
+					return float(f"{progress / 100:.2f}")
 
 			# Check pagination total
 			total = resp['pagination']['totalCount']
