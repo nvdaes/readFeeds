@@ -56,7 +56,6 @@ if (Test-Path $xliffFile) {
 # --- STEP 3: EXPORT AND PROCESS TRANSLATIONS ---
 
 Write-Host "DEBUG: Exporting translations from Crowdin..."
-Write-Host "DEBUG: Exporting translations from Crowdin... (skipped)"
 ./l10nUtil.exe exportTranslations -o _addonL10n -c addon
 
 # Ensure base directories exist
