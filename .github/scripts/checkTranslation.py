@@ -95,7 +95,7 @@ def getScoreFromApi(fileNameToSearch: str, langId: str) -> float:
 
 			data = resp["data"]
 			for item in data:
-				langApi = item["data"]["language_id"]
+				langApi = item["data"]["languageId"]
 
 				# Flexible matching (e.g., 'fr' will match 'fr' or 'fr-FR' from API).
 				# Also handles underscore to dash conversion for Crowdin compatibility
