@@ -5,11 +5,12 @@ $ErrorActionPreference = 'Stop'
 git config user.name "github-actions[bot]"
 git config user.email "github-actions[bot]@users.noreply.github.com"
 
-$addonId = $env:ADDON_ID.Trim()
-if (-not $addonId) {
+$rawAddonId = $env:ADDON_ID
+if ([string]::IsNullOrWhiteSpace($rawAddonId)) {
     Write-Error "Failed to get addon ID."
     exit 1
 }
+$addonId = $rawAddonId.Trim()
 
 # --- STEP 1: PREPARATION AND SOURCE UPDATE ---
 
@@ -19,9 +20,15 @@ $mdFile = "./readme.md"
 if (Test-Path $mdFile) {
     if (Test-Path $xliffFile) {
         $tempXliff = [System.IO.Path]::GetTempFileName()
-        Copy-Item "$addonId.xliff" $tempXliff -Force
-        Write-Host "DEBUG: Updating XLIFF source based on readme.md..."
-        uv run .github/scripts/markdownTranslate.py updateXliff -m $mdFile -x $tempXliff -o $xliffFile
+        try {
+            Copy-Item "$addonId.xliff" $tempXliff -Force
+            Write-Host "DEBUG: Updating XLIFF source based on readme.md..."
+            uv run .github/scripts/markdownTranslate.py updateXliff -m $mdFile -x $tempXliff -o $xliffFile
+        } finally {
+            if (Test-Path $tempXliff) {
+                Remove-Item $tempXliff -Force
+            }
+        }
     } else {
         Write-Host "DEBUG: XLIFF template not found. Creating new one from readme.md..."
         uv run .github/scripts/markdownTranslate.py generateXliff -m $mdFile -o $xliffFile
