@@ -1,159 +1,111 @@
-# Read Feeds-NVDA-RSS阅读插件 #
+# Read Feeds dialog
 
-* Authors: Noelia Ruiz Martínez, Mesar Hameed
+- Authors: Noelia Ruiz Martínez, Mesar Hameed
+- 兼容 NVDA 2021.1
+- Download [stable version][1]
+- Download [development version][2]
 
 此插件提供了一种使用NVDA以Atom或RSS格式读取订阅源的简单方法。 Feed不会自动刷新。下面我们提到feed时，我们指的是RSS和ATOM提要。
+The feeds will not be refreshed automatically.
+Below when we mention feeds, we mean both RSS and ATOM feeds.
 
-## 快捷键 ##
+## Installation or Update:
 
-### Read Feeds dialog ###
+If you used a previous version of this addon, and there is an RSS or personalFeeds folder in your personal NVDA configuration folder,
+when installing the current version, a dialog will ask if you want to upgrade or install.
+Choose update to preserve your saved feeds and to continue using them in the new installed version of readFeeds.
+
+## Commands:
+
+### Read Feeds-NVDA-RSS阅读插件
 
 You can access the Read Feeds dialog from the nvda menu, Tools submenu,
 Feeds item.
 
-It contains the following controls:
+#### Feeds...
 
-* 过滤条件：用于搜索以前保存的feed的编辑框。
-* 已保存的Feeds列表，在对话框打开时集中显示。
-* 文章列表：打开一个对话框，显示当前Feed中的文章列表。选择要阅读的文章，然后按Enter或打开所选文章的网页按钮，在浏览器中打开相应的页面。按关于文章按钮打开一个对话框，显示所选文章的标题和链接;在此对话框中，您将能够将此信息复制到剪贴板。
-* 打开feed：在默认应用程序中打开所选feed。
-* 以HTML格式打开Feed。在默认的网络浏览器中打开选定的feed。您将能够显示或隐藏出版日期和按钮来复制文章信息到剪贴板。
-* 复制馈送地址。打开一个对话框，确认是否要将feed地址复制到剪贴板。
-* 新建：打开带有编辑框的对话框，以输入新Feed的地址。如果地址有效且可以保存Feed，则其名称（基于Feed标题）将显示在Feed列表的底部。
-* 重命名：打开一个带有编辑框的对话框，以重命名所选的源。
-* 删除：打开确认后删除所选feed的对话框。
-* 设置默认值：将选定的Feed设置为默认值，以便可以使用NVDA的快捷键访问其文章。
-* Import feeds from OPML file: Opens a dialog to add new feeds from an OPML
-  file.
-* Save feeds to OPML file: Opens a dialog to save the feeds available from
-  the Feeds dialog in an OPML file.
-* 首选项。打开readFeeds的设置对话框，也可在NVDA的菜单 "首选项"、"设置"、"readFeeds "类别中使用。
-* 关闭：关闭“源”对话框。
+Opens a dialog with the following controls:
 
-### Notes #####
+- 过滤条件：用于搜索以前保存的feed的编辑框。
+- A list of the saved feeds.
+- List of articles: Opens a dialog which presents the articles list from your current feed. Select the article you want to read and press Enter or Open web page of selected article button to open the corresponding page in your browser. Press About article button to open a dialog showing title and link of the selected article; from this dialog, you'll be able to copy this info to the clipboard.
+- 打开feed：在默认应用程序中打开所选feed。
+- New: Opens a dialog with an edit box to enter the address of a new feed. If the address is valid and the feed can be saved, its name, based on the feed title, will appear at the bottom of the feeds list.
+- 重命名：打开一个带有编辑框的对话框，以重命名所选的源。
+- Delete: Opens a dialog to delete the selected feed after confirmation.
+- 设置默认值：将选定的Feed设置为默认值，以便可以使用NVDA的快捷键访问其文章。
+- Open folder containing a backup of feeds: Opens a folder which may contain a backup of feeds. This can be useful to explore and delete feeds which shouldn't be imported when the add-on is updated.
+- 关闭：关闭“源”对话框。
 
-* 通过编辑框过滤可以放在NVDA的菜单、首选项、设置、读取feeds类别的打开文章按钮之后，或者按Feeds对话框的首选项按钮。
-* This panel has an option to show article dates on the List of articles
-  dialog.
+##### Notes
 
+- If a feed named tempFeed is created, please rename it, as this file could be replaced when needed to create a feed whose name already exists.
+- The feed set as the default can't be removed. The addressFile feed will be use as the default when the configuration is reset, so it can't be deleted.
 
-### 键盘快捷键 ###
+\####Copy feeds folder... ####
 
-* Ctrl + Shift + NVDA + Space：朗读当前文章的URL。按两次将打开网页。
-* Ctrl + Shift + NVDA + 8：刷新选定的Feed并朗读其最新的标题。
-* Ctrl + Shift + NVDA + I：朗读当前RSS源的标题和链接。按两次将标题和相关链接复制到剪贴板。
-* Ctrl + Shift + NVDA + U：朗读当前源的上一个的标题。
-* Ctrl + Shift + NVDA + O：朗读当前源的下一个标题。
+Opens a dialog to choose a folder where you can save the personalFeeds directory of your feeds. By default the selected folder is the NVDA's configuration directory, which will create the personalFeeds directory.
 
-## 通知 ##
+#### Restore feeds...
 
-* 复制标题或URL时。
-* 无法连接/刷新Feed时，或者URL与有效Feed不对应。
-* NVDA will display an error message if a new feed cannot be created.
-* “文章列表”对话框的标题显示所选的源名称和可用项目数。
+Opens a dialog to select a folder which replaces your feeds in the personalFeeds folder. Make sure you load a folder containing feeds URLs.
 
-## Changes for 39.0.0
+### Keyboard commands:
 
-* Improved notifications when title or URL are copied.
+- Ctrl + Shift + NVDA + Space：朗读当前文章的URL。按两次将打开网页。 Pressing twice will open the web page.
+- Ctrl + Shift + NVDA + 8：刷新选定的Feed并朗读其最新的标题。
+- Ctrl + Shift + NVDA + I：朗读当前RSS源的标题和链接。按两次将标题和相关链接复制到剪贴板。 Pressing twice will copy the title and related link to clipboard.
+- Ctrl + Shift + NVDA + U：朗读当前源的上一个的标题。
+- Ctrl + Shift + NVDA + O：朗读当前源的下一个标题。
 
-## Changes for 34.0.0
+## 通知
 
-* Added support for rss.cbc.ca feeds.
+- 复制标题或URL时。
+- 无法连接/刷新Feed时，或者URL与有效Feed不对应。
+- NVDA will display an error message if a new feed cannot be created.
+- “文章列表”对话框的标题显示所选的源名称和可用项目数。
 
-## Changes for 21.0
+## 版本8.0
 
-* Feeds with untitled articles can be presented in the Articles dialog, and
-  opened as HTML.
+- 更新插件后，除非您更喜欢导入保存在NVDA主配置文件夹中的feed，否则将保存在以前版本的插件中的提要将自动复制到新版本。
+- 使用对话框复制供稿时，如果所选文件夹未命名为personalFeeds，则将创建具有此名称的子文件夹，以防止删除包含重要数据的目录，例如“文档”或“下载”。
 
-## Changes for 20.0
+## 版本7.0
 
-* universalFeedParser is updated to 5.0.1, adding support for more feeds.
+- "源" 对话框中包含一个按钮, 用于打开可能包含源备份的文件夹。
+- 使用编辑框筛选源时, 如果未找到任何结果, 则会禁用源和其他控件的列表, 以便 NVDA 不会在空列表中朗读 "未知"。
+- 如果无法显示文章对话框列表 (例如, RSS的摘要有错误), 直接报错, 这样可以在不重新启动 NVDA 的情况下继续使用RSS源对话框。
+
+## 版本6.0
+
+- 当默认RSS源已更新并且由于服务器问题而停止工作时，之前的文章不会被删除，并且可以使用相应的按键进行读取。
+- Fix regression: The default feed can be updated twice again.
 
 ## Changes for 15.0
 
-* Compatible with NVDA 2023.1.
+- 文章列表对话框已得到增强。
+- 兼容NVDA 2018.3或更高版本（必需）。
+- If needed, you can download the [last version compatible with NVDA 2017.3][3].
 
 ## Changes for 14.0
 
-* Fixed a bug that made impossible to add some feeds.
+- 添加了一个按钮，可以从“源”对话框中打开所选的源。
 
 ## Changes for 13.0
 
-* The add-on cannot be used on secure screens.
-* Feeds are managed from OPML files.
-* Due to changes in the feeds management system, there are changes in the
-  configuration file where the default feed is set. Please, use the Feeds
-  dialog if you want to set it again.
-* Your old text files used in previous versions will be automatically
-  imported into the new OPML format when the add-on is started.
-* The copy and restore feeds feature has been replaced with the ability to
-  import from and save to OPML files.
-* Non well-formed feeds can be processed before being added to make them
-  compatible with the add-on.
-* In the Read Feeds settings panel, a new option allows to show article
-  dates on the List of articles dialog.
+- The dialogs to manage feed files have been removed. Now their functionality is included in the Feeds dialog.
+- 对话框的可视化表示已得到增强，符合NVDA中显示的对话框的外观。
+- 默认配置保存在NVDA的配置中。因此，可以在配置配置文件中设置不同的默认源。 Therefore, it's possible to set different default feeds in configuration profiles.
+- 需要NVDA 2016.4。
 
-## 版本12.0
+## Changes for 21.0
 
-* 修复了导致 NVDA 工具菜单项的快捷方式无法按预期工作的错误。
+- 插件管理器提供了插件帮助。
 
-## 版本11.0
+## 版本1.0
 
-* 兼容 NVDA 2021.1
+- 发布初始版本。
 
-## 版本10.0更新日志 ##
-
-* 增加了一个按钮，在默认的网页浏览器中以HTML形式打开选定的feed。
-* 如果不能创建新的feed，将在错误对话框中通知。
-* 改进一些条款的顺序和表述方式。
-* 可以支持更多的feed。
-* 当打开Feeds对话框时，Feeds列表将被关注，而不是搜索编辑框。
-* 您可以选择是否将搜索编辑框放在Feeds列表之后，这对于在不关闭Feeds对话框的情况下从另一个窗口切换时聚焦列表非常有用。
-* 在feeds对话框中添加了将feed地址复制到剪贴板的按钮。
-
-## 版本9.0 ##
-
-* 需要NVDA 2019.3或更高版本。
-
-## 版本8.0 ##
-
-* 更新插件后，除非您更喜欢导入保存在NVDA主配置文件夹中的feed，否则将保存在以前版本的插件中的提要将自动复制到新版本。
-* 使用对话框复制供稿时，如果所选文件夹未命名为personalFeeds，则将创建具有此名称的子文件夹，以防止删除包含重要数据的目录，例如“文档”或“下载”。
-
-## 版本7.0 ##
-
-* "源" 对话框中包含一个按钮, 用于打开可能包含源备份的文件夹。
-* 使用编辑框筛选源时, 如果未找到任何结果, 则会禁用源和其他控件的列表, 以便 NVDA 不会在空列表中朗读 "未知"。
-* 如果无法显示文章对话框列表 (例如, RSS的摘要有错误), 直接报错, 这样可以在不重新启动 NVDA 的情况下继续使用RSS源对话框。
-
-## 版本6.0 ##
-
-* 当默认RSS源已更新并且由于服务器问题而停止工作时，之前的文章不会被删除，并且可以使用相应的按键进行读取。
-* 修复错误：默认RSS源可以更新两次了。
-
-## 版本5.0 ##
-
-* 文章列表对话框已得到增强。
-* 兼容NVDA 2018.3或更高版本（必需）。
-
-## 版本4.0 ##
-
-* 添加了一个按钮，可以从“源”对话框中打开所选的源。
-
-## 版本3.0 ##
-
-* 管理订阅源文件的对话框已被删除。现在，他们的功能包含在“源”对话框中。
-* 对话框的可视化表示已得到增强，符合NVDA中显示的对话框的外观。
-* 默认配置保存在NVDA的配置中。因此，可以在配置配置文件中设置不同的默认源。
-* 需要NVDA 2016.4。
-
-## 版本2.0 ##
-
-* 插件管理器提供了插件帮助。
-
-## 版本1.0 ##
-
-* 发布初始版本。
-
-[[!tag dev stable]]
-
+[1]: http://addons.nvda-project.org/files/get.php?file=rf
+[2]: http://addons.nvda-project.org/files/get.php?file=rf-dev
+[3]: http://addons.nvda-project.org/files/get.php?file=rf-o
