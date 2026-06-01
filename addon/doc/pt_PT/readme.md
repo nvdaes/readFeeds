@@ -210,4 +210,3 @@ It contains the following controls:
 * Versão inicial.
 
 [[!tag dev stable]]
-
