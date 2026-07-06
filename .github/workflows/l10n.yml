@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 env:
   crowdinAuthToken: ${{ secrets.CROWDIN_TOKEN }}
-  
+
 jobs:
   l10n:
     runs-on: windows-latest

@@ -1,6 +1,6 @@
 # वाचन पोषण #
 
-* लेखकहरू: नोलिया रुइज्  मार्डिज्नेज,  मेसर हमिद 
+* लेखकहरू: नोलिया रुइज्  मार्डिज्नेज,  मेसर हमिद
 * अनुबहन [स्थिर संस्करण][2]
 * अनुबहन [विकास संस्करण][1]
 
@@ -73,4 +73,3 @@ number of items available.
 [1]: http://addons.nvda-project.org/files/get.php?file=rf-dev
 
 [2]: http://addons.nvda-project.org/files/get.php?file=rf
-
