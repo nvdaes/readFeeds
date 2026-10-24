@@ -199,4 +199,3 @@ It contains the following controls:
 * Versiunea inițială.
 
 [[!tag dev stable]]
-
