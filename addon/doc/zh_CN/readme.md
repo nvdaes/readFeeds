@@ -1,107 +1,102 @@
-# Read Feeds-NVDA-RSS阅读插件 #
+# Read Feeds（NVDA 的 RSS 阅读插件） #
 
-* Authors: Noelia Ruiz Martínez, Mesar Hameed
+* 作者：Noelia Ruiz Martínez、Mesar Hameed
 
-此插件提供了一种使用NVDA以Atom或RSS格式读取订阅源的简单方法。 Feed不会自动刷新。下面我们提到feed时，我们指的是RSS和ATOM提要。
+此插件提供了一种使用 NVDA 以 Atom 或 RSS 格式读取订阅源的简单方法。
+订阅源不会自动刷新。
+下面我们提到订阅源时，我们指的是 RSS 和 ATOM 提要。
 
 ## 快捷键 ##
 
-### Read Feeds dialog ###
+### 订阅源对话框 ###
 
-You can access the Read Feeds dialog from the nvda menu, Tools submenu,
-Feeds item.
+您可从 NVDA 菜单、“工具”子菜单、“订阅源”菜单访问“订阅源”对话框。
 
-It contains the following controls:
+该对话框包含以下控件：
 
-* 过滤条件：用于搜索以前保存的feed的编辑框。
-* 已保存的Feeds列表，在对话框打开时集中显示。
-* 文章列表：打开一个对话框，显示当前Feed中的文章列表。选择要阅读的文章，然后按Enter或打开所选文章的网页按钮，在浏览器中打开相应的页面。按关于文章按钮打开一个对话框，显示所选文章的标题和链接;在此对话框中，您将能够将此信息复制到剪贴板。
-* 打开feed：在默认应用程序中打开所选feed。
-* 以HTML格式打开Feed。在默认的网络浏览器中打开选定的feed。您将能够显示或隐藏出版日期和按钮来复制文章信息到剪贴板。
-* 复制馈送地址。打开一个对话框，确认是否要将feed地址复制到剪贴板。
-* 新建：打开带有编辑框的对话框，以输入新Feed的地址。如果地址有效且可以保存Feed，则其名称（基于Feed标题）将显示在Feed列表的底部。
+* 过滤条件：用于搜索以前保存的订阅源的编辑框。
+* 已保存的订阅源列表，在对话框打开时的默认焦点。
+* 文章列表：打开一个对话框，显示当前订阅源中的文章列表。选择要阅读的文章，然后按回车或打开所选文章的网页按钮，在浏览器中打开相应的页面。按关于文章按钮打开一个对话框，显示所选文章的标题和链接;在此对话框中，您将能够将此信息复制到剪贴板。
+* 打开源：在默认应用程序中打开所选源。
+* 以 HTML 格式打开源：在默认网页浏览器中打开选定的源。您可在此界面选择显示或隐藏发布日期，并使用复制按钮将文章信息保存至剪贴板。
+* 复制源地址。打开一个对话框，确认是否要将源地址复制到剪贴板。
+* 新建：打开带有编辑框的对话框，以输入新订阅源的地址。如果地址有效且可以保存，则其名称（基于源标题）将显示在源列表的底部。
 * 重命名：打开一个带有编辑框的对话框，以重命名所选的源。
-* 删除：打开确认后删除所选feed的对话框。
-* 设置默认值：将选定的Feed设置为默认值，以便可以使用NVDA的快捷键访问其文章。
-* Import feeds from OPML file: Opens a dialog to add new feeds from an OPML
-  file.
-* Save feeds to OPML file: Opens a dialog to save the feeds available from
-  the Feeds dialog in an OPML file.
-* 首选项。打开readFeeds的设置对话框，也可在NVDA的菜单 "首选项"、"设置"、"readFeeds "类别中使用。
-* 关闭：关闭“源”对话框。
+* 删除：打开确认删除所选源的对话框。
+* 设置默认值：将选定的源设置为默认值，以便可以使用 NVDA 的快捷键访问其文章。
+* 从 OPML 文件导入：打开对话框以通过 OPML 文件添加新源。
+* 保存到 OPML 文件：打开对话框以将订阅源对话框中的可用源保存到 OPML 文件。
+* 选项：打开 readFeeds 的设置对话框，也可在 NVDA 菜单、选项、设置、readFeeds 类别中找到。
+* 关闭：关闭订阅源对话框。
 
-### Notes #####
+### 注意 #####
 
-* 通过编辑框过滤可以放在NVDA的菜单、首选项、设置、读取feeds类别的打开文章按钮之后，或者按Feeds对话框的首选项按钮。
-* This panel has an option to show article dates on the List of articles
-  dialog.
+* 过滤作者编辑框可置于“文章列表”按钮之后，可通过 NVDA 菜单、选项、设置、Read Feeds 类别进行设置，或直接按下订阅源对话框中的“选项”按钮进行设置。
+* 此面板还提供在文章列表对话框中显示文章日期的选项。
 
 
 ### 键盘快捷键 ###
 
-* Ctrl + Shift + NVDA + Space：朗读当前文章的URL。按两次将打开网页。
-* Ctrl + Shift + NVDA + 8：刷新选定的Feed并朗读其最新的标题。
-* Ctrl + Shift + NVDA + I：朗读当前RSS源的标题和链接。按两次将标题和相关链接复制到剪贴板。
-* Ctrl + Shift + NVDA + U：朗读当前源的上一个的标题。
-* Ctrl + Shift + NVDA + O：朗读当前源的下一个标题。
+* Ctrl+Shift+NVDA+空格：读出当前文章的网址。连按两次将打开相关网页。
+* Ctrl+Shift+NVDA+8：刷新选定的源并读出最新的标题。
+* Ctrl+Shift+NVDA+I：读出当前文章的标题，连按两次复制标题和相关链接到剪贴板。
+* Ctrl+Shift+NVDA+U：读出上一篇文章的标题。
+* Ctrl+Shift+NVDA+O：读出下一篇文章的标题。
 
 ## 通知 ##
 
 * 复制标题或URL时。
-* 无法连接/刷新Feed时，或者URL与有效Feed不对应。
-* NVDA will display an error message if a new feed cannot be created.
+* 无法连接/刷新源，或网址与有效源不匹配。
+* 若无法创建新源，NVDA 将显示错误消息。
 * “文章列表”对话框的标题显示所选的源名称和可用项目数。
 
-## Changes for 39.0.0
+## 版本 44.0.0
 
-* Improved notifications when title or URL are copied.
+* 删除了 NVDA 中包含的 xml 包。
 
-## Changes for 34.0.0
+## 版本 39.0.0
 
-* Added support for rss.cbc.ca feeds.
+* 改进了复制标题或网址时的通知。
 
-## Changes for 21.0
+## 版本 34.0.0
 
-* Feeds with untitled articles can be presented in the Articles dialog, and
-  opened as HTML.
+* 添加了对 rss.cbc.ca 源的支持。
 
-## Changes for 20.0
+## 版本 21.0
 
-* universalFeedParser is updated to 5.0.1, adding support for more feeds.
+* 包含无标题文章的源可以在“文章”对话框中显示，并以 HTML 格式打开。
 
-## Changes for 15.0
+## 版本 20.0
 
-* Compatible with NVDA 2023.1.
+* 将 universalFeedParser 更新到 5.0.1，增加了对更多源的支持。
 
-## Changes for 14.0
+## 版本 15.0
 
-* Fixed a bug that made impossible to add some feeds.
+* 兼容 NVDA 2023.1。
 
-## Changes for 13.0
+## 版本 14.0
 
-* The add-on cannot be used on secure screens.
-* Feeds are managed from OPML files.
-* Due to changes in the feeds management system, there are changes in the
-  configuration file where the default feed is set. Please, use the Feeds
-  dialog if you want to set it again.
-* Your old text files used in previous versions will be automatically
-  imported into the new OPML format when the add-on is started.
-* The copy and restore feeds feature has been replaced with the ability to
-  import from and save to OPML files.
-* Non well-formed feeds can be processed before being added to make them
-  compatible with the add-on.
-* In the Read Feeds settings panel, a new option allows to show article
-  dates on the List of articles dialog.
+* 修复了无法添加某些源的错误。
 
-## 版本12.0
+## 版本 13.0
+
+* 该插件不能在安全界面使用。
+* 源由 OPML 文件管理。
+* 由于订阅源管理系统的更改，设置默认订阅源的配置文件也发生了变化。如果要重新设置，请使用“订阅源”对话框。
+* 启动插件时，以前版本中使用的旧文本文件将自动导入为新的 OPML 格式。
+* 复制和还原功能已被从 OPML 文件导入和保存到 OPML 文件功能取代。
+* 格式不规范的源可在添加前处理，使其与本插件兼容。
+* 在“Read Feeds”设置面板中，有一个新选项允许在“文章列表”对话框显示文章日期。
+
+## 版本 12.0
 
 * 修复了导致 NVDA 工具菜单项的快捷方式无法按预期工作的错误。
 
-## 版本11.0
+## 版本 11.0
 
 * 兼容 NVDA 2021.1
 
-## 版本10.0更新日志 ##
+## 版本 10.0 ##
 
 * 增加了一个按钮，在默认的网页浏览器中以HTML形式打开选定的feed。
 * 如果不能创建新的feed，将在错误对话框中通知。
@@ -111,49 +106,46 @@ It contains the following controls:
 * 您可以选择是否将搜索编辑框放在Feeds列表之后，这对于在不关闭Feeds对话框的情况下从另一个窗口切换时聚焦列表非常有用。
 * 在feeds对话框中添加了将feed地址复制到剪贴板的按钮。
 
-## 版本9.0 ##
+## 版本 9.0 ##
 
 * 需要NVDA 2019.3或更高版本。
 
-## 版本8.0 ##
+## 版本 8.0 ##
 
 * 更新插件后，除非您更喜欢导入保存在NVDA主配置文件夹中的feed，否则将保存在以前版本的插件中的提要将自动复制到新版本。
 * 使用对话框复制供稿时，如果所选文件夹未命名为personalFeeds，则将创建具有此名称的子文件夹，以防止删除包含重要数据的目录，例如“文档”或“下载”。
 
-## 版本7.0 ##
+## 版本 7.0 ##
 
 * "源" 对话框中包含一个按钮, 用于打开可能包含源备份的文件夹。
 * 使用编辑框筛选源时, 如果未找到任何结果, 则会禁用源和其他控件的列表, 以便 NVDA 不会在空列表中朗读 "未知"。
 * 如果无法显示文章对话框列表 (例如, RSS的摘要有错误), 直接报错, 这样可以在不重新启动 NVDA 的情况下继续使用RSS源对话框。
 
-## 版本6.0 ##
+## 版本 6.0 ##
 
 * 当默认RSS源已更新并且由于服务器问题而停止工作时，之前的文章不会被删除，并且可以使用相应的按键进行读取。
 * 修复错误：默认RSS源可以更新两次了。
 
-## 版本5.0 ##
+## 版本 5.0 ##
 
 * 文章列表对话框已得到增强。
 * 兼容NVDA 2018.3或更高版本（必需）。
 
-## 版本4.0 ##
+## 版本 4.0 ##
 
 * 添加了一个按钮，可以从“源”对话框中打开所选的源。
 
-## 版本3.0 ##
+## 版本 3.0 ##
 
 * 管理订阅源文件的对话框已被删除。现在，他们的功能包含在“源”对话框中。
 * 对话框的可视化表示已得到增强，符合NVDA中显示的对话框的外观。
 * 默认配置保存在NVDA的配置中。因此，可以在配置配置文件中设置不同的默认源。
 * 需要NVDA 2016.4。
 
-## 版本2.0 ##
+## 版本 2.0 ##
 
 * 插件管理器提供了插件帮助。
 
-## 版本1.0 ##
+## 版本 1.0 ##
 
 * 发布初始版本。
-
-[[!tag dev stable]]
-
